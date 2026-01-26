@@ -1,0 +1,115 @@
+﻿l_english:
+ ### IDEOLOGIES ###
+ authoritarian_socialism_ideology:0 "Authoritarian Socialist"
+ authoritarian_socialism_ideology_noun:0 "Authoritarian Socialism"
+ authoritarian_socialism_ideology_desc:0 "Socialist Government"
+
+ revolutionary_socialism_ideology:0 "Revolutionary Socialist"
+ revolutionary_socialism_ideology_noun:0 "Revolutionary Socialism"
+ revolutionary_socialism_ideology_desc:0 "Socialist Government"
+
+ social_democracy_ideology:0 "Social Democratic"
+ social_democracy_ideology_noun:0 "Social Democracy"
+ social_democracy_ideology_desc:0 "Democratic Government"
+
+ progressive_ideology:0 "Progressive"
+ progressive_ideology_noun:0 "Progressivism"
+ progressive_ideology_desc:0 "Democratic Government"
+
+ liberal_ideology:0 "Liberal"
+ liberal_ideology_noun:0 "Liberalism"
+ liberal_ideology_desc:0 "Democratic Government"
+
+ conservatism_ideology:0 "Conservative"
+ conservatism_ideology_noun:0 "Conservatism"
+ conservatism_ideology_desc:0 "Democratic Government"
+
+ authoritarian_democrat_ideology:0 "Authoritarian Democratic"
+ authoritarian_democrat_ideology_noun:0 "Authoritarian Democracy"
+ authoritarian_democrat_ideology_desc:0 "Authoritarian Regime"
+
+ autocracy_ideology:0 "Autocratic"
+ autocracy_ideology_noun:0 "Autocracy"
+ autocracy_ideology_desc:0 "Authoritarian Regime"
+
+ fascist_ideology:0 "Fascist"
+ fascist_ideology_noun:0 "Fascism"
+ fascist_ideology_desc:0 "Totalitarian Regime"
+
+ ### SUB IDEOLOGIES ###
+ authoritarian_socialism_ideology_subtype:0 "Authoritarian Socialist"
+ authoritarian_socialism_ideology_subtype_desc:0 "Authoritarian socialism, also known as Totalitarian Socialism or Socialism from Above or Communism, is a left-leaning ideology embracing a socialist economic model whilst also rejecting political pluralism and freedom of expression. States embracing authoritarian socialism view the state as the preserver of socialist ideals and the ultimate defender of the revolution."
+
+ revolutionary_socialism_ideology_subtype:0 "Revolutionary Socialist"
+ revolutionary_socialism_ideology_subtype_desc:0 "Revolutionary socialism, also known as Socialism from Below, Libertarian Socialism or Communism is a form of government embracing a socialist economic system, the rejection of the power of the state, pursuing decentralisation and empowerment of workers."
+
+ social_democracy_ideology_subtype:0 "Social Democratic"
+ social_democracy_ideology_subtype_desc:0 "Striving for equality and a socialist state by reformist means, democratic socialism aims to abolish or mitigate the effects of capitalism with public mandate."
+
+ progressive_ideology_subtype:0 "Progressive"
+ progressive_ideology_subtype_desc:0 "Progressivism is an ideology pushing for reform, social equality and a fairer economic system whilst upholding individuals’ rights and working within the democratic system."
+
+ liberal_ideology_subtype:0 "Liberal"
+ liberal_ideology_subtype_desc:0 "With a long philosophical tradition of valuing personal liberty, liberalism views safeguarding these rights as the primary function of the state."
+
+ conservatism_ideology_subtype:0 "Conservative"
+ conservatism_ideology_subtype_desc:0 "Considering rapid changes to society to be potentially harmful, conservatism espouses tradition and moderate reforms, sometimes advocating a return to old moral values."
+
+ authoritarian_democrat_ideology_subtype:0 "Authoritarian Democratic"
+ authoritarian_democrat_ideology_subtype_desc:0 "Authoritarian democracy, also known as managed democracy or guided democracy, designates a system of government with a strong executive and a weak or non-existing political representation. Pluralism is either absent or heavily controlled and personal freedoms are usually curtailed."
+
+ autocracy_ideology_subtype:0 "Autocratic"
+ autocracy_ideolog_subtypey_desc:0 "Authoritarian democracy, also known as managed democracy or guided democracy, designates a system of government with a strong executive and a weak or non-existing political representation. Pluralism is either absent or heavily controlled and personal freedoms are usually curtailed."
+
+ fascist_ideology_subtype:0 "Fascist"
+ fascist_ideology_subtype_desc:0 "Fascism is a far-right authoritarian ideology espousing corporatism, totalitarianism, revolutionary nationalism, and militarism. It is both fiercely anti-democratic and anti-socialist - refuting both liberty and equality in kind."
+ 
+ ### SCRIPTED TRIGGER TOOLTIP ###
+ has_ideology_socialist_tt:0 "Has a §YSocialist§! government"
+ has_ideology_democratic_tt:0 "Has a §YDemocratic§! government"
+ has_ideology_authoritarian_tt:0 "Has an §YAuthoritarian§! government"
+ has_ideology_nationalist_tt:0 "Has a §YNationalist§! government"
+
+ ### COALITIONS ###
+
+ authsoc_coalition_tt:0 "In a coaltion with the §rAuthoritarian Socialists§!"
+ revsoc_coalition_tt:0 "In a coalition with the §RRevolutionary Socialists§!"
+ socdem_coalition_tt:0 "In a coalition with the §pSocial Democrats§!"
+ progressive_coalition_tt:0 "In a coalition with the §PProgressives§!"
+ liberal_coalition_tt:0 "In a coalition with the §YLiberals§!"
+ conservative_coalition_tt:0 "In a coalition with the §cConservatives§!"
+ authoritarian_coalition_tt:0 "In a coalition with the §gAuthoritarian Democrats§!"
+ autocracy_coalition_tt:0 "In a coalition with the §lAutocrats§!"
+ fascism_coalition_tt:0 "In a coalition with the §Yfascists§!"
+
+ authsoc_join_coalition_tt:0 "The £autsoc_texticon  §rAuthoritarian Socialists§! will join the coalition"
+ revsoc_join_coalition_tt:0 "The £revsoc_texticon  §RRevolutionary Socialists§! will join the coalition"
+ socdem_join_coalition_tt:0 "The £socdem_texticon  §pSocial Democrats§! will join the coalition"
+ progressive_join_coalition_tt:0 "The £prog_texticon  §PProgressives§! will join the coalition"
+ liberal_join_coalition_tt:0 "The £liberal_texticon  §YLiberals§! will join the coalition"
+ conservatives_join_coalition_tt:0 "The £cons_texticon  §cConservatives§! will join the coalition"
+ authdem_join_coalition_tt:0 "The £autdem_texticon  §gAuthoritarian Democrats§! will join the coalition"
+ autocrat_join_coalition_tt:0 "The £autreac_texticon  §lAutocrats§! will join the coalition"
+ fascist_join_coalition_tt:0 "The £fascism_texticon  §fFascists§! will join the coalition"
+
+ authsoc_leave_coalition_tt:0 "The £autsoc_texticon  §rAuthoritarian Socialists§! will leave the coalition"
+ revsoc_leave_coalition_tt:0 "The £revsoc_texticon  §RRevolutionary Socialists§! will leave the coalition"
+ socdem_leave_coalition_tt:0 "The £socdem_texticon£  §pSocial Democrats§! will leave the coalition"
+ progressive_leave_coalition_tt:0 "The £prog_texticon  §PProgressives§! will leave the coalition"
+ liberal_leave_coalition_tt:0 "The £liberal_texticon  §YLiberals§! will leave the coalition"
+ conservatives_leave_coalition_tt:0 "The £cons_texticon  §cConservatives§! will leave the coalition"
+ authdem_leave_coalition_tt:0 "The £autdem_texticon  §gAuthoritarian Democrats§! will leave the coalition"
+ autocrat_leave_coalition_tt:0 "The £autreac_texticon  §lAutocrats§! will leave the coalition"
+ fascist_leave_coalition_tt:0 "The £fascism_texticon  §fFascists§! will leave the coalition"
+
+ remove_coalitions_tt:0 "Disands all active coaltions"
+
+ ### INTERACE ELEMENTS ###
+
+ bop_no_bop:0 "We currently have no active §Ybalance of power§!."
+ coalition_effects_title:0 "Coalition Effects:"
+ coalition_effects_desc:0 "Popularity Impact: [?coalition_effect_popularity_var|+%1]\nPolitical Power: [?coalition_effect_political_var|+%1]"
+
+ ### GLOBAL DYNAMIC MODIFIERS ###
+ 
+ coalitions_glob_dynmod:0 "Coalitions"

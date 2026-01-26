@@ -1,0 +1,159 @@
+spriteTypes = {
+	### UNITED STATES / USA ###
+	spriteType = {
+		name = "GFX_portrait_USAF_COMMAND"
+		textureFile = "gfx/leaders/USA_army_command.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_BlantonWinship"
+		textureFile = "gfx/leaders/USA_BlantonWinship.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_CharlesLindbherg"
+		textureFile = "gfx/leaders/USA_CharlesLindbherg.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_CordellHull"
+		textureFile = "gfx/leaders/USA_CordellHull.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_DouglasMacArthur"
+		textureFile = "gfx/leaders/USA_DouglasMacArthur.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_DouglasMacArthur_President"
+		textureFile = "gfx/leaders/USA_DouglasMacArthur_President.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_DwightEisenhower_President"
+		textureFile = "gfx/leaders/USA_DwightEisenhower_President.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_EarlBrowder"
+		textureFile = "gfx/leaders/USA_EarlBrowder.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_FranklinRoosevelt"
+		textureFile = "gfx/leaders/USA_FranklinRoosevelt.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_HarryByrd"
+		textureFile = "gfx/leaders/USA_HarryByrd.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_HarryTruman"
+		textureFile = "gfx/leaders/USA_HarryTruman.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_RobertTaft"
+		textureFile = "gfx/leaders/USA_RobertTaft.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_ThomasDewey"
+		textureFile = "gfx/leaders/USA_ThomasDewey.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_WendellWilkie"
+		textureFile = "gfx/leaders/USA_WendellWilkie.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_WilliamBorah"
+		textureFile = "gfx/leaders/USA_WilliamBorah.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_WilliamDudleyPelley"
+		textureFile = "gfx/leaders/USA_WilliamDudleyPelley.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_AlfLandon"
+		textureFile = "gfx/leaders/USA_AlfLandon.tga"
+	}
+	spriteType = {
+		name = "GFX_USA_Henry_Wallace"
+		textureFile = "gfx/interface/advisors/GFX_USA_Henry_Wallace.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Harry_Hopkins"
+		textureFile = "gfx/interface/advisors/GFX_USA_Harry_Hopkins.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Cordell_Hull"
+		textureFile = "gfx/interface/advisors/GFX_USA_Cordell_Hull.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Harry_Truman"
+		textureFile = "gfx/interface/advisors/GFX_USA_Harry_Truman.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Harry_Truman"
+		textureFile = "gfx/interface/advisors/GFX_USA_Harry_Truman.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Harold_Ickes"
+		textureFile = "gfx/interface/advisors/GFX_USA_Harold_Ickes.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Eleanor_Roosvelt"
+		textureFile = "gfx/interface/advisors/GFX_USA_Eleanor_Roosvelt.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Frances_Perkins"
+		textureFile = "gfx/interface/advisors/GFX_USA_Frances_Perkins.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_John_Garner"
+		textureFile = "gfx/interface/advisors/GFX_USA_John_Garner.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Al_Smith"
+		textureFile = "gfx/interface/advisors/GFX_USA_Al_Smith.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Harry_Byrd"
+		textureFile = "gfx/interface/advisors/GFX_USA_Harry_Byrd.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_thomas_dewey"
+		textureFile = "gfx/interface/advisors/GFX_USA_thomas_dewey.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Wendel_Wilkie"
+		textureFile = "gfx/interface/advisors/GFX_USA_Wendel_Wilkie.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Lewis_William_Douglas"
+		textureFile = "gfx/interface/advisors/GFX_USA_Lewis_William_Douglas.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Donald_Nelson"
+		textureFile = "gfx/interface/advisors/GFX_USA_Donald_Nelson.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Henry_Stimson"
+		textureFile = "gfx/interface/advisors/GFX_USA_Henry_Stimson.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_John_Winant"
+		textureFile = "gfx/interface/advisors/GFX_USA_John_Winant.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Henry_Morgenthau"
+		textureFile = "gfx/interface/advisors/GFX_USA_Henry_Morgenthau.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Robert_Taft"
+		textureFile = "gfx/interface/advisors/GFX_USA_Robert_Taft.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Jean_Getty"
+		textureFile = "gfx/interface/advisors/GFX_USA_Jean_Getty.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Edgar_Hoover"
+		textureFile = "gfx/interface/advisors/GFX_USA_Edgar_Hoover.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Frank_Murphy"
+		textureFile = "gfx/interface/advisors/GFX_USA_Frank_Murphy.dds"
+	}
+}

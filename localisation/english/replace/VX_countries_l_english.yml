@@ -1,0 +1,16 @@
+﻿l_english:
+ ### NORTH AMERICA ###
+
+ USA:0 "The United States of America"
+ USA_DEF:0 "the United States of America"
+ USA_ADJ:0 "American"
+ USA_authoritarian_socialism_ideology:0 "The People's Republic of America"
+ USA_authoritarian_socialism_ideology_DEF:0 "the People's Republic of America"
+ USA_revolutionary_socialism_ideology:0 "The People's Republic of America"
+ USA_revolutionary_socialism_ideology_DEF:0 "the People's Republic of America"
+ USA_autocracy_ideology:0 "the American People's Republic"
+ USA_autocracy_ideology_DEF:0 "the American People's Republic"
+ USA_fascist_ideology:0 "the American People's Republic"
+ USA_fascist_ideology_DEF:0 "the Free American Empire"
+ USA_subject:0 "$OVERLORDADJ$ North America"
+ USA_subject_DEF:0 "$OVERLORDADJ$ North America"

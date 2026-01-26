@@ -1,0 +1,19 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_possible_country = { # Make sure the coalitions actually work
+				add_dynamic_modifier = { 
+					modifier = coalitions_glob_dynmod
+				}
+				update_coalitions_effect = yes
+			}
+		}
+	}
+	on_daily = {
+		effect = {
+			every_possible_country = { # make sure to upload the coalitions every day
+				update_coalitions_effect = yes
+			}
+		}
+	}
+}

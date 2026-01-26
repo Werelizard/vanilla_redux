@@ -1,0 +1,108 @@
+scripted_gui = {
+	coalition_indicator = {
+		context_type = player_context
+		parent_window_name = pol_coalitions_anchor
+		window_name = "pol_coalitions"
+
+		ai_enabled = {
+			always = no
+		}
+
+		triggers = {
+			coalition_authsoc_visible = {
+				NOT = {
+					has_government = authoritarian_socialism_ideology
+				}
+				has_country_flag = coalition_authsoc_flag
+			}
+		}
+		triggers = {
+			coalition_revsoc_visible = {
+				NOT = {
+					has_government = revolutionary_socialism_ideology
+				}
+				has_country_flag = coalition_revsoc_flag
+			}
+		}
+
+		triggers = {
+			coalition_socdem_visible = {
+				NOT = {
+					has_government = social_democracy_ideology
+				}
+				has_country_flag = coalition_socdem_flag
+			}
+		}
+
+		triggers = {
+			coalition_prog_visible = {
+				NOT = {
+					has_government = progressive_ideology
+				}
+				has_country_flag = coalition_prog_flag
+			}
+		}
+
+		triggers = {
+			coalition_lib_visible = {
+				NOT = {
+					has_government = liberal_ideology
+				}
+				has_country_flag = coalition_lib_flag
+			}
+		}
+
+		triggers = {
+			coalition_conservative_visible = {
+				NOT = {
+					has_government = conservatism_ideology
+				}
+				has_country_flag = coalition_conservative_flag
+			}
+		}
+
+		triggers = {
+			coalition_auth_visible = {
+				NOT = {
+					has_government = authoritarian_democrat_ideology
+				}
+				has_country_flag = coalition_auth_flag
+			}
+		}
+
+		triggers = {
+			coalition_ractionary_visible = {
+				NOT = {
+					has_government = autocracy_ideology
+				}
+				has_country_flag = coalition_reactionary_flag
+			}
+		}
+
+		triggers = {
+			coalition_fascism_visible = {
+				NOT = {
+					has_government = fascist_ideology
+				}
+				has_country_flag = coalition_fascism_flag
+			}
+		}
+	}
+
+	pol_coalition_tooltip = {
+		context_type = player_context
+		parent_window_name = pol_coalition_button_anchor
+		window_name = "coalition_tooltip"
+
+		triggers = {
+			coalition_effects_title_visible = {
+				any_coalition_active_trigger = yes
+				# always = no
+			}
+			coalition_effects_desc_visible = {
+				any_coalition_active_trigger = yes
+				# always = no
+			}
+		}
+	}
+}

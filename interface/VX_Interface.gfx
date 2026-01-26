@@ -1,0 +1,69 @@
+spritetypes = {
+	# Ideologies
+	spriteType = {
+		name = "GFX_ideology_authoritarian_socialism_ideology_group"
+		textureFile = "gfx/interface/ideologies/authoritariansocialism.tga"
+	}
+	spriteType = {
+		name = "GFX_ideology_revolutionary_socialism_ideology_group"
+		textureFile = "gfx/interface/ideologies/revolutionarysocialism.tga"
+	}
+	spriteType = {
+		name = "GFX_ideology_social_democracy_ideology_group"
+		textureFile = "gfx/interface/ideologies/socialdemocracy.tga"
+	}
+	spriteType = {
+		name = "GFX_ideology_progressive_ideology_group"
+		textureFile = "gfx/interface/ideologies/progressivism.tga"
+	}
+	spriteType = {
+		name = "GFX_ideology_liberal_ideology_group"
+		textureFile = "gfx/interface/ideologies/liberalism.tga"
+	}
+	spriteType = {
+		name = "GFX_ideology_conservatism_ideology_group"
+		textureFile = "gfx/interface/ideologies/conservatism.tga"
+	}
+	spriteType = {
+		name = "GFX_ideology_authoritarian_democrat_ideology_group"
+		textureFile = "gfx/interface/ideologies/authoritariandemocracy.tga"
+	}
+	spriteType = {
+		name = "GFX_ideology_autocracy_ideology_group"
+		textureFile = "gfx/interface/ideologies/reactionaryautocracy.tga"
+	}
+	spriteType = {
+		name = "GFX_ideology_fascist_ideology_group"
+		textureFile = "gfx/interface/ideologies/fascism.tga"
+	}
+	# Focus Filters
+	spriteType = {
+		name = "GFX_FOCUS_FILTER_GREAT_DEPRESSION"
+		textureFile = "gfx/interface/great_depression_focus_filter_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_FOCUS_FILTER_CONGRESS"
+		textureFile = "gfx/interface/congress_focus_filter_icon.dds"
+	}
+	# UI elements  
+	spriteType = {
+		name = "GFX_pol_header"
+		textureFile = "gfx/interface/pol_header.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_ideologies"
+		textureFile = "gfx/interface/pol_ideologies.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_chart"
+		textureFile = "gfx/interface/pol_chart.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_fac_bop"
+		textureFile = "gfx/interface/pol_faction_BOP.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_coalition"
+		textureFile = "gfx/interface/pol_coalition_party_bg.dds"
+	}
+}
