@@ -1,0 +1,38 @@
+VX_update_spain_dynmods_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_global_flag = spanish_civil_war_begun_flag
+			}
+		}
+		set_variable = {
+			SPR_worker_opposition_var = 0
+		}
+		add_to_variable = {
+			SPR_worker_opposition_var = party_popularity@authoritarian_socialism_ideology
+		}
+		add_to_variable = {
+			SPR_worker_opposition_var = party_popularity@revolutionary_socialism_ideology
+		}
+		multiply_variable = {
+			SPR_worker_opposition_var = -1
+		}
+		#
+		set_variable = {
+			SPR_rising_falange_var = 0
+		}
+		add_to_variable = {
+			SPR_rising_falange_var = party_popularity@fascist_ideology
+		}
+		multiply_variable = {
+			SPR_rising_falange_var = -1
+		}
+		#
+		multiply_variable = {
+			SPR_worker_opposition_var = SPR_worker_opposition_modifier_var
+		}
+		multiply_variable = {
+			SPR_rising_falange_var = SPR_rising_falange_modifier_var
+		}
+	}
+}

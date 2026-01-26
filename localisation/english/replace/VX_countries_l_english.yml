@@ -14,3 +14,16 @@
  USA_fascist_ideology_DEF:0 "the Free American Empire"
  USA_subject:0 "$OVERLORDADJ$ North America"
  USA_subject_DEF:0 "$OVERLORDADJ$ North America"
+
+ ### EUROPE ####
+ SPR:0 "The Spanish Republic"
+ SPR_DEF:0 "the Spanish Republic"
+ SPR_ADJ:0 "Spanish"
+ SPR_authoritarian_socialism_ideology:0 "People's Republic of Spain"
+ SPR_authoritarian_socialism_ideology_DEF:0 "the People's Republic of Spain"
+ SPR_revolutionary_socialism_ideology:0 "People's Republic of Spain"
+ SPR_revolutionary_socialism_ideology_DEF:0 "the People's Republic of Spain"
+ SPR_autocracy_ideology:0 "Spanish Directory"
+ SPR_autocracy_ideology_DEF:0 "the Spanish Directory"
+ SPR_fascist_ideology:0 "Spanish Directory"
+ SPR_fascist_ideology:0 "the Spanish Directory"

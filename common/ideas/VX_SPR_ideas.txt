@@ -1,0 +1,27 @@
+ideas = {
+	country = {
+		SPR_strained_economy = {
+			modifier = {
+				consumer_goods_factor = 0.25
+				production_speed_buildings_factor = -0.15
+				local_resources_factor = -0.15
+			}
+		}
+		SPR_military_plot = {
+			modifier = {
+				custom_modifier_tooltip = VX_CANNOTTRAINUNITS_tt
+				command_power_gain_mult = -0.5
+				weekly_manpower = -200
+			}
+		}
+		SPR_republican_collapse = {
+			modifier = {
+				liberal_ideology_drift = -0.1
+				conservatism_ideology_drift = -0.1
+				authoritarian_democrat_ideology_drift = -0.1
+				political_power_factor = -0.5
+				disabled_ideas = 1
+			}
+		}
+	}
+}

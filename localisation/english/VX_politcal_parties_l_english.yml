@@ -26,3 +26,31 @@
 
  USA_fascist_ideology_party:0 "ACP - R"
  USA_fascist_ideology_party_long:0 "American Christian Party - Revolutionary Faction"
+
+  ### EUROPE ###
+ SPR_authoritarian_socialism_ideology_party:0 "PCE"
+ SPR_authoritarian_socialism_ideology_party_long:0 "Partido Comunista de España"
+
+ SPR_revolutionary_socialism_ideology_party:0 "PCE"
+ SPR_revolutionary_socialism_ideology_party_long:0 "Partido Comunista de España"
+
+ SPR_social_democracy_ideology_party:0 "PSOE"
+ SPR_social_democracy_ideology_party_long:0 "Partido Socialista Obrero Español"
+
+ SPR_progressive_ideology_party:0 "UR"
+ SPR_progressive_ideology_party_long:0 "Unión Republicana"
+
+ SPR_liberal_ideology_party:0 "IR"
+ SPR_liberal_ideology_party_long:0 "Izquierda Republicana"
+
+ SPR_conservatism_ideology_party:0 "DLR"
+ SPR_conservatism_ideology_party_long:0 "Derecha Liberal Republicana"
+
+ SPR_authoritarian_democrat_ideology_party:0 "PRR"
+ SPR_authoritarian_democrat_ideology_party_long:0 "Partido Republicano Radical"
+
+ SPR_autocracy_ideology_party:0 "UME"
+ SPR_autocracy_ideology_party_long:0 "Unión Militar Española"
+
+ SPR_fascist_ideology_party:0 "FE - JONS"
+ SPR_fascist_ideology_party_long:0 "Falange Española de las Juntas de Ofensiva Nacional Sindicalista"

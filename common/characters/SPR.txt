@@ -1,76 +1,80 @@
 characters={
 
+	##################
+	# LEADERS
+	##################
+
 	SPR_niceto_alcala_zamora={
-		instance = {
-			allowed = {
-				has_dlc = "La Resistance"
-			}
-			name=SPR_niceto_alcala_zamora
-			portraits={
-				civilian={
-					large="GFX_portrait_SPR_niceto_alcala_zamora"
-				}
-			}
-			country_leader={
-				ideology=conservatism_ideology_subtype
-				traits={ indecisive }
-				expire="1965.1.1.1"
-				id=-1
+		# THE PRESIDENT
+		name=SPR_niceto_alcala_zamora
+		portraits={
+			civilian={
+				large="GFX_portrait_SPR_niceto_alcala_zamora"
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "La Resistance" }
+		country_leader={
+			ideology = liberal_ideology_subtype
+			traits={
+				indecisive
 			}
-			name=SPR_niceto_alcala_zamora
-			portraits={
-				civilian={
-					large="GFX_portrait_SPR_niceto_alcala_zamora"
-				}
+			id=-1
+		}
+		country_leader={
+			ideology = conservatism_ideology_subtype
+			traits={
+				indecisive
 			}
-			country_leader={
-				ideology=conservatism_ideology_subtype
-				expire="1965.1.1.1"
-				id=-1
+			id=-1
+		}
+	}	
+
+	SPR_manuel_azana = {
+		# Leader of the popular front
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_Manuel_Azana"
 			}
+		}
+		country_leader={
+			ideology = social_democracy_ideology_subtype
+			traits={
+				
+			}
+			id=-1
+		}
+		country_leader={
+			ideology = progressive_ideology_subtype
+			traits={
+				
+			}
+			id=-1
 		}
 	}
 
+	# LEADER OF THE COMMUNSIT PARTY OF SPAIN
+
 	SPR_jose_diaz={
-		instance = {
-			allowed = {
-				has_dlc = "La Resistance"
-			}
-			name=SPR_jose_diaz
-			portraits={
-				civilian={
-					large=GFX_portrait_SPR_jose_diaz
-				}
-			}
-			country_leader={
-				ideology=authoritarian_socialism_ideology_subtype
-				traits={ veteran_communist }
-				expire="1965.1.1.1"
-				id=-1
+		name=SPR_jose_diaz
+		portraits={
+			civilian={
+				large=GFX_portrait_SPR_jose_diaz
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "La Resistance" }
-			}
-			name=SPR_jose_diaz
-			portraits={
-				civilian={
-					large=GFX_portrait_SPR_jose_diaz
-				}
-			}
-			country_leader={
-				ideology=authoritarian_socialism_ideology_subtype
-				expire="1965.1.1.1"
-				id=-1
-			}
+		country_leader={
+			ideology= authoritarian_socialism_ideology_subtype
+			traits={ veteran_communist }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology= revolutionary_socialism_ideology_subtype
+			traits={ veteran_communist }
+			expire="1965.1.1.1"
+			id=-1
 		}
 	}
+
+	# LEADER OF THE RADICAL REPUBLICAN PARTY
 
 	SPR_alejandro_lerroux={
 		name=SPR_alejandro_lerroux
@@ -85,6 +89,72 @@ characters={
 			id=1100
 		}
 	}
+
+	# Coup organiser and "de facto" leader of the UME
+	SPA_emilio_mola={
+		name=SPA_emilio_mola
+			portraits={
+				army={
+					large="GFX_portrait_SPA_emilio_mola"
+					small=GFX_portrait_SPA_emilio_mola_small
+				}
+			}
+			country_leader = {
+				ideology = autocracy_ideology_subtype
+			}
+			advisor={	
+				slot = high_command
+				idea_token = SPA_emilio_mola
+				ledger = army
+				allowed = {
+					has_dlc = "La Resistance"
+					original_tag = SPR
+				}
+	
+				visible = {
+					NOT = {
+						tag = SPD
+						tag = SPC
+					}
+				}
+	
+				available = {
+					NOT = {
+						# has_completed_focus = SPR_masters_of_our_own_fate
+						# has_completed_focus = SPA_no_compromise_on_carlist_ideals
+					}
+					custom_trigger_tooltip = {
+						tooltip = SPA_not_republican_spain_tt
+						NOT = { tag = SPD }
+					}
+				}
+				traits = {
+					army_infantry_2
+				}
+				cost = 100
+			}
+			
+			field_marshal={
+				traits={ trait_cautious trait_SPA_nationalist_sympathies thorough_planner organisational_leader }
+				skill=3
+				attack_skill=2
+				defense_skill=2
+				planning_skill=4
+				logistics_skill=2
+				legacy_id=1111
+				visible = {
+					OR = {
+						NOT = { has_global_flag = spanish_civil_war }
+						AND = {
+							tag = SPA
+							has_global_flag = spanish_civil_war
+						}
+					}
+				}
+			}
+	}
+
+	#Falangist Leader
 
 	SPA_jose_antonio_primo_de_rivera={
 		name=SPA_jose_antonio_primo_de_rivera
@@ -130,6 +200,11 @@ characters={
 		}
 	}
 
+
+	##################
+	# ADVISORS
+	##################
+
 	SPR_manuel_fal_conde={
 		name=SPR_manuel_fal_conde
 		portraits={
@@ -137,52 +212,12 @@ characters={
 				large="GFX_portrait_SPA_manuel_fal_conde"
 			}
 		}
-		country_leader={
-			ideology=autocracy_ideology_subtype
-			traits={ jefe }
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-
-	SPR_manuel_azana = {
-		instance = {
-			allowed = {
-				has_dlc = "La Resistance"
-			}
-
-			name = SPR_manuel_azana
-
-			portraits = {
-				civilian = {
-					large = "GFX_portrait_Manuel_Azana"
-				}
-			}
-			#country_leader = {
-			#	ideology = conservatism_ideology_subtype
-			#	traits = { figurehead_president }
-			#	expire = "1965.1.1.1"
-			#	id = -1
-			#}
-		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "La Resistance" }
-			}
-
-			name = SPR_manuel_azana
-
-			portraits = {
-				civilian = {
-					large = "GFX_portrait_Manuel_Azana"
-				}
-			}
-			#country_leader = {
-			#	ideology = conservatism_ideology_subtype
-			#	expire = "1965.1.1.1"
-			#	id = -1
-			#}
-		}
+		# country_leader={
+		# 	ideology=autocracy_ideology_subtype
+		# 	traits={ jefe }
+		# 	expire="1965.1.1.1"
+		# 	id=-1
+		# }
 	}
 
 	# Unit Leaders
@@ -677,107 +712,7 @@ characters={
 		}
 	}
 
-	SPA_emilio_mola={ # Falangist/Francoist
-		instance = {
-			allowed = {
-				has_dlc = "La Resistance"
-			}
-			name=SPA_emilio_mola
-			portraits={
-				army={
-					large="GFX_portrait_SPA_emilio_mola"
-					small=GFX_portrait_SPA_emilio_mola_small
-				}
-			}
-			advisor={	
-				slot = high_command
-				idea_token = SPA_emilio_mola
-				ledger = army
-				allowed = {
-					has_dlc = "La Resistance"
-					original_tag = SPR
-				}
 	
-				visible = {
-					NOT = {
-						tag = SPD
-						tag = SPC
-					}
-				}
-	
-				available = {
-					NOT = {
-						# has_completed_focus = SPR_masters_of_our_own_fate
-						# has_completed_focus = SPA_no_compromise_on_carlist_ideals
-					}
-					custom_trigger_tooltip = {
-						tooltip = SPA_not_republican_spain_tt
-						NOT = { tag = SPD }
-					}
-				}
-				traits = {
-					army_infantry_2
-				}
-				cost = 100
-			}
-			
-			field_marshal={
-				traits={ trait_cautious trait_SPA_nationalist_sympathies thorough_planner organisational_leader }
-				skill=3
-				attack_skill=2
-				defense_skill=2
-				planning_skill=4
-				logistics_skill=2
-				legacy_id=1111
-				visible = {
-					OR = {
-						NOT = { has_global_flag = spanish_civil_war }
-						AND = {
-							tag = SPA
-							has_global_flag = spanish_civil_war
-						}
-					}
-				}
-			}
-		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "La Resistance" }
-			}
-			name=SPA_emilio_mola_vidal
-			portraits={
-				army={
-					large="GFX_portrait_SPA_emilio_mola"
-					small="GFX_idea_generic_army_europe_5"
-				}
-			}
-			advisor={
-				slot = army_chief
-				idea_token = SPA_emilio_mola_vidal
-				name = SPA_emilio_mola_vidal
-				allowed = {
-					NOT = {
-						has_dlc = "La Resistance"
-					}
-					original_tag = SPR
-				}
-				visible = {
-					has_fascist_government_trigger = yes
-				}
-				available = {
-					has_fascist_government_trigger = yes
-				}
-				traits = {
-					army_chief_offensive_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-			}
-		}
-	}
-
 	SPA_juan_yague={ # Falangist
 		instance = {
 			allowed = {

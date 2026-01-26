@@ -1,0 +1,9 @@
+on_action = {
+	on_daily = {
+		effect = {
+			SPR = {
+				VX_update_spain_dynmods_effect = yes
+			}
+		}
+	}
+}
