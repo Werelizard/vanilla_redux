@@ -43,14 +43,20 @@
  revolutionary_socialism_ideology_subtype:0 "Revolutionary Socialist"
  revolutionary_socialism_ideology_subtype_desc:0 "Revolutionary socialism, also known as Socialism from Below, Libertarian Socialism or Communism is a form of government embracing a socialist economic system, the rejection of the power of the state, pursuing decentralisation and empowerment of workers."
 
+ anarcho_communism_ideology_subtype:0 "Revolutionary Socialist"
+ anarcho_communism_ideology_subtype_desc:0 "Revolutionary socialism, also known as Socialism from Below, Libertarian Socialism or Communism is a form of government embracing a socialist economic system, the rejection of the power of the state, pursuing decentralisation and empowerment of workers."
+
  social_democracy_ideology_subtype:0 "Social Democratic"
  social_democracy_ideology_subtype_desc:0 "Striving for equality and a socialist state by reformist means, democratic socialism aims to abolish or mitigate the effects of capitalism with public mandate."
 
  progressive_ideology_subtype:0 "Progressive"
- progressive_ideology_subtype_desc:0 "Progressivism is an ideology pushing for reform, social equality and a fairer economic system whilst upholding individuals’ rights and working within the democratic system."
+ progressive_ideology_subtype_desc:0 "Progressivism is an ideology pushing for reform, social equality and a fairer economic system whilst upholding individuals' rights and working within the democratic system."
 
  liberal_ideology_subtype:0 "Liberal"
  liberal_ideology_subtype_desc:0 "With a long philosophical tradition of valuing personal liberty, liberalism views safeguarding these rights as the primary function of the state."
+
+ anarcho_liberalism_ideology_subtype:0 "Anarcho-Liberalism"
+ anarcho_liberalism_ideology_subtype_desc:0 "With a long philosophical tradition of valuing personal liberty, liberalism views safeguarding these rights as the primary function of the state."
 
  conservatism_ideology_subtype:0 "Conservative"
  conservatism_ideology_subtype_desc:0 "Considering rapid changes to society to be potentially harmful, conservatism espouses tradition and moderate reforms, sometimes advocating a return to old moral values."
@@ -59,7 +65,10 @@
  authoritarian_democrat_ideology_subtype_desc:0 "Authoritarian democracy, also known as managed democracy or guided democracy, designates a system of government with a strong executive and a weak or non-existing political representation. Pluralism is either absent or heavily controlled and personal freedoms are usually curtailed."
 
  autocracy_ideology_subtype:0 "Autocratic"
- autocracy_ideolog_subtypey_desc:0 "Authoritarian democracy, also known as managed democracy or guided democracy, designates a system of government with a strong executive and a weak or non-existing political representation. Pluralism is either absent or heavily controlled and personal freedoms are usually curtailed."
+ autocracy_ideolog_subtypey_desc:0 "Autocracy is a form of government where the political power is concentrated in the hands of a single individual. Political representation is non-existent, and individual rights are absent or otherwise severely curtailed."
+
+ absolute_monarchy_ideology_subtype:0 "Absolute Monarchy"
+ absolute_monarchy_ideology_subtype_desc:0 "Autocracy is a form of government where the political power is concentrated in the hands of a single individual. Political representation is non-existent, and individual rights are absent or otherwise severely curtailed."
 
  fascist_ideology_subtype:0 "Fascist"
  fascist_ideology_subtype_desc:0 "Fascism is a far-right authoritarian ideology espousing corporatism, totalitarianism, revolutionary nationalism, and militarism. It is both fiercely anti-democratic and anti-socialist - refuting both liberty and equality in kind."
@@ -113,3 +122,10 @@
  ### GLOBAL DYNAMIC MODIFIERS ###
  
  coalitions_glob_dynmod:0 "Coalitions"
+
+ ### GLOBAL OPINION MODIFIERS ###
+
+ VX_same_ideology_subtype:0 "Same Ruling Party"
+ VX_same_ideology_group:0 "Same Ideology"
+ VX_similar_ideology:0 "Similar Ideology"
+ VX_different_ideology:0 "Different Ideology"

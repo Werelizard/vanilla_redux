@@ -36,6 +36,18 @@ spritetypes = {
 		name = "GFX_ideology_fascist_ideology_group"
 		textureFile = "gfx/interface/ideologies/fascism.tga"
 	}
+	spriteType = {
+		name = "GFX_ideology_anarcho_communism_ideology_subtype"
+		textureFile = "gfx/interface/ideologies/anarchism.tga"
+	}
+	spriteType = {
+		name = "GFX_ideology_anarcho_liberalism_ideology_subtype"
+		textureFile = "gfx/interface/ideologies/anarchism_alt.tga"
+	}
+	spriteType = {
+		name = "GFX_ideology_absolute_monarchy_ideology_subtype"
+		textureFile = "gfx/interface/ideologies/absolutemonarchy.tga"
+	}
 	# Focus Filters
 	spriteType = {
 		name = "GFX_FOCUS_FILTER_GREAT_DEPRESSION"

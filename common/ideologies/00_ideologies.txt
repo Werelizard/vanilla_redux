@@ -61,6 +61,9 @@ ideologies = {
 			revolutionary_socialism_ideology_subtype = {
 				
 			}
+			anarcho_communism_ideology_subtype = {
+				can_be_randomly_selected = no
+			}
 		}
 
 		dynamic_faction_names = {
@@ -239,6 +242,9 @@ ideologies = {
 			liberal_ideology_subtype = {
 
 			}
+			anarcho_liberalism_ideology_subtype = {
+				can_be_randomly_selected = no
+			}
 		}
 
 		dynamic_faction_names = {
@@ -415,6 +421,10 @@ ideologies = {
 
 			autocracy_ideology_subtype = {
 				
+			}
+
+			absolute_monarchy_ideology_subtype = {
+				can_be_randomly_selected = no	
 			}
 		}
 

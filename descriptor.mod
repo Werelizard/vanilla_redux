@@ -9,5 +9,6 @@ tags={
 	"National Focuses"
 }
 
+replace_path="common/on_actions"
 name="VanillaRedux"
 supported_version="1.17.3.0"

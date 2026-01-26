@@ -7,6 +7,15 @@ on_actions = {
 				}
 				update_coalitions_effect = yes
 			}
+			every_possible_country = {
+				# Effect set up the opinion modifiers
+				limit = { 
+					NOT = { 
+						tag = event_target:system
+					}
+				}
+				VX_startup_ideology_impact_effect = yes
+			}
 		}
 	}
 	on_daily = {
@@ -14,6 +23,11 @@ on_actions = {
 			every_possible_country = { # make sure to upload the coalitions every day
 				update_coalitions_effect = yes
 			}
+		}
+	}
+	on_government_change = {
+		effect = {
+			VX_update_ideology_impact_effect = yes
 		}
 	}
 }

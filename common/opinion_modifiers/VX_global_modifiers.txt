@@ -1,0 +1,17 @@
+opinion_modifiers = {
+	VX_same_ideology_subtype= { # Same ideology subtype
+		value = 20
+	}
+	
+	VX_same_ideology_group = { # same idology group
+		value = 15
+	}
+
+	VX_similar_ideology = { # for Anarchists to Anarchists, Social Democrats to Social Revolutionaries and Conservatives to Authoritarians
+		value = 5
+	}
+	
+	VX_different_ideology = { # Different Ideologies
+		value = -10
+	}
+}

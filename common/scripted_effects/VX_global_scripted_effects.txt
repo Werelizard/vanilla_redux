@@ -198,3 +198,260 @@ remove_coalitions_effect = {
 	clr_country_flag = coalition_reactionary_flag
 	clr_country_flag = coalition_fascism_flag
 }
+
+# Updates the opinion modifiers at the start of the game
+VX_startup_ideology_impact_effect = {
+	every_possible_country = {
+		limit = {
+			NOT = {
+				tag = PREV
+			}
+		}
+		# If they have the same ideology within the same group
+		if = {
+			limit = {
+				has_government = PREV
+			}
+			add_opinion_modifier = {
+				target = PREV
+				modifier = VX_same_ideology_subtype
+			}
+		}
+		else_if = {
+			# If both parties are within the same group, but do not have the same ideology
+			limit = {
+				OR = {
+					AND = {
+						# If both countries are democratic
+						PREV = {
+							has_democratic_government_trigger = yes
+						}
+						has_democratic_government_trigger = yes
+					}
+					AND = {
+						# If both countries are socialist
+						PREV = {
+							has_socialist_government_trigger = yes
+						}
+						has_socialist_government_trigger = yes
+					}
+					AND = {
+						# If both countries are authoritarian
+						PREV = {
+							has_authoritarian_government_trigger = yes
+						}
+						has_authoritarian_government_trigger = yes
+					}
+					AND = {
+						# If both countries are fascist
+						PREV = {
+							has_fascist_government_trigger = yes
+						}
+						has_fascist_government_trigger = yes
+					}
+				}
+			}
+			add_opinion_modifier = {
+				target = PREV
+				modifier = VX_same_ideology_group
+			}
+		}
+		else_if = {
+			# For "similar" cases
+			limit = {
+				OR = {
+					AND = {
+						# If they're both conservative or authoritarian
+						PREV = {
+							OR = {
+								has_government = conservatism_ideology
+								has_authoritarian_government_trigger = yes
+							}
+						}
+						OR = {
+							has_government = conservatism_ideology
+							has_authoritarian_government_trigger = yes
+						}
+					}
+					AND = {
+						# If they're both revolutionary socialist or social-democratic
+						PREV = {
+							OR = {
+								has_government = revolutionary_socialism_ideology
+								has_government = social_democracy_ideology
+							}
+						}
+						OR = {
+							has_government = revolutionary_socialism_ideology
+							has_government = social_democracy_ideology
+						}
+					}
+				}
+			}
+			add_opinion_modifier = {
+				target = PREV
+				modifier = VX_similar_ideology
+			}
+		}
+		else = {
+			add_opinion_modifier = {
+				target = PREV
+				modifier = VX_different_ideology
+			}
+		}
+	}
+}
+
+VX_update_ideology_impact_effect = {
+	every_possible_country = {
+		limit = {
+			NOT = {
+				tag = ROOT
+			}
+		}
+		# removes the opinion modifier
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = VX_different_ideology
+		}
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = VX_similar_ideology
+		}
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = VX_same_ideology_group
+		}
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = VX_same_ideology_subtype
+		}
+		ROOT = {
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = VX_different_ideology
+			}
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = VX_similar_ideology
+			}
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = VX_same_ideology_group
+			}
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = VX_same_ideology_subtype
+			}
+		}
+		# Add the modifiers
+		# If they have the same ideology within the same group
+		if = {
+			limit = {
+				has_government = ROOT
+			}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = VX_same_ideology_subtype
+			}
+			reverse_add_opinion_modifier = {
+				target = ROOT
+				modifier = VX_same_ideology_subtype
+			}
+		}
+		else_if = {
+			# If both parties are within the same group, but do not have the same ideology
+			limit = {
+				OR = {
+					AND = {
+						# If both countries are democratic
+						ROOT = {
+							has_democratic_government_trigger = yes
+						}
+						has_democratic_government_trigger = yes
+					}
+					AND = {
+						# If both countries are socialist
+						ROOT = {
+							has_socialist_government_trigger = yes
+						}
+						has_socialist_government_trigger = yes
+					}
+					AND = {
+						# If both countries are authoritarian
+						ROOT = {
+							has_authoritarian_government_trigger = yes
+						}
+						has_authoritarian_government_trigger = yes
+					}
+					AND = {
+						# If both countries are fascist
+						ROOT = {
+							has_fascist_government_trigger = yes
+						}
+						has_fascist_government_trigger = yes
+					}
+				}
+			}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = VX_same_ideology_group
+			}
+			reverse_add_opinion_modifier = {
+				target = ROOT
+				modifier = VX_same_ideology_group
+			}
+		}
+		else_if = {
+			# For "similar" cases
+			limit = {
+				OR = {
+					AND = {
+						# If they're both conservative or authoritarian
+						ROOT = {
+							OR = {
+								has_government = conservatism_ideology
+								has_authoritarian_government_trigger = yes
+							}
+						}
+						OR = {
+							has_government = conservatism_ideology
+							has_authoritarian_government_trigger = yes
+						}
+					}
+					AND = {
+						# If they're both revolutionary socialist or social-democratic
+						ROOT = {
+							OR = {
+								has_government = revolutionary_socialism_ideology
+								has_government = social_democracy_ideology
+							}
+						}
+						OR = {
+							has_government = revolutionary_socialism_ideology
+							has_government = social_democracy_ideology
+						}
+					}
+				}
+			}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = VX_similar_ideology
+			}
+			reverse_add_opinion_modifier = {
+				target = ROOT
+				modifier = VX_similar_ideology
+			}
+		}
+		else = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = VX_different_ideology
+			}
+			reverse_add_opinion_modifier = {
+				target = ROOT
+				modifier = VX_different_ideology
+			}
+		}
+	}
+}
