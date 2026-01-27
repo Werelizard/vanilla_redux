@@ -39,3 +39,54 @@ VX_update_spain_dynmods_effect = {
 		}
 	}
 }
+
+# Pre-War Effects
+
+VX_increase_republican_strength_effect = {
+	custom_effect_tooltip = VX_increase_republican_strength_tt
+		
+	add_to_variable = {
+		vx_spain_republican_strength_var = 1
+	}
+}
+
+VX_increase_socialist_strength_effect = {
+	custom_effect_tooltip = VX_increase_socialist_strength_tt
+
+	add_to_variable = {
+		vx_spain_socialist_strength_var = 1
+	}
+}
+
+VX_increase_military_strength_effect = {
+	custom_effect_tooltip = VX_increase_military_strength_tt
+
+	add_to_variable = {
+		vx_spain_nationalist_strength_var = 1
+	}
+}
+
+VX_increase_falangist_strength_effect = {
+	custom_effect_tooltip = VX_increase_falangist_strength_tt
+
+	add_to_variable = {
+		vx_spain_falangist_strength_var = 1
+	}		
+}
+
+VX_increase_overall_strength_effect = {
+	custom_effect_tooltip = VX_increase_army_tt
+	if = {
+		limit = {
+			has_country_flag = spain_civil_war_play_as_republicans_flag
+		}
+		add_to_variable = {
+			vx_spa_republican_army_size_var = 1
+		}
+	}
+	else = {
+		add_to_variable = {
+			vx_spa_nationalist_army_size_var = 1
+		}
+	}
+}
