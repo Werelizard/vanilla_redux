@@ -1,7 +1,7 @@
 ﻿l_english:
  ### NORTH AMERICA ###
 
- USA:0 "The United States of America"
+ USA:0 "United States of America"
  USA_DEF:0 "the United States of America"
  USA_ADJ:0 "American"
  USA_authoritarian_socialism_ideology:0 "The People's Republic of America"
@@ -16,7 +16,7 @@
  USA_subject_DEF:0 "$OVERLORDADJ$ North America"
 
  ### EUROPE ####
- SPR:0 "The Spanish Republic"
+ SPR:0 "Spanish Republic"
  SPR_DEF:0 "the Spanish Republic"
  SPR_ADJ:0 "Spanish"
  SPR_authoritarian_socialism_ideology:0 "People's Republic of Spain"

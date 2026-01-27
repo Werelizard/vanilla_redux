@@ -11,5 +11,6 @@ tags={
 
 replace_path="common/on_actions"
 replace_path="common/factions"
+replace_path="common/bookmarks"
 name="VanillaRedux"
 supported_version="1.17.3.0"

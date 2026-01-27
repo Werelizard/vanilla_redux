@@ -1,8 +1,7 @@
 SPR_worker_opposition_dynmod = {
 	icon = GFX_idea_SPR_worker_opposition_dynmod
 
-	industrial_capacity_factory = SPR_worker_opposition_var
-	industrial_capacity_dockyard = SPR_worker_opposition_var
+	conscription_factor = SPR_worker_opposition_var
 	stability_factor = SPR_worker_opposition_var
 }
 

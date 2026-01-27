@@ -21,7 +21,14 @@ country_event = {
 		custom_effect_tooltip = spain_civil_war_play_as_republicans_tt
 		set_country_flag = spain_civil_war_play_as_republicans_flag
 
-		add_stability = -0.1
+		custom_effect_tooltip = VX_doublespace_tt
+		set_politics = {
+			ruling_party = social_democracy_ideology
+		}
+		custom_effect_tooltip = VX_doublespace_tt
+		revsoc_coalition_effect = yes
+		progressive_coalition_effect = yes
+		liberal_coalition_effect = yes
 	}
 
 	option = {
@@ -29,8 +36,15 @@ country_event = {
 
 		custom_effect_tooltip = spain_civil_war_play_as_nationalists_tt
 		set_country_flag = spain_civil_war_play_as_nationalists_flag
-
-		add_stability = -0.1
+		
+		custom_effect_tooltip = VX_doublespace_tt
+		set_politics = {
+			ruling_party = social_democracy_ideology
+		}
+		custom_effect_tooltip = VX_doublespace_tt
+		revsoc_coalition_effect = yes
+		progressive_coalition_effect = yes
+		liberal_coalition_effect = yes
 	}
 
 	after = {
@@ -61,6 +75,7 @@ country_event = {
 		name = spain_civil_war_prelude.2.a
 
 		VX_increase_republican_strength_effect = yes
+		add_stability = -0.1
 		add_popularity = {
 			ideology = progressive_ideology
 			popularity = 1
@@ -84,6 +99,7 @@ country_event = {
 		name = spain_civil_war_prelude.2.b
 		
 		VX_increase_socialist_strength_effect = yes
+		add_stability = -0.15
 		add_popularity = {
 			ideology = revolutionary_socialism_ideology
 			popularity = 3
@@ -100,9 +116,10 @@ country_event = {
 			has_country_flag = spain_civil_war_play_as_republicans_flag
 		}
 
-		name = spain_civil_war_prelude.2.c		
-
-		VX_increase_overall_strength_effect = yes
+		name = spain_civil_war_prelude.2.c
+		VX_increase_overall_strength_effect = yes		
+		add_stability = -0.05
+		add_war_support = 0.05
 	}
 
 	## Options if the player sided with the Nationalists
@@ -116,6 +133,7 @@ country_event = {
 		name = spain_civil_war_prelude.2.44DescIsPuppet
 
 		VX_increase_military_strength_effect = yes
+		add_stability = -0.10
 		add_popularity = {
 			ideology = autocracy_ideology
 			popularity = 5
@@ -131,6 +149,7 @@ country_event = {
 		name = spain_civil_war_prelude.2.e
 
 		VX_increase_falangist_strength_effect = yes
+		add_stability = -0.15
 		add_popularity = {
 			ideology = fascist_ideology
 			popularity = 5
@@ -138,14 +157,15 @@ country_event = {
 	}
 
 	option = {
-		
+		# Strengthen Neither
 		trigger = {
 			has_country_flag = spain_civil_war_play_as_nationalists_flag
 		}	
 
 		name = spain_civil_war_prelude.2.f
-
 		VX_increase_overall_strength_effect = yes
+		add_stability = -0.05
+		add_war_support = 0.05
 	}
 
 	after = {

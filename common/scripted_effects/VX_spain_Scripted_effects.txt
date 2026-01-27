@@ -5,6 +5,7 @@ VX_update_spain_dynmods_effect = {
 				has_global_flag = spanish_civil_war_begun_flag
 			}
 		}
+		# Get the impact of the left-wing's opposition to the republic
 		set_variable = {
 			SPR_worker_opposition_var = 0
 		}
@@ -15,9 +16,9 @@ VX_update_spain_dynmods_effect = {
 			SPR_worker_opposition_var = party_popularity@revolutionary_socialism_ideology
 		}
 		multiply_variable = {
-			SPR_worker_opposition_var = -1
+			SPR_worker_opposition_var = -0.75
 		}
-		#
+		# Get the impact of the right-wing's opposition to the republic
 		set_variable = {
 			SPR_rising_falange_var = 0
 		}
@@ -28,7 +29,7 @@ VX_update_spain_dynmods_effect = {
 			SPR_rising_falange_var = party_popularity@fascist_ideology
 		}
 		multiply_variable = {
-			SPR_rising_falange_var = -1
+			SPR_rising_falange_var = -0.75
 		}
 		#
 		multiply_variable = {

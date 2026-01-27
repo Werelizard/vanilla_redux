@@ -11,11 +11,12 @@ ideas = {
 			modifier = {
 				custom_modifier_tooltip = VX_CANNOTTRAINUNITS_tt
 				command_power_gain_mult = -0.5
-				weekly_manpower = -200
+				weekly_manpower = -750
 			}
 		}
 		SPR_republican_collapse = {
 			modifier = {
+				progressive_ideology_drift = -0.1
 				liberal_ideology_drift = -0.1
 				conservatism_ideology_drift = -0.1
 				authoritarian_democrat_ideology_drift = -0.1

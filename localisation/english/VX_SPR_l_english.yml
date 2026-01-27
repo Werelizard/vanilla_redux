@@ -1,13 +1,13 @@
 ﻿l_english:
  ### COUNTRY IDEAS ###
- SPR_strained_economy:0 "Ruined Economy"
+ SPR_strained_economy:0 "Struggling Economy"
  SPR_strained_economy_desc:0 "Following the aftershocks of the Great Depression and a failed land reform, Spain's economy has hit a wall; factories have stalled, mines are abandonned and fields are left to the mercy of the wind. Something needs to be done if Spain's economy is to recover."
 
  SPR_military_plot:0 "A Miltary Plot?"
  SPR_military_plot_desc:0 "The failed "Sanjurjada" military coup attempt in 1932 still casts its shadow over the Spanish military to this day. In the aftermath, various disloyal military commanders, among them the coup's leader José Sanjurjo, fled to exile in Portugal and continue their plotting even now.\n\nEven this failure has not discouraged disloyal officers, however, as even within Spain itself many desire to see a return to a Monarchy or even a strong Fascist dictatorship. Too strong meddling by the government in the internal affairs of the military may well spark yet another uprising; far more violent and bloody than the last. "
 
- SPR_republican_collapse:0 "Republican Collapse"
- SPR_republican_collapse_desc:0 "Following the Republican split between the various conservative and liberal factions, the current government - whose popularity only seems to plummet - is now more paralysed than ever."
+ SPR_republican_collapse:0 "Death Throes of Republicanism"
+ SPR_republican_collapse_desc:0 "Following the Republican split between the various conservative and liberal factions, the current government - whose popularity only seems to plummet - is now more paralysed than ever. Whilst new elections may bring some stability, it is highly unlikely that the Spanish republic will survive without thourough reforms, if it survives at all."
 
  ### DYNAMIC MODIFIERS ###
 
