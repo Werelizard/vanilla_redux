@@ -1,4 +1,4 @@
 coalitions_glob_dynmod = {
-	party_popularity_stability_factor = coalition_effect_popularity_var
+	# party_popularity_stability_factor = coalition_effect_popularity_var
 	political_power_factor = coalition_effect_political_var
 }

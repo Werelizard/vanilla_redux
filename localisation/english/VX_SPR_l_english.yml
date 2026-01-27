@@ -30,3 +30,10 @@
  spain_civil_war_play_as_republicans_tt:0 "You will side with the §YRepublicans§! during the Civil War."
  spain_civil_war_play_as_nationalists_tt:0 "You will side with the §YNationalists§! during the Civil War."
  
+ ### CHARACTERS ###
+ SPR_jose_maria_gil_robles:0 "Jose Maria Robles"
+
+ #### CHARACTER TRAITS ####
+ VX_custodian_republic:0 "Custodian of the Republic"
+ VX_isolated_republican:0 "Besieged Politician"
+ VX_divisive_figurehead:0 "Divisive Figurehead"

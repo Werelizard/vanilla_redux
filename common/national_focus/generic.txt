@@ -2260,14 +2260,14 @@ focus_tree = {
 			if = {
 				limit = { has_fascist_government_trigger = yes }
 				add_popularity = {
-					ideology = fascism
+					ideology = fascist_ideology
 					popularity = 0.2
 				}
 			}
 			if = {
 				limit = { has_socialist_government_trigger = yes }
 				add_popularity = {
-					ideology = communism
+					# ideology = communism
 					popularity = 0.2
 				}
 			}
@@ -2419,14 +2419,14 @@ focus_tree = {
 			if = {
 				limit = { has_fascist_government_trigger = yes }
 				add_popularity = {
-					ideology = fascism
+					ideology = fascist_ideology
 					popularity = 0.2
 				}
 			}
 			if = {
 				limit = { has_socialist_government_trigger = yes }
 				add_popularity = {
-					ideology = communism
+					# ideology = communism
 					popularity = 0.2
 				}
 			}

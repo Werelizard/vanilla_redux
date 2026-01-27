@@ -220,6 +220,7 @@ recruit_character = SPA_martin_de_riquer
 recruit_character = SPA_mauricio_de_sivatte
 recruit_character = SPA_karl_pius_von_habsburg
 recruit_character = SPR_manuel_azana
+recruit_character = SPR_jose_maria_gil_robles
 
 # POLITICS
 
@@ -229,6 +230,8 @@ set_politics = {
 	election_frequency = 36
 	elections_allowed = yes
 }
+
+auth_dem_coalition_effect = yes
 
 set_popularities = {
 	authoritarian_socialism_ideology = 11

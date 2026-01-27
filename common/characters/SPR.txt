@@ -5,7 +5,6 @@ characters={
 	##################
 
 	SPR_niceto_alcala_zamora={
-		# THE PRESIDENT
 		name=SPR_niceto_alcala_zamora
 		portraits={
 			civilian={
@@ -15,21 +14,33 @@ characters={
 		country_leader={
 			ideology = liberal_ideology_subtype
 			traits={
-				indecisive
+				VX_custodian_republic
+				VX_isolated_republican
 			}
 			id=-1
 		}
 		country_leader={
 			ideology = conservatism_ideology_subtype
 			traits={
-				indecisive
+				VX_custodian_republic
+				VX_isolated_republican
 			}
 			id=-1
+		}		
+		# Dummy, for events
+		corps_commander = {
+			skill = 0
+			attack_skill = 0
+			defense_skill = 0
+			logistics_skill = 0
+			planning_skill = 0
+			visible = {
+				always = no
+			}
 		}
 	}	
 
 	SPR_manuel_azana = {
-		# Leader of the popular front
 		portraits = {
 			civilian = {
 				large = "GFX_portrait_Manuel_Azana"
@@ -38,21 +49,30 @@ characters={
 		country_leader={
 			ideology = social_democracy_ideology_subtype
 			traits={
-				
+				VX_divisive_figurehead
 			}
 			id=-1
 		}
 		country_leader={
 			ideology = progressive_ideology_subtype
 			traits={
-				
+				VX_divisive_figurehead
 			}
 			id=-1
+		}		
+		# Dummy, for events
+		corps_commander = {
+			skill = 0
+			attack_skill = 0
+			defense_skill = 0
+			logistics_skill = 0
+			planning_skill = 0
+			visible = {
+				always = no
+			}
 		}
 	}
-
-	# LEADER OF THE COMMUNSIT PARTY OF SPAIN
-
+	
 	SPR_jose_diaz={
 		name=SPR_jose_diaz
 		portraits={
@@ -63,18 +83,49 @@ characters={
 		country_leader={
 			ideology= authoritarian_socialism_ideology_subtype
 			traits={ veteran_communist }
-			expire="1965.1.1.1"
 			id=-1
 		}
 		country_leader={
 			ideology= revolutionary_socialism_ideology_subtype
 			traits={ veteran_communist }
-			expire="1965.1.1.1"
 			id=-1
+		}		
+		# Dummy, for events
+		corps_commander = {
+			skill = 0
+			attack_skill = 0
+			defense_skill = 0
+			logistics_skill = 0
+			planning_skill = 0
+			visible = {
+				always = no
+			}
 		}
 	}
 
-	# LEADER OF THE RADICAL REPUBLICAN PARTY
+	SPR_jose_maria_gil_robles = {
+		name= SPR_jose_maria_gil_robles
+		portraits={
+			civilian={
+				large=GFX_SPR_jose_maria_gil_robles
+			}
+		}
+		country_leader={
+			ideology=authoritarian_democrat_ideology_subtype
+			id= -1
+		}		
+		# Dummy, for events
+		corps_commander = {
+			skill = 0
+			attack_skill = 0
+			defense_skill = 0
+			logistics_skill = 0
+			planning_skill = 0
+			visible = {
+				always = no
+			}
+		}
+	}
 
 	SPR_alejandro_lerroux={
 		name=SPR_alejandro_lerroux
@@ -83,10 +134,21 @@ characters={
 				large=GFX_portrait_SPR_alejandro_lerroux
 			}
 		}
-		country_leader={
-			ideology=authoritarian_democrat_ideology_subtype
-			expire="1965.1.1.1"
-			id=1100
+		# country_leader={
+		# 	ideology=authoritarian_democrat_ideology_subtype
+		# 	expire="1965.1.1.1"
+		# 	id=1100
+		# }		
+		# Dummy, for events
+		corps_commander = {
+			skill = 0
+			attack_skill = 0
+			defense_skill = 0
+			logistics_skill = 0
+			planning_skill = 0
+			visible = {
+				always = no
+			}
 		}
 	}
 
@@ -106,10 +168,6 @@ characters={
 				slot = high_command
 				idea_token = SPA_emilio_mola
 				ledger = army
-				allowed = {
-					has_dlc = "La Resistance"
-					original_tag = SPR
-				}
 	
 				visible = {
 					NOT = {

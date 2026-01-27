@@ -1292,7 +1292,7 @@ faction_goal_defeat_of_communism = {
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
 			add_popularity = {
-				ideology = communism
+				# ideology = communism
 				popularity = -0.15
 			}
 			add_political_power = 100
@@ -1343,7 +1343,7 @@ faction_goal_defeat_of_fascism = {
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
 			add_popularity = {
-				ideology = fascism
+				ideology = fascist_ideology
 				popularity = -0.15
 			}
 			add_political_power = 100
@@ -1397,7 +1397,7 @@ faction_goal_defeat_of_anti_fascists = {
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
 			add_popularity = {
-				ideology = fascism
+				ideology = fascist_ideology
 				popularity = 0.2
 			}
 			add_political_power = 100
@@ -1460,7 +1460,7 @@ faction_goal_defeat_of_anti_communists = {
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
 			add_popularity = {
-				ideology = communism
+				# ideology = communism
 				popularity = 0.2
 			}
 			add_political_power = 100

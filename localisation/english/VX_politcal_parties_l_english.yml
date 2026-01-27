@@ -46,8 +46,8 @@
  SPR_conservatism_ideology_party:0 "DLR"
  SPR_conservatism_ideology_party_long:0 "Derecha Liberal Republicana"
 
- SPR_authoritarian_democrat_ideology_party:0 "PRR"
- SPR_authoritarian_democrat_ideology_party_long:0 "Partido Republicano Radical"
+ SPR_authoritarian_democrat_ideology_party:0 "CEDA"
+ SPR_authoritarian_democrat_ideology_party_long:0 "Confederación Española de Derechas Autónomas"
 
  SPR_autocracy_ideology_party:0 "UME"
  SPR_autocracy_ideology_party_long:0 "Unión Militar Española"

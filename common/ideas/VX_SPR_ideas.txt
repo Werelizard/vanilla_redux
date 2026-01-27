@@ -16,10 +16,9 @@ ideas = {
 		}
 		SPR_republican_collapse = {
 			modifier = {
-				progressive_ideology_drift = -0.1
-				liberal_ideology_drift = -0.1
-				conservatism_ideology_drift = -0.1
-				authoritarian_democrat_ideology_drift = -0.1
+				progressive_ideology_drift = -0.2
+				liberal_ideology_drift = -0.2
+				conservatism_ideology_drift = -0.2
 				political_power_factor = -0.5
 				disabled_ideas = 1
 			}

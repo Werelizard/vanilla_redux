@@ -960,7 +960,7 @@ faction_goal_indifference_is_a_threat = {
 		every_faction_member = {
 			add_political_power = 50
 			add_popularity = {
-				ideology = communism
+				# ideology = communism
 				popularity = 0.05
 			}
 		}
