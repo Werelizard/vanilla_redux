@@ -1,0 +1,23 @@
+spritetypes = {
+	# Spanish Republic Ideas
+	spriteType = {
+		name = "GFX_idea_SPR_military_plot"
+		textureFile = "gfx/interface/ideas/SPR_military_plot.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SPR_republican_collapse"
+		textureFile = "gfx/interface/ideas/SPR_republican_collapse.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SPR_strained_economy"
+		textureFile = "gfx/interface/ideas/SPR_strained_economy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SPR_rising_falange_dynmod"
+		textureFile = "gfx/interface/ideas/SPR_rising_falange_dynmod.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SPR_worker_opposition_dynmod"
+		textureFile = "gfx/interface/ideas/SPR_worker_opposition_dynmod.dds"
+	}
+}

@@ -1,5 +1,5 @@
 SPR_worker_opposition_dynmod = {
-	icon = GFX_idea_FRA_factory_strikes
+	icon = GFX_idea_SPR_worker_opposition_dynmod
 
 	industrial_capacity_factory = SPR_worker_opposition_var
 	industrial_capacity_dockyard = SPR_worker_opposition_var
@@ -7,7 +7,7 @@ SPR_worker_opposition_dynmod = {
 }
 
 SPR_rising_falange_dynmod = {
-	icon = GFX_idea_chi_war_of_resistance
+	icon = GFX_idea_SPR_rising_falange_dynmod
 
 	conscription_factor = SPR_rising_falange_var
 	stability_factor = SPR_rising_falange_var

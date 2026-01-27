@@ -22,6 +22,9 @@ VX_update_spain_dynmods_effect = {
 			SPR_rising_falange_var = 0
 		}
 		add_to_variable = {
+			SPR_rising_falange_var = party_popularity@autocracy_ideology
+		}
+		add_to_variable = {
 			SPR_rising_falange_var = party_popularity@fascist_ideology
 		}
 		multiply_variable = {
