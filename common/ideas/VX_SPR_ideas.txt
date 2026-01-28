@@ -16,31 +16,28 @@ ideas = {
 		}
 		SPR_republican_collapse = {
 			modifier = {
-				progressive_ideology_drift = -0.2
-				liberal_ideology_drift = -0.2
-				conservatism_ideology_drift = -0.2
+				progressive_ideology_drift = -0.025
+				liberal_ideology_drift = -0.025
+				conservatism_ideology_drift = -0.025
 				political_power_factor = -0.5
 				disabled_ideas = 1
 			}
 		}
 	}
 
-	industrial_concern = {
-	
+	industrial_concern = {	
 		SPR_compania_telefonica_nacional = {
 			
 			picture = SPR_compania_telefonica_nacional
 			
 			allowed = {
-				has_dlc = "La Resistance"
 				original_tag = SPR
 			}
 
 			available = {
 				OR = {
-					custom_trigger_tooltip = {
-						tooltip = SPR_scw_not_in_progress_tt
-						NOT = { SPR_scw_in_progress = yes }
+					NOT = { 
+						has_global_flag = spanish_civil_war_ongoing_flag
 					}
 					controls_state = 41
 				}
@@ -61,15 +58,13 @@ ideas = {
 			picture = SPR_industrias_de_guerra_de_cataluna
 			
 			allowed = {
-				has_dlc = "La Resistance"
 				original_tag = SPR
 			}
 
 			available = {
 				OR = {
-					custom_trigger_tooltip = {
-						tooltip = SPR_scw_not_in_progress_tt
-						NOT = { SPR_scw_in_progress = yes }
+					NOT = { 
+						has_global_flag = spanish_civil_war_ongoing_flag
 					}
 					controls_state = 165
 				}
@@ -89,15 +84,13 @@ ideas = {
 			picture = SPR_altos_hornos_de_vizcaya
 			
 			allowed = {
-				has_dlc = "La Resistance"
 				original_tag = SPR
 			}
 
 			available = {
 				OR = {
-					custom_trigger_tooltip = {
-						tooltip = SPR_scw_not_in_progress_tt
-						NOT = { SPR_scw_in_progress = yes }
+					NOT = { 
+						has_global_flag = spanish_civil_war_ongoing_flag
 					}
 					controls_state = 792
 				}
@@ -118,15 +111,13 @@ ideas = {
 			picture = SPR_campsa
 			
 			allowed = {
-				has_dlc = "La Resistance"
 				original_tag = SPR
 			}
 
 			available = {
 				OR = {
-					custom_trigger_tooltip = {
-						tooltip = SPR_scw_not_in_progress_tt
-						NOT = { SPR_scw_in_progress = yes }
+					NOT = { 
+						has_global_flag = spanish_civil_war_ongoing_flag
 					}
 					controls_state = 41
 				}

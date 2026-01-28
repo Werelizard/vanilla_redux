@@ -1,0 +1,12 @@
+#### UNIT LEADER TRAITS #####
+leader_traits = {
+	VX_disgruntled = {
+		type = land
+		trait_type = personality_trait
+
+		modifier = {
+			reassignment_duration_factor = 1
+			experience_gain_factor = -0.5
+		}
+	}	
+}

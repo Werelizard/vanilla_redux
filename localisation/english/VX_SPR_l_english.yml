@@ -27,8 +27,29 @@
 
  ### EVENT TOOLTIPS ###
 
- spain_civil_war_play_as_republicans_tt:0 "You will side with the §YRepublicans§! during the Civil War."
- spain_civil_war_play_as_nationalists_tt:0 "You will side with the §YNationalists§! during the Civil War."
+ spain_civil_war_play_as_republicans_tt:0 "You will side with the §cRepublicans§! during the Civil War."
+ spain_civil_war_play_as_nationalists_tt:0 "You will side with the §fNationalists§! during the Civil War."
+
+ ### EVENTS ###
+
+ # CIVIL WAR PRELUDE
+ spain_civil_war_prelude.1.title:0 "Popular Front Wins the General Election"
+ spain_civil_war_prelude.1.desc:0 ""
+ spain_civil_war_prelude.1.a:0 "Now is the time for reconciliation"
+
+ spain_civil_war_prelude.2.title:0 "Confrontations Escalate into Violence"
+ spain_civil_war_prelude.2.desc:0 ""
+ spain_civil_war_prelude.2.a:0 "Call on our coalition parties to denounce the bloodshed"
+
+ spain_civil_war_prelude.3.title:0 "CEDA and Conservatives Denounce the Government"
+ spain_civil_war_prelude.3.desc:0 ""
+ spain_civil_war_prelude.3.a:0 "We must prepare for the inevitable"
+ spain_civil_war_prelude.3.b:0 "The republican experiment has lasted long enough"
+
+ # SPANISH REPUBLIC FAVOUR
+ spain_republic_flavour.1.title:0 "President Dissolves the Cortes Generales"
+ spain_republic_flavour.1.desc:0 ""
+ spain_republic_flavour.1.a:0 "The elections cannot come soon enough"
  
  ### CHARACTERS ###
  SPR_jose_maria_gil_robles:0 "Jose Maria Robles"
@@ -37,3 +58,24 @@
  VX_custodian_republic:0 "Custodian of the Republic"
  VX_isolated_republican:0 "Besieged Politician"
  VX_divisive_figurehead:0 "Divisive Figurehead"
+
+ ### COUNTRY FLAGS ###
+ spanish_civil_war_ongoing_flag:0 "The Spanish Civil War is ongoing"
+ spain_civil_war_play_as_republicans_flag:0 "Committed to support the §YRepublican§! cause"
+ spain_civil_war_play_as_nationalists_flag:0 "Committed to support the §YNationalist§! cause"
+
+ ### DECISION CATEGORIES ###
+ VX_spanish_republic_category:0 "A Faltering Republic"
+ VX_spanish_republic_category_desc:0 "The young Spanish Republic tethers over the abyss, driven towards its seemingly inevitable collapse by both ends of the political spectrum; ever since the deposition of Alfonso XIII it has been at the mercy of military plotters, socialists, land-owning elites and establishment republicans - all of whom have sought to steeer the republican institutions towards their own goals. As if that weren't enough anarchists and far-right activists alike have engaged in open and violent conflict. The central authority, or what's left of it, has steadily lost its grip on the levers of power.\n\nThe situation is dire and it will take a miracle for Spanish republicanism to endure...or perhaps it is time for the republic to be finally laid to rest."
+
+ ### DECISIONS ###
+ VX_support_spanish_government_decision:0 "Rally the Cortes"
+ VX_revoke_Autonomous_Zones_decision:0 "Revoke §![FROM.GetName]§!'s autonomy"
+ VX_anti_anarchist_crackdown_decision:0 "Anti-Anarchist Crackdown"
+ VX_anti_falangist_crackdown_decision:0 "Anti-Reactionary Crackdown"
+ VX_dismiss_generals_decision:0 "Reshuffle the Military High Command"
+
+ ### DECISION TOOLTIPS ###
+ SPR_civil_war_preparations_tt:0 "£pol_violence §Y1§!"
+ SPR_civil_war_preparations_tt_blocked:0 "£pol_violence §R1§!"
+ SPR_civil_war_preparations_tt_tooltip:0 "It will cost us §Y1§! £pol_violence §CCivil War Preparation§! action to take this decision."

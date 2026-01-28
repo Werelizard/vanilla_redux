@@ -1,5 +1,5 @@
 add_namespace = spain_civil_war_prelude
-add_namespace = spain_civil_war_flavour
+add_namespace = spain_republic_flavour
 
 
 ############################
@@ -21,16 +21,19 @@ country_event = {
 	trigger = {
 		original_tag = SPR
 		NOT = {
-			has_country_flag = spain_civil_war_started_flag
+			has_global_flag = spanish_civil_war_ongoing_flag
 		}
 	}
 
 	option = {
-		name = spain_civil_war_prelude.1.a # Side with the Republic
+		name = spain_civil_war_prelude.1.a 
 
 		set_politics = {
 			ruling_party = social_democracy_ideology
+			elections_allowed = yes
+			election_frequency = 3
 		}
+		custom_effect_tooltip = VX_doublespace_tt
 		revsoc_coalition_effect = yes
 		progressive_coalition_effect = yes
 		liberal_coalition_effect = yes
@@ -40,15 +43,14 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id =  spain_civil_war_prelude.2
-				days = 3
+				days = 14
 			}
 		}
 	}
 }
 
 country_event = {
-	# RIGHT WITHDRAWS FROM THE PROCESS IN PROTEST
-	# Player chooses here whether they will side with the Nationalists or the Republicans in the civil war
+	# Violence continues in the streets
 	id = spain_civil_war_prelude.2
 	title = spain_civil_war_prelude.2.title
 	desc = spain_civil_war_prelude.2.desc
@@ -57,24 +59,69 @@ country_event = {
 	fire_only_once = yes
 	timeout_days = 7
 
+	picture = GFX_report_event_election_vote
+
+	trigger = {
+		original_tag = SPR
+		NOT = {
+			has_global_flag = spanish_civil_war_ongoing_flag
+		}
+	}
+
+	option = {
+		name = spain_civil_war_prelude.2.a 
+
+		add_stability = -0.05
+		add_popularity = {
+			ideology = social_democracy_ideology
+			popularity = -0.15
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			country_event = {
+				id =  spain_civil_war_prelude.3
+				days = 14
+			}
+		}
+	}
+}
+
+country_event = {
+	# RIGHT WITHDRAWS FROM THE PROCESS IN PROTEST
+	# Player chooses here whether they will side with the Nationalists or the Republicans in the civil war
+	id = spain_civil_war_prelude.3
+	title = spain_civil_war_prelude.3.title
+	desc = spain_civil_war_prelude.3.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	timeout_days = 7
+
 	option = {
 		# Side with the Republicans
-		name = spain_civil_war_prelude.2.a
+		name = spain_civil_war_prelude.3.a
 
 		custom_effect_tooltip = spain_civil_war_play_as_republicans_tt
-		set_country_flag = spain_civil_war_play_as_republicans_flag
-
-		add_stability = -0.2
+		hidden_effect = {
+			set_country_flag = spain_civil_war_play_as_republicans_flag		
+		}
+		custom_effect_tooltip = VX_doublespace_tt
+		add_stability = -0.1
+		unlock_decision_tooltip = VX_dismiss_generals_decision
 	}
 
 	option = {
 		# Side with the Nationalists
-		name = spain_civil_war_prelude.2.b
+		name = spain_civil_war_prelude.3.b
 
 		custom_effect_tooltip = spain_civil_war_play_as_nationalists_tt
-		set_country_flag = spain_civil_war_play_as_nationalists_flag
-
-		add_stability = -0.2
+		hidden_effect = {
+			set_country_flag = spain_civil_war_play_as_nationalists_flag
+		}
+		custom_effect_tooltip = VX_doublespace_tt
+		add_stability = -0.1
 	}
 }
 
@@ -84,9 +131,9 @@ country_event = {
 
 unit_leader_event = {
 	# President calls to dissolve the assembly
-	id = spain_civil_war_flavour.1
-	title = spain_civil_war_flavour.1.title
-	desc = spain_civil_war_flavour.1.desc
+	id = spain_republic_flavour.1
+	title = spain_republic_flavour.1.title
+	desc = spain_republic_flavour.1.desc
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -96,8 +143,9 @@ unit_leader_event = {
 
 	option = {
 		# Elections can't come soon enough
-		name = spain_civil_war_flavour.1.a
+		name = spain_republic_flavour.1.a
 
+		add_stability = -0.05
 		auth_dem_leave_coalition_effect = yes
 	}
 }

@@ -4,7 +4,7 @@ on_actions = {
 			SPR = {
 				SPR_niceto_alcala_zamora = {
 					unit_leader_event = {
-						id = spain_civil_war_flavour.1
+						id = spain_republic_flavour.1
 						days = 6
 					}
 				}

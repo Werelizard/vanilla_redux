@@ -281,81 +281,26 @@ characters={
 	# Unit Leaders
 
 	SPR_vicente_rojo_lluch={
-		instance = {
-			allowed = {
-				has_dlc = "La Resistance"
-			}
-			name=SPR_vicente_rojo_lluch
-			portraits={
-				army={
-					large="GFX_portrait_SPR_vicente_rojo_lluch"
-					small=GFX_portrait_SPR_vicente_rojo_lluch_small
-				}
-			}
-			corps_commander={
-				traits={ brilliant_strategist }
-				skill=3
-				attack_skill=3
-				defense_skill=2
-				planning_skill=2
-				logistics_skill=3
-				legacy_id=1102
+		name=SPR_vicente_rojo_lluch
+		portraits={
+			army={
+				large="GFX_portrait_SPR_vicente_rojo_lluch"
+				small=GFX_portrait_SPR_vicente_rojo_lluch_small
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "La Resistance" }
-			}
-			name=SPR_vicente_rojo_lluch
-			portraits={
-				army={
-					small="GFX_idea_generic_army_europe_5"
-				}
-			}
-			advisor={
-				slot = army_chief
-				idea_token = SPR_vincente_rojo_lluch
-				name = SPR_vincente_rojo_lluch
-				allowed = {
-					NOT = {
-						has_dlc = "La Resistance"
-					}
-					original_tag = SPR
-				}
-				visible = {
-					NOT = {
-						has_fascist_government_trigger = yes
-					}
-				}
-				available = {
-					NOT = {
-						has_fascist_government_trigger = yes
-					}
-				}
-				traits = {
-					army_chief_maneuver_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-			}
-
-			corps_commander={
-				traits={ brilliant_strategist }
-				skill=3
-				attack_skill=3
-				defense_skill=2
-				planning_skill=2
-				logistics_skill=3
-				legacy_id=1102
-			}
+		corps_commander={
+			traits={ brilliant_strategist }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=1102
 		}
 	}
 
 	SPR_jose_miaja={
-		instance = {
-			allowed = {
+		allowed = {
 				has_dlc = "La Resistance"
 			}
 			name=SPR_jose_miaja
@@ -374,47 +319,6 @@ characters={
 				logistics_skill=1
 				legacy_id=1103
 			}
-		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "La Resistance" }
-			}
-			name=SPR_jose_miaja
-			portraits={
-				army={
-					small="GFX_idea_generic_army_europe_2"
-				}
-			}
-			advisor={
-				slot = high_command
-				idea_token = SPR_jose_miaja
-				ledger = army
-				name = SPR_jose_miaja
-				allowed = {
-					NOT = {
-						has_dlc = "La Resistance"
-					}
-					original_tag = SPR
-				}
-				visible = {
-					NOT = {
-						has_fascist_government_trigger = yes
-					}
-				}
-				available = {
-					NOT = {
-						has_fascist_government_trigger = yes
-					}
-				}
-				traits = {
-					army_infantry_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-			}
-		}
 	}
 
 	SPA_emilio_herrera={
@@ -430,10 +334,7 @@ characters={
 			idea_token = SPA_emilio_herrera
 			ledger = air
 			name = SPA_emilio_herrera
-			allowed = {
-				NOT = {
-					has_dlc = "La Resistance"
-				}
+			allowed = {				
 				original_tag = SPR
 			}
 			visible = {
@@ -449,11 +350,7 @@ characters={
 	}
 
 	SPR_jose_asensio_torrado={
-		instance = {
-			allowed = {
-				has_dlc = "La Resistance"
-			}
-			name=SPR_jose_asensio_torrado
+		name=SPR_jose_asensio_torrado
 			portraits={
 				army={
 					large="GFX_portrait_SPR_jose_asensio_torrado"
@@ -469,28 +366,6 @@ characters={
 				logistics_skill=1
 				legacy_id=1101
 			}
-		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "La Resistance" }
-			}
-			name=SPR_jose_asensio_torrado
-			portraits={
-				army={
-					large=GFX_portrait_SPR_jose_asensio_torrado
-					small=GFX_portrait_SPR_jose_asensio_torrado_small
-				}
-			}
-			corps_commander={
-				traits={ defensive_doctrine organisational_leader }
-				skill=2
-				attack_skill=1
-				defense_skill=3
-				planning_skill=2
-				logistics_skill=1
-				legacy_id=1100
-			}
-		}
 	}
 
 	SPR_valentin_gonzalez={
@@ -581,8 +456,7 @@ characters={
 			slot = high_command
 			idea_token = SPR_janos_galicz
 			ledger = army
-			allowed = {
-				has_dlc = "La Resistance"
+			allowed = {				
 				original_tag = SPR
 			}
 			visible = {
@@ -632,11 +506,7 @@ characters={
 	}
 
 	SPA_francisco_franco={
-		instance = {
-			allowed = {
-				has_dlc = "La Resistance"
-			}
-			name=SPA_francisco_franco
+		name=SPA_francisco_franco
 			portraits={
 				army={
 					large="GFX_portrait_spain_francisco_franco"
@@ -669,67 +539,6 @@ characters={
 					}
 				}
 			}
-		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "La Resistance" }
-			}
-			name=SPA_francisco_franco
-			portraits={
-				civilian={
-					large="GFX_portrait_spain_francisco_franco"
-				}
-				army={
-					small="GFX_idea_francisco_franco"
-				}
-			}
-			advisor={
-				slot = army_chief
-				idea_token = SPA_francisco_franco
-				name = SPR_fransisco_franco
-				allowed = {
-					NOT = {
-						has_dlc = "La Resistance"
-					}
-					original_tag = SPR
-				}
-				available = {
-					custom_trigger_tooltip = {
-						tooltip = spr_franco_unavailable_tooltip
-						OR = {
-							has_fascist_government_trigger = yes
-							AND = {
-								NOT = {
-									has_socialist_government_trigger = yes
-								}
-								NOT = {
-									any_country_with_original_tag = {
-										original_tag_to_check = SPR
-										NOT = {
-											tag = root
-										}
-										has_fascist_government_trigger = yes
-									}
-								}
-							}
-						}
-					}
-				}
-				traits = {
-					army_chief_offensive_3
-				}
-				cost = 200
-				ai_will_do = {
-					factor = 1.000
-				}
-			}
-	
-			country_leader={
-				ideology=fascist_ideology_subtype
-				expire="1965.1.1.1"
-				id=-1
-			}
-		}
 	}
 
 	SPR_mohamed_meziane={
@@ -772,8 +581,7 @@ characters={
 
 	
 	SPA_juan_yague={ # Falangist
-		instance = {
-			allowed = {
+		allowed = {
 				has_dlc = "La Resistance"
 			}
 			name=SPA_juan_yague
@@ -833,42 +641,6 @@ characters={
 					}
 				}
 			}
-		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "La Resistance" }
-			}
-			name=SPA_juan_yague_blanco
-			portraits={
-				army={
-					small="GFX_idea_generic_air_europe_3"
-				}
-			}
-			advisor={
-				slot = air_chief
-				idea_token = SPA_juan_yague_blanco
-				name = SPA_juan_yague_blanco
-				allowed = {
-					NOT = {
-						has_dlc = "La Resistance"
-					}
-					original_tag = SPR
-				}
-				visible = {
-					has_fascist_government_trigger = yes
-				}
-				available = {
-					has_fascist_government_trigger = yes
-				}
-				traits = {
-					air_chief_reform_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-			}
-		}
 	}
 
 	SPA_emilio_esteban_infantes={
@@ -884,9 +656,6 @@ characters={
 			ledger = army
 			name = SPA_emilio_esteban_infantes
 			allowed = {
-				NOT = {
-					has_dlc = "La Resistance"
-				}
 				original_tag = SPR
 			}
 			visible = {
@@ -923,11 +692,7 @@ characters={
 				idea_token = SPA_agustin_munoz_grandes
 				ledger = army
 				allowed = {
-					has_dlc = "La Resistance"
-					OR = {
-						original_tag = SPR
-						original_tag = CHL
-					}
+					original_tag = SPR
 				}
 				visible = {
 					NOT = {

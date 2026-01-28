@@ -132,7 +132,7 @@
 
  ### TOOLTIPS ###
 
- VX_doublespace_tt:0 "\n "
+ VX_doublespace_tt:0 " \n"
  VX_CANNOTTRAINUNITS_tt:0 "§RCannot train, disband units or edit unit templates.§!"
  
  ### MODIFIERS ###
@@ -145,3 +145,6 @@
  authoritarian_democrat_ideology_drift:0 "Daily Authoritarian Democrat Support"
  autocracy_ideology_drift:0 "Daily Autocratic Support"
  fascist_ideology_drift:0 "Daily Fascist Support"
+
+ ### LEADER TRAITS ###
+ VX_disgruntled:0 "Disgruntled"
