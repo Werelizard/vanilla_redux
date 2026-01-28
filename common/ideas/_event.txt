@@ -45,7 +45,8 @@ ideas = {
 			
 			modifier = {
 				conscription = -0.002
-				communism_drift = 0.05
+				authoritarian_democrat_ideology_drift= 0.025
+				revolutionary_socialism_ideology_drift = 0.025
 			}
 	
 			ai_will_do = {
@@ -63,7 +64,9 @@ ideas = {
 			
 			modifier = {
 				political_power_factor = -0.2
-				democratic_drift = 0.05
+				progressive_ideology_drift = 0.02
+				liberal_ideology_drift = 0.02
+				conservatism_ideology_drift = 0.02
 			}
 	
 			ai_will_do = {
@@ -195,7 +198,8 @@ ideas = {
 
 			modifier = {
 				stability_factor = -0.1
-				communism_drift = 0.05
+				authoritarian_democrat_ideology_drift= 0.025
+				revolutionary_socialism_ideology_drift = 0.025
 			}
 		}
 
@@ -209,7 +213,7 @@ ideas = {
 			picture = generic_democratic_drift_bonus
 			
 			modifier = {
-				fascism_acceptance = -50
+				fascist_ideology_acceptance = -50
 			}
 		}
 		

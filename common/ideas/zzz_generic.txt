@@ -197,8 +197,12 @@ ideas = {
 
 			modifier = {
 				trade_opinion_factor = 0.25
-				democratic_acceptance = -300
-				communism_acceptance = 100
+				authoritarian_socialism_ideology_acceptance = 100
+				revolutionary_socialism_ideology_acceptance = 100
+				social_democracy_ideology_acceptance = -50
+				progressive_ideology = -300
+				liberal_ideology = -300
+				conservatism_ideology = -300
 				#custom_modifier_tooltip = SOV_shocked_by_surprise_attack_cant_join_factions_tt
 			}
 		}
@@ -215,7 +219,8 @@ ideas = {
 
 			modifier = {
 				operative_slot = 1
-				communism_acceptance = -15
+				authoritarian_socialism_ideology_acceptance = -15
+				revolutionary_socialism_ideology_acceptance = -15
 			}
 		}
 		
@@ -272,7 +277,8 @@ ideas = {
 			
 			modifier = {
 				#justify_war_goal_time = -0.25
-				communism_drift = 0.1
+				authoritarian_democrat_ideology_drift= 0.05
+				revolutionary_socialism_ideology_drift = 0.05
 			}
 		}
 
@@ -292,7 +298,7 @@ ideas = {
 			
 			modifier = {
 				fascism_drift = 0.1
-				fascism_acceptance = 65
+				fascist_ideology_acceptance = 65
 			}
 		}
 
@@ -312,7 +318,7 @@ ideas = {
 			
 			modifier = {
 				fascism_drift = 0.25
-				fascism_acceptance = 150
+				fascist_ideology_acceptance = 150
 				drift_defence_factor = -0.25
 
 			}
@@ -334,8 +340,10 @@ ideas = {
 			picture = generic_communism_drift_bonus
 			
 			modifier = {
-				communism_drift = 0.1
-				communism_acceptance = 85
+				authoritarian_democrat_ideology_drift= 0.05
+				revolutionary_socialism_ideology_drift = 0.05
+				authoritarian_socialism_ideology_acceptance = 85
+				revolutionary_socialism_ideology_acceptance = 85
 			}
 		}
 
@@ -355,8 +363,13 @@ ideas = {
 			picture = generic_democratic_drift_bonus
 			
 			modifier = {
-				democratic_drift = 0.1
-				democratic_acceptance = 85
+				progressive_ideology_drift = 0.03
+				liberal_ideology_drift = 0.03
+				conservatism_ideology_drift = 0.03
+				social_democracy_ideology_acceptance = 40
+				progressive_ideology = 85
+				liberal_ideology = 85
+				conservatism_ideology = 85
 			}
 		}
 		
@@ -374,8 +387,10 @@ ideas = {
 			picture = generic_pp_unity_bonus
 			
 			modifier = {
-				neutrality_drift = 0.1
-				neutrality_acceptance = 85
+				authoritarian_democrat_ideology_drift = 0.05
+				autocracy_ideology_drift = 0.05
+				authoritarian_democrat_ideology_acceptance = 85
+				autocracy_ideology_acceptance = 85
 			}
 		}
 
@@ -397,7 +412,7 @@ ideas = {
 			
 			modifier = {
 				fascism_drift = 0.1
-				fascism_acceptance = 35
+				fascist_ideology_acceptance = 35
 			}
 		}
 		
@@ -417,8 +432,10 @@ ideas = {
 			picture = generic_communism_drift_bonus
 			
 			modifier = {
-				communism_drift = 0.1
-				communism_acceptance = 35
+				authoritarian_democrat_ideology_drift= 0.05
+				revolutionary_socialism_ideology_drift = 0.05
+				authoritarian_socialism_ideology_acceptance = 35
+				revolutionary_socialism_ideology_acceptance = 35
 			}
 		}
 
@@ -438,8 +455,13 @@ ideas = {
 			picture = generic_democratic_drift_bonus
 			
 			modifier = {
-				democratic_drift = 0.1
-				democratic_acceptance = 35
+				progressive_ideology_drift = 0.03
+				liberal_ideology_drift = 0.03
+				conservatism_ideology_drift = 0.03
+				social_democracy_ideology_acceptance = 40
+				progressive_ideology = 85
+				liberal_ideology = 85
+				conservatism_ideology = 85
 			}
 		}
 
@@ -459,8 +481,10 @@ ideas = {
 			picture = generic_pp_unity_bonus
 			
 			modifier = {
-				neutrality_drift = 0.1
-				neutrality_acceptance = 35
+				authoritarian_democrat_ideology_drift = 0.05
+				autocracy_ideology_drift = 0.05
+				authoritarian_democrat_ideology_acceptance = 85
+				autocracy_ideology_acceptance = 85
 			}
 		}
 		
@@ -521,8 +545,9 @@ ideas = {
 			
 			modifier = {
 				custom_modifier_tooltip = GER_dimantle_faction_tt
-				communism_acceptance = 100
-				fascism_acceptance = 100
+				authoritarian_socialism_ideology_acceptance = 100
+				revolutionary_socialism_ideology_acceptance = 100
+				fascist_ideology_acceptance = 100
 			}
 		}
 		
@@ -542,7 +567,8 @@ ideas = {
 			picture = generic_communism_drift_bonus
 			
 			modifier = {
-				communism_drift = 0.1
+				authoritarian_democrat_ideology_drift= 0.05
+				revolutionary_socialism_ideology_drift = 0.05
 			}
 		}
 		# from decision
@@ -562,7 +588,8 @@ ideas = {
 			picture = generic_communism_drift_bonus
 			
 			modifier = {
-				communism_drift = 0.1
+				authoritarian_democrat_ideology_drift= 0.05
+				revolutionary_socialism_ideology_drift = 0.05
 				research_speed_factor = 0.035
 			}
 		}
@@ -624,7 +651,9 @@ ideas = {
 			picture = generic_democratic_drift_bonus
 			
 			modifier = {
-				democratic_drift = 0.1
+				progressive_ideology_drift = 0.03
+				liberal_ideology_drift = 0.03
+				conservatism_ideology_drift = 0.03
 				stability_factor = 0.1
 			}
 		}
@@ -643,7 +672,8 @@ ideas = {
 			picture = generic_pp_unity_bonus
 			
 			modifier = {
-				neutrality_drift = 0.1
+				authoritarian_democrat_ideology_drift = 0.05
+				autocracy_ideology_drift = 0.05
 				mobilization_speed = 0.15
 			}
 		}
@@ -683,7 +713,9 @@ ideas = {
 			picture = generic_pp_unity_bonus
 
 			modifier = {
-				democratic_drift = -0.02
+				progressive_ideology_drift = -0.01
+				liberal_ideology_drift = -0.01
+				conservatism_ideology_drift = -0.01
 			}
 		}
 	
@@ -987,7 +1019,8 @@ ideas = {
 			}
 
 			modifier = {
-				communism_drift = -0.05
+				authoritarian_democrat_ideology_drift= -0.025
+				revolutionary_socialism_ideology_drift = -0.025
 			}
 		}
 
