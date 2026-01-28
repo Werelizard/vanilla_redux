@@ -242,12 +242,12 @@ auth_dem_coalition_effect = yes
 set_popularities = {
 	authoritarian_socialism_ideology = 11
 	revolutionary_socialism_ideology = 14
-	progressive_ideology = 10
 	social_democracy_ideology = 15 # SPANISH SOCIALIUST WORRKERS PARTY
+	progressive_ideology = 2
 	liberal_ideology = 13 # REPUBLICAN LEFT
 	conservatism_ideology = 10 # REPUBLICAN RIGHT
 	authoritarian_democrat_ideology = 3 # MILITARY
-	autocracy_ideology = 4 # MILITARY
+	autocracy_ideology = 12 # MILITARY
 	fascist_ideology = 20 # FALANGISTS
 }
 

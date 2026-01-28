@@ -178,43 +178,43 @@ VX_has_plurality_trigger = {
 		limit = {
 			has_government = social_democracy_ideology
 		}
-		social_democracy_ideology > 0.2
+		social_democracy_ideology > 0.3
 	}
 	else_if = {
 		limit = {
 			has_government = progressive_ideology
 		}
-		progressive_ideology > 0.2
+		progressive_ideology > 0.3
 	}
 	else_if = {
 		limit = {
 			has_government = liberal_ideology
 		}
-		liberal_ideology > 0.2
+		liberal_ideology > 0.3
 	}
 	else_if = {
 		limit = {
 			has_government = conservatism_ideology
 		}
-		conservatism_ideology > 0.2
+		conservatism_ideology > 0.3
 	}
 	else_if = {
 		limit = {
 			has_government = authoritarian_democrat_ideology
 		}
-		authoritarian_democrat_ideology > 0.2
+		authoritarian_democrat_ideology > 0.3
 	}
 	else_if = {
 		limit = {
 			has_government = autocracy_ideology
 		}
-		autocracy_ideology > 0.2
+		autocracy_ideology > 0.3
 	}
 	else_if = {
 		limit = {
 			has_government = fascist_ideology
 		}
-		fascist_ideology > 0.2
+		fascist_ideology > 0.3
 	}
 	else = {
 		always = no

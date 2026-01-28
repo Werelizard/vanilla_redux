@@ -89,7 +89,17 @@
  conservative_coalition_tt:0 "In a coalition with the §cConservatives§!"
  authoritarian_coalition_tt:0 "In a coalition with the §gAuthoritarian Democrats§!"
  autocracy_coalition_tt:0 "In a coalition with the §lAutocrats§!"
- fascism_coalition_tt:0 "In a coalition with the §Yfascists§!"
+ fascism_coalition_tt:0 "In a coalition with the §fFascists§!"
+
+ authsoc_coalition_tt_NOT:0 "Not in a coaltion with the §rAuthoritarian Socialists§!"
+ revsoc_coalition_tt_NOT:0 "Not in a coalition with the §RRevolutionary Socialists§!"
+ socdem_coalition_tt_NOT:0 "Not in a coalition with the §pSocial Democrats§!"
+ progressive_coalition_tt_NOT:0 "Not in a coalition with the §PProgressives§!"
+ liberal_coalition_tt_NOT:0 "Not in a coalition with the §YLiberals§!"
+ conservative_coalition_tt_NOT:0 "Not in a coalition with the §cConservatives§!"
+ authoritarian_coalition_tt_NOT:0 "Not in a coalition with the §gAuthoritarian Democrats§!"
+ autocracy_coalition_tt_NOT:0 "Not in a coalition with the §lAutocrats§!"
+ fascism_coalition_tt_NOT:0 "Not in a coalition with the §fFascists§!"
 
  authsoc_join_coalition_tt:0 "The £autsoc_texticon  §rAuthoritarian Socialists§! will join the coalition."
  revsoc_join_coalition_tt:0 "The £revsoc_texticon  §RRevolutionary Socialists§! will join the coalition."
@@ -148,3 +158,19 @@
 
  ### LEADER TRAITS ###
  VX_disgruntled:0 "Disgruntled"
+
+ ### MODIFIER ###
+ VX_daily_ruling_party_drift:0 "Daily Ruling Party Support"
+
+ ### DECISIONS ###
+ VX_support_for_ruling_party_decision:0 "Organise Political Rallies"
+
+ VX_ban_democratic_parties_decision:0 "Ban Democratic Parties"
+ VX_ban_reactionary_parties_decision:0 "Ban Reactionary Parties"
+ VX_ban_socialist_parties_decision:0 "Ban Socialist Parties"
+ VX_ban_authoritarian_parties_decision:0 "Ban Authoritarian Parties"
+
+ VX_institute_press_censorship_socialist_decision:0 "Institute Press Censorship"
+ VX_institute_press_censorship_democratic_decision:0 "Institute Press Censorship"
+ VX_institute_press_censorship_authoritarian_decision:0 "Institute Press Censorship"
+ VX_institute_press_censorship_fascist_decision:0 "Institute Press Censorship"
