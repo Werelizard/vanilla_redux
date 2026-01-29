@@ -27,6 +27,7 @@ on_actions = {
 	}
 	on_government_change = {
 		effect = {
+			remove_coalitions_effect = yes 
 			VX_update_ideology_impact_effect = yes
 		}
 	}

@@ -526,12 +526,6 @@ technologies = {
 				factor = 5
 				tag = ENG
 			}
-
-			modifier = {
-				factor = 5
-				tag = GER
-				has_completed_focus = GER_fallschirmjager
-			}
 		}
 	}
 

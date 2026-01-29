@@ -1,0 +1,547 @@
+VX_political_actions = {
+	VX_improved_worker_conditions = {
+
+		icon = generic_industry
+		priority = 10
+		available = {
+			has_stability < 1.0
+			if = {
+				limit = {
+					tag = SPR
+				}
+				OR = {
+					NOT = {
+						has_dynamic_modifier = SPR_worker_opposition_dynmod
+					}
+					has_socialist_government_trigger = yes
+					has_government = social_democracy_ideology
+				}
+			}
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+
+		modifier = {
+			stability_weekly = 0.005
+			consumer_goods_factor = 0.10
+			industrial_capacity_factory = -0.1
+			
+		}
+
+		days_remove = 180
+		days_re_enable = 540
+
+		cost = 100
+
+		complete_effect = {
+
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_stability < 0.6
+				has_political_power > 155 #Spend on other things first
+			}
+			modifier = {
+				factor = 0
+				original_tag = SPR
+				NOT = { has_global_flag = spanish_civil_war }
+			}
+			modifier = {
+				factor = 0 
+				tag = ICE
+				has_completed_focus = ICE_not_our_king
+				NOT = { has_completed_focus = ICE_break_with_the_crown }
+			}
+			modifier = {
+				add = 1000
+				has_stability < 0.76
+				original_tag = SWE
+				has_idea = SWE_hungershield
+			}
+		}
+	}
+   	VX_ban_democratic_parties_decision = {
+		# For non democratic
+		icon = generic_civil_support
+
+		visible = {
+			NOT = {
+				has_democratic_government_trigger = yes
+			}
+			OR = {
+				social_democracy_ideology > 0
+				progressive_ideology > 0
+				liberal_ideology > 0
+				conservatism_ideology > 0
+			}
+		}
+
+		available = {
+			OR = {
+				AND = {
+					NOT = {
+						socdem_coalition_trigger = yes
+					}
+					social_democracy_ideology < 0.2
+				}
+				AND = {
+					NOT = {
+						progressive_coalition_trigger = yes
+					}
+					progressive_ideology < 0.2
+				}
+				AND = {
+					NOT = {
+						liberal_coalition_trigger = yes
+					}
+					liberal_ideology < 0.2
+				}
+				AND = {
+					NOT = {
+						conservative_coalition_trigger = yes
+					}
+					conservatism_ideology < 0.2
+				}
+			}
+		}
+
+		days_remove = 90
+
+		modifier = {
+			stability_weekly = 0.015
+		}
+
+		cost = 50
+	}
+	VX_ban_reactionary_parties_decision = {
+		# For socialists  / socdems
+		icon = generic_civil_support
+
+		visible = {
+			OR = {
+				has_socialist_government_trigger = yes
+				has_government = social_democracy_ideology
+			}
+			OR = {
+				conservatism_ideology > 0
+				authoritarian_democrat_ideology > 0
+				autocracy_ideology > 0
+				fascist_ideology > 0
+			}
+		}
+
+		available = {
+			OR = {
+				AND = {
+					NOT = {
+						conservative_coalition_trigger = yes
+					}
+					conservatism_ideology < 0.2
+				}
+				AND = {
+					NOT = {
+						authoritarian_coalition_trigger = yes
+					}
+					authoritarian_democrat_ideology < 0.2
+				}
+				AND = {
+					NOT = {
+						autocracy_coalition_trigger = yes
+					}
+					autocracy_ideology < 0.2
+				}
+				AND = {
+					NOT = {
+						fascism_coalition_trigger = yes
+					}
+					fascist_ideology < 0.2
+				}
+			}
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					NOT = {
+						conservative_coalition_trigger = yes
+					}
+				}
+				add_to_temp_variable = {
+					decision_tempvar = party_popularity@conservatism_ideology
+				}
+				add_popularity = {
+					ideology = conservatism_ideology
+					popularity = -0.2
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						authoritarian_coalition_trigger = yes
+					}
+				}
+				add_to_temp_variable = {
+					decision_tempvar = party_popularity@authoritarian_democrat_ideology
+				}
+				add_popularity = {
+					ideology = authoritarian_democrat_ideology
+					popularity = -0.2
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						autocracy_coalition_trigger = yes
+					}
+				}
+				add_to_temp_variable = {
+					decision_tempvar = party_popularity@autocracy_ideology
+				}
+				add_popularity = {
+					ideology = autocracy_ideology
+					popularity = -0.2
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						fascism_coalition_trigger = yes
+					}
+				}
+				add_to_temp_variable = {
+					decision_tempvar = party_popularity@fascist_ideology
+				}
+				add_popularity = {
+					ideology = fascist_ideology
+					popularity = -0.2
+				}
+			}
+			multiply_temp_variable = {
+				decision_tempvar = -1
+			}
+			add_stability = decision_tempvar
+		}
+
+		days_remove = 90
+
+		modifier = {
+			stability_weekly = 0.015
+		}
+
+		cost = 50
+	}
+	VX_ban_socialist_parties_decision = {
+		# For non-socialists / non socdems
+		icon = generic_civil_support
+
+		visible = {
+			NOT = {
+				has_socialist_government_trigger = yes
+			}
+			NOT = {
+				has_government = social_democracy_ideology
+			}
+			OR = {
+				authoritarian_socialism_ideology > 0
+				revolutionary_socialism_ideology > 0
+				social_democracy_ideology > 0
+			}
+		}
+
+		available = {
+			VX_has_plurality_trigger = yes
+			OR = {
+				AND = {
+					NOT = {
+						authsoc_coalition_trigger = yes
+					}
+					authoritarian_socialism_ideology < 0.2
+				}
+				AND = {
+					NOT = {
+						revsoc_coalition_trigger = yes
+					}
+					revolutionary_socialism_ideology < 0.2
+				}
+				AND = {
+					NOT = {
+						socdem_coalition_trigger = yes
+					}
+					social_democracy_ideology < 0.2
+				}
+			}
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					NOT = {
+						authsoc_coalition_trigger = yes
+					}
+				}
+				add_to_temp_variable = {
+					decision_tempvar = party_popularity@authoritarian_socialism_ideology
+				}
+				add_popularity = {
+					ideology = authoritarian_socialism_ideology
+					popularity = -0.2
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						revsoc_coalition_trigger = yes
+					}
+				}
+				add_to_temp_variable = {
+					decision_tempvar = party_popularity@revolutionary_socialism_ideology
+				}
+				add_popularity = {
+					ideology = revolutionary_socialism_ideology
+					popularity = -0.2
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						socdem_coalition_trigger = yes
+					}
+				}
+				add_to_temp_variable = {
+					decision_tempvar = party_popularity@social_democracy_ideology
+				}
+				add_popularity = {
+					ideology = social_democracy_ideology
+					popularity = -0.2
+				}
+			}
+			multiply_temp_variable = {
+				decision_tempvar = -1
+			}
+			add_stability = decision_tempvar
+		}
+
+		days_remove = 90
+
+		modifier = {
+			stability_weekly = 0.0015
+		}
+
+		cost = 50
+	}
+	VX_ban_authoritarian_parties_decision = {
+		# For non-auth / non fasc
+		icon = generic_civil_support
+
+		visible = {
+			NOT = {
+				has_authoritarian_government_trigger = yes
+			}
+			NOT = {
+				has_fascist_government_trigger = yes
+			}
+			OR = {
+				authoritarian_democrat_ideology > 0
+				autocracy_ideology > 0
+				fascist_ideology > 0
+			}
+		}
+
+		available = {
+			VX_has_plurality_trigger = yes
+			OR = {
+				AND = {
+					NOT = {
+						authoritarian_coalition_trigger = yes
+					}
+					authoritarian_democrat_ideology < 0.2
+				}
+				AND = {
+					NOT = {
+						autocracy_coalition_trigger = yes
+					}
+					autocracy_ideology < 0.2
+				}
+				AND = {
+					NOT = {
+						fascism_coalition_trigger = yes
+					}
+					fascist_ideology < 0.2
+				}
+			}
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					NOT = {
+						authoritarian_coalition_trigger = yes
+					}
+				}
+				add_to_temp_variable = {
+					decision_tempvar = party_popularity@authoritarian_democrat_ideology
+				}
+				add_popularity = {
+					ideology = authoritarian_democrat_ideology
+					popularity = -0.2
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						autocracy_coalition_trigger = yes
+					}
+				}
+				add_to_temp_variable = {
+					decision_tempvar = party_popularity@autocracy_ideology
+				}
+				add_popularity = {
+					ideology = autocracy_ideology
+					popularity = -0.2
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						fascism_coalition_trigger = yes
+					}
+				}
+				add_to_temp_variable = {
+					decision_tempvar = party_popularity@fascist_ideology
+				}
+				add_popularity = {
+					ideology = fascist_ideology
+					popularity = -0.2
+				}
+			}
+			multiply_temp_variable = {
+				decision_tempvar = -1
+			}
+			add_stability = decision_tempvar
+		}
+
+		days_remove = 90
+
+		modifier = {
+			stability_weekly = 0.0015
+		}
+
+		cost = 50
+	}
+	VX_support_for_ruling_party_decision = {
+		# Increase support for the ruling party
+		icon = generic_political_discourse
+
+		available = {
+			NOT = {
+				VX_has_majority_trigger = yes
+			}
+		}
+
+		modifier = {
+			
+		}
+
+		remove_effect = {
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.1
+			}
+		}
+
+		cost = 100
+		days_remove = 120
+	}
+	VX_institute_press_censorship_socialist_decision = {
+		# Censor every *reactionary* party
+		icon = GFX_decision_generic_political_rally
+		
+		visible = {
+			has_socialist_government_trigger = yes
+		}
+
+		modifier = {
+			conservatism_ideology_drift = -0.03
+			authoritarian_democrat_ideology_drift = -0.03
+			autocracy_ideology_drift = -0.03
+			fascist_ideology_drift = -0.03
+		}
+
+		available = {
+			
+		}
+
+		cost = 150
+		days_remove = 360
+	}
+	VX_institute_press_censorship_democratic_decision = {
+		# Censor every *extreme* party
+		icon = GFX_decision_generic_political_rally
+		visible = {
+			has_democratic_government_trigger = yes
+		}
+
+		modifier = {
+			authoritarian_socialism_ideology_drift = -0.03
+			revolutionary_socialism_ideology_drift = -0.03
+			autocracy_ideology_drift = -0.03
+			fascist_ideology_drift = -0.03
+		}
+
+		available = {
+			
+		}
+
+		cost = 150
+		days_remove = 360
+	}
+	VX_institute_press_censorship_authoritarian_decision = {
+		# Censor every *socialist* and *extreme* party
+		icon = GFX_decision_generic_political_rally
+		visible = {
+			has_authoritarian_government_trigger = yes
+		}
+
+		modifier = {
+			authoritarian_socialism_ideology_drift = -0.03
+			revolutionary_socialism_ideology_drift = -0.03
+			social_democracy_ideology_drift = -0.03
+			fascist_ideology_drift = -0.03
+		}
+
+		available = {
+			
+		}
+
+		cost = 150
+		days_remove = 360
+	}
+	VX_institute_press_censorship_fascist_decision = {
+		# Censor every *socialist* and *liberal* party
+		icon = GFX_decision_generic_political_rally
+		visible = {
+			has_fascist_government_trigger = yes
+		}
+
+		modifier = {
+			authoritarian_socialism_ideology_drift = -0.03
+			revolutionary_socialism_ideology_drift = -0.03
+			social_democracy_ideology_drift = -0.03
+			liberal_ideology_drift = -0.03
+		}
+
+		available = {
+			
+		}
+
+		cost = 150
+		days_remove = 360
+	}
+}

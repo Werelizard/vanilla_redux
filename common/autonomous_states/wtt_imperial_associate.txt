@@ -61,16 +61,7 @@ autonomy_state = {
 	}
 
 	can_take_level = {
-		if = {
-			limit = { original_tag = MAN }
-				OR = {
-					has_completed_focus = MAN_the_two_emperors
-					hidden_trigger = {
-						has_completed_focus = MAN_tsr_the_two_emperors
-					}
-					has_completed_focus = MAN_tsr_claim_outer_manchuria
-				}
-		}
+		
 	}
 
 	can_lose_level = {

@@ -1,0 +1,5 @@
+VX_political_actions = {
+	visible = {
+		always = yes
+	}
+}

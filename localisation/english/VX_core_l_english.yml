@@ -156,14 +156,20 @@
  autocracy_ideology_drift:0 "Daily Autocratic Support"
  fascist_ideology_drift:0 "Daily Fascist Support"
 
- ### LEADER TRAITS ###
- VX_disgruntled:0 "Disgruntled"
+ ### LEADER TRAITS ### 
+ VX_divisive_figurehead:0 "Divisive Figurehead"
+ VX_populist:0 "Populist"
+ VX_national_syndicalist_firebrand:0 "National Syndicalist Firebrand"
 
  ### MODIFIER ###
  VX_daily_ruling_party_drift:0 "Daily Ruling Party Support"
 
+ ### DECISION CATEGORIES ###
+ VX_political_actions:0 "Political Actions"
+
  ### DECISIONS ###
  VX_support_for_ruling_party_decision:0 "Organise Political Rallies"
+ VX_improved_worker_conditions:0 "Improve Worker Conditions"
 
  VX_ban_democratic_parties_decision:0 "Ban Democratic Parties"
  VX_ban_reactionary_parties_decision:0 "Ban Reactionary Parties"

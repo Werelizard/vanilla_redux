@@ -268,3 +268,11 @@ VX_has_majority_trigger = {
 		always = no
 	}
 }
+
+# SCripted trigger to pass if a country has actual content or not
+VX_has_non_generic_content_trigger = {
+	OR = {
+		tag = SPR
+		tag = SPD
+	}
+}
