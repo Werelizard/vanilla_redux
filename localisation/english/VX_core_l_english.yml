@@ -180,16 +180,3 @@
  VX_institute_press_censorship_democratic_decision:0 "Institute Press Censorship"
  VX_institute_press_censorship_authoritarian_decision:0 "Institute Press Censorship"
  VX_institute_press_censorship_fascist_decision:0 "Institute Press Censorship"
- 
- ### FACTION RULES ###
- call_to_war_defensive_war_only:0 "Only for Defensive Wars"
- change_leader_rule_capitulated_leader:0 "Current Leader has Capitulated"
- goals_highest_influence:0 "Member With the Most Influence"
- dismissal_rule_ideology_socialist:0 "Socialist Countries Only"
- dismissal_rule_ideology_fascist:0 "Fascist Countries Only"
- dismissal_rule_ideology_not_democratic:0 "Non-Democratic Countries Only"
- dismissal_rule_extreme_ideology:0 "Extreme Ideologies Only"
- dismissal_rule_ideology_not_socialist:0 "Non-Socialist Countries Only"
- dismissal_rule_actions_attacked_democracy:0 "At War with Democracy"
- dismissal_rule_actions_attacked_socialism:0 "At War with Socialism"
- dismissal_rule_actions_world_tension:0 "Generated World Tension"
