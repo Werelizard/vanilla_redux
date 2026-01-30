@@ -180,7 +180,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "elections"
 				position = { x = 92 y = -36 }
-				size = { width = 255 height = 100% }
+				size = { width = 255 height = 60 }
 				font = "hoi_16mbs"
 				text = "elections"
 				maxWidth = 182

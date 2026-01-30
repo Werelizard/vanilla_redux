@@ -11,6 +11,4 @@ VX_spanish_republic_category = {
 		}
 	}
 	priority = 100
-
-	visible_when_empty = yes
 }

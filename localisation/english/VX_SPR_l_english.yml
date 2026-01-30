@@ -52,17 +52,12 @@
  spain_republic_flavour.1.a:0 "The elections cannot come soon enough"
  
  ### CHARACTERS ###
- SPR_niceto_alcala_zamora:0 "Niceto Alcala Zamora"
- SPR_manuel_azana:0 "Manuel Azana"
  SPR_jose_maria_gil_robles:0 "Jose Maria Robles"
- SPR_jose_diaz:0 "Jose Diaz"
- SPR_emilio_mola:0 "Emilio Mola"
- SPR_jose_antonio_primo_de_rivera:0 "Jose Antonio Primo de Rivera"
 
  #### CHARACTER TRAITS ####
  VX_custodian_republic:0 "Custodian of the Republic"
  VX_isolated_republican:0 "Besieged Politician"
- VX_spanish_secretary_general:0 "Secretary General"
+ VX_divisive_figurehead:0 "Divisive Figurehead"
 
  ### COUNTRY FLAGS ###
  spanish_civil_war_ongoing_flag:0 "The Spanish Civil War is ongoing"
@@ -72,3 +67,15 @@
  ### DECISION CATEGORIES ###
  VX_spanish_republic_category:0 "A Faltering Republic"
  VX_spanish_republic_category_desc:0 "The young Spanish Republic tethers over the abyss, driven towards its seemingly inevitable collapse by both ends of the political spectrum; ever since the deposition of Alfonso XIII it has been at the mercy of military plotters, socialists, land-owning elites and establishment republicans - all of whom have sought to steeer the republican institutions towards their own goals. As if that weren't enough anarchists and far-right activists alike have engaged in open and violent conflict. The central authority, or what's left of it, has steadily lost its grip on the levers of power.\n\nThe situation is dire and it will take a miracle for Spanish republicanism to endure...or perhaps it is time for the republic to be finally laid to rest."
+
+ ### DECISIONS ###
+ VX_support_spanish_government_decision:0 "Rally the Cortes"
+ VX_revoke_Autonomous_Zones_decision:0 "Revoke §![FROM.GetName]§!'s autonomy"
+ VX_anti_anarchist_crackdown_decision:0 "Anti-Anarchist Crackdown"
+ VX_anti_falangist_crackdown_decision:0 "Anti-Reactionary Crackdown"
+ VX_dismiss_generals_decision:0 "Reshuffle the Military High Command"
+
+ ### DECISION TOOLTIPS ###
+ SPR_civil_war_preparations_tt:0 "£pol_violence §Y1§!"
+ SPR_civil_war_preparations_tt_blocked:0 "£pol_violence §R1§!"
+ SPR_civil_war_preparations_tt_tooltip:0 "It will cost us §Y1§! £pol_violence §CCivil War Preparation§! action to take this decision."

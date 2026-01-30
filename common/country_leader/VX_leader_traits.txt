@@ -2,21 +2,6 @@
 
 ### COUNTRY LEADER TRAITS ###
 leader_traits = {
-	### SHARED - NOT RANDOM ###
-	VX_divisive_figurehead = {
-		random = no
-		party_popularity_stability_factor = -0.25
-	}
-	VX_populist = {
-		random = no
-		party_popularity_stability_factor = 0.1
-		stability_factor = -0.02
-	}
-	VX_national_syndicalist_firebrand = {
-		random = no
-		justify_war_goal_time = -0.1
-		fascist_ideology_drift = 0.01
-	}
 	### SPAIN / SPR ####
 	VX_custodian_republic = {
 		random = no
@@ -27,9 +12,8 @@ leader_traits = {
 		random = no
 		political_power_factor = -0.1
 	}
-	VX_spanish_secretary_general = {
+	VX_divisive_figurehead = {
 		random = no
-		revolutionary_socialism_ideology_drift = 0.02
-		political_power_gain = 0.05
+		party_popularity_stability_factor = -0.25
 	}
 }
