@@ -1,0 +1,44 @@
+# Only the faction leader can call countries to war
+call_to_war_rule_faction_leader_only = {
+	type = call_to_war_rules
+	trigger = {
+		is_faction_leader = yes
+	}
+	ai_will_do = {
+		
+	}
+	modifier = {
+		
+	}
+}
+
+# Only majors can call to war
+call_to_war_rule_major_only = {
+	type = call_to_war_rules
+	trigger = {
+		is_major = yes
+	}
+	ai_will_do = {
+		
+	}
+	modifier = {
+		
+	}
+}
+
+# New to VX - cannot call countries to war unless it is a defensive (for democratic-led or defensive factions)
+call_to_war_defensive_war_only = {
+	type = call_to_war_rules
+	trigger = {
+		is_subject = no
+		NOT = {
+			has_offensive_war = yes
+		}
+	}
+	ai_will_do = {
+		
+	}
+	modifier = {
+		
+	}
+}

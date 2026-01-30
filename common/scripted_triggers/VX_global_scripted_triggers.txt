@@ -269,10 +269,142 @@ VX_has_majority_trigger = {
 	}
 }
 
-# SCripted trigger to pass if a country has actual content or not
+# Scripted trigger to check if the country has "content"
 VX_has_non_generic_content_trigger = {
 	OR = {
 		tag = SPR
 		tag = SPD
+	}
+}
+
+# Scripted trigger to check if an ideology is an "enemy" - not meant to be displayed
+
+VX_is_enemy_ideology = {
+	OR = {
+		AND = {
+			OR = {
+				has_fascist_government_no_tt_trigger = yes
+				has_authoritarian_government_no_tt_trigger = yes
+				has_government = conservatism_ideology
+			}			
+			ROOT = {
+				has_socialist_government_no_tt_trigger = yes
+			}
+		}
+		AND = {
+			OR = {
+				has_fascist_government_no_tt_trigger = yes
+				has_socialist_government_no_tt_trigger = yes
+			}			
+			ROOT = {
+				has_democratic_government_no_tt_trigger = yes
+			}
+		}
+		AND = {
+			OR = {
+				has_socialist_government_no_tt_trigger = yes
+				AND = {
+					has_democratic_government_no_tt_trigger = yes
+					OR = {
+						authsoc_coalition_trigger = yes
+						revsoc_coalition_trigger = yes
+						NOT = {
+							fascism_coalition_trigger = yes
+						}
+					}						
+				}
+			}
+			ROOT = {
+				has_fascist_government_no_tt_trigger = yes				
+			}
+		}
+		AND = {
+			OR = {
+				has_socialist_government_no_tt_trigger = yes
+				has_government = social_democracy_ideology
+				has_government = progressive_ideology
+				AND = {
+					has_democratic_government_no_tt_trigger = yes
+					OR = {
+						authsoc_coalition_trigger = yes
+						revsoc_coalition_trigger = yes
+						socdem_coalition_trigger = yes
+						progressive_coalition_trigger = yes
+					}
+				}
+			}
+			ROOT = {
+				has_authoritarian_government_no_tt_trigger = yes				
+			}
+		}
+	}
+}
+
+# This is meant to be shown to the player - hence the ifs
+VX_is_enemy_ideology_trigger = {	
+	if = {
+		limit = {
+			ROOT = {
+				has_socialist_government_no_tt_trigger = yes
+			}
+		}
+		OR = {
+			has_fascist_government_no_tt_trigger = yes
+			has_authoritarian_government_no_tt_trigger = yes
+			has_government = conservatism_ideology
+		}	
+	}
+	else_if = {
+		limit = {
+			ROOT = {
+				has_democratic_government_no_tt_trigger = yes
+			}
+		}
+		OR = {
+			has_fascist_government_no_tt_trigger = yes
+			has_socialist_government_no_tt_trigger = yes
+		}	
+	}
+	else_if = {
+		limit = {
+			ROOT = {
+				has_authoritarian_government_no_tt_trigger = yes	
+			}
+		}
+		OR = {
+			has_socialist_government_no_tt_trigger = yes
+			has_government = social_democracy_ideology
+			has_government = progressive_ideology
+			AND = {
+				has_democratic_government_no_tt_trigger = yes
+				OR = {
+					authsoc_coalition_trigger = yes
+					revsoc_coalition_trigger = yes
+					socdem_coalition_trigger = yes
+					progressive_coalition_trigger = yes
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_fascist_government_no_tt_trigger = yes
+		}
+		OR = {
+			has_socialist_government_no_tt_trigger = yes
+			AND = {
+				has_democratic_government_no_tt_trigger = yes
+				OR = {
+					authsoc_coalition_trigger = yes
+					revsoc_coalition_trigger = yes
+					NOT = {
+						fascism_coalition_trigger = yes
+					}
+				}						
+			}
+		}
+	}
+	else = {
+		always = no
 	}
 }

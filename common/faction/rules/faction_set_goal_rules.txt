@@ -1,0 +1,16 @@
+goals_only_faction_leader = {
+	type = member_rules
+	trigger = {
+		is_faction_leader = yes	
+	}
+}
+
+goals_highest_influence = {
+	type = member_rules
+	trigger = {
+		every_country = {
+			is_in_faction_with = ROOT
+			faction_influence_score < ROOT
+		}
+	}
+}
