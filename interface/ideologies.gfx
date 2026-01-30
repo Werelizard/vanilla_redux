@@ -1,0 +1,86 @@
+sprite_types = {
+	sprite_type = {
+		name = GFX_ideology_authoritarian_socialist_group
+        texturefile = gfx/interface/ideologies/authoritariansocialism.tga
+	}
+	sprite_type = {
+		name = GFX_ideology_authoritarian_socialist_subtype
+        texturefile = gfx/interface/ideologies/authoritariansocialism.tga
+	}
+	sprite_type = {
+		name = GFX_ideology_revolutionary_socialist_group
+        texturefile = gfx/interface/ideologies/revolutionarysocialism.tg
+	}
+	sprite_type = {
+		name = GFX_ideology_revolutionary_socialist_subtype
+        texturefile = gfx/interface/ideologies/revolutionarysocialism.tga
+	}
+	sprite_type = {
+		name = GFX_ideology_anarcho_communist_subtype
+        texturefile = gfx/interface/ideologies/anarchism.tga
+	}
+	sprite_type = {
+		name = GFX_ideology_social_democratic_group
+        texturefile = gfx/interface/ideologies/socialdemocracy.tga
+	}
+	sprite_type = {
+		name = GFX_ideology_social_democratic_subtype
+        texturefile = gfx/interface/ideologies/socialdemocracy.tga
+	}
+	sprite_type = {
+		name = GFX_ideology_progressive_group
+        texturefile = gfx/interface/ideologies/progressivism.tga
+	}
+	sprite_type = {
+		name = GFX_ideology_progressive_subtype
+        texturefile = gfx/interface/ideologies/progressivism.tga
+	}
+	sprite_type = {
+		name = GFX_ideology_liberal_group
+        texturefile = gfx/interface/ideologies/liberalism.tga
+	}
+	sprite_type = {
+		name = GFX_ideology_liberal_subtype
+        texturefile = gfx/interface/ideologies/liberalism.tga
+	}
+	sprite_type = {
+		name = GFX_ideology_anarcho_liberalism_subtype
+        texturefile = gfx/interface/ideologies/anarchism_alt.tga
+	}
+	sprite_type = {
+		name = GFX_ideology_conservative_group
+        texturefile = gfx/interface/ideologies/conservatism.tga
+	}
+	sprite_type = {
+		name = GFX_ideology_conservative_subtype
+        texturefile = gfx/interface/ideologies/conservatism.tga
+	}
+	sprite_type = {
+		name = GFX_ideology_authoritarian_democrat_group
+        texturefile = gfx/interface/ideologies/authoritariandemocracy.tga
+	}
+	sprite_type = {
+		name = GFX_ideology_authoritarian_democrat_subtype
+        texturefile = gfx/interface/ideologies/authoritariandemocracy.tga
+	}
+	sprite_type = {
+		name = GFX_ideology_autocratic_group
+        texturefile = gfx/interface/ideologies/reactionaryautocracy.tga
+	}
+	sprite_type = {
+		name = GFX_ideology_autocratic_subtype
+        texturefile = gfx/interface/ideologies/absolutemonarchy.tga
+	}
+	sprite_type = {
+		name = GFX_ideology_absolute_monarchy_subtype
+        texturefile = gfx/interface/ideologies/reactionaryautocracy.tga
+	}
+	sprite_type = {
+		name = GFX_ideology_fascist_group
+        texturefile = gfx/interface/ideologies/fascism.tga
+	}
+	sprite_type = {
+		name = GFX_ideology_fascist_subtype
+        texturefile = gfx/interface/ideologies/fascism.tga
+	}
+}

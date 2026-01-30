@@ -1,0 +1,116 @@
+ideology = {
+
+	# SOCIALIST GOVERNMENTS
+
+	# Authoritarian Socialism 
+	authoritarian_socialist = {
+		types = {
+			authoritarian_socialist_subtype = {
+
+			}
+		}
+
+		color = { 140 0 0 }
+	}
+	# Revolutionary Socialism
+	revolutionary_socialist = {
+		types = {
+			revolutionary_socialist_subtype = {
+
+			}
+
+			anarcho_communist_subtype = {
+				random = no
+			}
+		}
+
+		color = { 175 20 30 }
+	}
+
+	# DEMOCRATIC GOVERNMENTS
+
+	# Social Democracy
+	social_democratic = {
+		types = {
+			social_democratic_subtype = {
+
+			}
+		}
+
+		color = { 210 95 145 }
+	}
+	# Progressivism
+	progressive = {
+		types = {
+			progressive_subtype = {
+
+			}
+		}
+
+		color = { 200 125 0 }
+	}
+	# liberalism
+	liberal = {
+		types = {
+			liberal_subtype = {
+
+			}
+
+			anarcho_liberalism_subtype = {
+				random = no
+			}
+		}
+
+		color = { 105 210 0 }
+	}
+	# Conservative 
+	conservative = {
+		types = {
+			conservative_subtype = {
+
+			}
+		}
+
+		color = { 60 60 180 }
+	}
+
+	# AUTHORITARIAN GOVERNMENTS
+
+	# Authoritarian Democracy 
+	authoritarian_democrat = {
+		types = {
+			authoritarian_democrat_subtype = {
+
+			}
+		}
+
+		color = { 120 120 120 }
+	}
+	# Autocracy
+	autocratic = {
+		types = {
+			autocratic_subtype = {
+
+			}
+
+			absolute_monarchy_subtype = {
+				random = no
+			}
+		}
+
+		color = { 80 80 80 }
+	}
+
+	# REACTIONARY GOVERNMENTS
+
+	# Fascism
+	fascist = {
+		types = {
+			fascist_subtype = {
+
+			}
+		}
+
+		color = { 150 75 0 }
+	}
+}
