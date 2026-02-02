@@ -1,0 +1,439 @@
+# Opinion related effects
+startup_opinion_modifiers_effect = {
+	every_possible_country = {
+		limit = {
+			NOT = {
+				tag = PREV
+			}
+		}
+		# If they have the same ideology within the same group
+		if = {
+			limit = {
+				has_government = PREV
+			}
+			add_opinion_modifier = {
+				target = PREV
+				modifier = VX_same_ideology
+			}
+		}
+		else_if = {
+			# If both parties are within the same group, but do not have the same ideology
+			limit = {
+				OR = {
+					AND = {
+						# If both countries are democratic
+						PREV = {
+							has_socialist_goverment_trigger = yes
+						}
+						has_socialist_goverment_trigger = yes
+					}
+					AND = {
+						# If both countries are socialist
+						PREV = {
+							has_democratic_goverment_trigger = yes
+						}
+						has_democratic_goverment_trigger = yes
+					}
+					AND = {
+						# If both countries are authoritarian
+						PREV = {
+							has_authoritarian_goverment_trigger = yes
+						}
+						has_authoritarian_goverment_trigger = yes
+					}
+					AND = {
+						# If both countries are fascist
+						PREV = {
+							has_fascist_goverment_trigger = yes
+						}
+						has_fascist_goverment_trigger = yes
+					}
+				}
+			}
+			add_opinion_modifier = {
+				target = PREV
+				modifier = VX_same_ideology_group
+			}
+		}
+		else_if = {
+			# For "similar" cases
+			limit = {
+				OR = {
+					AND = {
+						# If they're both conservative or authoritarian
+						PREV = {
+							OR = {
+								has_government = conservative
+								has_authoritarian_goverment_trigger= yes
+							}
+						}
+						OR = {
+							has_government = conservative
+							has_authoritarian_goverment_trigger = yes
+						}
+					}
+					AND = {
+						# If they're both revolutionary socialist or social-democratic
+						PREV = {
+							OR = {
+								has_government = revolutionary_socialist
+								has_government = social_democratic
+							}
+						}
+						OR = {
+							has_government = revolutionary_socialist
+							has_government = social_democratic
+						}
+					}
+				}
+			}
+			add_opinion_modifier = {
+				target = PREV
+				modifier = VX_similar_ideology
+			}
+		}
+		else = {
+			add_opinion_modifier = {
+				target = PREV
+				modifier = VX_different_ideology
+			}
+		}
+	}
+}
+
+update_opinion_modifiers_effect = {
+	every_possible_country = {
+		limit = {
+			NOT = {
+				tag = ROOT
+			}
+		}
+		# removes the opinion modifier
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = VX_similar_ideology
+		}
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = VX_same_ideology_group
+		}
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = VX_same_ideology
+		}
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = VX_different_ideology
+		}
+		ROOT = {
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = VX_similar_ideology
+			}
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = VX_same_ideology_group
+			}
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = VX_same_ideology
+			}
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = VX_different_ideology
+			}
+		}
+		# Add the modifiers
+		# If they have the same ideology within the same group
+		if = {
+			limit = {
+				has_government = ROOT
+			}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = VX_same_ideology
+			}
+		}
+		else_if = {
+			# If both parties are within the same group, but do not have the same ideology
+			limit = {
+				OR = {
+					AND = {
+						# If both countries are democratic
+						ROOT = {
+							has_socialist_goverment_trigger = yes
+						}
+						has_socialist_goverment_trigger = yes
+					}
+					AND = {
+						# If both countries are socialist
+						ROOT = {
+							has_democratic_goverment_trigger = yes
+						}
+						has_democratic_goverment_trigger = yes
+					}
+					AND = {
+						# If both countries are authoritarian
+						ROOT = {
+							has_authoritarian_goverment_trigger = yes
+						}
+						has_authoritarian_goverment_trigger = yes
+					}
+					AND = {
+						# If both countries are fascist
+						ROOT = {
+							has_fascist_goverment_trigger = yes
+						}
+						has_fascist_goverment_trigger = yes
+					}
+				}
+			}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = VX_same_ideology_group
+			}
+		}
+		else_if = {
+			# For "similar" cases
+			limit = {
+				OR = {
+					AND = {
+						# If they're both conservative or authoritarian
+						ROOT = {
+							OR = {
+								has_government = conservative
+								has_authoritarian_goverment_trigger = yes
+							}
+						}
+						OR = {
+							has_government = conservative
+							has_authoritarian_goverment_trigger = yes
+						}
+					}
+					AND = {
+						# If they're both revolutionary socialist or social-democratic
+						ROOT = {
+							OR = {
+								has_government = revolutionary_socialist
+								has_government = social_democratic
+							}
+						}
+						OR = {
+							has_government = revolutionary_socialist
+							has_government = social_democratic
+						}
+					}
+				}
+			}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = VX_similar_ideology
+			}
+		}
+		else = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = VX_different_ideology
+			}
+		}
+	}
+}
+
+# Coalition related effects
+authsoc_coalition_effect = {
+	custom_effect_tooltip = authsoc_join_coalition_tt
+	set_country_flag = coalition_authsoc_flag
+	update_coalitions_effect = yes
+}
+revsoc_coalition_effect = {
+	custom_effect_tooltip = revsoc_join_coalition_tt
+	set_country_flag = coalition_revsoc_flag
+	update_coalitions_effect = yes
+}
+socdem_coalition_effect = {
+	custom_effect_tooltip = socdem_join_coalition_tt
+	set_country_flag = coalition_socdem_flag
+	update_coalitions_effect = yes
+}
+progressive_coalition_effect = {
+	custom_effect_tooltip = progressive_join_coalition_tt
+	set_country_flag = coalition_prog_flag
+	update_coalitions_effect = yes
+}
+liberal_coalition_effect = {
+	custom_effect_tooltip = liberal_join_coalition_tt
+	set_country_flag = coalition_lib_flag
+	update_coalitions_effect = yes
+}
+conservative_coalition_effect = {
+	custom_effect_tooltip = conservatives_join_coalition_tt
+	set_country_flag = coalition_conservative_flag
+	update_coalitions_effect = yes
+}
+auth_dem_coalition_effect = {
+	custom_effect_tooltip = authdem_join_coalition_tt
+	set_country_flag = coalition_auth_flag
+	update_coalitions_effect = yes
+}
+autocrat_coalition_effect = {
+	custom_effect_tooltip = autocrat_join_coalition_tt
+	set_country_flag = coalition_reactionary_flag
+	update_coalitions_effect = yes
+}
+fascist_coalition_effect = {
+	custom_effect_tooltip = fascist_join_coalition_tt
+	set_country_flag = coalition_fascism_flag
+	update_coalitions_effect = yes
+}
+
+authsoc_leave_coalition_effect = {
+	custom_effect_tooltip = authsoc_leave_coalition_tt
+	clr_country_flag = coalition_authsoc_flag
+	update_coalitions_effect = yes
+}
+revsoc_leave_coalition_effect = {
+	custom_effect_tooltip = revsoc_leave_coalition_tt
+	clr_country_flag = coalition_revsoc_flag
+	update_coalitions_effect = yes
+}
+socdem_leave_coalition_effect = {
+	custom_effect_tooltip = socdem_leave_coalition_tt
+	clr_country_flag = coalition_socdem_flag
+	update_coalitions_effect = yes
+}
+progressive_leave_coalition_effect = {
+	custom_effect_tooltip = progressive_leave_coalition_tt
+	clr_country_flag = coalition_prog_flag
+	update_coalitions_effect = yes
+}
+liberal_leave_coalition_effect = {
+	custom_effect_tooltip = liberal_leave_coalition_tt
+	clr_country_flag = coalition_lib_flag
+	update_coalitions_effect = yes
+}
+conservative_leave_coalition_effect = {
+	custom_effect_tooltip = conservatives_leave_coalition_tt
+	clr_country_flag = coalition_conservative_flag
+	update_coalitions_effect = yes
+}
+auth_dem_leave_coalition_effect = {
+	custom_effect_tooltip = authdem_leave_coalition_tt
+	clr_country_flag = coalition_auth_flag
+	update_coalitions_effect = yes
+}
+autocrat_leave_coalition_effect = {
+	custom_effect_tooltip = autocrat_leave_coalition_tt
+	clr_country_flag = coalition_reactionary_flag
+	update_coalitions_effect = yes
+}
+fascist_leave_coalition_effect = {
+	custom_effect_tooltip = fascist_leave_coalition_tt
+	clr_country_flag = coalition_fascism_flag
+	update_coalitions_effect = yes
+}
+
+# Update the coalitions
+update_coalitions_effect = {
+	set_variable = {
+		coalition_effect_var = 0
+	}
+	if = {
+		limit = {
+			authsoc_coalition_trigger = yes
+		}
+		add_to_variable = {
+			coalition_effect_var = party_popularity@authoritarian_socialist
+		}
+	}
+	if = {
+		limit = {
+			revsoc_coalition_trigger = yes
+		}
+		add_to_variable = {
+			coalition_effect_var = party_popularity@revolutionary_socialist
+		}
+	}
+	if = {
+		limit = {
+			socdem_coalition_trigger = yes
+		}
+		add_to_variable = {
+			coalition_effect_var = party_popularity@social_democratic
+		}
+	}
+	if = {
+		limit = {
+			progressive_coalition_trigger = yes
+		}
+		add_to_variable = {
+			coalition_effect_var = party_popularity@progressive
+		}
+	}
+	if = {
+		limit = {
+			liberal_coalition_trigger = yes
+		}
+		add_to_variable = {
+			coalition_effect_var = party_popularity@liberal
+		}
+	}
+	if = {
+		limit = {
+			conservative_coalition_trigger = yes
+		}
+		add_to_variable = {
+			coalition_effect_var = party_popularity@conservative
+		}
+	}
+	if = {
+		limit = {
+			authoritarian_coalition_trigger = yes
+		}
+		add_to_variable = {
+			coalition_effect_var = party_popularity@authoritarian_democrat
+		}
+	}
+	if = {
+		limit = {
+			autocracy_coalition_trigger = yes
+		}
+		add_to_variable = {
+			coalition_effect_var = party_popularity@autocratic
+		}
+	}
+	if = {
+		limit = {
+			fascist_coalition_trigger = yes
+		}
+		add_to_variable = {
+			coalition_effect_var = party_popularity@fascist
+		}
+	}
+	add_to_variable = {
+		coalition_small_effect_var = coalition_effect_var
+	}
+	add_to_variable = {
+		coalition_big_effect_var = coalition_effect_var
+	}
+	divide_variable = {
+		coalition_small_effect_var = 5
+	}
+	divide_variable = {
+		coalition_big_effect_var = 2.5
+	}
+}
+
+# Clear the coalitions
+remove_coalitions_effect = {
+	custom_effect_tooltip = remove_coalitions_tt
+	clr_country_flag = coalition_authsoc_flag
+	clr_country_flag = coalition_revsoc_flag
+	clr_country_flag = coalition_socdem_flag
+	clr_country_flag = coalition_prog_flag
+	clr_country_flag = coalition_prog_flag
+	clr_country_flag = coalition_lib_flag
+	clr_country_flag = coalition_conservative_flag
+	clr_country_flag = coalition_auth_flag
+	clr_country_flag = coalition_reactionary_flag
+	clr_country_flag = coalition_fascism_flag
+}

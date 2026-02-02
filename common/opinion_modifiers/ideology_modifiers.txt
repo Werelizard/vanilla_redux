@@ -1,0 +1,18 @@
+opinion_modifiers = {
+	# Same governmental ideology
+	VX_same_ideology = {
+		value = 15
+	}
+	# Same government type (democratic, authoritarian, socialist, 
+	VX_same_ideology_group = {
+		value = 10
+	}
+	# Similar governmental ideology (revsoc/socdem,
+	VX_similar_ideology = {
+		value = 5
+	}
+	# Everything else
+	VX_different_ideology = {
+		value = -15
+	}
+}

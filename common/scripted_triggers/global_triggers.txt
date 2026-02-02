@@ -1,0 +1,152 @@
+# Content related triggers
+has_VX_content_trigger = {
+	OR = {
+		original_tag = USA
+		original_tag = ENG
+		original_tag = FRA
+		original_tag = SPR
+		original_tag = ITA
+		original_tag = GER
+		original_tag = SOV
+		original_tag = PRC
+		original_tag = CHI
+		original_tag = JAP
+	}
+}
+
+# Government related triggers
+
+has_socialist_goverment_trigger = {
+	OR = {
+		has_government = authoritarian_socialist
+		has_government = revolutionary_socialist
+	}
+}
+
+has_democratic_goverment_trigger = {
+	OR = {
+		has_government = social_democratic
+		has_government = progressive
+		has_government = liberal
+		has_government = liberal
+	}
+}
+
+has_authoritarian_goverment_trigger = {
+	OR = {
+		has_government = authoritarian_democrat
+		has_government = autocratic
+	}
+}
+
+has_fascist_goverment_trigger = {
+	OR = {
+		has_government = fascist
+	}
+}
+
+# Coalition related triggers
+
+authsoc_coalition_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = authsoc_coalition_tt
+		NOT = {
+			has_government = authoritarian_socialist
+		}
+		has_country_flag = coalition_authsoc_flag
+	}
+}
+
+revsoc_coalition_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = revsoc_coalition_tt
+		NOT = {
+			has_government = revolutionary_socialist
+		}
+		has_country_flag = coalition_revsoc_flag
+	}
+}
+
+socdem_coalition_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = socdem_coalition_tt
+		NOT = {
+			has_government = social_democratic
+		}
+		has_country_flag = coalition_socdem_flag
+	}
+}
+
+progressive_coalition_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = progressive_coalition_tt
+		NOT = {
+			has_government = progressivism
+		}
+		has_country_flag = coalition_progressive_flag
+	}
+}
+
+liberal_coalition_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = liberal_coalition_tt
+		NOT = {
+			has_government = liberal
+		}
+		has_country_flag = coalition_liberal_flag
+	}
+}
+
+conservative_coalition_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = conservative_coalition_tt
+		NOT = {
+			has_government = conservative
+		}
+		has_country_flag = coalition_conservative_flag
+	}
+}
+
+authoritarian_coalition_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = authoritarian_coalition_tt
+		NOT = {
+			has_government = authoritarian_democrat
+		}
+		has_country_flag = coalition_authdem_flag
+	}
+}
+
+autocracy_coalition_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = autocratic_coalition_tt
+		NOT = {
+			has_government = autocratic
+		}
+		has_country_flag = coalition_autocratic_flag
+	}
+}
+
+fascist_coalition_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = fascism_coalition_tt
+		NOT = {
+			has_government = fascist
+		}
+		has_country_flag = coalition_fascist_flag
+	}
+}
+
+any_coalition_active_trigger = {
+	OR = {
+		authsoc_coalition_trigger = yes
+		revsoc_coalition_trigger = yes
+		socdem_coalition_trigger = yes
+		progressive_coalition_trigger = yes
+		liberal_coalition_trigger = yes
+		conservative_coalition_trigger = yes
+		authoritarian_coalition_trigger = yes
+		autocracy_coalition_trigger = yes
+		fascist_coalition_trigger = yes
+	}
+}

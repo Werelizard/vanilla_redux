@@ -1,4 +1,10 @@
 ﻿l_english: 
+ ### DYNAMIC MODIFIERS - COUNTRY BASED ###
+ 
+ coalitions_dynmod:0 "Coalitions"
+
+ ### DYNAMIC MODIFIERS - STATE BASED ###
+
  ### IDEOLOGIES / GOVERNMENT TYPES ###
  socialist_government:0 "Socialist Government"
  democratic_government:0 "Democratic Government"
@@ -73,3 +79,46 @@
  authoritarian_democrat_drift:0 "Daily $authoritarian_democrat$ drift"
  autocratic_drift:0 "Daily $autocratic$ drift"
  fascist_drift:0 "Daily $fascist$ drift"
+
+ ### OPINION MODIFIERS ###
+
+ VX_same_ideology:0 "Same Ideology"
+ VX_same_ideology_group:0 "Same Government Type"
+ VX_similar_ideology:0 "Similar Ideology"
+ VX_different_ideology:0 "Different Ideology"
+
+ ### SCRIPTED EFFECTS ###
+
+ authsoc_join_coalition_tt:0 "The £autsoc_texticon  §rAuthoritarian Socialists§! will join the coalition"
+ revsoc_join_coalition_tt:0 "The £revsoc_texticon  §RRevolutionary Socialists§! will join the coalition"
+ socdem_join_coalition_tt:0 "The £socdem_texticon  §pSocial Democrats§! will join the coalition"
+ progressive_join_coalition_tt:0 "The £prog_texticon  §PProgressives§! will join the coalition"
+ liberal_join_coalition_tt:0 "The £liberal_texticon  §YLiberals§! will join the coalition"
+ conservatives_join_coalition_tt:0 "The £cons_texticon  §cConservatives§! will join the coalition"
+ authdem_join_coalition_tt:0 "The £autdem_texticon  §gAuthoritarian Democrats§! will join the coalition"
+ autocrat_join_coalition_tt:0 "The £autreac_texticon  §lAutocrats§! will join the coalition"
+ fascist_join_coalition_tt:0 "The £fascism_texticon  §fFascists§! will join the coalition"
+
+ authsoc_leave_coalition_tt:0 "The £autsoc_texticon  §rAuthoritarian Socialists§! will leave the coalition"
+ revsoc_leave_coalition_tt:0 "The £revsoc_texticon  §RRevolutionary Socialists§! will leave the coalition"
+ socdem_leave_coalition_tt:0 "The £socdem_texticon£  §pSocial Democrats§! will leave the coalition"
+ progressive_leave_coalition_tt:0 "The £prog_texticon  §PProgressives§! will leave the coalition"
+ liberal_leave_coalition_tt:0 "The £liberal_texticon  §YLiberals§! will leave the coalition"
+ conservatives_leave_coalition_tt:0 "The £cons_texticon  §cConservatives§! will leave the coalition"
+ authdem_leave_coalition_tt:0 "The £autdem_texticon  §gAuthoritarian Democrats§! will leave the coalition"
+ autocrat_leave_coalition_tt:0 "The £autreac_texticon  §lAutocrats§! will leave the coalition"
+ fascist_leave_coalition_tt:0 "The £fascism_texticon  §fFascists§! will leave the coalition"
+
+ remove_coalitions_tt:0 "Disands all active coaltions"
+
+ ### SRIPTED TRIGGERS ###
+
+ authsoc_coalition_tt:0 "In a coaltion with the §rAuthoritarian Socialists§!"
+ revsoc_coalition_tt:0 "In a coalition with the §RRevolutionary Socialists§!"
+ socdem_coalition_tt:0 "In a coalition with the §pSocial Democrats§!"
+ progressive_coalition_tt:0 "In a coalition with the §PProgressives§!"
+ liberal_coalition_tt:0 "In a coalition with the §YLiberals§!"
+ conservative_coalition_tt:0 "In a coalition with the §cConservatives§!"
+ authoritarian_coalition_tt:0 "In a coalition with the §gAuthoritarian Democrats§!"
+ autocracy_coalition_tt:0 "In a coalition with the §lAutocrats§!"
+ fascism_coalition_tt:0 "In a coalition with the §Yfascists§!"

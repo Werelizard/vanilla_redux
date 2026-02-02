@@ -1,0 +1,8 @@
+### COUNTRY-BASED ###
+
+coalitions_dynmod = {
+	party_popularity_stability_factor = coalition_big_effect_var
+	political_power_factor = coalition_small_effect_var
+}
+
+### STATE-BASED ###
