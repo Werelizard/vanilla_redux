@@ -1,4 +1,4 @@
-spriteTypes = {
+bitmapfonts = {
 	textcolors = {
 		C = { 35 206 255 }  # Cyan
 		L = { 195 176 145 } # Lilac

@@ -81,7 +81,7 @@ progressive_coalition_trigger = {
 	custom_trigger_tooltip = {
 		tooltip = progressive_coalition_tt
 		NOT = {
-			has_government = progressivism
+			has_government = progressive
 		}
 		has_country_flag = coalition_progressive_flag
 	}

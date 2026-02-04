@@ -1,4 +1,4 @@
-ideology = {
+ideologies = {
 
 	# SOCIALIST GOVERNMENTS
 
@@ -20,7 +20,7 @@ ideology = {
 			}
 
 			anarcho_communist_subtype = {
-				random = no
+				can_be_randomly_selected = no
 			}
 		}
 
@@ -57,7 +57,7 @@ ideology = {
 			}
 
 			anarcho_liberalism_subtype = {
-				random = no
+				can_be_randomly_selected = no
 			}
 		}
 
@@ -94,7 +94,7 @@ ideology = {
 			}
 
 			absolute_monarchy_subtype = {
-				random = no
+				can_be_randomly_selected = no
 			}
 		}
 

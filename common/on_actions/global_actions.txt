@@ -60,7 +60,7 @@ on_actions = {
 				limit = {
 					FROM = {
 						has_fascist_goverment_trigger = yes
-						is_masjor = yes
+						is_major = yes
 					}
 					ROOT = {
 						NOT = {
@@ -79,7 +79,7 @@ on_actions = {
 				limit = {
 					FROM = {
 						has_socialist_goverment_trigger = yes
-						is_masjor = yes
+						is_major = yes
 					}
 					ROOT = {
 						NOT = {
@@ -98,7 +98,7 @@ on_actions = {
 				limit = {
 					FROM = {
 						has_democratic_goverment_trigger = yes
-						is_masjor = yes
+						is_major = yes
 					}
 					ROOT = {
 						NOT = {
@@ -117,7 +117,7 @@ on_actions = {
 				limit = {
 					FROM = {
 						has_authoritarian_goverment_trigger = yes
-						is_masjor = yes
+						is_major = yes
 					}
 					ROOT = {
 						NOT = {
