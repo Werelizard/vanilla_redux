@@ -17,6 +17,8 @@ on_actions = {
 					modifier = coalitions_dynmod
 				}
 				update_coalitions_effect = yes
+				# Create arrays for their cores at the start smile emoji
+				store_core_states_on_game_start_effect = yes
 			}
 		}
 	}

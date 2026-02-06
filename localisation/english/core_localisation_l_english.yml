@@ -58,7 +58,7 @@
  authoritarian_democrat_subtype_desc:0 ""
 
  autocratic:0 "Autocratic"
- autocratic_noun:0 "Paternal Autocracy"
+ autocratic_noun:0 "Autocracy"
  autocratic_desc:0 "$authoritarian_government$"
  autocratic_subtype:0 "$autocratic_noun$"
  autocratic_subtype_desc:0 ""
@@ -96,7 +96,7 @@
  liberal_join_coalition_tt:0 "The £liberal_texticon  §YLiberals§! will join the coalition"
  conservatives_join_coalition_tt:0 "The £cons_texticon  §cConservatives§! will join the coalition"
  authdem_join_coalition_tt:0 "The £autdem_texticon  §gAuthoritarian Democrats§! will join the coalition"
- autocrat_join_coalition_tt:0 "The £autreac_texticon  §lPaternal Autocrats§! will join the coalition"
+ autocrat_join_coalition_tt:0 "The £autreac_texticon  §lAutocrats§! will join the coalition"
  fascist_join_coalition_tt:0 "The £fascism_texticon  §fFascists§! will join the coalition"
 
  authsoc_leave_coalition_tt:0 "The £autsoc_texticon  §rAuthoritarian Socialists§! will leave the coalition"
@@ -106,7 +106,7 @@
  liberal_leave_coalition_tt:0 "The £liberal_texticon  §YLiberals§! will leave the coalition"
  conservatives_leave_coalition_tt:0 "The £cons_texticon  §cConservatives§! will leave the coalition"
  authdem_leave_coalition_tt:0 "The £autdem_texticon  §gAuthoritarian Democrats§! will leave the coalition"
- autocrat_leave_coalition_tt:0 "The £autreac_texticon  §lPaternal Autocrats§! will leave the coalition"
+ autocrat_leave_coalition_tt:0 "The £autreac_texticon  §lAutocrats§! will leave the coalition"
  fascist_leave_coalition_tt:0 "The £fascism_texticon  §fFascists§! will leave the coalition"
 
  remove_coalitions_tt:0 "Disands all active coaltions"
@@ -120,5 +120,5 @@
  liberal_coalition_tt:0 "In a coalition with the §YLiberals§!"
  conservative_coalition_tt:0 "In a coalition with the §cConservatives§!"
  authoritarian_coalition_tt:0 "In a coalition with the §gAuthoritarian Democrats§!"
- autocracy_coalition_tt:0 "In a coalition with the §lPaternal Autocrats§!"
+ autocracy_coalition_tt:0 "In a coalition with the §lAutocrats§!"
  fascism_coalition_tt:0 "In a coalition with the §Yfascists§!"

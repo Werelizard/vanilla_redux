@@ -1,0 +1,847 @@
+# emergency factory conversion effect
+replace_civ_with_arms_factories = {
+
+	random_owned_controlled_state = {
+		limit = {
+			is_fully_controlled_by = ROOT
+			industrial_complex > 0
+		}
+		remove_building = {
+			type = industrial_complex
+			level = 1
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+	}
+
+	random_owned_controlled_state = {
+		limit = {
+			is_fully_controlled_by = ROOT
+			industrial_complex > 0
+		}
+		remove_building = {
+			type = industrial_complex
+			level = 1
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+	}
+
+	random_owned_controlled_state = {
+		limit = {
+			is_fully_controlled_by = ROOT
+			industrial_complex > 0
+		}
+		remove_building = {
+			type = industrial_complex
+			level = 1
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+	}
+
+	random_owned_controlled_state = {
+		limit = {
+			is_fully_controlled_by = ROOT
+			industrial_complex > 0
+		}
+		remove_building = {
+			type = industrial_complex
+			level = 1
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+	}
+
+	random_owned_controlled_state = {
+		limit = {
+			is_fully_controlled_by = ROOT
+			industrial_complex > 0
+		}
+		remove_building = {
+			type = industrial_complex
+			level = 1
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+
+# inherit wars
+ROOT_inherit_current_scope_wars_effect = {
+	custom_effect_tooltip = ROOT_inherit_current_scope_wars_effect
+	hidden_effect = {
+		every_country = {
+			limit = {
+				has_defensive_war_with = PREV
+			}
+			ROOT = { declare_war_on = { target = PREV type = annex_everything } }
+		}
+		every_country = {
+			limit = {
+				has_offensive_war_with = PREV
+			}
+			declare_war_on = { target = ROOT type = annex_everything }
+		}
+	}
+}
+
+clear_sabotaged_resources_if_necesary = {
+	if = {
+		limit = {
+			not = {
+				has_dynamic_modifier = {
+					modifier = sabotaged_resources
+				}
+			}
+		}
+
+		clear_variable = sabotaged_oil
+		clear_variable = sabotaged_aluminium
+		clear_variable = sabotaged_rubber
+		clear_variable = sabotaged_tungsten
+		clear_variable = sabotaged_steel
+		clear_variable = sabotaged_chromium
+		clear_variable = sabotaged_coal
+	}
+}
+
+
+#expectes a temp variable country_to_initiate which should contain original_tag to instantiate as a collabration government
+instantiate_collaboration_government = {
+	custom_effect_tooltip = compliance_80_effect_tooltip
+	hidden_effect = {
+		set_variable = { collaboration_formed@var:country_to_initiate = 1 }
+
+		if = {
+			# if country_to_initiate does not exist, simply release it as a puppet
+			limit = {
+				var:country_to_initiate = {
+					exists = no
+				}
+			}
+			var:country_to_initiate = { set_variable = { collaboration_formed_by = PREV } }
+			release_autonomy = {
+				target = country_to_initiate
+				autonomy_state = autonomy_collaboration_government
+				freedom_level = 0.5
+				release_non_owned_controlled = yes
+			}
+		}
+		else = {
+			# if country_to_initiate exists, create a dynamic country as our new puppet
+
+			create_dynamic_country = {
+				original_tag = country_to_initiate
+
+				set_variable = { collaboration_formed_by = PREV }
+				set_temp_variable = { new_country = this }
+
+				PREV = {
+					every_controlled_state = {
+						limit = { occupied_country_tag = country_to_initiate }
+
+						var:new_country = {
+							transfer_state = PREV
+						}
+					}
+
+					puppet = new_country
+
+					set_autonomy = {
+						target = new_country
+						autonomy_state = autonomy_collaboration_government
+						freedom_level = 0.5
+					}
+				}
+			}
+		}
+	}
+}
+
+upgrade_economy_law = {
+	if = {
+		limit = {
+			has_idea = civilian_economy
+		}
+		add_ideas = low_economic_mobilisation
+	}
+	else_if = {
+		limit = {
+			has_idea = low_economic_mobilisation
+		}
+		add_ideas = partial_economic_mobilisation
+	}
+	else_if = {
+		limit = {
+			has_idea = partial_economic_mobilisation
+		}
+		add_ideas = war_economy
+	}
+	else_if = {
+		limit = {
+			has_idea = war_economy
+		}
+		add_ideas = tot_economic_mobilisation
+	}
+	else = {
+		add_political_power = 150
+	}
+}
+
+gain_random_agency_upgrade = { #Gives a random agency upgrade or grants a free agency if one has not yet been established
+	custom_effect_tooltip = free_agency_upgrade_tt
+	hidden_effect = {
+		if = {
+			limit = {
+				has_intelligence_agency = no
+			}
+			create_intelligence_agency = yes
+		}
+		else = {
+			random_list = {
+				1 = {
+					upgrade_intelligence_agency = upgrade_economy_civilian
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_economy_civilian
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_army_department
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_army_department
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_naval_department
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_naval_department
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_airforce_department
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_airforce_department
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_passive_defense
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_passive_defense
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_anti_partisan
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_anti_partisan
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_blueprint_stealing
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_blueprint_stealing
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_portable_radios
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_portable_radios
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_invisible_ink
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_invisible_ink
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_plastic_explosives
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_plastic_explosives
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_suicide_pills
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_suicide_pills
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_training_centers
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_training_centers
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_commando_training
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_commando_training
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_interrogation_techniques
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_interrogation_techniques
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_diplo_training
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_diplo_training
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_psycho_warfare
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_psycho_warfare
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_form_department
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_form_department
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_decryption_boost
+					modifier = {
+						factor = 0
+						OR = {
+							has_done_agency_upgrade = upgrade_decryption_boost
+							NOT = { has_done_agency_upgrade = upgrade_form_department }
+						}
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_decryption_boost_2
+					modifier = {
+						factor = 0
+						OR = {
+							has_done_agency_upgrade = upgrade_decryption_boost_2
+							NOT = { has_done_agency_upgrade = upgrade_form_department }
+							NOT = { has_done_agency_upgrade = upgrade_decryption_boost }
+						}
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_crypto_strength
+					modifier = {
+						factor = 0
+						OR = {
+							has_done_agency_upgrade = upgrade_crypto_strength
+							NOT = { has_done_agency_upgrade = upgrade_form_department }
+						}
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_crypto_strength_2
+					modifier = {
+						factor = 0
+						OR = {
+							has_done_agency_upgrade = upgrade_crypto_strength_2
+							NOT = { has_done_agency_upgrade = upgrade_form_department }
+							NOT = { has_done_agency_upgrade = upgrade_crypto_strength }
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+remove_any_country_role_from_character = { #Expected to be used inside the character scope
+	#log = "I am [THIS.GetName]"
+	if = {
+		limit = {
+			is_character_slot = air_chief
+		}
+		remove_advisor_role = { slot = air_chief }
+	}
+	if = {
+		limit = {
+			is_character_slot = army_chief
+		}
+		remove_advisor_role = { slot = army_chief }
+	}
+	if = {
+		limit = {
+			is_character_slot = navy_chief
+		}
+		remove_advisor_role = { slot = navy_chief }
+	}
+	if = {
+		limit = {
+			is_character_slot = high_command
+		}
+		remove_advisor_role = { slot = high_command }
+	}
+	if = {
+		limit = {
+			is_character_slot = theorist
+		}
+		remove_advisor_role = { slot = theorist }
+	}
+	if = {
+		limit = {
+			is_character_slot = political_advisor
+		}
+		remove_advisor_role = { slot = political_advisor }
+	}
+}
+
+### Paratroopers
+SF_PARA_sabotage_effect = { #When changing this, update the research tooltip
+	damage_building = {
+		type = infrastructure
+		damage = 2
+	}
+	damage_building = {
+		type = industrial_complex
+		damage = 1
+	}
+	damage_building = {
+		type = arms_factory
+		damage = 1
+	}
+	set_state_flag = {
+		flag = para_drop_effect
+		days = 30
+	}
+}
+
+SF_PARA_combat_effect = { #When changing this, update the research tooltip
+	every_state_division = {
+		limit = { 
+			OWNER = { has_war_with = FROM }
+		}
+		set_unit_organization = 0.50
+	}
+	set_state_flag = {
+		flag = para_drop_effect
+		days = 30
+	}
+}
+
+### Muuuurrrriiinnnnneeeeessssss
+SF_marine_demoliton_effect = { #When changing this, update the research tooltip
+	damage_building = {
+		type = radar_station
+		damage = 1
+	}
+	damage_building = {
+		type = naval_base
+		damage = 1
+	}
+	damage_building = {
+		type = dockyard
+		damage = 1
+	}
+	damage_building = {
+		type = nuclear_reactor
+		damage = 1
+	}
+	damage_building = {
+		type = rocket_site
+		damage = 1
+	}
+	damage_building = {
+		type = fuel_silo
+		damage = 1
+	}
+	set_state_flag = {
+		flag = marines_commando_effect
+		days = 30
+	}
+}
+
+increase_state_category = {
+	if = {
+		limit = {
+			has_state_category = tiny_island
+		}
+		set_state_category = small_island
+		effect_tooltip = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+
+	if = {
+		limit = {
+			has_state_category = small_island
+		}
+		set_state_category = large_island
+		effect_tooltip = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+
+	if = {
+		limit = {
+			OR = {
+				has_state_category = wasteland
+				has_state_category = enclave
+			}
+		}
+		set_state_category = pastoral
+		effect_tooltip = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+	else_if = {
+		limit = {
+			has_state_category = pastoral
+		}
+		set_state_category = rural
+		effect_tooltip = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+	else_if = {
+		limit = {
+			has_state_category = rural
+		}
+		set_state_category = town
+		effect_tooltip = {
+			add_extra_state_shared_building_slots = 2
+		}
+	}
+	else_if = {
+		limit = {
+			has_state_category = town
+		}
+		set_state_category = large_town
+		effect_tooltip = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+	else_if = {
+		limit = {
+			has_state_category = large_town
+		}
+		set_state_category = city
+		effect_tooltip = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+	else_if = {
+		limit = {
+			has_state_category = city
+		}
+		set_state_category = large_city
+		effect_tooltip = {
+			add_extra_state_shared_building_slots = 2
+		}
+	}
+
+	else_if = {
+		limit = {
+			has_state_category = large_city
+		}
+		set_state_category = metropolis
+		effect_tooltip = {
+			add_extra_state_shared_building_slots = 2
+		}
+	}
+
+	else_if = {
+		limit = {
+			has_state_category = metropolis
+		} 
+		set_state_category = megalopolis
+		effect_tooltip = {
+			add_extra_state_shared_building_slots = 2
+		}
+	}
+
+}
+
+add_potential_special_forces_tree = {
+	custom_effect_tooltip = add_potential_special_forces_tree_tt
+	if = {
+		limit = { NOT = { has_variable = sf_trees } }
+		set_variable = { sf_trees = 2 }
+	}
+	else = {
+		add_to_variable = { sf_trees = 1 }
+	}
+}
+
+remove_potential_special_forces_tree = {
+	if = {
+		limit = { NOT = { has_variable = sf_trees } }
+		set_variable = { sf_trees = 0 }
+	}
+	else = {
+		subtract_from_variable = { sf_trees = 1 }
+	}
+}
+
+store_core_states_on_game_start_effect = { #Should be called from history file
+	every_core_state = {
+		ROOT = {
+			add_to_array = {
+				array = core_states_at_game_start
+				value = PREV
+			}
+		}
+	}
+}
+
+
+
+update_operation_ai = {
+	# old target is no longer relevant
+	if = {
+		limit = {
+			NOT = { check_variable = { generic_operation_target = 0 } }
+			var:generic_operation_target = {
+				OR = {
+					exists = no
+					has_capitulated = yes
+					is_ally_with = PREV
+				}
+			}
+		}
+		set_variable = { generic_operation_target = 0 }
+	}
+
+
+	# pick an operation target
+	get_highest_scored_country = {
+		scorer = ai_generic_operation_target_scorer
+		var = generic_operation_target
+	}
+	
+	# this variable will be our limiting factor for actually doing operations
+	
+	# check if we have any operatives that are captured
+	# find the captor so they can be rescued
+	set_temp_variable = { captor = 0 }
+	
+	every_operative = {
+		limit = { is_operative_captured = yes }
+		add_to_temp_variable = { min_needed_operative_for_operations = 1 }
+		if = {
+			limit = { check_variable = { captor = 0 } }
+			set_temp_variable = { captor = operative_captor }
+		}
+	}
+	set_variable = { rescue_operative_from = 0 }
+	if = {
+		limit = { NOT = { check_variable = { captor = 0 } } }
+		set_variable = { rescue_operative_from = captor } # used in ai strat generic_operation_ai_rescue
+		add_to_temp_variable = { min_needed_operative_for_operations = 2 }
+	}
+	
+	
+	# if we have too few of operatives clear operative target
+	set_temp_variable = { t = min_needed_operative_for_operations }
+	subtract_from_temp_variable = { t = 2 }
+	if = {
+		limit = { num_of_operatives < t }
+		set_variable = { generic_operation_target = 0 }
+	}
+	
+	if = {
+		# if found a target pick an operation
+		limit = { 
+			NOT = { check_variable = { generic_operation_target = 0 } }
+			# if we are already preparing for current one no need to recalc
+			OR = {
+				check_variable = { generic_operation_type_to_run = 0 }
+				NOT = { 
+					is_preparing_operation = {
+						target = var:generic_operation_target
+						operation = var:generic_operation_type_to_run
+					}
+				}
+			}
+		}
+		
+		if = {
+			limit = { 
+				num_of_operatives > min_needed_operative_for_operations
+			}
+			
+			# these two arrays are filled with operation tokens and corresponding score
+			clear_temp_array = operation_types
+			clear_temp_array = operation_types_scores
+			
+			# civilian infiltration
+			set_temp_variable = { score = 100 }
+			add_to_temp_array = { operation_types = token:operation_infiltrate_civilian }
+			add_to_temp_array = { operation_types_scores = score }
+			
+			# army infiltration
+			set_temp_variable = { score = 50 }
+			add_to_temp_variable = { score = num_armies }
+			clamp_temp_variable = { var = score max = 180 }
+			add_to_temp_array = { operation_types = token:operation_infiltrate_armed_forces_army }
+			add_to_temp_array = { operation_types_scores = score }
+			
+			# air infiltration
+			set_temp_variable = { score = 50 }
+			add_to_temp_variable = { t = num_deployed_planes }
+			divide_temp_variable = { t = 10 }
+			add_to_temp_variable = { score = t }
+			clamp_temp_variable = { var = score max = 180 }
+			add_to_temp_array = { operation_types = token:operation_infiltrate_armed_forces_airforce }
+			add_to_temp_array = { operation_types_scores = score }
+			
+			# navy infiltration
+			var:generic_operation_target = {
+				if = {
+					limit = { 
+						has_navy_size = { size > 0 } 
+						PREV = {
+							has_navy_size = { size > 0 } 
+						}
+					}
+					set_temp_variable = { score = num_ships }
+					
+					set_temp_variable = { t = num_ships_with_type@carrier }
+					multiply_temp_variable = { t = 20 }
+					add_to_temp_variable = { score = t }
+					
+					set_temp_variable = { t = num_ships_with_type@capital }
+					multiply_temp_variable = { t = 10 }
+					add_to_temp_variable = { score = t }
+					
+					clamp_temp_variable = { var = score max = 180 }
+					
+					add_to_temp_array = { operation_types = token:operation_infiltrate_armed_forces_navy }
+					add_to_temp_array = { operation_types_scores = score }
+				}
+			}
+			
+			# get token for boost resistance
+			var:generic_operation_target = {
+				# only do on fascist
+				if = {
+					limit = { 
+						PREV = {
+							NOT = { tag = ENG } # ENG already does it against GER
+							NOT = { has_fascist_goverment_trigger = yes } 
+							NOT = {
+								has_operation_token = {
+									tag = var:generic_operation_target
+									token = token_resistance_contacts
+								}
+							}
+						}
+						has_fascist_goverment_trigger = yes
+						check_variable = { occupied_countries^num > 0 }
+						has_added_tension_amount > 20
+					}
+					
+					# ~number of occupied_states
+					set_temp_variable = { t = 1 }
+					add_to_temp_variable = { t = num_controlled_states }
+					subtract_from_temp_variable = { t = num_owned_states }
+					clamp_temp_variable = { var = t min = 1 }
+					
+					set_temp_variable = { score = t }
+					multiply_temp_variable = { score = 15 }
+					add_to_temp_variable = { score = 50 }
+					clamp_temp_variable = { var = score max = 200 }
+					
+					add_to_temp_array = { operation_types = token:operation_make_resistance_contacts }
+					add_to_temp_array = { operation_types_scores = score }
+				}
+			}
+			# boost resistance
+			if = {
+				limit = { 
+					has_operation_token = {
+						tag = var:generic_operation_target
+						token = token_resistance_contacts
+					}
+				}
+			
+				add_to_temp_array = { operation_types = token:operation_boost_resistance }
+				add_to_temp_array = { operation_types_scores = 1000 }
+			}
+			
+			for_each_loop = {
+				array = operation_types
+				
+				# randomization by half
+				set_temp_variable = { t = random }
+				multiply_temp_variable = { t = 0.5 }
+				add_to_temp_variable = { t = 0.5 }
+				multiply_temp_variable = { operation_types_scores^i = t }
+				
+				if = {
+					limit = {
+						num_finished_operations = {
+							target = var:generic_operation_target
+							operation = var:v
+							value > 0
+						}
+						
+						# lower score if we have a finished operation
+						multiply_temp_variable = { operation_types_scores^i = 0.5 }
+								
+						# cancel if more than 1 is executed
+						if = {
+							limit = {
+								num_finished_operations = {
+									target = var:generic_operation_target
+									operation = var:v
+									value > 1
+								}
+								
+								set_temp_variable = { operation_types_scores^i = -1 }
+							}
+						}
+					}
+				}
+			}
+			
+			# highest score will be selected
+			find_highest_in_array = {
+				array = operation_types_scores
+			}
+			if = {
+				limit = { check_variable = { v > 0 } }
+				set_variable = { generic_operation_type_to_run = operation_types^i } # used in ai strat generic_operation_ai
+			}
+		}
+		else =
+		{
+			set_variable = { generic_operation_type_to_run = 0 }
+		}
+	}
+}
