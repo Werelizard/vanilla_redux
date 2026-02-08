@@ -61,12 +61,12 @@ on_actions = {
 			if = {
 				limit = {
 					FROM = {
-						has_fascist_goverment_trigger = yes
+						has_fascist_government_trigger = yes
 						is_major = yes
 					}
 					ROOT = {
 						NOT = {
-							has_fascist_goverment_trigger = yes
+							has_fascist_government_trigger = yes
 						}
 						NOT = {
 							has_country_flag = defeated_fascist_major_flag
@@ -80,12 +80,12 @@ on_actions = {
 			if = {
 				limit = {
 					FROM = {
-						has_socialist_goverment_trigger = yes
+						has_socialist_government_trigger = yes
 						is_major = yes
 					}
 					ROOT = {
 						NOT = {
-							has_socialist_goverment_trigger = yes
+							has_socialist_government_trigger = yes
 						}
 						NOT = {
 							has_country_flag = defeated_socialist_major_flag
@@ -99,12 +99,12 @@ on_actions = {
 			if = {
 				limit = {
 					FROM = {
-						has_democratic_goverment_trigger = yes
+						has_democratic_government_trigger = yes
 						is_major = yes
 					}
 					ROOT = {
 						NOT = {
-							has_democratic_goverment_trigger = yes
+							has_democratic_government_trigger = yes
 						}
 						NOT = {
 							has_country_flag = defeated_democratic_major_flag
@@ -118,12 +118,12 @@ on_actions = {
 			if = {
 				limit = {
 					FROM = {
-						has_authoritarian_goverment_trigger = yes
+						has_authoritarian_government_trigger = yes
 						is_major = yes
 					}
 					ROOT = {
 						NOT = {
-							has_authoritarian_goverment_trigger = yes
+							has_authoritarian_government_trigger = yes
 						}
 						NOT = {
 							has_country_flag = defeated_authoritarian_major_flag

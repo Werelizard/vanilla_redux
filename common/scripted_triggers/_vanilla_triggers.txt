@@ -226,20 +226,20 @@ has_same_ideology = {
 		tooltip = has_same_ideology_tt
 		OR = {			
 			AND = {
-				has_socialist_goverment_trigger = yes
-				ROOT = { has_socialist_goverment_trigger = yes }
+				has_socialist_government_trigger = yes
+				ROOT = { has_socialist_government_trigger = yes }
 			}
 			AND = {
-				has_democratic_goverment_trigger = yes
-				ROOT = { has_democratic_goverment_trigger = yes }
+				has_democratic_government_trigger = yes
+				ROOT = { has_democratic_government_trigger = yes }
 			}
 			AND = {
-				has_authoritarian_goverment_trigger = yes
-				ROOT = { has_authoritarian_goverment_trigger = yes }
+				has_authoritarian_government_trigger = yes
+				ROOT = { has_authoritarian_government_trigger = yes }
 			}
 			AND = {
-				has_fascist_goverment_trigger = yes
-				ROOT = { has_fascist_goverment_trigger = yes }
+				has_fascist_government_trigger = yes
+				ROOT = { has_fascist_government_trigger = yes }
 			}
 		}
 	}
@@ -475,24 +475,24 @@ is_democratic_seller_trigger = {
 	custom_trigger_tooltip = {
 		tooltip = "Democratic Countries"
 		FROM = {
-			has_democratic_goverment_trigger = yes
+			has_democratic_government_trigger = yes
 		}
 	}
 }
 
 is_fascist_seller_trigger = {
 	NOT = { has_war_with = ROOT	}
-	has_fascist_goverment_trigger = yes
+	has_fascist_government_trigger = yes
 }
 
 is_democracy_seller_trigger = {
 	NOT = { has_war_with = ROOT	}
-	has_democratic_goverment_trigger = yes
+	has_democratic_government_trigger = yes
 }
 
 is_communist_seller_trigger = {
 	NOT = { has_war_with = ROOT }
-	has_socialist_goverment_trigger = yes
+	has_socialist_government_trigger = yes
 }
 
 is_allied_seller_trigger = {
@@ -556,8 +556,8 @@ has_unsupported_manpower_law = {
 		}
 			has_idea = extensive_conscription
 			has_war_support < 0.2
-			NOT = { has_socialist_goverment_trigger = yes }
-			NOT = { has_fascist_goverment_trigger = yes }
+			NOT = { has_socialist_government_trigger = yes }
+			NOT = { has_fascist_government_trigger = yes }
 	}
 	else_if = {
 		limit = {
@@ -565,8 +565,8 @@ has_unsupported_manpower_law = {
 		}
 			has_idea = service_by_requirement
 			has_war_support < 0.6
-			NOT = { has_socialist_goverment_trigger = yes }
-			NOT = { has_fascist_goverment_trigger = yes }
+			NOT = { has_socialist_government_trigger = yes }
+			NOT = { has_fascist_government_trigger = yes }
 	}
 	else_if = {
 		limit = {
@@ -597,7 +597,7 @@ has_excessive_army_size = { #not currently used due to AI concerns
 				TAG = CHI
 			}
 			NOT = {
-				has_socialist_goverment_trigger = yes
+				has_socialist_government_trigger = yes
 			}
 		}
 		AND = {
@@ -611,7 +611,7 @@ has_excessive_army_size = { #not currently used due to AI concerns
 				TAG = CHI
 			}
 			NOT = {
-				has_socialist_goverment_trigger = yes
+				has_socialist_government_trigger = yes
 			}
 		}
 		AND = {
@@ -625,7 +625,7 @@ has_excessive_army_size = { #not currently used due to AI concerns
 				TAG = CHI
 			}
 			NOT = {
-				has_socialist_goverment_trigger = yes
+				has_socialist_government_trigger = yes
 			}
 		}
 		AND = {
@@ -639,18 +639,18 @@ has_excessive_army_size = { #not currently used due to AI concerns
 				TAG = CHI
 			}
 			NOT = {
-				has_socialist_goverment_trigger = yes
+				has_socialist_government_trigger = yes
 			}
 		}
 		AND = {
 			has_army_manpower = { size = 2500000 }
 			has_manpower < 1
-			has_democratic_goverment_trigger = yes
+			has_democratic_government_trigger = yes
 		}
 		AND = {
 			has_army_manpower = { size = 3000000 }
 			has_manpower < 1
-			has_fascist_goverment_trigger = yes
+			has_fascist_government_trigger = yes
 		}
 	}
 }

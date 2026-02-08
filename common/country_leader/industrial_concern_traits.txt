@@ -1,0 +1,22 @@
+leader_traits = {
+	generic_industry_concern_trait = {
+		
+	}
+
+	generic_electric_concern_trait = {
+
+	}
+
+	generic_resource_concern_trait = {
+		local_resources_factor = 0.1
+	}
+
+	generic_construction_concern_trait = {
+		production_speed_buildings_factor = 0.1
+	}
+
+	generic_oil_concern_trait = {
+		fuel_gain_factor = 0.1
+		production_speed_fuel_silo_factor = 0.2
+	}
+}

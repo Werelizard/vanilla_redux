@@ -1,0 +1,417 @@
+generic_decision_pol = {
+    # Get support for the ruling party
+    generic_support_government = {
+        available = {
+            NOT = {
+                support_government_50_trigger = yes
+            }
+        }
+        ####
+
+        days_remove = 90
+        cost = 150
+        ####
+
+        remove_effect = {
+            add_popularity = {
+                ideology = ROOT
+                popularity = 0.1
+            }
+        }
+        ####
+
+        cancel_trigger = {
+            support_government_50_trigger = yes
+        }
+
+        cancel_effect = {
+            hidden_effect = {
+                add_political_power = 150
+            }
+        }
+        ###
+
+        ai_will_do = {
+            factor = 0
+        }
+    }
+
+    # Race for the Bomb
+    generic_race_for_the_bomb = {
+        visible = {
+            is_major = yes
+            NOT = {
+                is_special_project_completed = sp:sp_nuclear_bomb
+            }
+            any_other_country = {
+                NOT = {
+                    is_subject_of = ROOT
+                }
+                NOT = {
+                    is_in_faction_with = ROOT
+                }
+                OR = {
+                    is_special_project_being_researched = sp:sp_nuclear_bomb
+                    is_special_project_completed = sp:sp_nuclear_bomb
+                }
+            }
+        }
+
+        fire_only_once = yes
+
+        available = {
+            any_owned_state = {
+                is_fully_controlled_by = ROOT
+                nuclear_facility > 0
+            }
+            has_tech = atomic_research
+        }
+        ####
+
+        days_remove = 180
+        cost = 200
+        ####
+
+        modifier = {
+            sp_nuclear_bomb_speed_factor = 0.25
+            nuclear_production_factor = 0.1
+        }
+        ####
+
+    }
+
+    # Improve Worker Conditions
+    generic_improve_worker_conditions = {
+        available = {
+            has_stability < 0.9
+        }
+        ####
+
+        days_remove = 120
+        cost = 100
+        ####
+
+        modifier = {
+            stability_weekly = 0.015
+            industrial_capacity_dockyard = -0.05
+            industrial_capacity_factory = -0.05
+            consumer_goods_factor = 0.1
+        }
+        ####
+
+        cancel_trigger = {
+            NOT = {
+                has_stability < 0.9
+            }
+        }
+        ####
+
+        ai_will_do = {
+            factor = 0
+        }
+    }
+
+    # Ban Socialist Parties
+    ban_socialist_parties = {
+        visible = {
+            NOT = {
+                has_socialist_government_trigger = yes
+            }
+            OR = {
+                authoritarian_socialist > 0.15
+                revolutionary_socialist > 0.15
+                social_democratic > 0.5
+            }
+        }
+        ####
+
+        days_remove = 60
+        cost = 100
+        ####
+
+        available = {
+            support_government_30_trigger = yes
+            if = {
+                limit = {
+                    has_democratic_government_trigger = yes
+                }
+                NOT = {
+                    has_government = social_democratic
+                }
+            }
+            NOT = {
+                authsoc_coalition_trigger = yes
+            }
+            NOT = {
+                revsoc_coalition_trigger = yes
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        has_government = social_democratic
+                    }
+                }
+                NOT = {
+                    socdem_coalition_trigger = yes
+                }
+            }
+        }
+        ####
+
+        modifier = {
+            stability_weekly = 0.01
+        }
+
+        complete_effect = {
+            custom_effect_tooltip = stability_loss_on_party_pop_tt
+            custom_effect_tooltip = doublespacedoublespace_tt
+            set_temp_variable = {
+                stab_loss_tempvar = 0
+            }
+            add_to_temp_variable = {
+                stab_loss_tempvar = party_popularity@authoritarian_socialist
+            }
+            add_to_temp_variable = {
+                stab_loss_tempvar = party_popularity@revolutionary_socialist
+            }
+            add_to_temp_variable = {
+                stab_loss_tempvar = party_popularity@social_democratic
+            }
+            multiply_temp_variable = {
+                stab_loss_tempvar = -0.25
+            }
+            add_stability = stab_loss_tempvar
+        }
+
+        remove_effect = {            
+            add_popularity = {
+                ideology = authoritarian_socialist
+                popularity = -0.2
+            }
+            add_popularity = {
+                ideology = revolutionary_socialist
+                popularity = -0.2
+            }
+            add_popularity = {
+                ideology = social_democratic
+                popularity = -0.2
+            }  
+        }
+        ####
+
+        ai_will_do = {
+            factor = 0
+        }
+    }
+
+    # Ban democratic parties
+    ban_democratic_parties = {
+        visible = {
+            NOT = {
+                has_democratic_government_trigger = yes
+            }
+            OR = {
+                social_democratic > 0.15
+                progressive > 0.15
+                liberal > 0.15
+                conservative > 0.15
+            }
+        }
+        ####
+
+        days_remove = 60
+        cost = 100
+        ####
+
+        available = {
+            support_government_30_trigger = yes
+            NOT = {
+                socdem_coalition_trigger = yes
+            }
+            NOT = {
+                progressive_coalition_trigger = yes
+            }
+            NOT = {
+                liberal_coalition_trigger = yes
+            }
+            NOT = {
+                conservative_coalition_trigger = yes
+            }
+        }
+        ####
+
+        modifier = {
+            stability_weekly = 0.01
+        }
+
+        complete_effect = {
+            custom_effect_tooltip = stability_loss_on_party_pop_tt
+            custom_effect_tooltip = doublespacedoublespace_tt
+            set_temp_variable = {
+                stab_loss_tempvar = 0
+            }
+            add_to_temp_variable = {
+                stab_loss_tempvar = party_popularity@social_democratic
+            }
+            add_to_temp_variable = {
+                stab_loss_tempvar = party_popularity@progressive
+            }
+            add_to_temp_variable = {
+                stab_loss_tempvar = party_popularity@liberal
+            }
+            add_to_temp_variable = {
+                stab_loss_tempvar = party_popularity@conservative
+            }
+            multiply_temp_variable = {
+                stab_loss_tempvar = -0.25
+            }
+            add_stability = stab_loss_tempvar
+        }
+
+        remove_effect = {            
+            add_popularity = {
+                ideology = social_democratic
+                popularity = -0.2
+            }
+            add_popularity = {
+                ideology = progressive
+                popularity = -0.2
+            }
+            add_popularity = {
+                ideology = liberal
+                popularity = -0.2
+            }
+            add_popularity = {
+                ideology = conservative
+                popularity = -0.2
+            }
+        }
+        ####
+
+        ai_will_do = {
+            factor = 0
+        }
+    }
+
+    # Ban auhtoritarian parties
+    ban_authoritarian_parties = {
+        visible = {
+            NOT = {
+                has_authoritarian_government_trigger = yes
+            }
+            OR = {
+                authoritarian_democrat > 0.15
+                autocratic > 0.15
+            }
+        }
+        ####
+
+        days_remove = 60
+        cost = 100
+        ####
+
+        available = {
+            support_government_30_trigger = yes
+            NOT = {
+                authoritarian_coalition_trigger = yes
+            }
+            NOT = {
+                autocracy_coalition_trigger = yes
+            }
+        }
+        ####
+
+        modifier = {
+            stability_weekly = 0.01
+        }
+
+        complete_effect = {
+            custom_effect_tooltip = stability_loss_on_party_pop_tt
+            custom_effect_tooltip = doublespacedoublespace_tt
+            set_temp_variable = {
+                stab_loss_tempvar = 0
+            }
+            add_to_temp_variable = {
+                stab_loss_tempvar = party_popularity@authoritarian_democrat
+            }
+            add_to_temp_variable = {
+                stab_loss_tempvar = party_popularity@autocratic
+            }
+            multiply_temp_variable = {
+                stab_loss_tempvar = -0.25
+            }
+            add_stability = stab_loss_tempvar
+        }
+
+        remove_effect = {
+            add_popularity = {
+                ideology = authoritarian_democrat
+                popularity = -0.2
+            }
+            add_popularity = {
+                ideology = autocratic
+                popularity = -0.2
+            }
+        }
+        ####
+
+        ai_will_do = {
+            factor = 0
+        }
+    }
+
+    # Ban fascist parties
+    ban_fascist_parties = {
+        visible = {
+            NOT = {
+                has_fascist_government_trigger = yes
+            }
+            OR = {
+                fascist > 0.15
+            }
+        }
+        ####
+
+        days_remove = 60
+        cost = 100
+        ####
+
+        available = {
+            support_government_30_trigger = yes
+            NOT = {
+                fascist_coalition_trigger = yes
+            }
+        }
+        ####
+
+        modifier = {
+            stability_weekly = 0.01
+        }
+
+        complete_effect = {
+            custom_effect_tooltip = stability_loss_on_party_pop_tt
+            set_temp_variable = {
+                stab_loss_tempvar = 0
+            }
+            add_to_temp_variable = {
+                stab_loss_tempvar = party_popularity@fascist
+            }
+            multiply_temp_variable = {
+                stab_loss_tempvar = -0.25
+            }
+            add_stability = stab_loss_tempvar
+        }
+
+        remove_effect = {            
+            add_popularity = {
+                ideology = fascist
+                popularity = -0.2
+            }
+        }
+        ####
+
+        ai_will_do = {
+            factor = 0
+        }
+    }
+}

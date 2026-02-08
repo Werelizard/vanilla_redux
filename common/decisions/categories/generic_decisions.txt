@@ -1,0 +1,6 @@
+generic_decision_pol = {
+    # These should replace the basic political decisions
+    allowed = {
+        always = yes
+    }
+}

@@ -23,30 +23,30 @@ startup_opinion_modifiers_effect = {
 					AND = {
 						# If both countries are democratic
 						PREV = {
-							has_socialist_goverment_trigger = yes
+							has_socialist_government_trigger = yes
 						}
-						has_socialist_goverment_trigger = yes
+						has_socialist_government_trigger = yes
 					}
 					AND = {
 						# If both countries are socialist
 						PREV = {
-							has_democratic_goverment_trigger = yes
+							has_democratic_government_trigger = yes
 						}
-						has_democratic_goverment_trigger = yes
+						has_democratic_government_trigger = yes
 					}
 					AND = {
 						# If both countries are authoritarian
 						PREV = {
-							has_authoritarian_goverment_trigger = yes
+							has_authoritarian_government_trigger = yes
 						}
-						has_authoritarian_goverment_trigger = yes
+						has_authoritarian_government_trigger = yes
 					}
 					AND = {
 						# If both countries are fascist
 						PREV = {
-							has_fascist_goverment_trigger = yes
+							has_fascist_government_trigger = yes
 						}
-						has_fascist_goverment_trigger = yes
+						has_fascist_government_trigger = yes
 					}
 				}
 			}
@@ -64,12 +64,12 @@ startup_opinion_modifiers_effect = {
 						PREV = {
 							OR = {
 								has_government = conservative
-								has_authoritarian_goverment_trigger= yes
+								has_authoritarian_government_trigger= yes
 							}
 						}
 						OR = {
 							has_government = conservative
-							has_authoritarian_goverment_trigger = yes
+							has_authoritarian_government_trigger = yes
 						}
 					}
 					AND = {
@@ -161,30 +161,30 @@ update_opinion_modifiers_effect = {
 					AND = {
 						# If both countries are democratic
 						ROOT = {
-							has_socialist_goverment_trigger = yes
+							has_socialist_government_trigger = yes
 						}
-						has_socialist_goverment_trigger = yes
+						has_socialist_government_trigger = yes
 					}
 					AND = {
 						# If both countries are socialist
 						ROOT = {
-							has_democratic_goverment_trigger = yes
+							has_democratic_government_trigger = yes
 						}
-						has_democratic_goverment_trigger = yes
+						has_democratic_government_trigger = yes
 					}
 					AND = {
 						# If both countries are authoritarian
 						ROOT = {
-							has_authoritarian_goverment_trigger = yes
+							has_authoritarian_government_trigger = yes
 						}
-						has_authoritarian_goverment_trigger = yes
+						has_authoritarian_government_trigger = yes
 					}
 					AND = {
 						# If both countries are fascist
 						ROOT = {
-							has_fascist_goverment_trigger = yes
+							has_fascist_government_trigger = yes
 						}
-						has_fascist_goverment_trigger = yes
+						has_fascist_government_trigger = yes
 					}
 				}
 			}
@@ -202,12 +202,12 @@ update_opinion_modifiers_effect = {
 						ROOT = {
 							OR = {
 								has_government = conservative
-								has_authoritarian_goverment_trigger = yes
+								has_authoritarian_government_trigger = yes
 							}
 						}
 						OR = {
 							has_government = conservative
-							has_authoritarian_goverment_trigger = yes
+							has_authoritarian_government_trigger = yes
 						}
 					}
 					AND = {

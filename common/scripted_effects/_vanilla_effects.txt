@@ -753,7 +753,7 @@ update_operation_ai = {
 					limit = { 
 						PREV = {
 							NOT = { tag = ENG } # ENG already does it against GER
-							NOT = { has_fascist_goverment_trigger = yes } 
+							NOT = { has_fascist_government_trigger = yes } 
 							NOT = {
 								has_operation_token = {
 									tag = var:generic_operation_target
@@ -761,7 +761,7 @@ update_operation_ai = {
 								}
 							}
 						}
-						has_fascist_goverment_trigger = yes
+						has_fascist_government_trigger = yes
 						check_variable = { occupied_countries^num > 0 }
 						has_added_tension_amount > 20
 					}

@@ -1,3 +1,78 @@
 leader_traits = {
-	
+	# GENERIC ADVISOR TRAITS
+	generic_popular_figurehead_trait = {
+		stability_factor = 0.1
+	}
+
+	generic_industrial_connections_trait = {
+		production_speed_industrial_complex_factor = 0.1
+		production_speed_rail_way_factor = 0.1
+		production_speed_infrastructure_factor = 0.1
+	}
+
+	generic_armements_organiser_trait = {
+		production_speed_fuel_silo_factor = 0.1
+		production_speed_air_base_factor = 0.1
+		conversion_cost_civ_to_mil_factor = -0.15
+	}
+
+	generic_financial_expert_trait = {
+		consumer_goods_factor = -0.1
+	}
+
+	generic_spymaster_trait = {
+		operative_slot = 1
+	}
+
+	# GENERIC SOCIALIST ADVISOR TRAITS (one extra since they don't get the spymaster)
+
+	generic_collectivist_trait = {
+		global_building_slots_factor = 0.15
+		consumer_goods_factor = 0.1
+	}
+
+	generic_mass_mobilisation_advocate_trait = {
+		recruitable_population_factor = 0.1
+		stability_factor = -0.05
+	}
+
+	generic_red_spymaster_trait = {
+		subversive_activites_upkeep = -0.25
+		operative_slot = 1
+	}
+
+	# GENERIC DEMOCRATIC ADVISOR TRAITS
+
+	generic_free_trade_advocate_trait = {
+		trade_opinion_factor = 0.25
+		local_resources_factor = 0.1
+	}
+
+	generic_diplomat_trait = {
+		improve_relations_maintain_cost_factor = -0.25
+		enemy_declare_war_tension = 0.1
+	}
+
+	# GENERIC AUTHORITARIAN ADVISOR TRAITS
+
+	generic_strongman_trait = {
+		political_power_cost = 0.1
+	}
+
+	generic_neutrality_advocate = {
+		drift_defence_factor = 0.5
+	}
+
+	# GENERIC FASCIST ADVISOR TRAITS
+
+	generic_brute_trait = {
+		political_power_factor = 0.05
+		justify_war_goal_time = -0.1
+	}
+
+	generic_total_war_advocate_trait = {
+		recruitable_population_factor = -0.1
+		industrial_capacity_dockyard = 0.1
+		industrial_capacity_factory = 0.1
+	}
 }

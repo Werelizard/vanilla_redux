@@ -16,14 +16,14 @@ has_VX_content_trigger = {
 
 # Government related triggers
 
-has_socialist_goverment_trigger = {
+has_socialist_government_trigger = {
 	OR = {
 		has_government = authoritarian_socialist
 		has_government = revolutionary_socialist
 	}
 }
 
-has_democratic_goverment_trigger = {
+has_democratic_government_trigger = {
 	OR = {
 		has_government = social_democratic
 		has_government = progressive
@@ -32,14 +32,14 @@ has_democratic_goverment_trigger = {
 	}
 }
 
-has_authoritarian_goverment_trigger = {
+has_authoritarian_government_trigger = {
 	OR = {
 		has_government = authoritarian_democrat
 		has_government = autocratic
 	}
 }
 
-has_fascist_goverment_trigger = {
+has_fascist_government_trigger = {
 	OR = {
 		has_government = fascist
 	}
@@ -49,27 +49,27 @@ has_fascist_goverment_trigger = {
 has_same_government = {
 	OR = {
 		AND = {
-			has_socialist_goverment_trigger = yes
+			has_socialist_government_trigger = yes
 			FROM = {
-				has_socialist_goverment_trigger = yes
+				has_socialist_government_trigger = yes
 			}
 		}
 		AND = {
-			has_democratic_goverment_trigger = yes
+			has_democratic_government_trigger = yes
 			FROM = {
-				has_democratic_goverment_trigger = yes
+				has_democratic_government_trigger = yes
 			}
 		}
 		AND = {
-			has_authoritarian_goverment_trigger = yes
+			has_authoritarian_government_trigger = yes
 			FROM = {
-				has_authoritarian_goverment_trigger = yes
+				has_authoritarian_government_trigger = yes
 			}
 		}
 		AND = {
-			has_fascist_goverment_trigger = yes
+			has_fascist_government_trigger = yes
 			FROM = {
-				has_fascist_goverment_trigger = yes
+				has_fascist_government_trigger = yes
 			}
 		}
 	}
@@ -187,19 +187,19 @@ is_enemy_ideology = {
 	OR = {
 		AND = {
 			# The target country is SOCIALIST
-			has_socialist_goverment_trigger = yes
+			has_socialist_government_trigger = yes
 			# Fascist countries, authoriraian anc conservative countries would consider it an enemy
 			ROOT = {
 				OR = {
 					has_government = conservative
-					has_authoritarian_goverment_trigger = yes
-					has_fascist_goverment_trigger = yes
+					has_authoritarian_government_trigger = yes
+					has_fascist_government_trigger = yes
 				}
 			}
 		}
 		AND = {
 			# The target country is DEMOCRATIC 
-			has_democratic_goverment_trigger = yes
+			has_democratic_government_trigger = yes
 			# Communist and Fascist countries would consider democracies hostile
 			OR = {
 				AND = {
@@ -208,33 +208,33 @@ is_enemy_ideology = {
 						has_government = social_democratic
 					}
 					ROOT = {
-						has_socialist_goverment_trigger = yes
+						has_socialist_government_trigger = yes
 					}
 				}
 				ROOT = {
-					has_fascist_goverment_trigger = yes
+					has_fascist_government_trigger = yes
 				}
 			}
 		}
 		AND = {
 			# The target country is AUTHORITARIAN
-			has_authoritarian_goverment_trigger = yes
+			has_authoritarian_government_trigger = yes
 			# Socialists and social democrats are hostile to authoritarian countries
 			ROOT = {
 				OR = {
-					has_socialist_goverment_trigger = yes
+					has_socialist_government_trigger = yes
 					has_government = social_democratic
 				}
 			}
 		}
 		AND = {
 			# The target country is fascist
-			has_fascist_goverment_trigger = yes
+			has_fascist_government_trigger = yes
 			# Socialists, democracies are hostile to fascism
 			ROOT = {
 				OR = {
-					has_socialist_goverment_trigger = yes
-					has_democratic_goverment_trigger = yes
+					has_socialist_government_trigger = yes
+					has_democratic_government_trigger = yes
 				}
 			}
 		}
@@ -246,38 +246,38 @@ is_friendly_ideology = {
 		AND = {
 			# Target is SOCIALIST
 			OR = {
-				has_socialist_goverment_trigger = yes
+				has_socialist_government_trigger = yes
 				has_government = social_democratic
 			}
 			# Social democrats and other socialist countries should be friendly towards socialist countries and vice versa
 			ROOT = {
 				OR = {
-					has_socialist_goverment_trigger = yes
+					has_socialist_government_trigger = yes
 					has_government = social_democratic
 				}
 			}
 		}
 		AND = {
 			# Target is demoratic
-			has_democratic_goverment_trigger = yes
+			has_democratic_government_trigger = yes
 			# Auth. Dem and democracies should be friendly towards democracies
 			ROOT = {
 				OR = {
-					has_democratic_goverment_trigger = yes
+					has_democratic_government_trigger = yes
 					has_government = authoritarian_democrat
 				}
 			}
 		}
 		AND = {
 			# Target is authoritarian but NOT autocracy
-			has_authoritarian_goverment_trigger = yes
+			has_authoritarian_government_trigger = yes
 			NOT = {
 				has_government = autocracy
 			}
 			# Conservatives and other authoritarians should be friendly
 			ROOT = {
 				OR = {
-					has_authoritarian_goverment_trigger = yes
+					has_authoritarian_government_trigger = yes
 					has_government = conservative
 				}
 			}
@@ -288,22 +288,146 @@ is_friendly_ideology = {
 			# Fascist countires and authoritarian democrats are fond of military/totalist countries
 			ROOT = {
 				OR = {
-					has_authoritarian_goverment_trigger = yes
-					has_fascist_goverment_trigger = yes
+					has_authoritarian_government_trigger = yes
+					has_fascist_government_trigger = yes
 				}
 			}
 		}
 		AND = {
 			# Target is a fascist country
-			has_fascist_goverment_trigger = yes
+			has_fascist_government_trigger = yes
 			# Autocracies and fascist countries align with fascist nations
 			ROOT = {
 				OR = {
 					has_government = autocracy
-					has_fascist_goverment_trigger = yes
+					has_fascist_government_trigger = yes
 				}
 			}
 		}
+	}
+}
+
+# At least 50% gov support
+
+support_government_50_trigger = {
+	if = {
+		limit = {
+			has_government = authoritarian_socialist
+		}
+		authoritarian_socialist > 0.5
+	}
+	else_if = {
+		limit = {
+			has_government = revolutionary_socialist
+		}
+		revolutionary_socialist > 0.5
+	}
+	else_if = {
+		limit = {
+			has_government = social_democratic
+		}
+		social_democratic > 0.5
+	}
+	else_if = {
+		limit = {
+			has_government = progressive
+		}
+		progressive > 0.5
+	}
+	else_if = {
+		limit = {
+			has_government = liberal
+		}
+		liberal > 0.5
+	}
+	else_if = {
+		limit = {
+			has_government = conservative
+		}
+		conservative > 0.5
+	}
+	else_if = {
+		limit = {
+			has_government = authoritarian_democrat
+		}
+		authoritarian_democrat > 0.5
+	}
+	else_if = {
+		limit = {
+			has_government = autocratic
+		}
+		autocratic > 0.5
+	}
+	else_if = {
+		limit = {
+			has_government = fascism
+		}
+		fascism > 0.5
+	}
+	else = {
+		always = no
+	}
+}
+
+# At least 30% government
+
+support_government_30_trigger = {
+	if = {
+		limit = {
+			has_government = authoritarian_socialist
+		}
+		authoritarian_socialist > 0.3
+	}
+	else_if = {
+		limit = {
+			has_government = revolutionary_socialist
+		}
+		revolutionary_socialist > 0.3
+	}
+	else_if = {
+		limit = {
+			has_government = social_democratic
+		}
+		social_democratic > 0.3
+	}
+	else_if = {
+		limit = {
+			has_government = progressive
+		}
+		progressive > 0.3
+	}
+	else_if = {
+		limit = {
+			has_government = liberal
+		}
+		liberal > 0.3
+	}
+	else_if = {
+		limit = {
+			has_government = conservative
+		}
+		conservative > 0.3
+	}
+	else_if = {
+		limit = {
+			has_government = authoritarian_democrat
+		}
+		authoritarian_democrat > 0.3
+	}
+	else_if = {
+		limit = {
+			has_government = autocratic
+		}
+		autocratic > 0.3
+	}
+	else_if = {
+		limit = {
+			has_government = fascism
+		}
+		fascism > 0.3
+	}
+	else = {
+		always = no
 	}
 }
 

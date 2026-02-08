@@ -1,0 +1,99 @@
+ideas = {
+	# Generic concerns for all nations that do not have any content
+	industrial_concern = {
+		generic_industry_concern = {
+			allowed = {
+				NOT = {
+					has_VX_content_trigger = yes
+				}
+			}
+
+			traits = {
+				generic_industry_concern_trait
+			}
+
+			modifier = {
+				
+			}
+
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+
+		generic_electric_concern = {
+			allowed = {
+				NOT = {
+					has_VX_content_trigger = yes
+				}
+			}
+
+			traits = {
+				generic_electric_concern_trait
+			}
+
+			modifier = {
+				
+			}
+
+			research_bonus = {
+				electronics = 0.1
+			}
+		}
+
+		generic_resource_concern = {
+			allowed = {
+				NOT = {
+					has_VX_content_trigger = yes
+				}
+			}
+
+			traits = {
+				generic_resource_concern_trait
+			}
+
+			modifier = {
+				
+			}
+
+			research_bonus = {
+				excavation_tech = 0.1
+			}
+		}
+
+		generic_construction_concern = {
+			allowed = {
+				NOT = {
+					has_VX_content_trigger = yes
+				}
+			}
+
+			traits = {
+				generic_construction_concern_trait
+			}
+
+			modifier = {
+			}
+
+			research_bonus = {
+				construction_tech = 0.1
+			}
+		}
+
+		generic_oil_concern = {
+			allowed = {
+				NOT = {
+					has_VX_content_trigger = yes
+				}
+			}
+
+			traits = {
+				generic_oil_concern_trait
+			}
+
+			modifier = {
+				
+			}
+		}
+	}
+}

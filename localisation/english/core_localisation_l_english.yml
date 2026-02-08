@@ -122,3 +122,6 @@
  authoritarian_coalition_tt:0 "In a coalition with the §gAuthoritarian Democrats§!"
  autocracy_coalition_tt:0 "In a coalition with the §lAutocrats§!"
  fascism_coalition_tt:0 "In a coalition with the §Yfascists§!"
+
+ ### MISC TOOLTIPS ###
+ doublespace_tt:0 " \n"
