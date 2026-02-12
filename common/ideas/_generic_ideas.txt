@@ -1,0 +1,30 @@
+idea = {
+	country = {
+		# CRISES fire as a mission, and can be stopped by meeting certain criteria.
+		# On actions -> events -> mission (cooldown)
+
+		# STRIKES / Low war support (under 50%) and at least partial mobilisation
+		generic_strikes = {
+			modifier = {
+				industrial_capacity_dockyard = -0.5
+				industrial_capacity_factory = -0.5
+			}
+		}
+
+		# DESERTIONS / Low war support (<50%) and high casualties (>10%)
+		generic_desertions = {
+			modifier = {
+				recruitable_population_factor = -0.25	
+				experience_loss_factor = 0.25			
+			}
+		}
+
+		# PROTESTS / less than 30% ruling coalition popularity while at war (or less than 50% when >20% surrender)
+		generic_protests = {
+			modifier = {
+				drift_defence_factor = -0.5
+				stability_weekly = -0.01
+			}
+		}
+	}
+}

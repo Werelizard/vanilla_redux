@@ -1,0 +1,409 @@
+every_possible_country = {
+	limit = {
+		NOT = {
+			# Exclude countries that SHOULD have defined advisors. This is effectively a fallback.
+			has_VX_content_trigger = yes
+		}
+	}
+	# Generic Advisors
+	generate_character = {
+		token_base = generic_popular_figurehead
+		advisor = {
+			slot = political_advisor
+			traits = { generic_popular_figurehead_trait }
+			available = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			# TO DO: add portraits for generic advisors
+		}
+	}
+	generate_character = {
+		token_base = generic_industrialist
+		advisor = {
+			slot = political_advisor
+			traits = { generic_industrial_connections_trait }
+			available = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			# TO DO: add portraits for generic advisors
+		}
+	}
+	generate_character = {
+		token_base = generic_armements_organiser
+		advisor = {
+			slot = political_advisor
+			traits = { generic_armements_organiser_trait }
+			available = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			# TO DO: add portraits for generic advisors
+		}
+	}
+	generate_character = {
+		token_base = generic_financial_expert
+		advisor = {
+			slot = political_advisor
+			traits = { generic_financial_expert_trait }
+			available = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			# TO DO: add portraits for generic advisors
+		}
+	}
+	generate_character = {
+		token_base = generic_spymaster
+		advisor = {
+			slot = political_advisor
+			traits = { generic_spymaster_trait }
+			available = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			# TO DO: add portraits for generic advisors
+		}
+	}
+	generate_character = {
+		token_base = generic_populist
+		advisor = {
+			slot = political_advisor
+			traits = { generic_populist_trait }
+			available = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			# TO DO: add portraits for generic advisors
+		}
+	}
+	generate_character = {
+		token_base = generic_education_reformer
+		advisor = {
+			slot = political_advisor
+			traits = { generic_education_reformer_trait }
+			available = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			# TO DO: add portraits for generic advisors
+		}
+	}
+	generate_character = {
+		token_base = generic_silent_workhorse
+		advisor = {
+			slot = political_advisor
+			traits = { generic_silent_workhorse_trait }
+			available = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			# TO DO: add portraits for generic advisors
+		}
+	}
+	# Generic Army chiefs - also generals
+	generate_character = {
+		token_base = generic_chief_of_army_defense
+		advisor = {
+			slot = army_chief
+			traits = { generic_chief_of_army_defense_trait }
+			available = {
+					
+				}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1 
+		}
+		portraits = { 
+			# TO DO: add portraits for generic advisors
+		}
+	}
+	generate_character = {
+		token_base = generic_chief_of_army_offense
+		advisor = {
+			slot = army_chief
+			traits = { generic_chief_of_army_offense_trait }
+			available = {
+					
+				}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1 
+		}
+		portraits = { 
+			# TO DO: add portraits for generic advisors
+		}
+	}
+	# Generic Navy Chiefs - also admirals
+	generate_character = {
+		token_base = generic_chief_of_navy_shore_defense
+		advisor = {
+			slot = navy_chief
+			traits = { generic_chief_of_navy_shore_defense_trait }
+			available = {
+					
+				}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		navy_leader = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 1
+			legacy_id = -1 
+		}
+		portraits = { 
+			# TO DO: add portraits for generic advisors
+		}
+	}
+	generate_character = {
+		token_base = generic_chief_of_navy_far_operations
+		advisor = {
+			slot = navy_chief
+			traits = { generic_chief_of_navy_far_operations_trait }
+			available = {
+						
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		navy_leader = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 1
+			legacy_id = -1 
+		}
+		portraits = { 
+			# TO DO: add portraits for generic advisors
+		}
+	}
+	# Generic Air Chiefs
+	generate_character = {
+		token_base = generic_chief_of_airforce_superiority
+		advisor = {
+			slot = air_chief
+			traits = { generic_chief_of_airforce_superiority_trait }
+			available = {
+						
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			# TO DO: add portraits for generic advisors
+		}
+	}
+	generate_character = {
+		token_base = generic_chief_of_airforce_ranged
+		advisor = {
+			slot = air_chief
+			traits = { generic_chief_of_airforce_ranged_trait }
+			available = {
+						
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			# TO DO: add portraits for generic advisors
+		}
+	}
+	# Generic High Command
+	generate_character = {
+		token_base = generic_high_command_special_forces
+		advisor = {
+			slot = high_command
+			traits = { generic_chief_of_airforce_ranged_trait }
+			available = {
+						
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			# TO DO: add portraits for generic advisors
+		}
+	}
+	generate_character = {
+		token_base = generic_high_command_engineer
+		advisor = {
+			slot = high_command
+			traits = { generic_high_command_engineer_trait }
+			available = {
+						
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			# TO DO: add portraits for generic advisors
+		}
+	}
+	generate_character = {
+		token_base = generic_high_command_army
+		advisor = {
+			slot = high_command
+			traits = { generic_high_command_army_trait }
+			available = {
+						
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			# TO DO: add portraits for generic advisors
+		}
+	}
+	generate_character = {
+		token_base = generic_high_command_navy
+		advisor = {
+			slot = high_command
+			traits = { generic_high_command_navy_trait }
+			available = {
+						
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			# TO DO: add portraits for generic advisors
+		}
+	}
+	generate_character = {
+		token_base = generic_high_command_airforce
+		advisor = {
+			slot = high_command
+			traits = { generic_high_command_airforce_trait }
+			available = {
+						
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			# TO DO: add portraits for generic advisors
+		}
+	}
+
+	# Randomly assign traits to and increase a random skil of generic starting leaders
+	every_unit_leader = {
+		random_list = {
+			40 = {
+				add_trait = old_guard
+			}
+			40 = {
+				add_trait = career_officer
+			}
+			20 = {
+				
+			}
+		}
+		random_list = {
+			25 = {
+				add_logistics = 1
+			}
+			25 = {
+				add_planning = 1
+			}
+			25 = {
+				add_defense = 1
+			}
+			25 = {
+				add_attack = 1
+			}
+		}
+	}
+	every_navy_leader = {
+		random_list = {
+			40 = {
+				add_trait = cruiser_captain
+			}
+			40 = {
+				add_trait = destroyer_leader
+			}
+			20 = {
+				
+			}
+		}
+		random_list = {
+			25 = {
+				add_coordination = 1
+			}
+			25 = {
+				add_maneuver = 1
+			}
+			25 = {
+				add_defense = 1
+			}
+			25 = {
+				add_attack = 1
+			}
+		}
+	}
+}

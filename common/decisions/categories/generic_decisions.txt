@@ -1,6 +1,56 @@
+generic_decision_crisis = {
+    allowed = {
+        always = yes
+        is_ai = no
+        has_war_with_non_exiled_country = yes # Here to hide / disable these crises if you are NOT at war 
+    }
+
+    priority = 1000
+
+    visible_when_empty = no
+}
+
 generic_decision_pol = {
     # These should replace the basic political decisions
     allowed = {
         always = yes
+    }
+
+    priority = 903
+
+    visible_when_empty = no
+
+    visible = {
+        has_capitulated = no
+    }
+}
+
+generic_decision_war_measures = {
+    # These should replace the basic war measures decisions
+    allowed = {
+        always = yes
+    }
+
+    priority = 902
+
+    visible_when_empty = no
+
+    visible = {
+        has_capitulated = no
+    }
+}
+
+generic_decision_economy = {
+    # These should replace the basic economic decisions
+    allowed = {
+        always = yes
+    }
+
+    priority = 901
+
+    visible_when_empty = no
+
+    visible = {
+        has_capitulated = no
     }
 }
