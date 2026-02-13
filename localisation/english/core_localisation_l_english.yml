@@ -1,4 +1,33 @@
 ﻿l_english: 
+ ### DECISIONS ###
+ generic_support_government:0 "Organise Political Rallies"
+ generic_race_for_the_bomb:0 "Race for the Bomb"
+ generic_improve_worker_conditions:0 "Improve Worker Conditions"
+ ban_socialist_parties:0 "Ban Socialist Parties"
+ ban_democratic_parties:0 "Ban Democratic Parties"
+ ban_authoritarian_parties:0 "Ban Authoritarian Parties"
+ ban_fascist_parties:0 "Ban Fascist Parties"
+ #
+ generic_war_propaganda:0 "War Propaganda"
+ generic_war_propaganda_casualties:0 "Extoll Heroism"
+ generic_war_propaganda_convoys:0 "Encourage Frugality"
+ generic_war_propaganda_bombing:0 "Bolster Spirits"
+ #
+ crisis_mission_strikes:0 "Looming Strikes"
+ crisis_mission_deserters:0 "Looming Desertions"
+ crisis_mission_protests:0 "Looming Protests"
+ crisis_solve_strikes:0 "End Nation-Wide Strikes"
+ crisis_solve_desertions:0 "Deal with Deserters"
+ crisis_solve_protests:0 "End Nation-Wide Protests"
+
+ ### DECISION CATEGORIES ###
+ VX_25_CP_COST:0 "£command_power §Y25§!"
+ VX_25_CP_COST_blocked:0 "£command_power §R25§!"
+ VX_25_CP_COST_tooltip:0 "It costs £command_power §Y25§! to take this decisions"
+
+ ### DECISION TOOLTIPS ###
+ stability_loss_on_party_pop_tt:0 "Stability will be §rdeducted§! proportional to the popularity of banned parties"
+
  ### DYNAMIC MODIFIERS - COUNTRY BASED ###
  
  coalitions_dynmod:0 "Coalitions"
@@ -122,6 +151,27 @@
  authoritarian_coalition_tt:0 "In a coalition with the §gAuthoritarian Democrats§!"
  autocracy_coalition_tt:0 "In a coalition with the §lAutocrats§!"
  fascism_coalition_tt:0 "In a coalition with the §Yfascists§!"
+
+ has_socialist_government_tt:0 "Has a §YSocialist§! government"
+ has_democratic_government_tt:0 "Has a §YDemocratic§! government"
+ has_authoritarian_government_tt:0 "Has an §YAuthoritarian§! government"
+ has_fascist_government_tt:0 "Has a §YFascist§! government"
+
+ can_use_free_trade_tt:0 "Can enact §YFree Trade§!"
+ can_remove_free_trade_tt:0 "Can remove §YFree Trade§!"
+ can_use_export_focus_tt:0 "Can enact §YExport Focus§!"
+ can_remove_export_focus_tt:0 "Can remove §YExport Focus§!"
+ can_use_limited_exports_tt:0 "Can enact §YLimited Exports§!"
+ can_remove_limited_exports_tt:0 "Can remove §YLimited Exports§!"
+ can_use_closed_economy_tt:0 "Can enact §YClosed Economy§!"
+ can_remove_closed_economy_tt:0 "Can remove §YClosed Economy§!"
+ can_remove_disarmed_nation_trigger_tt:0 "Can remove §YDisarmed Nation§!"
+ can_remove_volunteer_only_tt:0 "Can remove §YVolunteer Only§!"
+ can_remove_limited_conscription_tt:0 "Can remove §YLimited Conscription§!"
+ can_remove_extensive_conscription_tt:0 "Can remove §YExtensive Conscription§!"
+ can_remove_service_by_requirement_tt:0 "Can remove §YService by Requirement§!"
+ can_remove_all_adults_serve_tt:0 "Can remove §YAll Adults Serve§!"
+ can_scraping_the_barrel_tt:0 "Can remove §YScraping the Barrel§!"
 
  ### MISC TOOLTIPS ###
  doublespace_tt:0 " \n"

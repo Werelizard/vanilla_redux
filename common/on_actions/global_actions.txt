@@ -44,6 +44,12 @@ on_actions = {
 			}
 		}
 	}
+	on_weekly = {
+		# Checks if a crisis can be lauched, and if it should be by firing the corresponding event
+		effect = {
+			
+		}
+	}
 	on_new_term_election = {		
 		# countries with content should have their election events in their own "on_action" files
 		effect = {
