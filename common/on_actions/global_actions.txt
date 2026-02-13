@@ -30,6 +30,7 @@ on_actions = {
 		# Update the coalitions
 		effect = {
 			update_coalitions_effect = yes
+			remove_uncessary_coalitions_effect = yes # Called here to prevent redundant coalition flags
 		}
 	}
 	on_daily = {

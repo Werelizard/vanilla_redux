@@ -152,7 +152,7 @@ progressive_coalition_trigger = {
 		NOT = {
 			has_government = progressive
 		}
-		has_country_flag = coalition_progressive_flag
+		has_country_flag = coalition_prog_flag
 	}
 }
 
@@ -162,7 +162,7 @@ liberal_coalition_trigger = {
 		NOT = {
 			has_government = liberal
 		}
-		has_country_flag = coalition_liberal_flag
+		has_country_flag = coalition_lib_flag
 	}
 }
 
@@ -182,17 +182,17 @@ authoritarian_coalition_trigger = {
 		NOT = {
 			has_government = authoritarian_democrat
 		}
-		has_country_flag = coalition_authdem_flag
+		has_country_flag = coalition_auth_flag
 	}
 }
 
 autocracy_coalition_trigger = {
 	custom_trigger_tooltip = {
-		tooltip = autocratic_coalition_tt
+		tooltip = autocracy_coalition_tt
 		NOT = {
 			has_government = autocratic
 		}
-		has_country_flag = coalition_autocratic_flag
+		has_country_flag = coalition_reactionary_flag
 	}
 }
 
@@ -202,7 +202,7 @@ fascist_coalition_trigger = {
 		NOT = {
 			has_government = fascist
 		}
-		has_country_flag = coalition_fascist_flag
+		has_country_flag = coalition_fascism_flag
 	}
 }
 

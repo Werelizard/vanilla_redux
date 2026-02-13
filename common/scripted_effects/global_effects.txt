@@ -332,6 +332,73 @@ fascist_leave_coalition_effect = {
 	update_coalitions_effect = yes
 }
 
+# Remove a coalition flag if the party in power is "in a coalition" - sanity check
+remove_uncessary_coalitions_effect = {
+	if = {
+		limit = {
+			has_government = authoritarian_socialist
+			has_country_flag = coalition_authsoc_flag
+		}		
+		clr_country_flag = coalition_authsoc_flag
+	}
+	if = {
+		limit = {
+			has_government = revolutionary_socialist
+			has_country_flag = coalition_revsoc_flag
+		}		
+		clr_country_flag = coalition_revsoc_flag
+	}
+	if = {
+		limit = {
+			has_government = social_democratic
+			has_country_flag = coalition_socdem_flag
+		}		
+		clr_country_flag = coalition_socdem_flag
+	}
+	if = {
+		limit = {
+			has_government = progressive
+			has_country_flag = coalition_prog_flag
+		}		
+		clr_country_flag = coalition_prog_flag
+	}
+	if = {
+		limit = {
+			has_government = liberal
+			has_country_flag = coalition_lib_flag
+		}		
+		clr_country_flag = coalition_lib_flag
+	}
+	if = {
+		limit = {
+			has_government = conservative
+			has_country_flag = coalition_conservative_flag
+		}		
+		clr_country_flag = coalition_conservative_flag
+	}
+	if = {
+		limit = {
+			has_government = authoritarian_democrat
+			has_country_flag = coalition_auth_flag
+		}		
+		clr_country_flag = coalition_auth_flag
+	}
+	if = {
+		limit = {
+			has_government = autocratic
+			has_country_flag = coalition_reactionary_flag
+		}		
+		clr_country_flag = coalition_reactionary_flag
+	}
+	if = {
+		limit = {
+			has_government = fascism
+			has_country_flag = coalition_fascism_flag
+		}		
+		clr_country_flag = coalition_fascism_flag
+	}
+}
+
 # Update the coalitions
 update_coalitions_effect = {
 	set_variable = {

@@ -143,7 +143,7 @@ generic_decision_pol = {
 		}
 		complete_effect = {
 			custom_effect_tooltip = stability_loss_on_party_pop_tt
-			custom_effect_tooltip = doublespacedoublespace_tt
+			custom_effect_tooltip = doublespace_tt
 			set_temp_variable = {
 				stab_loss_tempvar = 0
 			}
@@ -218,7 +218,7 @@ generic_decision_pol = {
 		}
 		complete_effect = {
 			custom_effect_tooltip = stability_loss_on_party_pop_tt
-			custom_effect_tooltip = doublespacedoublespace_tt
+			custom_effect_tooltip = doublespace_tt
 			set_temp_variable = {
 				stab_loss_tempvar = 0
 			}
@@ -292,7 +292,7 @@ generic_decision_pol = {
 		}
 		complete_effect = {
 			custom_effect_tooltip = stability_loss_on_party_pop_tt
-			custom_effect_tooltip = doublespacedoublespace_tt
+			custom_effect_tooltip = doublespace_tt
 			set_temp_variable = {
 				stab_loss_tempvar = 0
 			}
