@@ -1,0 +1,624 @@
+ideas = {
+	economy = {
+		# ECONOMY LAWS
+		law = yes
+		use_list_view = yes
+		civilian_economy = {
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = 0.35
+				production_speed_industrial_complex_factor = -0.3
+				production_speed_arms_factory_factor = -0.3
+				conversion_cost_civ_to_mil_factor = 0.3
+				conversion_cost_mil_to_civ_factor = 0.3
+				max_fuel_factor = -0.25
+				fuel_gain_factor = -0.4
+				factory_energy_consumption = -0.3
+			}
+			default = yes
+			cancel_if_invalid = no
+		}
+		low_economic_mobilisation = {
+			available = {
+				OR = {
+					has_war_support > 0.15
+					AND = {
+						has_war_with_non_exiled_country = yes
+						surrender_progress > 0.05
+					}
+				}
+			}
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = 0.3
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = -0.1
+				fuel_gain_factor = -0.25
+				factory_energy_consumption = -0.15
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 2
+				modifier = {
+					factor = 20
+					is_major = yes
+				}
+				modifier = {
+					has_war_support > 0.25
+					factor = 0					#don't even look at it if you could be taking partial mob
+				}
+			}
+		}
+		partial_economic_mobilisation = {
+			available = {
+				has_war_support > 0.25
+				AND = {
+					has_war_with_non_exiled_country = yes
+					surrender_progress > 0.1
+				}
+			}
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = 0.25
+				production_speed_arms_factory_factor = 0.1
+				conversion_cost_civ_to_mil_factor = -0.1
+				conversion_cost_mil_to_civ_factor = -0.1
+				fuel_gain_factor = -0.1
+			}
+			cancel_if_invalid = no
+			on_add = {
+				if = {
+					limit = {
+						tag = USA
+						has_completed_focus = USA_limited_intervention
+						has_defensive_war = no
+					}
+					USA_congress_large_opposition = yes
+				}
+			}
+			ai_will_do = {
+				factor = 2
+				modifier = {
+					factor = 20
+					is_major = yes
+				}
+			}
+		}
+		war_economy = {
+			available = {
+				has_war_support > 0.5
+				OR = {
+					has_socialist_government_tooltip_trigger = yes
+					has_fascist_government_tooltip_trigger = yes
+					AND = {
+						has_war_with_non_exiled_country = yes
+						surrender_progress > 0.35
+					}
+					AND = {
+						has_war = yes
+						any_enemy_country = {
+							ic_ratio = {
+								tag = ROOT
+								ratio > 0.4
+							}
+						}
+					}
+				}
+			}
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = 0.2
+				production_speed_arms_factory_factor = 0.2
+				conversion_cost_civ_to_mil_factor = -0.2
+				conversion_cost_mil_to_civ_factor = -0.2
+				factory_energy_consumption = 0.25
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				base = 3
+				modifier = {
+					#High prio on production
+					factor = 20
+					manpower_per_military_factory > 1000
+				}
+				modifier = {
+					# If we CAN go for total mobilization and have enough manpower for it, skip war economy, it's only a waste of PP
+					factor = 0
+					manpower_per_military_factory > 15000
+					has_war = yes
+					has_war_support > 0.8
+					any_enemy_country = {
+						ic_ratio = {
+							tag = ROOT
+							ratio > 0.5
+						}
+					}
+				}
+				modifier = {
+					add = 1800
+					# revert from closed_economy if we have large allies
+					has_idea = closed_economy
+					has_large_ally_not_pick_closed_economy = yes
+				}
+			}
+		}
+		tot_economic_mobilisation = {
+			available = {
+				has_war = yes
+				OR = {
+					AND = {
+						has_war_with_non_exiled_country = yes
+						surrender_progress > 0.5
+						has_war_support > 0.25
+					}
+					AND = {
+						has_war_support > 0.8
+						any_enemy_country = {
+							ic_ratio = {
+								tag = ROOT
+								ratio > 0.5
+							}
+						}
+					}
+				}
+			}
+			ai_will_do = {
+				base = 1
+				modifier = {
+					factor = 25
+					#Prio this if nation has a lot of manpower compared to MIC
+					manpower_per_military_factory > 15000
+				}
+				modifier = {
+					#Block  unless nation has a lot of manpower
+					factor = 0
+					manpower_per_military_factory < 10000
+				}
+				modifier = {
+					# never take this if we are on low conscription laws for safety
+					factor = 0
+					OR = {
+						has_idea = volunteer_only
+						has_idea = limited_conscription
+					}
+				}
+			}
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = 0.15
+				conscription = -0.03
+				production_speed_arms_factory_factor = 0.3
+				conversion_cost_civ_to_mil_factor = -0.3
+				conversion_cost_mil_to_civ_factor = -0.3
+				factory_energy_consumption = 0.5
+			}
+			cancel_if_invalid = no
+		}
+	}
+	# TRADE LAWS
+	trade_laws = {
+		law = yes
+		use_list_view = yes
+		free_trade = {
+			available = {
+				can_use_free_trade_trigger = yes
+			}
+			allowed_to_remove = {
+				can_remove_free_trade_trigger = yes
+			}
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				min_export = 0.8
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.1
+				civilian_intel_to_others = 40
+				navy_intel_to_others = 20
+				cic_construction_boost_factor = 0.05
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		export_focus = {
+			available = {
+				can_use_export_focus_trigger = yes
+			}
+			allowed_to_remove = {
+				can_remove_export_focus_trigger = yes
+			}
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				min_export = 0.5
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = 0.1
+				research_speed_factor = 0.05
+				civilian_intel_to_others = 20
+				navy_intel_to_others = 10
+				cic_construction_boost_factor = 0.1
+			}
+			default = yes
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		limited_exports = {
+			available = {
+				can_use_limited_exports_trigger = yes
+				OR = {
+					has_socialist_government_tooltip_trigger = yes
+					has_fascist_government_tooltip_trigger = yes
+					AND = {
+						has_war = yes
+						any_enemy_country = {
+							ic_ratio = {
+								tag = ROOT
+								ratio > 0.2
+							}
+						}
+					}
+				}
+			}
+			allowed_to_remove = {
+				can_remove_limited_exports_trigger = yes
+			}
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				min_export = 0.25
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.05
+				research_speed_factor = 0.01
+				civilian_intel_to_others = 10
+				navy_intel_to_others = 5
+				lend_lease_tension = 0.2
+				cic_construction_boost = -0.05
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					add = -1
+					is_major = no
+					is_in_faction = yes
+					has_war = yes
+				}
+				# minors not at war should want to get the bonuses from free trade
+				modifier = {
+					add = -1
+					is_major = no
+					has_war = no
+				}
+				modifier = {
+					add = 1500
+					# revert from closed_economy if we have large allies
+					has_idea = closed_economy
+					has_large_ally_not_pick_closed_economy = yes
+				}
+			}
+		}
+		closed_economy = {
+			available = {
+				has_war = yes
+				can_use_closed_economy_trigger = yes
+			}
+			allowed_to_remove = {
+				can_remove_closed_economy_trigger = yes
+			}
+			rule = {
+				can_access_market = no
+				desc = can_not_access_market_closed_economy
+			}
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				min_export = 0
+				lend_lease_tension = 0.4
+				cic_construction_boost = -0.1
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					is_major = no
+					is_in_faction = yes
+					has_war = yes
+				}
+				# minors not at war should want to get the bonuses from free trade
+				modifier = {
+					factor = 0
+					is_major = no
+					has_war = no
+				}
+				modifier = {
+					factor = 0
+					# don't take if we have a reasonable sized ally
+					# since they will require our trades
+					has_large_ally_not_pick_closed_economy = yes
+				}
+			}
+		}
+	}
+	# CONSCRIPTION LAWS
+	mobilization_laws = {
+		law = yes
+		use_list_view = yes
+		disarmed_nation = {
+			cost = 150
+			removal_cost = -1
+			level = 7
+			available = {
+			}
+			allowed_to_remove = {
+				can_remove_disarmed_nation_trigger = yes
+			}
+			modifier = {
+				conscription = 0.01
+			}
+			cancel_if_invalid = no
+		}
+		volunteer_only = {
+			cost = 150
+			removal_cost = -1
+			level = 6
+			available = {
+			}
+			allowed_to_remove = {
+				can_remove_volunteer_only_trigger = yes
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 60					# being disarmed is bad in a wargame yo
+					has_idea = disarmed_nation
+				}
+			}
+			modifier = {
+				conscription = 0.015
+			}
+			default = yes
+			cancel_if_invalid = no
+		}
+		limited_conscription = {
+			cost = 150
+			removal_cost = -1
+			level = 5
+			available = {
+				has_war_support > 0.1
+			}
+			allowed_to_remove = {
+				can_remove_limited_conscription_trigger = yes
+			}
+			modifier = {
+				conscription = 0.025
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					# Ignore if high on manpower
+					factor = 0.5
+					manpower_per_military_factory > 5000
+				}
+				modifier = {
+					#Prio if low on manpower
+					factor = 20
+					manpower_per_military_factory < 2000
+				}
+			}
+			cancel_if_invalid = no
+		}
+		extensive_conscription = {
+			available = {
+				OR = {
+					has_socialist_government_tooltip_trigger = yes
+					has_fascist_government_tooltip_trigger = yes
+					AND = {
+						has_war = yes
+						enemies_strength_ratio > 0.2
+					}
+					surrender_progress > 0
+				}
+				has_war_support > 0.2
+			}
+			allowed_to_remove = {
+				can_remove_extensive_conscription_trigger = yes
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					# Ignore if high on manpower
+					factor = 0.5
+					manpower_per_military_factory > 3000
+				}
+				modifier = {
+					#Prio if low on manpower
+					factor = 20
+					manpower_per_military_factory < 800
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						has_idea = limited_conscription
+					}
+				}
+			}
+			cost = 150
+			removal_cost = -1
+			level = 4
+			modifier = {
+				conscription = 0.05
+				training_time_factor = 0.1
+			}
+			cancel_if_invalid = no
+		}
+		service_by_requirement = {
+			available = {
+				OR = {
+					has_socialist_government_tooltip_trigger = yes
+					has_fascist_government_trigger = yes
+					AND = {
+						has_war = yes
+						enemies_strength_ratio > 0.6
+					}
+				}
+				OR = {
+					has_war_support > 0.6
+					surrender_progress > 0
+				}
+			}
+			allowed_to_remove = {
+				can_remove_service_by_requirement_trigger = yes
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					#Prio if low on manpower
+					factor = 20
+					manpower_per_military_factory < 700
+				}
+				modifier = {
+					#Lower chance if has decent amount
+					factor = 0.5
+					manpower_per_military_factory > 1000
+				}
+				modifier = {
+					#Block has plenty manpower
+					factor = 0
+					NOT = {
+						tag = CHI
+					}
+					NOT = {
+						tag = SOV
+					}
+					manpower_per_military_factory > 3000
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						has_idea = extensive_conscription
+					}
+				}
+			}
+			cost = 150
+			removal_cost = -1
+			level = 3
+			modifier = {
+				conscription = 0.1
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				production_speed_buildings_factor = -0.1
+				training_time_factor = 0.2
+			}
+			cancel_if_invalid = no
+		}
+		all_adults_serve = {
+			available = {
+				has_war = yes
+				OR = {
+					has_war_support > 0.7
+					surrender_progress > 0
+				}
+				enemies_strength_ratio > 0.75
+			}
+			allowed_to_remove = {
+				can_remove_all_adults_serve_trigger = yes
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					#Prio if low on manpower
+					factor = 20
+					manpower_per_military_factory < 600
+				}
+				modifier = {
+					#Lower chance if has decent amount
+					factor = 0.5
+					manpower_per_military_factory > 1000
+				}
+				modifier = {
+					#Block has plenty manpower
+					factor = 0
+					manpower_per_military_factory > 2800
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						has_idea = service_by_requirement
+					}
+				}
+			}
+			cost = 150
+			removal_cost = -1
+			level = 2
+			modifier = {
+				conscription = 0.2
+				industrial_capacity_factory = -0.3
+				industrial_capacity_dockyard = -0.3
+				production_speed_buildings_factor = -0.3
+				training_time_factor = 0.3
+			}
+			cancel_if_invalid = no
+		}
+		scraping_the_barrel = {
+			available = {
+				has_war = yes
+				OR = {
+					has_war_support > 0.85
+					surrender_progress > 0.25
+				}
+				enemies_strength_ratio > 1
+			}
+			allowed_to_remove = {
+				can_remove_scraping_the_barrel_trigger = yes
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					#Prio if low on manpower
+					factor = 20
+					manpower_per_military_factory < 500
+				}
+				modifier = {
+					#Lower chance if has decent amount
+					factor = 0.5
+					manpower_per_military_factory > 1000
+				}
+				modifier = {
+					#Block has plenty manpower
+					factor = 0
+					manpower_per_military_factory > 5000
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						has_idea = all_adults_serve
+					}
+				}
+			}
+			cost = 150
+			removal_cost = -1
+			level = 1
+			modifier = {
+				conscription = 0.25
+				industrial_capacity_factory = -0.4
+				industrial_capacity_dockyard = -0.4
+				production_speed_buildings_factor = -0.4
+				training_time_factor = 0.5
+			}
+			cancel_if_invalid = no
+		}
+	}
+}

@@ -1,1 +1,2 @@
-has_same_ideology_tt:0 "Has the same §YGovernment Type§! as §Y[ROOT.GetFlag] [ROOT.GetNameDef]§!\n"
+l_english:
+ has_same_ideology_tt:0 "Has the same §YGovernment Type§! as §Y[ROOT.GetFlag] [ROOT.GetNameDef]§!\n"

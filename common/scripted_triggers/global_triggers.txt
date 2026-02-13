@@ -40,7 +40,46 @@ has_authoritarian_government_trigger = {
 }
 
 has_fascist_government_trigger = {
-	OR = {
+	has_government = fascist
+}
+
+# Government related triggers - no tooltip
+
+has_socialist_government_tooltip_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_socialist_government_tt
+		OR = {
+			has_government = authoritarian_socialist
+			has_government = revolutionary_socialist
+		}
+	}
+}
+
+has_democratic_government_tooltip_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_democratic_government_tt
+		OR = {
+			has_government = social_democratic
+			has_government = progressive
+			has_government = liberal
+			has_government = liberal
+		}
+	}
+}
+
+has_authoritarian_government_tooltip_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_authoritarian_government_tt
+		OR = {
+			has_government = authoritarian_democrat
+			has_government = autocratic
+		}
+	}
+}
+
+has_fascist_government_tooltip_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_fascist_government_tt
 		has_government = fascist
 	}
 }
@@ -853,7 +892,7 @@ DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
 				option = FREE_25
 			}
 		}
-		threat>0.24
+		threat > 0.24
 	}
 	if = {
 		limit = {
@@ -862,7 +901,7 @@ DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
 				option = FREE_50
 			}
 		}
-		threat>0.49
+		threat > 0.49
 	}
 	if = {
 		limit = {
@@ -871,7 +910,7 @@ DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
 				option = FREE_75
 			}
 		}
-		threat>0.74
+		threat > 0.74
 	}
 	if = {
 		limit = {
@@ -880,7 +919,7 @@ DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
 				option = FREE_100
 			}
 		}
-		threat>0.99
+		threat > 0.99
 	}
 	if = {
 		limit = {
@@ -1101,4 +1140,96 @@ DIPLOMACY_OFFER_JOIN_FACTION_ENABLE_TRIGGER = {
 	always = yes
 }
 
+# Law Triggers - Trade
 
+can_use_free_trade_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = can_use_free_tt
+	}
+}
+
+can_remove_free_trade_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = can_remove_free_trade_tt
+	}
+}
+
+can_use_export_focus_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = can_use_export_focus_tt
+	}
+}
+
+can_remove_export_focus_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = can_remove_export_focus_tt
+	}
+}
+
+can_use_limited_exports_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = can_use_limited_exports_tt
+	}
+}
+
+can_remove_limited_exports_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = can_remove_limited_exports_tt
+	}
+}
+
+can_use_closed_economy_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = can_use_closed_economy_tt
+	}
+}
+
+can_remove_closed_economy_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = can_remove_closed_economy_tt
+	}
+}
+
+# Law Triggers - Conscription
+
+can_remove_disarmed_nation_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = can_remove_disarmed_nation_trigger_tt
+	}
+}
+
+can_remove_volunteer_only_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = can_remove_volunteer_only_tt
+	}
+}
+
+can_remove_limited_conscription_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = can_remove_limited_conscription_tt
+	}
+}
+
+can_remove_extensive_conscription_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = can_remove_extensive_conscription_tt
+	}
+}
+
+can_remove_service_by_requirement_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = can_remove_service_by_requirement_tt
+	}
+}
+
+can_remove_all_adults_serve_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = can_remove_all_adults_serve_tt
+	}
+}
+
+can_remove_scraping_the_barrel_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = can_scraping_the_barrel_tt
+	}
+}

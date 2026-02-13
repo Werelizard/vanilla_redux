@@ -1,1287 +1,1172 @@
 generic_decision_pol = {
-    # Get support for the ruling party
-    generic_support_government = {
-        available = {
-            NOT = {
-                support_government_50_trigger = yes
-            }
-        }
-        ####
-
-        days_remove = 90
-        cost = 150
-        ####
-
-        remove_effect = {
-            add_popularity = {
-                ideology = ROOT
-                popularity = 0.1
-            }
-        }
-        ####
-
-        cancel_trigger = {
-            support_government_50_trigger = yes
-        }
-
-        cancel_effect = {
-            hidden_effect = {
-                add_political_power = 150
-            }
-        }
-        ###
-
-        ai_will_do = {
-            factor = 0
-        }
-    }
-
-    # Race for the Bomb
-    generic_race_for_the_bomb = {
-        visible = {
-            is_major = yes
-            NOT = {
-                is_special_project_completed = sp:sp_nuclear_bomb
-            }
-            any_other_country = {
-                NOT = {
-                    is_subject_of = ROOT
-                }
-                NOT = {
-                    is_in_faction_with = ROOT
-                }
-                OR = {
-                    is_special_project_being_researched = sp:sp_nuclear_bomb
-                    is_special_project_completed = sp:sp_nuclear_bomb
-                }
-            }
-        }
-
-        fire_only_once = yes
-
-        available = {
-            any_owned_state = {
-                is_fully_controlled_by = ROOT
-                nuclear_facility > 0
-            }
-            has_tech = atomic_research
-        }
-        ####
-
-        days_remove = 180
-        cost = 200
-        ####
-
-        modifier = {
-            sp_nuclear_bomb_speed_factor = 0.25
-            nuclear_production_factor = 0.1
-        }
-        ####
-
-    }
-
-    # Improve Worker Conditions
-    generic_improve_worker_conditions = {
-        available = {
-            has_stability < 0.9
-        }
-        ####
-
-        days_remove = 120
-        cost = 100
-        ####
-
-        modifier = {
-            stability_weekly = 0.015
-            industrial_capacity_dockyard = -0.05
-            industrial_capacity_factory = -0.05
-            consumer_goods_factor = 0.1
-        }
-        ####
-
-        cancel_trigger = {
-            NOT = {
-                has_stability < 0.9
-            }
-        }
-        ####
-
-        ai_will_do = {
-            factor = 0
-        }
-    }
-
-    # Ban Socialist Parties
-    ban_socialist_parties = {
-        visible = {
-            NOT = {
-                has_socialist_government_trigger = yes
-            }
-            OR = {
-                authoritarian_socialist > 0.15
-                revolutionary_socialist > 0.15
-                social_democratic > 0.5
-            }
-        }
-        ####
-
-        days_remove = 60
-        cost = 100
-        ####
-
-        available = {
-            support_government_30_trigger = yes
-            if = {
-                limit = {
-                    has_democratic_government_trigger = yes
-                }
-                NOT = {
-                    has_government = social_democratic
-                }
-            }
-            NOT = {
-                authsoc_coalition_trigger = yes
-            }
-            NOT = {
-                revsoc_coalition_trigger = yes
-            }
-            if = {
-                limit = {
-                    NOT = {
-                        has_government = social_democratic
-                    }
-                }
-                NOT = {
-                    socdem_coalition_trigger = yes
-                }
-            }
-        }
-        ####
-
-        modifier = {
-            stability_weekly = 0.01
-        }
-
-        complete_effect = {
-            custom_effect_tooltip = stability_loss_on_party_pop_tt
-            custom_effect_tooltip = doublespacedoublespace_tt
-            set_temp_variable = {
-                stab_loss_tempvar = 0
-            }
-            add_to_temp_variable = {
-                stab_loss_tempvar = party_popularity@authoritarian_socialist
-            }
-            add_to_temp_variable = {
-                stab_loss_tempvar = party_popularity@revolutionary_socialist
-            }
-            add_to_temp_variable = {
-                stab_loss_tempvar = party_popularity@social_democratic
-            }
-            multiply_temp_variable = {
-                stab_loss_tempvar = -0.25
-            }
-            add_stability = stab_loss_tempvar
-        }
-
-        remove_effect = {            
-            add_popularity = {
-                ideology = authoritarian_socialist
-                popularity = -0.2
-            }
-            add_popularity = {
-                ideology = revolutionary_socialist
-                popularity = -0.2
-            }
-            add_popularity = {
-                ideology = social_democratic
-                popularity = -0.2
-            }  
-        }
-        ####
-
-        ai_will_do = {
-            factor = 0
-        }
-    }
-
-    # Ban democratic parties
-    ban_democratic_parties = {
-        visible = {
-            NOT = {
-                has_democratic_government_trigger = yes
-            }
-            OR = {
-                social_democratic > 0.15
-                progressive > 0.15
-                liberal > 0.15
-                conservative > 0.15
-            }
-        }
-        ####
-
-        days_remove = 60
-        cost = 100
-        ####
-
-        available = {
-            support_government_30_trigger = yes
-            NOT = {
-                socdem_coalition_trigger = yes
-            }
-            NOT = {
-                progressive_coalition_trigger = yes
-            }
-            NOT = {
-                liberal_coalition_trigger = yes
-            }
-            NOT = {
-                conservative_coalition_trigger = yes
-            }
-        }
-        ####
-
-        modifier = {
-            stability_weekly = 0.01
-        }
-
-        complete_effect = {
-            custom_effect_tooltip = stability_loss_on_party_pop_tt
-            custom_effect_tooltip = doublespacedoublespace_tt
-            set_temp_variable = {
-                stab_loss_tempvar = 0
-            }
-            add_to_temp_variable = {
-                stab_loss_tempvar = party_popularity@social_democratic
-            }
-            add_to_temp_variable = {
-                stab_loss_tempvar = party_popularity@progressive
-            }
-            add_to_temp_variable = {
-                stab_loss_tempvar = party_popularity@liberal
-            }
-            add_to_temp_variable = {
-                stab_loss_tempvar = party_popularity@conservative
-            }
-            multiply_temp_variable = {
-                stab_loss_tempvar = -0.25
-            }
-            add_stability = stab_loss_tempvar
-        }
-
-        remove_effect = {            
-            add_popularity = {
-                ideology = social_democratic
-                popularity = -0.2
-            }
-            add_popularity = {
-                ideology = progressive
-                popularity = -0.2
-            }
-            add_popularity = {
-                ideology = liberal
-                popularity = -0.2
-            }
-            add_popularity = {
-                ideology = conservative
-                popularity = -0.2
-            }
-        }
-        ####
-
-        ai_will_do = {
-            factor = 0
-        }
-    }
-
-    # Ban auhtoritarian parties
-    ban_authoritarian_parties = {
-        visible = {
-            NOT = {
-                has_authoritarian_government_trigger = yes
-            }
-            OR = {
-                authoritarian_democrat > 0.15
-                autocratic > 0.15
-            }
-        }
-        ####
-
-        days_remove = 60
-        cost = 100
-        ####
-
-        available = {
-            support_government_30_trigger = yes
-            NOT = {
-                authoritarian_coalition_trigger = yes
-            }
-            NOT = {
-                autocracy_coalition_trigger = yes
-            }
-        }
-        ####
-
-        modifier = {
-            stability_weekly = 0.01
-        }
-
-        complete_effect = {
-            custom_effect_tooltip = stability_loss_on_party_pop_tt
-            custom_effect_tooltip = doublespacedoublespace_tt
-            set_temp_variable = {
-                stab_loss_tempvar = 0
-            }
-            add_to_temp_variable = {
-                stab_loss_tempvar = party_popularity@authoritarian_democrat
-            }
-            add_to_temp_variable = {
-                stab_loss_tempvar = party_popularity@autocratic
-            }
-            multiply_temp_variable = {
-                stab_loss_tempvar = -0.25
-            }
-            add_stability = stab_loss_tempvar
-        }
-
-        remove_effect = {
-            add_popularity = {
-                ideology = authoritarian_democrat
-                popularity = -0.2
-            }
-            add_popularity = {
-                ideology = autocratic
-                popularity = -0.2
-            }
-        }
-        ####
-
-        ai_will_do = {
-            factor = 0
-        }
-    }
-
-    # Ban fascist parties
-    ban_fascist_parties = {
-        visible = {
-            NOT = {
-                has_fascist_government_trigger = yes
-            }
-            OR = {
-                fascist > 0.15
-            }
-        }
-        ####
-
-        days_remove = 60
-        cost = 100
-        ####
-
-        available = {
-            support_government_30_trigger = yes
-            NOT = {
-                fascist_coalition_trigger = yes
-            }
-        }
-        ####
-
-        modifier = {
-            stability_weekly = 0.01
-        }
-
-        complete_effect = {
-            custom_effect_tooltip = stability_loss_on_party_pop_tt
-            set_temp_variable = {
-                stab_loss_tempvar = 0
-            }
-            add_to_temp_variable = {
-                stab_loss_tempvar = party_popularity@fascist
-            }
-            multiply_temp_variable = {
-                stab_loss_tempvar = -0.25
-            }
-            add_stability = stab_loss_tempvar
-        }
-
-        remove_effect = {            
-            add_popularity = {
-                ideology = fascist
-                popularity = -0.2
-            }
-        }
-        ####
-
-        ai_will_do = {
-            factor = 0
-        }
-    }
+	# Get support for the ruling party
+	generic_support_government = {
+		available = {
+			NOT = {
+				support_government_50_trigger = yes
+			}
+		}
+		####
+		days_remove = 90
+		cost = 150
+		####
+		remove_effect = {
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.1
+			}
+		}
+		####
+		cancel_trigger = {
+			support_government_50_trigger = yes
+		}
+		cancel_effect = {
+			hidden_effect = {
+				add_political_power = 150
+			}
+		}
+		###
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	# Race for the Bomb
+	generic_race_for_the_bomb = {
+		visible = {
+			is_major = yes
+			NOT = {
+				is_special_project_completed = sp:sp_nuclear_bomb
+			}
+			any_other_country = {
+				NOT = {
+					is_subject_of = ROOT
+				}
+				NOT = {
+					is_in_faction_with = ROOT
+				}
+				OR = {
+					is_special_project_being_researched = sp:sp_nuclear_bomb
+					is_special_project_completed = sp:sp_nuclear_bomb
+				}
+			}
+		}
+		fire_only_once = yes
+		available = {
+			any_owned_state = {
+				is_fully_controlled_by = ROOT
+				nuclear_facility > 0
+			}
+			has_tech = atomic_research
+		}
+		####
+		days_remove = 180
+		cost = 200
+		####
+		modifier = {
+			sp_nuclear_bomb_speed_factor = 0.25
+			nuclear_production_factor = 0.1
+		}
+		####
+	}
+	# Improve Worker Conditions
+	generic_improve_worker_conditions = {
+		available = {
+			has_stability < 0.9
+		}
+		####
+		days_remove = 120
+		cost = 100
+		####
+		modifier = {
+			stability_weekly = 0.015
+			industrial_capacity_dockyard = -0.05
+			industrial_capacity_factory = -0.05
+			consumer_goods_factor = 0.1
+		}
+		####
+		cancel_trigger = {
+			NOT = {
+				has_stability < 0.9
+			}
+		}
+		####
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	# Ban Socialist Parties
+	ban_socialist_parties = {
+		visible = {
+			NOT = {
+				has_socialist_government_trigger = yes
+			}
+			OR = {
+				authoritarian_socialist > 0.15
+				revolutionary_socialist > 0.15
+				social_democratic > 0.5
+			}
+		}
+		####
+		days_remove = 60
+		cost = 100
+		####
+		available = {
+			support_government_30_trigger = yes
+			if = {
+				limit = {
+					has_democratic_government_trigger = yes
+				}
+				NOT = {
+					has_government = social_democratic
+				}
+			}
+			NOT = {
+				authsoc_coalition_trigger = yes
+			}
+			NOT = {
+				revsoc_coalition_trigger = yes
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_government = social_democratic
+					}
+				}
+				NOT = {
+					socdem_coalition_trigger = yes
+				}
+			}
+		}
+		####
+		modifier = {
+			stability_weekly = 0.01
+		}
+		complete_effect = {
+			custom_effect_tooltip = stability_loss_on_party_pop_tt
+			custom_effect_tooltip = doublespacedoublespace_tt
+			set_temp_variable = {
+				stab_loss_tempvar = 0
+			}
+			add_to_temp_variable = {
+				stab_loss_tempvar = party_popularity@authoritarian_socialist
+			}
+			add_to_temp_variable = {
+				stab_loss_tempvar = party_popularity@revolutionary_socialist
+			}
+			add_to_temp_variable = {
+				stab_loss_tempvar = party_popularity@social_democratic
+			}
+			multiply_temp_variable = {
+				stab_loss_tempvar = -0.25
+			}
+			add_stability = stab_loss_tempvar
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = authoritarian_socialist
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = revolutionary_socialist
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = social_democratic
+				popularity = -0.2
+			}
+		}
+		####
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	# Ban democratic parties
+	ban_democratic_parties = {
+		visible = {
+			NOT = {
+				has_democratic_government_trigger = yes
+			}
+			OR = {
+				social_democratic > 0.15
+				progressive > 0.15
+				liberal > 0.15
+				conservative > 0.15
+			}
+		}
+		####
+		days_remove = 60
+		cost = 100
+		####
+		available = {
+			support_government_30_trigger = yes
+			NOT = {
+				socdem_coalition_trigger = yes
+			}
+			NOT = {
+				progressive_coalition_trigger = yes
+			}
+			NOT = {
+				liberal_coalition_trigger = yes
+			}
+			NOT = {
+				conservative_coalition_trigger = yes
+			}
+		}
+		####
+		modifier = {
+			stability_weekly = 0.01
+		}
+		complete_effect = {
+			custom_effect_tooltip = stability_loss_on_party_pop_tt
+			custom_effect_tooltip = doublespacedoublespace_tt
+			set_temp_variable = {
+				stab_loss_tempvar = 0
+			}
+			add_to_temp_variable = {
+				stab_loss_tempvar = party_popularity@social_democratic
+			}
+			add_to_temp_variable = {
+				stab_loss_tempvar = party_popularity@progressive
+			}
+			add_to_temp_variable = {
+				stab_loss_tempvar = party_popularity@liberal
+			}
+			add_to_temp_variable = {
+				stab_loss_tempvar = party_popularity@conservative
+			}
+			multiply_temp_variable = {
+				stab_loss_tempvar = -0.25
+			}
+			add_stability = stab_loss_tempvar
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = social_democratic
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = progressive
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = liberal
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = conservative
+				popularity = -0.2
+			}
+		}
+		####
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	# Ban auhtoritarian parties
+	ban_authoritarian_parties = {
+		visible = {
+			NOT = {
+				has_authoritarian_government_trigger = yes
+			}
+			OR = {
+				authoritarian_democrat > 0.15
+				autocratic > 0.15
+			}
+		}
+		####
+		days_remove = 60
+		cost = 100
+		####
+		available = {
+			support_government_30_trigger = yes
+			NOT = {
+				authoritarian_coalition_trigger = yes
+			}
+			NOT = {
+				autocracy_coalition_trigger = yes
+			}
+		}
+		####
+		modifier = {
+			stability_weekly = 0.01
+		}
+		complete_effect = {
+			custom_effect_tooltip = stability_loss_on_party_pop_tt
+			custom_effect_tooltip = doublespacedoublespace_tt
+			set_temp_variable = {
+				stab_loss_tempvar = 0
+			}
+			add_to_temp_variable = {
+				stab_loss_tempvar = party_popularity@authoritarian_democrat
+			}
+			add_to_temp_variable = {
+				stab_loss_tempvar = party_popularity@autocratic
+			}
+			multiply_temp_variable = {
+				stab_loss_tempvar = -0.25
+			}
+			add_stability = stab_loss_tempvar
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = autocratic
+				popularity = -0.2
+			}
+		}
+		####
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	# Ban fascist parties
+	ban_fascist_parties = {
+		visible = {
+			NOT = {
+				has_fascist_government_trigger = yes
+			}
+			OR = {
+				fascist > 0.15
+			}
+		}
+		####
+		days_remove = 60
+		cost = 100
+		####
+		available = {
+			support_government_30_trigger = yes
+			NOT = {
+				fascist_coalition_trigger = yes
+			}
+		}
+		####
+		modifier = {
+			stability_weekly = 0.01
+		}
+		complete_effect = {
+			custom_effect_tooltip = stability_loss_on_party_pop_tt
+			set_temp_variable = {
+				stab_loss_tempvar = 0
+			}
+			add_to_temp_variable = {
+				stab_loss_tempvar = party_popularity@fascist
+			}
+			multiply_temp_variable = {
+				stab_loss_tempvar = -0.25
+			}
+			add_stability = stab_loss_tempvar
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = fascist
+				popularity = -0.2
+			}
+		}
+		####
+		ai_will_do = {
+			factor = 0
+		}
+	}
 }
 
 generic_decision_war_measures = {
-    # War propaganda
-    generic_war_propaganda = {
-        visible = {
-            OR = {
-                has_war_with_non_exiled_country = yes
-                any_neighbor_country = {
-                    has_war = yes
-                }
-                AND = {
-                    OR = {
-                        has_fascist_government_trigger = yes
-                        has_socialist_government_trigger = yes
-                    }
-                    threat > 0.1
-                }
-                AND = {
-                    OR = {
-                        has_democratic_government_trigger = yes
-                        has_authoritarian_government_trigger = yes
-                    }
-                    threat > 0.35
-                }
-            }
-        }
-        ###
-
-        available = {
-            NOT = {
-                has_war_support > 0.5
-            } 
-        }
-        ###
-
-        cost = 100
-        days_remove = 60
-        days_re_enable = 180
-        ###
-
-        modifier = {
-            war_support_weekly = 0.005
-        }
-        ###
-
-        cancel_trigger = {
-            has_war_support > 0.5
-        }
-        ###
-
-        ai_hint_pp_cost = 100
-        
-        ai_will_do = {
-            factor = 0
-            # AI should not take this decision if war support at 40% or higher            
-            modifier = {
-                add = -200
-                has_war_support > 0.39
-            }
-            # AI should not take this decision if it can (and should) move to war economy
-            modifier = {
-                add = -200
-                #                
-                OR = {
-                    AND = {
-                        NOT = {
-                            has_idea = low_economic_mobilisation
-                        }
-                        any_enemy_country = {
-                            ic_ratio = {
-                                tag = ROOT
-                                ratio > 1
-                            }
-                        }               
-                    }
-                    AND = {
-                        NOT = {
-                            has_idea = partial_economic_mobilisation
-                        }
-                        any_enemy_country = {
-                            ic_ratio = {
-                                tag = ROOT
-                                ratio > 1.2
-                            }
-                        } 
-                    }
-                    AND = {
-                        NOT = {
-                            has_idea = war_economy
-                        }
-                        NOT = {
-                            has_idea = partial_economic_mobilisation
-                        }
-                        any_enemy_country = {
-                            ic_ratio = {
-                                tag = ROOT
-                                ratio > 1.5
-                            }
-                        }
-                    }
-                }
-            }
-            # AI should not take this decision if it can (and should) increase its recruitement law
-            modifier = {
-                add = -200
-                #                
-                OR = {
-                    AND = {
-                        any_other_country = {
-                            has_war_with = ROOT
-                            fighting_army_strength_ratio = {
-                                tag = ROOT
-                                ratio > 1
-                            }
-                        }
-                        OR = {
-                            has_idea = disarmed_nation
-                            has_idea = volunteer_only
-                        }
-                    }
-                    AND = {
-                        any_other_country = {
-                            has_war_with = ROOT
-                            fighting_army_strength_ratio = {
-                                tag = ROOT
-                                ratio > 1.2
-                            }
-                        }
-                        OR = {
-                            has_idea = limited_conscription
-                        }
-                    }
-                    AND = {
-                        any_other_country = {
-                            has_war_with = ROOT
-                            fighting_army_strength_ratio = {
-                                tag = ROOT
-                                ratio > 1.5
-                            }
-                        }
-                        OR = {
-                            has_idea = service_by_requirement
-                        }
-                    }
-                }
-            }
-            # AI should not take this if it doesn't have its high command and chiefs filled - unless its war support is really, really bad
-            modifier = {
-                add = -200
-                if = {
-                    limit = {
-                        has_war_support > 0.19
-                    }
-                    amount_taken_ideas = {
-                        amount = 0
-                        slots = {
-                            army_chief
-                            air_chief
-                            navy_chief
-                            high_command
-                        }
-                    }
-                }
-            }
-            # Final weights to add in depending on how much war support the AI has
-            modifier = {
-                add = 1
-                has_war_support < 0.4
-            }
-            modifier = {
-                add = 2
-                has_war_support < 0.3
-            }
-            modifier = {
-                add = 4
-                has_war_support < 0.2
-            }
-        }
-    }
-
-    # War propaganda - convoys
+	# War propaganda
+	generic_war_propaganda = {
+		visible = {
+			OR = {
+				has_war_with_non_exiled_country = yes
+				any_neighbor_country = {
+					has_war = yes
+				}
+				AND = {
+					OR = {
+						has_fascist_government_trigger = yes
+						has_socialist_government_trigger = yes
+					}
+					threat > 0.1
+				}
+				AND = {
+					OR = {
+						has_democratic_government_trigger = yes
+						has_authoritarian_government_trigger = yes
+					}
+					threat > 0.35
+				}
+			}
+		}
+		###
+		available = {
+			NOT = {
+				has_war_support > 0.5
+			}
+		}
+		###
+		cost = 100
+		days_remove = 60
+		days_re_enable = 180
+		###
+		modifier = {
+			war_support_weekly = 0.005
+		}
+		###
+		cancel_trigger = {
+			has_war_support > 0.5
+		}
+		###
+		ai_hint_pp_cost = 100
+		ai_will_do = {
+			factor = 0
+			# AI should not take this decision if war support at 40% or higher            
+			modifier = {
+				add = -200
+				has_war_support > 0.39
+			}
+			# AI should not take this decision if it can (and should) move to war economy
+			modifier = {
+				add = -200
+				#                
+				OR = {
+					AND = {
+						NOT = {
+							has_idea = low_economic_mobilisation
+						}
+						any_enemy_country = {
+							ic_ratio = {
+								tag = ROOT
+								ratio > 0
+							}
+						}
+					}
+					AND = {
+						NOT = {
+							has_idea = partial_economic_mobilisation
+						}
+						any_enemy_country = {
+							ic_ratio = {
+								tag = ROOT
+								ratio > 0.2
+							}
+						}
+					}
+					AND = {
+						NOT = {
+							has_idea = war_economy
+						}
+						NOT = {
+							has_idea = partial_economic_mobilisation
+						}
+						any_enemy_country = {
+							ic_ratio = {
+								tag = ROOT
+								ratio > 0.5
+							}
+						}
+					}
+				}
+			}
+			# AI should not take this decision if it can (and should) increase its recruitement law
+			modifier = {
+				add = -200
+				#                
+				OR = {
+					AND = {
+						any_other_country = {
+							has_war_with = ROOT
+							fighting_army_strength_ratio = {
+								tag = ROOT
+								ratio > 0
+							}
+						}
+						OR = {
+							has_idea = disarmed_nation
+							has_idea = volunteer_only
+						}
+					}
+					AND = {
+						any_other_country = {
+							has_war_with = ROOT
+							fighting_army_strength_ratio = {
+								tag = ROOT
+								ratio > 0.2
+							}
+						}
+						OR = {
+							has_idea = limited_conscription
+						}
+					}
+					AND = {
+						any_other_country = {
+							has_war_with = ROOT
+							fighting_army_strength_ratio = {
+								tag = ROOT
+								ratio > 0.5
+							}
+						}
+						OR = {
+							has_idea = service_by_requirement
+						}
+					}
+				}
+			}
+			# AI should not take this if it doesn't have its high command and chiefs filled - unless its war support is really, really bad
+			modifier = {
+				add = -200
+				if = {
+					limit = {
+						has_war_support > 0.19
+					}
+					amount_taken_ideas = {
+						amount = 0
+						slots = {
+							army_chief
+							air_chief
+							navy_chief
+							high_command
+						}
+					}
+				}
+			}
+			# Final weights to add in depending on how much war support the AI has
+			modifier = {
+				add = 1
+				has_war_support < 0.4
+			}
+			modifier = {
+				add = 2
+				has_war_support < 0.3
+			}
+			modifier = {
+				add = 4
+				has_war_support < 0.2
+			}
+		}
+	}
+    # War Propaganda - Convoys
     generic_war_propaganda_convoys = {
-        visible = {
-            OR = {
-                has_war_with_non_exiled_country = yes
-                any_neighbor_country = {
-                    has_war = yes
-                }
-                AND = {
-                    OR = {
-                        has_fascist_government_trigger = yes
-                        has_socialist_government_trigger = yes
-                    }
-                    threat > 0.1
-                }
-                AND = {
-                    OR = {
-                        has_democratic_government_trigger = yes
-                        has_authoritarian_government_trigger = yes
-                    }
-                    threat > 0.35
-                }
-            }
-        }
-        ###
-
-        available = {
-            NOT = {
-                has_war_support > 0.5
-            } 
-            has_convoys_war_support < -0.04
-        }
-        ###
-
-        cost = 100
-        days_remove = 60
-        days_re_enable = 180
-        ###
-
-        modifier = {
-            weekly_convoys_war_support = 0.0025
-        }
-        ###
-
-        cancel_trigger = {
-            has_war_support > 0.5
-        }
-        ###
-
-        ai_hint_pp_cost = 100
-        
-        ai_will_do = {
-            factor = 0
-            # AI should not take this decision if war support at 40% or higher            
-            modifier = {
-                add = -200
-                has_war_support > 0.39
-            }
-            # AI should not take this decision if it can (and should) move to war economy
-            modifier = {
-                add = -200
-                #                
-                OR = {
-                    AND = {
-                        NOT = {
-                            has_idea = low_economic_mobilisation
-                        }
-                        any_enemy_country = {
-                            ic_ratio = {
-                                tag = ROOT
-                                ratio > 1
-                            }
-                        }               
-                    }
-                    AND = {
-                        NOT = {
-                            has_idea = partial_economic_mobilisation
-                        }
-                        any_enemy_country = {
-                            ic_ratio = {
-                                tag = ROOT
-                                ratio > 1.2
-                            }
-                        } 
-                    }
-                    AND = {
-                        NOT = {
-                            has_idea = war_economy
-                        }
-                        NOT = {
-                            has_idea = partial_economic_mobilisation
-                        }
-                        any_enemy_country = {
-                            ic_ratio = {
-                                tag = ROOT
-                                ratio > 1.5
-                            }
-                        }
-                    }
-                }
-            }
-            # AI should not take this decision if it can (and should) increase its recruitement law
-            modifier = {
-                add = -200
-                #                
-                OR = {
-                    AND = {
-                        any_other_country = {
-                            has_war_with = ROOT
-                            fighting_army_strength_ratio = {
-                                tag = ROOT
-                                ratio > 1
-                            }
-                        }
-                        OR = {
-                            has_idea = disarmed_nation
-                            has_idea = volunteer_only
-                        }
-                    }
-                    AND = {
-                        any_other_country = {
-                            has_war_with = ROOT
-                            fighting_army_strength_ratio = {
-                                tag = ROOT
-                                ratio > 1.2
-                            }
-                        }
-                        OR = {
-                            has_idea = limited_conscription
-                        }
-                    }
-                    AND = {
-                        any_other_country = {
-                            has_war_with = ROOT
-                            fighting_army_strength_ratio = {
-                                tag = ROOT
-                                ratio > 1.5
-                            }
-                        }
-                        OR = {
-                            has_idea = service_by_requirement
-                        }
-                    }
-                }
-            }
-            # AI should not take this if it doesn't have its high command and chiefs filled - unless its war support is really, really bad
-            modifier = {
-                add = -200
-                if = {
-                    limit = {
-                        has_convoys_war_support > -0.05
-                    }
-                    amount_taken_ideas = {
-                        amount = 0
-                        slots = {
-                            army_chief
-                            air_chief
-                            navy_chief
-                            high_command
-                        }
-                    }
-                }
-            }
-            # Final weights to add in depending on how much war support the AI has
-            modifier = {
-                add = 1
-                has_convoys_war_support < -0.1
-            }
-            modifier = {
-                add = 2
-                has_convoys_war_support < -0.2
-            }
-            modifier = {
-                add = 4
-               has_convoys_war_support < -0.3
-            }
-        }
-    }
-
-    # War propaganda - bombs
-    generic_war_propaganda_bombing = {
-        visible = {
-            OR = {
-                has_war_with_non_exiled_country = yes
-                any_neighbor_country = {
-                    has_war = yes
-                }
-                AND = {
-                    OR = {
-                        has_fascist_government_trigger = yes
-                        has_socialist_government_trigger = yes
-                    }
-                    threat > 0.1
-                }
-                AND = {
-                    OR = {
-                        has_democratic_government_trigger = yes
-                        has_authoritarian_government_trigger = yes
-                    }
-                    threat > 0.35
-                }
-            }
-        }
-        ###
-
-        available = {
-            NOT = {
-                has_war_support > 0.5
-            } 
-            has_bombing_war_support < -0.04
-        }
-        ###
-
-        cost = 100
-        days_remove = 60
-        days_re_enable = 180
-        ###
-
-        modifier = {
-            weekly_bombing_war_support = 0.0025
-        }
-        ###
-
-        cancel_trigger = {
-            has_war_support > 0.5
-        }
-        ###
-
-        ai_hint_pp_cost = 100
-        
-        ai_will_do = {
-            factor = 0
-            # AI should not take this decision if war support at 40% or higher            
-            modifier = {
-                add = -200
-                has_war_support > 0.39
-            }
-            # AI should not take this decision if it can (and should) move to war economy
-            modifier = {
-                add = -200
-                #                
-                OR = {
-                    AND = {
-                        NOT = {
-                            has_idea = low_economic_mobilisation
-                        }
-                        any_enemy_country = {
-                            ic_ratio = {
-                                tag = ROOT
-                                ratio > 1
-                            }
-                        }               
-                    }
-                    AND = {
-                        NOT = {
-                            has_idea = partial_economic_mobilisation
-                        }
-                        any_enemy_country = {
-                            ic_ratio = {
-                                tag = ROOT
-                                ratio > 1.2
-                            }
-                        } 
-                    }
-                    AND = {
-                        NOT = {
-                            has_idea = war_economy
-                        }
-                        NOT = {
-                            has_idea = partial_economic_mobilisation
-                        }
-                        any_enemy_country = {
-                            ic_ratio = {
-                                tag = ROOT
-                                ratio > 1.5
-                            }
-                        }
-                    }
-                }
-            }
-            # AI should not take this decision if it can (and should) increase its recruitement law
-            modifier = {
-                add = -200
-                #                
-                OR = {
-                    AND = {
-                        any_other_country = {
-                            has_war_with = ROOT
-                            fighting_army_strength_ratio = {
-                                tag = ROOT
-                                ratio > 1
-                            }
-                        }
-                        OR = {
-                            has_idea = disarmed_nation
-                            has_idea = volunteer_only
-                        }
-                    }
-                    AND = {
-                        any_other_country = {
-                            has_war_with = ROOT
-                            fighting_army_strength_ratio = {
-                                tag = ROOT
-                                ratio > 1.2
-                            }
-                        }
-                        OR = {
-                            has_idea = limited_conscription
-                        }
-                    }
-                    AND = {
-                        any_other_country = {
-                            has_war_with = ROOT
-                            fighting_army_strength_ratio = {
-                                tag = ROOT
-                                ratio > 1.5
-                            }
-                        }
-                        OR = {
-                            has_idea = service_by_requirement
-                        }
-                    }
-                }
-            }
-            # AI should not take this if it doesn't have its high command and chiefs filled - unless its war support is really, really bad
-            modifier = {
-                add = -200
-                if = {
-                    limit = {
-                        has_bombing_war_support > -0.05
-                    }
-                    amount_taken_ideas = {
-                        amount = 0
-                        slots = {
-                            army_chief
-                            air_chief
-                            navy_chief
-                            high_command
-                        }
-                    }
-                }
-            }
-            # Final weights to add in depending on how much war support the AI has
-            modifier = {
-                add = 1
-                has_bombing_war_support < -0.1
-            }
-            modifier = {
-                add = 2
-                has_bombing_war_support < -0.2
-            }
-            modifier = {
-                add = 4
-                has_bombing_war_support < -0.3
-            }
-        }
-    }
-
-    # War Bonds
-    generic_war_bonds = {
-        visible = {
-            has_war_with_non_exiled_country = yes
-        }
-        ###
-
-        available = {
-            OR = {
-                has_idea = war_economy
-                has_idea = tot_economic_mobilisation
-            }
-            has_war_support > 0.69
-        }
-        ###
-
-        cost = 100
-        days_remove = 60
-        ###
-
-        modifier = {
-            consumer_goods_factor = -0.2
-        }
-        ###
-
-        cancel_trigger = {
-            NOT = {
-                has_war = yes
-            }
-        }
-        ###
-
-        ai_hint_pp_cost = 100
-        
-        ai_will_do = {
-            # The AI shouldn't be trusted with this tbh
-            factor = 0
-        }
-    }
-
-    # Encourage women to join the factories
-    generic_women_in_factories = {
-        visible = {
-            has_war_with_non_exiled_country = yes
-            OR = {
-                has_socialist_government_trigger = yes
-                has_democratic_government_trigger = yes
-                AND = {
-                    surrender_progress > 0
-                    any_enemy_country = {
-                        ic_ratio = {
-                            tag = ROOT
-                            ratio > 1
-                        }
-                    }
-                }
-            }
-        }
-        ###
-
-        available = {
-            has_stability > 0.09
-            has_war_support > 0.19
-        }
-        ###
-
-        cost = 100
-        days_remove = 180
-        ###
-
-        complete_effect = {
-            add_stability = -0.05
-        }
-
-        modifier = {
-            stability_weekly = -0.005
-            industrial_capacity_dockyard = 0.15
-            industrial_capacity_factory = 0.15
-            production_factory_efficiency_gain_factor = 0.05
-        }
-        ###
-
-        cancel_trigger = {
-            NOT = {
-                has_war = yes
-            }
-        }
-        ###        
-        ai_will_do = {
-            # The AI shouldn't be trusted with this tbh
-            factor = 0
-        }
-    }
-
-    # Emergency factory conversion
+		visible = {
+			OR = {
+				has_war_with_non_exiled_country = yes
+				any_neighbor_country = {
+					has_war = yes
+				}
+				AND = {
+					OR = {
+						has_fascist_government_trigger = yes
+						has_socialist_government_trigger = yes
+					}
+					threat > 0.1
+				}
+				AND = {
+					OR = {
+						has_democratic_government_trigger = yes
+						has_authoritarian_government_trigger = yes
+					}
+					threat > 0.35
+				}
+			}
+		}
+		###
+		available = {
+			NOT = {
+				has_war_support > 0.5
+			}
+			has_convoys_war_support < -0.04
+		}
+		###
+		cost = 100
+		days_remove = 60
+		days_re_enable = 180
+		###
+		modifier = {
+			weekly_convoys_war_support = 0.0025
+		}
+		###
+		cancel_trigger = {
+			has_war_support > 0.5
+		}
+		###
+		ai_hint_pp_cost = 100
+		ai_will_do = {
+			factor = 0
+			# AI should not take this decision if war support at 40% or higher            
+			modifier = {
+				add = -200
+				has_war_support > 0.39
+			}
+			# AI should not take this decision if it can (and should) move to war economy
+			modifier = {
+				add = -200
+				#                
+				OR = {
+					AND = {
+						NOT = {
+							has_idea = low_economic_mobilisation
+						}
+						any_enemy_country = {
+							ic_ratio = {
+								tag = ROOT
+								ratio > 0
+							}
+						}
+					}
+					AND = {
+						NOT = {
+							has_idea = partial_economic_mobilisation
+						}
+						any_enemy_country = {
+							ic_ratio = {
+								tag = ROOT
+								ratio > 0.2
+							}
+						}
+					}
+					AND = {
+						NOT = {
+							has_idea = war_economy
+						}
+						NOT = {
+							has_idea = partial_economic_mobilisation
+						}
+						any_enemy_country = {
+							ic_ratio = {
+								tag = ROOT
+								ratio > 0.5
+							}
+						}
+					}
+				}
+			}
+			# AI should not take this decision if it can (and should) increase its recruitement law
+			modifier = {
+				add = -200
+				#                
+				OR = {
+					AND = {
+						any_other_country = {
+							has_war_with = ROOT
+							fighting_army_strength_ratio = {
+								tag = ROOT
+								ratio > 0
+							}
+						}
+						OR = {
+							has_idea = disarmed_nation
+							has_idea = volunteer_only
+						}
+					}
+					AND = {
+						any_other_country = {
+							has_war_with = ROOT
+							fighting_army_strength_ratio = {
+								tag = ROOT
+								ratio > 0.2
+							}
+						}
+						OR = {
+							has_idea = limited_conscription
+						}
+					}
+					AND = {
+						any_other_country = {
+							has_war_with = ROOT
+							fighting_army_strength_ratio = {
+								tag = ROOT
+								ratio > 0.5
+							}
+						}
+						OR = {
+							has_idea = service_by_requirement
+						}
+					}
+				}
+			}
+			# AI should not take this if it doesn't have its high command and chiefs filled - unless its war support is really, really bad
+			modifier = {
+				add = -200
+				if = {
+					limit = {
+						has_convoys_war_support > -0.05
+					}
+					amount_taken_ideas = {
+						amount = 0
+						slots = {
+							army_chief
+							air_chief
+							navy_chief
+							high_command
+						}
+					}
+				}
+			}
+			# Final weights to add in depending on how much war support the AI has
+			modifier = {
+				add = 1
+				has_convoys_war_support < -0.1
+			}
+			modifier = {
+				add = 2
+				has_convoys_war_support < -0.2
+			}
+			modifier = {
+				add = 4
+				has_convoys_war_support < -0.3
+			}
+		}
+	}
+	# War propaganda - bombs
+	generic_war_propaganda_bombing = {
+		visible = {
+			OR = {
+				has_war_with_non_exiled_country = yes
+				any_neighbor_country = {
+					has_war = yes
+				}
+				AND = {
+					OR = {
+						has_fascist_government_trigger = yes
+						has_socialist_government_trigger = yes
+					}
+					threat > 0.1
+				}
+				AND = {
+					OR = {
+						has_democratic_government_trigger = yes
+						has_authoritarian_government_trigger = yes
+					}
+					threat > 0.35
+				}
+			}
+		}
+		###
+		available = {
+			NOT = {
+				has_war_support > 0.5
+			}
+			has_bombing_war_support < -0.04
+		}
+		###
+		cost = 100
+		days_remove = 60
+		days_re_enable = 180
+		###
+		modifier = {
+			weekly_bombing_war_support = 0.0025
+		}
+		###
+		cancel_trigger = {
+			has_war_support > 0.5
+		}
+		###
+		ai_hint_pp_cost = 100
+		ai_will_do = {
+			factor = 0
+			# AI should not take this decision if war support at 40% or higher            
+			modifier = {
+				add = -200
+				has_war_support > 0.39
+			}
+			# AI should not take this decision if it can (and should) move to war economy
+			modifier = {
+				add = -200
+				#                
+				OR = {
+					AND = {
+						NOT = {
+							has_idea = low_economic_mobilisation
+						}
+						any_enemy_country = {
+							ic_ratio = {
+								tag = ROOT
+								ratio > 0
+							}
+						}
+					}
+					AND = {
+						NOT = {
+							has_idea = partial_economic_mobilisation
+						}
+						any_enemy_country = {
+							ic_ratio = {
+								tag = ROOT
+								ratio > 0.2
+							}
+						}
+					}
+					AND = {
+						NOT = {
+							has_idea = war_economy
+						}
+						NOT = {
+							has_idea = partial_economic_mobilisation
+						}
+						any_enemy_country = {
+							ic_ratio = {
+								tag = ROOT
+								ratio > 0.5
+							}
+						}
+					}
+				}
+			}
+			# AI should not take this decision if it can (and should) increase its recruitement law
+			modifier = {
+				add = -200
+				#                
+				OR = {
+					AND = {
+						any_other_country = {
+							has_war_with = ROOT
+							fighting_army_strength_ratio = {
+								tag = ROOT
+								ratio > 0
+							}
+						}
+						OR = {
+							has_idea = disarmed_nation
+							has_idea = volunteer_only
+						}
+					}
+					AND = {
+						any_other_country = {
+							has_war_with = ROOT
+							fighting_army_strength_ratio = {
+								tag = ROOT
+								ratio > 0.2
+							}
+						}
+						OR = {
+							has_idea = limited_conscription
+						}
+					}
+					AND = {
+						any_other_country = {
+							has_war_with = ROOT
+							fighting_army_strength_ratio = {
+								tag = ROOT
+								ratio > 0.5
+							}
+						}
+						OR = {
+							has_idea = service_by_requirement
+						}
+					}
+				}
+			}
+			# AI should not take this if it doesn't have its high command and chiefs filled - unless its war support is really, really bad
+			modifier = {
+				add = -200
+				if = {
+					limit = {
+						has_bombing_war_support > -0.05
+					}
+					amount_taken_ideas = {
+						amount = 0
+						slots = {
+							army_chief
+							air_chief
+							navy_chief
+							high_command
+						}
+					}
+				}
+			}
+			# Final weights to add in depending on how much war support the AI has
+			modifier = {
+				add = 1
+				has_bombing_war_support < -0.1
+			}
+			modifier = {
+				add = 2
+				has_bombing_war_support < -0.2
+			}
+			modifier = {
+				add = 4
+				has_bombing_war_support < -0.3
+			}
+		}
+	}
+	# War Bonds
+	generic_war_bonds = {
+		visible = {
+			has_war_with_non_exiled_country = yes
+		}
+		###
+		available = {
+			OR = {
+				has_idea = war_economy
+				has_idea = tot_economic_mobilisation
+			}
+			has_war_support > 0.69
+		}
+		###
+		cost = 100
+		days_remove = 60
+		###
+		modifier = {
+			consumer_goods_factor = -0.2
+		}
+		###
+		cancel_trigger = {
+			NOT = {
+				has_war = yes
+			}
+		}
+		###
+		ai_hint_pp_cost = 100
+		ai_will_do = {
+			# The AI shouldn't be trusted with this tbh
+			factor = 0
+		}
+	}
+	# Encourage women to join the factories
+	generic_women_in_factories = {
+		visible = {
+			has_war_with_non_exiled_country = yes
+			OR = {
+				has_socialist_government_trigger = yes
+				has_democratic_government_trigger = yes
+				AND = {
+					surrender_progress > 0
+					any_enemy_country = {
+						ic_ratio = {
+							tag = ROOT
+							ratio > 0
+						}
+					}
+				}
+			}
+		}
+		###
+		available = {
+			has_stability > 0.09
+			has_war_support > 0.19
+		}
+		###
+		cost = 100
+		days_remove = 180
+		###
+		complete_effect = {
+			add_stability = -0.05
+		}
+		modifier = {
+			stability_weekly = -0.005
+			industrial_capacity_dockyard = 0.15
+			industrial_capacity_factory = 0.15
+			production_factory_efficiency_gain_factor = 0.05
+		}
+		###
+		cancel_trigger = {
+			NOT = {
+				has_war = yes
+			}
+		}
+		###        
+		ai_will_do = {
+			# The AI shouldn't be trusted with this tbh
+			factor = 0
+		}
+	}
+	# Emergency factory conversion
     generic_emergency_conversion = {
-        visible = {
-            has_war_with_non_exiled_country = yes
-        }
-        ###
-
-        available = {
-            OR = {
-                surrender_progress > 0
-                any_enemy_country = {
-                    ic_ratio = {
-                        tag = ROOT
-                        ratio > 1
-                    }
-                }
-            }
-        }
-        ###
-
-        custom_cost_trigger = {
-            command_power = 25
-        }
-        custom_cost_text = VX_25_CP_COST
-        
-        days_remove = 120
-        ###
-
-        complete_effect = {
-            
-        }
-
-        modifier = {
-            conversion_cost_civ_to_mil_factor = -0.2
-        }
-        ###
-
-        complete_effect = {
-            hidden_effect = {
-                add_command_power = -25
-            }
-        }
-
-        cancel_trigger = {
-            NOT = {
-                has_war = yes
-            }
-        }
-        ###        
-        ai_will_do = {
-            # The AI shouldn't be trusted with this tbh
-            factor = 0
-        }
-    }
+		visible = {
+			has_war_with_non_exiled_country = yes
+		}
+		###
+		available = {
+			OR = {
+				surrender_progress > 0
+				any_enemy_country = {
+					ic_ratio = {
+						tag = ROOT
+						ratio > 0
+					}
+				}
+			}
+		}
+		###
+		custom_cost_trigger = {
+			command_power = 25
+		}
+		custom_cost_text = VX_25_CP_COST
+		days_remove = 120
+		###
+		complete_effect = {
+		}
+		modifier = {
+			conversion_cost_civ_to_mil_factor = -0.2
+		}
+		###
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+			}
+		}
+		cancel_trigger = {
+			NOT = {
+				has_war = yes
+			}
+		}
+		###        
+		ai_will_do = {
+			# The AI shouldn't be trusted with this tbh
+			factor = 0
+		}
+	}
 }
 
 generic_decision_crisis = {
-    crisis_mission_strikes = {
-        days_mission_timeout = 60
-        priority = 1000
-        activation = {
-            always = no
-        }
-
-        is_good = no
-        
-        # How to resolve the crisis
-        cancel_trigger = {
-            OR = {
-                has_idea = civilian_economy
-                has_idea = low_economic_mobilisation
-                has_war_support > 0.49
-            }
-        }
-
-        # Bad things happen
-        timeout_effect = {
-            add_ideas = generic_strikes
-            unlock_decision_tooltip = crisis_solve_strikes
-        }
-    }
-
-    crisis_mission_deserters = {
-        days_mission_timeout = 60
-        priority = 1000
-        activation = {
-            always = no
-        }
-
-        is_good = no
-
-        # How to resolve the crisis
-        cancel_trigger = {
-            OR = {
-                has_war_support > 0.49
-                has_casualties_war_support > -0.1
-            }
-        }
-
-        # Bad things happen
-        timeout_effect = {
-            add_ideas = generic_desertions
-            unlock_decision_tooltip = crisis_solve_desertions
-        }
-    }
-
-    crisis_mission_protests = {
-        days_mission_timeout = 60
-        priority = 1000
-        activation = {
-            always = no
-        }
-
-        is_good = no
-
-        # How to resolve the crisis
-        cancel_trigger = {
-            OR = {
-                AND = {
-                    surrender_progress < 0.05
-                    support_government_30_trigger = yes
-                }
-                support_government_50_trigger = yes
-            }
-        }
-
-        # Bad things happen
-        timeout_effect = {
-            add_ideas = generic_protests
-            unlock_decision_tooltip = crisis_solve_protests
-        }
-    }
-
-    #
-    crisis_solve_strikes = {
-        visible = {
-            has_idea = generic_strikes
-        }
-
-        available = {
-            OR = {
-                has_idea = civilian_economy
-                has_idea = low_economic_mobilisation
-                has_war_support > 0.49
-            }
-        }
-
-        cost = 100
-
-        days_remove = 30
-
-        remove_effect = {
-            remove_ideas = generic_strikes
-        }
-
-        cancel_trigger = {
-            NOT = {
-                has_idea = civilian_economy
-            }
-            NOT = {
-                has_idea = low_economic_mobilisation
-            }
-            NOT = {
-                has_war_support < 0.5
-            }
-        }
-    }
-
-    crisis_solve_desertions = {
-        visible = {
-            has_idea = generic_desertions
-        }
-
-        available = {
-            OR = {
-                has_casualties_war_support > -0.1
-                has_war_support > 0.49
-            }
-        }
-
-        cost = 100
-
-        days_remove = 30
-
-        remove_effect = {
-            remove_ideas = generic_desertions
-        }
-
-        cancel_trigger = {
-            NOT = {
-                has_war_support > 0.49
-            }
-            NOT = {
-                has_casualties_war_support > -0.1
-            }
-        }
-    }
-
-    crisis_solve_protests = {
-        visible = {
-            has_idea = generic_protests
-        }
-
-        available = {
-            OR = {
-                AND = {
-                    surrender_progress < 0.05
-                    support_government_30_trigger = yes
-                }
-                support_government_50_trigger = yes
-            }
-        }
-
-        cost = 100
-
-        days_remove = 30
-
-        remove_effect = {
-            remove_ideas = generic_protests
-        }
-
-        cancel_trigger = {
-            OR = {
-                AND = {
-                    NOT = {
-                        surrender_progress < 0.05
-                    }
-                    NOT = {
-                        support_government_50_trigger = yes
-                    }
-                }
-                NOT = {
-                    support_government_30_trigger = yes
-                }
-            }
-        }
-    }
+	crisis_mission_strikes = {
+		days_mission_timeout = 60
+		priority = 1000
+		activation = {
+			always = no
+		}
+		is_good = no
+		# How to resolve the crisis
+		cancel_trigger = {
+			OR = {
+				has_idea = civilian_economy
+				has_idea = low_economic_mobilisation
+				has_war_support > 0.49
+			}
+		}
+		# Bad things happen
+		timeout_effect = {
+			add_ideas = generic_strikes
+			unlock_decision_tooltip = crisis_solve_strikes
+		}
+	}
+	crisis_mission_deserters = {
+		days_mission_timeout = 60
+		priority = 1000
+		activation = {
+			always = no
+		}
+		is_good = no
+		# How to resolve the crisis
+		cancel_trigger = {
+			OR = {
+				has_war_support > 0.49
+				has_casualties_war_support > -0.1
+			}
+		}
+		# Bad things happen
+		timeout_effect = {
+			add_ideas = generic_desertions
+			unlock_decision_tooltip = crisis_solve_desertions
+		}
+	}
+	crisis_mission_protests = {
+		days_mission_timeout = 60
+		priority = 1000
+		activation = {
+			always = no
+		}
+		is_good = no
+		# How to resolve the crisis
+		cancel_trigger = {
+			OR = {
+				AND = {
+					surrender_progress < 0.05
+					support_government_30_trigger = yes
+				}
+				support_government_50_trigger = yes
+			}
+		}
+		# Bad things happen
+		timeout_effect = {
+			add_ideas = generic_protests
+			unlock_decision_tooltip = crisis_solve_protests
+		}
+	}
+	#
+	crisis_solve_strikes = {
+		visible = {
+			has_idea = generic_strikes
+		}
+		available = {
+			OR = {
+				has_idea = civilian_economy
+				has_idea = low_economic_mobilisation
+				has_war_support > 0.49
+			}
+		}
+		cost = 100
+		days_remove = 30
+		remove_effect = {
+			remove_ideas = generic_strikes
+		}
+		cancel_trigger = {
+			NOT = {
+				has_idea = civilian_economy
+			}
+			NOT = {
+				has_idea = low_economic_mobilisation
+			}
+			NOT = {
+				has_war_support < 0.5
+			}
+		}
+	}
+	crisis_solve_desertions = {
+		visible = {
+			has_idea = generic_desertions
+		}
+		available = {
+			OR = {
+				has_casualties_war_support > -0.1
+				has_war_support > 0.49
+			}
+		}
+		cost = 100
+		days_remove = 30
+		remove_effect = {
+			remove_ideas = generic_desertions
+		}
+		cancel_trigger = {
+			NOT = {
+				has_war_support > 0.49
+			}
+			NOT = {
+				has_casualties_war_support > -0.1
+			}
+		}
+	}
+	crisis_solve_protests = {
+		visible = {
+			has_idea = generic_protests
+		}
+		available = {
+			OR = {
+				AND = {
+					surrender_progress < 0.05
+					support_government_30_trigger = yes
+				}
+				support_government_50_trigger = yes
+			}
+		}
+		cost = 100
+		days_remove = 30
+		remove_effect = {
+			remove_ideas = generic_protests
+		}
+		cancel_trigger = {
+			OR = {
+				AND = {
+					NOT = {
+						surrender_progress < 0.05
+					}
+					NOT = {
+						support_government_50_trigger = yes
+					}
+				}
+				NOT = {
+					support_government_30_trigger = yes
+				}
+			}
+		}
+	}
 }
