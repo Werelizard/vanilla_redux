@@ -245,6 +245,11 @@ authsoc_coalition_effect = {
 	set_country_flag = coalition_authsoc_flag
 	update_coalitions_effect = yes
 }
+vansoc_coalition_effect = {
+	custom_effect_tooltip = vansoc_join_coalition_tt
+	set_country_flag = coalition_vansoc_flag
+	update_coalitions_effect = yes
+}
 revsoc_coalition_effect = {
 	custom_effect_tooltip = revsoc_join_coalition_tt
 	set_country_flag = coalition_revsoc_flag
@@ -289,6 +294,11 @@ fascist_coalition_effect = {
 authsoc_leave_coalition_effect = {
 	custom_effect_tooltip = authsoc_leave_coalition_tt
 	clr_country_flag = coalition_authsoc_flag
+	update_coalitions_effect = yes
+}
+vansoc_leave_coalition_effect = {
+	custom_effect_tooltip = vansoc_leave_coalition_tt
+	clr_country_flag = coalition_vansoc_flag
 	update_coalitions_effect = yes
 }
 revsoc_leave_coalition_effect = {
@@ -340,6 +350,13 @@ remove_uncessary_coalitions_effect = {
 			has_country_flag = coalition_authsoc_flag
 		}		
 		clr_country_flag = coalition_authsoc_flag
+	}
+	if = {
+		limit = {
+			has_government = vanguard_socialist
+			has_country_flag = coalition_vansoc_flag
+		}
+		clr_country_flag = coalition_vansoc_flag
 	}
 	if = {
 		limit = {
@@ -410,6 +427,14 @@ update_coalitions_effect = {
 		}
 		add_to_variable = {
 			coalition_effect_var = party_popularity@authoritarian_socialist
+		}
+	}
+	if = {
+		limit = {
+			vansoc_coalition_trigger = yes
+		}
+		add_to_variable = {
+			coalition_effect_var = party_popularity@vanguard_socialist
 		}
 	}
 	if = {
@@ -494,6 +519,7 @@ update_coalitions_effect = {
 remove_coalitions_effect = {
 	custom_effect_tooltip = remove_coalitions_tt
 	clr_country_flag = coalition_authsoc_flag
+	clr_country_flag = coalition_vansoc_flag
 	clr_country_flag = coalition_revsoc_flag
 	clr_country_flag = coalition_socdem_flag
 	clr_country_flag = coalition_prog_flag

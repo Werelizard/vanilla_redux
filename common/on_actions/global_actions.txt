@@ -45,22 +45,87 @@ on_actions = {
 		}
 	}
 	on_weekly = {
-		# Checks if a crisis can be lauched, and if it should be by firing the corresponding event
+		# Laucnhes the crisis events (triggers are in the events themselves)
 		effect = {
-			
+			every_country = {
+				country_event = crisis_event.1
+				country_event = crisis_event.2
+				country_event = crisis_event.3	
+			}
 		}
 	}
 	on_new_term_election = {		
 		# countries with content should have their election events in their own "on_action" files
-		effect = {
-			if = {
-				limit = {
-					NOT = {
-						has_VX_content_trigger = yes
-					}
-				}
-			}
-		}
+	}	
+	# Border Wars
+	on_civil_war_end_before_annexation = {
+
+	}
+	on_border_war_lost = {
+
+	}
+	# Civil War
+	on_civil_war_end = {
+
+	}
+	# Wars
+	on_war = {
+
+	}
+	on_declare_war = {
+
+	}
+	on_justifying_wargoal_pulse = {
+
+	}
+	on_war_relation_added = {
+		
+	}
+	# Factions
+	on_leave_faction = {
+
+	}
+	on_create_faction = {
+
+	}
+	on_offer_join_faction = {
+
+	}
+	on_faction_formed = {
+
+	}
+	on_assume_faction_leadership = {
+
+	}
+	on_join_allies = {
+
+	}
+	on_call_allies = {
+
+	}
+	# Exiled Governments
+	on_government_exiled = {
+
+	}
+	on_host_changed_from_capitulation = {
+
+	}
+	on_exile_government_reinstated = {
+
+	}
+	# Capitulation
+	on_uncapitulation = {
+
+	}
+	on_capitulation_immediate = {
+
+	}
+	# Peace Conferences
+	on_peace = {
+
+	}
+	on_before_peace_conference_start = {
+
 	}
 	on_peaceconference_started = {
 		# Multi-Purpose Flags to determine if the country has defeated a major with a given ideology
@@ -142,5 +207,146 @@ on_actions = {
 				}
 			}
 		}
+	}
+	on_peaceconference_ended = {
+
+	}
+	# Puppets and Annexations
+	on_puppet = {
+
+	}
+	on_release_as_puppet = {
+
+	}
+	on_annex = {
+
+	}
+	on_release_as_free = {
+
+	}
+	on_liberate = {
+
+	}
+	# Subject relations
+	on_subject_free = {
+
+	}
+	on_subject_autonomy_level_change = {
+
+	}
+	on_subject_annexed = {
+
+	}
+	# Ace Related Actions
+	on_aces_killed_each_other = {
+
+	}
+	on_ace_killed_by_ace = {
+
+	}
+	on_ace_killed_other_ace = {
+
+	}
+	on_ace_killed = {
+
+	}
+	on_ace_killed_on_accident = {
+
+	}
+	on_non_ace_killed_other_ace = {
+
+	}
+	# Nukes
+	on_nuke_drop = {
+
+	}
+	# States
+	on_state_control_changed = {
+
+	}
+	# Army Leaders
+	on_army_leader_daily = {
+
+	}
+	on_army_leader_lost_combat = {
+
+	}
+	on_army_leader_promoted = {
+
+	}
+	on_unit_leader_promote_from_ranks_veteran = {
+
+	}
+	on_unit_leader_promote_from_ranks_green = {
+		
+	}
+	on_unit_leader_created = {
+
+	}
+	on_unit_leader_level_up = {
+
+	}
+	# Navy related
+	on_pride_of_the_fleet_sunk = {
+
+	}
+	# Volunteer
+	on_send_volunteers = {
+
+	}
+	# Special Units
+	on_paradrop = {
+
+	}
+	on_units_paradropped_in_state = {
+
+	}
+	# Operations
+	on_operative_on_mission_spotted = {
+
+	}
+	on_operative_captured = {
+
+	}
+	on_operative_death = {
+
+	}
+	on_operative_detected_during_operation = {
+
+	}
+	on_operation_completed = {
+
+	}
+	on_fully_decrypted_cipher = {
+
+	}
+	on_activated_active_decryption_bonuses = {
+
+	}
+	# MIOs
+	on_mio_size_increased = {
+
+	}
+	on_mio_design_team_assigned_to_tech = {
+
+	}
+	on_mio_design_team_assigned_to_variant = {
+
+	}
+	on_mio_industrial_manufacturer_assigned = {
+
+	}
+	on_mio_tech_research_cancelled = {
+
+	}
+	on_mio_tech_research_completed = {
+
+	}
+	on_mio_industrial_manufacturer_unassigned = {
+
+	}
+	# Special projects
+	on_project_completion = {
+
 	}
 }

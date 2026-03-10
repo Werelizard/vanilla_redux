@@ -46,6 +46,12 @@
  authoritarian_socialist_subtype:0 "$authoritarian_socialist_noun$"
  authoritarian_socialist_subtype_desc:0 ""
 
+ vanguard_socialist:0 "Vanugard Socialist"
+ vanguard_socialist_noun:0 "Vanguard Socialism"
+ vanguard_socialist_desc:0 "$socialist_government$"
+ vanguard_socialist_subtype:0 "$vanguard_socialist_noun$"
+ vanguard_socialist_subtype_desc:0 ""
+
  revolutionary_socialist:0 "Revolutionary Socialist"
  revolutionary_socialist_noun:0 "Revolutionary Socialism"
  revolutionary_socialist_desc:0 "$socialist_government$"
@@ -86,8 +92,8 @@
  authoritarian_democrat_subtype:0 "$authoritarian_democrat_noun$"
  authoritarian_democrat_subtype_desc:0 ""
 
- autocratic:0 "Autocratic"
- autocratic_noun:0 "Autocracy"
+ autocratic:0 "Reactionary Autocract"
+ autocratic_noun:0 "Reactionary Autocracy"
  autocratic_desc:0 "$authoritarian_government$"
  autocratic_subtype:0 "$autocratic_noun$"
  autocratic_subtype_desc:0 ""
@@ -116,26 +122,32 @@
  VX_similar_ideology:0 "Similar Ideology"
  VX_different_ideology:0 "Different Ideology"
 
+ ### RESOURCES ###
+ electricity:0 "Electricity"
+ uranium:0 "Uranium"
+
  ### SCRIPTED EFFECTS ###
 
  authsoc_join_coalition_tt:0 "The £autsoc_texticon  §rAuthoritarian Socialists§! will join the coalition"
+ vansoc_join_coalition_tt:0 "The £vansoc_texticon  §RVanguard Socialists§! will join the coalition"
  revsoc_join_coalition_tt:0 "The £revsoc_texticon  §RRevolutionary Socialists§! will join the coalition"
  socdem_join_coalition_tt:0 "The £socdem_texticon  §pSocial Democrats§! will join the coalition"
  progressive_join_coalition_tt:0 "The £prog_texticon  §PProgressives§! will join the coalition"
  liberal_join_coalition_tt:0 "The £liberal_texticon  §YLiberals§! will join the coalition"
  conservatives_join_coalition_tt:0 "The £cons_texticon  §cConservatives§! will join the coalition"
  authdem_join_coalition_tt:0 "The £autdem_texticon  §gAuthoritarian Democrats§! will join the coalition"
- autocrat_join_coalition_tt:0 "The £autreac_texticon  §lAutocrats§! will join the coalition"
+ autocrat_join_coalition_tt:0 "The £autreac_texticon  §lPaternalists§! will join the coalition"
  fascist_join_coalition_tt:0 "The £fascism_texticon  §fFascists§! will join the coalition"
 
  authsoc_leave_coalition_tt:0 "The £autsoc_texticon  §rAuthoritarian Socialists§! will leave the coalition"
+ vansoc_leave_coalition_tt:0 "The £vansoc_texticon  §RVanguard Socialists§! will leave the coalition"
  revsoc_leave_coalition_tt:0 "The £revsoc_texticon  §RRevolutionary Socialists§! will leave the coalition"
  socdem_leave_coalition_tt:0 "The £socdem_texticon£  §pSocial Democrats§! will leave the coalition"
  progressive_leave_coalition_tt:0 "The £prog_texticon  §PProgressives§! will leave the coalition"
  liberal_leave_coalition_tt:0 "The £liberal_texticon  §YLiberals§! will leave the coalition"
  conservatives_leave_coalition_tt:0 "The £cons_texticon  §cConservatives§! will leave the coalition"
  authdem_leave_coalition_tt:0 "The £autdem_texticon  §gAuthoritarian Democrats§! will leave the coalition"
- autocrat_leave_coalition_tt:0 "The £autreac_texticon  §lAutocrats§! will leave the coalition"
+ autocrat_leave_coalition_tt:0 "The £autreac_texticon  §lPaternalists§! will leave the coalition"
  fascist_leave_coalition_tt:0 "The £fascism_texticon  §fFascists§! will leave the coalition"
 
  remove_coalitions_tt:0 "Disands all active coaltions"
@@ -143,13 +155,14 @@
  ### SRIPTED TRIGGERS ###
 
  authsoc_coalition_tt:0 "In a coaltion with the §rAuthoritarian Socialists§!"
+ vansoc_coalition_tt:0 "In a coalition with the §RVanguard Socialists§!"
  revsoc_coalition_tt:0 "In a coalition with the §RRevolutionary Socialists§!"
  socdem_coalition_tt:0 "In a coalition with the §pSocial Democrats§!"
  progressive_coalition_tt:0 "In a coalition with the §PProgressives§!"
  liberal_coalition_tt:0 "In a coalition with the §YLiberals§!"
  conservative_coalition_tt:0 "In a coalition with the §cConservatives§!"
  authoritarian_coalition_tt:0 "In a coalition with the §gAuthoritarian Democrats§!"
- autocracy_coalition_tt:0 "In a coalition with the §lAutocrats§!"
+ autocracy_coalition_tt:0 "In a coalition with the §lPaternalists§!"
  fascism_coalition_tt:0 "In a coalition with the §Yfascists§!"
 
  has_socialist_government_tt:0 "Has a §YSocialist§! government"
@@ -184,7 +197,7 @@
  generic_silent_workhorse_trait:0 "Silent Workhorse"
 
  # TRAITS - MILITARY ADVISORS
- generic_high_command_special_forces_trait:0 "Special Forces Advocate"
+ generic_high_command_special_forces_trait:0 "Special Forces Reformer"
  generic_high_command_engineer_trait:0 "Military Engineer"
  generic_high_command_army_trait:0 "Army Reformer"
  generic_high_command_airforce_trait:0 "Airforce Reformer"
@@ -196,6 +209,10 @@
  generic_chief_of_navy_far_operations_trait:0 "Base Strike Advocate (Specialist)"
  generic_chief_of_airforce_superiority_trait:0 "Air Superiority Advocate (Specialist)"
  generic_chief_of_airforce_ranged_trait:0 "Sustained Operations Advocate (Specialist)"
+
+ generic_theorist_army_trait:0 "Army Theorist"
+ generic_theorist_navy_trait:0 "Naval Theorist"
+ generic_theorist_air_trait:0 "Air Theorist"
 
  # TRAITS - INDUSTRIAL CONCERNS
  generic_industry_concern_trait:0 "Industrial Concern"

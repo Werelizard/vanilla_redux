@@ -6,6 +6,11 @@ spritetypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
+		name = "GFX_vansoc_texticon"
+		textureFile = "gfx/texticons/vanguard_socialism_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
 		name = "GFX_revsoc_texticon"
 		textureFile = "gfx/texticons/revolutionary_socialism_texticon.dds"
 		legacy_lazy_load = no

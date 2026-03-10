@@ -64,3 +64,9 @@
 - Mexico
 - Nepal
 - Switzerland
+
+# General To-Do list
+
+- Generic Events
+- Operations
+- Agencies

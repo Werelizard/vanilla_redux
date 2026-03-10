@@ -1,0 +1,54 @@
+add_namespace = crisis_event
+
+#### CRISIS EVENTS ####
+
+# Strikes setup event
+country_event = {
+	id = crisis_event.1
+	title = crisis_event.1.title
+	desc = crisis_event.1.desc
+
+	is_triggered_only = yes
+
+	trigger = {
+		can_have_strikes_crisis_trigger = yes
+	}
+
+	option = {
+		
+	}
+}
+
+# Deserters setup event
+country_event = {
+	id = crisis_event.2
+	title = crisis_event.2.title
+	desc = crisis_event.2.desc
+
+	is_triggered_only = yes
+
+	trigger = {
+		can_have_deserters_crisis_trigger = yes
+	}
+
+	option = {
+		
+	}
+}
+
+# Protests setup event
+country_event = {
+	id = crisis_event.3
+	title = crisis_event.3.title
+	desc = crisis_event.3.desc
+
+	is_triggered_only = yes
+
+	trigger = {
+		can_have_protests_crisis_trigger = yes
+	}
+
+	option = {
+		
+	}
+}

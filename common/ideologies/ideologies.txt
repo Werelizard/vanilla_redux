@@ -12,6 +12,18 @@ ideologies = {
 
 		color = { 140 0 0 }
 	}
+
+	# Vanguard Socialism
+	vanguard_socialist = {
+		types = {
+			vanguard_socialist_subtype = {
+
+			}
+		}
+
+		color = { 140 20 30 }
+	}
+	
 	# Revolutionary Socialism
 	revolutionary_socialist = {
 		types = {

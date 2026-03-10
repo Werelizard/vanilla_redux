@@ -351,7 +351,55 @@ every_possible_country = {
 		}
 	}
 
-	# Randomly assign traits to and increase a random skil of generic starting leaders
+	generate_character = {
+		token_base = generic_theorist_army
+		advisor = {
+			slot = theorist
+			traits = { generic_theorist_army_trait }
+			available = {
+						
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			# TO DO: add portraits for generic advisors
+		}
+	}
+	generate_character = {
+		token_base = generic_theorist_navy
+		advisor = {
+			slot = theorist
+			traits = { generic_theorist_navy_trait }
+			available = {
+						
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			# TO DO: add portraits for generic advisors
+		}
+	}
+	generate_character = {
+		token_base = generic_theorist_air
+		advisor = {
+			slot = theorist
+			traits = { generic_theorist_air_trait }
+			available = {
+						
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			# TO DO: add portraits for generic advisors
+		}
+	}
+
 	every_unit_leader = {
 		random_list = {
 			40 = {

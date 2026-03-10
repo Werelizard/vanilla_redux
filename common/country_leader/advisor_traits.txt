@@ -102,6 +102,20 @@ leader_traits = {
 		air_range_factor = 0.1
 	}
 
+	# GENERIC THEORIST
+
+	generic_theorist_army_trait = {
+		land_mastery_gain_factor = 0.1
+	}
+
+	generic_theorist_navy_trait = {
+		navy_mastery_gain_factor = 0.1
+	}
+
+	generic_theorist_air_trait = {
+		air_mastery_gain_factor = 0.1
+	}
+
 	# HIGH COMMAND TRAITS - NON GENERIC
 
 	# ARMY CHIEF TRAITS - NON GENERIC
