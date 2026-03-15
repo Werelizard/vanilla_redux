@@ -41,7 +41,7 @@ has_authoritarian_government_trigger = {
 }
 
 has_fascist_government_trigger = {
-	has_fascist_government_trigger = yes
+	has_government = fascist
 }
 
 # Government related triggers - no tooltip
@@ -420,7 +420,7 @@ support_government_50_trigger = {
 		limit = {
 			has_fascist_government_trigger = yes
 		}
-		fascism > 0.5
+		fascist > 0.5
 	}
 	else = {
 		always = no
@@ -488,7 +488,7 @@ support_government_30_trigger = {
 		limit = {
 			has_fascist_government_trigger = yes
 		}
-		fascism > 0.3
+		fascist > 0.3
 	}
 	else = {
 		always = no
@@ -1313,5 +1313,45 @@ can_have_protests_crisis_trigger = {
 	}
 	NOT = {
 		has_idea = generic_desertions
+	}
+}
+
+# Trigger to check if in the same government as ROOT
+
+has_same_government_type_trigger = {
+	if = {
+		limit = {
+			ROOT = {
+				has_socialist_government_trigger = yes
+			}
+		}
+		has_socialist_government_trigger = yes
+	}
+	else_if = {
+		limit = {
+			ROOT = {
+				has_democratic_government_trigger = yes
+			}
+		}
+		has_democratic_government_trigger = yes
+	}
+	else_if = {
+		limit = {
+			ROOT = {
+				has_authoritarian_government_trigger = yes
+			}
+		}
+		has_authoritarian_government_trigger = yes
+	}
+	else_if = {
+		limit = {
+			ROOT = {
+				has_fascist_government_trigger = yes
+			}
+		}
+		has_fascist_government_trigger = yes
+	}
+	else = {
+		always = no
 	}
 }

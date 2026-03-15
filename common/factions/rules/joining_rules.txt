@@ -30,7 +30,9 @@ joining_rule_non_fascist = {
 		}
 		IF = {
 			limit = { NOT = { has_rule = can_join_opposite_factions } }
-			has_government = FROM
+			FROM = {
+				has_same_government_type_trigger = yes
+			}
 		}
 	}
 }
@@ -57,7 +59,9 @@ joining_rule_non_democratic = {
 		}
 		IF = {
 			limit = { NOT = { has_rule = can_join_opposite_factions } }
-			has_government = FROM
+			FROM = {
+				has_same_government_type_trigger = yes
+			}
 		}
 	}
 }
@@ -109,7 +113,9 @@ joining_rule_non_communist = {
 		}
 		IF = {
 			limit = { NOT = { has_rule = can_join_opposite_factions } }
-			has_government = FROM
+			FROM = {
+				has_same_government_type_trigger = yes
+			}
 		}
 	}
 }
@@ -126,7 +132,9 @@ joining_rule_fascist_only = {
 		has_fascist_government_trigger = yes
 		IF = {
 			limit = { NOT = { has_rule = can_join_opposite_factions } }
-			has_government = FROM
+			FROM = {
+				has_same_government_type_trigger = yes
+			}
 		}
 	}
 }
@@ -146,7 +154,9 @@ joining_rule_democratic_non_aligned = {
 		}
 		IF = {
 			limit = { NOT = { has_rule = can_join_opposite_factions } }
-			has_government = FROM
+			FROM = {
+				has_same_government_type_trigger = yes
+			}
 		}
 	}
 }
@@ -157,7 +167,9 @@ joining_rule_same_ideology = {
 		base = 0
 	}
 	trigger = {
-		has_government = FROM
+		FROM = {
+				has_same_government_type_trigger = yes
+			}
 	}
 }
 
@@ -173,7 +185,9 @@ joining_rule_communist_only = {
 		has_socialist_government_trigger = yes
 		IF = {
 			limit = { NOT = { has_rule = can_join_opposite_factions } }
-			has_government = FROM
+			FROM = {
+				has_same_government_type_trigger = yes
+			}
 		}
 	}
 }
@@ -193,7 +207,9 @@ joining_rule_support_percentage = {
 		}
 		IF = {
 			limit = { NOT = { has_rule = can_join_opposite_factions } }
-			has_government = FROM
+			FROM = {
+				has_same_government_type_trigger = yes
+			}
 		}
 	}
 }
@@ -210,7 +226,9 @@ joining_rule_puppets_only = {
 		ROOT = { is_subject_of = FROM }
 		IF = {
 			limit = { NOT = { has_rule = can_join_opposite_factions } }
-			has_government = FROM
+			FROM = {
+				has_same_government_type_trigger = yes
+			}
 		}
 	}
 	modifier= {

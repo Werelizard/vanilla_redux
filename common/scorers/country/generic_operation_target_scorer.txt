@@ -57,7 +57,9 @@ ai_generic_operation_target_scorer  = {
 			}
 
 			modifier = {
-				has_government = FROM
+				FROM = {
+				has_same_government_type_trigger = yes
+			}
 				NOT = { has_war_with = FROM }
 				factor = 0.6
 			}
