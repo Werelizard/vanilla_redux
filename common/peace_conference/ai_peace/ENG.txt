@@ -15,7 +15,7 @@ peace_ai_desires = {
 			ROOT.FROM = { tag = ROOT }
             ROOT = {
                 OR = {
-                    has_government = fascism
+                    has_fascist_government_trigger = yes
                     has_authoritarian_government_trigger = yes
                 }
             }
@@ -56,7 +56,7 @@ peace_ai_desires = {
 			ROOT.FROM = { tag = ROOT }
             ROOT = {
                 OR = {
-                    has_government = fascism
+                    has_fascist_government_trigger = yes
                     has_authoritarian_government_trigger = yes
                 }
             }

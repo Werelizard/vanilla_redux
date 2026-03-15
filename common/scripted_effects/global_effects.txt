@@ -409,7 +409,7 @@ remove_uncessary_coalitions_effect = {
 	}
 	if = {
 		limit = {
-			has_government = fascism
+			has_fascist_government_trigger = yes
 			has_country_flag = coalition_fascism_flag
 		}		
 		clr_country_flag = coalition_fascism_flag

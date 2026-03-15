@@ -482,7 +482,7 @@ brutally_oppressive_occupation = {
 	sound_effect = "Martial_Law_Interface_Brutally_Oppressive_Occupation_Unique_FAS"
 
 	visible = {
-		has_government = fascism
+		has_fascist_government_trigger = yes
 	}
 
 	state_modifier = {

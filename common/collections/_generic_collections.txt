@@ -1,0 +1,197 @@
+# Global / Countries
+
+country_and_all_subjects = {
+	input = game:scope
+	operators =  { country_and_all_subjects }
+	name = COLLECTION_COUNTRY_AND_ALL_SUBJECTS
+}
+
+world_at_peace_countries = {
+	input = game:all_countries
+	operators = {
+		limit = {
+			has_war = no 
+		}
+	}
+	name = COLLECTION_COUNTRIES_AT_PEACE
+}
+
+world_major_countries = {
+	input = game:all_countries
+	operators = {
+		limit = {
+			is_major = yes
+		}
+	}
+	name = COLLECTION_MAJOR_COUNTRIES
+}
+
+world_non_capitulated_countries = {
+	input = game:all_countries
+	operators = {
+		limit = {
+			has_capitulated = no
+		}
+	}
+	name = COLLECTION_NON_CAPITULATED_COUNTRIES
+}
+
+world_democratic_countries = {
+	input = game:all_countries
+	operators = {
+		limit = {
+			has_democratic_government_trigger = yes
+		}
+	}
+	name = COLLECTION_DEMOCRATIC_COUNTRIES
+}
+
+world_socialist_countries = {
+	input = game:all_countries
+	operators = {
+		limit = {
+			has_socialist_government_trigger = yes
+		}
+	}
+	name = COLLECTION_SOCIALIST_COUNTRIES
+}
+
+world_fascist_countries = {
+	input = game:all_countries
+	operators = {
+		limit = {
+			has_fascist_government_trigger = yes
+		}
+	}
+	name = COLLECTION_FASCIST_COUNTRIES
+}
+
+world_authoritarian_countries = {
+	input = game:all_countries
+	operators = {
+		limit = {
+			has_authoritarian_government_trigger = yes
+		}
+	}
+	name = COLLECTION_AUTHORITARIAN_COUNTRIES
+}
+
+world_countries_in_faction = {
+	input = game:scope
+	operators = {
+		faction_members
+	}
+	name = COLLECTION_FACTION_MEMBERS
+}
+
+# States 
+
+states_europe = {
+	input = game:all_states
+	operators = {
+		limit = {
+			is_on_continent = europe			
+		}
+	}
+	name = COLLECTION_
+}
+
+faction_states_in_europe = {
+	input = game:scope
+	operators = {
+		faction_members
+		controlled_states
+		limit = {
+			is_on_continent = europe			
+		}
+	}
+	name = COLLECTION_FACTIONS_STATES_IN_EUROPE
+}
+
+states_asia = {
+	input = game:all_states
+	operators = {
+		limit = {
+			is_on_continent = asia			
+		}
+	}
+	name = COLLECTION_ASIAN_STATES
+}
+
+faction_states_in_asia = {
+	input = game:scope
+	operators = {
+		faction_members
+		controlled_states
+		limit = {
+			is_on_continent = asia			
+		}
+	}
+	name = COLLECTION_FACTIONS_STATES_IN_ASIA
+}
+
+states_north_america = {
+	input = game:all_states
+	operators = {
+		limit = {
+			is_on_continent = north_america			
+		}
+	}
+	name = COLLECTION_NORTH_AMERICAN_STATES
+}
+
+faction_states_in_north_america = {
+	input = game:scope
+	operators = {
+		faction_members
+		controlled_states
+		limit = {
+			is_on_continent = north_america			
+		}
+	}
+	name = COLLECTION_FACTIONS_STATES_IN_NORTH_AMERICA
+}
+
+states_south_america = {
+	input = game:all_states
+	operators = {
+		limit = {
+			is_on_continent = south_america			
+		}
+	}
+	name = COLLECTION_SOUTH_AMERICAN_STATES
+}
+
+faction_states_in_south_america = {
+	input = game:scope
+	operators = {
+		faction_members
+		controlled_states
+		limit = {
+			is_on_continent = south_america			
+		}
+	}
+	name = COLLECTION_FACTIONS_STATES_IN_SOUTH_AMERICA
+}
+
+states_africa = {
+	input = game:all_states
+	operators = {
+		limit = {
+			is_on_continent = africa			
+		}
+	}
+	name = COLLECTION_AFRICAN_STATES
+}
+
+faction_states_in_africa = {
+	input = game:scope
+	operators = {
+		faction_members
+		controlled_states
+		limit = {
+			is_on_continent = africa		
+		}
+	}
+	name = COLLECTION_FACTIONS_STATES_IN_AFRICA
+}

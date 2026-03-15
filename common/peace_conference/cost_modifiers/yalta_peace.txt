@@ -14,7 +14,7 @@ peace_action_modifiers = {
             FROM.FROM.FROM = { has_state_flag = yalta_pol }
             GER = {
                 pc_is_loser = yes
-                has_government = fascism
+                has_fascist_government_trigger = yes
             }
         }
         cost_multiplier = 0.1
@@ -47,7 +47,7 @@ peace_action_modifiers = {
             }
             GER = {
                 pc_is_loser = yes
-                has_government = fascism
+                has_fascist_government_trigger = yes
             }
         }
         cost_multiplier = 3.0
@@ -87,7 +87,7 @@ peace_action_modifiers = {
             }
             GER = {
                 pc_is_loser = yes
-                has_government = fascism
+                has_fascist_government_trigger = yes
             }
         }
         cost_multiplier = 4.0
@@ -125,7 +125,7 @@ peace_action_modifiers = {
             }
             GER = {
                 pc_is_loser = yes
-                has_government = fascism
+                has_fascist_government_trigger = yes
             }
         }
         cost_multiplier = 4.0
@@ -144,7 +144,7 @@ peace_action_modifiers = {
             }
             GER = {
                 pc_is_loser = yes
-                has_government = fascism
+                has_fascist_government_trigger = yes
             }
         }
         cost_multiplier = 0.5
@@ -165,7 +165,7 @@ peace_action_modifiers = {
             }
             GER = {
                 pc_is_loser = yes
-                has_government = fascism
+                has_fascist_government_trigger = yes
             }
         }
         cost_multiplier = 0.5
@@ -188,7 +188,7 @@ peace_action_modifiers = {
             }
             GER = {
                 pc_is_loser = yes
-                has_government = fascism
+                has_fascist_government_trigger = yes
             }
         }
         cost_multiplier = 2
@@ -207,7 +207,7 @@ peace_action_modifiers = {
             }
             GER = {
                 pc_is_loser = yes
-                has_government = fascism
+                has_fascist_government_trigger = yes
             }
         }
         cost_multiplier = 0.5
@@ -225,7 +225,7 @@ peace_action_modifiers = {
             }
             GER = {
                 pc_is_loser = yes
-                has_government = fascism
+                has_fascist_government_trigger = yes
             }
         }
         cost_multiplier = 2
@@ -250,7 +250,7 @@ peace_action_modifiers = {
             }
             GER = {
                 pc_is_loser = yes
-                has_government = fascism 
+                has_fascist_government_trigger = yes 
                 OR = {
                     has_country_flag = AUS_annexed
                     is_in_faction_with = AUS
@@ -286,7 +286,7 @@ peace_action_modifiers = {
             }
             GER = {
                 pc_is_loser = yes
-                has_government = fascism
+                has_fascist_government_trigger = yes
                 OR = {
                     has_country_flag = AUS_annexed
                     is_in_faction_with = AUS

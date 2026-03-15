@@ -418,7 +418,7 @@ support_government_50_trigger = {
 	}
 	else_if = {
 		limit = {
-			has_government = fascism
+			has_fascist_government_trigger = yes
 		}
 		fascism > 0.5
 	}
@@ -486,7 +486,7 @@ support_government_30_trigger = {
 	}
 	else_if = {
 		limit = {
-			has_government = fascism
+			has_fascist_government_trigger = yes
 		}
 		fascism > 0.3
 	}

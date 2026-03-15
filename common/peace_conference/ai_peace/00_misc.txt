@@ -169,7 +169,7 @@ peace_ai_desires = {
             ROOT = { 
                 NOT = { tag = JAP }            #We aren't Japan (special handling)
                 is_major = yes                #We are big
-                has_government = fascism    #We are the baddies
+                has_fascist_government_trigger = yes    #We are the baddies
                 tag = ROOT.FROM                #We are acting for ourselves
             }
         }
@@ -183,7 +183,7 @@ peace_ai_desires = {
             ROOT = { 
                 NOT = { tag = JAP }            #We aren't Japan (special handling)
                 is_major = yes                #We are big
-                has_government = fascism    #We are the baddies
+                has_fascist_government_trigger = yes    #We are the baddies
             }
         }
 
@@ -196,10 +196,10 @@ peace_ai_desires = {
             ROOT = { 
                 NOT = { tag = JAP }            #We aren't Japan (special handling)
                 is_major = yes                #We are big
-                has_government = fascism    #We are the baddies
+                has_fascist_government_trigger = yes    #We are the baddies
                 tag = ROOT.FROM                #We are acting for ourselves
             }
-            ROOT.FROM.FROM = { NOT = { has_government = fascism } }
+            ROOT.FROM.FROM = { NOT = { has_fascist_government_trigger = yes } }
         }
 
         ai_desire = -75
@@ -271,7 +271,7 @@ peace_ai_desires = {
         enable = {
             ROOT = {
                 NOT = { has_democratic_government_trigger= yes }
-                NOT = { has_government = fascism }
+                NOT = { has_fascist_government_trigger = yes }
                 NOT = {
                     tag = ROOT.FROM
                 }
@@ -375,7 +375,7 @@ peace_ai_desires = {
             ROOT = { has_democratic_government_trigger= yes }
             ROOT.FROM = {
                 OR = {
-                    has_government = fascism
+                    has_fascist_government_trigger = yes
                     has_socialist_government_trigger = yes
                 }
             }
@@ -393,7 +393,7 @@ peace_ai_desires = {
                 ROOT.FROM.FROM = { pc_is_forced_government_to = democratic }
             }
             else_if = {
-                limit = { has_government = fascism }
+                limit = { has_fascist_government_trigger = yes }
                 ROOT.FROM.FROM = { pc_is_forced_government_to = fascism }
             }
             else_if = {
@@ -445,11 +445,11 @@ peace_ai_desires = {
     fascism_dont_liberate_the_wrong_ideology = {
         peace_action_type = liberate
         enable = {
-            ROOT = { has_government = fascism }
+            ROOT = { has_fascist_government_trigger = yes }
             ROOT.FROM = {
                 NOT = {
                     OR = {
-                        has_government = fascism
+                        has_fascist_government_trigger = yes
                         has_authoritarian_government_trigger = yes
                     }
                 }
@@ -625,7 +625,7 @@ peace_ai_desires = {
                 ROOT.FROM.FROM = { pc_is_forced_government_to = democratic }
             }
             else_if = {
-                limit = { has_government = fascism }
+                limit = { has_fascist_government_trigger = yes }
                 ROOT.FROM.FROM = { pc_is_forced_government_to = fascism }
             }
             else_if = {
@@ -649,7 +649,7 @@ peace_ai_desires = {
         enable = {
             ROOT.FROM = {
                 original_tag = GER
-                has_government = fascism
+                has_fascist_government_trigger = yes
             }
         }
         ai_desire = -100
@@ -679,7 +679,7 @@ peace_ai_desires = {
                 tag = ROOT.FROM
             }
             ROOT = {
-                has_government = fascism
+                has_fascist_government_trigger = yes
             }
             ROOT.FROM.FROM = {
                 tag = SOV
@@ -1102,7 +1102,7 @@ peace_ai_desires = {
                 ROOT.FROM.FROM = { pc_is_forced_government_to = democratic }
             }
             else_if = {
-                limit = { has_government = fascism }
+                limit = { has_fascist_government_trigger = yes }
                 ROOT.FROM.FROM = { pc_is_forced_government_to = fascism }
             }
             else_if = {
@@ -1134,7 +1134,7 @@ peace_ai_desires = {
                 ROOT.FROM.FROM = { pc_is_forced_government_to = democratic }
             }
             else_if = {
-                limit = { has_government = fascism }
+                limit = { has_fascist_government_trigger = yes }
                 ROOT.FROM.FROM = { pc_is_forced_government_to = fascism }
             }
             else_if = {
