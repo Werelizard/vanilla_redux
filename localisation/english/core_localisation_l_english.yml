@@ -196,24 +196,6 @@
  generic_education_reformer_trait:0 "Education Reformer"
  generic_silent_workhorse_trait:0 "Silent Workhorse"
 
- # TRAITS - MILITARY ADVISORS
- generic_high_command_special_forces_trait:0 "Special Forces Reformer"
- generic_high_command_engineer_trait:0 "Military Engineer"
- generic_high_command_army_trait:0 "Army Reformer"
- generic_high_command_airforce_trait:0 "Airforce Reformer"
- generic_high_command_navy_trait:0 "Navy Reformer"
-
- generic_chief_of_army_defense_trait:0 "Defence Advocate (Specialist)"
- generic_chief_of_army_offense_trait:0 "Offence Advocate (Specialist)"
- generic_chief_of_navy_shore_defense_trait:0 "Naval Escort Advocate (Specialist)"
- generic_chief_of_navy_far_operations_trait:0 "Base Strike Advocate (Specialist)"
- generic_chief_of_airforce_superiority_trait:0 "Air Superiority Advocate (Specialist)"
- generic_chief_of_airforce_ranged_trait:0 "Sustained Operations Advocate (Specialist)"
-
- generic_theorist_army_trait:0 "Army Theorist"
- generic_theorist_navy_trait:0 "Naval Theorist"
- generic_theorist_air_trait:0 "Air Theorist"
-
  # TRAITS - INDUSTRIAL CONCERNS
  generic_industry_concern_trait:0 "Industrial Concern"
  generic_electric_concern_trait:0 "Electonics Concern"
@@ -223,3 +205,5 @@
 
  ### MISC TOOLTIPS ###
  doublespace_tt:0 " \n"
+
+ FACTION_GOAL_DIVISION_COMPARE:0 "Current number of divisions in the faction §Y($LEFT|0H$)§! is equal to or greater than §Y$RIGHT|0H$§!"

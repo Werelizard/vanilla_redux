@@ -514,19 +514,32 @@ generic_decision_war_measures = {
 			# AI should not take this if it doesn't have its high command and chiefs filled - unless its war support is really, really bad
 			modifier = {
 				add = -200
-				if = {
-					limit = {
-						has_war_support > 0.19
-					}
-					amount_taken_ideas = {
-						amount = 0
-						slots = {
-							army_chief
-							air_chief
-							navy_chief
-							high_command
-						}
-					}
+				OR = {
+					has_war_support > 0.19
+						# amount_taken_ideas = {
+						# 	amount < 1
+						# 	slots = {
+						# 		army_chief
+						# 	}
+						# }
+						# amount_taken_ideas = {
+						# 	amount < 1
+						# 	slots = {
+						# 		air_chief
+						# 	}
+						# }
+						# amount_taken_ideas = {
+						# 	amount < 1
+						# 	slots = {
+						# 		navy_chief
+						# 	}
+						# }
+						# amount_taken_ideas = {
+						# 	amount < 1
+						# 	slots = {
+						# 		high_command
+						# 	}
+						# }
 				}
 			}
 			# Final weights to add in depending on how much war support the AI has
@@ -686,20 +699,33 @@ generic_decision_war_measures = {
 			# AI should not take this if it doesn't have its high command and chiefs filled - unless its war support is really, really bad
 			modifier = {
 				add = -200
-				if = {
-					limit = {
+				OR = {
 						has_convoys_war_support > -0.05
+						# amount_taken_ideas = {
+						# 	amount < 1
+						# 	slots = {
+						# 		army_chief
+						# 	}
+						# }
+						# amount_taken_ideas = {
+						# 	amount < 1
+						# 	slots = {
+						# 		air_chief
+						# 	}
+						# }
+						# amount_taken_ideas = {
+						# 	amount < 1
+						# 	slots = {
+						# 		navy_chief
+						# 	}
+						# }
+						# amount_taken_ideas = {
+						# 	amount < 1
+						# 	slots = {
+						# 		high_command
+						# 	}
+						# }
 					}
-					amount_taken_ideas = {
-						amount = 0
-						slots = {
-							army_chief
-							air_chief
-							navy_chief
-							high_command
-						}
-					}
-				}
 			}
 			# Final weights to add in depending on how much war support the AI has
 			modifier = {
@@ -858,19 +884,32 @@ generic_decision_war_measures = {
 			# AI should not take this if it doesn't have its high command and chiefs filled - unless its war support is really, really bad
 			modifier = {
 				add = -200
-				if = {
-					limit = {
-						has_convoys_war_support > -0.05
-					}
-					amount_taken_ideas = {
-						amount = 0
-						slots = {
-							army_chief
-							air_chief
-							navy_chief
-							high_command
-						}
-					}
+				OR = {
+					has_convoys_war_support > -0.05
+					# amount_taken_ideas = {
+					# 	amount < 1
+					# 	slots = {
+					# 		army_chief
+					# 	}
+					# }
+					# amount_taken_ideas = {
+					# 	amount < 1
+					# 	slots = {
+					# 		air_chief
+					# 	}
+					# }
+					# amount_taken_ideas = {
+					# 	amount < 1
+					# 	slots = {
+					# 		navy_chief
+					# 	}
+					# }
+					# amount_taken_ideas = {
+					# 	amount < 1
+					# 	slots = {
+					# 		high_command
+					# 	}
+					# }
 				}
 			}
 			# Final weights to add in depending on how much war support the AI has
@@ -1030,20 +1069,34 @@ generic_decision_war_measures = {
 			# AI should not take this if it doesn't have its high command and chiefs filled - unless its war support is really, really bad
 			modifier = {
 				add = -200
-				if = {
-					limit = {
+				has_bombing_war_support > -0.05
+					OR = {
 						has_bombing_war_support > -0.05
+						# amount_taken_ideas = {
+						# 	amount < 1
+						# 	slots = {
+						# 		army_chief
+						# 	}
+						# }
+						# amount_taken_ideas = {
+						# 	amount < 1
+						# 	slots = {
+						# 		air_chief
+						# 	}
+						# }
+						# amount_taken_ideas = {
+						# 	amount < 1
+						# 	slots = {
+						# 		navy_chief
+						# 	}
+						# }
+						# amount_taken_ideas = {
+						# 	amount < 1
+						# 	slots = {
+						# 		high_command
+						# 	}
+						# }
 					}
-					amount_taken_ideas = {
-						amount = 0
-						slots = {
-							army_chief
-							air_chief
-							navy_chief
-							high_command
-						}
-					}
-				}
 			}
 			# Final weights to add in depending on how much war support the AI has
 			modifier = {

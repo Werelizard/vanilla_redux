@@ -1,0 +1,203 @@
+   ###    ##       ##       #### ########  ###### 
+  ## ##   ##       ##        ##  ##       ##    ##
+ ##   ##  ##       ##        ##  ##       ##      
+##     ## ##       ##        ##  ######    ###### 
+######### ##       ##        ##  ##             ##
+##     ## ##       ##        ##  ##       ##    ##
+##     ## ######## ######## #### ########  ###### 
+
+faction_allies_old_order = {
+	# Allied countries that are democrtic / auth.dem
+	input = game:all_countries
+	operators = {
+		faction_members
+		limit = {
+			has_capitulated = no
+			OR = {
+				has_democratic_government_trigger = yes
+				has_government = authoritarian_democrat
+			}
+		}
+	}
+	name = ALLIES_OLD_ORDER
+}
+
+
+   ###    ##     ## ####  ###### 
+  ## ##    ##   ##   ##  ##    ##
+ ##   ##    ## ##    ##  ##      
+##     ##    ###     ##   ###### 
+#########   ## ##    ##        ##
+##     ##  ##   ##   ##  ##    ##
+##     ## ##     ## ####  ###### 
+
+faction_axis_new_order = {
+	input = collection:states_europe
+	operators = {
+		limit = {
+			is_controlled_by_ROOT_or_ally = yes
+			controller = {
+				OR = {
+					has_fascist_government_trigger = yes
+					is_subject_of = ROOT
+				}
+			}
+		}
+	}
+	name = AXIS_NEW_ORDER
+}
+
+ ######   #######  ##     ## #### ##    ## ######## ######## ########  ##    ##
+##    ## ##     ## ###   ###  ##  ###   ##    ##    ##       ##     ## ###   ##
+##       ##     ## #### ####  ##  ####  ##    ##    ##       ##     ## ####  ##
+##       ##     ## ## ### ##  ##  ## ## ##    ##    ######   ########  ## ## ##
+##       ##     ## ##     ##  ##  ##  ####    ##    ##       ##   ##   ##  ####
+##    ## ##     ## ##     ##  ##  ##   ###    ##    ##       ##    ##  ##   ###
+ ######   #######  ##     ## #### ##    ##    ##    ######## ##     ## ##    ##
+
+faction_comintern_borders_faction_leader = {
+	input = game:all_states
+	operators = {
+		limit = {
+			any_neighbor_state = {
+				is_owned_by = ROOT 
+			}	
+		}
+	}
+	name = COMINTERN_BORDER_STATES
+}
+
+faction_comintern_controlled_border_states = {
+	input = collection:faction_comintern_borders_faction_leader
+	operators = {
+		limit = {
+			OR = {
+				is_owned_by = ROOT
+				owner = {
+					is_ally_with = ROOT
+				}
+				owner = {
+					has_socialist_government_trigger = yes
+					NOT = {
+						has_war_with = ROOT
+					}
+				}
+			}
+			OR = {
+				is_controlled_by_ROOT_or_ally = yes
+				controller = {
+					has_socialist_government_trigger = yes
+					NOT = {
+						has_war_with = ROOT
+					}
+				}
+			}
+		}
+	}
+	name = COMINTERN_BORDER_STATES_CONTROLLED
+}
+
+faction_comintern_neighbouring_countries = {
+	input = game:all_countries
+	operators = {
+		limit = {
+			has_capitulated = no
+			is_neighbor_of = ROOT
+		}
+	}
+}
+
+faction_comintern_neighbouring_socialist_countries = {
+	input = collection:faction_comintern_neighbouring_countries
+	operators = {
+		limit = {
+			is_ally_with = ROOT
+			has_socialist_government_trigger = yes
+		}
+	}
+}
+
+
+
+ ######   #######  ##     ## ##     ##  #######  ##    ## ##      ## ########    ###    ##       ######## ##     ##
+##    ## ##     ## ###   ### ###   ### ##     ## ###   ## ##  ##  ## ##         ## ##   ##          ##    ##     ##
+##       ##     ## #### #### #### #### ##     ## ####  ## ##  ##  ## ##        ##   ##  ##          ##    ##     ##
+##       ##     ## ## ### ## ## ### ## ##     ## ## ## ## ##  ##  ## ######   ##     ## ##          ##    #########
+##       ##     ## ##     ## ##     ## ##     ## ##  #### ##  ##  ## ##       ######### ##          ##    ##     ##
+##    ## ##     ## ##     ## ##     ## ##     ## ##   ### ##  ##  ## ##       ##     ## ##          ##    ##     ##
+ ######   #######  ##     ## ##     ##  #######  ##    ##  ###  ###  ######## ##     ## ########    ##    ##     ##
+
+# For the American isolationist path: control the western hemisphere
+faction_american_commonwealth_american_states = {
+	input = game:all_states
+	operators = {
+		limit = {
+			OR = {
+				is_on_continent = north_america
+				is_on_continent = south_america
+			}
+		}
+	}
+}
+
+faction_american_commonwealth_controlled_american_states = {
+	input = collection:faction_american_commonwealth_american_states
+	operators = {
+		limit = {
+			owner = {
+				OR = {
+					capital_scope = {
+						is_on_continent = north_america
+					}
+					capital_scope = {
+						is_on_continent = south_america
+					}
+				}
+			}
+			OR = {
+				is_owned_by = ROOT
+				is_subject_of = ROOT
+				owner = {
+					# no foreign subjects allowed
+					is_subject = no
+					is_ally_with = ROOT
+				}
+			}
+		}
+	}
+}
+
+
+########    ###     ######  ########       ###     ######  ####    ###   
+##         ## ##   ##    ##    ##         ## ##   ##    ##  ##    ## ##  
+##        ##   ##  ##          ##        ##   ##  ##        ##   ##   ## 
+######   ##     ##  ######     ##       ##     ##  ######   ##  ##     ##
+##       #########       ##    ##       #########       ##  ##  #########
+##       ##     ## ##    ##    ##       ##     ## ##    ##  ##  ##     ##
+######## ##     ##  ######     ##       ##     ##  ######  #### ##     ##
+
+faction_prosperity_sphere_asian_oceanian_states = {
+	input = game:all_states
+	operators = {
+		limit = {
+			OR = {
+				is_on_continent = asia
+				is_on_continent = australia
+			}
+		}
+	}
+}
+
+faction_prosperity_sphere_puppet_asian_oceanian_states = {
+	input = collection:faction_prosperity_sphere_asian_oceanian_states
+	operators = {
+		limit = {
+			OR = {
+				is_controlled_by = ROOT
+				controller = {
+					is_Subject_of = ROOT
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,1008 @@
+# Valid unit modifiers are not exhaustive
+# Currently supported:
+# army_morale
+# army_morale_factor
+# army_org
+# army_org_factor
+# supply_consumption_factor
+# equipment_capture
+# equipment_capture_factor
+# army_fuel_capacity_factor
+# army_fuel_consumption_factor
+# recon_factor
+# recon_factor_while_entrenched
+# transport_capacity (?)
+# breakthrough_factor
+# armor_factor
+# army_strength_factor
+# experience_loss_factor
+# leader_modifier applies unit modifiers to all units under them as a general, similarly to traits.
+# army_attack_factor
+# army_defence_factor
+# max_dig_in
+# max_dig_in_factor
+
+@cost = 30
+
+unit_medals = {
+		
+	### GER
+	
+	iron_cross_second_class = {
+		
+		available = { original_tag = GER }
+		frame = 1
+		icon = "GFX_medal_icon_ger"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			army_org_factor = 0.1
+		}
+		
+		#leader_modifier = {
+		# transport_capacity = whatever
+		#}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	knights_cross = {
+		
+		available = { original_tag = GER }
+		frame = 2
+		icon = "GFX_medal_icon_ger"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			recon_factor = 0.15
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	knights_cross_oak_leaves = {
+		
+		available = { original_tag = GER }
+		frame = 3
+		icon = "GFX_medal_icon_ger"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			army_fuel_consumption_factor = -0.075
+			supply_consumption_factor = -0.075
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	knights_cross_swords_and_diamonds = {
+		
+		available = { original_tag = GER }
+		frame = 4
+		icon = "GFX_medal_icon_ger"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			breakthrough_factor = 0.075
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	### USA
+	
+	bronze_star = {
+		
+		available = { original_tag = USA }
+		frame = 1
+		icon = "GFX_medal_icon_usa"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			army_morale_factor = 0.05
+			army_org_factor = 0.05
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	silver_star = {
+		
+		available = { original_tag = USA }
+		frame = 2
+		icon = "GFX_medal_icon_usa"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			supply_consumption_factor = -0.1
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	distinguished_service_cross = {
+		
+		available = { original_tag = USA }
+		frame = 3
+		icon = "GFX_medal_icon_usa"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			army_attack_factor = 0.05
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	medal_of_honor = {
+		
+		available = { original_tag = USA }
+		frame = 4
+		icon = "GFX_medal_icon_usa"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			experience_loss_factor = -0.2
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	### SOV
+	
+	battle_merit_medal = {
+		
+		available = { original_tag = SOV }
+		frame = 1
+		icon = "GFX_medal_icon_sov"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			army_morale_factor = 0.15
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	order_of_kutuzov = {
+		
+		available = { original_tag = SOV }
+		frame = 2
+		icon = "GFX_medal_icon_sov"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			max_dig_in_factor = 0.15
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+	}
+	
+	order_of_the_red_banner = {
+		
+		available = { original_tag = SOV }
+		frame = 3
+		icon = "GFX_medal_icon_sov"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			army_strength_factor = 0.075
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	hero_of_the_soviet_union = {
+		
+		available = { original_tag = SOV }
+		frame = 4
+		icon = "GFX_medal_icon_sov"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			army_org_factor = 0.1
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	### ENG
+	
+	dispatches_oak_leaves = {
+		
+		available = { original_tag = ENG }
+		frame = 1
+		icon = "GFX_medal_icon_eng"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			recon_factor_while_entrenched = 0.25
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	order_british_empire = {
+		
+		available = { original_tag = ENG }
+		frame = 2
+		icon = "GFX_medal_icon_eng"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			army_strength_factor = 0.1
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	distinguished_service_order = {
+		
+		available = { original_tag = ENG }
+		frame = 3
+		icon = "GFX_medal_icon_eng"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			army_defence_factor = 0.075
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	victoria_cross = {
+		
+		available = { original_tag = ENG }
+		frame = 4
+		icon = "GFX_medal_icon_eng"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			army_morale_factor = 0.15
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	### FRA
+	
+	combatants_cross = {
+		
+		available = { original_tag = FRA }
+		frame = 1
+		icon = "GFX_medal_icon_fra"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			max_dig_in_factor = 0.1
+			recon_factor_while_entrenched = 0.1
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	war_cross = {
+		
+		available = { original_tag = FRA }
+		frame = 2
+		icon = "GFX_medal_icon_fra"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			army_org_factor = 0.075
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	order_of_liberation = {
+		
+		available = { original_tag = FRA }
+		frame = 3
+		icon = "GFX_medal_icon_fra"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			army_fuel_consumption_factor = -0.15
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	legion_of_honor = {
+		
+		available = { original_tag = FRA }
+		frame = 4
+		icon = "GFX_medal_icon_fra"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			supply_consumption_factor = -0.1
+			army_defence_factor = 0.05
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	### ITA
+	
+	war_merit_cross = {
+		
+		available = { original_tag = ITA }
+		frame = 1
+		icon = "GFX_medal_icon_ita"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			equipment_capture_factor = 0.1
+			army_morale_factor = 0.075
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	cross_of_military_valor = {
+		
+		available = { original_tag = ITA }
+		frame = 2
+		icon = "GFX_medal_icon_ita"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			breakthrough_factor = 0.05
+			army_strength_factor = 0.05
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	order_of_savoy_fifth = {
+		
+		available = { original_tag = ITA }
+		frame = 3
+		icon = "GFX_medal_icon_ita"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			supply_consumption_factor = -0.1
+			army_defence_factor = -0.05
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	order_of_savoy_first = {
+		
+		available = { original_tag = ITA }
+		frame = 4
+		icon = "GFX_medal_icon_ita"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			army_attack_factor = 0.05
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	### JAP
+	
+	military_medal_of_honor = {
+		
+		available = { original_tag = JAP }
+		frame = 1
+		icon = "GFX_medal_icon_jap"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			army_morale_factor = 0.075
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	sacred_treasure = {
+		
+		available = { original_tag = JAP }
+		frame = 2
+		icon = "GFX_medal_icon_jap"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			army_morale_factor = 0.05
+			army_strength_factor = 0.05
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	golden_kite = {
+		
+		available = { original_tag = JAP }
+		frame = 3
+		icon = "GFX_medal_icon_jap"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			supply_consumption_factor = -0.1
+			army_attack_factor = 0.05
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+	}
+	
+	order_of_chrysanthemum = {
+		
+		available = { original_tag = JAP }
+		frame = 4
+		icon = "GFX_medal_icon_jap"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			breakthrough_factor = 0.15
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+
+	great_east_asia_war_medal = {
+		
+		available = { original_tag = JAP }
+		frame = 5
+		icon = "GFX_medal_icon_jap"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			max_dig_in_factor = 0.1
+			army_defence_factor = 0.05
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+
+	order_of_the_rising_sun = {
+		
+		available = { original_tag = JAP }
+		frame = 6
+		icon = "GFX_medal_icon_jap"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			breakthrough_factor = 0.05
+			army_attack_factor = 0.05
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+
+	order_of_the_paulownia_flowers = {
+		
+		available = { original_tag = JAP }
+		frame = 7
+		icon = "GFX_medal_icon_jap"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			supply_consumption_factor = -0.15 
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	### Generic Democratic
+	
+	democratic_gallantry = {
+		
+		available = { 
+			has_democratic_government_trigger = yes 
+			has_VX_content_trigger = no
+		}
+		frame = 1
+		icon = "GFX_medal_icon_democratic"
+	
+		cost = @cost
+		
+		unit_modifiers = {
+			army_morale_factor = 0.1
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	democratic_honor = {
+		
+		available = { 
+			has_democratic_government_trigger = yes 
+			has_VX_content_trigger = no
+		}
+		frame = 2
+		icon = "GFX_medal_icon_democratic"
+	
+		cost = @cost
+		
+		unit_modifiers = {
+			supply_consumption_factor = -0.15
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	democratic_war_cross = {
+		
+		available = { 
+			has_democratic_government_trigger = yes
+			has_VX_content_trigger = no	
+		}
+		frame = 3
+		icon = "GFX_medal_icon_democratic"
+	
+		cost = @cost
+		
+		unit_modifiers = {
+			army_defence_factor = 0.05
+			recon_factor = 0.1
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	democratic_lion = {
+		
+		available = { 
+			has_democratic_government_trigger = yes
+			has_VX_content_trigger = no
+		}
+		frame = 4
+		icon = "GFX_medal_icon_democratic"
+	
+		cost = @cost
+		
+		unit_modifiers = {
+			experience_loss_factor = -0.25
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	### Generic Communist
+	
+	communist_service_medal = {
+		
+		available = { 
+			has_socialist_government_trigger = yes
+			has_VX_content_trigger = no
+		}
+		frame = 1
+		icon = "GFX_medal_icon_communism"
+	
+		cost = @cost
+		
+		unit_modifiers = {
+			supply_consumption_factor = -0.15
+			army_fuel_consumption_factor = -0.15
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	communist_red_star = {
+		
+		available = { 
+			has_socialist_government_trigger = yes
+			has_VX_content_trigger = no
+		}
+		frame = 2
+		icon = "GFX_medal_icon_communism"
+	
+		cost = @cost
+		
+		unit_modifiers = {
+			army_morale_factor = 0.1
+			army_defence_factor = 0.05
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	communist_merit_medal = {
+		
+		available = { 
+			has_socialist_government_trigger = yes
+			has_VX_content_trigger = no
+		}
+		frame = 3
+		icon = "GFX_medal_icon_communism"
+	
+		cost = @cost
+		
+		unit_modifiers = {
+			army_org_factor = 0.1
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	communist_hero_of_revolution = {
+		
+		available = { 
+			has_socialist_government_trigger = yes
+			has_VX_content_trigger = no
+		}
+		frame = 4
+		icon = "GFX_medal_icon_communism"
+	
+		cost = @cost
+		
+		unit_modifiers = {
+			army_strength_factor = 0.1
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	### Generic Fascism
+	
+	fascism_bravery = {
+		
+		available = { 
+			has_fascist_government_trigger = yes
+			has_VX_content_trigger = no
+		}
+		frame = 1
+		icon = "GFX_medal_icon_fascism"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			army_org_factor = 0.1
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	fascism_merit = {
+		
+		available = { 
+			has_fascist_government_trigger = yes
+			has_VX_content_trigger = no
+		}
+		frame = 2
+		icon = "GFX_medal_icon_fascism"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			army_attack_factor = 0.05
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	fascism_order_brave = {
+		
+		available = { 
+			has_fascist_government_trigger = yes
+			has_VX_content_trigger = no
+		}
+		frame = 3
+		icon = "GFX_medal_icon_fascism"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			armor_factor = 0.1
+			recon_factor = 0.1
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	fascism_heroism = {
+		
+		available = { 
+			has_fascist_government_trigger = yes
+			has_VX_content_trigger = no
+		}
+		frame = 4
+		icon = "GFX_medal_icon_fascism"
+	
+		cost = @cost
+		
+		unit_modifiers = {
+			breakthrough_factor = 0.1
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	### Generic Neutrality
+	
+	neutral_bravery = {
+		
+		available = { 
+			has_authoritarian_government_trigger = yes
+			has_VX_content_trigger = no
+		}
+		frame = 1
+		icon = "GFX_medal_icon_default"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			army_defence_factor = 0.05
+			max_dig_in_factor = 0.1
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	neutral_military_order = {
+		
+		available = { 
+			has_authoritarian_government_trigger = yes
+			has_VX_content_trigger = no
+		}
+		frame = 2
+		icon = "GFX_medal_icon_default"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			supply_consumption_factor = -0.15
+			army_morale_factor = 0.1
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	neutral_sword = {
+		
+		available = { 
+			has_authoritarian_government_trigger = yes
+			has_VX_content_trigger = no
+		}
+		frame = 3
+		icon = "GFX_medal_icon_default"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			army_attack_factor = 0.05
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	neutral_virtue = {
+		
+		available = { 
+			has_authoritarian_government_trigger = yes
+			has_VX_content_trigger = no
+		}
+		frame = 4
+		icon = "GFX_medal_icon_default"
+	
+		cost = @cost
+		
+		unit_modifiers = {
+			experience_loss_factor = -0.2
+			army_morale_factor = 0.05
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	### Unique
+	
+	yug_extreme_bravery = {
+		
+		available = { 
+			tag = YUG
+			# has_completed_focus = YUG_medal_for_extreme_bravery
+		}
+		frame = 1
+		icon = "GFX_medal_icon_default"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			max_dig_in = 5
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+
+	SWE_medal_1 = {
+		
+		available = { 
+			tag = SWE
+		}
+		frame = 1
+		icon = "GFX_medal_icon_swe"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			supply_consumption_factor = -0.15
+			max_dig_in_factor = 0.05
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+}

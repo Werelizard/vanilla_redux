@@ -149,18 +149,6 @@ GER_TB_HISTORICAL = {
 
 	for_countries = { GER }
 
-	can_use = { 
-		NOT = {
-			OR = { 
-				has_completed_focus = GER_return_of_the_kaiser 
-				has_completed_focus = GER_the_monarchy_compromise
-				has_completed_focus = GER_revive_the_kaiserreich_ww
-				has_completed_focus = GER_the_monarchy_compromise_ww
-				has_completed_focus = GER_start_the_proletarian_revolution
-			}
-		}
-	}
-
 	link_numbering_with = { GER_THEME_ANIMALS }
 
 	type = ship
@@ -273,18 +261,6 @@ GER_MS_HISTORICAL = {
 
 	for_countries = { GER }
 
-	can_use = { 
-		NOT = {
-			OR = { 
-				has_completed_focus = GER_return_of_the_kaiser 
-				has_completed_focus = GER_the_monarchy_compromise
-				has_completed_focus = GER_revive_the_kaiserreich_ww
-				has_completed_focus = GER_the_monarchy_compromise_ww
-				has_completed_focus = GER_start_the_proletarian_revolution
-			}
-		}
-	}
-
 	type = ship
 	ship_types = { destroyer light_cruiser }
 	
@@ -303,17 +279,6 @@ GER_SS_HISTORICAL = {
 
 	for_countries = { GER }
 
-	can_use = { 
-		NOT = {
-			OR = { 
-				has_completed_focus = GER_return_of_the_kaiser 
-				has_completed_focus = GER_the_monarchy_compromise
-				has_completed_focus = GER_revive_the_kaiserreich_ww
-				has_completed_focus = GER_the_monarchy_compromise_ww
-			}
-		}
-	}
-
 	type = ship
 	ship_types = { submarine }
 	
@@ -328,18 +293,6 @@ GER_CA_HISTORICAL = {
 	name = NAME_THEME_HISTORICAL_CA
 
 	for_countries = { GER }
-
-	can_use = { 
-		NOT = {
-			OR = { 
-				has_completed_focus = GER_return_of_the_kaiser 
-				has_completed_focus = GER_the_monarchy_compromise
-				has_completed_focus = GER_revive_the_kaiserreich_ww
-				has_completed_focus = GER_the_monarchy_compromise_ww
-				has_completed_focus = GER_start_the_proletarian_revolution
-			}
-		}
-	}
 
 	type = ship
 	ship_types = { heavy_cruiser light_cruiser }
@@ -411,10 +364,10 @@ GER_CL_HISTORICAL = {
 	can_use = { 
 		NOT = {
 			OR = { 
-				has_completed_focus = GER_return_of_the_kaiser 
-				has_completed_focus = GER_the_monarchy_compromise
-				has_completed_focus = GER_revive_the_kaiserreich_ww
-				has_completed_focus = GER_the_monarchy_compromise_ww
+				# # has_completed_focus = GER_return_of_the_kaiser 
+				# # has_completed_focus = GER_the_monarchy_compromise
+				# # has_completed_focus = GER_revive_the_kaiserreich_ww
+				# # has_completed_focus = GER_the_monarchy_compromise_ww
 			}
 		}
 	}
@@ -537,11 +490,11 @@ GER_CS_HISTORICAL = {
 	can_use = { 
 		NOT = {
 			OR = { 
-				has_completed_focus = GER_return_of_the_kaiser 
-				has_completed_focus = GER_the_monarchy_compromise
-				has_completed_focus = GER_revive_the_kaiserreich_ww
-				has_completed_focus = GER_the_monarchy_compromise_ww
-				has_completed_focus = GER_start_the_proletarian_revolution
+				# # has_completed_focus = GER_return_of_the_kaiser 
+				# # has_completed_focus = GER_the_monarchy_compromise
+				# # has_completed_focus = GER_revive_the_kaiserreich_ww
+				# # has_completed_focus = GER_the_monarchy_compromise_ww
+				# # has_completed_focus = GER_start_the_proletarian_revolution
 			}
 		}
 	}
@@ -808,11 +761,11 @@ GER_DD_HISTORICAL = {
 	can_use = { 
 		NOT = {
 			OR = { 
-				has_completed_focus = GER_return_of_the_kaiser 
-				has_completed_focus = GER_the_monarchy_compromise
-				has_completed_focus = GER_revive_the_kaiserreich_ww
-				has_completed_focus = GER_the_monarchy_compromise_ww
-				has_completed_focus = GER_start_the_proletarian_revolution
+				# # has_completed_focus = GER_return_of_the_kaiser 
+				# # has_completed_focus = GER_the_monarchy_compromise
+				# # has_completed_focus = GER_revive_the_kaiserreich_ww
+				# # has_completed_focus = GER_the_monarchy_compromise_ww
+				# # has_completed_focus = GER_start_the_proletarian_revolution
 			}
 		}
 	}
@@ -857,11 +810,11 @@ GER_CV_HISTORICAL = {
 	can_use = { 
 		NOT = {
 			OR = { 
-				has_completed_focus = GER_return_of_the_kaiser 
-				has_completed_focus = GER_the_monarchy_compromise
-				has_completed_focus = GER_revive_the_kaiserreich_ww
-				has_completed_focus = GER_the_monarchy_compromise_ww
-				has_completed_focus = GER_start_the_proletarian_revolution
+				# # has_completed_focus = GER_return_of_the_kaiser 
+				# # has_completed_focus = GER_the_monarchy_compromise
+				# # has_completed_focus = GER_revive_the_kaiserreich_ww
+				# # has_completed_focus = GER_the_monarchy_compromise_ww
+				# # has_completed_focus = GER_start_the_proletarian_revolution
 			}
 		}
 	}
@@ -905,11 +858,11 @@ GER_CVL_HISTORICAL = {
 	can_use = { 
 		NOT = {
 			OR = { 
-				has_completed_focus = GER_return_of_the_kaiser 
-				has_completed_focus = GER_the_monarchy_compromise
-				has_completed_focus = GER_revive_the_kaiserreich_ww
-				has_completed_focus = GER_the_monarchy_compromise_ww
-				has_completed_focus = GER_start_the_proletarian_revolution
+				# # has_completed_focus = GER_return_of_the_kaiser 
+				# # has_completed_focus = GER_the_monarchy_compromise
+				# # has_completed_focus = GER_revive_the_kaiserreich_ww
+				# # has_completed_focus = GER_the_monarchy_compromise_ww
+				# # has_completed_focus = GER_start_the_proletarian_revolution
 			}
 		}
 	}
@@ -961,10 +914,10 @@ GER_THEME_FISH = {
 	can_use = { 
 		NOT = {
 			OR = { 
-				has_completed_focus = GER_return_of_the_kaiser 
-				has_completed_focus = GER_the_monarchy_compromise
-				has_completed_focus = GER_revive_the_kaiserreich_ww
-				has_completed_focus = GER_the_monarchy_compromise_ww
+				# # has_completed_focus = GER_return_of_the_kaiser 
+				# # has_completed_focus = GER_the_monarchy_compromise
+				# # has_completed_focus = GER_revive_the_kaiserreich_ww
+				# # has_completed_focus = GER_the_monarchy_compromise_ww
 			}
 		}
 	}
@@ -1009,10 +962,10 @@ GER_THEME_ANIMALS = {
 	can_use = { 
 		NOT = {
 			OR = { 
-				has_completed_focus = GER_return_of_the_kaiser 
-				has_completed_focus = GER_the_monarchy_compromise
-				has_completed_focus = GER_revive_the_kaiserreich_ww
-				has_completed_focus = GER_the_monarchy_compromise_ww
+				# # has_completed_focus = GER_return_of_the_kaiser 
+				# # has_completed_focus = GER_the_monarchy_compromise
+				# # has_completed_focus = GER_revive_the_kaiserreich_ww
+				# # has_completed_focus = GER_the_monarchy_compromise_ww
 			}
 		}
 	}
@@ -1084,10 +1037,10 @@ GER_THEME_RIVERS = {
 	can_use = { 
 		NOT = {
 			OR = { 
-				has_completed_focus = GER_return_of_the_kaiser 
-				has_completed_focus = GER_the_monarchy_compromise
-				has_completed_focus = GER_revive_the_kaiserreich_ww
-				has_completed_focus = GER_the_monarchy_compromise_ww
+				# # has_completed_focus = GER_return_of_the_kaiser 
+				# # has_completed_focus = GER_the_monarchy_compromise
+				# # has_completed_focus = GER_revive_the_kaiserreich_ww
+				# # has_completed_focus = GER_the_monarchy_compromise_ww
 			}
 		}
 	}
@@ -1138,11 +1091,11 @@ GER_THEME_GERMANIC = {
 	can_use = { 
 		NOT = {
 			OR = { 
-				has_completed_focus = GER_return_of_the_kaiser 
-				has_completed_focus = GER_the_monarchy_compromise
-				has_completed_focus = GER_revive_the_kaiserreich_ww
-				has_completed_focus = GER_the_monarchy_compromise_ww
-				has_completed_focus = GER_start_the_proletarian_revolution
+				# # has_completed_focus = GER_return_of_the_kaiser 
+				# # has_completed_focus = GER_the_monarchy_compromise
+				# # has_completed_focus = GER_revive_the_kaiserreich_ww
+				# # has_completed_focus = GER_the_monarchy_compromise_ww
+				# # has_completed_focus = GER_start_the_proletarian_revolution
 			}
 		}
 	}
@@ -1191,11 +1144,11 @@ GER_THEME_BATTLE = {
 	can_use = { 
 		NOT = {
 			OR = { 
-				has_completed_focus = GER_return_of_the_kaiser 
-				has_completed_focus = GER_the_monarchy_compromise
-				has_completed_focus = GER_revive_the_kaiserreich_ww
-				has_completed_focus = GER_the_monarchy_compromise_ww
-				has_completed_focus = GER_start_the_proletarian_revolution
+				# # has_completed_focus = GER_return_of_the_kaiser 
+				# # has_completed_focus = GER_the_monarchy_compromise
+				# # has_completed_focus = GER_revive_the_kaiserreich_ww
+				# # has_completed_focus = GER_the_monarchy_compromise_ww
+				# # has_completed_focus = GER_start_the_proletarian_revolution
 			}
 		}
 	}
@@ -1237,10 +1190,10 @@ GER_BB_IMPERIAL = {
 
 	can_use = { 
 		OR = { 
-			has_completed_focus = GER_return_of_the_kaiser 
-			has_completed_focus = GER_the_monarchy_compromise
-			has_completed_focus = GER_revive_the_kaiserreich_ww
-			has_completed_focus = GER_the_monarchy_compromise_ww
+			# # has_completed_focus = GER_return_of_the_kaiser 
+			# # has_completed_focus = GER_the_monarchy_compromise
+			# # has_completed_focus = GER_revive_the_kaiserreich_ww
+			# # has_completed_focus = GER_the_monarchy_compromise_ww
 		}
 	}
 	prefix = "SMS "
@@ -1310,10 +1263,10 @@ GER_BC_IMPERIAL = {
 
 	can_use = { 
 		OR = { 
-			has_completed_focus = GER_return_of_the_kaiser 
-			has_completed_focus = GER_the_monarchy_compromise
-			has_completed_focus = GER_revive_the_kaiserreich_ww
-			has_completed_focus = GER_the_monarchy_compromise_ww
+			# # has_completed_focus = GER_return_of_the_kaiser 
+			# # has_completed_focus = GER_the_monarchy_compromise
+			# # has_completed_focus = GER_revive_the_kaiserreich_ww
+			# # has_completed_focus = GER_the_monarchy_compromise_ww
 		}
 	}
 	prefix = "SMS "
@@ -1346,10 +1299,10 @@ GER_CA_IMPERIAL = {
 
 	can_use = { 
 		OR = { 
-			has_completed_focus = GER_return_of_the_kaiser 
-			has_completed_focus = GER_the_monarchy_compromise
-			has_completed_focus = GER_revive_the_kaiserreich_ww
-			has_completed_focus = GER_the_monarchy_compromise_ww
+			# # has_completed_focus = GER_return_of_the_kaiser 
+			# # has_completed_focus = GER_the_monarchy_compromise
+			# # has_completed_focus = GER_revive_the_kaiserreich_ww
+			# # has_completed_focus = GER_the_monarchy_compromise_ww
 		}
 	}
 	prefix = "SMS "
@@ -1399,10 +1352,10 @@ GER_THEME_ANIMALS_IMPERIAL = {
 	can_use = { 
 		
 		OR = { 
-			has_completed_focus = GER_return_of_the_kaiser 
-			has_completed_focus = GER_the_monarchy_compromise
-			has_completed_focus = GER_revive_the_kaiserreich_ww
-			has_completed_focus = GER_the_monarchy_compromise_ww
+			# # has_completed_focus = GER_return_of_the_kaiser 
+			# # has_completed_focus = GER_the_monarchy_compromise
+			# # has_completed_focus = GER_revive_the_kaiserreich_ww
+			# # has_completed_focus = GER_the_monarchy_compromise_ww
 		}
 		
 	}
@@ -1472,10 +1425,10 @@ GER_DD_IMPERIAL = {
 
 	can_use = { 
 		OR = { 
-			has_completed_focus = GER_return_of_the_kaiser 
-			has_completed_focus = GER_the_monarchy_compromise
-			has_completed_focus = GER_revive_the_kaiserreich_ww
-			has_completed_focus = GER_the_monarchy_compromise_ww
+			# # has_completed_focus = GER_return_of_the_kaiser 
+			# # has_completed_focus = GER_the_monarchy_compromise
+			# # has_completed_focus = GER_revive_the_kaiserreich_ww
+			# # has_completed_focus = GER_the_monarchy_compromise_ww
 		}
 	}
 	prefix = "SMS "
@@ -1595,10 +1548,10 @@ GER_CV_IMPERIAL = {
 
 	can_use = { 
 		OR = { 
-			has_completed_focus = GER_return_of_the_kaiser 
-			has_completed_focus = GER_the_monarchy_compromise
-			has_completed_focus = GER_revive_the_kaiserreich_ww
-			has_completed_focus = GER_the_monarchy_compromise_ww
+			# # has_completed_focus = GER_return_of_the_kaiser 
+			# # has_completed_focus = GER_the_monarchy_compromise
+			# # has_completed_focus = GER_revive_the_kaiserreich_ww
+			# # has_completed_focus = GER_the_monarchy_compromise_ww
 		}
 	}
 
@@ -1628,10 +1581,10 @@ GER_THEME_GERMANIC_IMPERIAL = {
 
 	can_use = { 
 		OR = { 
-			has_completed_focus = GER_return_of_the_kaiser 
-			has_completed_focus = GER_the_monarchy_compromise
-			has_completed_focus = GER_revive_the_kaiserreich_ww
-			has_completed_focus = GER_the_monarchy_compromise_ww
+			# # has_completed_focus = GER_return_of_the_kaiser 
+			# # has_completed_focus = GER_the_monarchy_compromise
+			# # has_completed_focus = GER_revive_the_kaiserreich_ww
+			# # has_completed_focus = GER_the_monarchy_compromise_ww
 		}
 	}
 
@@ -1678,10 +1631,10 @@ GER_THEME_BATTLE_IMPERIAL = {
 
 	can_use = { 
 		OR = { 
-			has_completed_focus = GER_return_of_the_kaiser 
-			has_completed_focus = GER_the_monarchy_compromise
-			has_completed_focus = GER_revive_the_kaiserreich_ww
-			has_completed_focus = GER_the_monarchy_compromise_ww
+			# # has_completed_focus = GER_return_of_the_kaiser 
+			# # has_completed_focus = GER_the_monarchy_compromise
+			# # has_completed_focus = GER_revive_the_kaiserreich_ww
+			# # has_completed_focus = GER_the_monarchy_compromise_ww
 		}
 	}
 
@@ -1722,10 +1675,10 @@ GER_THEME_FISH_IMPERIAL = {
 
 	can_use = { 
 		OR = { 
-			has_completed_focus = GER_return_of_the_kaiser 
-			has_completed_focus = GER_the_monarchy_compromise
-			has_completed_focus = GER_revive_the_kaiserreich_ww
-			has_completed_focus = GER_the_monarchy_compromise_ww
+			# # has_completed_focus = GER_return_of_the_kaiser 
+			# # has_completed_focus = GER_the_monarchy_compromise
+			# # has_completed_focus = GER_revive_the_kaiserreich_ww
+			# # has_completed_focus = GER_the_monarchy_compromise_ww
 		}
 	}
 
@@ -1768,10 +1721,10 @@ GER_SS_IMPERIAL = {
 
 	can_use = { 
 		OR = { 
-			has_completed_focus = GER_return_of_the_kaiser 
-			has_completed_focus = GER_the_monarchy_compromise
-			has_completed_focus = GER_revive_the_kaiserreich_ww
-			has_completed_focus = GER_the_monarchy_compromise_ww
+			# # has_completed_focus = GER_return_of_the_kaiser 
+			# # has_completed_focus = GER_the_monarchy_compromise
+			# # has_completed_focus = GER_revive_the_kaiserreich_ww
+			# # has_completed_focus = GER_the_monarchy_compromise_ww
 		}
 	}
 
@@ -1817,10 +1770,10 @@ GER_THEME_RIVERS_IMPERIAL = {
 
 	can_use = { 
 		OR = { 
-			has_completed_focus = GER_return_of_the_kaiser 
-			has_completed_focus = GER_the_monarchy_compromise
-			has_completed_focus = GER_revive_the_kaiserreich_ww
-			has_completed_focus = GER_the_monarchy_compromise_ww
+			# # has_completed_focus = GER_return_of_the_kaiser 
+			# # has_completed_focus = GER_the_monarchy_compromise
+			# # has_completed_focus = GER_revive_the_kaiserreich_ww
+			# # has_completed_focus = GER_the_monarchy_compromise_ww
 		}
 	}
 
@@ -1866,10 +1819,10 @@ GER_CL_IMPERIAL = {
 
 	can_use = { 
 		OR = { 
-			has_completed_focus = GER_return_of_the_kaiser 
-			has_completed_focus = GER_the_monarchy_compromise
-			has_completed_focus = GER_revive_the_kaiserreich_ww
-			has_completed_focus = GER_the_monarchy_compromise_ww
+			# # has_completed_focus = GER_return_of_the_kaiser 
+			# # has_completed_focus = GER_the_monarchy_compromise
+			# # has_completed_focus = GER_revive_the_kaiserreich_ww
+			# # has_completed_focus = GER_the_monarchy_compromise_ww
 		}
 	}
 	prefix = "SMS "
@@ -2004,7 +1957,7 @@ GER_MR_HISTORICAL = { #Merchant Raiders
 	for_countries = { GER }
 
 	can_use = { 
-		has_completed_focus = GER_cruiser_warfare 
+		# # has_completed_focus = GER_cruiser_warfare 
 	}
 
 	type = ship
@@ -2031,7 +1984,7 @@ GER_PEOPLE_COMMUNIST = {
 	can_use = { 
 		OR = {
 			has_socialist_government_trigger = yes 
-			has_completed_focus = GER_start_the_proletarian_revolution
+			# # has_completed_focus = GER_start_the_proletarian_revolution
 		}
 	}
 	type = ship
@@ -2109,7 +2062,7 @@ GER_THEME_COMMUNIST_SLOGANS = {
 	can_use = { 
 		OR = {
 			has_socialist_government_trigger = yes 
-			has_completed_focus = GER_start_the_proletarian_revolution
+			# # has_completed_focus = GER_start_the_proletarian_revolution
 		}
 	}
 
@@ -2162,7 +2115,7 @@ GER_THEME_COMMUNIST_DDR = {
 	can_use = { 
 		OR = {
 			has_socialist_government_trigger = yes 
-			has_completed_focus = GER_start_the_proletarian_revolution
+			# # has_completed_focus = GER_start_the_proletarian_revolution
 		}
 	}
 
@@ -2312,8 +2265,8 @@ GER_THEME_COMMUNIST_DDR = {
 #	can_use = { 
 #		NOT = {
 #			OR = { 
-#				has_completed_focus = GER_return_of_the_kaiser 
-#				has_completed_focus = GER_the_monarchy_compromise
+#				# # has_completed_focus = GER_return_of_the_kaiser 
+#				# # has_completed_focus = GER_the_monarchy_compromise
 #			}
 #		}
 #	}
@@ -2360,8 +2313,8 @@ GER_THEME_COMMUNIST_DDR = {
 #	can_use = { 
 #		NOT = {
 #			OR = { 
-#				has_completed_focus = GER_return_of_the_kaiser 
-#				has_completed_focus = GER_the_monarchy_compromise
+#				# # has_completed_focus = GER_return_of_the_kaiser 
+#				# # has_completed_focus = GER_the_monarchy_compromise
 #			}
 #		}
 #	}
@@ -2409,8 +2362,8 @@ GER_THEME_COMMUNIST_DDR = {
 #	can_use = { 
 #		NOT = {
 #			OR = { 
-#				has_completed_focus = GER_return_of_the_kaiser 
-#				has_completed_focus = GER_the_monarchy_compromise
+#				# # has_completed_focus = GER_return_of_the_kaiser 
+#				# # has_completed_focus = GER_the_monarchy_compromise
 #			}
 #		}
 #	}
@@ -2462,8 +2415,8 @@ GER_THEME_COMMUNIST_DDR = {
 #	can_use = { 
 #		NOT = {
 #			OR = { 
-#				has_completed_focus = GER_return_of_the_kaiser 
-#				has_completed_focus = GER_the_monarchy_compromise
+#				# # has_completed_focus = GER_return_of_the_kaiser 
+#				# # has_completed_focus = GER_the_monarchy_compromise
 #			}
 #		}
 #	}
@@ -2602,8 +2555,8 @@ GER_THEME_COMMUNIST_DDR = {
 #	can_use = { 
 #		NOT = {
 #			OR = { 
-#				has_completed_focus = GER_return_of_the_kaiser 
-#				has_completed_focus = GER_the_monarchy_compromise
+#				# # has_completed_focus = GER_return_of_the_kaiser 
+#				# # has_completed_focus = GER_the_monarchy_compromise
 #			}
 #		}
 #	}
@@ -2648,8 +2601,8 @@ GER_THEME_COMMUNIST_DDR = {
 #	can_use = { 
 #		NOT = {
 #			OR = { 
-#				has_completed_focus = GER_return_of_the_kaiser 
-#				has_completed_focus = GER_the_monarchy_compromise
+#				# # has_completed_focus = GER_return_of_the_kaiser 
+#				# # has_completed_focus = GER_the_monarchy_compromise
 #			}
 #		}
 #	}
@@ -2681,8 +2634,8 @@ GER_THEME_COMMUNIST_DDR = {
 #	can_use = { 
 #		NOT = {
 #			OR = { 
-#				has_completed_focus = GER_return_of_the_kaiser 
-#				has_completed_focus = GER_the_monarchy_compromise
+#				# # has_completed_focus = GER_return_of_the_kaiser 
+#				# # has_completed_focus = GER_the_monarchy_compromise
 #			}
 #		}
 #	}
@@ -2728,8 +2681,8 @@ GER_THEME_COMMUNIST_DDR = {
 #	can_use = { 
 #		NOT = {
 #			OR = { 
-#				has_completed_focus = GER_return_of_the_kaiser 
-#				has_completed_focus = GER_the_monarchy_compromise
+#				# # has_completed_focus = GER_return_of_the_kaiser 
+#				# # has_completed_focus = GER_the_monarchy_compromise
 #			}
 #		}
 #	}
@@ -2800,8 +2753,8 @@ GER_THEME_COMMUNIST_DDR = {
 #	can_use = { 
 #		NOT = {
 #			OR = { 
-#				has_completed_focus = GER_return_of_the_kaiser 
-#				has_completed_focus = GER_the_monarchy_compromise
+#				# # has_completed_focus = GER_return_of_the_kaiser 
+#				# # has_completed_focus = GER_the_monarchy_compromise
 #			}
 #		}
 #	}
@@ -2851,8 +2804,8 @@ GER_THEME_COMMUNIST_DDR = {
 #	can_use = { 
 #		NOT = {
 #			OR = { 
-#				has_completed_focus = GER_return_of_the_kaiser 
-#				has_completed_focus = GER_the_monarchy_compromise
+#				# # has_completed_focus = GER_return_of_the_kaiser 
+#				# # has_completed_focus = GER_the_monarchy_compromise
 #			}
 #		}
 #	}
@@ -2902,8 +2855,8 @@ GER_THEME_COMMUNIST_DDR = {
 #	can_use = { 
 #		NOT = {
 #			OR = { 
-#				has_completed_focus = GER_return_of_the_kaiser 
-#				has_completed_focus = GER_the_monarchy_compromise
+#				# # has_completed_focus = GER_return_of_the_kaiser 
+#				# # has_completed_focus = GER_the_monarchy_compromise
 #			}
 #		}
 #	}
@@ -2946,8 +2899,8 @@ GER_THEME_COMMUNIST_DDR = {
 #
 #	can_use = { 
 #		OR = { 
-#			has_completed_focus = GER_return_of_the_kaiser 
-#			has_completed_focus = GER_the_monarchy_compromise
+#			# # has_completed_focus = GER_return_of_the_kaiser 
+#			# # has_completed_focus = GER_the_monarchy_compromise
 #		}
 #	}
 #	prefix = "SMS "
@@ -3016,8 +2969,8 @@ GER_THEME_COMMUNIST_DDR = {
 #
 #	can_use = { 
 #		OR = { 
-#			has_completed_focus = GER_return_of_the_kaiser 
-#			has_completed_focus = GER_the_monarchy_compromise
+#			# # has_completed_focus = GER_return_of_the_kaiser 
+#			# # has_completed_focus = GER_the_monarchy_compromise
 #		}
 #	}
 #	prefix = "SMS "
@@ -3051,8 +3004,8 @@ GER_THEME_COMMUNIST_DDR = {
 #
 #	can_use = { 
 #		OR = { 
-#			has_completed_focus = GER_return_of_the_kaiser 
-#			has_completed_focus = GER_the_monarchy_compromise
+#			# # has_completed_focus = GER_return_of_the_kaiser 
+#			# # has_completed_focus = GER_the_monarchy_compromise
 #		}
 #	}
 #	prefix = "SMS "
@@ -3103,8 +3056,8 @@ GER_THEME_COMMUNIST_DDR = {
 #	can_use = { 
 #		
 #		OR = { 
-#			has_completed_focus = GER_return_of_the_kaiser 
-#			has_completed_focus = GER_the_monarchy_compromise
+#			# # has_completed_focus = GER_return_of_the_kaiser 
+#			# # has_completed_focus = GER_the_monarchy_compromise
 #		}
 #		
 #	}
@@ -3174,8 +3127,8 @@ GER_THEME_COMMUNIST_DDR = {
 #
 #	can_use = { 
 #		OR = { 
-#			has_completed_focus = GER_return_of_the_kaiser 
-#			has_completed_focus = GER_the_monarchy_compromise
+#			# # has_completed_focus = GER_return_of_the_kaiser 
+#			# # has_completed_focus = GER_the_monarchy_compromise
 #		}
 #	}
 #	prefix = "SMS "
@@ -3295,8 +3248,8 @@ GER_THEME_COMMUNIST_DDR = {
 #
 #	can_use = { 
 #		OR = { 
-#			has_completed_focus = GER_return_of_the_kaiser 
-#			has_completed_focus = GER_the_monarchy_compromise
+#			# # has_completed_focus = GER_return_of_the_kaiser 
+#			# # has_completed_focus = GER_the_monarchy_compromise
 #		}
 #	}
 #
@@ -3326,8 +3279,8 @@ GER_THEME_COMMUNIST_DDR = {
 #
 #	can_use = { 
 #		OR = { 
-#			has_completed_focus = GER_return_of_the_kaiser 
-#			has_completed_focus = GER_the_monarchy_compromise
+#			# # has_completed_focus = GER_return_of_the_kaiser 
+#			# # has_completed_focus = GER_the_monarchy_compromise
 #		}
 #	}
 #
@@ -3375,8 +3328,8 @@ GER_THEME_COMMUNIST_DDR = {
 #
 #	can_use = { 
 #		OR = { 
-#			has_completed_focus = GER_return_of_the_kaiser 
-#			has_completed_focus = GER_the_monarchy_compromise
+#			# # has_completed_focus = GER_return_of_the_kaiser 
+#			# # has_completed_focus = GER_the_monarchy_compromise
 #		}
 #	}
 #
@@ -3418,8 +3371,8 @@ GER_THEME_COMMUNIST_DDR = {
 #
 #	can_use = { 
 #		OR = { 
-#			has_completed_focus = GER_return_of_the_kaiser 
-#			has_completed_focus = GER_the_monarchy_compromise
+#			# # has_completed_focus = GER_return_of_the_kaiser 
+#			# # has_completed_focus = GER_the_monarchy_compromise
 #		}
 #	}
 #
@@ -3463,8 +3416,8 @@ GER_THEME_COMMUNIST_DDR = {
 #
 #	can_use = { 
 #		OR = { 
-#			has_completed_focus = GER_return_of_the_kaiser 
-#			has_completed_focus = GER_the_monarchy_compromise
+#			# # has_completed_focus = GER_return_of_the_kaiser 
+#			# # has_completed_focus = GER_the_monarchy_compromise
 #		}
 #	}
 #
@@ -3510,8 +3463,8 @@ GER_THEME_COMMUNIST_DDR = {
 #
 #	can_use = { 
 #		OR = { 
-#			has_completed_focus = GER_return_of_the_kaiser 
-#			has_completed_focus = GER_the_monarchy_compromise
+#			# # has_completed_focus = GER_return_of_the_kaiser 
+#			# # has_completed_focus = GER_the_monarchy_compromise
 #		}
 #	}
 #
@@ -3558,8 +3511,8 @@ GER_THEME_COMMUNIST_DDR = {
 #
 #	can_use = { 
 #		OR = { 
-#			has_completed_focus = GER_return_of_the_kaiser 
-#			has_completed_focus = GER_the_monarchy_compromise
+#			# # has_completed_focus = GER_return_of_the_kaiser 
+#			# # has_completed_focus = GER_the_monarchy_compromise
 #		}
 #	}
 #	prefix = "SMS "

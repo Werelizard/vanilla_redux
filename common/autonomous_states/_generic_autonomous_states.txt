@@ -44,34 +44,6 @@ autonomy_state = {
 	}
 
 	allowed = {
-		if = {
-			limit = { has_dlc = "Death or Dishonor" }
-			OVERLORD = { NOT = { has_fascist_government_trigger = yes } }
-		}
-		if = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
-
-			NOT = {
-				AND = {
-					OVERLORD = { has_fascist_government_trigger = yes } 
-					OVERLORD = { tag = JAP } 
-				}
-				AND = {
-					OVERLORD = { has_authoritarian_government_trigger = yes } 
-					OVERLORD = { tag = JAP } 
-				}
-			}
-		}
-
-		if = {
-			limit = {
-				has_dlc = "No Compromise, No Surrender"
-				OVERLORD = { tag = CHI }
-			}
-			is_chinese_warlord = no
-		}
 	}
 
 	#ROOT is puppet - FROM is potential OVERLORD

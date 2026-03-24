@@ -1,0 +1,431 @@
+# Joining rules - ideology
+
+faction_rule_socialist_join_only = {
+	type = joining_rules
+	can_remove = {
+		always = no
+	}
+	visible = {
+		has_socialist_government_tooltip_trigger = yes
+	}
+	trigger = {
+		has_socialist_government_tooltip_trigger = yes
+	}
+}
+
+faction_rule_democratic_join_only = {
+	type = joining_rules
+	can_remove = {
+		always = no
+	}
+	visible = {
+		has_democratic_government_tooltip_trigger = yes
+	}
+	trigger = {
+		has_socialist_government_tooltip_trigger = yes
+	}
+}
+
+faction_rule_fascist_join_only = {
+	type = joining_rules
+	can_remove = {
+		always = no
+	}
+	visible = {
+		has_fascist_government_tooltip_trigger = yes
+	}
+	trigger = {
+		has_fascist_government_tooltip_trigger = yes
+	}
+}
+
+faction_rule_no_fascist_join = {
+	type = joining_rules
+	can_remove = {
+		always = no
+	}
+	visible = {
+		NOT = {
+			has_fascist_government_tooltip_trigger = yes
+		}
+	}
+	trigger = {
+		NOT = {
+			has_fascist_government_tooltip_trigger = yes
+		}
+	}
+}
+
+faction_rule_no_socialists_join = {
+	type = joining_rules
+	can_remove = {
+		always = no
+	}
+	visible = {
+		NOT = {
+			has_socialist_government_tooltip_trigger = yes
+		}
+	}
+	trigger = {
+		NOT = {
+			has_socialist_government_tooltip_trigger = yes
+		}
+	}
+}
+
+# Joining rules - geography
+
+faction_rule_same_continent_join = {
+	type = joining_rules
+	can_remove = {
+		always = no
+	}
+	visible = {
+		always = yes
+	}
+	trigger = {
+		ROOT = { is_on_same_continent_as = FROM }
+	}
+}
+
+# Joining rules - subjects
+
+faction_rule_subjects_only_join = {
+	type = joining_rules
+	can_remove = {
+		always = no
+	}
+	visible = {
+		always = yes
+	}
+	trigger = {
+		ROOT = { is_subject_of = FROM }
+	}
+}
+
+# Joining rules - war
+faction_rule_no_war= {
+	type = joining_rules
+	can_remove = {
+		always = no
+	}
+	visible = {
+		always = yes
+	}
+	trigger = {
+		has_war = no
+	}
+}
+
+faction_rule_no_offensive_war= {
+	type = joining_rules
+	can_remove = {
+		always = no
+	}
+	visible = {
+		always = yes
+	}
+	trigger = {
+		has_offensive_war = no
+	}
+}
+
+# Dissmissal Rules - Ideology
+faction_rule_dismissal_socialist = {
+	type = dismissal_rules
+	can_remove = {
+		always = no
+	}
+	visible = {
+		NOT = {
+			has_socialist_government_tooltip_trigger = yes
+		}
+	}
+	trigger = {
+		has_socialist_government_tooltip_trigger = yes
+	}
+}
+
+faction_rule_dismissal_fascist = {
+	type = dismissal_rules
+	can_remove = {
+		always = no
+	}
+	visible = {
+		NOT = {
+			has_fascist_government_tooltip_trigger = yes
+		}
+	}
+	trigger = {
+		has_fascist_government_tooltip_trigger = yes
+	}
+}
+
+faction_rule_dismissal_non_democratic = {
+	type = dismissal_rules
+	can_remove = {
+		always = no
+	}
+	visible = {
+		has_democratic_government_tooltip_trigger = yes
+	}
+	trigger = {
+		NOT = {
+			has_democratic_government_tooltip_trigger = yes
+		}
+	}
+}
+
+# Dissmissal Rules - Action
+faction_rule_dismissal_offensive_war = {
+	type = dismissal_rules
+	can_remove = {
+		always = no
+	}
+	visible = {
+		always = yes
+	}
+	trigger = {
+		has_offensive_war_without_friend = FROM
+	}
+}
+
+# War declaration - declarer
+faction_rule_war_declaration_leader_only = {
+	type = war_declaration_rules
+	can_remove = {
+		always = no
+	}
+	visible = {
+		always = yes
+	}
+	trigger = {
+		OR = {
+			is_faction_leader = yes
+			is_ai = no
+		}
+	}
+}
+
+# War declaration - target
+faction_rule_war_declaration_socialist_target = {
+	type = war_declaration_rules
+	can_remove = {
+		always = no
+	}
+	visible = {
+		NOT = {
+			has_socialist_government_tooltip_trigger = yes
+		}
+	}
+	trigger = {
+		FROM = {
+			has_socialist_government_tooltip_trigger = yes
+		}
+	}
+}
+
+faction_rule_war_declaration_non_socialist_target = {
+	type = war_declaration_rules
+	can_remove = {
+		always = no
+	}
+	visible = {
+		has_socialist_government_tooltip_trigger = yes
+	}
+	trigger = {
+		FROM = {
+			NOT = {
+				has_socialist_government_tooltip_trigger = yes
+			}
+		}
+	}
+}
+
+faction_rule_war_declaration_fascist_target = {
+	type = war_declaration_rules
+	can_remove = {
+		always = no
+	}
+	visible = {
+		NOT = {
+			has_fascist_government_tooltip_trigger = yes
+		}
+	}
+	trigger = {
+		FROM = {
+			has_fascist_government_tooltip_trigger = yes
+		}
+	}
+}
+
+faction_rule_war_declaration_non_democratic_target = {
+	type = war_declaration_rules
+	can_remove = {
+		always = no
+	}
+	visible = {
+		has_democratic_government_tooltip_trigger = yes
+	}
+	trigger = {
+		FROM = {
+			NOT = {
+				has_democratic_government_tooltip_trigger = yes
+			}
+		}
+	}
+}
+
+faction_rule_war_declaration_defensive_only = {
+	type = war_declaration_rules
+	can_remove = {
+		always = no
+	}
+	visible = {
+		always = yes
+	}
+	trigger = {
+		always = no
+	}
+}
+
+faction_rule_war_declaration_major_targets_only = {
+	type = war_declaration_rules
+	can_remove = {
+		always = no
+	}
+	visible = {
+		always = yes
+	}
+	trigger = {
+		FROM = {
+			is_major = yes
+		}
+	}
+}
+
+# War declaration - situation
+faction_rule_war_declaration_world_tension_high = {
+	type = war_declaration_rules
+	can_remove = {
+		always = no
+	}
+	visible = {
+		always = yes
+	}
+	trigger = {
+		threat > 0.25
+	}
+}
+
+# Peace Rules
+faction_rule_peace_puppeting_focus = {
+	type = peace_conference_rules
+	can_remove = {
+		always = no
+	}
+	visible = {
+		always = yes
+	}
+	peace_action_modifiers = {
+		faction_rule_modifier_encourage_puppet
+	}
+	modifier = {
+		custom_modifier_tooltip = faction_rule_modifier_encourage_puppet_tt
+	} 
+}
+
+
+faction_rule_peace_liberation_focus = {
+	type = peace_conference_rules
+	can_remove = {
+		always = no
+	}
+	visible = {
+		always = yes
+	}
+	peace_action_modifiers = {
+		faction_rule_modifier_encourage_liberate
+	}
+	modifier = {
+		custom_modifier_tooltip = faction_rule_modifier_encourage_liberate_tt
+	} 
+}
+
+faction_rule_peace_ideology_focus = {
+	type = peace_conference_rules
+	can_remove = {
+		always = no
+	}
+	visible = {
+		always = yes
+	}
+	peace_action_modifiers = {
+		faction_rule_modifier_encourage_force_government
+	}
+	modifier = {
+		custom_modifier_tooltip = faction_rule_modifier_encourage_force_government_tt
+	} 
+}
+
+faction_rule_peace_conquest_focus = {
+	type = peace_conference_rules
+	can_remove = {
+		always = no
+	}
+	visible = {
+		always = yes
+	}
+	peace_action_modifiers = {
+		faction_rule_modifier_encourage_take_states
+	}
+	modifier = {
+		custom_modifier_tooltip = faction_rule_modifier_encourage_take_states_tt
+	} 
+}
+
+faction_rule_peace_take_claimed_focus = {
+	type = peace_conference_rules
+	peace_action_modifiers = {
+		faction_rule_modifier_encourage_take_claimed_states
+	}
+	modifier = {
+		custom_modifier_tooltip = faction_rule_modifier_encourage_take_claimed_states_tt
+	}
+}
+
+# FACTION LEADERS
+faction_rule_change_leader_never = {
+	type = change_leader_rules
+	can_remove = { 
+		always = no
+	}
+	modifier = {
+		
+	}
+	trigger = {
+		always = no
+	}
+}
+
+# GOAL RULES
+faction_rule_set_goals_leader_only = {
+	type = member_rules
+	trigger = {
+		OR = {
+			is_faction_leader = yes	
+			is_ai = no
+		}
+	}
+}
+
+# GOVERNMETNS IN EXILE
+faction_rule_government_in_exile_allowed = {
+	type = member_rules
+	can_remove = { 
+		always = no
+	}
+	government_in_exile_allowed_trigger = {
+		always = yes
+	}
+}

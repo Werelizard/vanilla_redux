@@ -140,3 +140,106 @@ sp_land_stronghold_network_collapse_workers_drafted = {
 	local_resources_factor = -0.5
 	state_production_speed_buildings_factor = -0.5
 }
+
+#### Resistance
+
+sabotaged_resources = {
+	remove_trigger = { 
+		ROOT = {
+			has_resistance = no
+		}
+	}
+	
+	icon = GFX_modifiers_sabotaged_resource
+	
+	temporary_state_resource_oil = sabotaged_oil
+	temporary_state_resource_aluminium = sabotaged_aluminium
+	temporary_state_resource_rubber = sabotaged_rubber
+	temporary_state_resource_tungsten = sabotaged_tungsten
+	temporary_state_resource_steel = sabotaged_steel
+	temporary_state_resource_chromium = sabotaged_chromium
+	temporary_state_resource_coal = sabotaged_coal
+}
+
+sabotaged_resources = {
+	remove_trigger = { 
+		ROOT = {
+			has_resistance = no
+		}
+	}
+	
+	icon = GFX_modifiers_sabotaged_resource
+	
+	temporary_state_resource_oil = sabotaged_oil
+	temporary_state_resource_aluminium = sabotaged_aluminium
+	temporary_state_resource_rubber = sabotaged_rubber
+	temporary_state_resource_tungsten = sabotaged_tungsten
+	temporary_state_resource_steel = sabotaged_steel
+	temporary_state_resource_chromium = sabotaged_chromium
+	temporary_state_resource_coal = sabotaged_coal
+}
+
+international_city = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_sabotaged_resource
+	
+	state_resources_factor = -1
+	recruitable_population_factor = -1
+	local_factories = -1
+	disable_strategic_redeployment = yes
+}
+
+international_city_2 = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_sabotaged_resource
+	
+	state_resources_factor = -0.75
+	recruitable_population_factor = -0.75
+	local_factories = -0.75
+	resistance_growth = 1.2
+	disable_strategic_redeployment = yes
+}
+
+international_city_3 = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_sabotaged_resource
+	
+	state_resources_factor = -0.5
+	recruitable_population_factor = -0.5
+	local_factories = -0.5
+	resistance_growth = 0.6
+	compliance_gain = 0.1
+	disable_strategic_redeployment = yes
+}
+
+international_city_4 = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_sabotaged_resource
+	
+	state_resources_factor = -0.25
+	recruitable_population_factor = -0.25
+	local_factories = -0.25
+	resistance_growth = 0.2
+	compliance_gain = 0.4
+	disable_strategic_redeployment = yes
+}
+
+unity_propaganda = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_sabotaged_resource
+	
+	compliance_gain = 0.7
+}
+
+military_appeasement = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_sabotaged_resource
+	
+	resistance_growth = -0.5
+}

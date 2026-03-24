@@ -84,6 +84,78 @@ world_countries_in_faction = {
 	name = COLLECTION_FACTION_MEMBERS
 }
 
+# countries
+
+countries_europe = {
+	input = game:all_countries
+	operators = {
+		limit = {
+			is_on_continent = europe			
+		}
+	}
+	name = COLLECTION_EUROPEAN_COUNTRIES
+}
+
+countries_africa = {
+	input = game:all_countries
+	operators = {
+		limit = {
+			is_on_continent = africa			
+		}
+	}
+	name = COLLECTION_AFRICAN_COUNTRIES
+}
+
+countries_asia = {
+	input = game:all_countries
+	operators = {
+		limit = {
+			is_on_continent = asia			
+		}
+	}
+	name = COLLECTION_ASIAN_COUNTRIES
+}
+
+countries_north_america = {
+	input = game:all_countries
+	operators = {
+		limit = {
+			is_on_continent = north_america			
+		}
+	}
+	name = COLLECTION_NORTH_AMERICA_COUNTRIES
+}
+
+countries_south_america = {
+	input = game:all_countries
+	operators = {
+		limit = {
+			is_on_continent = south_america		
+		}
+	}
+	name = COLLECTION_SOUTH_AMERICA_COUNTRIES
+}
+
+countries_middle_east = {
+	input = game:all_countries
+	operators = {
+		limit = {
+			is_on_continent = middle_east		
+		}
+	}
+	name = COLLECTION_MIDDLE_EAST_COUNTRIES
+}
+
+countries_australia = {
+	input = game:all_countries
+	operators = {
+		limit = {
+			is_on_continent = australia		
+		}
+	}
+	name = COLLECTION_AUSTRALIAN_COUNTRIES
+}
+
 # States 
 
 states_europe = {
@@ -93,7 +165,7 @@ states_europe = {
 			is_on_continent = europe			
 		}
 	}
-	name = COLLECTION_
+	name = COLLECTION_EUROPEAN_STATES
 }
 
 faction_states_in_europe = {
@@ -194,4 +266,128 @@ faction_states_in_africa = {
 		}
 	}
 	name = COLLECTION_FACTIONS_STATES_IN_AFRICA
+}
+
+# Referential
+
+countries_my_continent = {
+	input = game:all_countries
+	name = COLLECTION_ALL_SAME_CONTINENT_COUNTRIES
+	operators = {
+		limit = {
+			is_on_same_continent_as = ROOT
+		}
+	}
+}
+
+communist_or_capitulated_countries_my_continent = {
+	input = game:all_countries
+	name = ALL_COMMUNIST_OR_CAPITUALTED_CONTRIES_SAME_CONTINENT
+	operators = {
+		limit = {
+			is_on_same_continent_as = ROOT
+			OR = {
+				has_socialist_government_trigger = yes
+				has_capitulated = yes
+			}
+		}
+	}
+}
+
+democratic_or_capitulated_countries_my_continent = {
+	input = game:all_countries
+	name = ALL_DEMOCRATIC_OR_CAPITUALTED_CONTRIES_SAME_CONTINENT
+	operators = {
+		limit = {
+			is_on_same_continent_as = ROOT
+			OR = {
+				has_democratic_government_trigger = yes
+				has_capitulated = yes
+			}
+		}
+	}
+}
+
+authoritarian_or_capitulated_countries_my_continent = {
+	input = game:all_countries
+	name = ALL_AUTHORITARIAN_OR_CAPITUALTED_CONTRIES_SAME_CONTINENT
+	operators = {
+		limit = {
+			is_on_same_continent_as = ROOT
+			OR = {
+				has_authoritarian_government_trigger = yes
+				has_capitulated = yes
+			}
+		}
+	}
+}
+
+fascist_or_capitulated_countries_my_continent = {
+	input = game:all_countries
+	name = ALL_AUTHORITARIAN_OR_CAPITUALTED_CONTRIES_SAME_CONTINENT
+	operators = {
+		limit = {
+			is_on_same_continent_as = ROOT
+			OR = {
+				has_fascist_government_trigger = yes
+				has_capitulated = yes
+			}
+		}
+	}
+}
+
+world_non_communist_controlled_states = {
+	input = game:all_states
+	name = WORLD_NON_COMMUNIST_CONTROLLED_STATES
+	operators = {
+		limit = {
+			controller = { 
+				NOT = { 
+					has_socialist_government_trigger = yes
+				} 
+			}
+		}
+	}
+}
+
+world_non_democratic_controlled_states = {
+	input = game:all_states
+	name = WORLD_NON_DEMOCRATIC_CONTROLLED_STATES
+	operators = {
+		limit = {
+			controller = { 
+				NOT = { 
+					has_democratic_government_trigger = yes
+				} 
+			}
+		}
+	}
+}
+
+world_non_authoritarian_controlled_states = {
+	input = game:all_states
+	name = WORLD_NON_AUTHORITARIAN_CONTROLLED_STATES
+	operators = {
+		limit = {
+			controller = { 
+				NOT = { 
+					has_authoritarian_government_trigger = yes
+				} 
+			}
+		}
+	}
+}
+
+world_non_fascist_controlled_states = {
+	input = game:all_states
+	name = WORLD_NON_FASCIST_CONTROLLED_STATES
+	operators = {
+		limit = {
+			controller = { 
+				NOT = { 
+					has_fascist_government_trigger = yes
+				} 
+			}
+		}
+	}
 }
