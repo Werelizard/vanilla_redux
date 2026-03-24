@@ -324,7 +324,7 @@ is_friendly_ideology = {
 			# Target is authoritarian but NOT autocracy
 			has_authoritarian_government_trigger = yes
 			NOT = {
-				has_government = autocracy
+				has_government = autocratic
 			}
 			# Conservatives and other authoritarians should be friendly
 			ROOT = {
@@ -336,7 +336,7 @@ is_friendly_ideology = {
 		}
 		AND = {
 			# Target is an autocratic government
-			has_government = autocracy
+			has_government = autocratic
 			# Fascist countires and authoritarian democrats are fond of military/totalist countries
 			ROOT = {
 				OR = {
@@ -351,7 +351,7 @@ is_friendly_ideology = {
 			# Autocracies and fascist countries align with fascist nations
 			ROOT = {
 				OR = {
-					has_government = autocracy
+					has_government = autocratic
 					has_fascist_government_trigger = yes
 				}
 			}

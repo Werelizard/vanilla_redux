@@ -1213,7 +1213,7 @@ generic_decision_war_measures = {
 		}
 		###
 		custom_cost_trigger = {
-			command_power = 25
+			command_power > 24
 		}
 		custom_cost_text = VX_25_CP_COST
 		days_remove = 120
