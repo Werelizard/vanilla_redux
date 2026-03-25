@@ -10,7 +10,7 @@ tags={
 }
 
 name="VanillaRedux"
-supported_version="1.17.*"
+supported_version="1.17.5.1"
 
 replace_path="common/achievements.txt"
 replace_path="common/ai_equipment"
