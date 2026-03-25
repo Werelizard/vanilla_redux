@@ -64,6 +64,5 @@ replace_path="common/units/names_divisions"
 replace_path="common/units/names_ships"
 replace_path="events"
 replace_path="history/countries"
-replace_path="history/units"
 
 path="C:/Users/lyral/Documents/Paradox Interactive/Hearts of Iron IV/mod/VanillaRedux"

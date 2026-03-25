@@ -1,0 +1,11 @@
+dummy_achievement = {
+	id = 1
+	
+	possible = {
+		always = no
+	}
+	
+	happened = {
+		has_country_flag = dummy_achievement_flag
+	}
+}

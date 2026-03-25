@@ -1,5 +1,30 @@
 @manifest_fulfilled_value = 0.8
 
+faction_manifest_generic = {
+	# Generic manifest - dummy
+	name = faction_manifest_generic
+	description = faction_manifest_generic_desc
+
+	is_manifest = yes
+
+	ratio_progress = {
+		total_amount_collection = game:all_countries
+		completed_amount_collection = country:faction_members
+
+		range = {
+			
+		}
+
+		scale = {
+			
+		}
+
+		progress_sections = {
+			
+		}
+	}
+}
+
    ###    ##       ##       #### ########  ###### 
   ## ##   ##       ##        ##  ##       ##    ##
  ##   ##  ##       ##        ##  ##       ##      
