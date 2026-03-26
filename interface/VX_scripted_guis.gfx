@@ -1,0 +1,26 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_pol_header"
+		textureFile = "gfx/interface/vx_pol_header.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_ideologies"
+		textureFile = "gfx/interface/vx_pol_ideologies.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_chart"
+		textureFile = "gfx/interface/vx_pol_chart.dds"
+	}
+	spriteType = {
+		name = "GFX_sas_pol_ideas_headers"
+		textureFile = "gfx/interface/vx_pol_ideas_headers.dds"
+	}
+	spriteType = {
+		name = "GFX_sas_pol_fac_bop"
+		textureFile = "gfx/interface/vx_pol_faction_BOP.dds"
+	}
+	spriteType = {
+		name = "GFX_sas_pol_coalition"
+		textureFile = "gfx/interface/vx_pol_coalition_party_bg.dds"
+	}
+}
