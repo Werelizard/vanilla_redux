@@ -1,4 +1,15 @@
-   ###    ##       ##       #### ########  ###### 
+faction_generic_faction_members = {
+	# do not use
+	input = game:all_countries
+	operators = {
+		faction_members
+		limit = {
+			has_capitulated = no
+		}
+	}
+}
+
+###    ##       ##       #### ########  ###### 
   ## ##   ##       ##        ##  ##       ##    ##
  ##   ##  ##       ##        ##  ##       ##      
 ##     ## ##       ##        ##  ######    ###### 

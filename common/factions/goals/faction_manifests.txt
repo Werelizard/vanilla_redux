@@ -9,18 +9,23 @@ faction_manifest_generic = {
 
 	ratio_progress = {
 		total_amount_collection = game:all_countries
-		completed_amount_collection = country:faction_members
+		completed_amount_collection = collection:faction_generic_faction_members
 
 		range = {
 			
 		}
 
 		scale = {
-			
+			war_support_factor = 0.1
 		}
 
 		progress_sections = {
-			
+			manifest_fulfilled = {
+				min = @manifest_fulfilled_value
+				modifier = { 
+					drift_defence_factor = 1
+				}
+			}
 		}
 	}
 }

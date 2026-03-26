@@ -73,7 +73,7 @@ ideologies = {
 			}
 		}
 
-		color = { 105 210 0 }
+		color = { 227 208 2 }
 	}
 	# Conservative 
 	conservative = {
