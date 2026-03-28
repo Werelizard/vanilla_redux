@@ -1,0 +1,14 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_portrait_GER_erich_koch_weser"
+		textureFile = "gfx/leaders/GER/vx_erich_koch_weser.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_GER_eduard_dingeldey"
+		textureFile = "gfx/leaders/GER/vx_eduard_dingeldey.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_GER_heinrich_brunning"
+		textureFile = "gfx/leaders/GER/vx_heinrich_brunning.tga"
+	}
+} 

@@ -61,7 +61,7 @@ guiTypes = {
 			name = "pol_parties_bg"
 				size = {
 					width = 535
-					height = 167
+					height = 183
 				}
 
 			position = { x= 7 y = 293 }
@@ -152,7 +152,7 @@ guiTypes = {
 			name = "pol_ruling_party_ideology_text_bg"
 				size = {
 					width = 192
-					height = 68
+					height = 80
 				}
 
 			position = { x= 175 y = 388 }

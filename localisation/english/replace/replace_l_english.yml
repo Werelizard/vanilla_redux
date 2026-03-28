@@ -1,2 +1,15 @@
 ﻿l_english:
  has_same_ideology_tt:0 "Has the same §YGovernment Type§! as §Y[ROOT.GetFlag] [ROOT.GetNameDef]§!\n"
+
+ # COUNTRY NAMES REPLACER TEEHEE
+ GER_fascist:0 "German Reich"
+ GER_fascist_DEF:0 "the German Reich"
+ GER_authoritarian_socialist:0 "Socialist Republic of Germany"
+ GER_authoritarian_socialist_DEF:0 "the Socialist Republic of Germany"
+ GER_vanguard_socialist:0 "Socialist Republic of Germany"
+ GER_vanguard_socialist_DEF:0 "the Socialist Republic of Germany"
+ GER_revolutionary_socialist:0 "Socialist Republic of Germany"
+ GER_revolutionary_socialist_DEF:0 "the Socialist Republic of Germany"
+ GER:0 "Germany"
+ GER_DEF:0 "Germany"
+ GER_ADJ:0 "German"

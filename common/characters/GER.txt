@@ -1,0 +1,218 @@
+###################
+# STARTING LEADER
+###################
+
+characters = {
+	VX_character_ADOLF_HITLER = {
+		name = VX_character_ADOLF_HITLER
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GER_adolf_hitler
+			}
+		}
+		country_leader = {
+			ideology = fascist_subtype
+			traits = {
+				GER_fuhrer_trait
+			}
+			id = -1
+		}		
+		corps_commander = {
+			visible = {
+				always = no
+			}
+			skill = 0
+		}
+	}
+}
+
+###################
+# PARTY LEADERS
+###################
+
+characters = {
+	VX_character_ERNST_THALMANN = {
+		name = VX_character_ERNST_THALMANN
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GER_ernst_thalmann
+			}
+		}
+		country_leader = {
+			ideology = authoritarian_socialist_subtype
+			traits = {
+				GER_dedicated_stalinist
+			}
+			id = -1
+		}
+		country_leader = {
+			ideology = vanguard_socialist_subtype
+			traits = {
+				GER_dedicated_stalinist
+			}
+			id = -1
+		}
+		country_leader = {
+			ideology = revolutionary_socialist_subtype
+			traits = {
+				GER_dedicated_stalinist
+			}
+			id = -1
+		}
+		corps_commander = {
+			visible = {
+				always = no
+			}
+			skill = 0
+		}
+	}
+
+	VX_character_HANS_VOGEL = {
+		name = VX_character_HANS_VOGEL
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GER_hans_vogel
+			}
+		}
+		country_leader = {
+			ideology = social_democratic_subtype
+			traits = {
+				GER_staunch_social_democrat
+			}
+			id = -1
+		}
+		corps_commander = {
+			visible = {
+				always = no
+			}
+			skill = 0
+		}
+	}
+
+	VX_character_ERICH_KOCH_WESER = {
+		name = VX_character_ERICH_KOCH_WESER
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GER_erich_koch_weser
+			}
+		}
+		country_leader = {
+			ideology = progressive_subtype
+			traits = {
+				
+			}
+			id = -1
+		}
+		corps_commander = {
+			visible = {
+				always = no
+			}
+			skill = 0
+		}
+	}
+
+	VX_character_EDUARD_DINGLEDEY = {
+		name = VX_character_EDUARD_DINGLEDEY
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GER_eduard_dingeldey
+			}
+		}
+		country_leader = {
+			ideology = liberal_subtype
+			traits = {
+				
+			}
+			id = -1
+		}
+		corps_commander = {
+			visible = {
+				always = no
+			}
+			skill = 0
+		}
+	}
+
+	VX_character_HEINRICH_BRUNNING = {
+		name = VX_character_HEINRICH_BRUNNING
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GER_heinrich_brunning
+			}
+		}
+		country_leader = {
+			ideology = conservative_subtype
+			traits = {
+				
+			}
+			id = -1
+		}
+		corps_commander = {
+			visible = {
+				always = no
+			}
+			skill = 0
+		}
+	}
+
+	VX_character_CARL_FRIEDRICH_GOERDLER = {
+		name = VX_character_CARL_FRIEDRICH_GOERDLER
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GER_carl_friedrich_goerdeler
+			}
+		}
+		country_leader = {
+			ideology = authoritarian_democrat_subtype
+			traits = {
+				GER_national_conservative
+			}
+			id = -1
+		}
+		country_leader = {
+			ideology = autocratic_subtype
+			traits = {
+				GER_national_conservative
+			}
+			id = -1
+		}
+		corps_commander = {
+			visible = {
+				always = no
+			}
+			skill = 0
+		}
+	}
+}
+
+###################
+# ADVISORS
+###################
+
+characters = {
+	
+}
+
+###################
+# GENERALS
+###################
+
+characters = {
+	
+}
+
+###################
+# ADMIRALS
+###################
+
+characters = {
+	
+}
+
+###################
+# SCIENTISTS
+###################
+
+characters = {
+	
+}

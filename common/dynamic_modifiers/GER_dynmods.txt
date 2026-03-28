@@ -1,0 +1,24 @@
+GER_mefo_dynmod = {
+	enable = { always = yes }
+	icon = GFX_idea_ger_mefo_bills
+	consumer_goods_expected_value = GER_mefo_consumergoods_var
+}
+
+GER_army_dynmod = {
+	enable = { always = yes }
+	icon = GFX_idea_GER_army
+	recruitable_population_factor = GER_army_popfactor_var
+	max_training  = GER_army_maxtraining_var
+}
+
+GER_navy_dynmod = {
+	enable = { always = yes }
+	icon = GFX_idea_GER_navy
+	navy_max_range_factor = GER_navy_range_var
+}
+
+GER_airforce_dynmod = {
+	enable = { always = yes }
+	icon = GFX_idea_GER_airforce
+	air_fuel_consumption_factor = GER_airforce_fuel_var
+}

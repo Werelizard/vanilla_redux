@@ -77,11 +77,11 @@ spritetypes = {
 	}
 	spritetype = {
 		name = "GFX_ideology_autocratic_subtype"
-        texturefile = "gfx/interface/ideologies/absolutemonarchy.tga"
+        texturefile = "gfx/interface/ideologies/reactionaryautocracy.tga"
 	}
 	spritetype = {
 		name = "GFX_ideology_absolute_monarchy_subtype"
-        texturefile = "gfx/interface/ideologies/reactionaryautocracy.tga"
+        texturefile = "gfx/interface/ideologies/absolutemonarchy.tga"
 	}
 	spritetype = {
 		name = "GFX_ideology_fascist_group"

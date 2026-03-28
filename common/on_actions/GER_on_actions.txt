@@ -1,0 +1,14 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			GER = {
+				# Removes the dummy ideas for germany
+				remove_ideas = ger_dummy_MEFO
+				remove_ideas = ger_dummy_MEFO
+				remove_ideas = ger_dummy_army
+				remove_ideas = ger_dummy_navy
+				remove_ideas = ger_dummy_airforce
+			}
+		}
+	}
+}

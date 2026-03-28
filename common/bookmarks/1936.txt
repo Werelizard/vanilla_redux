@@ -4,12 +4,12 @@ bookmarks = {
 		desc = "GATHERING_STORM_DESC"
 		date = 1936.1.1.12
 		picture = "GFX_select_date_1936"
-		default_country = "USA"
+		default_country = "GER"
 		default = yes
 		
-		"USA"={
-			history = "USA_GATHERING_STORM_DESC"
-			ideology = liberal
+		"GER"={
+			history = "GER_1936"
+			ideology = fascism
 			ideas = {
 				
 			}

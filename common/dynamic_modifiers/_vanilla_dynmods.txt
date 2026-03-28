@@ -12,7 +12,6 @@ ETH_state_development_dynamic_modifier = { #STATE MODIFIER
 }
 
 
-
 dam_blown_modifier = { #State Modifier
 	enable = { always = yes }
 

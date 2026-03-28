@@ -1,0 +1,26 @@
+spriteTypes = {
+	spritetype = {
+		name = "GFX_idea_ger_enabling_act"
+        texturefile = "gfx/interface/ideas/authoritarian_power.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ger_mefo_bills"
+		texturefile = "gfx/interface/ideas/idea_ger_mefo_bills.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ger_dummy_MEFO"
+		texturefile = "gfx/interface/ideas/idea_ger_mefo_bills.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ger_dummy_army"
+		texturefile = "gfx/interface/ideas/idea_GER_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ger_dummy_airforce"
+		texturefile = "gfx/interface/ideas/idea_GER_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ger_dummy_navy"
+		texturefile = "gfx/interface/ideas/idea_GER_navy.dds"
+	}
+}

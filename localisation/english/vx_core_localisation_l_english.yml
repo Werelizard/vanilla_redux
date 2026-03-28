@@ -1,0 +1,215 @@
+﻿l_english: 
+ ### DECISIONS ###
+ generic_support_government:0 "Organise Political Rallies"
+ generic_race_for_the_bomb:0 "Race for the Bomb"
+ generic_improve_worker_conditions:0 "Improve Worker Conditions"
+ ban_socialist_parties:0 "Ban Socialist Parties"
+ ban_democratic_parties:0 "Ban Democratic Parties"
+ ban_authoritarian_parties:0 "Ban Authoritarian Parties"
+ ban_fascist_parties:0 "Ban Fascist Parties"
+ #
+ generic_war_propaganda:0 "War Propaganda"
+ generic_war_propaganda_casualties:0 "Extoll Heroism"
+ generic_war_propaganda_convoys:0 "Encourage Frugality"
+ generic_war_propaganda_bombing:0 "Bolster Spirits"
+ #
+ crisis_mission_strikes:0 "Looming Strikes"
+ crisis_mission_deserters:0 "Looming Desertions"
+ crisis_mission_protests:0 "Looming Protests"
+ crisis_solve_strikes:0 "End Nation-Wide Strikes"
+ crisis_solve_desertions:0 "Deal with Deserters"
+ crisis_solve_protests:0 "End Nation-Wide Protests"
+
+ ### DECISION CATEGORIES ###
+ VX_25_CP_COST:0 "£command_power §Y25§!"
+ VX_25_CP_COST_blocked:0 "£command_power §R25§!"
+ VX_25_CP_COST_tooltip:0 "It costs £command_power §Y25§! to take this decisions"
+
+ ### DECISION TOOLTIPS ###
+ stability_loss_on_party_pop_tt:0 "Stability will be §rdeducted§! proportional to the popularity of banned parties"
+
+ ### DYNAMIC MODIFIERS - COUNTRY BASED ###
+ 
+ coalitions_dynmod:0 "Coalitions"
+
+ ### DYNAMIC MODIFIERS - STATE BASED ###
+
+ ### IDEOLOGIES / GOVERNMENT TYPES ###
+ socialist_government:0 "Socialist Government"
+ democratic_government:0 "Democratic Government"
+ authoritarian_government:0 "Authoritarian Government"
+ totalitarian_government:0 "Totalitarian Government"
+
+ authoritarian_socialist:0 "Authoritarian Socialist"
+ authoritarian_socialist_noun:0 "Authoritarian Socialism"
+ authoritarian_socialist_desc:0 "$totalitarian_government$"
+ authoritarian_socialist_subtype:0 "$authoritarian_socialist_noun$"
+ authoritarian_socialist_subtype_desc:0 ""
+
+ vanguard_socialist:0 "Vanugard Socialist"
+ vanguard_socialist_noun:0 "Vanguard Socialism"
+ vanguard_socialist_desc:0 "$socialist_government$"
+ vanguard_socialist_subtype:0 "$vanguard_socialist_noun$"
+ vanguard_socialist_subtype_desc:0 ""
+
+ revolutionary_socialist:0 "Revolutionary Socialist"
+ revolutionary_socialist_noun:0 "Revolutionary Socialism"
+ revolutionary_socialist_desc:0 "$socialist_government$"
+ revolutionary_socialist_subtype:0 "$revolutionary_socialist_noun$"
+ revolutionary_socialist_subtype_desc:0 ""
+ anarcho_communist_subtype:0 "Anarcho-Communism"
+ anarcho_communist_subtype_desc:0 "$revolutionary_socialist_subtype_desc$"
+
+ social_democratic:0 "Social Democratic"
+ social_democratic_noun:0 "Social Democracy"
+ social_democratic_desc:0 "$democratic_government$"
+ social_democratic_subtype:0 "$social_democratic_noun$"
+ social_democratic_subtype_desc:0 ""
+
+ progressive:0 "Progressive"
+ progressive_noun:0 "Progressivism"
+ progressive_desc:0 "$democratic_government$"
+ progressive_subtype:0 "$progressive_noun$"
+ progressive_subtype_desc:0 ""
+
+ liberal:0 "Liberal"
+ liberal_noun:0 "Liberalism"
+ liberal_desc:0 "$democratic_government$"
+ liberal_subtype:0 "$liberal_noun$"
+ liberal_subtype_desc:0 ""
+ anarcho_liberalism_subtype:0 "Anarcho-Liberalism"
+ anarcho_liberalism_subtype_desc:0 "$liberal_subtype_desc$"
+
+ conservative:0 "Conservative"
+ conservative_noun:0 "Conservatism"
+ conservative_desc:0 "$democratic_government$"
+ conservative_subtype:0 "$conservative_noun$"
+ conservative_subtype_desc:0 ""
+
+ authoritarian_democrat:0 "Authoritarian Democrat"
+ authoritarian_democrat_noun:0 "Authoritarian Democracy"
+ authoritarian_democrat_desc:0 "$authoritarian_government$"
+ authoritarian_democrat_subtype:0 "$authoritarian_democrat_noun$"
+ authoritarian_democrat_subtype_desc:0 ""
+
+ autocratic:0 "Paternalist"
+ autocratic_noun:0 "Paternal Conservatism"
+ autocratic_desc:0 "$authoritarian_government$"
+ autocratic_subtype:0 "$autocratic_noun$"
+ autocratic_subtype_desc:0 ""
+ absolute_monarchy_subtype:0 "Absolute Monarchy"
+ absolute_monarchy_subtype_desc:0 "$autocratic_subtype_desc$"
+
+ fascist:0 "Fascist"
+ fascist_noun:0 "Fascism"
+ fascist_desc:0 "$totalitarian_government$"
+ fascist_subtype:0 "$fascist_noun$"
+ fascist_subtype_desc:0 ""
+
+ authoritarian_socialist_drift:0 "Daily $authoritarian_socialist$ Drift"
+ revolutionary_socialist_drift:0 "Daily $social_democratic$ Drift"
+ progressive_drift:0 "Daily $progressive$ Drift"
+ liberal_drift:0 "Daily $liberal$ Drift"
+ conservative_drift:0 "Daily $conservative$ Drift"
+ authoritarian_democrat_drift:0 "Daily $authoritarian_democrat$ Drift"
+ autocratic_drift:0 "Daily $autocratic$ Drift"
+ fascist_drift:0 "Daily $fascist$ Drift§"
+
+ ### OPINION MODIFIERS ###
+
+ VX_same_ideology:0 "Same Ideology"
+ VX_same_ideology_group:0 "Same Government Type"
+ VX_similar_ideology:0 "Similar Ideology"
+ VX_different_ideology:0 "Different Ideology"
+
+ ### RESOURCES ###
+ electricity:0 "Electricity"
+ uranium:0 "Uranium"
+
+ ### SCRIPTED EFFECTS ###
+
+ authsoc_join_coalition_tt:0 "The £autsoc_texticon  §rAuthoritarian Socialists§! will join the coalition"
+ vansoc_join_coalition_tt:0 "The £vansoc_texticon  §RVanguard Socialists§! will join the coalition"
+ revsoc_join_coalition_tt:0 "The £revsoc_texticon  §RRevolutionary Socialists§! will join the coalition"
+ socdem_join_coalition_tt:0 "The £socdem_texticon  §pSocial Democrats§! will join the coalition"
+ progressive_join_coalition_tt:0 "The £prog_texticon  §PProgressives§! will join the coalition"
+ liberal_join_coalition_tt:0 "The £liberal_texticon  §YLiberals§! will join the coalition"
+ conservatives_join_coalition_tt:0 "The £cons_texticon  §cConservatives§! will join the coalition"
+ authdem_join_coalition_tt:0 "The £autdem_texticon  §gAuthoritarian Democrats§! will join the coalition"
+ autocrat_join_coalition_tt:0 "The £autreac_texticon  §lPaternalists§! will join the coalition"
+ fascist_join_coalition_tt:0 "The £fascism_texticon  §fFascists§! will join the coalition"
+
+ authsoc_leave_coalition_tt:0 "The £autsoc_texticon  §rAuthoritarian Socialists§! will leave the coalition"
+ vansoc_leave_coalition_tt:0 "The £vansoc_texticon  §RVanguard Socialists§! will leave the coalition"
+ revsoc_leave_coalition_tt:0 "The £revsoc_texticon  §RRevolutionary Socialists§! will leave the coalition"
+ socdem_leave_coalition_tt:0 "The £socdem_texticon£  §pSocial Democrats§! will leave the coalition"
+ progressive_leave_coalition_tt:0 "The £prog_texticon  §PProgressives§! will leave the coalition"
+ liberal_leave_coalition_tt:0 "The £liberal_texticon  §YLiberals§! will leave the coalition"
+ conservatives_leave_coalition_tt:0 "The £cons_texticon  §cConservatives§! will leave the coalition"
+ authdem_leave_coalition_tt:0 "The £autdem_texticon  §gAuthoritarian Democrats§! will leave the coalition"
+ autocrat_leave_coalition_tt:0 "The £autreac_texticon  §lPaternalists§! will leave the coalition"
+ fascist_leave_coalition_tt:0 "The £fascism_texticon  §fFascists§! will leave the coalition"
+
+ remove_coalitions_tt:0 "Disands all active coaltions"
+
+ ### SRIPTED TRIGGERS ###
+
+ authsoc_coalition_tt:0 "In a coaltion with the §rAuthoritarian Socialists§!"
+ vansoc_coalition_tt:0 "In a coalition with the §RVanguard Socialists§!"
+ revsoc_coalition_tt:0 "In a coalition with the §RRevolutionary Socialists§!"
+ socdem_coalition_tt:0 "In a coalition with the §pSocial Democrats§!"
+ progressive_coalition_tt:0 "In a coalition with the §PProgressives§!"
+ liberal_coalition_tt:0 "In a coalition with the §YLiberals§!"
+ conservative_coalition_tt:0 "In a coalition with the §cConservatives§!"
+ authoritarian_coalition_tt:0 "In a coalition with the §gAuthoritarian Democrats§!"
+ autocracy_coalition_tt:0 "In a coalition with the §lPaternalists§!"
+ fascism_coalition_tt:0 "In a coalition with the §Yfascists§!"
+
+ has_socialist_government_tt:0 "Has a §YSocialist§! government"
+ has_democratic_government_tt:0 "Has a §YDemocratic§! government"
+ has_authoritarian_government_tt:0 "Has an §YAuthoritarian§! government"
+ has_fascist_government_tt:0 "Has a §YFascist§! government"
+
+ can_use_free_trade_tt:0 "Can enact §YFree Trade§!"
+ can_remove_free_trade_tt:0 "Can remove §YFree Trade§!"
+ can_use_export_focus_tt:0 "Can enact §YExport Focus§!"
+ can_remove_export_focus_tt:0 "Can remove §YExport Focus§!"
+ can_use_limited_exports_tt:0 "Can enact §YLimited Exports§!"
+ can_remove_limited_exports_tt:0 "Can remove §YLimited Exports§!"
+ can_use_closed_economy_tt:0 "Can enact §YClosed Economy§!"
+ can_remove_closed_economy_tt:0 "Can remove §YClosed Economy§!"
+ can_remove_disarmed_nation_trigger_tt:0 "Can remove §YDisarmed Nation§!"
+ can_remove_volunteer_only_tt:0 "Can remove §YVolunteer Only§!"
+ can_remove_limited_conscription_tt:0 "Can remove §YLimited Conscription§!"
+ can_remove_extensive_conscription_tt:0 "Can remove §YExtensive Conscription§!"
+ can_remove_service_by_requirement_tt:0 "Can remove §YService by Requirement§!"
+ can_remove_all_adults_serve_tt:0 "Can remove §YAll Adults Serve§!"
+ can_scraping_the_barrel_tt:0 "Can remove §YScraping the Barrel§!"
+
+ # TRAITS - CIVILIAN ADVISORS
+ generic_popular_figurehead_trait:0 "Popular Figurehead"
+ generic_industrial_connections_trait:0 "Industrialist"
+ generic_armements_organiser_trait:0 "Armements Organiser"
+ generic_financial_expert_trait:0 "Financial Expert"
+ generic_spymaster_trait:0 "Spymaster"
+ generic_populist_trait:0 "Populist"
+ generic_education_reformer_trait:0 "Education Reformer"
+ generic_silent_workhorse_trait:0 "Silent Workhorse"
+
+ # TRAITS - INDUSTRIAL CONCERNS
+ generic_industry_concern_trait:0 "Industrial Concern"
+ generic_electric_concern_trait:0 "Electonics Concern"
+ generic_resource_concern_trait:0 "Resource Extraction Concern"
+ generic_construction_concern_trait:0 "Construction Concern"
+ generic_oil_concern_trait:0 "Oil Extraction Concern"
+
+ # UI stuff 
+ bop_no_bop:0 "We currently have no active §Ybalance of power§!."
+ coalition_effects_title:0 ""
+ coalition_effects_desc:0 ""
+ advisors:0 "Political Advisors"
+
+ ### MISC TOOLTIPS ###
+ doublespace_tt:0 " \n"
+
+ FACTION_GOAL_DIVISION_COMPARE:0 "Current number of divisions in the faction §Y($LEFT|0H$)§! is equal to or greater than §Y$RIGHT|0H$§!"

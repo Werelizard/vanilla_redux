@@ -1,0 +1,36 @@
+ideas = {
+	###### Dummy Ideas (removed after start)
+	country = {
+		ger_dummy_MEFO = {
+			modifier = {
+				consumer_goods_expected_value = 0.1
+			}
+		}
+		ger_dummy_army = {
+			modifier = {
+				recruitable_population_factor = -0.1
+				max_training  = 0.1
+			}
+		}
+		ger_dummy_airforce = {
+			modifier = {
+				air_fuel_consumption_factor = 0.15
+			}
+		}
+		ger_dummy_navy = {
+			modifier = {
+				navy_max_range_factor = -0.15
+			}
+		}
+	}
+	###### Starting Ideas
+	country = {
+		ger_enabling_act = {
+			modifier = {
+				fascist_drift = 0.05
+				drift_defence_factor = 0.2
+				political_power_factor = 0.15
+			}
+		}
+	}
+}

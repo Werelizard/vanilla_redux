@@ -10,7 +10,7 @@ ideologies = {
 			}
 		}
 
-		color = { 140 0 0 }
+		color = { 70 0 0 }
 	}
 
 	# Vanguard Socialism
@@ -21,7 +21,7 @@ ideologies = {
 			}
 		}
 
-		color = { 140 20 30 }
+		color = { 140 0 0 }
 	}
 	
 	# Revolutionary Socialism
@@ -36,7 +36,7 @@ ideologies = {
 			}
 		}
 
-		color = { 175 20 30 }
+		color = { 175 0 0 }
 	}
 
 	# DEMOCRATIC GOVERNMENTS
@@ -73,7 +73,7 @@ ideologies = {
 			}
 		}
 
-		color = { 227 208 2 }
+		color = { 210 170 0 }
 	}
 	# Conservative 
 	conservative = {
@@ -110,7 +110,7 @@ ideologies = {
 			}
 		}
 
-		color = { 80 80 80 }
+		color = { 60 60 60 }
 	}
 
 	# REACTIONARY GOVERNMENTS
@@ -123,6 +123,6 @@ ideologies = {
 			}
 		}
 
-		color = { 150 75 0 }
+		color = { 130 55 0 }
 	}
 }
