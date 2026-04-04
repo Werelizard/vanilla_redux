@@ -3,8 +3,8 @@
 ###################
 
 characters = {
-	VX_character_ADOLF_HITLER = {
-		name = VX_character_ADOLF_HITLER
+	GER_character_ADOLF_HITLER = {
+		name = GER_character_ADOLF_HITLER
 		portraits = {
 			civilian = {
 				large = GFX_portrait_GER_adolf_hitler
@@ -31,8 +31,8 @@ characters = {
 ###################
 
 characters = {
-	VX_character_ERNST_THALMANN = {
-		name = VX_character_ERNST_THALMANN
+	GER_character_ERNST_THALMANN = {
+		name = GER_character_ERNST_THALMANN
 		portraits = {
 			civilian = {
 				large = GFX_portrait_GER_ernst_thalmann
@@ -67,8 +67,8 @@ characters = {
 		}
 	}
 
-	VX_character_HANS_VOGEL = {
-		name = VX_character_HANS_VOGEL
+	GER_character_HANS_VOGEL = {
+		name = GER_character_HANS_VOGEL
 		portraits = {
 			civilian = {
 				large = GFX_portrait_GER_hans_vogel
@@ -89,8 +89,8 @@ characters = {
 		}
 	}
 
-	VX_character_ERICH_KOCH_WESER = {
-		name = VX_character_ERICH_KOCH_WESER
+	GER_character_ERICH_KOCH_WESER = {
+		name = GER_character_ERICH_KOCH_WESER
 		portraits = {
 			civilian = {
 				large = GFX_portrait_GER_erich_koch_weser
@@ -111,8 +111,8 @@ characters = {
 		}
 	}
 
-	VX_character_EDUARD_DINGLEDEY = {
-		name = VX_character_EDUARD_DINGLEDEY
+	GER_character_EDUARD_DINGLEDEY = {
+		name = GER_character_EDUARD_DINGLEDEY
 		portraits = {
 			civilian = {
 				large = GFX_portrait_GER_eduard_dingeldey
@@ -133,8 +133,8 @@ characters = {
 		}
 	}
 
-	VX_character_HEINRICH_BRUNNING = {
-		name = VX_character_HEINRICH_BRUNNING
+	GER_character_HEINRICH_BRUNNING = {
+		name = GER_character_HEINRICH_BRUNNING
 		portraits = {
 			civilian = {
 				large = GFX_portrait_GER_heinrich_brunning
@@ -155,8 +155,8 @@ characters = {
 		}
 	}
 
-	VX_character_CARL_FRIEDRICH_GOERDLER = {
-		name = VX_character_CARL_FRIEDRICH_GOERDLER
+	GER_character_CARL_FRIEDRICH_GOERDLER = {
+		name = GER_character_CARL_FRIEDRICH_GOERDLER
 		portraits = {
 			civilian = {
 				large = GFX_portrait_GER_carl_friedrich_goerdeler

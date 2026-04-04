@@ -1,0 +1,185 @@
+﻿l_english:
+ ###################
+ # GERMANY - FASCIST
+ ###################
+ vx_germany_fascist_tree:0 "German Reich Focus Tree"
+
+ # Flags
+
+ # Foci
+ GER_Militarise_Rhineland:0 "Remilitarise the Rhineland"
+ GER_Militarise_Rhineland_desc:0 ""
+
+ GER_Reorganise_Wehrmacht:0 "Reorganise the Wehrmacht"
+ GER_Reorganise_Wehrmacht_desc:0 ""
+
+ GER_Enforce_Party_State:0 "Finalise Gleichschaltung"
+ GER_Enforce_Party_State_desc:0 ""
+
+ GER_Expand_SS_Recruitment:0 "Expand SS Recruitment"
+ GER_Expand_SS_Recruitment_desc:0 ""
+
+ GER_Fuhrerprinzip:0 "Führerprinzip"
+ GER_Fuhrerprinzip_desc:0 ""
+
+ GER_the_reichskomissarat:0 "Establish the Reichskommissariats"
+ GER_the_reichskomissarat_desc:0 ""
+
+ GER_lead_the_new_order:0 "Bedrock of the New Order"
+ GER_lead_the_new_order_desc:0 ""
+
+ GER_expand_intelligence:0 "Expand Abwehr Operations"
+ GER_expand_intelligence_desc:0 ""
+
+ GER_ally_china:0 "Befriend China"
+ GER_ally_china_desc:0 ""
+
+ GER_ally_japan:0 "Befriend Japan"
+ GER_ally_japan_desc:0 ""
+
+ GER_naval_cooperation_japan:0 "Joint Naval Developments"
+ GER_naval_cooperation_japan_desc:0 ""
+
+ GER_blitzkrieg_pacific:0 "A Blitzkrieg Across the Pacific"
+ GER_blitzkrieg_pacific_desc:0 ""
+
+ GER_pacific_sentinels:0 "The Sun and the Eagle Rising Above the Waves"
+
+ GER_south_asian_wealth:0 "South-Asian Natural Wealth"
+ GER_south_asian_wealth_desc:0 ""
+
+ GER_support_indian_independence:0 "Reach out to Azad Hind"
+ GER_support_indian_independence_desc:0 ""
+
+ GER_secure_chinese_trade:0 "Secure Chinese Resources"
+ GER_secure_chinese_trade_desc:0 ""
+
+ GER_falkenhausen_in_china:0 "Expand the Chinese Mission"
+ GER_falkenhausen_in_china_desc:0 ""
+
+ GER_support_blue_shirts:0 "Support the Blue Shirts Movement"
+ GER_support_blue_shirts_desc:0 ""
+
+ GER_the_dragon_and_the_eagle:0 "The Dragon and the Eagle Ascendant"
+ GER_the_dragon_and_the_eagle_desc:0 ""
+
+ GER_create_legion_condor:0 "Legion Condor"
+ GER_create_legion_condor_desc:0 ""
+
+ GER_agitate_ireland:0 "Pry the Emerald from the Crown"
+ GER_agitate_ireland_desc:0 ""
+
+ GER_american_bund:0 "Fund the American Bund"
+ GER_american_bund_desc:0 ""
+
+ GER_south_american_connection:0 "The Argentine Connection"
+ GER_south_american_connection_desc:0 ""
+
+ GER_align_italians:0 "A Berlin-Rome Axis"
+ GER_align_italians_desc:0 ""
+
+ GER_anschluss:0 "Anschluss"
+ GER_anschluss_desc:0 ""
+
+ GER_fate_of_sudentenland:0 "Fate of Czechoslovakia"
+ GER_fate_of_sudentenland_desc:0 ""
+
+ GER_pressure_benelux:0 "Pressure the Benelux"
+ GER_pressure_benelux_desc:0 ""
+
+ GER_perfidious_albion:0 "Perfidious Albion"
+ GER_perfidious_albion_desc:0 ""
+
+ GER_integrate_luxembourg:0 "Re-integrate Imperial Possessions"
+ GER_integrate_luxembourg_desc:0 ""
+
+ GER_inevitable_enemy:0 "The Inevitable Enemy"
+ GER_inevitable_enemy_desc:0 ""
+
+ GER_the_italian_loose_end:0 "Bring Italy into the Fold"
+ GER_the_italian_loose_end_desc:0 ""
+
+ GER_bring_spain_into_fold:0 "Operation Felix"
+ GER_bring_spain_into_fold_desc:0 ""
+
+ GER_demand_slovenia_annexation:0 "Demand Slovenia"
+ GER_demand_slovenia_annexation_desc:0 ""
+
+ GER_fate_yugoslavia:0 "Fate of Yugoslavia"
+ GER_fate_yugoslavia_desc:0 ""
+
+ GER_demand_eastern_claims:0 "Re-assert Eastern Claims"
+ GER_demand_eastern_claims_desc:0 ""
+
+ GER_molotov_ribbentrop:0 "A Deal With the Devil"
+ GER_molotov_ribbentrop_desc:0 ""
+
+ GER_protect_poland:0 "Protect Poland"
+ GER_protect_poland_desc:0 ""
+
+ GER_soviet_research_pact:0 "Germano-Soviet Research Pact"
+ GER_soviet_research_pact_desc:0 ""
+
+ GER_danzig_ultimatum:0 "The Danzig Ultimatum"
+ GER_danzig_ultimatum_desc:0 ""
+
+ GER_the_fuhrer_and_the_hussars:0 "The Führer and His Cossacks"
+ GER_the_fuhrer_and_the_hussars_desc:0 ""
+
+ GER_expand_baltic_influence:0 "Expand our Influence over the Baltic"
+ GER_expand_baltic_influence_desc:0 ""
+
+ GER_fate_of_switzerland:0 "Fate of Switzerland"
+ GER_fate_of_switzerland_desc:0 ""
+
+ GER_nordic_legion:0 "Use the Nordic Legion"
+ GER_nordic_legion_desc:0 ""
+
+ GER_secure_denmark:0 "Secure the North Sea"
+ GER_secure_denmark_desc:0 ""
+
+ GER_ensure_swedish_neutrality:0 "Ensure Swedish Neutrality"
+ GER_ensure_swedish_neutrality_desc:0 ""
+
+ GER_prop_up_northern_regimes:0 "Foster Pro-German Sentiment"
+ GER_prop_up_northern_regimes_desc:0 ""
+
+ GER_secure_finnish_loyalty:0 "Secure Finnish Loyalty"
+ GER_secure_finnish_loyalty_desc:0 ""
+
+ GER_anti_comintern_pact:0 "Anti-Comintern Pact"
+ GER_anti_comintern_pact_desc:0 ""
+
+ GER_support_finnish_independence:0 "Support Finland"
+ GER_support_finnish_independence_desc:0 ""
+
+ GER_puppet_anti_comintern_states:0 "An Iron Front Against Socialism"
+ GER_puppet_anti_comintern_states_desc:0 ""
+
+ GER_align_southern_states:0 "Lead the Lesser States"
+ GER_align_southern_states_desc:0 ""
+
+ GER_pressure_turkey:0 "Align Turkey"
+ GER_pressure_turkey_desc:0 ""
+
+ GER_pressure_greece:0 "Align Greece"
+ GER_pressure_greece_desc:0 ""
+
+ GER_influence_in_the_middle_east:0 "Influence the Middle-East"
+ GER_influence_in_the_middle_east_desc:0 ""
+
+ GER_support_breakaway_soviets:0 "Brothers Against the Bear"
+ GER_support_breakaway_soviets_desc:0 ""
+
+ GER_anti_communist_pact:0 "Realise Lebensbraum"
+ GER_anti_communist_pact_desc:0 ""
+
+ GER_war_with_soviets:0 "Snuff out the Red Menace"
+ GER_war_with_soviets_desc:0 ""
+
+ GER_end_communism_for_good:0 "The Final Blow to Socialism"
+ GER_end_communism_for_good_desc:0 ""
+
+ # Tooltips - triggers
+
+ # Tooltips - effects

@@ -29,14 +29,14 @@ set_popularities = {
 
 ### CHARACTERS
 
-recruit_character = VX_character_ADOLF_HITLER
+recruit_character = GER_character_ADOLF_HITLER
 
-recruit_character = VX_character_ERNST_THALMANN # AuthSoc, VanSoc and RevSoc
-recruit_character = VX_character_HANS_VOGEL # SocDem
-recruit_character = VX_character_ERICH_KOCH_WESER # Progressive
-recruit_character = VX_character_EDUARD_DINGLEDEY # Liberal
-recruit_character = VX_character_HEINRICH_BRUNNING # Zentrum
-recruit_character = VX_character_CARL_FRIEDRICH_GOERDLER # DNVP
+recruit_character = GER_character_ERNST_THALMANN # AuthSoc, VanSoc and RevSoc
+recruit_character = GER_character_HANS_VOGEL # SocDem
+recruit_character = GER_character_ERICH_KOCH_WESER # Progressive
+recruit_character = GER_character_EDUARD_DINGLEDEY # Liberal
+recruit_character = GER_character_HEINRICH_BRUNNING # Zentrum
+recruit_character = GER_character_CARL_FRIEDRICH_GOERDLER # DNVP
 
 ### IDEAS
 
@@ -46,6 +46,7 @@ add_ideas = {
 	volunteer_only
 	###
 	ger_enabling_act
+	ger_german_revanchism
 	ger_dummy_MEFO
 	ger_dummy_army
 	ger_dummy_airforce
@@ -71,6 +72,15 @@ add_dynamic_modifier = {
 
 set_variable = {
 	GER_mefo_consumergoods_var = 0.1
+}
+set_variable = {
+	GER_mefo_civintel_var = -25
+}
+set_variable = {
+	GER_mefo_milfac_var = 0.15
+}
+set_variable = {
+	GER_mefo_docfac_var = 0.15
 }
 set_variable = {
 	GER_army_popfactor_var = -0.1

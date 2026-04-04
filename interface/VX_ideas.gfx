@@ -23,4 +23,8 @@ spriteTypes = {
 		name = "GFX_idea_ger_dummy_navy"
 		texturefile = "gfx/interface/ideas/idea_GER_navy.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_ger_german_revanchism"
+		texturefile = "gfx/interface/ideas/ger_revanchism.dds"
+	}
 }

@@ -1,0 +1,6 @@
+add_namespace = germany_general_fascist
+add_namespace = germany_focus_fascist
+
+###################
+# FASCIST GERMANY EVENTS
+###################

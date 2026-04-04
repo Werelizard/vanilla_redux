@@ -11,7 +11,9 @@ bookmarks = {
 			history = "GER_1936"
 			ideology = fascism
 			ideas = {
-				
+				ger_enabling_act
+				ger_german_revanchism
+				ger_dummy_MEFO
 			}
 			focuses = {
 				

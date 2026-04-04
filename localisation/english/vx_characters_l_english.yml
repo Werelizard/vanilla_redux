@@ -2,13 +2,13 @@
  ###################
  # GERMANY - CHARACTERS
  ###################
- VX_character_ADOLF_HITLER:0 "Adolf Hitler"
- VX_character_ERNST_THALMANN:0 "Ernst Thälmann"
- VX_character_HANS_VOGEL:0 "Hans Vogel"
- VX_character_ERICH_KOCH_WESER:0 "Erich Koch Weser"
- VX_character_EDUARD_DINGLEDEY:0 "Eduard Dingledey"
- VX_character_HEINRICH_BRUNNING:0 "Heinrich Brunning"
- VX_character_CARL_FRIEDRICH_GOERDLER:0 "Carl Friedrich Goerdler"
+ GER_character_ADOLF_HITLER:0 "Adolf Hitler"
+ GER_character_ERNST_THALMANN:0 "Ernst Thälmann"
+ GER_character_HANS_VOGEL:0 "Hans Vogel"
+ GER_character_ERICH_KOCH_WESER:0 "Erich Koch Weser"
+ GER_character_EDUARD_DINGLEDEY:0 "Eduard Dingledey"
+ GER_character_HEINRICH_BRUNNING:0 "Heinrich Brunning"
+ GER_character_CARL_FRIEDRICH_GOERDLER:0 "Carl Friedrich Goerdler"
 
  ###################
  # GERMANY - TRAITS
@@ -17,3 +17,16 @@
  GER_dedicated_stalinist:0 "Staunch Stalinist"
  GER_staunch_social_democrat:0 "Resolute Social Democrat"
  GER_national_conservative:0 "National Conservative"
+
+ ###################
+ # SOVIET UNION - CHARACTERS
+ ###################
+ SOV_character_IOSIF_STALIN:0 "Iosif Stalin" # VKP(b) leader
+ SOV_character_RAPHAEL_ABRAMOVITCH:0 "Raphael Abramovitch" # RSDLP (m) leader
+ SOV_character_ALEXANDER_KERENSKY:0 "Alexander Kerensky" # Trudovik leader
+ SOV_character_PAVEL_MILYUKOV:0 "Pavel Milyukov" # Kadet Leader
+ SOV_character_KONSTANTIN_RODZAYEVSKY:0 "Konstantin Rodzayevsky" # VFP leader
+
+ ###################
+ # SOVIET UNION - TRAITS
+ ###################

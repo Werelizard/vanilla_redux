@@ -22,3 +22,5 @@
  ger_dummy_airforce_desc:0 "$GER_airforce_dynmod_desc$"
  ger_enabling_act:0 "The Enabling Act"
  ger_enabling_act_desc:0 ""
+ ger_german_revanchism:0 "German Revanchism"
+ ger_german_revanchism_desc:0 ""

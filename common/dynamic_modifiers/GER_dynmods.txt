@@ -2,6 +2,9 @@ GER_mefo_dynmod = {
 	enable = { always = yes }
 	icon = GFX_idea_ger_mefo_bills
 	consumer_goods_expected_value = GER_mefo_consumergoods_var
+	civilian_intel_to_others = GER_mefo_civintel_var
+	production_speed_arms_factory_factor = GER_mefo_milfac_var
+	production_speed_dockyard_factor = GER_mefo_docfac_var
 }
 
 GER_army_dynmod = {

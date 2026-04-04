@@ -4,8 +4,10 @@ leader_traits = {
 	###################
 
 	GER_fuhrer_trait = {
+		random = no
 		weekly_casualties_war_support = 0.005
 		war_support_factor = 0.05
+		command_power_gain_mult = 0.15
 		compliance_growth = -0.1
 	}
 
@@ -14,12 +16,14 @@ leader_traits = {
 	###################
 
 	GER_dedicated_stalinist = {
+		random = no
 		production_factory_max_efficiency_factor = 0.05
 		production_factory_efficiency_gain_factor = -0.05
 		vanguard_socialist_drift = 0.025
 	}
 
 	GER_staunch_social_democrat = {
+		random = no
 		war_support_factor = -0.05
 		stability_factor = 0.05
 		production_speed_infrastructure_factor = 0.1
@@ -27,6 +31,7 @@ leader_traits = {
 	}
 
 	GER_national_conservative = {
+		random = no
 		stability_factor = 0.05
 		consumer_goods_factor = 0.05
 	}

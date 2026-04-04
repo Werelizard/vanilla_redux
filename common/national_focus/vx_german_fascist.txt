@@ -1,0 +1,1145 @@
+search_filter_prios = {
+	
+}
+
+focus_tree = {
+	id = vx_germany_fascist_tree
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 50
+			tag = GER
+		}
+	}
+
+	initial_show_position = {
+		focus = GER_Militarise_Rhineland
+	}
+
+	continuous_focus_position = {
+		x = 0
+		y = 2000
+	}
+	
+	default = no	
+	reset_on_civilwar = no
+
+
+	###################
+	# HISTORICAL - START
+	###################
+
+	focus = {
+		id = GER_Militarise_Rhineland
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 10
+		y = 0
+		completion_reward = {
+
+		}
+		cancelable = no
+	}
+
+	focus = {
+		id = GER_Reorganise_Wehrmacht
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 2
+		y = 1
+		relative_position_id = GER_Militarise_Rhineland
+		prerequisite = {
+			focus = GER_Militarise_Rhineland
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_Enforce_Party_State
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -2
+		y = 1
+		relative_position_id = GER_Militarise_Rhineland
+		prerequisite = {
+			focus = GER_Militarise_Rhineland
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_Expand_SS_Recruitment
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -3
+		y = 2
+		relative_position_id = GER_Militarise_Rhineland
+		prerequisite = {
+			focus = GER_Enforce_Party_State
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_Fuhrerprinzip
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 0
+		y = 2
+		relative_position_id = GER_Militarise_Rhineland
+		prerequisite = {
+			focus = GER_Reorganise_Wehrmacht
+		}
+		prerequisite = {
+			focus = GER_Enforce_Party_State
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_the_reichskomissarat
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 3
+		y = 1
+		relative_position_id = GER_Fuhrerprinzip
+		prerequisite = {
+			focus = GER_Fuhrerprinzip
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	###################
+	# HISTORICAL - FOREIGN POLICY
+	###################
+
+	focus = {
+		id = GER_lead_the_new_order
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -1
+		y = 1
+		relative_position_id = GER_Fuhrerprinzip
+		prerequisite = {
+			focus = GER_Fuhrerprinzip
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_expand_intelligence
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 3
+		y = 1
+		relative_position_id = GER_lead_the_new_order
+		prerequisite = {
+			focus = GER_lead_the_new_order
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_align_southern_states
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 2
+		y = 2
+		relative_position_id = GER_lead_the_new_order
+		prerequisite = {
+			focus = GER_lead_the_new_order
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_ally_china
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 9
+		y = 1
+		relative_position_id = GER_lead_the_new_order
+		prerequisite = {
+			focus = GER_lead_the_new_order
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+		mutually_exclusive = {
+			focus = GER_ally_japan
+		}
+	}
+
+	focus = {
+		id = GER_ally_japan
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 5
+		y = 1
+		relative_position_id = GER_lead_the_new_order
+		prerequisite = {
+			focus = GER_lead_the_new_order
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+		mutually_exclusive = {
+			focus = GER_ally_china
+		}
+	}
+
+	focus = {
+		id = GER_naval_cooperation_japan
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 6
+		y = 2
+		relative_position_id = GER_lead_the_new_order
+		prerequisite = {
+			focus = GER_ally_japan
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_blitzkrieg_pacific
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 6
+		y = 4
+		relative_position_id = GER_lead_the_new_order
+		prerequisite = {
+			focus = GER_naval_cooperation_japan
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_pacific_sentinels
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 6
+		y = 5
+		relative_position_id = GER_lead_the_new_order
+		prerequisite = {
+			focus = GER_blitzkrieg_pacific
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_south_asian_wealth
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 4
+		y = 2
+		relative_position_id = GER_lead_the_new_order
+		prerequisite = {
+			focus = GER_ally_japan
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_support_indian_independence
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 7
+		y = 3
+		relative_position_id = GER_lead_the_new_order
+		prerequisite = {
+			focus = GER_ally_japan
+			focus = GER_ally_china
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_secure_chinese_trade
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 8
+		y = 2
+		relative_position_id = GER_lead_the_new_order
+		prerequisite = {
+			focus = GER_ally_china
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_falkenhausen_in_china
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 10
+		y = 2
+		relative_position_id = GER_lead_the_new_order
+		prerequisite = {
+			focus = GER_ally_china
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_support_blue_shirts
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 9
+		y = 3
+		relative_position_id = GER_lead_the_new_order
+		prerequisite = {
+			focus = GER_secure_chinese_trade
+		}
+		prerequisite = {
+			focus = GER_falkenhausen_in_china
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_the_dragon_and_the_eagle
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 9
+		y = 4
+		relative_position_id = GER_lead_the_new_order
+		prerequisite = {
+			focus = GER_support_blue_shirts
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_create_legion_condor
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -1
+		y = 1
+		relative_position_id = GER_lead_the_new_order
+		prerequisite = {
+			focus = GER_lead_the_new_order
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_agitate_ireland
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 1
+		y = 1
+		relative_position_id = GER_lead_the_new_order
+		prerequisite = {
+			focus = GER_lead_the_new_order
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_american_bund
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -2
+		y = 2
+		relative_position_id = GER_lead_the_new_order
+		prerequisite = {
+			focus = GER_lead_the_new_order
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_south_american_connection
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -2
+		y = 3
+		relative_position_id = GER_lead_the_new_order
+		prerequisite = {
+			focus = GER_american_bund
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_align_italians
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -3
+		y = 1
+		relative_position_id = GER_lead_the_new_order
+		prerequisite = {
+			focus = GER_lead_the_new_order
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_anti_comintern_pact
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 0
+		y = 3
+		relative_position_id = GER_lead_the_new_order
+		prerequisite = {
+			focus = GER_lead_the_new_order
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_support_finnish_independence
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 2
+		y = 1
+		relative_position_id = GER_anti_comintern_pact
+		prerequisite = {
+			focus = GER_anti_comintern_pact
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_puppet_anti_comintern_states
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 0
+		y = 1
+		relative_position_id = GER_anti_comintern_pact
+		prerequisite = {
+			focus = GER_anti_comintern_pact
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_pressure_greece
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -1
+		y = 2
+		relative_position_id = GER_anti_comintern_pact
+		prerequisite = {
+			focus = GER_anti_comintern_pact
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+		mutually_exclusive = {
+			focus = GER_pressure_turkey
+		}
+	}
+
+	focus = {
+		id = GER_support_breakaway_soviets
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -5
+		y = 1
+		relative_position_id = GER_anti_comintern_pact
+		prerequisite = {
+			focus = GER_protect_poland
+		}
+		prerequisite = {
+			focus = GER_expand_baltic_influence
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+		mutually_exclusive = {
+			focus = GER_anti_communist_pact
+		}
+	}
+
+	focus = {
+		id = GER_anti_communist_pact
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -3
+		y = 1
+		relative_position_id = GER_anti_comintern_pact
+		prerequisite = {
+			focus = GER_anti_comintern_pact
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+		mutually_exclusive = {
+			focus = GER_support_breakaway_soviets
+		}
+	}
+
+	focus = {
+		id = GER_war_with_soviets
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -4
+		y = 2
+		relative_position_id = GER_anti_comintern_pact
+		prerequisite = {
+			focus = GER_support_breakaway_soviets
+			focus = GER_anti_communist_pact
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_end_communism_for_good
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -4
+		y = 3
+		relative_position_id = GER_anti_comintern_pact
+		prerequisite = {
+			focus = GER_war_with_soviets
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_pressure_turkey
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 1
+		y = 2
+		relative_position_id = GER_anti_comintern_pact
+		prerequisite = {
+			focus = GER_anti_comintern_pact
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+		mutually_exclusive = {
+			focus = GER_pressure_greece
+		}
+	}
+
+	focus = {
+		id = GER_influence_in_the_middle_east
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 0
+		y = 3
+		relative_position_id = GER_anti_comintern_pact
+		prerequisite = {
+			focus = GER_pressure_greece
+			focus = GER_pressure_turkey
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	###################
+	# HISTORICAL - TERRITORIAL EXPANSION
+	###################
+
+	focus = {
+		id = GER_anschluss
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -13
+		y = 1
+		relative_position_id = GER_Fuhrerprinzip
+		prerequisite = {
+			focus = GER_Fuhrerprinzip
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_fate_of_sudentenland
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 1
+		y = 1
+		relative_position_id = GER_anschluss
+		prerequisite = {
+			focus = GER_anschluss
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_pressure_benelux
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -1
+		y = 4
+		relative_position_id = GER_anschluss
+		prerequisite = {
+			focus = GER_anschluss
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_perfidious_albion
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -1
+		y = 1
+		relative_position_id = GER_pressure_benelux
+		prerequisite = {
+			focus = GER_pressure_benelux
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_integrate_luxembourg
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 0
+		y = 3
+		relative_position_id = GER_pressure_benelux
+		prerequisite = {
+			focus = GER_pressure_benelux
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_inevitable_enemy
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 2
+		y = 1
+		relative_position_id = GER_pressure_benelux
+		prerequisite = {
+			focus = GER_pressure_benelux
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_the_italian_loose_end
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 1
+		y = 2
+		relative_position_id = GER_pressure_benelux
+		prerequisite = {
+			focus = GER_inevitable_enemy
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_bring_spain_into_fold
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 3
+		y = 2
+		relative_position_id = GER_pressure_benelux
+		prerequisite = {
+			focus = GER_inevitable_enemy
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = GER_demand_slovenia_annexation
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 0
+		y = 2
+		relative_position_id = GER_anschluss
+		prerequisite = {
+			focus = GER_fate_of_sudentenland
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_fate_yugoslavia
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 0
+		y = 3
+		relative_position_id = GER_anschluss
+		prerequisite = {
+			focus = GER_demand_slovenia_annexation
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_demand_eastern_claims
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 6
+		y = 1
+		relative_position_id = GER_anschluss
+		prerequisite = {
+			focus = GER_anschluss
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_molotov_ribbentrop
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 3
+		y = 3
+		relative_position_id = GER_anschluss
+		prerequisite = {
+			focus = GER_demand_eastern_claims
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+		mutually_exclusive = {
+			focus = GER_protect_poland
+		}
+	}
+
+	focus = {
+		id = GER_protect_poland
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 5
+		y = 3
+		relative_position_id = GER_anschluss
+		prerequisite = {
+			focus = GER_demand_eastern_claims
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+		mutually_exclusive = {
+			focus = GER_molotov_ribbentrop
+		}
+	}
+
+	focus = {
+		id = GER_soviet_research_pact
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 2
+		y = 4
+		relative_position_id = GER_anschluss
+		prerequisite = {
+			focus = GER_molotov_ribbentrop
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_danzig_ultimatum
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 4
+		y = 4
+		relative_position_id = GER_anschluss
+		prerequisite = {
+			focus = GER_molotov_ribbentrop
+			focus = GER_protect_poland
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_the_fuhrer_and_the_hussars
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 6
+		y = 5
+		relative_position_id = GER_anschluss
+		prerequisite = {
+			focus = GER_danzig_ultimatum
+		}
+		prerequisite = {
+			focus = GER_protect_poland
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_expand_baltic_influence
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 7
+		y = 2
+		relative_position_id = GER_anschluss
+		prerequisite = {
+			focus = GER_demand_eastern_claims
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_fate_of_switzerland
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 2
+		y = 2
+		relative_position_id = GER_anschluss
+		prerequisite = {
+			focus = GER_fate_of_sudentenland
+			focus = GER_demand_eastern_claims
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_nordic_legion
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -5
+		y = 1
+		relative_position_id = GER_anschluss
+		prerequisite = {
+			focus = GER_anschluss
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_secure_denmark
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -1
+		y = 1
+		relative_position_id = GER_nordic_legion
+		prerequisite = {
+			focus = GER_nordic_legion
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_ensure_swedish_neutrality
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 2
+		y = 1
+		relative_position_id = GER_nordic_legion
+		prerequisite = {
+			focus = GER_nordic_legion
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_prop_up_northern_regimes
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 0
+		y = 2
+		relative_position_id = GER_nordic_legion
+		prerequisite = {
+			focus = GER_secure_denmark
+			focus = GER_ensure_swedish_neutrality
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_secure_finnish_loyalty
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 1
+		y = 3
+		relative_position_id = GER_nordic_legion
+		prerequisite = {
+			focus = GER_secure_denmark
+			focus = GER_ensure_swedish_neutrality
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+	}
+
+	###################
+	# HISTORICAL - INNER CIRCLE / POLITICS
+	###################
+
+	focus = {
+		id = GER_the_party_chancellry
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 13
+		y = 1
+		relative_position_id = GER_Fuhrerprinzip
+		prerequisite = {
+			focus = GER_Fuhrerprinzip
+		}
+		available = {
+			
+		}
+		completion_reward = {
+
+		}
+		cancelable = no
+	}
+
+}

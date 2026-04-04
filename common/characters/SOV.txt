@@ -1,0 +1,79 @@
+###################
+# STARTING LEADER
+###################
+
+characters = {
+	SOV_character_IOSIF_STALIN = {
+        name = SOV_character_IOSIF_STALIN
+        portraits = {
+			civilian = {
+				large = GFX_portrait_SOV_iosif_stalin
+			}
+			army = {
+				large = GFX_portrait_SOV_iosif_stalin
+				small = GFX_portrait_SOV_iosif_stalin_small
+			}
+		}
+        country_leader = {
+            ideology = authoritarian_socialist_subtype
+            traits = {
+                SOV_heart_of_steel_trait
+            }
+            id = -1
+        }
+        country_leader = {
+            ideology = vanguard_socialist_subtype
+            traits = {
+                SOV_heart_of_steel_trait
+            }
+            id = -1
+        }
+        country_leader = {
+            ideology = revolutionary_socialist_subtype
+            traits = {
+                SOV_heart_of_steel_trait
+            }
+            id = -1
+        }
+    }
+}
+
+###################
+# PARTY LEADERS
+###################
+
+characters = {
+	
+}
+
+###################
+# ADVISORS
+###################
+
+characters = {
+	
+}
+
+###################
+# GENERALS
+###################
+
+characters = {
+	
+}
+
+###################
+# ADMIRALS
+###################
+
+characters = {
+	
+}
+
+###################
+# SCIENTISTS
+###################
+
+characters = {
+	
+}
