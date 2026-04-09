@@ -73,6 +73,23 @@ faction_rule_no_socialists_join = {
 	}
 }
 
+faction_rule_no_democratic_join = {
+	type = joining_rules
+	can_remove = {
+		always = no
+	}
+	visible = {
+		NOT = {
+			has_democratic_government_tooltip_trigger = yes
+		}
+	}
+	trigger = {
+		NOT = {
+			has_democratic_government_tooltip_trigger = yes
+		}
+	}
+}
+
 # Joining rules - geography
 
 faction_rule_same_continent_join = {

@@ -122,6 +122,14 @@
  VX_similar_ideology:0 "Similar Ideology"
  VX_different_ideology:0 "Different Ideology"
 
+ VX_improved_relations:0 "Diplomatic Rapprochment"
+
+ ### OVERRIDE TOOLTIPS ###
+
+ unlock_decision_ovewrite_tt:0 "Unlocks £decision_icon_small §Ydecision§!: $DECISION$"
+ modify_dynamic_modifier_tt:0 "Modify §Y$MODIFIER$§! by:"
+ country_must_approve_tt:0 "§Y$COUNTRY$§! must approve of the agreement for it to take effect"
+
  ### RESOURCES ###
  electricity:0 "Electricity"
  uranium:0 "Uranium"
@@ -166,9 +174,13 @@
  fascism_coalition_tt:0 "In a coalition with the §Yfascists§!"
 
  has_socialist_government_tt:0 "Has a §YSocialist§! government"
+ has_socialist_government_tt_NOT:0 "NOT: $has_socialist_government_tt$"
  has_democratic_government_tt:0 "Has a §YDemocratic§! government"
+ has_democratic_government_tt_NOT:0 "NOT: $has_democratic_government_tt$"
  has_authoritarian_government_tt:0 "Has an §YAuthoritarian§! government"
+ has_authoritarian_government_tt_NOT:0 "NOT: $has_authoritarian_government_tt$"
  has_fascist_government_tt:0 "Has a §YFascist§! government"
+ has_fascist_government_tt_NOT:0 "NOT: $has_fascist_government_tt$"
 
  can_use_free_trade_tt:0 "Can enact §YFree Trade§!"
  can_remove_free_trade_tt:0 "Can remove §YFree Trade§!"
@@ -185,6 +197,9 @@
  can_remove_service_by_requirement_tt:0 "Can remove §YService by Requirement§!"
  can_remove_all_adults_serve_tt:0 "Can remove §YAll Adults Serve§!"
  can_scraping_the_barrel_tt:0 "Can remove §YScraping the Barrel§!"
+
+ # TECHNOLOGIES 
+ vx_ss_militias:0 "Improved Militias"
 
  # TRAITS - CIVILIAN ADVISORS
  generic_popular_figurehead_trait:0 "Popular Figurehead"
@@ -211,5 +226,9 @@
 
  ### MISC TOOLTIPS ###
  doublespace_tt:0 " \n"
+ focus_on_begin:0 "§YOn focus start:§!"
+ focus_on_complete:0 "§YOn focus completed:§!" 
+
+ max_training_factor_tt: " $MODIFIER_MAX_TRAINING_XP_FACTOR$: $RIGHT|+=%1$"
 
  FACTION_GOAL_DIVISION_COMPARE:0 "Current number of divisions in the faction §Y($LEFT|0H$)§! is equal to or greater than §Y$RIGHT|0H$§!"

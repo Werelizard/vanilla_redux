@@ -1,0 +1,11 @@
+technologies = {	
+	vx_ss_militias = {
+		allow = {
+			always = no
+		}
+		militia = {
+			suppression_factor = 0.2
+			soft_attack = 0.2
+		}
+	}
+}

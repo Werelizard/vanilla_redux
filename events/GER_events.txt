@@ -4,3 +4,53 @@ add_namespace = germany_focus_fascist
 ###################
 # FASCIST GERMANY EVENTS
 ###################
+
+country_event = {
+	# Unease in the Wehrmacht
+	id = germany_general_fascist.1
+	title = germany_general_fascist.1.title
+	desc = germany_general_fascist.1.desc
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_fascist_government_trigger = yes
+	}
+
+	option = {
+		# Doubt grips the officers
+		name = germany_general_fascist.a
+
+	}
+
+	option = {
+		# the officers go along with Hitler
+		name = germany_general_fascist.b
+	}
+}
+
+country_event = {
+	# Reorganisation of the Wehrmacht
+	id = germany_focus_fascist.1
+	title = germany_focus_fascist.1.title
+	desc = germany_focus_fascist.1.title
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_fascist_government_trigger = yes
+	}
+}
+
+country_event = {
+	# Germany is influencing our govermnent
+	id = germany_focus_fascist.2
+	title = germany_focus_fascist.2.title
+	desc = germany_focus_fascist.2.title
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_fascist_government_trigger = yes
+	}
+}

@@ -1,0 +1,320 @@
+﻿l_english:
+
+ GER_authoritarian_socialist_party:0 "KPD"
+ GER_authoritarian_socialist_party_long:0 "Kommunistische Partei Deutschlands"
+ GER_vanguard_socialist_party:0 "KPD"
+ GER_vanguard_socialist_party_long:0 "Kommunistische Partei Deutschlands"
+ GER_revolutionary_socialist_party:0 "KPD"
+ GER_revolutionary_socialist_party_long:0 "Kommunistische Partei Deutschlands"
+ GER_social_democratic_party:0 "SPD"
+ GER_social_democratic_party_long:0 "Sozialdemokratische Partei Deutschlands"
+ GER_progressive_party:0 "DDP"
+ GER_progressive_party_long:0 "Deutsche Demokratische Partei"
+ GER_liberal_party:0 "DVP"
+ GER_liberal_party_long:0 "Deutsche Volkspartei"
+ GER_conservative_party:0 "Zentrum"
+ GER_conservative_party_long:0 "Zentrum"
+ GER_authoritarian_democrat_party:0 "DNVP"
+ GER_authoritarian_democrat_party_long:0 "Deutschnationale Volkspartei"
+ GER_autocratic_party:0 "DNVP"
+ GER_autocratic_party_long:0 "Deutschnationale Volkspartei"
+ GER_fascist_party:0 "NSDAP"
+ GER_fascist_party_long:0 "Nationalsozialistische Deutsche Arbeiterpartei"
+
+ faction_template_axis:0 "Axis"
+
+ ###################
+ # IDEAS
+ ###################
+
+ GER_mefo_dynmod:0 "MEFO Bills"
+ GER_mefo_dynmod_desc:0 ""
+ GER_army_dynmod:0 "Deutsches Heer"
+ GER_army_dynmod_desc:0 ""
+ GER_navy_dynmod:0 "Deutsches Kriegsmarine"
+ GER_navy_dynmod_desc:0 ""
+ GER_airforce_dynmod:0 "Deutsches Luftwaffe"
+ GER_airforce_dynmod_desc:0 ""
+ GER_new_order_dynmod:0 "A New Order in Europe"
+ GER_new_order_dynmod_desc:0 ""
+
+ ger_dummy_MEFO:0 "$GER_mefo_dynmod$"
+ ger_dummy_MEFO_desc:0 "$GER_mefo_dynmod_desc$"
+ ger_dummy_army:0 "$GER_army_dynmod$"
+ ger_dummy_army_desc:0 "$GER_army_dynmod_desc$"
+ ger_dummy_navy:0 "$GER_navy_dynmod$"
+ ger_dummy_navy_desc:0 "$GER_navy_dynmod_desc$"
+ ger_dummy_airforce:0 "$GER_airforce_dynmod$"
+ ger_dummy_airforce_desc:0 "$GER_airforce_dynmod_desc$"
+ ger_enabling_act:0 "The Enabling Act"
+ ger_enabling_act_desc:0 ""
+ ger_german_revanchism:0 "German Revanchism"
+ ger_german_revanchism_desc:0 ""
+ ger_enabling_act_improved:0 "$ger_enabling_act$"
+ ger_enabling_act_improved_desc:0 "$ger_enabling_act_desc$"
+ ger_expand_abwehr:0 "Expanded Abwehr"
+ ger_expand_abwehr_desc:0 ""
+ ger_support_china:0 "Supporting Nanjing"
+ ger_support_china_desc:0 ""
+ ger_support_japan:0 "Supporting Tokyo"
+ ger_support_japan_desc:0 ""
+
+ ###################
+ # GERMANY - CHARACTERS
+ ###################
+ GER_character_ADOLF_HITLER:0 "Adolf Hitler"
+ GER_character_ERNST_THALMANN:0 "Ernst Thälmann"
+ GER_character_HANS_VOGEL:0 "Hans Vogel"
+ GER_character_ERICH_KOCH_WESER:0 "Erich Koch Weser"
+ GER_character_EDUARD_DINGLEDEY:0 "Eduard Dingledey"
+ GER_character_HEINRICH_BRUNNING:0 "Heinrich Brunning"
+ GER_character_CARL_FRIEDRICH_GOERDLER:0 "Carl Friedrich Goerdler"
+
+ GER_character_herman_goring:0 "Herman Göring"
+ GER_character_konstantin_von_neurath:0 "Konstantin von Neurath"
+ GER_character_joachim_von_ribbentrop:0 "Joachim von Ribbentrop"
+ GER_character_fritz_todt:0 "Fritz Todt"
+ GER_character_albert_speer:0 "Albert Speer"
+ GER_character_hjalmar_schacht:0 "Hjalmar Schacht"
+ GER_character_walther_funk:0 "Walther Funk"
+ GER_character_joseph_goebbels:0 "Joseph Goebbels"
+ GER_character_rudolph_hess:0 "Rudolph Hess"
+ GER_character_heinrich_himmler:0 "Heinrich Himmler"
+ GER_character_martin_bormann:0 "Martin Bormann"
+ GER_character_leni_riefenstahl:0 "Leni Riefenstahl"
+ GER_character_franz_seldte:0 "Franz Seldte"
+ GER_character_hanns_kerrl:0 "Hanns Kerrl"
+ GER_character_reinhard_heydrich:0 "Reinhard Heydrich"
+ GER_character_wilhelm_canaris:0 "Wilhelm Canaris"
+ GER_character_wilhelm_frick:0 "Wilhelm Frick"
+ GER_character_julius_streicher:0 "Julius Streicher"
+ GER_character_alfred_rosenberg:0 "Alfred Rosenberg"
+
+ ###################
+ # GERMANY - TRAITS
+ ###################
+ GER_fuhrer_trait:0 "Der Führer"
+ GER_dedicated_stalinist_trait:0 "Staunch Stalinist"
+ GER_staunch_social_democrat_trait:0 "Resolute Social Democrat"
+ GER_national_conservative_trait:0 "National Conservative"
+
+ GER_plenipotentiary_four_year_plan_trait:0 "Plenipotentioary for the Four Year Plan"
+ GER_reichminister_foreign_affairs_trait:0 "Reichsminister of Foreign Affairs"
+ GER_duplictious_diplomat_trait:0 "Duplicitious Diplomat"
+ GER_mefo_bill_planner_trait:0 "Architect of the MEFO Bills"
+ GER_organisation_todt_leader_trait:0 "Leader of Organisation Todt"
+ GER_architect_reich_trait:0 "Recih's Architect"
+ GER_economic_minister_trait:0 "Economist"
+ GER_propaganda_minister_trait:0 "Propaganda Minister"
+ GER_fuhrer_deputy_trait:0 "Deputy to the Führer"
+ GER_head_of_ss_trait:0 "Head of the SS"
+ GER_party_figurehead_trait:0 "Party Figurehead"
+ GER_filmaker_trait:0 "Filmmaker"
+ GER_labour_minister_trait:0 "Reichsminister of Labour"
+ GER_war_economy_organiser_trait:0 "Plenipotentioary for the War Economy"
+ GER_security_minister_trait:0 "Reichsminister of Security"
+ GER_head_of_abwehr_trait:0 "Head of the Abwehr"
+ GER_minister_of_interior_trait:0 "Reichsminister of the Interior"
+ GER_reactionary_agitator_trait:0 "Reactionary Agitator"
+ GER_national_socialist_ideologue_trait:0 "National Socialist Ideologue"
+
+ ###################
+ # GERMANY EVENTS
+ ###################
+
+ germany_general_fascist.1.title:0 "Unease Grips the Wehrmacht"
+ germany_general_fascist.1.desc:0 ""
+
+ germany_focus_fascist.1.title:0 "The Enemy Within?"
+ germany_focus_fascist.1.desc:0 ""
+
+ germany_focus_fascist.2.title:0 "Germany is Influencing our Politics!"
+ germany_focus_fascist.2.desc:0 ""
+
+ ###################
+ # GERMANY FOCI - FASCIST
+ ###################
+ vx_germany_fascist_tree:0 "German Reich Focus Tree"
+
+ # Flags
+
+ # Foci
+ GER_Militarise_Rhineland:0 "Remilitarise the Rhineland"
+ GER_Militarise_Rhineland_desc:0 ""
+ GER_Militarise_Rhineland_effect_tooltip:0 "Remilitarising the Rhineland may prove to be the breaking point for other European powers and - more direly - from skeptical Wehrmacht officers.\n\n§RThe future of the Reich lives or dies through the success of this endeavour.§!"
+
+ GER_Reorganise_Wehrmacht:0 "Reorganise the Wehrmacht"
+ GER_Reorganise_Wehrmacht_desc:0 ""
+
+ GER_Enforce_Party_State:0 "Finalise Gleichschaltung"
+ GER_Enforce_Party_State_desc:0 ""
+
+ GER_Expand_SS_Recruitment:0 "Expand SS Recruitment"
+ GER_Expand_SS_Recruitment_desc:0 ""
+
+ GER_Fuhrerprinzip:0 "Führerprinzip"
+ GER_Fuhrerprinzip_desc:0 ""
+ GER_Fuhrerprinzip_enabled_tt:0 "The §YInner Circle§! mechanic will now be enabled."
+ GER_Fuhrerprinzip_warning_tt:0 "§RAs the Führer's mood waxes and waynes, some ambitious party members will make a play for his favour. Conflict is inevitable, but shall it fester the Reich's administration will be negatively affected.§!"
+
+ GER_the_reichskomissarat:0 "Establish the Reichskommissariats"
+ GER_the_reichskomissarat_desc:0 ""
+
+ GER_lead_the_new_order:0 "Bedrock of the New Order"
+ GER_lead_the_new_order_desc:0 ""
+
+ GER_expand_intelligence:0 "Expand Intelligence Operations"
+ GER_expand_intelligence_desc:0 ""
+
+ GER_ally_china:0 "Befriend China"
+ GER_ally_china_desc:0 ""
+
+ GER_ally_japan:0 "Befriend Japan"
+ GER_ally_japan_desc:0 ""
+
+ GER_naval_cooperation_japan:0 "Joint Naval Developments"
+ GER_naval_cooperation_japan_desc:0 ""
+
+ GER_blitzkrieg_pacific:0 "A Blitzkrieg Across the Pacific"
+ GER_blitzkrieg_pacific_desc:0 ""
+
+ GER_pacific_sentinels:0 "The Sun and the Eagle Rising Above the Waves"
+
+ GER_south_asian_wealth:0 "South-Asian Natural Wealth"
+ GER_south_asian_wealth_desc:0 ""
+
+ GER_support_indian_independence:0 "Light the Match of Azad Hind"
+ GER_support_indian_independence_desc:0 ""
+
+ GER_secure_chinese_trade:0 "Secure Chinese Resources"
+ GER_secure_chinese_trade_desc:0 ""
+
+ GER_falkenhausen_in_china:0 "Expand the Chinese Mission"
+ GER_falkenhausen_in_china_desc:0 ""
+
+ GER_support_blue_shirts:0 "Support the Blue Shirts Movement"
+ GER_support_blue_shirts_desc:0 ""
+
+ GER_the_dragon_and_the_eagle:0 "The Dragon and the Eagle Ascendant"
+ GER_the_dragon_and_the_eagle_desc:0 ""
+
+ GER_create_legion_condor:0 "Legion Condor"
+ GER_create_legion_condor_desc:0 ""
+
+ GER_agitate_ireland:0 "Reach out to Army Comrades Association"
+ GER_agitate_ireland_desc:0 ""
+
+ GER_american_bund:0 "Fund the American Bund"
+ GER_american_bund_desc:0 ""
+
+ GER_south_american_connection:0 "The Argentine Connection"
+ GER_south_american_connection_desc:0 ""
+
+ GER_align_italians:0 "A Berlin-Rome Axis"
+ GER_align_italians_desc:0 ""
+
+ GER_anschluss:0 "Anschluss"
+ GER_anschluss_desc:0 ""
+
+ GER_fate_of_sudentenland:0 "Fate of Czechoslovakia"
+ GER_fate_of_sudentenland_desc:0 ""
+
+ GER_pressure_benelux:0 "Pressure the Benelux"
+ GER_pressure_benelux_desc:0 ""
+
+ GER_perfidious_albion:0 "Perfidious Albion"
+ GER_perfidious_albion_desc:0 ""
+
+ GER_integrate_luxembourg:0 "Re-integrate Imperial Possessions"
+ GER_integrate_luxembourg_desc:0 ""
+
+ GER_inevitable_enemy:0 "The Inevitable Enemy"
+ GER_inevitable_enemy_desc:0 ""
+
+ GER_the_italian_loose_end:0 "Bring Italy into the Fold"
+ GER_the_italian_loose_end_desc:0 ""
+
+ GER_bring_spain_into_fold:0 "Operation Felix"
+ GER_bring_spain_into_fold_desc:0 ""
+
+ GER_demand_slovenia_annexation:0 "Demand Slovenia"
+ GER_demand_slovenia_annexation_desc:0 ""
+
+ GER_fate_yugoslavia:0 "Fate of Yugoslavia"
+ GER_fate_yugoslavia_desc:0 ""
+
+ GER_demand_eastern_claims:0 "Re-assert Eastern Claims"
+ GER_demand_eastern_claims_desc:0 ""
+
+ GER_molotov_ribbentrop:0 "A Deal With the Devil"
+ GER_molotov_ribbentrop_desc:0 ""
+
+ GER_protect_poland:0 "Protect Poland"
+ GER_protect_poland_desc:0 ""
+
+ GER_soviet_research_pact:0 "Germano-Soviet Research Pact"
+ GER_soviet_research_pact_desc:0 ""
+
+ GER_danzig_ultimatum:0 "The Danzig Ultimatum"
+ GER_danzig_ultimatum_desc:0 ""
+
+ GER_the_fuhrer_and_the_hussars:0 "The Führer and His Cossacks"
+ GER_the_fuhrer_and_the_hussars_desc:0 ""
+
+ GER_expand_baltic_influence:0 "Expand our Influence over the Baltic"
+ GER_expand_baltic_influence_desc:0 ""
+
+ GER_fate_of_switzerland:0 "Fate of Switzerland"
+ GER_fate_of_switzerland_desc:0 ""
+
+ GER_nordic_legion:0 "Use the Nordic Legion"
+ GER_nordic_legion_desc:0 ""
+
+ GER_secure_denmark:0 "Secure the North Sea"
+ GER_secure_denmark_desc:0 ""
+
+ GER_ensure_swedish_neutrality:0 "Ensure Swedish Neutrality"
+ GER_ensure_swedish_neutrality_desc:0 ""
+
+ GER_prop_up_northern_regimes:0 "Foster Pro-German Sentiment"
+ GER_prop_up_northern_regimes_desc:0 ""
+
+ GER_secure_finnish_loyalty:0 "Secure Finnish Loyalty"
+ GER_secure_finnish_loyalty_desc:0 ""
+
+ GER_anti_comintern_pact:0 "Anti-Comintern Pact"
+ GER_anti_comintern_pact_desc:0 ""
+
+ GER_support_finnish_independence:0 "Support Finland"
+ GER_support_finnish_independence_desc:0 ""
+
+ GER_puppet_anti_comintern_states:0 "An Iron Front Against Socialism"
+ GER_puppet_anti_comintern_states_desc:0 ""
+
+ GER_align_southern_states:0 "Lead the Lesser States"
+ GER_align_southern_states_desc:0 ""
+
+ GER_pressure_turkey:0 "Align Turkey"
+ GER_pressure_turkey_desc:0 ""
+
+ GER_pressure_greece:0 "Align Greece"
+ GER_pressure_greece_desc:0 ""
+
+ GER_influence_in_the_middle_east:0 "Influence the Middle-East"
+ GER_influence_in_the_middle_east_desc:0 ""
+
+ GER_support_breakaway_soviets:0 "Brothers Against the Bear"
+ GER_support_breakaway_soviets_desc:0 ""
+
+ GER_anti_communist_pact:0 "Realise Lebensbraum"
+ GER_anti_communist_pact_desc:0 ""
+
+ GER_war_with_soviets:0 "Snuff out the Red Menace"
+ GER_war_with_soviets_desc:0 ""
+
+ GER_end_communism_for_good:0 "The Final Blow to Socialism"
+ GER_end_communism_for_good_desc:0 ""
+
+ # Tooltips - triggers
+
+ # Tooltips - effects

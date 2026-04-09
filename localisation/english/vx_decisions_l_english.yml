@@ -1,0 +1,11 @@
+﻿l_english:
+ ###################
+ # GERMANY - DECISIONS
+ ###################
+ vx_germany_inspect_army_dec:0 "Conduct Wehrmacht Inspections"
+ vx_germany_ensure_officer_compliance_dec:0 "Ensure Military Loyalty"
+ vx_germany_ss_militias_dec:0 "Raise Waffen-SS Militias."
+ vx_germany_influence_hungary_dec:0 "Prop up the Arrow Gross"
+ vx_germany_influence_romania_dec:0 "Reach out to the Iron Guard"
+ vx_germany_influence_bulgaria_dec:0 "Influence Bulgarian Politics"
+ vx_germany_influence_yugoslavia_dec:0 "Pressure Yugoslavia"

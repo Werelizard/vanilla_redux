@@ -41,21 +41,21 @@ characters = {
 		country_leader = {
 			ideology = authoritarian_socialist_subtype
 			traits = {
-				GER_dedicated_stalinist
+				GER_dedicated_stalinist_trait
 			}
 			id = -1
 		}
 		country_leader = {
 			ideology = vanguard_socialist_subtype
 			traits = {
-				GER_dedicated_stalinist
+				GER_dedicated_stalinist_trait
 			}
 			id = -1
 		}
 		country_leader = {
 			ideology = revolutionary_socialist_subtype
 			traits = {
-				GER_dedicated_stalinist
+				GER_dedicated_stalinist_trait
 			}
 			id = -1
 		}
@@ -77,7 +77,7 @@ characters = {
 		country_leader = {
 			ideology = social_democratic_subtype
 			traits = {
-				GER_staunch_social_democrat
+				GER_staunch_social_democrat_trait
 			}
 			id = -1
 		}
@@ -165,14 +165,14 @@ characters = {
 		country_leader = {
 			ideology = authoritarian_democrat_subtype
 			traits = {
-				GER_national_conservative
+				GER_national_conservative_trait
 			}
 			id = -1
 		}
 		country_leader = {
 			ideology = autocratic_subtype
 			traits = {
-				GER_national_conservative
+				GER_national_conservative_trait
 			}
 			id = -1
 		}
@@ -190,7 +190,471 @@ characters = {
 ###################
 
 characters = {
-	
+	# FASCIST CHARCTERS
+
+	# Hermann Göring - Plenipotentiary of the Four Year Plan
+	GER_character_herman_goring = {
+		name = GER_character_herman_goring
+		portraits = {
+			army = {
+				small = GFX_idea_goering
+			}
+			civilian = {
+				large = GFX_portrait_GER_hermann_goring
+				small = GFX_portrait_GER_hermann_goring_small
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = GER_character_herman_goring	
+			visible = {
+				is_country_leader = no
+				has_fascist_government_tooltip_trigger = yes
+			}
+			available = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			traits = {
+				GER_plenipotentiary_four_year_plan_trait
+			}
+		}
+
+		advisor = {
+			slot = air_chief
+			idea_token = GER_character_herman_goring	
+			visible = {
+				is_country_leader = no
+				has_fascist_government_tooltip_trigger = yes
+			}
+			available = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			traits = {
+
+			}
+		}
+	}
+	# Konstantin von Neurath - Minister of Foreign Affairs
+	GER_character_konstantin_von_neurath = {
+		name = GER_character_konstantin_von_neurath
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_konstantin_von_neurath
+				small = GFX_portrait_GER_konstantin_von_neurath_small
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = GER_konstantin_von_neurath
+			visible = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			available = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			traits = {
+				GER_reichminister_foreign_affairs_trait
+			}
+		}
+	}
+	# Joachim von Ribbentrop - Diplomat
+	GER_character_joachim_von_ribbentrop = {
+		name = GER_character_joachim_von_ribbentrop
+		portraits = {
+			army = {
+				small = GFX_idea_joachim_von_ribbentrop
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = GER_joachim_von_ribbentrop
+			visible = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			available = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			traits = {
+				GER_duplictious_diplomat_trait
+			}
+		}
+	}
+	# Fritz Todt - Inspector General
+	GER_character_fritz_todt = {
+		name = GER_character_fritz_todt
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GER_fritz_todt
+				small = GFX_portrait_GER_fritz_todt_small
+			}			
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = GER_fritz_todt
+			visible = {
+				is_country_leader = no
+				has_fascist_government_tooltip_trigger = yes
+			}
+			available = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			traits = {
+				GER_organisation_todt_leader_trait
+			}
+		}
+	}
+	# Albert Speer - Chief Office for Construction
+	GER_character_albert_speer = {
+		name = GER_character_albert_speer
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GER_albert_speer
+				small = GFX_portrait_GER_albert_speer_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = GER_albert_speer
+			visible = {
+				is_country_leader = no
+				has_fascist_government_tooltip_trigger = yes
+			}
+			available = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			traits = {
+				GER_architect_reich_trait
+			}
+		}
+	}
+	# Hjalmar Schacht - Architect of the MEFO bills
+	GER_character_hjalmar_schacht = {
+		name = GER_character_hjalmar_schacht
+		portraits = {
+			civilian = {
+				small = GFX_idea_hjalmar_schacht
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = GER_hjalmar_schacht
+			visible = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			available = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			traits = {
+				GER_mefo_bill_planner_trait
+			}
+		}
+	}
+	# Walther Funk - Economist
+	GER_character_walther_funk = {
+		name = GER_character_walther_funk
+		portraits = {
+			civilian = {
+				small = GFX_idea_walther_funk
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = GER_walther_funk
+			visible = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			available = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			traits = {
+				GER_economic_minister_trait
+			}
+		}
+	}
+	# Joseph Goebbels - Minsiter of Propaganda
+	GER_character_joseph_goebbels = {
+		name = GER_character_joseph_goebbels
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GER_joseph_goebbels
+				small = GFX_portrait_GER_joseph_goebbels_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = GER_joseph_goebbels
+			visible = {
+				has_fascist_government_tooltip_trigger = yes
+				is_country_leader = no
+			}
+			available = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			traits = {
+				GER_propaganda_minister_trait
+			}
+		}
+	}
+	# Rudolf Hess - Deputy of the Fuhrer
+	GER_character_rudolph_hess = {
+		name = GER_character_rudolph_hess
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GER_rudolf_hess
+				small = GFX_portrait_GER_rudolf_hess_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = GER_rudolph_hess
+			visible = {
+				has_fascist_government_tooltip_trigger = yes
+				is_country_leader = no
+			}
+			available = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			traits = {
+				GER_fuhrer_deputy_trait
+			}
+		}
+	}
+	# Heinrich Himmler - Head of the SS
+	GER_character_heinrich_himmler = {
+		name = GER_character_heinrich_himmler
+		portraits = {
+			army = {
+				small = GFX_portrait_GER_heinrich_himmler_small
+				large = GFX_portrait_GER_heinrich_himmler
+			}
+			civilian = {
+				large = GFX_portrait_GER_heinrich_himmler
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = GER_heinrich_himmler
+			visible = {
+				has_fascist_government_tooltip_trigger = yes
+				is_country_leader = no
+			}
+			available = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			traits = {
+				GER_head_of_ss_trait
+			}
+		}
+	}
+	# Martin Bormann - Party Figurehead
+	GER_character_martin_bormann = {
+		name = GER_character_martin_bormann
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GER_martin_bormann
+				small = GFX_portrait_GER_martin_bormann_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = GER_martin_bormann
+			visible = {
+				has_fascist_government_tooltip_trigger = yes
+				is_country_leader = no
+			}
+			available = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			traits = {
+				GER_party_figurehead_trait
+			}
+		}
+	}
+	# Leni Riefenstahl - Filmaker
+	GER_character_leni_riefenstahl = {
+		name = GER_character_leni_riefenstahl
+		gender = female
+		portraits = {
+			civilian = {
+				small = GFX_portrait_GER_leni_riefenstahl_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = GER_leni_riefenstahl
+			visible = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			available = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			traits = {
+				GER_filmaker_trait
+			}
+		}
+	}
+	# Franz Seldte - labour minister
+	GER_character_franz_seldte = {
+		name = GER_character_franz_seldte
+		portraits = {
+			civilian = {
+				small = GFX_portrait_GER_franz_seldte_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = GER_franz_seldte
+			visible = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			available = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			traits = {
+				GER_labour_minister_trait
+			}
+		}
+	}
+	# Hanns Kerrl - Plenipotentiary for War Economy
+	GER_character_hanns_kerrl = {
+		name = GER_character_hanns_kerrl
+		portraits = {
+			civilian = {
+				small = GFX_portrait_GER_hanns_kerrl_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = GER_hanns_kerrl
+			visible = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			available = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			traits = {
+				GER_war_economy_organiser_trait
+			}
+		}
+	}
+	# Reinhard Heydrich - Reich Security Office
+	GER_character_reinhard_heydrich = {
+		name = GER_character_reinhard_heydrich
+		portraits = {
+			civilian = {
+				small = GFX_portrait_GER_reinhard_heydrich_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = GER_reinhard_heydrich
+			visible = {
+				has_fascist_government_tooltip_trigger = yes
+				is_country_leader = no
+			}
+			available = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			traits = {
+				GER_security_minister_trait
+			}
+		}
+	}
+	# Wilhelm Canaris - Head of the Abwehr
+	GER_character_wilhelm_canaris = {
+		name = GER_character_wilhelm_canaris
+		portraits = {
+			civilian = {
+				small = GFX_idea_ger_wilhelm_canaris
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = GER_wilhelm_canaris
+			visible = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			available = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			traits = {
+				GER_head_of_abwehr_trait
+			}
+		}
+	}
+	# Wilhelm Frick - minister of the itnerior
+	GER_character_wilhelm_frick = {
+		name = GER_character_wilhelm_frick
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GER_wilhelm_frick
+				small = GFX_portrait_GER_wilhelm_frick_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = GER_wilhelm_frick
+			visible = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			available = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			traits = {
+				GER_minister_of_interior_trait
+			}
+		}
+	}
+	# Julius Streicher - publisher of der strumer
+	GER_character_julius_streicher = {
+		name = GER_character_julius_streicher
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GER_julius_streicher
+				small = GFX_portrait_GER_julius_streicher_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = GER_julius_streicher
+			visible = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			available = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			traits = {
+				GER_reactionary_agitator_trait
+			}
+		}
+	}
+	# Alfred Rosenberg - Ideologue
+	GER_character_alfred_rosenberg = {
+		name = GER_character_alfred_rosenberg
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GER_alfred_rosenberg
+				small = GFX_portrait_GER_alfred_rosenberg_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = GER_alfred_rosenberg
+			visible = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			available = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			traits = {
+				GER_national_socialist_ideologue_trait
+			}
+		}
+	}
 }
 
 ###################

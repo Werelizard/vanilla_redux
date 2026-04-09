@@ -1,0 +1,33 @@
+faction_template_axis = {
+	# name = defensive_democratic_faction
+	manifest = faction_axis_new_order
+	# color = { 179 183 235 } # this should default to faction leader's color
+	icon = GFX_faction_logo_axis
+	visible = {
+		original_tag = GER
+		OR = {
+			has_fascist_government_trigger = yes
+			has_authoritarian_government_trigger = yes
+		}
+	}
+	available = {
+		original_tag = GER
+		OR = {
+			has_fascist_government_trigger = yes
+			has_authoritarian_government_trigger = yes
+		}
+	}
+
+	goals = {
+		
+	}
+
+	default_rules = {
+		faction_rule_change_leader_never
+		faction_rule_no_socialists_join
+		faction_rule_no_democratic_join
+		faction_rule_war_declaration_leader_only
+		faction_rule_peace_conquest_focus
+		faction_rule_same_continent_join
+	}
+}

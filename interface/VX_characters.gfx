@@ -11,4 +11,28 @@ spriteTypes = {
 		name = "GFX_portrait_GER_heinrich_brunning"
 		textureFile = "gfx/leaders/GER/vx_heinrich_brunning.tga"
 	}
+	spriteType = {
+		name = "GFX_portrait_GER_alfred_rosenberg"
+		textureFile = "gfx/leaders/GER/vx_alfred_rosenberg.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_GER_alfred_rosenberg_small"
+		textureFile = "gfx/interface/ideas/vx_ger_alfred_rosenberg.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GER_wilhelm_frick"
+		textureFile = "gfx/leaders/GER/vx_wilhelm_frick.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_GER_wilhelm_frick_small"
+		textureFile = "gfx/interface/ideas/vx_ger_willhelm_frick.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GER_julius_streicher"
+		textureFile = "gfx/leaders/GER/vx_ger_julius_streicher.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_GER_julius_streicher_small"
+		textureFile = "gfx/interface/ideas/vx_ger_julius_streicher.dds"
+	}
 } 

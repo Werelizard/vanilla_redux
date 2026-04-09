@@ -1,0 +1,6 @@
+opinion_modifiers = {
+	# Same governmental ideology
+	VX_improved_relations = {
+		value = 20
+	}
+}

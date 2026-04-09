@@ -11,4 +11,17 @@ on_actions = {
 			}
 		}
 	}
+	# Effect to update the "Leader of the New Order" dynmod
+	on_join_faction = {
+		effect = {
+			FROM = {
+				if = {
+					limit = {
+						original_tag = GER
+						has_dynamic_modifier = GER_new_order_dynmod
+					}
+				}
+			}
+		}
+	}
 }

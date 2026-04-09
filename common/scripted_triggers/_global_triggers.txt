@@ -1355,3 +1355,5 @@ has_same_government_type_trigger = {
 		always = no
 	}
 }
+
+# China - General

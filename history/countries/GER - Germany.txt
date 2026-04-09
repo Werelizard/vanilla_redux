@@ -3,11 +3,16 @@ capital = 64 # Berlin/Brandeburg
 
 ### Variables
 
-set_stability = 0.5
-set_war_support = 0.7
+set_stability = 0.4
+set_war_support = 0.35
 set_research_slots = 3
 
 ### COUNTRY POLITICS
+
+create_faction_from_template = {
+	template = faction_template_axis
+	name = Axis
+}
 
 set_politics = {
 	ruling_party = fascist
@@ -20,11 +25,11 @@ set_popularities = {
 	revolutionary_socialist = 5
 	progressive = 0
 	social_democratic = 3
-	liberal = 2
-	conservative = 7
-	authoritarian_democrat = 2
-	autocratic = 2
-	fascist = 79
+	liberal = 7
+	conservative = 16
+	authoritarian_democrat = 7
+	autocratic = 11
+	fascist = 51
 }
 
 ### CHARACTERS
@@ -37,6 +42,27 @@ recruit_character = GER_character_ERICH_KOCH_WESER # Progressive
 recruit_character = GER_character_EDUARD_DINGLEDEY # Liberal
 recruit_character = GER_character_HEINRICH_BRUNNING # Zentrum
 recruit_character = GER_character_CARL_FRIEDRICH_GOERDLER # DNVP
+
+# NSDAP aligned advisors
+recruit_character = GER_character_herman_goring
+recruit_character = GER_character_konstantin_von_neurath # should only be available through focus
+recruit_character = GER_character_joachim_von_ribbentrop # should only be available through focus
+recruit_character = GER_character_fritz_todt
+recruit_character = GER_character_albert_speer
+recruit_character = GER_character_hjalmar_schacht
+recruit_character = GER_character_walther_funk
+recruit_character = GER_character_joseph_goebbels
+recruit_character = GER_character_rudolph_hess
+recruit_character = GER_character_heinrich_himmler
+recruit_character = GER_character_martin_bormann
+recruit_character = GER_character_leni_riefenstahl # should only be available through focus
+recruit_character = GER_character_franz_seldte
+recruit_character = GER_character_hanns_kerrl
+recruit_character = GER_character_reinhard_heydrich
+recruit_character = GER_character_wilhelm_canaris
+recruit_character = GER_character_wilhelm_frick
+recruit_character = GER_character_julius_streicher
+recruit_character = GER_character_alfred_rosenberg
 
 ### IDEAS
 

@@ -15,14 +15,14 @@ leader_traits = {
 	# PARTY LEADERS
 	###################
 
-	GER_dedicated_stalinist = {
+	GER_dedicated_stalinist_trait = {
 		random = no
 		production_factory_max_efficiency_factor = 0.05
 		production_factory_efficiency_gain_factor = -0.05
 		vanguard_socialist_drift = 0.025
 	}
 
-	GER_staunch_social_democrat = {
+	GER_staunch_social_democrat_trait = {
 		random = no
 		war_support_factor = -0.05
 		stability_factor = 0.05
@@ -30,15 +30,175 @@ leader_traits = {
 		production_speed_industrial_complex_factor = 0.1
 	}
 
-	GER_national_conservative = {
+	GER_national_conservative_trait = {
 		random = no
 		stability_factor = 0.05
-		consumer_goods_factor = 0.05
+		political_power_factor = -0.1
 	}
 
 	###################
 	# ADVISORS
 	###################
+
+	GER_plenipotentiary_four_year_plan_trait = {
+		random = no
+		sprite = 13
+		production_factory_max_efficiency_factor = -0.05
+		production_factory_efficiency_gain_factor = 0.1
+		global_building_slots_factor = 0.1
+	}
+
+	GER_reichminister_foreign_affairs_trait = {
+		random = no
+		sprite = 13
+		trade_opinion_factor = 0.5
+		civilian_intel_factor = 0.2
+		intelligence_agency_defense = 0.5
+		intel_network_gain_factor = 0.1
+	}
+
+	GER_duplictious_diplomat_trait = {
+		random = no
+		sprite = 13
+		opinion_gain_monthly_same_ideology_factor = 0.5
+		faction_trade_opinion_factor = 1
+		subversive_activites_upkeep = -0.25
+		own_operative_capture_chance_factor = -0.25
+	}
+
+	GER_organisation_todt_leader_trait = {
+		random = no
+		sprite = 13
+		local_resources_factor = 0.1
+		production_speed_infrastructure_factor = 0.1
+		production_speed_rail_way_factor = 0.1
+		production_speed_bunker_factor = 0.05
+		production_speed_coastal_bunker_factor = 0.05
+	}
+
+	GER_architect_reich_trait = {
+		random = no
+		sprite = 13
+		party_popularity_stability_factor = 0.15
+		production_speed_buildings_factor = 0.05
+	}
+
+	GER_mefo_bill_planner_trait = {
+		random = no
+		sprite = 13
+		political_power_cost = 0.1
+		production_speed_arms_factory_factor = 0.1
+		production_speed_dockyard_factor = 0.1
+	}
+
+	GER_economic_minister_trait = {
+		random = no
+		sprite = 13
+		consumer_goods_factor = -0.1
+		production_lack_of_resource_penalty_factor = -0.15
+		repair_speed_factor = 0.1
+	}
+
+	GER_propaganda_minister_trait = {
+		random = no
+		sprite = 13
+		war_support_factor = 0.05
+		political_power_factor = 0.05
+		resistance_decay_on_our_occupied_states = -0.2		
+	}
+
+	GER_fuhrer_deputy_trait = {
+		random = no
+		sprite = 13
+		political_advisor_cost_factor = -0.1
+		improve_relations_maintain_cost_factor = -0.15
+		opinion_gain_monthly_factor = 0.1
+	}
+
+	GER_head_of_ss_trait = {
+		random = no
+		sprite = 13
+		required_garrison_factor = -0.1
+		resistance_garrison_penetration_chance = -0.1
+		foreign_subversive_activites = -0.2
+	}
+
+	GER_party_figurehead_trait = {
+		random = no
+		sprite = 13
+		party_popularity_stability_factor = 0.1
+		political_power_factor = 0.15
+	}
+
+	GER_filmaker_trait = {
+		random = no
+		sprite = 13
+		weekly_casualties_war_support = 0.01
+		weekly_convoys_war_support = 0.01
+		weekly_bombing_war_support = 0.01
+	}
+
+	GER_labour_minister_trait = {
+		random = no
+		sprite = 13
+		production_factory_max_efficiency_factor = 0.05
+		production_speed_arms_factory_factor = 0.05
+		production_speed_industrial_complex_factor = 0.05
+	}
+
+	GER_war_economy_organiser_trait = {
+		random = no
+		sprite = 13
+		production_speed_supply_node_factor = 0.1
+		production_speed_fuel_silo_factor = 0.1
+		equipment_bonus = {
+			motorized = {
+				build_cost_ic = -0.1
+				instant = yes
+			}
+			train = {
+				build_cost_ic = -0.1
+				instant = yes
+			}
+		}
+	}
+
+	GER_security_minister_trait = {
+		random = no
+		sprite = 13
+		operative_slot = 1
+		army_intel_to_others = -2
+		airforce_intel_to_others = -2
+	}
+
+	GER_head_of_abwehr_trait = {
+		random = no
+		sprite = 13
+		agency_upgrade_time = -0.25
+		enemy_operative_capture_chance_factor = 0.1
+	}
+
+	GER_minister_of_interior_trait = {
+		random = no
+		sprite = 13
+		stability_factor = 0.1
+	}
+
+	GER_reactionary_agitator_trait = {
+		random = no
+		sprite = 13
+		political_power_gain = 0.15
+		war_support_factor = 0.05
+		stability_factor = -0.05
+	}
+
+	GER_national_socialist_ideologue_trait = {
+		random = no
+		sprite = 13
+		resistance_growth = -0.05
+		war_stability_factor = 0.05
+		party_popularity_stability_factor = 0.1
+	}
 
 	###################
 	# GENERALS

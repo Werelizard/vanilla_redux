@@ -30,14 +30,42 @@ ideas = {
 	country = {
 		ger_enabling_act = {
 			modifier = {
-				fascist_drift = 0.05
-				political_power_factor = 0.15
+				fascist_drift = 0.01
+				political_power_factor = -0.2
 			}
 		}
 		ger_german_revanchism = {
 			modifier = {
 				drift_defence_factor = 0.5
-				army_claim_attack_factor = 0.05
+				army_attack_factor = 0.05
+			}
+		}
+	}
+	###### Other 
+	country = {
+		ger_enabling_act_improved = {
+			modifier = {
+				fascist_drift = 0.01
+				party_popularity_stability_factor = 0.2
+				political_power_factor = -0.1
+			}
+		}
+		ger_expand_abwehr = {
+			modifier = {
+				root_out_resistance_effectiveness_factor = 0.15
+				operative_slot = 1
+			}
+		}
+		ger_support_japan = {
+			targeted_modifier = {
+				tag = JAP
+				send_volunteer_size = 4
+			}
+		}
+		ger_support_china = {
+			targeted_modifier = {
+				tag = CHI
+				send_volunteer_size = 4
 			}
 		}
 	}
