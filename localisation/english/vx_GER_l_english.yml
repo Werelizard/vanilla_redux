@@ -28,15 +28,16 @@
  ###################
 
  GER_mefo_dynmod:0 "MEFO Bills"
- GER_mefo_dynmod_desc:0 ""
+ GER_mefo_dynmod_desc:0 "$ger_MEFO_effect_tt$\n§W--------------§!"
+ ger_MEFO_effect_tt:0 "§WEvery week, the §!§YConsumer Goods§!§W factor penalty will increase by §!§Y[?GER.GER_mefo_consumergoods_increase_var|1%]§!§W. Shall this penalty reach §!§Y100.0%§!§W, §!§Radditional penalties§!§W will be applied.§!"
  GER_army_dynmod:0 "Deutsches Heer"
  GER_army_dynmod_desc:0 ""
  GER_navy_dynmod:0 "Deutsches Kriegsmarine"
  GER_navy_dynmod_desc:0 ""
  GER_airforce_dynmod:0 "Deutsches Luftwaffe"
  GER_airforce_dynmod_desc:0 ""
- GER_new_order_dynmod:0 "A New Order in Europe"
- GER_new_order_dynmod_desc:0 ""
+ GER_inner_circle_dynmod:0 "The Inner Circle"
+ GER_inner_circle_dynmod_desc:0 ""
 
  ger_dummy_MEFO:0 "$GER_mefo_dynmod$"
  ger_dummy_MEFO_desc:0 "$GER_mefo_dynmod_desc$"
@@ -48,8 +49,8 @@
  ger_dummy_airforce_desc:0 "$GER_airforce_dynmod_desc$"
  ger_enabling_act:0 "The Enabling Act"
  ger_enabling_act_desc:0 ""
- ger_german_revanchism:0 "German Revanchism"
- ger_german_revanchism_desc:0 ""
+ ger_german_reactionarism:0 "Volkreich"
+ ger_german_reactionarism_desc:0 ""
  ger_enabling_act_improved:0 "$ger_enabling_act$"
  ger_enabling_act_improved_desc:0 "$ger_enabling_act_desc$"
  ger_expand_abwehr:0 "Expanded Abwehr"
@@ -141,6 +142,7 @@
  # Foci
  GER_Militarise_Rhineland:0 "Remilitarise the Rhineland"
  GER_Militarise_Rhineland_desc:0 ""
+ GER_Wehrmacht_Revolt_flag:0 " The Wehrmact officers have revolted"
  GER_Militarise_Rhineland_effect_tooltip:0 "Remilitarising the Rhineland may prove to be the breaking point for other European powers and - more direly - from skeptical Wehrmacht officers.\n\n§RThe future of the Reich lives or dies through the success of this endeavour.§!"
 
  GER_Reorganise_Wehrmacht:0 "Reorganise the Wehrmacht"
@@ -154,166 +156,130 @@
 
  GER_Fuhrerprinzip:0 "Führerprinzip"
  GER_Fuhrerprinzip_desc:0 ""
- GER_Fuhrerprinzip_enabled_tt:0 "The §YInner Circle§! mechanic will now be enabled."
- GER_Fuhrerprinzip_warning_tt:0 "§RAs the Führer's mood waxes and waynes, some ambitious party members will make a play for his favour. Conflict is inevitable, but shall it fester the Reich's administration will be negatively affected.§!"
+ GER_Fuhrerprinzip_enabled_tt:0 "The §YInner Circle§! mechanic will now be §Yenabled§!."
 
- GER_the_reichskomissarat:0 "Establish the Reichskommissariats"
- GER_the_reichskomissarat_desc:0 ""
+ GER_fuhrer_chancellery:0 "Deal with Intra-Party Factionalism"
+ GER_fuhrer_chancellery_desc:0 ""
 
- GER_lead_the_new_order:0 "Bedrock of the New Order"
- GER_lead_the_new_order_desc:0 ""
+ GER_inner_circle_bormann:0 "Party Chancellor Bormann"
+ GER_inner_circle_bormann_desc:0 ""
 
- GER_expand_intelligence:0 "Expand Intelligence Operations"
- GER_expand_intelligence_desc:0 ""
+ GER_inner_circle_bormann_chancellery:0 "Reorganise the Parteikanzlei"
+ GER_inner_circle_bormann_chancellery_desc:0 ""
 
- GER_ally_china:0 "Befriend China"
- GER_ally_china_desc:0 ""
+ GER_inner_circle_bormann_civil_service:0 "Subjugate the Civil Service"
+ GER_inner_circle_bormann_civil_service_decs:0 ""
 
- GER_ally_japan:0 "Befriend Japan"
- GER_ally_japan_desc:0 ""
+ GER_inner_circle_hess:0 "Party Chancellor Hess"
+ GER_inner_circle_hess_desc:0 ""
 
- GER_naval_cooperation_japan:0 "Joint Naval Developments"
- GER_naval_cooperation_japan_desc:0 ""
+ GER_inner_circle_hess_loyalty:0 "Loyalty to the Führer"
+ GER_inner_circle_hess_loyalty_desc:0 ""
 
- GER_blitzkrieg_pacific:0 "A Blitzkrieg Across the Pacific"
- GER_blitzkrieg_pacific_desc:0 ""
+ GER_inner_circle_hess_promote_germinifaction:0 "Tame the Völkisch Movement"
+ GER_inner_circle_hess_promote_germinifaction_desc:0 ""
 
- GER_pacific_sentinels:0 "The Sun and the Eagle Rising Above the Waves"
+ GER_inner_circle_hess_ideology:0 "Glorify State Rallies"
+ GER_inner_circle_hess_ideology_desc:0 ""
 
- GER_south_asian_wealth:0 "South-Asian Natural Wealth"
- GER_south_asian_wealth_desc:0 ""
+ GER_inner_circle_party_state:0 "Total Control over Domestic Affairs"
+ GER_inner_circle_party_state_desc:0 ""
 
- GER_support_indian_independence:0 "Light the Match of Azad Hind"
- GER_support_indian_independence_desc:0 ""
+ GER_inner_circle_hegemony_of_the_party:0 "Hegemony of the Party State"
+ GER_inner_circle_hegemony_of_the_party_desc:0 ""
 
- GER_secure_chinese_trade:0 "Secure Chinese Resources"
- GER_secure_chinese_trade_desc:0 ""
+ GER_inner_circle_economics:0 "Accelerate the Rearmement Program"
+ GER_inner_circle_economics_desc:0 ""
 
- GER_falkenhausen_in_china:0 "Expand the Chinese Mission"
- GER_falkenhausen_in_china_desc:0 ""
+ GER_inner_circle_todt:0 "Reichsleiter Todt"
+ GER_inner_circle_todt_desc:0 ""
 
- GER_support_blue_shirts:0 "Support the Blue Shirts Movement"
- GER_support_blue_shirts_desc:0 ""
+ GER_inner_circle_todt_org:0 "Found Organisation Todt"
+ GER_inner_circle_todt_org_desc:0 ""
 
- GER_the_dragon_and_the_eagle:0 "The Dragon and the Eagle Ascendant"
- GER_the_dragon_and_the_eagle_desc:0 ""
+ GER_inner_circle_hierl:0 "Reichsleiter Hierl"
+ GER_inner_circle_hierl_desc:0 ""
 
- GER_create_legion_condor:0 "Legion Condor"
- GER_create_legion_condor_desc:0 ""
+ GER_inner_circle_hierl_reichservice:0 "Optimise Reichservice"
+ GER_inner_circle_hierl_reichservice_desc:0 ""
 
- GER_agitate_ireland:0 "Reach out to Army Comrades Association"
- GER_agitate_ireland_desc:0 ""
+ GER_inner_circle_societal_mobilisation:0 "A Terrible, Orderly Machine"
+ GER_inner_circle_societal_mobilisation_desc:0 ""
 
- GER_american_bund:0 "Fund the American Bund"
- GER_american_bund_desc:0 ""
+ GER_inner_circle_autobahn:0 "Construct the Reichsautobahn"
+ GER_inner_circle_autobahn_desc:0 ""
 
- GER_south_american_connection:0 "The Argentine Connection"
- GER_south_american_connection_desc:0 ""
+ GER_inner_circle_hierl_capstone:0 "Soldier, Labourer, Model Citizen"
+ GER_inner_circle_hierl_capstone_desc:0 ""
 
- GER_align_italians:0 "A Berlin-Rome Axis"
- GER_align_italians_desc:0 ""
+ GER_inner_circle_todt_capstone:0 "Autonomous Organisation Todt"
+ GER_inner_circle_todt_capstone_desc:0 ""
 
- GER_anschluss:0 "Anschluss"
- GER_anschluss_desc:0 ""
+ GER_inner_circle_speer:0 "Reichsleiter Speer"
+ GER_inner_circle_speer_desc:0 ""
 
- GER_fate_of_sudentenland:0 "Fate of Czechoslovakia"
- GER_fate_of_sudentenland_desc:0 ""
+ GER_inner_circle_speer_rationalisation:0 "Armement Rationalisation"
+ GER_inner_circle_speer_rationalisation_desc:0 ""
 
- GER_pressure_benelux:0 "Pressure the Benelux"
- GER_pressure_benelux_desc:0 ""
+ GER_inner_circle_speer_capstone:0 "Plenipotentioary of Armements"
+ GER_inner_circle_speer_capstone_desc:0 ""
 
- GER_perfidious_albion:0 "Perfidious Albion"
- GER_perfidious_albion_desc:0 ""
+ GER_inner_circle_goring:0 "Reichsleiter Göring"
+ GER_inner_circle_goring_desc:0 ""
 
- GER_integrate_luxembourg:0 "Re-integrate Imperial Possessions"
- GER_integrate_luxembourg_desc:0 ""
+ GER_inner_circle_goring_reichswerke:0 "Establish the Reichswerke"
+ GER_inner_circle_goring_reichswerke_desc:0 ""  
 
- GER_inevitable_enemy:0 "The Inevitable Enemy"
- GER_inevitable_enemy_desc:0 ""
+ GER_inner_circle_goring_capstone:0 "Plenipotentioary of the Four Year Plan"
+ GER_inner_circle_goring_capstone_desc:0 ""
 
- GER_the_italian_loose_end:0 "Bring Italy into the Fold"
- GER_the_italian_loose_end_desc:0 ""
+ GER_inner_circle_four_year_plan:0 "Complete the Four Year Plan"
+ GER_inner_circle_four_year_plan_desc:0 ""
 
- GER_bring_spain_into_fold:0 "Operation Felix"
- GER_bring_spain_into_fold_desc:0 ""
+ GER_inner_circle_zentrale_plannung:0 "Form the Zentrale Plannung"
+ GER_inner_circle_zentrale_plannung_desc:0 ""
 
- GER_demand_slovenia_annexation:0 "Demand Slovenia"
- GER_demand_slovenia_annexation_desc:0 ""
+ GER_inner_circle_totaler_krieg:0 "Totaler Krieg"
+ GER_inner_circle_totaler_krieg_desc:0 ""
 
- GER_fate_yugoslavia:0 "Fate of Yugoslavia"
- GER_fate_yugoslavia_desc:0 ""
+ GER_inner_circle_cult_personality:0 "Consolidate the Volkreich"
+ GER_inner_circle_cult_personality_desc:0 ""
 
- GER_demand_eastern_claims:0 "Re-assert Eastern Claims"
- GER_demand_eastern_claims_desc:0 ""
+ GER_inner_circle_goebbels:0 "Reichsleiter Goebbels"
+ GER_inner_circle_goebbels_desc:0 ""
 
- GER_molotov_ribbentrop:0 "A Deal With the Devil"
- GER_molotov_ribbentrop_desc:0 ""
+ GER_inner_circle_goebbels_ministry:0 "Ministry of Public Enlightenment"
+ GER_inner_circle_goebbels_ministry_desc:0 ""
 
- GER_protect_poland:0 "Protect Poland"
- GER_protect_poland_desc:0 ""
+ GER_inner_circle_goebbels_capstone:0 "Reichsminister of Propaganda"
+ GER_inner_circle_goebbels_capstone_desc:0 ""
+ 
+ GER_inner_circle_himmler:0 "Reichsleiter Himmler"
+ GER_inner_circle_himmler_desc:0 ""
 
- GER_soviet_research_pact:0 "Germano-Soviet Research Pact"
- GER_soviet_research_pact_desc:0 ""
+ GER_inner_circle_himmler_expand_gestapo:0 "Expand the Gestapo"
+ GER_inner_circle_himmler_expand_gestapo_desc:0 ""
 
- GER_danzig_ultimatum:0 "The Danzig Ultimatum"
- GER_danzig_ultimatum_desc:0 ""
+ GER_inner_circle_himmler_capstone:0 "Reichsminister of the Interior"
+ GER_inner_circle_himmler_capstone_desc:0 ""
 
- GER_the_fuhrer_and_the_hussars:0 "The Führer and His Cossacks"
- GER_the_fuhrer_and_the_hussars_desc:0 ""
+ GER_inner_circle_propaganda_campaigns:0 "A War of Ideas"
+ GER_inner_circle_propaganda_campaigns_desc:0 ""
 
- GER_expand_baltic_influence:0 "Expand our Influence over the Baltic"
- GER_expand_baltic_influence_desc:0 ""
+ GER_inner_circle_quash_dissent:0 "Purify the Presses"
+ GER_inner_circle_quash_dissent_desc:0 ""
 
- GER_fate_of_switzerland:0 "Fate of Switzerland"
- GER_fate_of_switzerland_desc:0 ""
+ GER_inner_circle_mobilise_german_soul:0 "Rebirth of the German Soul"
+ GER_inner_circle_mobilise_german_soul_desc:0 ""
 
- GER_nordic_legion:0 "Use the Nordic Legion"
- GER_nordic_legion_desc:0 ""
+ GER_inner_circle_german_might:0 "An Invincible German Army"
+ GER_inner_circle_german_might_desc:0 ""
 
- GER_secure_denmark:0 "Secure the North Sea"
- GER_secure_denmark_desc:0 ""
+ GER_inner_circle_triumphant_will:0 "The Triumphant Will"
+ GER_inner_circle_triumphant_will_desc:0 ""
 
- GER_ensure_swedish_neutrality:0 "Ensure Swedish Neutrality"
- GER_ensure_swedish_neutrality_desc:0 ""
-
- GER_prop_up_northern_regimes:0 "Foster Pro-German Sentiment"
- GER_prop_up_northern_regimes_desc:0 ""
-
- GER_secure_finnish_loyalty:0 "Secure Finnish Loyalty"
- GER_secure_finnish_loyalty_desc:0 ""
-
- GER_anti_comintern_pact:0 "Anti-Comintern Pact"
- GER_anti_comintern_pact_desc:0 ""
-
- GER_support_finnish_independence:0 "Support Finland"
- GER_support_finnish_independence_desc:0 ""
-
- GER_puppet_anti_comintern_states:0 "An Iron Front Against Socialism"
- GER_puppet_anti_comintern_states_desc:0 ""
-
- GER_align_southern_states:0 "Lead the Lesser States"
- GER_align_southern_states_desc:0 ""
-
- GER_pressure_turkey:0 "Align Turkey"
- GER_pressure_turkey_desc:0 ""
-
- GER_pressure_greece:0 "Align Greece"
- GER_pressure_greece_desc:0 ""
-
- GER_influence_in_the_middle_east:0 "Influence the Middle-East"
- GER_influence_in_the_middle_east_desc:0 ""
-
- GER_support_breakaway_soviets:0 "Brothers Against the Bear"
- GER_support_breakaway_soviets_desc:0 ""
-
- GER_anti_communist_pact:0 "Realise Lebensbraum"
- GER_anti_communist_pact_desc:0 ""
-
- GER_war_with_soviets:0 "Snuff out the Red Menace"
- GER_war_with_soviets_desc:0 ""
-
- GER_end_communism_for_good:0 "The Final Blow to Socialism"
- GER_end_communism_for_good_desc:0 ""
+ GER_inner_circle_supreme_leader:0 "The Supreme Leader"
+ GER_inner_circle_supreme_leader_desc:0 ""
 
  # Tooltips - triggers
 

@@ -1,0 +1,497 @@
+###################
+# SHORT TERM GOALS
+###################
+
+# War on socialism
+faction_goal_war_on_socialism = {
+    name = faction_goal_war_on_socialism
+	description = faction_goal_war_on_socialism_desc
+	category = short_term
+	group = FOCUS_FILTER_WAR_SUPPORT
+
+    visible = {
+		FROM = {
+			NOT = {
+				has_socialist_government_tooltip_trigger = yes
+			}
+			NOT = {
+				any_enemy_country = {
+					has_socialist_government_tooltip_trigger = yes
+				}
+			}
+		}
+	}
+	available = {
+		NOT = {
+            any_allied_country = {
+                has_offensive_war = yes
+                any_enemy_country = {
+                    has_socialist_government_tooltip_trigger = yes
+                }
+            }
+        }
+		any_country = {
+			has_capitulated = no
+			has_socialist_government_tooltip_trigger = yes
+		}
+	}
+	completed = {
+		any_allied_country = {
+			has_offensive_war = yes
+			any_enemy_country = {
+				has_socialist_government_tooltip_trigger = yes
+			}
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 100
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = THE_FACTION_LEADER
+		add_faction_initiative = 1
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = ALL_FACTION_MEMBERS
+		every_faction_member = {
+			army_experience = 25
+			add_war_support = 0.05
+		}
+	}
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			# fascist countries should try to kill socialist countries asap
+			add = 10
+			has_fascist_government_trigger = yes
+			OR = {
+				any_neighbor_country = {
+					has_socialist_government_trigger = yes
+					is_faction_leader = yes
+				}
+				AND = {
+					any_country = {
+						is_on_same_continent_as = ROOT
+						has_socialist_government_tooltip_trigger = yes
+					}
+				}
+			}
+		}
+		modifier = {
+			# authoritarian countries will want to topple socialists, but less
+			add = 5
+			has_authoritarian_government_trigger = yes
+			OR = {
+				any_neighbor_country = {
+					has_socialist_government_trigger = yes
+					is_faction_leader = yes
+				}
+				AND = {
+					any_country = {
+						is_on_same_continent_as = ROOT
+						has_socialist_government_tooltip_trigger = yes
+					}
+				}
+			}
+		}
+		modifier = {
+			# Should not seek to declare war if already at war (unless fascist, because fascists aren't smart)
+			factor = 0
+			NOT = {
+				has_fascist_government_trigger = yes
+			}
+			has_war = yes
+		}
+		modifier = {
+			# Shouldn't go to war if the faction is losing
+			factor = 0
+			any_allied_country = {
+				surrender_progress > 0
+			}
+		}
+	}
+}
+
+# War on fascism
+
+faction_goal_war_on_fascism = {
+    name = faction_goal_war_on_fascism
+	description = faction_goal_war_on_fascism_desc
+	category = short_term
+	group = FOCUS_FILTER_WAR_SUPPORT
+
+    visible = {
+		FROM = {
+			NOT = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+			NOT = {
+				any_enemy_country = {
+					has_fascist_government_tooltip_trigger = yes
+				}
+			}
+		}
+	}
+	available = {
+		NOT = {
+            any_allied_country = {
+                has_offensive_war = yes
+                any_enemy_country = {
+                    has_fascist_government_tooltip_trigger = yes
+                }
+            }
+        }
+		any_country = {
+			has_capitulated = no
+			has_fascist_government_tooltip_trigger = yes
+		}
+	}
+	completed = {
+		any_allied_country = {
+			has_offensive_war = yes
+			any_enemy_country = {
+				has_fascist_government_tooltip_trigger = yes
+			}
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 100
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = THE_FACTION_LEADER
+		add_faction_initiative = 1
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = ALL_FACTION_MEMBERS
+		every_faction_member = {
+			army_experience = 25
+			add_war_support = 0.05
+		}
+	}
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			# socialist countries OR dem countries with high war support want this
+			add = 5
+			has_socialist_government_trigger = yes
+			has_war_support > 0.5
+			OR = {
+				any_neighbor_country = {
+					has_fascist_government_trigger = yes
+					is_faction_leader = yes
+				}
+				AND = {
+					any_country = {
+						is_on_same_continent_as = ROOT
+						has_fascist_government_trigger = yes
+					}
+				}
+			}
+		}
+		modifier = {
+			# socialist countries OR dem countries with high war support want this
+			add = 5
+			OR = {
+				has_socialist_government_trigger = yes
+				AND = {
+					has_democratic_government_trigger = yes
+					OR = {
+						threat > 0.5
+						has_war_support > 0.5
+					}
+				}
+			}
+			OR = {
+				any_neighbor_country = {
+					has_fascist_government_trigger = yes
+					is_faction_leader = yes
+				}
+				AND = {
+					any_country = {
+						is_on_same_continent_as = ROOT
+						has_fascist_government_trigger = yes
+					}
+				}
+			}			
+		}
+		modifier = {
+			# Socialists will still pull the trigger if they have high war support
+			factor = 0
+			OR = {
+				NOT = {
+					has_socialist_government_trigger = yes
+				}
+				has_war_support < 0.5
+			}
+			has_war = yes
+		}
+		modifier = {
+			# Shouldn't go to war if the faction is losing
+			factor = 0
+			any_allied_country = {
+				surrender_progress > 0
+			}
+		}
+	}
+}
+
+# War on reactionarism
+faction_goal_war_on_reactionarism = {
+    name = faction_goal_war_on_reactionarism
+	description = faction_goal_war_on_reactionarism_desc
+	category = short_term
+	group = FOCUS_FILTER_WAR_SUPPORT
+
+    visible = {
+		FROM = {
+			has_socialist_government_tooltip_trigger = yes
+			NOT = {
+				OR = {
+                    any_enemy_country = {
+                        has_fascist_government_tooltip_trigger = yes
+                    }
+                    any_enemy_country = {
+                        has_democratic_government_tooltip_trigger = yes
+                    }
+                    any_enemy_country = {
+                        has_authoritarian_government_tooltip_trigger = yes
+                    }
+                }
+			}
+		}
+	}
+	available = {
+		NOT = {
+            any_allied_country = {
+                has_offensive_war = yes
+                OR = {
+                    any_enemy_country = {
+                        has_fascist_government_tooltip_trigger = yes
+                    }
+                    any_enemy_country = {
+                        has_democratic_government_tooltip_trigger = yes
+                    }
+                    any_enemy_country = {
+                        has_authoritarian_government_tooltip_trigger = yes
+                    }
+                }
+            }
+        }
+	}
+	completed = {
+		any_allied_country = {
+            has_offensive_war = yes
+            OR = {
+                any_enemy_country = {
+                    has_fascist_government_tooltip_trigger = yes
+                }
+                any_enemy_country = {
+                    has_democratic_government_tooltip_trigger = yes
+                }
+                any_enemy_country = {
+                    has_authoritarian_government_tooltip_trigger = yes
+                }
+            }
+        }
+	}
+	complete_effect = {
+		add_faction_power_projection = 100
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = THE_FACTION_LEADER
+		add_faction_initiative = 1
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = ALL_FACTION_MEMBERS
+		every_faction_member = {
+			army_experience = 25
+			add_war_support = 0.05
+		}
+	}
+	ai_will_do = {
+		base = 0
+		modifier = {
+			# socialist countries will want this only if bordered by a non-socialist faction
+			add = 5
+			any_neighbor_country = {
+				NOT = {
+					is_in_faction_with = ROOT
+				}
+				any_allied_country = {
+					is_faction_leader = yes
+					NOT = {
+						has_socialist_government_trigger = yes
+					}
+				}
+			}
+		}
+		modifier = {
+			# Socialists will still pull the trigger if they have high war support
+			factor = 0
+			has_war_support < 0.5
+			has_war = yes
+		}
+		modifier = {
+			# Shouldn't go to war if the faction is losing
+			factor = 0
+			any_allied_country = {
+				surrender_progress > 0
+			}
+		}
+	}
+}
+
+# War on liberalism
+faction_goal_war_on_liberalism = {
+    name = faction_goal_war_on_liberalism
+	description = faction_goal_war_on_liberalism_desc
+	category = short_term
+	group = FOCUS_FILTER_WAR_SUPPORT
+
+    visible = {
+		FROM = {
+			OR = {
+				has_authoritarian_government_tooltip_trigger = yes
+				has_fascist_government_tooltip_trigger = yes
+			}
+			NOT = {
+				OR = {
+                    any_enemy_country = {
+                        has_socialist_government_tooltip_trigger = yes
+                    }
+                    any_enemy_country = {
+                        has_democratic_government_tooltip_trigger = yes
+                    }
+                }
+			}
+		}
+	}
+	available = {
+		NOT = {
+            any_allied_country = {
+                has_offensive_war = yes
+                OR = {
+                    any_enemy_country = {
+                        has_socialist_government_tooltip_trigger = yes
+                    }
+                    any_enemy_country = {
+                        has_democratic_government_tooltip_trigger = yes
+                    }
+                }
+            }
+        }
+	}
+	completed = {
+		any_allied_country = {
+            has_offensive_war = yes
+            OR = {
+                any_enemy_country = {
+                    has_socialist_government_tooltip_trigger = yes
+                }
+                any_enemy_country = {
+                    has_democratic_government_tooltip_trigger = yes
+                }
+            }
+        }
+	}
+	complete_effect = {
+		add_faction_power_projection = 100
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = THE_FACTION_LEADER
+		add_faction_initiative = 1
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = ALL_FACTION_MEMBERS
+		every_faction_member = {
+			army_experience = 25
+			add_war_support = 0.05
+		}
+	}
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			# fascist OR authoritarian with high war support want this
+			add = 5
+			OR = {
+				
+			}
+			OR = {
+				any_neighbor_country = {
+					has_fascist_government_trigger = yes
+					is_faction_leader = yes
+				}
+				AND = {
+					any_country = {
+						is_on_same_continent_as = ROOT
+						has_fascist_government_trigger = yes
+					}
+				}
+			}
+		}
+		modifier = {
+			# socialist countries OR dem countries with high war support want this
+			add = 5
+			OR = {
+				has_socialist_government_trigger = yes
+				AND = {
+					has_democratic_government_trigger = yes
+					OR = {
+						threat > 0.5
+						has_war_support > 0.5
+					}
+				}
+			}
+			OR = {
+				any_neighbor_country = {
+					has_fascist_government_trigger = yes
+					is_faction_leader = yes
+				}
+				AND = {
+					any_country = {
+						is_on_same_continent_as = ROOT
+						has_fascist_government_trigger = yes
+					}
+				}
+			}			
+		}
+		modifier = {
+			# Socialists will still pull the trigger if they have high war support
+			factor = 0
+			OR = {
+				NOT = {
+					has_socialist_government_trigger = yes
+				}
+				has_war_support < 0.5
+			}
+			has_war = yes
+		}
+		modifier = {
+			# Shouldn't go to war if the faction is losing
+			factor = 0
+			any_allied_country = {
+				surrender_progress > 0
+			}
+		}
+	}
+}
+
+# Increase faction size
+
+# Create spymaster
+
+# Industry - convoy sufficiency
+
+# Industry - research facilities
+
+# Industry - military facilities
+
+# Industry - dockyards
+
+# Army - Armored Core
+
+# Army - Infantry
+
+# Resources - Secure Oil
+
+# Resources - Secure Steel
+
+# Resources - Secure Chromium
+
+# Resources - Secure Tungsten
+
+# Resources - Secure Coal

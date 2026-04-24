@@ -142,8 +142,7 @@ leader_traits = {
 		random = no
 		sprite = 13
 		production_factory_max_efficiency_factor = 0.05
-		production_speed_arms_factory_factor = 0.05
-		production_speed_industrial_complex_factor = 0.05
+		production_speed_industrial_complex_factor = 0.1
 	}
 
 	GER_war_economy_organiser_trait = {
@@ -165,7 +164,7 @@ leader_traits = {
 
 	GER_security_minister_trait = {
 		random = no
-		sprite = 13
+		sprite = 15
 		operative_slot = 1
 		army_intel_to_others = -2
 		airforce_intel_to_others = -2
@@ -173,7 +172,7 @@ leader_traits = {
 
 	GER_head_of_abwehr_trait = {
 		random = no
-		sprite = 13
+		sprite = 15
 		agency_upgrade_time = -0.25
 		enemy_operative_capture_chance_factor = 0.1
 	}

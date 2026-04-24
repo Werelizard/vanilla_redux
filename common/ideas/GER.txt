@@ -3,16 +3,19 @@ ideas = {
 	country = {
 		ger_dummy_MEFO = {
 			modifier = {
-				consumer_goods_expected_value = 0.1
+				consumer_goods_factor = 0.1
 				civilian_intel_to_others = -25
 				production_speed_arms_factory_factor = 0.15
 				production_speed_dockyard_factor = 0.15
+				production_speed_fuel_silo_factor = 0.15
+				production_speed_air_base_factor = 0.15
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
 			}
 		}
 		ger_dummy_army = {
 			modifier = {
-				recruitable_population_factor = -0.1
-				max_training  = 0.1
+				supply_consumption_factor = 0.2
 			}
 		}
 		ger_dummy_airforce = {
@@ -30,14 +33,18 @@ ideas = {
 	country = {
 		ger_enabling_act = {
 			modifier = {
-				fascist_drift = 0.01
-				political_power_factor = -0.2
+				fascist_drift = 0.1
+				political_power_factor = -0.2				
+				drift_defence_factor = 0.1
 			}
 		}
-		ger_german_revanchism = {
+		ger_german_reactionarism = {
 			modifier = {
-				drift_defence_factor = 0.5
-				army_attack_factor = 0.05
+				stability_factor = -0.1
+				resistance_decay = -0.1
+				resistance_activity = 0.1
+				recruitable_population_factor = -0.15
+				trade_opinion_factor = -0.25
 			}
 		}
 	}
@@ -45,9 +52,9 @@ ideas = {
 	country = {
 		ger_enabling_act_improved = {
 			modifier = {
-				fascist_drift = 0.01
-				party_popularity_stability_factor = 0.2
-				political_power_factor = -0.1
+				fascist_drift = 0.1
+				political_power_factor = -0.1				
+				drift_defence_factor = 0.35
 			}
 		}
 		ger_expand_abwehr = {

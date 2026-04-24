@@ -12,15 +12,15 @@ on_actions = {
 		}
 	}
 	# Effect to update the "Leader of the New Order" dynmod
-	on_join_faction = {
+	on_weekly_GER = {
 		effect = {
-			FROM = {
-				if = {
-					limit = {
-						original_tag = GER
-						has_dynamic_modifier = GER_new_order_dynmod
-					}
-				}
+			add_to_variable = {
+				GER_mefo_consumergoods_var = GER_mefo_consumergoods_increase_var
+			}
+			clamp_variable = {
+				var = GER_mefo_consumergoods_var
+				min = 0
+				max = 1
 			}
 		}
 	}

@@ -33,7 +33,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_Militarise_Rhineland
-		icon = GFX_goal_unknown
+		icon = GFX_goal_GER_Militarise_Rhineland
 		cost = 10
 		x = 10
 		y = 0
@@ -41,6 +41,11 @@ focus_tree = {
 			country_event = {
 				id = germany_general_fascist.1
 				days = 7
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = GER_Wehrmacht_Revolt_flag
 			}
 		}
 		completion_reward = {
@@ -52,6 +57,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = doublespace_tt
 			custom_effect_tooltip = focus_on_complete
+			add_political_power = 100
 			every_owned_state = {
 				limit = {
 					OR = {
@@ -69,7 +75,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_Reorganise_Wehrmacht
-		icon = GFX_goal_unknown
+		icon = GFX_goal_GER_Reorganise_Wehrmacht
 		cost = 4
 		x = 2
 		y = 1
@@ -100,7 +106,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_Enforce_Party_State
-		icon = GFX_goal_unknown
+		icon = GFX_goal_GER_Enforce_Party_State
 		cost = 4
 		x = -2
 		y = 1
@@ -134,13 +140,16 @@ focus_tree = {
 
 	focus = {
 		id = GER_Expand_SS_Recruitment
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_fascist_troops
 		cost = 4
 		x = -3
 		y = 2
 		relative_position_id = GER_Militarise_Rhineland
 		prerequisite = {
 			focus = GER_Enforce_Party_State
+		}
+		prerequisite = {
+			focus = GER_Reorganise_Wehrmacht
 		}
 		available = {
 			has_fascist_government_trigger = yes
@@ -153,7 +162,7 @@ focus_tree = {
 				}
 			}
 			add_to_variable = {
-				GER_army_maxtraining_var = -0.05
+				GER_army_supplyfac_var = -0.1
 				tooltip = max_training_factor_tt
 			}
 			custom_effect_tooltip = doublespace_tt
@@ -163,6 +172,13 @@ focus_tree = {
 					DECISION = vx_germany_ss_militias_dec
 				}
 			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = unlock_decision_ovewrite_tt
+					DECISION = vx_germany_exand_militias_dec
+				}
+			}
+
 			custom_effect_tooltip = doublespace_tt
 			set_technology = {
 				vx_ss_militias = 1
@@ -173,7 +189,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_Fuhrerprinzip
-		icon = GFX_goal_unknown
+		icon = GFX_goal_GER_Fuhrerprinzip
 		cost = 4
 		x = 0
 		y = 2
@@ -188,1127 +204,21 @@ focus_tree = {
 			has_fascist_government_trigger = yes
 		}
 		completion_reward = {
-			add_political_power = 100
 			custom_effect_tooltip = GER_Fuhrerprinzip_enabled_tt
 			custom_effect_tooltip = doublespace_tt
-			custom_effect_tooltip = GER_Fuhrerprinzip_warning_tt
-		}
-	}
-
-	focus = {
-		id = GER_the_reichskomissarat
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 3
-		y = 1
-		relative_position_id = GER_Fuhrerprinzip
-		prerequisite = {
-			focus = GER_Fuhrerprinzip
-		}
-		available = {
-			has_fascist_government_trigger = yes
-		}
-		completion_reward = {
-
-		}
-	}
-
-	###################
-	# HISTORICAL - FOREIGN POLICY
-	###################
-
-	focus = {
-		id = GER_lead_the_new_order
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -1
-		y = 1
-		relative_position_id = GER_Fuhrerprinzip
-		prerequisite = {
-			focus = GER_Fuhrerprinzip
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			is_subject = no
-		}
-		completion_reward = {
-			custom_effect_tooltip = doublespace_tt
-			add_war_support = 0.05
-			add_political_power = 50
-		}
-		bypass = {
-			is_faction_leader = yes
-		}
-	}
-
-	focus = {
-		id = GER_expand_intelligence
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 3
-		y = 1
-		relative_position_id = GER_lead_the_new_order
-		prerequisite = {
-			focus = GER_lead_the_new_order
-		}
-		available = {
-			
-		}
-		completion_reward = {
-			gain_random_agency_upgrade = yes
-			custom_effect_tooltip = doublespace_tt
-			add_ideas = ger_expand_abwehr
-		}
-	}
-
-	focus = {
-		id = GER_align_southern_states
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 2
-		y = 2
-		relative_position_id = GER_lead_the_new_order
-		prerequisite = {
-			focus = GER_lead_the_new_order
-		}
-		available = {
-			any_country = {
-				OR = {
-					original_tag = HUN
-					original_tag = ROM
-					original_tag = BUL
-					original_tag = YUG
-				}
-				exists = yes
-				is_subject = no
-				NOT = {
-					has_socialist_government_tooltip_trigger = yes
+			hidden_effect = {
+				set_variable = {
+					GER_inner_circle_cohesion_var = 20
 				}
 			}
-		}
-		completion_reward = {
-			every_country = {
-				limit = {
-					is_subject = no
-					OR = {
-						original_tag = HUN
-						original_tag = ROM
-						original_tag = BUL
-						original_tag = YUG
-					}
-				}
-				country_event = {
-					id = germany_focus_fascist.2
-					days = 3
-				}
-			}
-			custom_effect_tooltip = doublespace_tt
-			custom_override_tooltip = {
-				tooltip = {
-					localization_key = unlock_decision_ovewrite_tt
-					DECISION = vx_germany_influence_hungary_dec
-				}
-			}
-			custom_override_tooltip = {
-				tooltip = {
-					localization_key = unlock_decision_ovewrite_tt
-					DECISION = vx_germany_influence_romania_dec
-				}
-			}
-			custom_override_tooltip = {
-				tooltip = {
-					localization_key = unlock_decision_ovewrite_tt
-					DECISION = vx_germany_influence_bulgaria_dec
-				}
-			}
-			custom_override_tooltip = {
-				tooltip = {
-					localization_key = unlock_decision_ovewrite_tt
-					DECISION = vx_germany_influence_yugoslavia_dec
-				}
+			add_dynamic_modifier = {
+				modifier = GER_inner_circle_dynmod
 			}
 		}
-	}
-
-	focus = {
-		id = GER_ally_china
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 9
-		y = 1
-		relative_position_id = GER_lead_the_new_order
-		prerequisite = {
-			focus = GER_lead_the_new_order
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			CHI = {
-				has_capitulated = no
-				NOT = {
-					has_war_with = ROOT
-				}
-				hidden_trigger = {
-					exists = yes
-				}
+		allow_branch = {
+			NOT = {
+				has_country_flag = GER_hitler_dead_flag
 			}
-		}
-		completion_reward = {
-			CHI = {
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = VX_improved_relations
-				}
-			}
-			custom_effect_tooltip = doublespace_tt
-			add_ideas = ger_support_china
-		}
-		mutually_exclusive = {
-			focus = GER_ally_japan
-		}
-		bypass = {
-			JAP = {
-				exists = no
-			}
-			CHI = {
-				exists = no
-			}
-		}
-	}
-
-	focus = {
-		id = GER_ally_japan
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 5
-		y = 1
-		relative_position_id = GER_lead_the_new_order
-		prerequisite = {
-			focus = GER_lead_the_new_order
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			JAP = {
-				has_capitulated = no
-				NOT = {
-					has_war_with = ROOT
-				}
-				hidden_trigger = {
-					exists = yes
-				}
-			}
-		}
-		completion_reward = {
-			JAP = {
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = VX_improved_relations
-				}
-			}			
-			custom_effect_tooltip = doublespace_tt
-			add_ideas = ger_support_japan
-		}
-		mutually_exclusive = {
-			focus = GER_ally_china
-		}
-		bypass = {
-			JAP = {
-				exists = no
-			}
-			CHI = {
-				exists = no
-			}
-		}
-	}
-
-	focus = {
-		id = GER_naval_cooperation_japan
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 6
-		y = 2
-		relative_position_id = GER_lead_the_new_order
-		prerequisite = {
-			focus = GER_ally_japan
-		}
-		available = {
-			
-		}
-		completion_reward = {
-			effect_tooltip = {
-				
-			}
-			custom_effect_tooltip = doublespace_tt
-			custom_override_tooltip = {
-				tooltip = {
-					localization_key = country_must_approve_tt
-					COUNTRY = JAP
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = GER_blitzkrieg_pacific
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 6
-		y = 4
-		relative_position_id = GER_lead_the_new_order
-		prerequisite = {
-			focus = GER_naval_cooperation_japan
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_pacific_sentinels
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 6
-		y = 5
-		relative_position_id = GER_lead_the_new_order
-		prerequisite = {
-			focus = GER_blitzkrieg_pacific
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_south_asian_wealth
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 4
-		y = 2
-		relative_position_id = GER_lead_the_new_order
-		prerequisite = {
-			focus = GER_ally_japan
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_support_indian_independence
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 7
-		y = 3
-		relative_position_id = GER_lead_the_new_order
-		prerequisite = {
-			focus = GER_ally_japan
-			focus = GER_ally_china
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_secure_chinese_trade
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 8
-		y = 2
-		relative_position_id = GER_lead_the_new_order
-		prerequisite = {
-			focus = GER_ally_china
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_falkenhausen_in_china
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 10
-		y = 2
-		relative_position_id = GER_lead_the_new_order
-		prerequisite = {
-			focus = GER_ally_china
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_support_blue_shirts
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 9
-		y = 3
-		relative_position_id = GER_lead_the_new_order
-		prerequisite = {
-			focus = GER_secure_chinese_trade
-		}
-		prerequisite = {
-			focus = GER_falkenhausen_in_china
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_the_dragon_and_the_eagle
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 9
-		y = 4
-		relative_position_id = GER_lead_the_new_order
-		prerequisite = {
-			focus = GER_support_blue_shirts
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_create_legion_condor
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -1
-		y = 1
-		relative_position_id = GER_lead_the_new_order
-		prerequisite = {
-			focus = GER_lead_the_new_order
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_agitate_ireland
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 1
-		y = 1
-		relative_position_id = GER_lead_the_new_order
-		prerequisite = {
-			focus = GER_lead_the_new_order
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_american_bund
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -2
-		y = 2
-		relative_position_id = GER_lead_the_new_order
-		prerequisite = {
-			focus = GER_lead_the_new_order
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_south_american_connection
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -2
-		y = 3
-		relative_position_id = GER_lead_the_new_order
-		prerequisite = {
-			focus = GER_american_bund
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_align_italians
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -3
-		y = 1
-		relative_position_id = GER_lead_the_new_order
-		prerequisite = {
-			focus = GER_lead_the_new_order
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_anti_comintern_pact
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 0
-		y = 3
-		relative_position_id = GER_lead_the_new_order
-		prerequisite = {
-			focus = GER_lead_the_new_order
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_support_finnish_independence
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 2
-		y = 1
-		relative_position_id = GER_anti_comintern_pact
-		prerequisite = {
-			focus = GER_anti_comintern_pact
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_puppet_anti_comintern_states
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 0
-		y = 1
-		relative_position_id = GER_anti_comintern_pact
-		prerequisite = {
-			focus = GER_anti_comintern_pact
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_pressure_greece
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -1
-		y = 2
-		relative_position_id = GER_anti_comintern_pact
-		prerequisite = {
-			focus = GER_anti_comintern_pact
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-		mutually_exclusive = {
-			focus = GER_pressure_turkey
-		}
-	}
-
-	focus = {
-		id = GER_support_breakaway_soviets
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -5
-		y = 1
-		relative_position_id = GER_anti_comintern_pact
-		prerequisite = {
-			focus = GER_protect_poland
-		}
-		prerequisite = {
-			focus = GER_expand_baltic_influence
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-		mutually_exclusive = {
-			focus = GER_anti_communist_pact
-		}
-	}
-
-	focus = {
-		id = GER_anti_communist_pact
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -3
-		y = 1
-		relative_position_id = GER_anti_comintern_pact
-		prerequisite = {
-			focus = GER_anti_comintern_pact
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-		mutually_exclusive = {
-			focus = GER_support_breakaway_soviets
-		}
-	}
-
-	focus = {
-		id = GER_war_with_soviets
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -4
-		y = 2
-		relative_position_id = GER_anti_comintern_pact
-		prerequisite = {
-			focus = GER_support_breakaway_soviets
-			focus = GER_anti_communist_pact
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_end_communism_for_good
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -4
-		y = 3
-		relative_position_id = GER_anti_comintern_pact
-		prerequisite = {
-			focus = GER_war_with_soviets
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_pressure_turkey
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 1
-		y = 2
-		relative_position_id = GER_anti_comintern_pact
-		prerequisite = {
-			focus = GER_anti_comintern_pact
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-		mutually_exclusive = {
-			focus = GER_pressure_greece
-		}
-	}
-
-	focus = {
-		id = GER_influence_in_the_middle_east
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 0
-		y = 3
-		relative_position_id = GER_anti_comintern_pact
-		prerequisite = {
-			focus = GER_pressure_greece
-			focus = GER_pressure_turkey
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	###################
-	# HISTORICAL - TERRITORIAL EXPANSION
-	###################
-
-	focus = {
-		id = GER_anschluss
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -13
-		y = 1
-		relative_position_id = GER_Fuhrerprinzip
-		prerequisite = {
-			focus = GER_Fuhrerprinzip
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_fate_of_sudentenland
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 1
-		y = 1
-		relative_position_id = GER_anschluss
-		prerequisite = {
-			focus = GER_anschluss
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_pressure_benelux
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -1
-		y = 4
-		relative_position_id = GER_anschluss
-		prerequisite = {
-			focus = GER_anschluss
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_perfidious_albion
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -1
-		y = 1
-		relative_position_id = GER_pressure_benelux
-		prerequisite = {
-			focus = GER_pressure_benelux
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_integrate_luxembourg
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 0
-		y = 3
-		relative_position_id = GER_pressure_benelux
-		prerequisite = {
-			focus = GER_pressure_benelux
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_inevitable_enemy
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 2
-		y = 1
-		relative_position_id = GER_pressure_benelux
-		prerequisite = {
-			focus = GER_pressure_benelux
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_the_italian_loose_end
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 1
-		y = 2
-		relative_position_id = GER_pressure_benelux
-		prerequisite = {
-			focus = GER_inevitable_enemy
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_bring_spain_into_fold
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 3
-		y = 2
-		relative_position_id = GER_pressure_benelux
-		prerequisite = {
-			focus = GER_inevitable_enemy
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-	focus = {
-		id = GER_demand_slovenia_annexation
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 0
-		y = 2
-		relative_position_id = GER_anschluss
-		prerequisite = {
-			focus = GER_fate_of_sudentenland
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_fate_yugoslavia
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 0
-		y = 3
-		relative_position_id = GER_anschluss
-		prerequisite = {
-			focus = GER_demand_slovenia_annexation
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_demand_eastern_claims
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 6
-		y = 1
-		relative_position_id = GER_anschluss
-		prerequisite = {
-			focus = GER_anschluss
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_molotov_ribbentrop
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 3
-		y = 3
-		relative_position_id = GER_anschluss
-		prerequisite = {
-			focus = GER_demand_eastern_claims
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-		mutually_exclusive = {
-			focus = GER_protect_poland
-		}
-	}
-
-	focus = {
-		id = GER_protect_poland
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 5
-		y = 3
-		relative_position_id = GER_anschluss
-		prerequisite = {
-			focus = GER_demand_eastern_claims
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-		mutually_exclusive = {
-			focus = GER_molotov_ribbentrop
-		}
-	}
-
-	focus = {
-		id = GER_soviet_research_pact
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 2
-		y = 4
-		relative_position_id = GER_anschluss
-		prerequisite = {
-			focus = GER_molotov_ribbentrop
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_danzig_ultimatum
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 4
-		y = 4
-		relative_position_id = GER_anschluss
-		prerequisite = {
-			focus = GER_molotov_ribbentrop
-			focus = GER_protect_poland
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_the_fuhrer_and_the_hussars
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 6
-		y = 5
-		relative_position_id = GER_anschluss
-		prerequisite = {
-			focus = GER_danzig_ultimatum
-		}
-		prerequisite = {
-			focus = GER_protect_poland
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_expand_baltic_influence
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 7
-		y = 2
-		relative_position_id = GER_anschluss
-		prerequisite = {
-			focus = GER_demand_eastern_claims
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_fate_of_switzerland
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 2
-		y = 2
-		relative_position_id = GER_anschluss
-		prerequisite = {
-			focus = GER_fate_of_sudentenland
-			focus = GER_demand_eastern_claims
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_nordic_legion
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -5
-		y = 1
-		relative_position_id = GER_anschluss
-		prerequisite = {
-			focus = GER_anschluss
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_secure_denmark
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -1
-		y = 1
-		relative_position_id = GER_nordic_legion
-		prerequisite = {
-			focus = GER_nordic_legion
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_ensure_swedish_neutrality
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 2
-		y = 1
-		relative_position_id = GER_nordic_legion
-		prerequisite = {
-			focus = GER_nordic_legion
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_prop_up_northern_regimes
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 0
-		y = 2
-		relative_position_id = GER_nordic_legion
-		prerequisite = {
-			focus = GER_secure_denmark
-			focus = GER_ensure_swedish_neutrality
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_secure_finnish_loyalty
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 1
-		y = 3
-		relative_position_id = GER_nordic_legion
-		prerequisite = {
-			focus = GER_secure_denmark
-			focus = GER_ensure_swedish_neutrality
-		}
-		available = {
-			
-		}
-		completion_reward = {
-
 		}
 	}
 
@@ -1317,22 +227,842 @@ focus_tree = {
 	###################
 
 	focus = {
-		id = GER_the_party_chancellry
+		id = GER_inner_circle_economics
 		icon = GFX_goal_unknown
-		cost = 10
-		x = 13
+		cost = 4
+		x = -5
 		y = 1
 		relative_position_id = GER_Fuhrerprinzip
 		prerequisite = {
 			focus = GER_Fuhrerprinzip
 		}
 		available = {
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_inner_circle_todt
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -1
+		y = 1
+		relative_position_id = GER_inner_circle_economics
+		text_icon = GER_inner_circle_focus_style
+		prerequisite = {
+			focus = GER_inner_circle_economics
+		}
+		available = {
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_inner_circle_todt_org
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -1
+		y = 2
+		relative_position_id = GER_inner_circle_economics
+		text_icon = GER_inner_circle_focus_style
+		prerequisite = {
+			focus = GER_inner_circle_todt
+		}
+		available = {
+
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_inner_circle_todt_capstone
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -1
+		y = 4
+		relative_position_id = GER_inner_circle_economics
+		text_icon = GER_inner_circle_focus_style
+		prerequisite = {
+			focus = GER_inner_circle_autobahn
+		}
+		prerequisite = {
+			focus = GER_inner_circle_todt_org
+		}
+		available = {
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = GER_inner_circle_hierl_capstone
+		}
+	}
+
+	focus = {
+		id = GER_inner_circle_hierl
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -3
+		y = 1
+		relative_position_id = GER_inner_circle_economics
+		text_icon = GER_inner_circle_focus_style
+		prerequisite = {
+			focus = GER_inner_circle_economics
+		}
+		available = {
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
+		}
+		completion_reward = {
+			
+		}
+	}	
+
+	focus = {
+		id = GER_inner_circle_hierl_reichservice
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -3
+		y = 2
+		relative_position_id = GER_inner_circle_economics
+		text_icon = GER_inner_circle_focus_style
+		prerequisite = {			
+			focus = GER_inner_circle_hierl
+		}
+		prerequisite = {
+			# focus = GER_inner_circle_autobahn
+		}
+		available = {
+
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_inner_circle_hierl_capstone
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -3
+		y = 4
+		relative_position_id = GER_inner_circle_economics
+		text_icon = GER_inner_circle_focus_style
+
+		prerequisite = {			
+			focus = GER_inner_circle_hierl_reichservice
+		}
+		prerequisite = {
+			focus = GER_inner_circle_autobahn
+		}
+		available = {
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = GER_inner_circle_todt_capstone
+		}
+	}
+
+	focus = {
+		id = GER_inner_circle_autobahn
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -2
+		y = 3
+		relative_position_id = GER_inner_circle_economics
+		text_icon = GER_inner_circle_focus_style
+		prerequisite = {
+			focus = GER_inner_circle_hierl_reichservice
+			focus = GER_inner_circle_todt_org
+		}
+		available = {
+
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			
+		}
+	}		
+
+	focus = {
+		id = GER_inner_circle_societal_mobilisation
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -2
+		y = 5
+		relative_position_id = GER_inner_circle_economics
+		text_icon = GER_inner_circle_focus_style
+		prerequisite = {
+			focus = GER_inner_circle_hierl_capstone
+			focus = GER_inner_circle_todt_capstone
+		}
+		available = {
+
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_inner_circle_speer
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 1
+		y = 1
+		relative_position_id = GER_inner_circle_economics
+		text_icon = GER_inner_circle_focus_style
+		prerequisite = {
+			focus = GER_inner_circle_economics
+		}
+		available = {
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_inner_circle_speer_rationalisation
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 1
+		y = 3
+		relative_position_id = GER_inner_circle_economics
+		text_icon = GER_inner_circle_focus_style
+		prerequisite = {
+			focus = GER_inner_circle_speer
+		}
+		# prerequisite = {
+		# 	focus = GER_inner_circle_four_year_plan
+		# }
+		available = {
 			
 		}
 		completion_reward = {
-
+			
 		}
-		cancelable = no
 	}
 
+	focus = {
+		id = GER_inner_circle_speer_capstone
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 1
+		y = 5
+		relative_position_id = GER_inner_circle_economics
+		text_icon = GER_inner_circle_focus_style
+		prerequisite = {
+			focus = GER_inner_circle_speer_rationalisation
+		}
+		prerequisite = {
+			focus = GER_inner_circle_zentrale_plannung
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = GER_inner_circle_goring_capstone
+		}
+	}
+
+	focus = {
+		id = GER_inner_circle_goring
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 3
+		y = 1
+		relative_position_id = GER_inner_circle_economics
+		text_icon = GER_inner_circle_focus_style
+		prerequisite = {
+			focus = GER_inner_circle_economics
+		}
+		available = {
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_inner_circle_goring_reichswerke
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 3
+		y = 3
+		relative_position_id = GER_inner_circle_economics
+		text_icon = GER_inner_circle_focus_style
+		# prerequisite = {
+		# 	focus = GER_inner_circle_four_year_plan
+		# }
+		prerequisite = {
+			focus = GER_inner_circle_goring
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}	
+
+	focus = {
+		id = GER_inner_circle_goring_capstone
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 3
+		y = 5
+		relative_position_id = GER_inner_circle_economics
+		text_icon = GER_inner_circle_focus_style
+		prerequisite = {
+			focus = GER_inner_circle_zentrale_plannung
+		}
+		prerequisite = {
+			focus = GER_inner_circle_goring_reichswerke
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = GER_inner_circle_speer_capstone
+		}
+	}
+
+	focus = {
+		id = GER_inner_circle_four_year_plan
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 2
+		y = 2
+		relative_position_id = GER_inner_circle_economics
+		prerequisite = {			
+			focus = GER_inner_circle_speer
+			focus = GER_inner_circle_goring
+		}
+		available = {			
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_inner_circle_zentrale_plannung
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 2
+		y = 4
+		relative_position_id = GER_inner_circle_economics
+		text_icon = GER_inner_circle_focus_style
+		prerequisite = {			
+			focus = GER_inner_circle_speer_rationalisation
+			focus = GER_inner_circle_goring_reichswerke
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_inner_circle_totaler_krieg
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 2
+		y = 6
+		relative_position_id = GER_inner_circle_economics
+		text_icon = GER_inner_circle_focus_style
+		prerequisite = {
+			focus = GER_inner_circle_speer_capstone
+			focus = GER_inner_circle_goring_capstone
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	#######
+
+	focus = {
+		id = GER_inner_circle_cult_personality
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 5
+		y = 1
+		relative_position_id = GER_Fuhrerprinzip
+		prerequisite = {
+			focus = GER_Fuhrerprinzip
+		}
+		available = {
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_inner_circle_propaganda_campaigns
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -2
+		y = 2
+		relative_position_id = GER_inner_circle_cult_personality
+		# text_icon = GER_inner_circle_focus_style
+		prerequisite = {
+			focus = GER_inner_circle_goebbels
+			focus = GER_inner_circle_himmler
+		}
+		available = {
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_inner_circle_quash_dissent
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -2
+		y = 4
+		relative_position_id = GER_inner_circle_cult_personality
+		text_icon = GER_inner_circle_focus_style
+		prerequisite = {
+			focus = GER_inner_circle_goebbels_ministry
+			focus = GER_inner_circle_himmler_expand_gestapo
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_inner_circle_goebbels
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -3
+		y = 1
+		relative_position_id = GER_inner_circle_cult_personality
+		text_icon = GER_inner_circle_focus_style
+		prerequisite = {
+			focus = GER_inner_circle_cult_personality
+		}
+		available = {
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_inner_circle_goebbels_ministry
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -3
+		y = 3
+		relative_position_id = GER_inner_circle_cult_personality
+		text_icon = GER_inner_circle_focus_style
+		prerequisite = {
+			focus = GER_inner_circle_goebbels
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_inner_circle_goebbels_capstone
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -3
+		y = 5
+		relative_position_id = GER_inner_circle_cult_personality
+		text_icon = GER_inner_circle_focus_style
+		prerequisite = {
+			focus = GER_inner_circle_goebbels_ministry
+		}
+		prerequisite = {
+			focus = GER_inner_circle_quash_dissent
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = GER_inner_circle_himmler_capstone
+		}
+	}
+
+	focus = {
+		id = GER_inner_circle_himmler
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -1
+		y = 1
+		relative_position_id = GER_inner_circle_cult_personality
+		text_icon = GER_inner_circle_focus_style
+		prerequisite = {
+			focus = GER_inner_circle_cult_personality
+		}
+		available = {
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_inner_circle_himmler_expand_gestapo
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -1
+		y = 3
+		relative_position_id = GER_inner_circle_cult_personality
+		text_icon = GER_inner_circle_focus_style
+		prerequisite = {
+			focus = GER_inner_circle_himmler
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_inner_circle_himmler_capstone
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -1
+		y = 5
+		relative_position_id = GER_inner_circle_cult_personality
+		text_icon = GER_inner_circle_focus_style
+		prerequisite = {
+			focus = GER_inner_circle_quash_dissent
+		}
+		prerequisite = {
+			focus = GER_inner_circle_himmler_expand_gestapo
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = GER_inner_circle_goebbels_capstone
+		}
+	}
+
+	
+	focus = {
+		id = GER_inner_circle_mobilise_german_soul
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -2
+		y = 6
+		relative_position_id = GER_inner_circle_cult_personality
+		text_icon = GER_inner_circle_focus_style
+		prerequisite = {
+			focus = GER_inner_circle_goebbels_capstone
+			focus = GER_inner_circle_himmler_capstone
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = GER_inner_circle_goebbels_capstone
+		}
+	}
+
+	focus = {
+		id = GER_inner_circle_party_state
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 2
+		y = 3
+		relative_position_id = GER_inner_circle_cult_personality
+		text_icon = GER_inner_circle_focus_style
+		prerequisite = {
+			focus = GER_inner_circle_bormann_chancellery
+			focus = GER_inner_circle_hess_loyalty
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_inner_circle_bormann
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 1
+		y = 1
+		relative_position_id = GER_inner_circle_cult_personality
+		text_icon = GER_inner_circle_focus_style
+		prerequisite = {
+			focus = GER_inner_circle_cult_personality
+		}
+		available = {
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = GER_inner_circle_hess
+		}
+	}
+
+		focus = {
+		id = GER_inner_circle_bormann_chancellery
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 1
+		y = 2
+		relative_position_id = GER_inner_circle_cult_personality
+		text_icon = GER_inner_circle_focus_style
+		prerequisite = {
+			focus = GER_inner_circle_bormann
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = GER_inner_circle_hess
+		}
+	}
+
+	focus = {
+		id = GER_inner_circle_bormann_civil_service
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 1
+		y = 4
+		relative_position_id = GER_inner_circle_cult_personality
+		text_icon = GER_inner_circle_focus_style
+		prerequisite = {
+			focus = GER_inner_circle_bormann_chancellery
+		}
+		prerequisite = {
+			focus = GER_inner_circle_party_state
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = GER_inner_circle_hess
+		}
+	}
+
+	focus = {
+		id = GER_inner_circle_hess
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 3
+		y = 1
+		relative_position_id = GER_inner_circle_cult_personality
+		text_icon = GER_inner_circle_focus_style
+		prerequisite = {
+			focus = GER_inner_circle_cult_personality
+		}
+		available = {
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = GER_inner_circle_bormann
+		}
+	}
+
+	focus = {
+		id = GER_inner_circle_hess_loyalty
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 3
+		y = 2
+		relative_position_id = GER_inner_circle_cult_personality
+		text_icon = GER_inner_circle_focus_style
+		prerequisite = {
+			focus = GER_inner_circle_hess
+		}
+		available = {
+
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = GER_inner_circle_bormann
+		}
+	}
+
+	focus = {
+		id = GER_inner_circle_hess_ideology
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 3
+		y = 4
+		relative_position_id = GER_inner_circle_cult_personality
+		text_icon = GER_inner_circle_focus_style
+		prerequisite = {
+			focus = GER_inner_circle_party_state
+		}
+		prerequisite = {
+			focus = GER_inner_circle_hess_loyalty
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_inner_circle_hegemony_of_the_party
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 2
+		y = 5
+		relative_position_id = GER_inner_circle_cult_personality
+		text_icon = GER_inner_circle_focus_style
+		prerequisite = {
+			focus = GER_inner_circle_bormann_civil_service
+			focus = GER_inner_circle_hess_ideology
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	############
+
+	focus = {
+		id = GER_inner_circle_german_might
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -1
+		y = 1
+		relative_position_id = GER_Fuhrerprinzip
+		prerequisite = {
+			focus = GER_Fuhrerprinzip
+		}
+		available = {
+			has_fascist_government_trigger = yes
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_inner_circle_triumphant_will
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 1
+		y = 1
+		relative_position_id = GER_Fuhrerprinzip
+		prerequisite = {
+			focus = GER_Fuhrerprinzip
+		}
+		available = {
+			has_fascist_government_trigger = yes
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_inner_circle_supreme_leader
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 0
+		y = 2
+		relative_position_id = GER_Fuhrerprinzip
+		prerequisite = {
+			focus = GER_inner_circle_german_might
+		}
+		prerequisite = {
+			focus = GER_inner_circle_triumphant_will
+		}
+		available = {
+			has_fascist_government_trigger = yes
+		}
+		completion_reward = {
+			
+		}
+	}
 }

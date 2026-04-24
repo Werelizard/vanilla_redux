@@ -93,7 +93,7 @@
  authoritarian_democrat_subtype_desc:0 ""
 
  autocratic:0 "Paternalist"
- autocratic_noun:0 "Paternal Conservatism"
+ autocratic_noun:0 "Paternalism"
  autocratic_desc:0 "$authoritarian_government$"
  autocratic_subtype:0 "$autocratic_noun$"
  autocratic_subtype_desc:0 ""
@@ -114,6 +114,8 @@
  authoritarian_democrat_drift:0 "Daily $authoritarian_democrat$ Drift"
  autocratic_drift:0 "Daily $autocratic$ Drift"
  fascist_drift:0 "Daily $fascist$ Drift§"
+
+ ### MODIFIERS ###
 
  ### OPINION MODIFIERS ###
 
@@ -199,7 +201,7 @@
  can_scraping_the_barrel_tt:0 "Can remove §YScraping the Barrel§!"
 
  # TECHNOLOGIES 
- vx_ss_militias:0 "Improved Militias"
+ vx_ss_militias:0 "Paramilitary Auxiliaries"
 
  # TRAITS - CIVILIAN ADVISORS
  generic_popular_figurehead_trait:0 "Popular Figurehead"

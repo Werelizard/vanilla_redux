@@ -1,17 +1,20 @@
 GER_mefo_dynmod = {
 	enable = { always = yes }
-	icon = GFX_idea_ger_mefo_bills
-	consumer_goods_expected_value = GER_mefo_consumergoods_var
+	icon = GFX_idea_ger_mefo_bills	
+	consumer_goods_factor = GER_mefo_consumergoods_var
 	civilian_intel_to_others = GER_mefo_civintel_var
-	production_speed_arms_factory_factor = GER_mefo_milfac_var
-	production_speed_dockyard_factor = GER_mefo_docfac_var
+	industrial_capacity_factory = GER_mefo_industrialcap_var
+	industrial_capacity_dockyard = GER_mefo_industrialcap_var
+	production_speed_arms_factory_factor = GER_mefo_buidlfac_var
+	production_speed_dockyard_factor = GER_mefo_buidlfac_var
+	production_speed_fuel_silo_factor = GER_mefo_buidlfac_var
+	production_speed_air_base_factor = GER_mefo_buidlfac_var
 }
 
 GER_army_dynmod = {
 	enable = { always = yes }
 	icon = GFX_idea_GER_army
-	recruitable_population_factor = GER_army_popfactor_var
-	max_training  = GER_army_maxtraining_var
+	supply_consumption_factor  = GER_army_supplyfac_var
 }
 
 GER_navy_dynmod = {
@@ -26,13 +29,10 @@ GER_airforce_dynmod = {
 	air_fuel_consumption_factor = GER_airforce_fuel_var
 }
 
-GER_new_order_dynmod = {
+GER_inner_circle_dynmod = {
 	enable = {
 		always = yes
 	}
-	icon = inner
-	stability_factor = GER_new_order_stability_var
-	consumer_goods_factor = GER_new_order_consumer_goods_var
-	offensive_war_stability_factor = GER_new_order_war_impact_var
-	defensive_war_stability_factor = GER_new_order_war_impact_var
+	icon = GFX_idea_ger_inner_circle
+	political_power_gain = GER_inner_pol_gain_var
 }

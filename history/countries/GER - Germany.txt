@@ -1,7 +1,7 @@
 ﻿
 capital = 64 # Berlin/Brandeburg
 
-### Variables
+### Values
 
 set_stability = 0.4
 set_war_support = 0.35
@@ -24,8 +24,8 @@ set_popularities = {
 	vanguard_socialist = 0
 	revolutionary_socialist = 5
 	progressive = 0
-	social_democratic = 3
-	liberal = 7
+	social_democratic = 9
+	liberal = 1
 	conservative = 16
 	authoritarian_democrat = 7
 	autocratic = 11
@@ -72,7 +72,7 @@ add_ideas = {
 	volunteer_only
 	###
 	ger_enabling_act
-	ger_german_revanchism
+	ger_german_reactionarism
 	ger_dummy_MEFO
 	ger_dummy_army
 	ger_dummy_airforce
@@ -97,28 +97,31 @@ add_dynamic_modifier = {
 ### VARIABLES
 
 set_variable = {
+	GER_mefo_consumergoods_increase_var = 0.025
+}
+set_variable = {
 	GER_mefo_consumergoods_var = 0.1
 }
 set_variable = {
 	GER_mefo_civintel_var = -25
 }
 set_variable = {
-	GER_mefo_milfac_var = 0.15
+	GER_mefo_buidlfac_var = 0.15
 }
 set_variable = {
-	GER_mefo_docfac_var = 0.15
+	GER_mefo_industrialcap_var = 0.1
 }
 set_variable = {
-	GER_army_popfactor_var = -0.1
-}
-set_variable = {
-	GER_army_maxtraining_var = 0.1
+	GER_army_supplyfac_var = 0.2
 }
 set_variable = {
 	GER_navy_range_var = -0.15
 }
 set_variable = {
 	GER_airforce_fuel_var = 0.15
+}
+set_variable = {
+	GER_inner_pol_gain_var = -0.1
 }
 
 ### TECHNOLOGIES

@@ -1,0 +1,18 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_goal_GER_Militarise_Rhineland"
+		texturefile = "gfx/interface/goals/GER_Militarise_Rhineland.dds"			
+	}	
+	SpriteType = {
+		name = "GFX_goal_GER_Enforce_Party_State"
+		texturefile = "gfx/interface/goals/GER_Enforce_Party_State.dds"			
+	}	
+	SpriteType = {
+		name = "GFX_goal_GER_Reorganise_Wehrmacht"
+		texturefile = "gfx/interface/goals/GER_Reorganise_Wehrmacht.dds"			
+	}	
+	SpriteType = {
+		name = "GFX_goal_GER_Fuhrerprinzip"
+		texturefile = "gfx/interface/goals/GER_Fuhrerprinzip.dds"			
+	}	
+}

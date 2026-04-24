@@ -24,7 +24,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_GER_navy.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_ger_german_revanchism"
+		name = "GFX_idea_ger_german_reactionarism"
 		texturefile = "gfx/interface/ideas/ger_revanchism.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ger_inner_circle"
+		textureFile = "gfx/interface/ideas/ger_inner_circle.dds"
 	}
 }

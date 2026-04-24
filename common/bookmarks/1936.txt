@@ -12,7 +12,7 @@ bookmarks = {
 			ideology = fascism
 			ideas = {
 				ger_enabling_act
-				ger_german_revanchism
+				ger_german_reactionarism
 				ger_dummy_MEFO
 			}
 			focuses = {
