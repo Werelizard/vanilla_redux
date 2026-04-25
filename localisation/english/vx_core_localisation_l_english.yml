@@ -129,7 +129,7 @@
  ### OVERRIDE TOOLTIPS ###
 
  unlock_decision_ovewrite_tt:0 "Unlocks £decision_icon_small §Ydecision§!: $DECISION$"
- modify_dynamic_modifier_tt:0 "Modify §Y$MODIFIER$§! by:"
+ modify_dynamic_modifier_tt:0 "Modify §Y$MODIFIER$§! by"
  country_must_approve_tt:0 "§Y$COUNTRY$§! must approve of the agreement for it to take effect"
 
  ### RESOURCES ###

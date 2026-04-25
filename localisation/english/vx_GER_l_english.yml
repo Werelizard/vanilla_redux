@@ -49,8 +49,8 @@
  ger_dummy_airforce_desc:0 "$GER_airforce_dynmod_desc$"
  ger_enabling_act:0 "The Enabling Act"
  ger_enabling_act_desc:0 ""
- ger_german_reactionarism:0 "Volkreich"
- ger_german_reactionarism_desc:0 ""
+ ger_german_fascism_start:0 "A German Volkreich: §fThe Bitter Eagle§!"
+ ger_german_fascism_start_desc:0 ""
  ger_enabling_act_improved:0 "$ger_enabling_act$"
  ger_enabling_act_improved_desc:0 "$ger_enabling_act_desc$"
  ger_expand_abwehr:0 "Expanded Abwehr"
@@ -272,14 +272,14 @@
  GER_inner_circle_mobilise_german_soul:0 "Rebirth of the German Soul"
  GER_inner_circle_mobilise_german_soul_desc:0 ""
 
- GER_inner_circle_german_might:0 "An Invincible German Army"
- GER_inner_circle_german_might_desc:0 ""
+ GER_demonstrate_german_might:0 "The Invincible German Army"
+ GER_demonstrate_german_might_desc:0 ""
 
- GER_inner_circle_triumphant_will:0 "The Triumphant Will"
- GER_inner_circle_triumphant_will_desc:0 ""
+ GER_triumphant_will:0 "The Triumphant Will"
+ GER_triumphant_will_desc:0 ""
 
- GER_inner_circle_supreme_leader:0 "The Supreme Leader"
- GER_inner_circle_supreme_leader_desc:0 ""
+ GER_the_supreme_leader:0 "The Supreme Leader"
+ GER_the_supreme_leader_desc:0 ""
 
  # Tooltips - triggers
 

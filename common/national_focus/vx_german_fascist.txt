@@ -140,7 +140,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_Expand_SS_Recruitment
-		icon = GFX_focus_generic_fascist_troops
+		icon = GFX_goal_GER_Expand_SS_Recruitment
 		cost = 4
 		x = -3
 		y = 2
@@ -1010,8 +1010,8 @@ focus_tree = {
 	############
 
 	focus = {
-		id = GER_inner_circle_german_might
-		icon = GFX_goal_unknown
+		id = GER_demonstrate_german_might
+		icon = GFX_goal_GER_demonstrate_german_might
 		cost = 4
 		x = -1
 		y = 1
@@ -1028,8 +1028,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_inner_circle_triumphant_will
-		icon = GFX_goal_unknown
+		id = GER_triumphant_will
+		icon = GFX_goal_GER_triumphant_will
 		cost = 4
 		x = 1
 		y = 1
@@ -1046,17 +1046,17 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_inner_circle_supreme_leader
-		icon = GFX_goal_unknown
+		id = GER_the_supreme_leader
+		icon = GFX_goal_GER_the_supreme_leader
 		cost = 4
 		x = 0
 		y = 2
 		relative_position_id = GER_Fuhrerprinzip
 		prerequisite = {
-			focus = GER_inner_circle_german_might
+			focus = GER_demonstrate_german_might
 		}
 		prerequisite = {
-			focus = GER_inner_circle_triumphant_will
+			focus = GER_triumphant_will
 		}
 		available = {
 			has_fascist_government_trigger = yes

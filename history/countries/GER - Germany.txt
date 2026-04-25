@@ -72,7 +72,7 @@ add_ideas = {
 	volunteer_only
 	###
 	ger_enabling_act
-	ger_german_reactionarism
+	ger_german_fascism_start
 	ger_dummy_MEFO
 	ger_dummy_army
 	ger_dummy_airforce

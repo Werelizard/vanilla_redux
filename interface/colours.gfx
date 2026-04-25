@@ -25,7 +25,7 @@ bitmapfonts = {
 		t = { 255 76 77 }	# Gradient Step 10 - red 		{ 229 0 0 }
 
 		r = { 127 0 0 } # Dark red - AutSoc
-		f = { 130 80 65 } # brown - fascist
+		f = { 200 120 25 } # brown - fascist
 		l = { 40 40 40 } # Dark grey - autocracy
 		p = { 255 50 110 } # pink, soc dem
 		P = { 255 100 20 } # Orange-peach, progressives

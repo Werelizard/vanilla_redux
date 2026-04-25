@@ -1,6 +1,6 @@
 ideas = {
 	###### Dummy Ideas (removed after start)
-	country = {
+	country = {		
 		ger_dummy_MEFO = {
 			modifier = {
 				consumer_goods_factor = 0.1
@@ -38,13 +38,12 @@ ideas = {
 				drift_defence_factor = 0.1
 			}
 		}
-		ger_german_reactionarism = {
+		ger_german_fascism_start = {
 			modifier = {
 				stability_factor = -0.1
-				resistance_decay = -0.1
-				resistance_activity = 0.1
+				resistance_decay = -0.2
+				resistance_activity = 0.2
 				recruitable_population_factor = -0.15
-				trade_opinion_factor = -0.25
 			}
 		}
 	}

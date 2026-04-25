@@ -15,4 +15,20 @@ spriteTypes = {
 		name = "GFX_goal_GER_Fuhrerprinzip"
 		texturefile = "gfx/interface/goals/GER_Fuhrerprinzip.dds"			
 	}	
+	SpriteType = {
+		name = "GFX_goal_GER_Expand_SS_Recruitment"
+		texturefile = "gfx/interface/goals/GER_Expand_SS_Recruitment.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_GER_demonstrate_german_might"
+		texturefile = "gfx/interface/goals/GER_demonstrate_german_might.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_GER_triumphant_will"
+		texturefile = "gfx/interface/goals/GER_triumphant_will.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_GER_the_supreme_leader"
+		texturefile = "gfx/interface/goals/GER_the_supreme_leader.dds"			
+	}
 }

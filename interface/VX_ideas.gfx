@@ -31,4 +31,8 @@ spriteTypes = {
 		name = "GFX_idea_ger_inner_circle"
 		textureFile = "gfx/interface/ideas/ger_inner_circle.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_ger_german_fascism_start"
+		texturefile = "gfx/interface/ideas/ger_revanchism.dds"
+	}
 }
