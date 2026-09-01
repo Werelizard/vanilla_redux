@@ -10,6 +10,22 @@ ideologies = {
 			}
 		}
 
+		rules = {
+			can_guarantee_other_ideologies = yes
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+		}
+
+		war_impact_on_world_tension = 0.75
+		faction_impact_on_world_tension = 0.5
+
+		modifiers = {
+			embargo_threshold_factor = 0.5
+		}
+
+		ai_communist = yes
+		
 		color = { 70 0 0 }
 	}
 
@@ -20,6 +36,22 @@ ideologies = {
 
 			}
 		}
+
+		rules = {
+			can_guarantee_other_ideologies = yes
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+		}
+
+		war_impact_on_world_tension = 0.75
+		faction_impact_on_world_tension = 0.5
+
+		modifiers = {
+			embargo_threshold_factor = 0.5
+		}
+
+		ai_communist = yes
 
 		color = { 140 0 0 }
 	}
@@ -36,6 +68,21 @@ ideologies = {
 			}
 		}
 
+		rules = {
+			can_guarantee_other_ideologies = yes
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+		}
+
+		war_impact_on_world_tension = 0.75
+		faction_impact_on_world_tension = 0.5
+
+		modifiers = {
+			embargo_threshold_factor = 0.5
+		}
+
+		ai_communist = yes
 		color = { 175 0 0 }
 	}
 
@@ -49,6 +96,29 @@ ideologies = {
 			}
 		}
 
+		rules = {
+			can_guarantee_other_ideologies = yes
+			can_force_government = no
+			can_puppet = yes
+			can_create_collaboration_government = no
+			can_lower_tension = yes
+		}
+
+		war_impact_on_world_tension = 0.25
+		faction_impact_on_world_tension = 0.1
+
+		modifiers = {
+			# generate_wargoal_tension = 1.00
+			embargo_cost_factor = -0.5
+			embargo_threshold_factor = -0.5
+		}
+
+		faction_modifiers = {
+			faction_trade_opinion_factor = 0.50
+		}
+
+		ai_democratic = yes
+
 		color = { 210 95 145 }
 	}
 	# Progressivism
@@ -58,6 +128,29 @@ ideologies = {
 
 			}
 		}
+
+		rules = {
+			can_guarantee_other_ideologies = yes
+			can_force_government = no
+			can_puppet = yes
+			can_create_collaboration_government = no
+			can_lower_tension = yes
+		}
+
+		war_impact_on_world_tension = 0.25
+		faction_impact_on_world_tension = 0.1
+
+		modifiers = {
+			# generate_wargoal_tension = 1.00
+			embargo_cost_factor = -0.5
+			embargo_threshold_factor = -0.5
+		}
+
+		faction_modifiers = {
+			faction_trade_opinion_factor = 0.50
+		}
+
+		ai_democratic = yes
 
 		color = { 200 125 0 }
 	}
@@ -73,6 +166,29 @@ ideologies = {
 			}
 		}
 
+		rules = {
+			can_guarantee_other_ideologies = yes
+			can_force_government = no
+			can_puppet = yes
+			can_create_collaboration_government = no
+			can_lower_tension = yes
+		}
+
+		war_impact_on_world_tension = 0.25
+		faction_impact_on_world_tension = 0.1
+
+		modifiers = {
+			# generate_wargoal_tension = 1.00
+			embargo_cost_factor = -0.5
+			embargo_threshold_factor = -0.5
+		}
+
+		faction_modifiers = {
+			faction_trade_opinion_factor = 0.50
+		}
+
+		ai_democratic = yes
+
 		color = { 210 170 0 }
 	}
 	# Conservative 
@@ -82,6 +198,29 @@ ideologies = {
 
 			}
 		}
+
+		rules = {
+			can_guarantee_other_ideologies = yes
+			can_force_government = no
+			can_puppet = yes
+			can_create_collaboration_government = no
+			can_lower_tension = yes
+		}
+
+		war_impact_on_world_tension = 0.25
+		faction_impact_on_world_tension = 0.1
+
+		modifiers = {
+			# generate_wargoal_tension = 1.00
+			embargo_cost_factor = -0.5
+			embargo_threshold_factor = -0.5
+		}
+
+		faction_modifiers = {
+			faction_trade_opinion_factor = 0.50
+		}
+
+		ai_democratic = yes
 
 		color = { 60 60 180 }
 	}
@@ -95,6 +234,28 @@ ideologies = {
 
 			}
 		}
+
+		rules = {
+			can_guarantee_other_ideologies = yes
+			can_force_government = no
+			can_puppet = yes
+			can_create_collaboration_government = no
+		}
+
+		war_impact_on_world_tension = 0.25
+		faction_impact_on_world_tension = 0.1
+
+		modifiers = {
+			# generate_wargoal_tension = 1.00
+			embargo_cost_factor = -0.5
+			embargo_threshold_factor = -0.5
+		}
+
+		faction_modifiers = {
+			faction_trade_opinion_factor = 0.50
+		}
+
+		ai_neutral = yes
 
 		color = { 120 120 120 }
 	}
@@ -110,6 +271,28 @@ ideologies = {
 			}
 		}
 
+		rules = {
+			can_guarantee_other_ideologies = yes
+			can_force_government = no
+			can_puppet = yes
+			can_create_collaboration_government = no
+		}
+
+		war_impact_on_world_tension = 0.25
+		faction_impact_on_world_tension = 0.1
+
+		modifiers = {
+			# generate_wargoal_tension = 1.00
+			embargo_cost_factor = -0.5
+			embargo_threshold_factor = -0.5
+		}
+
+		faction_modifiers = {
+			faction_trade_opinion_factor = 0.50
+		}
+
+		ai_neutral = yes
+
 		color = { 60 60 60 }
 	}
 
@@ -122,6 +305,23 @@ ideologies = {
 
 			}
 		}
+
+		rules = {
+			can_guarantee_other_ideologies = yes
+			can_force_government = yes
+			can_puppet = yes
+			can_create_collaboration_government = yes
+		}
+
+		war_impact_on_world_tension = 1
+		faction_impact_on_world_tension = 1
+
+		modifiers = {
+			embargo_cost_factor = 1
+			embargo_threshold_factor = 1
+		}
+
+		ai_fascist = yes
 
 		color = { 130 55 0 }
 	}

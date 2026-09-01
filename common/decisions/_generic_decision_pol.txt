@@ -1,0 +1,636 @@
+generic_decision_pol = {
+	# Race for the bomb
+	generic_race_for_the_bomb = {
+		icon = GFX_decision_generic_research
+		visible = {
+			has_tech = atomic_research
+		}
+		available = {
+			NOT = {
+				is_special_project_completed = sp:sp_nuclear_bomb
+			}
+		}
+		####
+		days_remove = 365
+		cost = 150
+		days_re_enable = 30
+		####
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			
+		}
+		####
+		modifier = {
+			production_speed_nuclear_reactor_factor = 0.15
+			specialization_nuclear_speed_factor = 0.05
+			production_speed_nuclear_facility_factor = 0.05
+		}
+		####
+		cancel_trigger = {
+			is_special_project_completed = sp:sp_nuclear_bomb
+		}
+		cancel_effect = {
+			
+		}
+		###
+		ai_will_do = {
+			factor = 0
+		}
+		ai_hint_pp_cost = 150
+	}
+	# Impove worker conditions
+	generic_improve_worker_conditions = {
+		icon = GFX_decision_generic_industry
+		available = {
+			has_stability < 1
+		}
+		####
+		days_remove = 180
+		cost = 100
+		days_re_enable = 540
+		####
+		remove_effect = {
+			
+		}
+		####
+		modifier = {
+			consumer_goods_factor = 0.1
+			industrial_capacity_dockyard = -0.1
+			industrial_capacity_factory = -0.1
+			stability_weekly_factor = 0.005
+		}
+		####
+		cancel_trigger = {
+			has_stability = 1
+		}
+		cancel_effect = {
+			
+		}
+		###
+		ai_will_do = {
+			factor = 0
+		}
+		ai_hint_pp_cost = 100
+	}
+	generic_press_censorship = {
+		icon = GFX_decision_generic_arrest
+		available = {
+			NOT = {
+				support_government_50_trigger = yes
+			}
+			if = {
+				limit = {
+					has_democratic_government_trigger = yes
+				}
+				OR = {
+					has_war_with_major = yes
+					AND = {
+						has_war_with_non_exiled_country = yes
+						has_war_support > 0.5
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_government = authoritarian_democrat
+				}
+				OR = {
+					has_war_with_major = yes
+					AND = {
+						has_war_with_non_exiled_country = yes
+						has_war_support > 0.3
+					}
+				}
+			}
+		}
+		####
+		days_remove = 180
+		cost = 150
+		days_re_enable = 360
+		####
+		remove_effect = {
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.05
+			}
+		}
+		####
+		modifier = {
+			stability_weekly_factor = -0.0025
+		}
+		####
+		cancel_trigger = {
+			support_government_50_trigger = yes
+		}
+		cancel_effect = {
+			
+		}
+		###
+		ai_will_do = {
+			factor = 0
+		}
+		ai_hint_pp_cost = 150
+	}
+	generic_ban_socialist_parties = {
+		icon = GFX_decision_oppression
+		visible = {
+			NOT = {
+				has_socialist_government_trigger = yes
+			}
+		}
+		available = {	
+			NOT = {
+				has_government = social_democratic
+			}
+			OR = {
+				NOT = {
+					authoritarian_socialist < 0.1
+				}
+				NOT = {
+					vanguard_socialist < 0.1
+				}
+				NOT = {
+					revolutionary_socialist < 0.1
+				}
+			}
+		}
+		####
+		cost = 50
+		days_remove = 120
+		days_re_enable = 180
+		####
+		complete_effect = {
+			custom_effect_tooltip = stability_loss_on_party_pop_tt
+			####
+			set_temp_variable = {
+				stability_change_tempvar = 0
+			}
+			add_to_temp_variable = {
+				stability_change_tempvar = party_popularity@authoritarian_socialist				
+			}
+			add_to_temp_variable = {
+				stability_change_tempvar = party_popularity@vanguard_socialist			
+			}
+			add_to_temp_variable = {
+				stability_change_tempvar = party_popularity@revolutionary_socialist			
+			}
+			divide_temp_variable = {
+				stability_change_tempvar = -3
+			}
+			multiply_temp_variable = {
+				stability_change_tempvar = 0.5
+			}
+			custom_effect_tooltip = doublespace_tt
+			add_stability = stability_change_tempvar
+		}
+		modifier = {
+			authoritarian_socialist_drift = -0.02
+			vanguard_socialist_drift = -0.02
+			revolutionary_socialist_drift = -0.02
+			stability_weekly_factor = 0.005
+		}
+		####
+		ai_will_do = {
+			factor = 0
+		}
+		ai_hint_pp_cost = 50
+	}
+	generic_ban_democratic_parties = {
+		icon = GFX_decision_oppression
+		visible = {
+			NOT = {
+				has_democratic_government_trigger = yes
+			}
+		}
+		available = {
+			OR = {
+				NOT = {
+					social_democratic < 0.1
+				}
+				NOT = {
+					progressive < 0.1
+				}
+				NOT = {
+					liberal < 0.1
+				}
+				NOT = {
+					conservative < 0.1
+				}
+			}
+		}
+		####
+		cost = 50
+		days_remove = 120
+		days_re_enable = 180
+		####
+		complete_effect = {
+			custom_effect_tooltip = stability_loss_on_party_pop_tt
+			####
+			set_temp_variable = {
+				stability_change_tempvar = 0
+			}
+			add_to_temp_variable = {
+				stability_change_tempvar = party_popularity@social_democratic				
+			}
+			add_to_temp_variable = {
+				stability_change_tempvar = party_popularity@progressive			
+			}
+			add_to_temp_variable = {
+				stability_change_tempvar = party_popularity@liberal			
+			}
+			add_to_temp_variable = {
+				stability_change_tempvar = party_popularity@conservative			
+			}
+			divide_temp_variable = {
+				stability_change_tempvar = -4
+			}
+			multiply_temp_variable = {
+				stability_change_tempvar = 0.5
+			}
+			custom_effect_tooltip = doublespace_tt
+			add_stability = stability_change_tempvar
+		}
+		modifier = {
+			social_democratic_drift = -0.02
+			progressive_drift = -0.02
+			liberal_drift = -0.02
+			conservative_drift = -0.02
+			stability_weekly_factor = 0.005
+		}
+		####
+		ai_will_do = {
+			factor = 0
+		}
+		ai_hint_pp_cost = 50
+	}
+	generic_ban_authoritarian_parties = {
+		icon = GFX_decision_oppression
+		visible = {
+			NOT = {
+				has_authoritarian_government_trigger = yes
+			}
+		}
+		available = {
+			OR = {
+				NOT = {
+					authoritarian_democrat < 0.1
+				}
+				NOT = {
+					autocratic < 0.1
+				}
+			}
+		}
+		####
+		cost = 50
+		days_remove = 120
+		days_re_enable = 180
+		####
+		complete_effect = {
+			custom_effect_tooltip = stability_loss_on_party_pop_tt
+			####
+			set_temp_variable = {
+				stability_change_tempvar = 0
+			}
+			add_to_temp_variable = {
+				stability_change_tempvar = party_popularity@authoritarian_democrat				
+			}
+			add_to_temp_variable = {
+				stability_change_tempvar = party_popularity@autocratic			
+			}
+			divide_temp_variable = {
+				stability_change_tempvar = -2
+			}
+			multiply_temp_variable = {
+				stability_change_tempvar = 0.5
+			}
+			custom_effect_tooltip = doublespace_tt
+			add_stability = stability_change_tempvar
+		}
+		modifier = {
+			authoritarian_democrat_drift = -0.02
+			autocratic_drift = -0.02
+			stability_weekly_factor = 0.005
+		}
+		####
+		ai_will_do = {
+			factor = 0
+		}
+		ai_hint_pp_cost = 50
+	}
+	generic_ban_fascist_parties = {
+		icon = GFX_decision_oppression
+		visible = {
+			NOT = {
+				has_fascist_government_trigger = yes
+			}
+		}
+		available = {
+			NOT = {
+				fascist < 0.1
+			}
+		}
+		####
+		cost = 50
+		days_remove = 120
+		days_re_enable = 180
+		####
+		complete_effect = {
+			custom_effect_tooltip = stability_loss_on_party_pop_tt
+			####
+			set_temp_variable = {
+				stability_change_tempvar = 0
+			}
+			add_to_temp_variable = {
+				stability_change_tempvar = party_popularity@fascist		
+			}
+			divide_temp_variable = {
+				stability_change_tempvar = -1
+			}
+			multiply_temp_variable = {
+				stability_change_tempvar = 0.5
+			}
+			custom_effect_tooltip = doublespace_tt
+			add_stability = stability_change_tempvar
+		}
+		modifier = {
+			fascist_drift = -0.02
+			stability_weekly_factor = 0.005
+		}
+		####
+		ai_will_do = {
+			factor = 0
+		}
+		ai_hint_pp_cost = 50
+	}
+}
+
+generic_decision_league_of_nations = {
+	generic_leave_league_of_nations = {
+		icon = GFX_decision_generic_break_treaty
+		visible = {
+			
+		}
+		available = {
+			OR = {
+				has_fascist_government_tooltip_trigger = yes
+				AND = {
+					threat > 0.35
+					has_authoritarian_government_tooltip_trigger = yes				
+				}	
+				AND = {
+					threat > 0.25
+					has_global_flag = vx_lon_fell_apart_flag		
+				}				
+			}
+		}
+		####
+		cost = global.vx_lon_abandon_cost_var
+		fire_only_once = yes
+		days_remove = 90
+		####
+		remove_effect = {
+			remove_dynamic_modifier = {
+				modifier = league_of_nations_dynmod
+			}
+			custom_effect_tooltip = doublespace_tt
+			hidden_effect = {
+				add_to_variable = {
+					vx_lon_problems_var = 2
+				}
+			}
+		}
+		####
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				# Why stay if it's fucked?
+				add = 1000
+				has_global_flag = vx_lon_fell_apart_flag
+			}
+		}
+		ai_hint_pp_cost = 0
+	}
+}
+
+generic_decision_naval_treaty = {
+	# London Treaty Timeout
+	# generic_london_naval_treaty_timeout = {
+	# 	icon = GFX_decision_generic_naval
+	# 	visible = {
+			
+	# 	}
+	# 	available = {
+		
+	# 	}
+	# 	####
+	# 	fire_only_once = yes
+	# 	####
+	# 	complete_effect = {
+			
+	# 	}
+	# 	###
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 	}
+	# 	ai_hint_pp_cost = 0
+	# }
+	# Abandon the naval treaties early
+	generic_abandon_naval_treaty = {
+		icon = GFX_decision_generic_break_treaty
+		visible = {
+			
+		}
+		available = {
+			date > 1936.3.1
+			if = {
+				limit = {
+					OR = {
+						has_democratic_government_trigger = yes
+						has_authoritarian_government_trigger = yes
+					}
+					any_other_country = {
+						OR = {
+							has_idea = vx_london_naval_treaty
+							has_idea = vx_london_naval_treaty_cheat
+							has_idea = vx_london_naval_treaty_escalator_clause
+						}
+					}
+				}				
+				OR = {
+					threat > 0.4
+					AND = {
+						has_global_flag = vx_naval_treaty_abandoned_global_flag
+						threat > 0.2
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_other_country = {
+						OR = {
+							has_idea = vx_london_naval_treaty
+							has_idea = vx_london_naval_treaty_cheat
+							has_idea = vx_london_naval_treaty_escalator_clause
+						}
+					}
+				}
+				OR = {
+					has_global_flag = vx_naval_treaty_abandoned_global_flag
+					threat > 0.1
+					has_war_with_major = yes
+				}
+			}
+			else = {
+				# Can freely remove if no one else has the treaty lol lmao
+			}
+		}
+		####
+		cost = global.vx_lon_abandon_cost_var
+		fire_only_once = yes
+		days_remove = 30
+		####
+		remove_effect = {
+			if = {
+				limit = {
+					has_idea = vx_london_naval_treaty
+				}
+				remove_ideas = vx_london_naval_treaty
+			}
+			if = {
+				limit = {
+					has_idea = vx_london_naval_treaty_cheat
+				}
+				remove_ideas = vx_london_naval_treaty_cheat
+			}
+			if = {
+				limit = {
+					has_idea = vx_london_naval_treaty_escalator_clause
+				}
+				remove_ideas = vx_london_naval_treaty_escalator_clause
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = vx_naval_treaty_abandoned_global_flag
+					}
+				}
+				custom_effect_tooltip = doublespace_tt
+				custom_effect_tooltip = vx_set_abandon_cost_zero_tt
+			}
+			custom_effect_tooltip = doublespace_tt
+			hidden_effect = {
+				set_country_flag = vx_naval_treaty_abandoned_global_flag
+				set_variable = {
+					global.vx_lon_abandon_cost_var = 0
+				}
+			}
+		}
+		####
+		ai_will_do = {
+			factor = 0
+		}
+		ai_hint_pp_cost = 0
+	}
+	# Cheat on the treaty
+	generic_cheat_on_treaty = {
+		icon = GFX_decision_eng_trade_unions_demand
+		visible = {
+			any_other_country = {
+				OR = {
+					has_idea = vx_london_naval_treaty
+					has_idea = vx_london_naval_treaty_cheat
+					has_idea = vx_london_naval_treaty_escalator_clause
+				}
+			}
+			NOT = {
+				has_country_flag = vx_escalator_clause_decision_flag
+			}
+		}
+		available = {
+			date > 1936.3.1
+			OR = {
+				NOT = {
+					has_democratic_government_tooltip_trigger = yes
+				}
+				threat > 0.4
+			}	
+			NOT = {
+				has_country_flag = vx_escalator_clause_decision_flag
+			}
+		}
+		####
+		fire_only_once = yes
+		cost = 10
+		days_remove = 90
+		####
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = vx_cheating_on_treaty_decision_flag
+			}
+		}
+		####
+		remove_effect = {
+			swap_ideas = {
+				remove_idea = vx_london_naval_treaty
+				add_idea = vx_london_naval_treaty_cheat
+			}
+		}
+		###
+		ai_will_do = {
+			factor = 0
+		}
+		ai_hint_pp_cost = 0
+	}
+	# Invoke Escalator Clause
+	generic_escalator_clause = {
+		icon = GFX_decision_generic_naval
+		visible = {
+			OR = {
+				has_idea = vx_london_naval_treaty
+				has_idea = vx_london_naval_treaty_cheat
+				has_idea = vx_london_naval_treaty_escalator_clause
+			}
+			NOT = {
+				has_country_flag = vx_cheating_on_treaty_decision_flag
+			}
+		}
+		available = {
+			date > 1936.3.1
+			OR = {
+				threat > 0.2
+				has_war_with_major = yes
+				has_global_flag = vx_naval_treaty_escalator_clause_flag
+			}
+			NOT = {
+				has_country_flag = vx_cheating_on_treaty_decision_flag
+			}
+		}
+		####
+		fire_only_once = yes
+		cost = 50
+		days_remove = 90
+		####
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = vx_escalator_clause_decision_flag
+			}
+		}
+		####
+		remove_effect = {
+			swap_ideas = {
+				remove_idea = vx_london_naval_treaty
+				add_idea = vx_london_naval_treaty_escalator_clause
+			}
+			hidden_effect = {
+				set_global_flag = vx_naval_treaty_escalator_clause_flag
+			}
+		}
+		###
+		ai_will_do = {
+			factor = 0
+		}
+		ai_hint_pp_cost = 0
+	}
+}

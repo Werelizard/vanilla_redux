@@ -1,0 +1,458 @@
+generic_decision_war_propaganda = {
+	generic_decision_radio_propaganda = {
+		icon = generic_prepare_civil_war
+		cost = 75
+		days_re_enable = 180
+
+		available = {
+			has_war_support < 0.5
+			if = {
+				limit = {
+					OR = {
+						# Socialist and Fascist governments should have an easier time drumming up war support
+						has_socialist_government_trigger = yes 
+						has_fascist_government_trigger = yes
+					}
+				}
+				OR = {
+					NOT = {
+						threat < 0.25
+					}
+					has_war_with_non_exiled_country = yes
+					any_country = {
+						is_justifying_wargoal_against = ROOT
+					}
+					any_country = {
+						has_wargoal_against = ROOT
+					}
+				}
+			}
+			else = {
+				OR = {
+					NOT = {
+						threat < 0.5
+					}
+					has_war_with_non_exiled_country = yes
+					any_country = {
+						is_justifying_wargoal_against = ROOT
+					}
+					any_country = {
+						has_wargoal_against = ROOT
+					}
+				}
+			}
+		}
+		#####
+		complete_effect = {
+			add_war_support = 0.05
+		}
+		#####
+		ai_hint_pp_cost = 75
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	generic_decision_film_industry = {
+		icon = generic_prepare_civil_war
+		cost = 125
+		days_re_enable = 730
+
+		available = {
+			has_war_support < 0.5
+			has_war_with_non_exiled_country = yes  
+			OR = {
+				has_war_with_major = yes
+				any_enemy_country = {
+					fighting_army_strength_ratio = {
+						tag = ROOT
+						ratio > 1.2
+					}
+				}
+			}
+		}
+		#####
+		complete_effect = {
+			effect_tooltip = {
+				add_war_support = 0.10
+			}
+			hidden_effect = {
+				
+			}
+		}
+		#####
+		ai_hint_pp_cost = 100
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	generic_decision_war_suport_casualites = {
+		icon = GFX_decision_SWE_set_army_budget
+
+		cost = 100
+		days_re_enable = 180
+
+		visible = {
+			OR = {
+				has_war_with_non_exiled_country = yes
+				is_debug = yes
+			}
+		}
+
+		available = {
+			has_casualties_war_support > 0.1
+			has_war_with_non_exiled_country = yes
+		}
+		#####
+		days_remove = 30
+		modifier = {
+			weekly_casualties_war_support = 0.005
+		}
+		#####
+		cancel_trigger = {
+			NOT = {
+				has_casualties_war_support > 0.1
+			}
+			
+		}
+		#####
+		ai_hint_pp_cost = 100
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	generic_decision_war_suport_bombings = {
+		icon = GFX_decision_SWE_set_air_budget
+		
+		cost = 100
+		days_re_enable = 180
+
+		visible = {
+			OR = {
+				has_war_with_non_exiled_country = yes
+				is_debug = yes
+			}
+		}
+
+		available = {
+			has_bombing_war_support > 0.1
+			has_war_with_non_exiled_country = yes
+		}
+		#####
+		days_remove = 30
+		modifier = {
+			weekly_bombing_war_support = 0.005
+		}
+		#####
+		cancel_trigger = {
+			NOT = {
+				has_bombing_war_support > 0.1
+			}
+			
+		}
+		#####
+		ai_hint_pp_cost = 100
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	generic_decision_war_suport_convoys = {
+		icon = GFX_decision_generic_human_torpedo
+		cost = 100
+		days_re_enable = 180
+
+		visible = {
+			OR = {
+				has_war_with_non_exiled_country = yes
+				is_debug = yes
+			}
+		}
+
+		available = {
+			has_convoys_war_support > 0.1
+			has_war_with_non_exiled_country = yes
+		}
+		#####
+		days_remove = 30
+		modifier = {
+			weekly_convoys_war_support = 0.005
+		}
+		#####
+		cancel_trigger = {
+			NOT = {
+				has_convoys_war_support > 0.1
+			}
+			
+		}
+		#####
+		ai_hint_pp_cost = 100
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
+generic_decision_war_measures = {
+	generic_decision_women_in_the_workforce = {
+		icon = generic_industry
+		cost = 100
+		
+		available = {
+			has_war_with_non_exiled_country = yes
+			if = {
+				limit = {
+					OR = {
+						has_socialist_government_trigger = yes
+						has_democratic_government_trigger = yes
+					}
+				}
+				OR = {
+					has_war_support > 0.5
+					has_idea = tot_economic_mobilisation
+				}
+			}
+			else_if = {
+				limit = {
+					has_authoritarian_government_trigger = yes
+				}
+				OR = {
+					has_war_support > 0.75
+					AND = {
+						has_war_support > 0.5
+						surrender_progress > 0
+					}
+					has_idea = tot_economic_mobilisation
+				}
+			}
+			else_if = {
+				limit = {
+					has_fascist_government_trigger = yes
+				}
+				OR = {
+					has_war_support > 0.75
+					AND = {
+						has_war_support > 0.5
+						surrender_progress > 0.25
+					}
+					has_idea = tot_economic_mobilisation
+				}
+			}
+			else = {
+
+			}
+		}
+		#####
+		days_remove = -1
+		modifier = {
+			stability_factor = -0.05
+			recruitable_population_factor = 0.03
+		}
+		#####
+		cancel_trigger = {
+			if = {
+				limit = {
+					OR = {
+						has_socialist_government_trigger = yes
+						has_democratic_government_trigger = yes
+					}
+				}
+				NOT = {
+					has_war_support > 0.49
+				}
+				NOT = {
+					has_idea = tot_economic_mobilisation
+				}
+			}
+			else_if = {
+				limit = {
+					has_authoritarian_government_trigger = yes
+				}
+				NOT = {
+					has_war_support > 0.74
+				}
+				OR =  {
+					NOT = {
+						has_war_support > 0.49
+					}
+					NOT = {
+						surrender_progress > 0
+					}
+				}
+				NOT = {
+					has_idea = tot_economic_mobilisation
+				}
+			}
+			else_if = {
+				limit = {
+					has_fascist_government_trigger = yes
+				}
+				OR =  {
+					NOT = {
+						has_war_support > 0.49
+					}
+					NOT = {
+						surrender_progress > 0.24
+					}
+				}
+				NOT = {
+					has_idea = tot_economic_mobilisation
+				}
+			}
+			else = {
+
+			}
+		}
+		#####
+		ai_hint_pp_cost = 100
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	generic_decision_penal_battalions = {
+		icon = GFX_decision_generic_military
+		cost = 100
+		
+		available = {
+			has_war_with_non_exiled_country = yes
+			surrender_progress > 0.5
+			has_stability > 0.1
+		}
+		#####
+		days_remove = -1
+		modifier = {
+			recruitable_population_factor = 0.025
+			stability_factor = -0.1
+		}
+		#####
+		cancel_trigger = {
+			NOT = {
+				has_war_with_non_exiled_country = yes
+			}
+		}
+		#####
+		ai_hint_pp_cost = 100
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	generic_decision_war_bonds = {
+		icon = GFX_decision_generic_consumer_goods
+		cost = 100
+		
+		available = {
+			has_war_with_non_exiled_country = yes
+			has_war_support > 0.5
+		}
+		#####
+		days_remove = 180
+		modifier = {
+			consumer_goods_factor = -0.15
+			war_support_factor = -0.05
+		}
+		#####
+		cancel_trigger = {
+			NOT = {
+				has_war_with_non_exiled_country = yes
+			}
+		}
+		#####
+		ai_hint_pp_cost = 100
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	generic_decision_emergency_resource_requisition = {
+		icon = GFX_decision_generic_factory
+
+		cost = 100
+		
+		available = {
+			has_war_with_non_exiled_country = yes
+			has_war_support > 0.49
+			custom_trigger_tooltip = {
+				tooltip = vx_any_no_coal_resource_is_missing_tt
+				OR = {
+					oil < 0
+					aluminium < 0
+					rubber < 0
+					tungsten < 0
+					steel < 0
+					chromium < 0
+				}
+			}
+		}
+		#####
+		days_remove = 180
+		modifier = {
+			production_lack_of_resource_penalty_factor = -0.1
+			war_support_factor = -0.05
+		}
+		#####
+		cancel_trigger = {
+			NOT = {
+				has_war_with_non_exiled_country = yes
+			}
+		}
+		#####
+		ai_hint_pp_cost = 100
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	generic_decision_emergency_factory_conversion = {
+		icon = GFX_decision_generic_factory
+
+		cost = 100
+		
+		available = {
+			has_war_support > 0.1
+			industrial_complex > 4
+			OR = {
+				has_defensive_war = yes
+				AND = {					
+					has_offensive_war = yes
+					surrender_progress > 0.2
+				}
+			}
+			
+		}
+		#####
+		days_re_enable = 90
+		complete_effect = {
+			replace_civ_with_arms_factories = yes
+			add_war_support = -0.05
+		}
+		#####
+		ai_hint_pp_cost = 100
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	generic_decision_desperate_defence = {
+		icon = GFX_decision_generic_fortification
+
+		cost = 100
+		
+		available = {
+			has_war_with_non_exiled_country = yes
+			surrender_progress > 0.5
+			has_war_support > 0.1
+		}
+		#####
+		days_re_enable = 180
+		days_remove = 90
+		modifier = {
+			
+		}
+		#####
+		cancel_trigger = {
+			NOT = {
+				has_war_with_non_exiled_country = yes
+			}
+		}
+		#####
+		ai_hint_pp_cost = 100
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

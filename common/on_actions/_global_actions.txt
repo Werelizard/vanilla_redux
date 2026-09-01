@@ -20,6 +20,43 @@ on_actions = {
 				# Create arrays for their cores at the start smile emoji
 				store_core_states_on_game_start_effect = yes
 			}
+			# Set up the league of nations mechanic
+			set_variable = {
+				vx_lon_trade_opinion_var = 0.25
+			}
+			set_variable = {
+				vx_lon_war_volunteer_tension_var = 1
+			}
+			set_variable = {
+				vx_lon_civil_war_tension_var = 1
+			}
+			set_variable = {
+				vx_lon_embargo_factor_var = -0.2
+			}
+			set_variable = {
+				vx_lon_abandon_cost_var = 50
+			}
+			every_country = {
+				limit = {
+					is_starting_lon_member = yes
+				}
+				add_dynamic_modifier = {
+					modifier = league_of_nations_dynmod
+				}
+			}
+			# Set up the naval treaty
+			set_variable = {
+				vx_lon_abandon_cost_var = 50
+			}
+			set_variable = {
+				vx_lon_escalator_clause_var = 100
+			}
+			every_country = {
+				limit = {
+					is_naval_treaty_signatory = yes
+				}
+				add_ideas = vx_london_naval_treaty
+			}
 		}
 	}
 	on_government_change = {
@@ -46,12 +83,10 @@ on_actions = {
 	}
 	on_weekly = {
 		# Laucnhes the crisis events (triggers are in the events themselves)
-		effect = {
-			every_country = {
-				country_event = crisis_event.1
-				country_event = crisis_event.2
-				country_event = crisis_event.3	
-			}
+		random_events = {
+			100 = crisis_strikes.0
+			100 = crisis_desertions.0
+			100 = crisis_mutinies.0
 		}
 	}
 	on_new_term_election = {		
@@ -118,7 +153,10 @@ on_actions = {
 
 	}
 	on_capitulation_immediate = {
-
+		effect = {
+			# Remove the strikes / desertions / mutinies when a country capitulates
+			vx_remove_crisis_ideas_effect = yes
+		}
 	}
 	# Peace Conferences
 	on_peace = {

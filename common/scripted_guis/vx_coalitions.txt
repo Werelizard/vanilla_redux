@@ -96,21 +96,4 @@ scripted_gui = {
 			}
 		}
 	}
-
-	pol_coalition_tooltip = {
-		context_type = player_context
-		parent_window_name = pol_coalition_button_anchor
-		window_name = "coalition_tooltip"
-
-		triggers = {
-			coalition_effects_title_visible = {
-				any_coalition_active_trigger = yes
-				# always = no
-			}
-			coalition_effects_desc_visible = {
-				any_coalition_active_trigger = yes
-				# always = no
-			}
-		}
-	}
 }

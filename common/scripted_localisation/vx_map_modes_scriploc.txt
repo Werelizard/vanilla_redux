@@ -1,0 +1,12 @@
+defined_text = {
+	name = GetLeagueOfNationsMembership
+	text = {
+		trigger = { 
+			has_dynamic_modifier = league_of_nations_dynmod
+		}
+		localization_key = league_of_nations_map_mode_member
+	}
+	text = {
+		localization_key = league_of_nations_map_mode_not_member
+	}
+}

@@ -1,38 +1,93 @@
 ﻿l_english: 
  ### DECISIONS ###
- generic_support_government:0 "Organise Political Rallies"
  generic_race_for_the_bomb:0 "Race for the Bomb"
  generic_improve_worker_conditions:0 "Improve Worker Conditions"
- ban_socialist_parties:0 "Ban Socialist Parties"
- ban_democratic_parties:0 "Ban Democratic Parties"
- ban_authoritarian_parties:0 "Ban Authoritarian Parties"
- ban_fascist_parties:0 "Ban Fascist Parties"
+ generic_press_censorship:0 "Institute Press Censorpship"
+ generic_ban_socialist_parties:0 "Anti-Socialist Raids"
+ generic_ban_democratic_parties:0 "Anti-Democratic Raids"
+ generic_ban_authoritarian_parties:0 "Anti-Reactionary Raids"
+ generic_ban_fascist_parties:0 "Anti-Fascist Raids"
  #
- generic_war_propaganda:0 "War Propaganda"
- generic_war_propaganda_casualties:0 "Extoll Heroism"
- generic_war_propaganda_convoys:0 "Encourage Frugality"
- generic_war_propaganda_bombing:0 "Bolster Spirits"
+ generic_decision_radio_propaganda:0 "Radio Propaganda"
+ generic_decision_film_industry:0 "Utilise Domestic Film Industry"
+ generic_decision_war_suport_casualites:0 "Extoll Heroism"
+ generic_decision_war_suport_convoys:0 "Encourage Frugality"
+ generic_decision_war_suport_bombings:0 "Bolster Spirits"
  #
- crisis_mission_strikes:0 "Looming Strikes"
- crisis_mission_deserters:0 "Looming Desertions"
- crisis_mission_protests:0 "Looming Protests"
- crisis_solve_strikes:0 "End Nation-Wide Strikes"
- crisis_solve_desertions:0 "Deal with Deserters"
- crisis_solve_protests:0 "End Nation-Wide Protests"
+ generic_decision_women_in_the_workforce:0 "Women in the Workforce"
+ generic_decision_war_bonds:0 "War Bonds"
+ generic_decision_emergency_resource_requisition:0 "Emergency Resource Requisition"
+ generic_decision_emergency_factory_conversion:0 "Emergency Factory Conversion"
+ generic_decision_penal_battalions:0 "Deploy Penal Battalions"
+ generic_decision_desperate_defence:0 "Desperate Defence"
+ #
+ generic_decision_commandeer_trains:0 "Seize Civilian Trains"
+ generic_decision_reorganise_railway_system:0 "Reorganise the Railway System"
+ generic_decision_reorganise_railway_system_trigger_tt:0 "Has not taken this decision before"
+ #
+ generic_abandon_naval_treaty:0 "Abandon the London Naval Treaty"
+ generic_cheat_on_treaty:0 "Cheat on the Treaty"
+ generic_escalator_clause:0 "Invoke the Escalator Clause"
+ #
+ generic_leave_league_of_nations:0 "Withdraw from the League of Nations"
 
  ### DECISION CATEGORIES ###
+ generic_decision_pol:0 "Political Decisions"
+ generic_decision_war_measures:0 "War Measures"
+ generic_decision_war_propaganda:0 "War Propaganda"
+ generic_decision_economy:0 "Economic Decisions"
+ generic_decision_league_of_nations:0 "League of Nations"
+ generic_decision_naval_treaty:0 "The London Naval Treaty"
+
+ ### DECISION COST ###
  VX_25_CP_COST:0 "£command_power §Y25§!"
  VX_25_CP_COST_blocked:0 "£command_power §R25§!"
  VX_25_CP_COST_tooltip:0 "It costs £command_power §Y25§! to take this decisions"
 
  ### DECISION TOOLTIPS ###
- stability_loss_on_party_pop_tt:0 "Stability will be §rdeducted§! proportional to the popularity of banned parties"
+ stability_loss_on_party_pop_tt:0 "Stability will be §Rdeducted§! proportional to the popularity of banned parties"
+ vx_any_no_coal_resource_is_missing_tt:0 "We are lacking any strategic resource (except for coal)"
+ vx_naval_treaty_abandoned_global_flag:0 "Another country already withdrew from the treaty"
+ vx_naval_treaty_escalator_clause_flag:0 "The escalator clause has already been invoked by a signatory"
+ vx_set_abandon_cost_zero_tt:0 "§RWill loosen the prerequisites and eliminate the £pol_power §!§Ypolitical power§!§R required to take this decision for all other signatories!§!"
+ vx_escalator_clause_decision_flag:0 " Has taken the £decision_icon_small §Y$generic_escalator_clause$§! decision"
+ vx_cheating_on_treaty_decision_flag:0 " Has taken the £decision_icon_small §Y$generic_cheat_on_treaty$§! decision"
+ vx_lon_fell_apart_flag:0 "The §YLeague of Nations§! has collapsed"
+
+ ### DIPLOMATIC ACTIONS ###
+ vx_cannot_justify_wargoal_tt:0 "§RLeague of Nations members are forbidden from manually justifying wargoals!§!"
+ vx_cannot_declare_war_tt:0 "§RLeague of Nations members are forbidden from starting wars against fellow League of Nations members that haven't increased world tension, irrespective of ideology.§!"
+ vx_no_manual_guarantees_tt:0 "§RCannot manually guarantee other countries§!"
+ vx_no_manual_guarantees_revoke_tt:0 "§RCannot manually revoke guarantees§!"
+ vx_no_manual_releases_tt:0 "§RCannot manually release nations§!"
+
+ vx_fascist_guarantees_restrictions_tt:0 "§RFascist countries can only guarantee other fascist countries, or authoritarian countries once world tension is higher than 50.0%.§!"
+ vx_authoritarian_guarantees_restrictions_tt:0 "§RAuthoritarian countries cannot guarantee socialist countries!§!"
+ vx_democratic_guarantees_restrictions_tt:0 "§RDemocratic countries can only guarantee other democratic countries unless world tension is higher than 50.0%.§!"
+ vx_socialist_guarantees_restrictions_tt:0 "§RSocialist countries can only guarantee socialist countries!§!"
+
+ vx_target_cannot_send_volunteers_tt:0 "§Y[ROOT.GetName]§! §Rcannot send volunteers§!"
+ vx_target_cannot_get_volunteers_tt:0 "§Y[FROM.GetName]§! §Rcannot receive volunteers§!"
 
  ### DYNAMIC MODIFIERS - COUNTRY BASED ###
- 
+
  coalitions_dynmod:0 "Coalitions"
 
+ league_of_nations_dynmod:0 "League of Nations Member"
+ league_of_nations_dynmod_desc:0 "This country is a member of the League of Nations, an intergovernmental organization established 'to promote international cooperation and to achieve international peace and security'."
+ vx_lon_no_wargoal_tt:0 "£trigger_no Cannot manually justify wargoals"
+ vx_lon_no_war_on_non_tension_tt:0 "£trigger_no Cannot declare unrestricted wars"
+
  ### DYNAMIC MODIFIERS - STATE BASED ###
+
+ ### IDEAS ###
+
+ vx_london_naval_treaty:0 "London Naval Treaty Signatory"
+ vx_london_naval_treaty_desc:0 "The London Naval Treaty, officially the Treaty for the Limitation and Reduction of Naval Armament, is an agreement between the United Kingdom, Japan, France, Italy, and the United States. The agreement regulates submarine warfare, further controlled cruisers and destroyers, and limits naval shipbuilding."
+ vx_london_naval_treaty_cheat:0 "$vx_london_naval_treaty$"
+ vx_london_naval_treaty_cheat_desc:0 "$vx_london_naval_treaty_desc$"
+ vx_london_naval_treaty_escalator_clause:0 "$vx_london_naval_treaty$"
+ vx_london_naval_treaty_escalator_clause_desc:0 "$vx_london_naval_treaty_desc$"
 
  ### IDEOLOGIES / GOVERNMENT TYPES ###
  socialist_government:0 "Socialist Government"
@@ -46,7 +101,7 @@
  authoritarian_socialist_subtype:0 "$authoritarian_socialist_noun$"
  authoritarian_socialist_subtype_desc:0 ""
 
- vanguard_socialist:0 "Vanugard Socialist"
+ vanguard_socialist:0 "Vanguard Socialist"
  vanguard_socialist_noun:0 "Vanguard Socialism"
  vanguard_socialist_desc:0 "$socialist_government$"
  vanguard_socialist_subtype:0 "$vanguard_socialist_noun$"
@@ -107,15 +162,30 @@
  fascist_subtype_desc:0 ""
 
  authoritarian_socialist_drift:0 "Daily $authoritarian_socialist$ Drift"
- revolutionary_socialist_drift:0 "Daily $social_democratic$ Drift"
+ vanguard_socialist_drift:0 "Daily $vanguard_socialist$ Drift"
+ revolutionary_socialist_drift:0 "Daily $revolutionary_socialist$ Drift"
+ social_democratic_drift:0 "Daily $social_democratic$ Drift"
  progressive_drift:0 "Daily $progressive$ Drift"
  liberal_drift:0 "Daily $liberal$ Drift"
  conservative_drift:0 "Daily $conservative$ Drift"
  authoritarian_democrat_drift:0 "Daily $authoritarian_democrat$ Drift"
  autocratic_drift:0 "Daily $autocratic$ Drift"
  fascist_drift:0 "Daily $fascist$ Drift§"
-
+ 
+ ### MAP MODES ###
+ MAPMODE_LEAGUE_OF_NATIONS_MAP_MODE:0 "§Y$MAPMODE_LEAGUE_OF_NATIONS_MAP_MODE_NAME$§! map mode"
+ MAPMODE_LEAGUE_OF_NATIONS_MAP_MODE_NAME:0 "League of Nations"
+ MAPMODE_LEAGUE_OF_NATIONS_MAP_MODE_DESCRIPTION:0 "Shows the current membership of the League of Nations"
+ league_of_nations_map_mode_none:0 "None"
+ league_of_nations_map_mode_tooltip:0 "[FROM.controller.GetLeagueOfNationsMembership]"
+ league_of_nations_map_mode_tooltip_delayed:0 ""
+ league_of_nations_map_mode_member:0 "§Y[FROM.controller.GetNameWithFlag]§! is a member of of the League of Nations"
+ league_of_nations_map_mode_not_member:0 "§Y[FROM.controller.GetNameWithFlag]§! is not a member of the League of Nations"
+ 
  ### MODIFIERS ###
+ modifier_production_cost_max_ship_hull_cruiser_tt: "$modifier_production_cost_max_ship_hull_cruiser$: $RIGHT|Y$"
+ modifier_production_cost_max_ship_hull_heavy_tt: "$modifier_production_cost_max_ship_hull_heavy$: $RIGHT|Y$"
+ modifier_production_cost_max_ship_hull_carrier_tt: "$modifier_production_cost_max_ship_hull_carrier$: $RIGHT|Y$"
 
  ### OPINION MODIFIERS ###
 
@@ -125,6 +195,9 @@
  VX_different_ideology:0 "Different Ideology"
 
  VX_improved_relations:0 "Diplomatic Rapprochment"
+
+ VX_abandoned_london_naval_treaty:0 "Abandoned Londong Naval Treaty"
+ VX_abandoned_london_naval_treaty_trade:0 "Abandoned Londong Naval Treaty"
 
  ### OVERRIDE TOOLTIPS ###
 
@@ -227,10 +300,8 @@
  advisors:0 "Political Advisors"
 
  ### MISC TOOLTIPS ###
- doublespace_tt:0 " \n"
+ doublespace_tt:0 "  "
  focus_on_begin:0 "§YOn focus start:§!"
  focus_on_complete:0 "§YOn focus completed:§!" 
 
  max_training_factor_tt: " $MODIFIER_MAX_TRAINING_XP_FACTOR$: $RIGHT|+=%1$"
-
- FACTION_GOAL_DIVISION_COMPARE:0 "Current number of divisions in the faction §Y($LEFT|0H$)§! is equal to or greater than §Y$RIGHT|0H$§!"

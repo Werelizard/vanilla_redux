@@ -501,17 +501,8 @@ update_coalitions_effect = {
 			coalition_effect_var = party_popularity@fascist
 		}
 	}
-	add_to_variable = {
-		coalition_small_effect_var = coalition_effect_var
-	}
-	add_to_variable = {
-		coalition_big_effect_var = coalition_effect_var
-	}
-	divide_variable = {
-		coalition_small_effect_var = 5
-	}
-	divide_variable = {
-		coalition_big_effect_var = 2.5
+	multiply_variable = {
+		coalition_effect_var = 0.15
 	}
 }
 
@@ -529,4 +520,9 @@ remove_coalitions_effect = {
 	clr_country_flag = coalition_auth_flag
 	clr_country_flag = coalition_reactionary_flag
 	clr_country_flag = coalition_fascism_flag
+}
+
+vx_remove_crisis_ideas_effect = {
+	remove_ideas = vx_strikes
+	remove_ideas = vx_desertions
 }

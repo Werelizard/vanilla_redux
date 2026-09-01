@@ -1,0 +1,141 @@
+DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
+	# LON members cannot manually justify war goals
+	if = {
+		limit = {
+			has_dynamic_modifier = league_of_nations_dynmod
+		}
+		custom_override_tooltip = {
+			tooltip = vx_cannot_justify_wargoal_tt
+			always = no
+		}
+	}
+}
+
+DIPLOMACY_WAR_ENABLE_TRIGGER = {
+	# LON members cannot declare wars on LON countries that have not generated world tension
+	if = {
+		limit = {
+			has_dynamic_modifier = league_of_nations_dynmod
+			FROM = {
+				has_dynamic_modifier = league_of_nations_dynmod
+			}
+		}
+		custom_override_tooltip = {
+			tooltip = vx_cannot_declare_war_tt
+			FROM = {
+				has_added_tension_amount > 0
+			}
+		}
+	}
+}
+
+DIPLOMACY_GUARANTEE_ENABLE_TRIGGER = {
+	# Fascist countries can only guarantee fascist countries or auth. countries if world tension goes over 50%.
+	if = {
+		limit = {
+			has_fascist_government_trigger = yes
+			OR = {
+				FROM = {
+					has_socialist_government_trigger = yes
+				}
+				FROM = {
+					has_democratic_government_trigger = yes
+				}
+				AND = {
+					threat < 0.5
+					FROM = {
+						has_authoritarian_government_trigger = yes
+					}
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = vx_fascist_guarantees_restrictions_tt
+			always = no
+		}
+	}
+	# Authoritarian nations can't guarantee socialist countries
+	if = {
+		limit = {
+			has_authoritarian_government_trigger = yes
+			FROM = {
+				has_socialist_government_trigger = yes
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = vx_authoritarian_guarantees_restrictions_tt
+			always = no
+		}
+	}
+	# Democratic countries can only guarantee democratic countries UNLESS  world tension is above 50%
+	if = {
+		limit = {
+			has_democratic_government_trigger = yes
+			NOT = {
+				FROM = {
+					has_democratic_government_trigger = yes
+				}
+			}
+			threat < 0.5
+		}
+		custom_trigger_tooltip = {
+			tooltip = vx_democratic_guarantees_restrictions_tt
+			always = no
+		}
+	}
+	# Socialist countries can only guarantee socialist countries
+	if = {
+		limit = {
+			has_socialist_government_trigger = yes
+			NOT = {
+				FROM = {
+					has_socialist_government_trigger = yes
+				}
+			}
+			threat < 0.5
+		}
+		custom_trigger_tooltip = {
+			tooltip = vx_socialist_guarantees_restrictions_tt
+			always = no
+		}
+	}
+}
+
+DIPLOMACY_REVOKE_GUARANTEE_ENABLE_TRIGGER = {
+	# custom_override_tooltip = {
+	# 	tooltip = vx_no_manual_guarantees_revoke_tt
+	# 	always = no
+	# }
+}
+
+DIPLOMACY_RELEASE_NATION_ENABLE_TRIGGER = {
+	custom_override_tooltip = {
+		tooltip = vx_no_manual_releases_tt
+		always = no
+	}
+}
+
+DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			FROM = {
+				has_country_flag = vx_target_cannot_send_volunteers_flag
+			}
+		}
+		custom_override_tooltip = {
+			tooltip = vx_target_cannot_send_volunteers_tt
+			always = no
+		}
+	}
+	if = {
+		limit = {
+			FROM = {
+				has_country_flag = vx_target_cannot_get_volunteers_flag
+			}
+		}
+		custom_override_tooltip = {
+			tooltip = vx_target_cannot_get_volunteers_tt
+			always = no
+		}
+	}
+}

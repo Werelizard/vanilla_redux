@@ -1,54 +1,140 @@
-add_namespace = crisis_event
+add_namespace = crisis_strikes
+add_namespace = crisis_desertions
+add_namespace = crisis_mutinies
+add_namespace = generic_events
 
 #### CRISIS EVENTS ####
 
-# Strikes setup event
+# Strikes happen at low stability. Desertions with high casualties and low war support. Mutinies with low war support and high 
+# surrender progress. Removed the random chance stuff because I hate it.
+
 country_event = {
-	id = crisis_event.1
-	title = crisis_event.1.title
-	desc = crisis_event.1.desc
+	id = crisis_strikes.0
+	title = crisis_strikes.0.title
+	desc = crisis_strikes.0
 
 	is_triggered_only = yes
-
 	trigger = {
 		can_have_strikes_crisis_trigger = yes
+		NOT = {
+			has_idea = vx_crisis_cooldown
+		}
 	}
 
+	immediate = {
+		hidden_effect = {
+			add_timed_idea = {
+				idea = vx_crisis_cooldown
+				days = 70
+			}
+		}
+	}
+
+
 	option = {
-		
+		# It'll blow off soon
+		name = crisis_strikes.0.a
+		if = {
+			limit = {
+				has_capitulated = no
+			}
+			add_timed_idea = {
+				idea = vx_strikes
+				days = 270
+			}
+			custom_effect_tooltip = vx_unlock_decisions_to_handle_strikes_tt
+		}
 	}
 }
 
-# Deserters setup event
 country_event = {
-	id = crisis_event.2
-	title = crisis_event.2.title
-	desc = crisis_event.2.desc
+	id = crisis_desertions.0
+	title = crisis_desertions.0.title
+	desc = crisis_desertions.0
 
 	is_triggered_only = yes
-
 	trigger = {
-		can_have_deserters_crisis_trigger = yes
+		can_have_strikes_crisis_trigger = yes
+		NOT = {
+			has_idea = vx_crisis_cooldown
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			add_timed_idea = {
+				idea = vx_crisis_cooldown
+				days = 70
+			}
+		}
 	}
 
 	option = {
-		
+		#
+		name = crisis_desertions.0.a
+		if = {
+			limit = {
+				has_capitulated = no
+			}
+			add_timed_idea = {
+				idea = vx_desertions
+				days = 270
+			}
+			custom_effect_tooltip = vx_unlock_decisions_to_handle_crisis_tt
+		}
 	}
 }
 
-# Protests setup event
 country_event = {
-	id = crisis_event.3
-	title = crisis_event.3.title
-	desc = crisis_event.3.desc
+	id = crisis_mutinies.0
+	title = crisis_mutinies.0.title
+	desc = crisis_mutinies.0
 
 	is_triggered_only = yes
-
 	trigger = {
-		can_have_protests_crisis_trigger = yes
+		can_have_mutinies_crisis_trigger = yes
+		NOT = {
+			has_idea = vx_crisis_cooldown
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			add_timed_idea = {
+				idea = vx_crisis_cooldown
+				days = 70
+			}
+		}
 	}
 
 	option = {
-		
+		#
+		name = crisis_mutinies.0.a
+		if = {
+			limit = {
+				has_capitulated = no
+			}
+			add_timed_idea = {
+				idea = vx_mutinies
+				days = 270
+			}
+			custom_effect_tooltip = vx_unlock_decisions_to_handle_crisis_tt
+		}
+	}
+}
+
+#### GENERIC EVENTS ####
+
+country_event = {
+	# Random Film Event
+	id = generic_events.1
+	title = generic_events.1.title
+	desc = generic_events.1.desc
+
+	is_triggered_only = yes
+	
+	option = {
+		name = generic_events.1.a
+		add_war_support = 0.1
 	}
 }

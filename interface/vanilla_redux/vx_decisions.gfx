@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_league_of_nations_category"
+		textureFile = "gfx/interface/decisions/decision_category_league_of_nations.dds"
+	}
+} 

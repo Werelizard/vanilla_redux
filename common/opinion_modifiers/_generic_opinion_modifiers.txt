@@ -3,4 +3,15 @@ opinion_modifiers = {
 	VX_improved_relations = {
 		value = 20
 	}
+
+	# Abandoned naval treaty
+	VX_abandoned_london_naval_treaty = {
+		value = -20
+		decay = 1
+	}
+	VX_abandoned_london_naval_treaty_trade = {
+		value = -50
+		decay = 1
+		trade = yes
+	}
 }

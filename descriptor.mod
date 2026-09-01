@@ -1,5 +1,4 @@
 version="0.1"
-
 tags={
 	"Ideologies"
 	"Alternative History"
@@ -8,10 +7,7 @@ tags={
 	"Historical"
 	"National Focuses"
 }
-
 name="VanillaRedux"
-supported_version="1.17.5.1"
-
 replace_path="common/achievements.txt"
 replace_path="common/ai_equipment"
 replace_path="common/ai_faction_theaters"
@@ -64,5 +60,7 @@ replace_path="common/units/names_divisions"
 replace_path="common/units/names_ships"
 replace_path="events"
 replace_path="history/countries"
-
+replace_path="history/general"
+replace_path="history/units"
+supported_version="1.17.5.1"
 path="C:/Users/lyral/Documents/Paradox Interactive/Hearts of Iron IV/mod/VanillaRedux"

@@ -9,7 +9,7 @@ bookmarks = {
 		
 		"GER"={
 			history = "GER_1936"
-			ideology = fascism
+			ideology = fascist
 			ideas = {
 				ger_enabling_act
 				ger_german_fascism_start

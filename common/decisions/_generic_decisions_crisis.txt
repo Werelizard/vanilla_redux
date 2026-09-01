@@ -1,0 +1,59 @@
+generic_decision_crisis = {
+	# Handle strikes
+	generic_handle_strikes = {
+		visible = {
+			has_idea = vx_strikes
+		}
+		cancel_if_not_visible = yes
+		####
+		cost = 100
+		####
+		days_remove = 30
+		####
+		remove_effect = {
+			modify_timed_idea = {
+				idea = vx_strikes
+				days = -60
+			}
+		}
+	}
+	# Handle desertions
+	generic_handle_desertions = {
+		visible = {
+			has_idea = vx_desertions
+		}
+		cancel_if_not_visible = yes
+		####
+		cost = 100
+		####
+		days_remove = 30
+		####
+		remove_effect = {
+			modify_timed_idea = {
+				idea = vx_desertions
+				days = -60
+			}
+		}
+	}
+	# Handle mutinies
+	generic_handle_mutinies = {
+		visible = {
+			has_idea = vx_mutinies
+		}
+		cancel_if_not_visible = yes
+		####
+		cost = 100
+		####
+		days_remove = 30
+		####
+		remove_effect = {
+			modify_timed_idea = {
+				idea = vx_mutinies
+				days = -60
+			}
+		}
+	}
+	# Missions - public demands demobilisation
+
+	# Missions - public demands lowering conscription
+}

@@ -1,0 +1,95 @@
+generic_decision_economy = {
+	generic_decision_commandeer_trains = {
+		icon = GFX_decision_generic_train
+		visible = {
+			
+		}
+		available = {
+			has_tech = basic_train
+			OR = {
+				has_stability > 0.1
+				AND = {
+					has_war_with_non_exiled_country = yes
+					has_stability > 0.05
+				}
+			}
+		}
+		####
+		cost = 100
+		days_re_enable = 180
+		####
+		complete_effect = {
+			add_stability = -0.05
+			if = {
+				limit = {
+					industrial_complex < 20
+				}
+				add_equipment_to_stockpile = {
+					type = train_equipment_1
+					amount = 5
+				}
+			}
+			else_if = {
+				limit = {
+					industrial_complex < 40
+				}
+				add_equipment_to_stockpile = {
+					type = train_equipment_1
+					amount = 10
+				}
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					type = train_equipment_1
+					amount = 15
+				}
+			}
+		}
+		###
+		ai_will_do = {
+			factor = 0
+		}
+		ai_hint_pp_cost = 100
+	}
+	generic_decision_reorganise_railway_system = {
+		icon = GFX_decision_generic_train
+		visible = {
+			
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = generic_decision_reorganise_railway_system_trigger_tt
+			}
+			num_of_available_civilian_factories > 4
+		}
+		####
+		fire_only_once = yes
+		days_remove = 180
+		####
+		modifier = {
+			civilian_factory_use = 5
+			production_speed_supply_node_factor = 3	
+		}
+
+		complete_effect = {			
+			###
+			set_variable = { 
+				node_goal = num_of_supply_nodes 
+			}
+			add_to_variable = { 
+				node_goal = 3 
+			}
+		}
+
+		cancel_trigger = {				
+			check_variable = { 
+				node_goal < num_of_supply_nodes 
+			}	
+		}
+		###
+		ai_will_do = {
+			factor = 0
+		}
+		ai_hint_pp_cost = 100
+	}
+}

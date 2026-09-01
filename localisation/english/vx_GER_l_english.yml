@@ -188,8 +188,8 @@
  GER_inner_circle_hegemony_of_the_party:0 "Hegemony of the Party State"
  GER_inner_circle_hegemony_of_the_party_desc:0 ""
 
- GER_inner_circle_economics:0 "Accelerate the Rearmement Program"
- GER_inner_circle_economics_desc:0 ""
+ GER_inner_circle_rearmement:0 "Accelerate the Rearmement Program"
+ GER_inner_circle_rearmement_desc:0 ""
 
  GER_inner_circle_todt:0 "Reichsleiter Todt"
  GER_inner_circle_todt_desc:0 ""
@@ -242,8 +242,8 @@
  GER_inner_circle_totaler_krieg:0 "Totaler Krieg"
  GER_inner_circle_totaler_krieg_desc:0 ""
 
- GER_inner_circle_cult_personality:0 "Consolidate the Volkreich"
- GER_inner_circle_cult_personality_desc:0 ""
+ GER_inner_circle_volkreich:0 "Consolidate the Volkreich"
+ GER_inner_circle_volkreich_desc:0 ""
 
  GER_inner_circle_goebbels:0 "Reichsleiter Goebbels"
  GER_inner_circle_goebbels_desc:0 ""

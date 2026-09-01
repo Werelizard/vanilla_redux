@@ -1,4 +1,22 @@
 spriteTypes = {
+	# Global
+	spriteType = {
+		name = "GFX_idea_league_of_nations_member"
+		texturefile = "gfx/interface/ideas/idea_league_of_nations_member.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_vx_london_naval_treaty"
+		texturefile = "gfx/interface/ideas/idea_naval_treaty_adherent.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_vx_london_naval_treaty_cheat"
+		texturefile = "gfx/interface/ideas/idea_naval_treaty_adherent.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_vx_london_naval_treaty_escalator_clause"
+		texturefile = "gfx/interface/ideas/idea_naval_treaty_adherent.dds"
+	}
+	# Germany
 	spritetype = {
 		name = "GFX_idea_ger_enabling_act"
         texturefile = "gfx/interface/ideas/authoritarian_power.dds"

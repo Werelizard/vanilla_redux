@@ -1,0 +1,62 @@
+ideas = {
+	hidden_ideas = {
+		vx_crisis_cooldown = {
+			modifier = {
+				
+			}
+		}
+	}
+
+	
+	country = {
+		# Crisis ideas
+		vx_strikes = {
+			modifier = {
+				production_factory_max_efficiency_factor = -0.1
+				production_factory_start_efficiency_factor = -0.1
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+			}
+		}
+		vx_desertions = {
+			modifier = {
+				recruitable_population_factor = -0.2
+				experience_loss_factor = 0.5
+			}
+		}
+		vx_mutinies = {
+			modifier = {
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+			}
+		}
+		# Naval Treaty
+		vx_london_naval_treaty = {
+			picture = GFX_idea_london_naval_treaty
+
+			modifier = {
+				production_cost_max_ship_hull_cruiser = 5300
+				production_cost_max_ship_hull_heavy = 10000
+				production_cost_max_ship_hull_carrier = 9500
+			}
+		}
+		vx_london_naval_treaty_cheat = {
+			picture = GFX_idea_london_naval_treaty
+
+			modifier = {
+				production_cost_max_ship_hull_cruiser = 5700
+				production_cost_max_ship_hull_heavy = 11500
+				production_cost_max_ship_hull_carrier = 10250
+			}
+		}
+		vx_london_naval_treaty_escalator_clause = {
+			picture = GFX_idea_london_naval_treaty
+
+			modifier = {
+				production_cost_max_ship_hull_cruiser = 6000
+				production_cost_max_ship_hull_heavy = 12000
+				production_cost_max_ship_hull_carrier = 10500
+			}
+		}
+	}
+}

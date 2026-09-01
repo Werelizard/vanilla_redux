@@ -1,19 +1,194 @@
-@manifest_fulfilled_value = 0.8
+@manifest_fulfilled_value = 0.75
 
-faction_manifest_generic = {
-	# Generic manifest - dummy
-	name = faction_manifest_generic
-	description = faction_manifest_generic_desc
+# FALLBACK MANIFESTS - unused outside fallback templates
 
+fallback_strength_in_unity = {
+	name = fallback_strength_in_unity_name
+	description = fallback_strength_in_unity_desc
 	is_manifest = yes
-
 	ratio_progress = {
-		total_amount_collection = game:all_countries
-		completed_amount_collection = collection:faction_generic_faction_members
-
-		range = {
-			
+		total_amount = 20
+		completed_amount_collection = {
+			input = game:scope
+			operators = { faction_members }
+			name = COLLECTION_FACTION_MEMBERS
 		}
+		
+		scale = {			
+			stability_factor = 0.15
+		}
+		
+		progress_sections = {
+			manifest_fulfilled = {
+				min = @manifest_fulfilled_value
+	
+				modifier = { 
+					political_power_factor = 0.1
+				}			
+			}
+		}
+	}
+}
+
+fallback_regional_expansion = {
+	name = fallback_regional_expansion_name
+	description = fallback_regional_expansion_desc
+	is_manifest = yes
+	ratio_progress = {
+		total_amount_collection = collection:states_on_faction_leader_continent
+		completed_amount_collection = collection:controlled_states_on_faction_leader_continent
+
+		scale = {
+			party_popularity_stability_factor = 0.1
+		}
+		
+		progress_sections = {
+			manifest_fulfilled = {
+				min = @manifest_fulfilled_value
+				modifier = { 
+					war_stability_factor = 0.1
+				}
+			}
+		}
+	}
+}
+
+# GENERIC MANIFESTS
+
+### World Revolution (Socialist countries)
+generic_manifest_world_revolution = {
+	# Spread socialism to as many non-capitulated countries as possible
+	name = generic_manifest_world_revolution_name
+	description = generic_manifest_world_revolution_desc
+	is_manifest = yes
+	ratio_progress = {
+		total_amount = game:all_countries
+		completed_amount_collection = collection:world_socialist_countries
+
+		scale = {
+			war_support_factor = 0.15
+		}
+
+		progress_sections = {
+			manifest_fulfilled = {
+				min = @manifest_fulfilled_value
+				modifier = { 
+					war_stability_factor = 0.1
+				}
+			}
+		}
+	}
+}
+
+### New World Order (Fascist countries)
+generic_manifest_new_order = {
+	# Spread socialism to as many non-capitulated countries as possible
+	name = generic_manifest_new_order_name
+	description = generic_manifest_new_order_desc
+	is_manifest = yes
+	ratio_progress = {
+		total_amount = game:all_countries
+		completed_amount_collection = collection:world_fascist_countries
+
+		scale = {
+			war_support_factor = 0.15
+		}
+
+		progress_sections = {
+			manifest_fulfilled = {
+				min = @manifest_fulfilled_value
+				modifier = { 
+					war_stability_factor = 0.1
+				}
+			}
+		}
+	}
+}
+
+### Defeat Socialism (Non-Socialist countries)
+generic_manifest_defeat_socialism = {
+	# Spread socialism to as many non-capitulated countries as possible
+	name = generic_manifest_defeat_socialism_name
+	description = generic_manifest_defeat_socialism_desc
+	is_manifest = yes
+	ratio_progress = {
+		total_amount = game:all_countries
+		completed_amount_collection = collection:world_non_socialist_countries
+
+		scale = {
+			party_popularity_stability_factor = 0.2
+		}
+
+		progress_sections = {
+			manifest_fulfilled = {
+				min = @manifest_fulfilled_value
+				modifier = { 					
+					stability_factor = 0.1
+				}
+			}
+		}
+	}
+}
+
+### Defeat Fascism (Non-Fascist countries)
+generic_manifest_defeat_fascism = {
+	# Spread socialism to as many non-capitulated countries as possible
+	name = generic_manifest_defeat_fascism_name
+	description = generic_manifest_defeat_fascism_desc
+	is_manifest = yes
+	ratio_progress = {
+		total_amount = game:all_countries
+		completed_amount_collection = collection:world_non_fascist_countries
+
+		scale = {
+			party_popularity_stability_factor = 0.2
+		}
+
+		progress_sections = {
+			manifest_fulfilled = {
+				min = @manifest_fulfilled_value
+				modifier = { 					
+					stability_factor = 0.1
+				}
+			}
+		}
+	}
+}
+
+### Regional Defense (Non-Fascist countries)
+generic_manifest_regional_defense = {
+	# Spread socialism to as many non-capitulated countries as possible
+	name = generic_manifest_regional_defense_name
+	description = generic_manifest_regional_defense_desc
+	is_manifest = yes
+	ratio_progress = {
+		total_amount = collection:states_on_faction_leader_continent
+		completed_amount_collection = collection:controlled_states_on_faction_leader_continent
+
+		scale = {
+			army_core_defence_factor = 0.1
+		}
+
+		progress_sections = {
+			manifest_fulfilled = {
+				min = @manifest_fulfilled_value
+				modifier = { 					
+					recruitable_population_factor = 0.1
+				}
+			}
+		}
+	}
+}
+
+### Global Hegemony (Non-Democratic countries)
+generic_manifest_global_hegemony = {
+	# Spread socialism to as many non-capitulated countries as possible
+	name = generic_manifest_regional_defense_name
+	description = generic_manifest_regional_defense_desc
+	is_manifest = yes
+	ratio_progress = {
+		total_amount = game:all_states
+		completed_amount_collection = collection:controlled_states_by_faction
 
 		scale = {
 			war_support_factor = 0.1
@@ -22,227 +197,36 @@ faction_manifest_generic = {
 		progress_sections = {
 			manifest_fulfilled = {
 				min = @manifest_fulfilled_value
-				modifier = { 
-					drift_defence_factor = 1
-				}
-			}
-		}
-	}
-}
-
-   ###    ##       ##       #### ########  ###### 
-  ## ##   ##       ##        ##  ##       ##    ##
- ##   ##  ##       ##        ##  ##       ##      
-##     ## ##       ##        ##  ######    ###### 
-######### ##       ##        ##  ##             ##
-##     ## ##       ##        ##  ##       ##    ##
-##     ## ######## ######## #### ########  ###### 
-
-faction_manifest_old_europe = {
-	# The allies are interested in Democracy/Auth. Democracy around the globe
-	name = faction_manifest_old_europe
-	description = faction_manifest_old_europe_desc
-
-	is_manifest = yes
-
-	ratio_progress = {
-		total_amount_collection = game:all_countries
-		completed_amount_collection = collection:faction_allies_old_order
-
-		range = {
-			# 50% should be enough tbh
-			max = 0.5
-		}
-
-		scale = {
-			drift_defence_factor = 0.25
-			faction_trade_opinion_factor = 0.25
-		}
-
-		progress_sections = {
-			manifest_fulfilled = {
-				min = @manifest_fulfilled_value
-				modifier = { 
-					guarantee_cost = -0.25			
-				    can_guarantee_other_ideologies = 1
-				}
-			}
-		}
-	}
-}
-
-   ###    ##     ## ####  ###### 
-  ## ##    ##   ##   ##  ##    ##
- ##   ##    ## ##    ##  ##      
-##     ##    ###     ##   ###### 
-#########   ## ##    ##        ##
-##     ##  ##   ##   ##  ##    ##
-##     ## ##     ## ####  ###### 
-
-faction_axis_new_order = {
-	# Default axis goal
-	name = faction_axis_new_order
-	description = faction_axis_new_order_desc
-
-	is_manifest = yes
-
-	ratio_progress = {
-		total_amount = collection:states_europe
-		completed_amount_collection = collection:faction_axis_new_order
-
-		scale = {
-			weekly_casualties_war_support = 0.015
-		}
-
-		progress_sections = {
-			manifest_fulfilled = {
-				min = @manifest_fulfilled_value
-				modifier = { 
-					fascist_drift = 0.03
-					resistance_growth = -0.15					
-				}
-			}
-		}
-	}
-}
-
- ######   #######  ##     ## #### ##    ## ######## ######## ########  ##    ##
-##    ## ##     ## ###   ###  ##  ###   ##    ##    ##       ##     ## ###   ##
-##       ##     ## #### ####  ##  ####  ##    ##    ##       ##     ## ####  ##
-##       ##     ## ## ### ##  ##  ## ## ##    ##    ######   ########  ## ## ##
-##       ##     ## ##     ##  ##  ##  ####    ##    ##       ##   ##   ##  ####
-##    ## ##     ## ##     ##  ##  ##   ###    ##    ##       ##    ##  ##   ###
- ######   #######  ##     ## #### ##    ##    ##    ######## ##     ## ##    ##
-
-faction_comintern_security_through_expansion = {
-	# Default comintern goal - protect the faction leader!
-	name = faction_comintern_security_through_expansion
-	description = faction_comintern_security_through_expansion_desc
-
-	is_manifest = yes
-
-	ratio_progress = {
-		total_amount = collection:faction_comintern_borders_faction_leader
-		completed_amount_collection = collection:faction_comintern_controlled_border_states
-
-		scale = {
-			war_stability_factor = 0.1
-		}
-
-		progress_sections = {
-			manifest_fulfilled = {
-				min = @manifest_fulfilled_value
-				modifier = { 
-					recruitable_population_factor = 0.1
-				}
-			}
-		}
-	}
-}
-
-faction_comintern_iron_curtain = {
-	# Border countries must be socialist and allied
-
-	name = faction_comintern_iron_curtain
-	description = faction_comintern_iron_curtain_desc
-
-	is_manifest = yes
-
-	ratio_progress = {
-		total_amount = collection:faction_comintern_neighbouring_countries
-		completed_amount_collection = collection:faction_comintern_neighbouring_socialist_countries
-
-		scale = {
-			cic_to_overlord_factor = 0.15
-			mic_to_overlord_factor = 0.15
-			resources_to_overlord_factor = 0.15
-		}
-
-		progress_sections = {
-			manifest_fulfilled = {
-				min = @manifest_fulfilled_value
-				modifier = { 
-					subjects_autonomy_gain = -0.25
-					master_ideology_drift = 0.02
-				}
-			}
-		}
-	}
-}
-
-
-
- ######   #######  ##     ## ##     ##  #######  ##    ## ##      ## ########    ###    ##       ######## ##     ##
-##    ## ##     ## ###   ### ###   ### ##     ## ###   ## ##  ##  ## ##         ## ##   ##          ##    ##     ##
-##       ##     ## #### #### #### #### ##     ## ####  ## ##  ##  ## ##        ##   ##  ##          ##    ##     ##
-##       ##     ## ## ### ## ## ### ## ##     ## ## ## ## ##  ##  ## ######   ##     ## ##          ##    #########
-##       ##     ## ##     ## ##     ## ##     ## ##  #### ##  ##  ## ##       ######### ##          ##    ##     ##
-##    ## ##     ## ##     ## ##     ## ##     ## ##   ### ##  ##  ## ##       ##     ## ##          ##    ##     ##
- ######   #######  ##     ## ##     ##  #######  ##    ##  ###  ###  ######## ##     ## ########    ##    ##     ##
-
-
-faction_american_commonwealth = {
-	# The western hemisphere must be controlled
-
-	name = faction_american_commonwealth
-	description = faction_american_commonwealth_desc
-
-	is_manifest = yes
-
-	ratio_progress = {
-		total_amount = collection:faction_american_commonwealth_american_states
-		completed_amount_collection = collection:faction_american_commonwealth_controlled_american_states
-
-		scale = {
-			defensive_war_stability_factor = 0.25
-		}
-
-		progress_sections = {
-			manifest_fulfilled = {
-				min = @manifest_fulfilled_value
-				modifier = { 
-					faction_trade_opinion_factor = 0.5
-				}
-			}
-		}
-	}
-}
-
-########    ###     ######  ########       ###     ######  ####    ###   
-##         ## ##   ##    ##    ##         ## ##   ##    ##  ##    ## ##  
-##        ##   ##  ##          ##        ##   ##  ##        ##   ##   ## 
-######   ##     ##  ######     ##       ##     ##  ######   ##  ##     ##
-##       #########       ##    ##       #########       ##  ##  #########
-##       ##     ## ##    ##    ##       ##     ## ##    ##  ##  ##     ##
-######## ##     ##  ######     ##       ##     ##  ######  #### ##     ##
-
-faction_propserity_sphere = {
-	# Japan wants to gobble/puppet Asia and Australia
-	name = faction_propserity_sphere
-	description = faction_propserity_sphere_desc
-
-	is_manifest = yes
-
-	ratio_progress = {
-		total_amount = collection:faction_prosperity_sphere_asian_oceanian_states
-		completed_amount_collection = collection:faction_prosperity_sphere_puppet_asian_oceanian_states
-
-		range = {
-			# 75% is enough
-			max = 0.75
-		}
-
-		scale = {
-			production_speed_buildings_factor = 0.1
-			overlord_trade_cost_factor = -0.25
-			resources_to_overlord_factor = 0.25
-		}
-
-		progress_sections = {
-			manifest_fulfilled = {
-				min = @manifest_fulfilled_value
 				modifier = { 					
-					subjects_autonomy_gain = -0.5					
+					weekly_casualties_war_support = 0.02
+				}
+			}
+		}
+	}
+}
+
+# HISTORICAL MANIFESTS
+
+### NEW ORDER IN EUROPE
+manifest_new_order_in_europe = {
+	# Spread fascism to as many states in Europe as possible
+	name = manifest_new_order_in_europe_name
+	description = manifest_new_order_in_europe_desc
+	is_manifest = yes
+	ratio_progress = {
+		total_amount = collection:states_in_europe
+		completed_amount_collection = collection:states_in_europe_controlled_by_fascists
+
+		scale = {
+			fascism_drift = 0.05
+			weekly_casualties_war_support = 0.01
+		}
+
+		progress_sections = {
+			manifest_fulfilled = {
+				min = @manifest_fulfilled_value
+				modifier = {
+					war_stability_factor = 0.25
 				}
 			}
 		}

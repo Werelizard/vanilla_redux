@@ -32,6 +32,9 @@ set_popularities = {
 	fascist = 51
 }
 
+auth_dem_coalition_effect = yes
+autocrat_coalition_effect = yes
+
 ### CHARACTERS
 
 recruit_character = GER_character_ADOLF_HITLER
@@ -144,6 +147,8 @@ add_breakthrough_progress = {
 set_grand_doctrine = new_mobile_warfare
 set_grand_doctrine = new_convoy_raiding
 set_grand_doctrine = new_battlefield_support
+
+set_oob = "vx_GER_land"
 
 if = {
 	limit = { has_dlc = "By Blood Alone" }

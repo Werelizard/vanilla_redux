@@ -103,6 +103,6 @@ set_popularities = {
 	fascist = 5
 }
 
-create_country_leader = {
-	ideology = liberal_subtype
-}
+# create_country_leader = {
+# 	ideology = liberal_subtype
+# }
