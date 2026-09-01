@@ -1,0 +1,354 @@
+### Ideology Rules ###
+
+# Only Democracies
+vx_joining_democracies_only = {
+	type = joining_rules
+	visible = {
+		has_democratic_government_trigger = yes
+	}
+	
+	trigger = {
+		has_democratic_government_tooltip_trigger = yes
+	}
+	
+	ai_will_do = {
+		base = 0
+	}
+	can_remove = {
+		always = no
+	}
+}
+
+# Only Fascist
+vx_joining_fascists_only = {
+	type = joining_rules
+	visible = {
+		has_fascist_government_trigger = yes
+	}
+	
+	trigger = {
+		has_fascist_government_tooltip_trigger = yes
+	}
+	
+	ai_will_do = {
+		base = 0
+	}
+	can_remove = {
+		always = no
+	}
+}
+
+# Only Socialists
+vx_joining_socialist_only = {
+	type = joining_rules
+	visible = {
+		has_socialist_government_trigger = yes
+	}
+	
+	trigger = {
+		has_socialist_government_tooltip_trigger = yes
+	}
+	
+	ai_will_do = {
+		base = 0
+	}
+	can_remove = {
+		always = no
+	}
+}
+
+# No Socialists
+vx_joining_no_socialists = {
+	type = joining_rules
+	visible = {
+		NOT = {
+			has_socialist_government_trigger = yes
+		}
+	}
+	
+	trigger = {
+		NOT = {
+			has_socialist_government_tooltip_trigger = yes
+		}
+	}
+	
+	ai_will_do = {
+		base = 0
+	}
+	can_remove = {
+		always = no
+	}
+}
+
+# No Fascists
+vx_joining_no_fascists = {
+	type = joining_rules
+	visible = {
+		NOT = {
+			has_fascist_government_trigger = yes
+		}
+	}
+	
+	trigger = {
+		NOT = {
+			has_fascist_government_tooltip_trigger = yes
+		}
+	}
+	
+	ai_will_do = {
+		base = 0
+	}
+	can_remove = {
+		always = no
+	}
+}
+
+# Only Democracies or Authoritarians
+vx_joining_democratic_authoritarian = {
+	type = joining_rules
+	visible = {
+		OR = {
+			has_democratic_government_trigger = yes
+			has_authoritarian_government_trigger = yes
+		}
+	}
+
+	trigger = {
+		OR = {
+			has_democratic_government_tooltip_trigger = yes
+			has_authoritarian_government_tooltip_trigger = yes
+		}
+	}
+	
+	ai_will_do = {
+		base = 0
+	}
+	can_remove = {
+		always = no
+	}
+}
+
+# Only Authoritarians or Fascists
+vx_joining_authoritarian_fascists = {
+	type = joining_rules
+	visible = {
+		OR = {
+			has_authoritarian_government_trigger = yes
+			has_fascist_government_trigger = yes
+		}
+	}
+
+	trigger = {
+		OR = {
+			has_democratic_government_tooltip_trigger = yes
+			has_fascist_government_tooltip_trigger = yes
+		}
+	}
+	
+	ai_will_do = {
+		base = 0
+	}
+	can_remove = {
+		always = no
+	}
+}
+
+### Geography Rules ###
+
+# Same continent Only
+vx_joining_same_continent_only = {
+	type = joining_rules
+	visible = {
+				
+	}
+	
+	trigger = {
+		capital_scope = { is_on_continent = FROM }
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+	can_remove = {
+		always = no
+	}
+}
+# Europe Only
+vx_joining_europe_only = {
+	type = joining_rules
+	visible = {
+		capital_scope = { is_on_continent = europe }
+			
+	}
+	
+	trigger = {
+		capital_scope = { is_on_continent = europe }
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+	can_remove = {
+		always = no
+	}
+}
+# Middleeast Only
+vx_joining_middleeast_only = {
+	type = joining_rules
+	visible = {
+		capital_scope = { is_on_continent = middle_east }
+			
+	}
+	
+	trigger = {
+		capital_scope = { is_on_continent = middle_east }
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+	can_remove = {
+		always = no
+	}
+}
+# Asia Only
+vx_joining_asia_only = {
+	type = joining_rules
+	visible = {
+		capital_scope = { is_on_continent = asia }
+			
+	}
+	
+	trigger = {
+		capital_scope = { is_on_continent = asia }
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+	can_remove = {
+		always = no
+	}
+}
+# Africa Only
+vx_joining_africa_only = {
+	type = joining_rules
+	visible = {
+		capital_scope = { is_on_continent = africa }
+			
+	}
+	
+	trigger = {
+		capital_scope = { is_on_continent = africa }
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+	can_remove = {
+		always = no
+	}
+}
+# America Only
+vx_joining_america_only = {
+	type = joining_rules
+	visible = {
+		OR = {
+			capital_scope = { is_on_continent = south_america }
+			capital_scope = { is_on_continent = north_america }
+		}			
+	}
+	
+	trigger = {
+		OR = {
+			capital_scope = { is_on_continent = south_america }
+			capital_scope = { is_on_continent = north_america }
+		}
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+	can_remove = {
+		always = no
+	}
+}
+# South America Only
+vx_joining_southamerica_only = {
+	type = joining_rules
+	visible = {
+		capital_scope = { is_on_continent = south_america }
+			
+	}
+	
+	trigger = {
+		capital_scope = { is_on_continent = south_america }
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+	can_remove = {
+		always = no
+	}
+}
+# Oceania Only
+vx_joining_oceania_only = {
+	type = joining_rules
+	visible = {
+		capital_scope = { is_on_continent = australia }
+			
+	}
+	
+	trigger = {
+		capital_scope = { is_on_continent = australia }
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+	can_remove = {
+		always = no
+	}
+}
+
+### War Relations ###
+vx_joining_no_war = {
+	type = joining_rules
+	visible = {
+		NOT = {
+			has_fascist_government_trigger = yes
+		}
+	}
+	
+	trigger = {
+		has_war = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+	can_remove = {
+		always = no
+	}
+}
+
+vx_joining_no_offensive_war = {
+	type = joining_rules
+	visible = {
+		NOT = {
+			has_fascist_government_trigger = yes
+		}			
+	}
+	
+	trigger = {
+		has_offensive_war = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+	can_remove = {
+		always = no
+	}
+}

@@ -11,6 +11,10 @@ faction_historical_axis = {
 	}
 
 	default_rules = {
-		
+		vx_change_leader_rule_never
+		vx_goals_leader_only
+		vx_joining_authoritarian_fascists
+		vx_joining_europe_only
+		vx_dimissial_rule_democratic_or_socialist_nations_only
 	}
 }

@@ -1,0 +1,156 @@
+vx_call_to_war_leader_only = {
+	type = war_declaration_rules
+	trigger = {
+		OR = {
+			is_faction_leader = yes
+			is_ai = no
+		}
+	}
+	can_remove = {
+		always = no
+	}
+	ai_will_do = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+vx_call_to_war_major_only = {
+	type = war_declaration_rules
+	trigger = {
+		OR = {
+			is_major = yes
+			is_ai = no
+		}
+	}
+	can_remove = {
+		always = no
+	}
+	ai_will_do = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+vx_target_war_fascist_only = {
+	type = war_declaration_rules
+	available = {
+		NOT = {
+			has_fascist_government_tooltip_trigger = yes
+		}
+	}
+	trigger = {
+		FROM = {
+			has_fascist_government_tooltip_trigger = yes
+		}
+	}
+	can_remove = {
+		always = no
+	}
+	ai_will_do = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+vx_target_war_socialist_only = {
+	type = war_declaration_rules
+	available = {
+		NOT = {
+			has_socialist_government_tooltip_trigger = yes
+		}
+	}
+	trigger = {
+		FROM = {
+			has_socialist_government_tooltip_trigger = yes
+		}
+	}
+	can_remove = {
+		always = no
+	}
+	ai_will_do = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+vx_target_war_same_continent_only = {
+	type = war_declaration_rules
+	trigger = {
+		FROM = {
+			capital_scope = {
+				is_on_continent = ROOT
+			}
+		}
+	}
+	can_remove = {
+		always = no
+	}
+	ai_will_do = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+vx_target_war_non_democratic_only = {
+	type = war_declaration_rules
+	available = {
+		has_democratic_government_tooltip_trigger = yes
+	}
+	trigger = {
+		FROM = {
+			NOT = {
+				has_democratic_government_tooltip_trigger = yes
+			}
+		}
+	}
+	can_remove = {
+		always = no
+	}
+	ai_will_do = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+vx_target_war_threat_generated_only = {
+	type = war_declaration_rules
+	available = {
+		OR = {
+			has_democratic_government_tooltip_trigger = yes
+			has_authoritarian_government_tooltip_trigger = yes
+		}
+	}
+	trigger = {
+		FROM = {
+			OR = {
+				has_added_tension_amount > 25
+				AND = {
+					is_major = yes
+					has_added_tension_amount > 10
+				}
+			}	
+		}
+	}
+	can_remove = {
+		always = no
+	}
+	ai_will_do = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}

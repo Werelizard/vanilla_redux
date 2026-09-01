@@ -10,7 +10,7 @@ set_research_slots = 3
 ### COUNTRY POLITICS
 
 create_faction_from_template = {
-	template = faction_template_axis
+	template = faction_historical_axis
 	name = Axis
 }
 

@@ -1,0 +1,120 @@
+
+ ###  ##  ### #  # ### #  #  ##      
+   # #  #  #  ## #  #  ## # #        
+   # #  #  #  # ##  #  # ## # ##     
+#  # #  #  #  #  #  #  #  # #  #     
+ ##   ##  ### #  # ### #  #  ##      
+
+
+# Generic Groups
+rule_group_manpower = {
+	rules = {
+		manpower_contribution_small
+		manpower_contribution_medium
+		manpower_contribution_high
+	}
+}
+
+rule_group_ideology = {
+	rules = {
+		vx_joining_democracies_only
+		vx_joining_fascists_only
+		vx_joining_socialist_only
+		vx_joining_no_socialists
+		vx_joining_no_fascists
+		vx_joining_democratic_authoritarian
+		vx_joining_authoritarian_fascists
+	}
+}
+
+rule_group_geographical = {
+	rules = {
+		vx_joining_same_continent_only
+		vx_joining_europe_only
+		vx_joining_middleeast_only
+		vx_joining_asia_only
+		vx_joining_africa_only
+		vx_joining_america_only
+		vx_joining_southamerica_only
+		vx_joining_oceania_only
+	}
+}
+
+rule_group_war_relation = {
+	rules = {
+		vx_joining_no_war
+		vx_joining_no_offensive_war
+	}
+}
+
+
+###  ###  ## #   # ###  ##  ##  ##  #   
+#  #  #  #   ## ##  #  #   #   #  # #   
+#  #  #   #  # # #  #   #   #  #### #   
+#  #  #    # #   #  #    #   # #  # #   
+###  ### ##  #   # ### ##  ##  #  # ### 
+ 
+# Ideology rules 
+rule_group_dismissal_ideology = {
+	rules = {
+		vx_dimissial_rule_socialist_nations_only
+		vx_dimissial_rule_fascist_nations_only
+		vx_dimissial_rule_non_socialist_nations_only
+		vx_dimissial_rule_non_fascist_nations_only
+		vx_dimissial_rule_non_democratic_nations_only
+		vx_dimissial_rule_democratic_or_socialist_nations_only
+	}
+}
+
+#   #  ##  ###      ###  ###  ##  #    ##  ###   ##  ### ###  ##  #  # 
+#   # #  # #  #     #  # #   #  # #   #  # #  # #  #  #   #  #  # ## # 
+# # # #### ###      #  # ##  #    #   #### ###  ####  #   #  #  # # ## 
+# # # #  # #  #     #  # #   #  # #   #  # #  # #  #  #   #  #  # #  # 
+ # #  #  # #  #     ###  ###  ##  ### #  # #  # #  #  #  ###  ##  #  # 
+
+rule_group_war_declaration_declarer = {
+	rules = {
+		vx_call_to_war_leader_only
+		vx_call_to_war_major_only
+	}
+}
+
+rule_group_war_declaration_target = {
+	#default_rule = war_declaration_generated_tension_10
+	rules = {
+		vx_target_war_fascist_only
+		vx_target_war_socialist_only
+		vx_target_war_non_democratic_only
+		vx_target_war_same_continent_only
+		vx_target_war_threat_generated_only
+	}
+}
+
+ ##   ##  #   # ### ###  #  # #   # ### #  # ###     ### #  #     ### #   # ### #   ### 
+#    #  # #   # #   #  # ## # ## ## #   ## #  #       #  ## #     #    # #   #  #   #   
+# ## #  #  # #  ##  ###  # ## # # # ##  # ##  #       #  # ##     ##    #    #  #   ##  
+#  # #  #  # #  #   #  # #  # #   # #   #  #  #       #  #  #     #    # #   #  #   #   
+ ##   ##    #   ### #  # #  # #   # ### #  #  #      ### #  #     ### #   # ### ### ### 
+
+# GIE RULES
+rule_group_gie_rules = {
+	rules = {
+		government_in_exile_allowed
+	}
+}
+
+# LEADER RULES
+
+rule_group_leader_faction = {
+	rules = {
+		vx_change_leader_rule_never
+		vx_change_leader_rule_current_leader_capitulated
+	}
+}
+
+faction_set_goal_rules = {
+	rules = {
+		vx_goals_leader_only
+		vx_goals_major_only
+	}	
+}

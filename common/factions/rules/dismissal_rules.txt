@@ -1,0 +1,135 @@
+vx_dimissial_rule_socialist_nations_only = {
+	type = dismissal_rules
+	available = {
+		NOT = {
+			has_socialist_government_tooltip_trigger = yes
+		}
+	}
+	dismiss_member_trigger = {
+		has_socialist_government_tooltip_trigger = yes
+	}
+	
+	can_remove = {
+		always = no
+	}
+	ai_will_do = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+vx_dimissial_rule_fascist_nations_only = {
+	type = dismissal_rules
+	available = {
+		NOT = {
+			has_fascist_government_tooltip_trigger = yes
+		}
+	}
+	dismiss_member_trigger = {
+		has_fascist_government_tooltip_trigger = yes
+	}
+	
+	can_remove = {
+		always = no
+	}
+	ai_will_do = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+vx_dimissial_rule_non_socialist_nations_only = {
+	type = dismissal_rules
+	available = {
+		has_socialist_government_tooltip_trigger = yes
+	}
+	dismiss_member_trigger = {
+		NOT = {
+			has_socialist_government_tooltip_trigger = yes
+		}
+	}
+	
+	can_remove = {
+		always = no
+	}
+	ai_will_do = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+vx_dimissial_rule_non_fascist_nations_only = {
+	type = dismissal_rules
+	available = {
+		has_fascist_government_tooltip_trigger = yes
+	}
+	dismiss_member_trigger = {
+		NOT = {
+			has_fascist_government_tooltip_trigger = yes
+		}
+	}
+	
+	can_remove = {
+		always = no
+	}
+	ai_will_do = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+vx_dimissial_rule_non_democratic_nations_only = {
+	type = dismissal_rules
+	available = {
+		has_democratic_government_tooltip_trigger = yes
+	}
+	dismiss_member_trigger = {
+		NOT = {
+			has_democratic_government_tooltip_trigger = yes
+		}
+	}
+	
+	can_remove = {
+		always = no
+	}
+	ai_will_do = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+vx_dimissial_rule_democratic_or_socialist_nations_only = {
+	type = dismissal_rules
+	available = {
+		OR = {
+			has_authoritarian_government_trigger = yes
+			has_fascist_government_trigger = yes
+		}
+	}
+	dismiss_member_trigger = {
+		OR = {
+			has_socialist_government_tooltip_trigger = yes
+			has_democratic_government_tooltip_trigger = yes
+		}
+	}
+	
+	can_remove = {
+		always = no
+	}
+	ai_will_do = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}

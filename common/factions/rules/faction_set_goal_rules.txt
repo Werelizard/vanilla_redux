@@ -1,0 +1,35 @@
+vx_goals_leader_only = {	
+	trigger = {
+		OR = {
+			is_faction_leader = yes
+			is_ai = no
+		}
+	}
+	can_remove = {
+		always = no
+	}
+	ai_will_do = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+vx_goals_major_only = {	
+	trigger = {
+		OR = {
+			is_major = yes
+			is_ai = no
+		}
+	}
+	can_remove = {
+		always = no
+	}
+	ai_will_do = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
