@@ -20,7 +20,7 @@ GER_army_dynmod = {
 GER_navy_dynmod = {
 	enable = { always = yes }
 	icon = GFX_idea_GER_navy
-	navy_max_range_factor = GER_navy_range_var
+	navy_fuel_consumption_factor = GER_navy_range_var
 }
 
 GER_airforce_dynmod = {

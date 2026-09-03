@@ -1,0 +1,157 @@
+###################
+# STARTING LEADER
+###################
+
+characters = {
+	SWI_character_FEDERAL_COUNCIL = {
+		name = SWI_character_FEDERAL_COUNCIL
+		portraits = {
+			civilian={
+				large=GFX_portrait_SWI_federal_council
+			}
+		}
+		country_leader = {
+			ideology = social_democratic_subtype
+			traits = {
+				SWI_collegial_assembly
+			}
+			id = -1
+		}
+		country_leader = {
+			ideology = progressive_subtype
+			traits = {
+				SWI_collegial_assembly
+			}
+			id = -1
+		}
+		country_leader = {
+			ideology = liberal_subtype
+			traits = {
+				SWI_collegial_assembly
+			}
+			id = -1
+		}
+		country_leader = {
+			ideology = conservative_subtype
+			traits = {
+				SWI_collegial_assembly
+			}
+			id = -1
+		}
+		country_leader = {
+			ideology = authoritarian_democrat_subtype
+			traits = {
+				SWI_collegial_assembly
+			}
+			id = -1
+		}
+		corps_commander = {
+			visible = {
+				always = no
+			}
+			skill = 0
+		}
+	}
+}
+
+###################
+# PARTY LEADERS
+###################
+
+characters = {
+	SWI_character_JULES_HUMBERT_DROZ = { # KPS leader
+		name = SWI_character_JULES_HUMBERT_DROZ
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SWI_jules_humbert_droz
+			}
+		}
+		country_leader = {
+			ideology = authoritarian_socialist_subtype
+			traits = {
+				SWI_socialist_pastor
+			}
+			id = -1
+		}
+		country_leader = {
+			ideology = vanguard_socialist_subtype
+			traits = {
+				SWI_socialist_pastor
+			}
+			id = -1
+		}
+		country_leader = {
+			ideology = revolutionary_socialist_subtype
+			traits = {
+				SWI_socialist_pastor
+			}
+			id = -1
+		}
+		corps_commander = {
+			visible = {
+				always = no
+			}
+		}
+	}
+
+	SWI_character_ROLF_HENNE = { # Leader until 1938 of the NF
+		name = SWI_character_ROLF_HENNE
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SWI_rolf_henne
+			}
+		}
+		country_leader = {
+			ideology = fascist_subtype
+			traits = {
+				SWI_fascist_dilletante
+			}
+			id = -1
+		}
+		corps_commander = {
+			visible = {
+				always = no
+			}
+		}
+	}
+
+	SWI_character_ROBERT_TOBLER = { # Leader after 1938 of the NF
+		name = SWI_character_ROBERT_TOBLER
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SWI_robert_tobler
+			}
+		}
+		corps_commander = {
+			visible = {
+				always = no
+			}
+		}
+	}
+
+	SWI_character_JAKOB_LABHARDT = { # Swiss Chief of Staff
+		name = SWI_character_JAKOB_LABHARDT
+		portraits = {
+			civilian={
+				large= GFX_portrait_SWI_jakob_labhardt
+			}
+		}
+		country_leader = {
+			ideology = autocratic_subtype
+			traits = {
+				
+			}
+			id = -1
+		}
+		corps_commander = {
+			visible = {
+				is_country_leader = no
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			logistics_skill = 3
+			planning_skill = 1
+		}
+	}
+}

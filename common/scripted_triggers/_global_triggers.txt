@@ -1221,11 +1221,27 @@ can_remove_disarmed_nation_trigger = {
 	custom_trigger_tooltip = {
 		tooltip = can_remove_disarmed_nation_trigger_tt
 	}
+	if = {
+		limit = {
+			has_idea = SWI_militias
+		}
+		NOT = {
+			has_idea = SWI_militias
+		}
+	}
 }
 
 can_remove_volunteer_only_trigger = {
 	custom_trigger_tooltip = {
 		tooltip = can_remove_volunteer_only_tt
+	}
+	if = {
+		limit = {
+			has_idea = SWI_militias
+		}
+		NOT = {
+			has_idea = SWI_militias
+		}
 	}
 }
 
@@ -1233,11 +1249,27 @@ can_remove_limited_conscription_trigger = {
 	custom_trigger_tooltip = {
 		tooltip = can_remove_limited_conscription_tt
 	}
+	if = {
+		limit = {
+			has_idea = SWI_militias
+		}
+		NOT = {
+			has_idea = SWI_militias
+		}
+	}
 }
 
 can_remove_extensive_conscription_trigger = {
 	custom_trigger_tooltip = {
 		tooltip = can_remove_extensive_conscription_tt
+	}
+	if = {
+		limit = {
+			has_idea = SWI_militias
+		}
+		NOT = {
+			has_idea = SWI_militias
+		}
 	}
 }
 
@@ -1245,17 +1277,41 @@ can_remove_service_by_requirement_trigger = {
 	custom_trigger_tooltip = {
 		tooltip = can_remove_service_by_requirement_tt
 	}
+	if = {
+		limit = {
+			has_idea = SWI_militias
+		}
+		NOT = {
+			has_idea = SWI_militias
+		}
+	}
 }
 
 can_remove_all_adults_serve_trigger = {
 	custom_trigger_tooltip = {
 		tooltip = can_remove_all_adults_serve_tt
 	}
+	if = {
+		limit = {
+			has_idea = SWI_militias
+		}
+		NOT = {
+			has_idea = SWI_militias
+		}
+	}
 }
 
 can_remove_scraping_the_barrel_trigger = {
 	custom_trigger_tooltip = {
 		tooltip = can_scraping_the_barrel_tt
+	}
+	if = {
+		limit = {
+			has_idea = SWI_militias
+		}
+		NOT = {
+			has_idea = SWI_militias
+		}
 	}
 }
 
@@ -1281,31 +1337,31 @@ can_have_strikes_crisis_trigger = {
 	}
 	OR = {
 		NOT = {
-			has_stability = 0.1
+			has_stability > 0.1
 		}
 		AND = {
 			NOT = {
-				has_stability = 0.25
+				has_stability > 0.25
 			}
-			surrender_progress = 0.2
+			surrender_progress > 0.2
 		}
 		AND = {
 			NOT = {
-				has_stability = 0.35
+				has_stability > 0.35
 			}
-			surrender_progress = 0.2
+			surrender_progress > 0.2
 		}
 		AND = {
 			NOT = {
-				has_stability = 0.5
+				has_stability > 0.5
 			}
-			surrender_progress = 0.3
+			surrender_progress > 0.3
 		}
 		AND = {
 			NOT = {
-				has_stability = 0.6
+				has_stability > 0.6
 			}
-			surrender_progress = 0.5
+			surrender_progress > 0.5
 		}
 	}
 	# Special "no strikes flag"
@@ -1334,31 +1390,31 @@ can_have_deserters_crisis_trigger = {
 	}
 	OR = {
 		NOT = {
-			has_war_support = 0.1
+			has_war_support > 0.1
 		}
 		AND = {
 			NOT = {
-				has_war_support = 0.25
+				has_war_support > 0.25
 			}
-			surrender_progress = 0.2
+			surrender_progress > 0.2
 		}
 		AND = {
 			NOT = {
-				has_war_support = 0.35
+				has_war_support > 0.35
 			}
-			surrender_progress = 0.2
+			surrender_progress > 0.2
 		}
 		AND = {
 			NOT = {
-				has_war_support = 0.5
+				has_war_support > 0.5
 			}
-			surrender_progress = 0.3
+			surrender_progress > 0.3
 		}
 		AND = {
 			NOT = {
-				has_war_support = 0.6
+				has_war_support > 0.6
 			}
-			surrender_progress = 0.5
+			surrender_progress > 0.5
 		}
 	}
 	# Special "no strikes flag"
@@ -1387,31 +1443,31 @@ can_have_mutinies_crisis_trigger = {
 	}
 	OR = {
 		NOT = {
-			has_war_support = 0.1
+			has_war_support > 0.1
 		}
 		AND = {
 			NOT = {
-				has_war_support = 0.25
+				has_war_support > 0.25
 			}
-			surrender_progress = 0.2
+			surrender_progress > 0.2
 		}
 		AND = {
 			NOT = {
-				has_war_support = 0.35
+				has_war_support > 0.35
 			}
-			surrender_progress = 0.2
+			surrender_progress > 0.2
 		}
 		AND = {
 			NOT = {
-				has_war_support = 0.5
+				has_war_support > 0.5
 			}
-			surrender_progress = 0.3
+			surrender_progress > 0.3
 		}
 		AND = {
 			NOT = {
-				has_war_support = 0.6
+				has_war_support > 0.6
 			}
-			surrender_progress = 0.5
+			surrender_progress > 0.5
 		}
 	}
 	# Special "no strikes flag"

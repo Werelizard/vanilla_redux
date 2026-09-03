@@ -1,7 +1,5 @@
 ﻿capital = 278
 
-oob = "ARG_1936"
-
 ###### DEFAULT ENTRY ######
 # SHOULD BE UPDATED EVENUTALLY
 

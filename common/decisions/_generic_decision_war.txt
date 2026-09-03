@@ -441,7 +441,8 @@ generic_decision_war_measures = {
 		days_re_enable = 180
 		days_remove = 90
 		modifier = {
-			
+			dig_in_speed_factor = 0.25
+			army_core_defence_factor = 0.25
 		}
 		#####
 		cancel_trigger = {

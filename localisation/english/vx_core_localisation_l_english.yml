@@ -75,10 +75,53 @@
 
  league_of_nations_dynmod:0 "League of Nations Member"
  league_of_nations_dynmod_desc:0 "This country is a member of the League of Nations, an intergovernmental organization established 'to promote international cooperation and to achieve international peace and security'."
- vx_lon_no_wargoal_tt:0 "£trigger_no Cannot manually justify wargoals"
- vx_lon_no_war_on_non_tension_tt:0 "£trigger_no Cannot declare unrestricted wars"
+ vx_lon_no_wargoal_tt:0 "£trigger_no Can not manually justify wargoals"
+ vx_lon_no_war_on_non_tension_tt:0 "£trigger_no Can not declare unrestricted wars"
 
  ### DYNAMIC MODIFIERS - STATE BASED ###
+
+ ### FACTION RULES ###
+ vx_joining_democracies_only:0 "Democratic countries only"
+ vx_joining_fascists_only:0 "Fascist countries only"
+ vx_joining_socialist_only:0 "Socialist countries only"
+ vx_joining_no_socialists:0 "No socialist countries"
+ vx_joining_no_fascists:0 "No fascist countries"
+ vx_joining_democratic_authoritarian:0 "Only democratic or authoritarian countries"
+ vx_joining_authoritarian_fascists:0 "Only authoritarian or fascist countries"
+
+ vx_joining_same_continent_only:0 "Same continent only"
+ vx_joining_europe_only:0 "European countries only"
+ vx_joining_middleeast_only:0 "Middle-Eastern countries only"
+ vx_joining_asia_only:0 "Asian countries only"
+ vx_joining_africa_only:0 "African countries only"
+ vx_joining_america_only:0 "American countries only"
+ vx_joining_southamerica_only:0 "South American countries only"
+ vx_joining_oceania_only:0 "Oceanian countries only"
+
+ vx_joining_no_war:0 "Country must be at peace"
+ vx_joining_no_offensive_war:0 "Country must not be in an offensive war"
+
+ vx_dimissial_rule_socialist_nations_only:0 "Socialist countries"
+ vx_dimissial_rule_fascist_nations_only:0 "Fascist countries"
+ vx_dimissial_rule_non_socialist_nations_only:0 "Non-socialist countries"
+ vx_dimissial_rule_non_fascist_nations_only:0 "Non-fascist countries"
+ vx_dimissial_rule_non_democratic_nations_only:0 "Non-democratic countries"
+ vx_dimissial_rule_democratic_or_socialist_nations_only:0 "Democratic or socialist countries"
+
+ vx_call_to_war_leader_only:0 "Faction leader only"
+ vx_call_to_war_major_only:0 "Major countries only"
+
+ vx_target_war_fascist_only:0 "Fascist countries"
+ vx_target_war_socialist_only:0 "Scialist countries"
+ vx_target_war_non_democratic_only:0 "Non-democratic countries"
+ vx_target_war_same_continent_only:0 "Same continent"
+ vx_target_war_threat_generated_only:0 "Countries that generated world tension"
+
+ vx_change_leader_rule_never:0 "Never"
+ vx_change_leader_rule_current_leader_capitulated:0 "Current leader has capitulated"
+
+ vx_goals_leader_only:0 "Faction leader only"
+ vx_goals_major_only:0 "Major countries only"
 
  ### IDEAS ###
 
@@ -292,6 +335,10 @@
  generic_resource_concern_trait:0 "Resource Extraction Concern"
  generic_construction_concern_trait:0 "Construction Concern"
  generic_oil_concern_trait:0 "Oil Extraction Concern"
+
+ # TOOLTIPS 
+ has_war_with_non_exiled_country_tt_NOT:0 "NOT: $has_war_with_non_exiled_country_tt$"
+ can_send_volunteers_NOT:0 "Can not send volunteers"
 
  # UI stuff 
  bop_no_bop:0 "We currently have no active §Ybalance of power§!."

@@ -63,7 +63,7 @@ scripted_gui = {
 		triggers = {
 			coalition_conservative_visible = {
 				NOT = {
-					has_government = conservatism
+					has_government = conservative
 				}
 				has_country_flag = coalition_conservative_flag
 			}

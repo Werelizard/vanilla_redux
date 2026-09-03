@@ -218,7 +218,7 @@ manifest_new_order_in_europe = {
 		completed_amount_collection = collection:states_in_europe_controlled_by_fascists
 
 		scale = {
-			fascism_drift = 0.05
+			fascist_drift = 0.05
 			weekly_casualties_war_support = 0.01
 		}
 

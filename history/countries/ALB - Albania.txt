@@ -1,7 +1,5 @@
 ﻿capital = 44
 
-OOB = "ALB_1936"
-
 ###### DEFAULT ENTRY ######
 # SHOULD BE UPDATED EVENUTALLY
 

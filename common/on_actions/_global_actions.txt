@@ -22,16 +22,16 @@ on_actions = {
 			}
 			# Set up the league of nations mechanic
 			set_variable = {
-				vx_lon_trade_opinion_var = 0.25
+				vx_lon_trade_opinion_var = 0.5
 			}
 			set_variable = {
-				vx_lon_war_volunteer_tension_var = 1
+				vx_lon_war_volunteer_tension_var = 0.25
 			}
 			set_variable = {
-				vx_lon_civil_war_tension_var = 1
+				vx_lon_civil_war_tension_var = 0.25
 			}
 			set_variable = {
-				vx_lon_embargo_factor_var = -0.2
+				vx_lon_embargo_factor_var = -0.33
 			}
 			set_variable = {
 				vx_lon_abandon_cost_var = 50
@@ -108,7 +108,19 @@ on_actions = {
 
 	}
 	on_declare_war = {
-
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						original_tag = SWI
+						has_idea = SWI_absolute_neutrality
+					}
+				}
+				FROM = {
+					# TO DO: add event to remove Swiss Neutrality and replace it with an idea that allows to join factions
+				}
+			}
+		}
 	}
 	on_justifying_wargoal_pulse = {
 

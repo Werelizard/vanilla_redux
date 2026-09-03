@@ -1,19 +1,20 @@
 spriteTypes = {
+	### Germany
 	spriteType = {
 		name = "GFX_portrait_GER_erich_koch_weser"
-		textureFile = "gfx/leaders/GER/vx_erich_koch_weser.tga"
+		textureFile = "gfx/leaders/GER/GER_erich_koch_weser.tga"
 	}
 	spriteType = {
 		name = "GFX_portrait_GER_eduard_dingeldey"
-		textureFile = "gfx/leaders/GER/vx_eduard_dingeldey.tga"
+		textureFile = "gfx/leaders/GER/GER_eduard_dingeldey.tga"
 	}
 	spriteType = {
 		name = "GFX_portrait_GER_heinrich_brunning"
-		textureFile = "gfx/leaders/GER/vx_heinrich_brunning.tga"
+		textureFile = "gfx/leaders/GER/GER_heinrich_brunning.tga"
 	}
 	spriteType = {
 		name = "GFX_portrait_GER_alfred_rosenberg"
-		textureFile = "gfx/leaders/GER/vx_alfred_rosenberg.tga"
+		textureFile = "gfx/leaders/GER/GER_alfred_rosenberg.tga"
 	}
 	spriteType = {
 		name = "GFX_portrait_GER_alfred_rosenberg_small"
@@ -21,7 +22,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_portrait_GER_wilhelm_frick"
-		textureFile = "gfx/leaders/GER/vx_wilhelm_frick.tga"
+		textureFile = "gfx/leaders/GER/GER_wilhelm_frick.tga"
 	}
 	spriteType = {
 		name = "GFX_portrait_GER_wilhelm_frick_small"
@@ -29,10 +30,19 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_portrait_GER_julius_streicher"
-		textureFile = "gfx/leaders/GER/vx_ger_julius_streicher.tga"
+		textureFile = "gfx/leaders/GER/GER_julius_streicher.tga"
 	}
 	spriteType = {
 		name = "GFX_portrait_GER_julius_streicher_small"
 		textureFile = "gfx/interface/ideas/vx_ger_julius_streicher.dds"
+	}
+	### Switzerland
+	spriteType = {
+		name = "GFX_portrait_SWI_jakob_labhardt"
+		textureFile = "gfx/leaders/SWI/SWI_jakob_labhardt.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_SWI_jules_humbert_droz"
+		textureFile = "gfx/leaders/SWI/SWI_jules_humbert_droz.tga"
 	}
 } 

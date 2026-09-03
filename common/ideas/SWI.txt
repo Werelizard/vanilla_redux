@@ -1,0 +1,28 @@
+ideas = {
+	country = {
+		### Absolute Neutrality (since 1933)
+		SWI_absolute_neutrality = {
+			modifier = {
+				embargo_threshold_factor = 2
+				guarantee_tension = 2
+				custom_modifier_tooltip = SWI_neutrality_no_volunteers_tt
+			}
+			rule = {
+				can_not_declare_war = yes
+				can_send_volunteers = no # For some reason this doesn't show up
+				can_join_factions = no
+			}
+		}
+		### Swiss Militias
+		SWI_militias = {
+			modifier = {
+				conscription = 0.025
+				modifier_army_sub_unit_militia_defence_factor = 0.1
+				modifier_army_sub_unit_militia_attack_factor = 0.1
+				army_non_core_attack_factor = -0.1
+				army_non_core_defence_factor = -0.1
+				custom_modifier_tooltip = SWI_militias_no_normal_conscription_tt
+			}
+		}
+	}
+}

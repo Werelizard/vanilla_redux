@@ -1,180 +1,180 @@
-# Fallback templates
+# # Fallback templates
 
-faction_template_generic_defensive = {
-	name = fallback_generic_defensive_faction
-	manifest = fallback_strength_in_unity
-	can_leader_join_other_factions = yes
-	# color = { 179 183 235 } # this should default to faction leader's color
-	icon = GFX_faction_logo_generic
-	visible = {
-		always = no # Fallback template, should not be selectable 
-	}
-	available = {
-		has_democratic_government_tooltip_trigger = yes
-	}
+# faction_template_generic_defensive = {
+# 	name = fallback_generic_defensive_faction
+# 	manifest = fallback_strength_in_unity
+# 	can_leader_join_other_factions = yes
+# 	# color = { 179 183 235 } # this should default to faction leader's color
+# 	icon = GFX_faction_logo_generic
+# 	visible = {
+# 		always = no # Fallback template, should not be selectable 
+# 	}
+# 	available = {
+# 		has_democratic_government_tooltip_trigger = yes
+# 	}
 
-	goals = {
+# 	goals = {
 		
-	}
+# 	}
 
-	default_rules = {
+# 	default_rules = {
 		
-	}	
-}
+# 	}	
+# }
 
-faction_template_generic_dominance = {
-	name = fallback_generic_dominance_faction
-	manifest = fallback_regional_expansion
-	can_leader_join_other_factions = yes
-	icon = GFX_faction_logo_generic_15
-	visible = {
-		always = no 
-	}
+# faction_template_generic_dominance = {
+# 	name = fallback_generic_dominance_faction
+# 	manifest = fallback_regional_expansion
+# 	can_leader_join_other_factions = yes
+# 	icon = GFX_faction_logo_generic_15
+# 	visible = {
+# 		always = no 
+# 	}
 	
-	goals = {
+# 	goals = {
 		
-	}
+# 	}
 
-	default_rules = {
+# 	default_rules = {
 		
-	}
-}
+# 	}
+# }
 
-# Generic factions
-faction_generic_world_revolution = {
-	name = faction_generic_world_revolution
-	manifest = generic_manifest_world_revolution
-	icon = GFX_faction_logo_generic_15
-	visible = {
-		has_socialist_government_trigger = yes
-	}
+# # Generic factions
+# faction_generic_world_revolution = {
+# 	name = faction_generic_world_revolution
+# 	manifest = generic_manifest_world_revolution
+# 	icon = GFX_faction_logo_generic_15
+# 	visible = {
+# 		has_socialist_government_trigger = yes
+# 	}
 
-	available = {
-		any_country = {
-			NOT = {
-				has_socialist_government_tooltip_trigger = yes
-			}
-		}
-	}
+# 	available = {
+# 		any_country = {
+# 			NOT = {
+# 				has_socialist_government_tooltip_trigger = yes
+# 			}
+# 		}
+# 	}
 	
-	goals = {
+# 	goals = {
 		
-	}
+# 	}
 
-	default_rules = {
+# 	default_rules = {
 		
-	}
-}
+# 	}
+# }
 
-faction_generic_new_world_order = {
-	name = generic_manifest_new_order
-	manifest = generic_manifest_new_order
-	icon = GFX_faction_logo_generic_15
-	visible = {
-		has_fascist_government_trigger = yes
-	}
+# faction_generic_new_world_order = {
+# 	name = generic_manifest_new_order
+# 	manifest = generic_manifest_new_order
+# 	icon = GFX_faction_logo_generic_15
+# 	visible = {
+# 		has_fascist_government_trigger = yes
+# 	}
 
-	available = {
-		any_country = {
-			NOT = {
-				has_fascist_government_tooltip_trigger = yes
-			}
-		}
-	}
+# 	available = {
+# 		any_country = {
+# 			NOT = {
+# 				has_fascist_government_tooltip_trigger = yes
+# 			}
+# 		}
+# 	}
 	
-	goals = {
+# 	goals = {
 		
-	}
+# 	}
 
-	default_rules = {
+# 	default_rules = {
 		
-	}
-}
+# 	}
+# }
 
-faction_generic_defeat_socialism = {
-	name = faction_generic_defeat_socialism
-	manifest = generic_manifest_defeat_socialism
-	icon = GFX_faction_logo_generic_15
-	visible = {
-		NOT = {
-			has_socialist_government_trigger = yes
-		}
-	}
+# faction_generic_defeat_socialism = {
+# 	name = faction_generic_defeat_socialism
+# 	manifest = generic_manifest_defeat_socialism
+# 	icon = GFX_faction_logo_generic_15
+# 	visible = {
+# 		NOT = {
+# 			has_socialist_government_trigger = yes
+# 		}
+# 	}
 
-	available = {
-		any_country = {
-			has_socialist_government_tooltip_trigger = yes
-		}
-	}
+# 	available = {
+# 		any_country = {
+# 			has_socialist_government_tooltip_trigger = yes
+# 		}
+# 	}
 	
-	goals = {
+# 	goals = {
 		
-	}
+# 	}
 
-	default_rules = {
+# 	default_rules = {
 		
-	}
-}
+# 	}
+# }
 
-faction_generic_defeat_fascism = {
-	name = faction_generic_defeat_fascism
-	manifest = generic_manifest_defeat_fascism
-	icon = GFX_faction_logo_generic_15
-	visible = {
-		NOT = {
-			has_fascist_government_trigger = yes
-		}
-	}
+# faction_generic_defeat_fascism = {
+# 	name = faction_generic_defeat_fascism
+# 	manifest = generic_manifest_defeat_fascism
+# 	icon = GFX_faction_logo_generic_15
+# 	visible = {
+# 		NOT = {
+# 			has_fascist_government_trigger = yes
+# 		}
+# 	}
 
-	available = {
-		any_country = {
-			has_fascist_government_tooltip_trigger = yes
-		}
-	}
+# 	available = {
+# 		any_country = {
+# 			has_fascist_government_tooltip_trigger = yes
+# 		}
+# 	}
 	
-	goals = {
+# 	goals = {
 		
-	}
+# 	}
 
-	default_rules = {
+# 	default_rules = {
 		
-	}
-}
+# 	}
+# }
 
-faction_generic_regional_defense = {
-	name = faction_generic_regional_defense
-	manifest = generic_manifest_regional_defense
-	icon = GFX_faction_logo_generic_15
-	visible = {
-		NOT = {
-			has_fascist_government_trigger = yes
-		}
-	}
+# faction_generic_regional_defense = {
+# 	name = faction_generic_regional_defense
+# 	manifest = generic_manifest_regional_defense
+# 	icon = GFX_faction_logo_generic_15
+# 	visible = {
+# 		NOT = {
+# 			has_fascist_government_trigger = yes
+# 		}
+# 	}
 	
-	goals = {
+# 	goals = {
 		
-	}
+# 	}
 
-	default_rules = {
+# 	default_rules = {
 		
-	}
-}
+# 	}
+# }
 
-faction_generic_global_hegemony = {
-	name = faction_generic_global_hegemony
-	manifest = generic_manifest_global_hegemony
-	icon = GFX_faction_logo_generic_15
-	visible = {
-		NOT = {
-			has_democratic_government_trigger = yes
-		}
-	}
+# faction_generic_global_hegemony = {
+# 	name = faction_generic_global_hegemony
+# 	manifest = generic_manifest_global_hegemony
+# 	icon = GFX_faction_logo_generic_15
+# 	visible = {
+# 		NOT = {
+# 			has_democratic_government_trigger = yes
+# 		}
+# 	}
 	
-	goals = {
+# 	goals = {
 		
-	}
+# 	}
 
-	default_rules = {
+# 	default_rules = {
 		
-	}
-}
+# 	}
+# }

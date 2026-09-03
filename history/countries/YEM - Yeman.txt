@@ -1,7 +1,4 @@
 ﻿capital = 293
-
-oob = "YEM_1936"
-
 ###### DEFAULT ENTRY ######
 # SHOULD BE UPDATED EVENUTALLY
 

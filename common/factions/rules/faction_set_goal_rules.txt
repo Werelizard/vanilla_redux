@@ -1,4 +1,5 @@
 vx_goals_leader_only = {	
+	type = member_rules
 	trigger = {
 		OR = {
 			is_faction_leader = yes
@@ -17,6 +18,7 @@ vx_goals_leader_only = {
 }
 
 vx_goals_major_only = {	
+	type = member_rules
 	trigger = {
 		OR = {
 			is_major = yes

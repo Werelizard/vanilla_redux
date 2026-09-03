@@ -63,7 +63,9 @@ generic_decision_pol = {
 		}
 		####
 		cancel_trigger = {
-			has_stability = 1
+			NOT = {
+				has_stability < 1
+			}
 		}
 		cancel_effect = {
 			

@@ -53,4 +53,13 @@ spriteTypes = {
 		name = "GFX_idea_ger_german_fascism_start"
 		texturefile = "gfx/interface/ideas/ger_revanchism.dds"
 	}
+	# Switzerland
+	spriteType = {
+		name = "GFX_idea_SWI_militias"
+		textureFile = "gfx/interface/ideas/idea_militia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SWI_absolute_neutrality"
+		texturefile = "gfx/interface/ideas/idea_swiss_neutrality.dds"
+	}
 }

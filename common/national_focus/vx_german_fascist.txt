@@ -825,9 +825,6 @@ focus_tree = {
 		completion_reward = {
 			
 		}
-		mutually_exclusive = {
-			focus = GER_inner_circle_goebbels_capstone
-		}
 	}
 
 	focus = {
@@ -891,7 +888,7 @@ focus_tree = {
 			
 		}
 		mutually_exclusive = {
-			focus = GER_inner_circle_hess
+			
 		}
 	}
 
@@ -916,7 +913,7 @@ focus_tree = {
 			
 		}
 		mutually_exclusive = {
-			focus = GER_inner_circle_hess
+			
 		}
 	}
 
@@ -961,7 +958,7 @@ focus_tree = {
 			
 		}
 		mutually_exclusive = {
-			focus = GER_inner_circle_bormann
+			
 		}
 	}
 

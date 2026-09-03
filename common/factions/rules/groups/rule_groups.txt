@@ -6,15 +6,6 @@
  ##   ##  ### #  # ### #  #  ##      
 
 
-# Generic Groups
-rule_group_manpower = {
-	rules = {
-		manpower_contribution_small
-		manpower_contribution_medium
-		manpower_contribution_high
-	}
-}
-
 rule_group_ideology = {
 	rules = {
 		vx_joining_democracies_only
@@ -117,4 +108,11 @@ faction_set_goal_rules = {
 		vx_goals_leader_only
 		vx_goals_major_only
 	}	
+}
+
+
+INFLUENCE_SORT = {
+	rules = {
+		change_leader_rule_influence
+	}
 }
