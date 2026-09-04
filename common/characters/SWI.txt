@@ -3,17 +3,18 @@
 ###################
 
 characters = {
-	SWI_character_FEDERAL_COUNCIL = {
-		name = SWI_character_FEDERAL_COUNCIL
+	SWI_character_FEDERAL_ASSEMBLY = {
+		name = SWI_character_FEDERAL_ASSEMBLY
 		portraits = {
 			civilian={
-				large=GFX_portrait_SWI_federal_council
+				large=GFX_portrait_SWI_federal_assembly
 			}
 		}
 		country_leader = {
 			ideology = social_democratic_subtype
 			traits = {
 				SWI_collegial_assembly
+				SWI_parliementary_status_quo
 			}
 			id = -1
 		}
@@ -21,6 +22,7 @@ characters = {
 			ideology = progressive_subtype
 			traits = {
 				SWI_collegial_assembly
+				SWI_parliementary_status_quo
 			}
 			id = -1
 		}
@@ -28,6 +30,7 @@ characters = {
 			ideology = liberal_subtype
 			traits = {
 				SWI_collegial_assembly
+				SWI_parliementary_status_quo
 			}
 			id = -1
 		}
@@ -35,8 +38,30 @@ characters = {
 			ideology = conservative_subtype
 			traits = {
 				SWI_collegial_assembly
+				SWI_parliementary_status_quo
 			}
 			id = -1
+		}
+		corps_commander = {
+			visible = {
+				always = no
+			}
+			skill = 0
+		}
+	}
+}
+
+###################
+# PARTY LEADERS
+###################
+
+characters = {
+	SWI_character_FEDERAL_COUNCIL = {
+		name = SWI_character_FEDERAL_COUNCIL
+		portraits = {
+			civilian={
+				large=GFX_portrait_SWI_federal_council
+			}
 		}
 		country_leader = {
 			ideology = authoritarian_democrat_subtype
@@ -53,10 +78,6 @@ characters = {
 		}
 	}
 }
-
-###################
-# PARTY LEADERS
-###################
 
 characters = {
 	SWI_character_JULES_HUMBERT_DROZ = { # KPS leader

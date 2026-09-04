@@ -12,10 +12,7 @@ league_of_nations_dynmod = {
 	icon = GFX_idea_league_of_nations_member
 	enable = { always = yes }
 	
-	embargo_threshold_factor = global.vx_lon_embargo_factor_var
 	trade_opinion_factor = global.vx_lon_trade_opinion_var
-	# civil_war_involvement_tension = global.vx_lon_civil_war_tension_var
-	# send_volunteers_tension = global.vx_lon_war_volunteer_tension_var	
 	custom_modifier_tooltip = vx_lon_no_wargoal_tt
 	custom_modifier_tooltip = vx_lon_no_war_on_non_tension_tt
 }

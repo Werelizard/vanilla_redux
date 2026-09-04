@@ -25,15 +25,6 @@ on_actions = {
 				vx_lon_trade_opinion_var = 0.5
 			}
 			set_variable = {
-				vx_lon_war_volunteer_tension_var = 0.25
-			}
-			set_variable = {
-				vx_lon_civil_war_tension_var = 0.25
-			}
-			set_variable = {
-				vx_lon_embargo_factor_var = -0.33
-			}
-			set_variable = {
 				vx_lon_abandon_cost_var = 50
 			}
 			every_country = {

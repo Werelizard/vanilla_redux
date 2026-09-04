@@ -14,21 +14,17 @@
  SWI_liberal_party_long:0 "Freisinnig-Demokratische Partei / Parti radical-démocratique - Liberale Partei der Schweiz/Parti libéral suisse"
  SWI_conservative_party:0 "CVP / PDC"
  SWI_conservative_party_long:0 "Christlichdemokratische Volkspartei der Schweiz / Parti démocrate-chrétien"
- SWI_authoritarian_democrat_party:0 "BGB"
- SWI_authoritarian_democrat_party_long:0 "Bauern-, Gewerbe- und Bürgerpartei / Parti des paysans, artisans et indépendants"
+ SWI_authoritarian_democrat_party:0 "Federal Council"
+ SWI_authoritarian_democrat_party_long:0 "Federal Council"
  SWI_autocratic_party:0 "Schweizer Armee / Armée Suisse"
  SWI_autocratic_party_long:0 "Schweizer Armee / Armée Suisse"
  SWI_fascist_party:0 "Nationale Front / Front National"
  SWI_fascist_party_long:0 "Nationale Front / Front National"
 
  ###################
- # SWISS FOCI
- ###################
-
- ###################
  # IDEAS
  ###################
- SWI_absolute_neutrality:0 "Absolute Neutrality"
+ SWI_absolute_neutrality:0 "Swiss Neutrality"
  SWI_absolute_neutrality_desc: ""
  SWI_neutrality_no_volunteers_tt:0 "£trigger_no Can not send volunteers"
 
@@ -39,6 +35,7 @@
  ###################
  # SWITZERLAND - CHARACTERS
  ###################
+ SWI_character_FEDERAL_ASSEMBLY:0 "Federal Assembly"
  SWI_character_FEDERAL_COUNCIL:0 "Federal Council"
  SWI_character_JULES_HUMBERT_DROZ:0 "Jules Humbert-Droz"
  SWI_character_JAKOB_LABHARDT:0 "Jakob Labhardt"
@@ -48,9 +45,11 @@
  ###################
  # SWITZERLAND - TRAITS
  ###################
- SWI_collegial_assembly:0 "Collegial Body"
+ SWI_collegial_assembly:0 "Parliamentary Assembly"
+ SWI_parliementary_status_quo:0 "Guarantor of the Status Quo"
  SWI_fascist_dilletante:0 "Fascist Dilletante"
  SWI_socialist_pastor:0 "Socialist Pastor"
+ SWI_emergency_council:0 "Emergency Council"
 
  ###################
  # SWITZERLAND EVENTS
@@ -59,3 +58,11 @@
  ###################
  # SWITZERLAND FOCI
  ###################
+ 
+ SWI_SWISS_GUIDING_PRINCIPLES:0 "Swiss Guiding Principles"
+ SWI_SWISS_GUIDING_PRINCIPLES_desc:0 ""
+
+ ###################
+ # SWITZERLAND FLAGS
+ ###################
+ SWI_democracy_collapsed_flag:0 "The Swiss democratic system has §Rcollapsed§!"

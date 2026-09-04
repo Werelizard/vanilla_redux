@@ -22,16 +22,16 @@ set_popularities = {
 	social_democratic = 28
 	progressive = 4
 	liberal = 29
-	conservative = 20
-	authoritarian_democrat = 13
+	conservative = 25
+	authoritarian_democrat = 8
 	autocratic = 0
 	fascist = 2
 }
 
 conservative_coalition_effect = yes
-auth_dem_coalition_effect = yes
 
 ### CHARACTERS
+recruit_character = SWI_character_FEDERAL_ASSEMBLY
 recruit_character = SWI_character_FEDERAL_COUNCIL
 recruit_character = SWI_character_JULES_HUMBERT_DROZ
 recruit_character = SWI_character_ROLF_HENNE

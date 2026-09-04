@@ -1,0 +1,89 @@
+search_filter_prios = {
+	
+}
+
+focus_tree = {
+	id = vx_swiss_tree
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 50
+			tag = SWI
+		}
+	}
+
+	initial_show_position = {
+		focus = SWI_SWISS_GUIDING_PRINCIPLES
+	}
+
+	continuous_focus_position = {
+		x = 0
+		y = 2000
+	}
+	
+	default = no	
+	reset_on_civilwar = no
+
+
+	###################
+	# DEMOCRATIC POLITICAL BRANCH
+	###################
+
+	focus = {
+		id = SWI_SWISS_GUIDING_PRINCIPLES
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 1
+		y = 1
+		completion_reward = { 
+
+		}
+		allow_branch = {
+			NOT = {
+				has_country_flag = SWI_democracy_collapsed_flag
+			}
+		}
+
+		allow_branch = {
+			NOT = {
+				has_country_flag = SWI_democracy_collapsed_flag
+			}
+		}
+	}
+
+	###################
+	# DEMOCRATIC POLITICAL BRANCH - Social Democratic sub-branch
+	###################
+	focus = {
+		id = SWI_SWISS_GUIDING_PRINCIPLES
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SWI_SWISS_GUIDING_PRINCIPLES
+		prerequisite = {
+			focus = SWI_SWISS_GUIDING_PRINCIPLES
+		}
+		available = {
+			
+		}
+		completion_reward = { 
+
+		}
+		allow_branch = {
+			NOT = {
+				has_country_flag = SWI_democracy_collapsed_flag
+			}
+		}
+	}
+
+	###################
+	# DEMOCRATIC POLITICAL BRANCH - Liberal sub-branch
+	###################
+
+	###################
+	# DEMOCRATIC POLITICAL BRANCH - Conservative sub-branch
+	###################
+}

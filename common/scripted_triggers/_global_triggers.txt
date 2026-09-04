@@ -11,6 +11,7 @@ has_VX_content_trigger = {
 		original_tag = PRC
 		original_tag = CHI
 		original_tag = JAP
+		original_tag = SWI
 	}
 }
 
