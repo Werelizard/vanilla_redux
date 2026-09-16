@@ -70,13 +70,6 @@ characters = {
 			}
 			id = -1
 		}
-		country_leader = {
-			ideology = autocratic_subtype
-			traits = {
-				SWI_collegial_assembly
-			}
-			id = -1
-		}
 		corps_commander = {
 			visible = {
 				always = no
@@ -164,13 +157,13 @@ characters = {
 				large= GFX_portrait_SWI_jakob_labhardt
 			}
 		}
-		# country_leader = {
-		# 	ideology = autocratic_subtype
-		# 	traits = {
+		country_leader = {
+			ideology = autocratic_subtype
+			traits = {
 				
-		# 	}
-		# 	id = -1
-		# }
+			}
+			id = -1
+		}
 		corps_commander = {
 			visible = {
 				is_country_leader = no

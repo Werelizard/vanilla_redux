@@ -1970,25 +1970,6 @@ guiTypes = {
 	}
 	
 	containerWindowType = {
-		name = "faction_mechanic_open_button_container"
-		position = { x = 338 y = 45 }
-		size = { width = 53 height = 53 }
-		orientation = upper_left
-
-		clipping = no
-
-		buttonType = {
-			name = "faction_mechanic_open_button"
-			position = { x = 0 y = 0 }
-			spriteType = "GFX_goal_GRE_eek"
-			pdx_tooltip = "relation_button_tooltip"
-			pdx_tooltip_delayed = "relation_button_tooltip_delayed"
-			scale = 0.65
-			clicksound = click_default
-		}
-	}
-	
-	containerWindowType = {
 		name = "power_balance_button_disabled_window"
 		position = { x = 23 y = 422 }
 		clipping = no

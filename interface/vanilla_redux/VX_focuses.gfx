@@ -1,34 +1,40 @@
 spriteTypes = {
+	# Germany
 	SpriteType = {
 		name = "GFX_goal_GER_Militarise_Rhineland"
-		texturefile = "gfx/interface/goals/GER_Militarise_Rhineland.dds"			
+		texturefile = "gfx/interface/goals/GER/GER_Militarise_Rhineland.dds"			
 	}	
 	SpriteType = {
 		name = "GFX_goal_GER_Enforce_Party_State"
-		texturefile = "gfx/interface/goals/GER_Enforce_Party_State.dds"			
+		texturefile = "gfx/interface/goals/GER/GER_Enforce_Party_State.dds"			
 	}	
 	SpriteType = {
 		name = "GFX_goal_GER_Reorganise_Wehrmacht"
-		texturefile = "gfx/interface/goals/GER_Reorganise_Wehrmacht.dds"			
+		texturefile = "gfx/interface/goals/GER/GER_Reorganise_Wehrmacht.dds"			
 	}	
 	SpriteType = {
 		name = "GFX_goal_GER_Fuhrerprinzip"
-		texturefile = "gfx/interface/goals/GER_Fuhrerprinzip.dds"			
+		texturefile = "gfx/interface/goals/GER/GER_Fuhrerprinzip.dds"			
 	}	
 	SpriteType = {
 		name = "GFX_goal_GER_Expand_SS_Recruitment"
-		texturefile = "gfx/interface/goals/GER_Expand_SS_Recruitment.dds"			
+		texturefile = "gfx/interface/goals/GER/GER_Expand_SS_Recruitment.dds"			
 	}
 	SpriteType = {
 		name = "GFX_goal_GER_demonstrate_german_might"
-		texturefile = "gfx/interface/goals/GER_demonstrate_german_might.dds"			
+		texturefile = "gfx/interface/goals/GER/GER_demonstrate_german_might.dds"			
 	}
 	SpriteType = {
 		name = "GFX_goal_GER_triumphant_will"
-		texturefile = "gfx/interface/goals/GER_triumphant_will.dds"			
+		texturefile = "gfx/interface/goals/GER/GER_triumphant_will.dds"			
 	}
 	SpriteType = {
 		name = "GFX_goal_GER_the_supreme_leader"
-		texturefile = "gfx/interface/goals/GER_the_supreme_leader.dds"			
+		texturefile = "gfx/interface/goals/GER/GER_the_supreme_leader.dds"			
+	}
+	# Switzerland
+	SpriteType = {
+		name = "GFX_goal_SWI_spiritual_defence"
+		texturefile = "gfx/interface/goals/SWI/SWI_spiritual_defence.dds"			
 	}
 }

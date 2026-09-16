@@ -1,0 +1,11 @@
+SWI_emergency_government_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = SWI_emergency_government_tt
+		OR = {
+			has_country_leader = {
+				character = SWI_character_FEDERAL_COUNCIL
+				ruling_only = yes
+			}
+		}
+	}
+}

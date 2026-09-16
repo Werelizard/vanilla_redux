@@ -52,6 +52,11 @@
  SWI_emergency_council:0 "Emergency Council"
 
  ###################
+ # SWITZERLAND - TOOLTIPS
+ ###################
+ SWI_emergency_government_tt:0 "The government was granted §Yemergency powers§! by the Federal Assembly"
+
+ ###################
  # SWITZERLAND EVENTS
  ###################
 
@@ -122,7 +127,7 @@
  SWI_total_resistance:0 "Scorched Earth Tactics"
  SWI_total_resistance_desc:0 ""
 
- SWI_bayonet_charges:0 "Wars are Won by Bravery"
+ SWI_bayonet_charges:0 "Wars are Won by Men"
  SWI_bayonet_charges_desc:0 ""
 
  SWI_decentralised_training:0 "Adopt a Decentralised Command Structure"
@@ -134,13 +139,13 @@
  SWI_lower_conscription_age:0 "Lower the Conscription Age"
  SWI_lower_conscription_age_desc:0 ""
 
- SWI_resource_relocation:0 "Nationalise Essential Assets"
+ SWI_resource_relocation:0 "Emergency Stockpiles"
  SWI_resource_relocation_desc:0 ""
 
  SWI_small_unit_tactics:0 "Expand the Mountain Grenadiers"
  SWI_small_unit_tactics_desc:0 ""
 
- SWI_mountain_engineer_corps:0 "The Swiss Engineer Corps"
+ SWI_mountain_engineer_corps:0 "Alpine Theatre Training"
  SWI_mountain_engineer_corps_desc:0 ""
 
  SWI_better_logistics:0 "Improve Military Logistics"

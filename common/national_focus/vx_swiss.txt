@@ -32,7 +32,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_spiritual_defense
-		icon = GFX_goal_unknown
+		icon = GFX_goal_SWI_spiritual_defence
 		cost = 4
 		x = 0
 		y = 0
@@ -42,10 +42,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 			OR = {
 				threat > 0.05
@@ -60,7 +57,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_increase_military_budget
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_money_for_equipment
 		cost = 4
 		x = -1
 		y = 1
@@ -71,10 +68,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -84,7 +78,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_establish_war_bonds
-		icon = GFX_goal_unknown
+		icon = GFX_focus_SWI_issue_war_bonds
 		cost = 4
 		x = 1
 		y = 1
@@ -95,10 +89,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -108,7 +99,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_towards_economic_mobilisation
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_military_sphere
 		cost = 4
 		x = 0
 		y = 2
@@ -126,10 +117,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -139,7 +127,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_fortification_efforts
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_construct_military
 		cost = 4
 		x = -1
 		y = 3
@@ -150,10 +138,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -163,7 +148,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_patriotic_shooting_groups
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_infiltration
 		cost = 4
 		x = 4
 		y = 4
@@ -174,10 +159,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -188,7 +170,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_expand_militia_training
-		icon = GFX_goal_unknown
+		icon = GFX_focus_SWI_patriotic_shooting_clubs
 		cost = 4
 		x = 1
 		y = 3
@@ -199,10 +181,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -212,7 +191,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_wartime_mobilisation
-		icon = GFX_goal_unknown
+		icon = GFX_focus_SWI_aktion_nationaler_widerstand
 		cost = 4
 		x = 2
 		y = 4
@@ -226,10 +205,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 			OR = {
 				is_potential_war_target = yes
@@ -246,7 +222,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_civilian_readniness
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_workers
 		cost = 4
 		x = 3
 		y = 3
@@ -257,10 +233,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -270,7 +243,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_appoint_commander_in_chief
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_military_mission
 		cost = 4
 		x = 0
 		y = 4
@@ -281,10 +254,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 			OR = {
 				threat > 0.15
@@ -325,10 +295,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -344,7 +311,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_evacuate_industries
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_reorient_production
 		cost = 4
 		x = 1
 		y = 1
@@ -358,10 +325,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -371,7 +335,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_a_national_redoubt
-		icon = GFX_goal_unknown
+		icon = GFX_focus_SWI_the_national_redoubt
 		cost = 4
 		x = -1
 		y = 1
@@ -385,10 +349,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -398,7 +359,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_prepare_sabotage
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_sabotage
 		cost = 4
 		x = 0
 		y = 2
@@ -412,10 +373,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -425,7 +383,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_emergency_production
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_production
 		cost = 4
 		x = 1
 		y = 3
@@ -439,10 +397,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -452,7 +407,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_increase_mobilisation
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_small_arms
 		cost = 4
 		x = -2
 		y = 2
@@ -466,10 +421,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -479,7 +431,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_mountain_artillery
-		icon = GFX_goal_unknown
+		icon = GFX_focus_SWI_spirit_of_resistance
 		cost = 4
 		x = -1
 		y = 3
@@ -493,10 +445,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -506,7 +455,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_total_air_supremacy
-		icon = GFX_goal_unknown
+		icon = GFX_focus_SMB_mountain_guns
 		cost = 4
 		x = 0
 		y = 4
@@ -520,10 +469,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -559,10 +505,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -578,7 +521,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_until_death
-		icon = GFX_goal_unknown
+		icon = GFX_focus_SWI_helvetic_junta
 		cost = 4
 		x = 0
 		y = 2
@@ -589,10 +532,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -602,7 +542,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_total_resistance
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_total_war
 		cost = 4
 		x = 1
 		y = 3
@@ -613,10 +553,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -626,7 +563,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_bayonet_charges
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_little_entente
 		cost = 4
 		x = -1
 		y = 3
@@ -637,10 +574,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -650,7 +584,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_decentralised_training
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_military_academy
 		cost = 4
 		x = 0
 		y = 4
@@ -661,10 +595,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -688,10 +619,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -701,7 +629,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_lower_conscription_age
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_full_social_mobilization
 		cost = 4
 		x = -1
 		y = 1
@@ -712,10 +640,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -725,7 +650,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_resource_relocation
-		icon = GFX_goal_unknown
+		icon = GFX_focus_DEN_heavy_regulations
 		cost = 4
 		x = 1
 		y = 1
@@ -736,10 +661,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -775,10 +697,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -794,7 +713,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_mountain_engineer_corps
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_mountain_training
 		cost = 4
 		x = -1
 		y = 1
@@ -805,10 +724,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -818,7 +734,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_better_logistics
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_truck
 		cost = 4
 		x = -2
 		y = 2
@@ -829,10 +745,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -842,7 +755,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_the_exceptional_soldier
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_soldier_salute
 		cost = 4
 		x = 1
 		y = 2
@@ -853,10 +766,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -866,7 +776,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_improved_hospitals
-		icon = GFX_goal_unknown
+		icon = GFX_focus_SWI_spirit_of_saint_bernard
 		cost = 4
 		x = 2
 		y = 3
@@ -877,10 +787,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -904,10 +811,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -917,7 +821,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_deep_infiltration
-		icon = GFX_goal_unknown
+		icon = GFX_focus_prc_infiltration
 		cost = 4
 		x = 1
 		y = 4
@@ -928,10 +832,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -941,7 +842,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_camouflage_techniques
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_cas_aircraft
 		cost = 4
 		x = -1
 		y = 4
@@ -952,10 +853,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -965,7 +863,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_air_land_war
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_armored_air_support
 		cost = 4
 		x = 2
 		y = 1
@@ -979,10 +877,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -1021,10 +916,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -1034,7 +926,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_radar_developments
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_radar
 		cost = 4
 		x = 0
 		y = 2
@@ -1045,10 +937,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -1058,7 +947,7 @@ focus_tree = {
 	
 	focus = {
 		id = SWI_expand_air_bases
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_air_bases
 		cost = 4
 		x = 1
 		y = 1
@@ -1069,10 +958,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -1082,7 +968,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_anti_air_defence
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_air_defense
 		cost = 4
 		x = 1
 		y = 3
@@ -1093,10 +979,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -1106,7 +989,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_modernise_air_force
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_copy_plane_designs
 		cost = 4
 		x = 3
 		y = 1
@@ -1117,10 +1000,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -1130,7 +1010,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_vertical_flights
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_early_helicopter
 		cost = 4
 		x = 4
 		y = 2
@@ -1141,10 +1021,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -1166,10 +1043,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_democratic_government_tooltip_trigger = yes
-				has_country_leader = {
-					character = SWI_character_FEDERAL_COUNCIL
-					ruling_only = yes
-				}
+				SWI_emergency_government_trigger = yes
 			}
 		}
 		completion_reward = {
