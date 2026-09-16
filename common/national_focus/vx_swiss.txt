@@ -26,5 +26,1154 @@ focus_tree = {
 	default = no	
 	reset_on_civilwar = no
 
+	###################
+	# HISTORICAL - Spiritual Defense
+	###################
 
+	focus = {
+		id = SWI_spiritual_defense
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 0
+		y = 0
+		prerequisite = {
+			
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+			OR = {
+				threat > 0.05
+				has_defensive_war = yes
+				is_potential_war_target = yes
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_increase_military_budget
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -1
+		y = 1
+		relative_position_id = SWI_spiritual_defense
+		prerequisite = {
+			focus = SWI_spiritual_defense
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_establish_war_bonds
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 1
+		y = 1
+		relative_position_id = SWI_spiritual_defense
+		prerequisite = {
+			focus = SWI_spiritual_defense
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_towards_economic_mobilisation
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 0
+		y = 2
+		relative_position_id = SWI_spiritual_defense
+		prerequisite = {
+			focus = SWI_increase_military_budget
+			focus = SWI_establish_war_bonds
+		}
+		bypass = {
+			OR = {
+				has_idea = war_economy
+				has_idea = tot_economic_mobilisation
+			}
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_fortification_efforts
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -1
+		y = 3
+		relative_position_id = SWI_spiritual_defense
+		prerequisite = {
+			focus = SWI_towards_economic_mobilisation
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_patriotic_shooting_groups
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 4
+		y = 4
+		relative_position_id = SWI_spiritual_defense
+		prerequisite = {
+			focus = SWI_civilian_readniness
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+
+	focus = {
+		id = SWI_expand_militia_training
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 1
+		y = 3
+		relative_position_id = SWI_spiritual_defense
+		prerequisite = {
+			focus = SWI_towards_economic_mobilisation
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_wartime_mobilisation
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 2
+		y = 4
+		relative_position_id = SWI_spiritual_defense
+		prerequisite = {
+			focus = SWI_expand_militia_training
+		}
+		prerequisite = {
+			focus = SWI_civilian_readniness
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+			OR = {
+				is_potential_war_target = yes
+				has_defensive_war = yes
+				any_neighbor_country = {
+					has_war = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_civilian_readniness
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 3
+		y = 3
+		relative_position_id = SWI_spiritual_defense
+		prerequisite = {
+			focus = SWI_towards_economic_mobilisation
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_appoint_commander_in_chief
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 0
+		y = 4
+		relative_position_id = SWI_spiritual_defense
+		prerequisite = {
+			focus = SWI_towards_economic_mobilisation
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+			OR = {
+				threat > 0.15
+				has_defensive_war = yes
+				is_potential_war_target = yes
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	# Army subbranch - focus on defense / small army
+	focus = {
+		id = SWI_a_mountain_fortress
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -3
+		y = 5
+		offset = {
+			x = 2
+			trigger = {
+				has_completed_focus = SWI_a_mountain_fortress
+			}
+		}
+		allow_branch = {
+			NOT = {
+				has_completed_focus = SWI_mobilisation_swiss_spirit
+			}
+			NOT = {
+				has_completed_focus = SWI_small_unit_tactics
+			}
+		}
+		relative_position_id = SWI_spiritual_defense
+		prerequisite = {
+			focus = SWI_appoint_commander_in_chief
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			hidden_effect = {
+				mark_focus_tree_layout_dirty = yes
+			}
+		}
+		mutually_exclusive = {
+			focus = SWI_mobilisation_swiss_spirit
+			focus = SWI_small_unit_tactics
+		}
+	}
+
+	focus = {
+		id = SWI_evacuate_industries
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 1
+		y = 1
+		allow_branch = {
+			
+		}
+		relative_position_id = SWI_a_mountain_fortress
+		prerequisite = {
+			focus = SWI_a_mountain_fortress
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_a_national_redoubt
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -1
+		y = 1
+		allow_branch = {
+			
+		}
+		relative_position_id = SWI_a_mountain_fortress
+		prerequisite = {
+			focus = SWI_a_mountain_fortress
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_prepare_sabotage
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 0
+		y = 2
+		allow_branch = {
+			
+		}
+		relative_position_id = SWI_a_mountain_fortress
+		prerequisite = {
+			focus = SWI_evacuate_industries
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_emergency_production
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 1
+		y = 3
+		allow_branch = {
+			
+		}
+		relative_position_id = SWI_a_mountain_fortress
+		prerequisite = {
+			focus = SWI_evacuate_industries
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_increase_mobilisation
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -2
+		y = 2
+		allow_branch = {
+			
+		}
+		relative_position_id = SWI_a_mountain_fortress
+		prerequisite = {
+			focus = SWI_a_national_redoubt
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_mountain_artillery
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -1
+		y = 3
+		allow_branch = {
+			
+		}
+		relative_position_id = SWI_a_mountain_fortress
+		prerequisite = {
+			focus = SWI_a_national_redoubt
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_total_air_supremacy
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 0
+		y = 4
+		allow_branch = {
+			
+		}
+		relative_position_id = SWI_a_mountain_fortress
+		prerequisite = {
+			focus = SWI_mountain_artillery
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	# Army subbranch - focus on quantity / militia
+	focus = {
+		id = SWI_mobilisation_swiss_spirit
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 1
+		y = 5
+		offset = {
+			x = -2
+			trigger = {
+				has_completed_focus = SWI_mobilisation_swiss_spirit
+			}
+		}
+		allow_branch = {
+			NOT = {
+				has_completed_focus = SWI_a_mountain_fortress
+			}
+			NOT = {
+				has_completed_focus = SWI_small_unit_tactics
+			}
+		}
+		relative_position_id = SWI_spiritual_defense
+		prerequisite = {
+			focus = SWI_appoint_commander_in_chief
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			hidden_effect = {
+				mark_focus_tree_layout_dirty = yes
+			}
+		}
+		mutually_exclusive = {
+			focus = SWI_a_mountain_fortress
+			focus = SWI_small_unit_tactics
+		}
+	}
+
+	focus = {
+		id = SWI_until_death
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 0
+		y = 2
+		relative_position_id = SWI_mobilisation_swiss_spirit
+		prerequisite = {
+			focus = SWI_mobilisation_swiss_spirit
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_total_resistance
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 1
+		y = 3
+		relative_position_id = SWI_mobilisation_swiss_spirit
+		prerequisite = {
+			focus = SWI_until_death
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_bayonet_charges
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -1
+		y = 3
+		relative_position_id = SWI_mobilisation_swiss_spirit
+		prerequisite = {
+			focus = SWI_until_death
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_decentralised_training
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 0
+		y = 4
+		relative_position_id = SWI_mobilisation_swiss_spirit
+		prerequisite = {
+			focus = SWI_until_death
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_give_them_nothing
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 1
+		y = 5
+		relative_position_id = SWI_mobilisation_swiss_spirit
+		prerequisite = {
+			focus = SWI_total_resistance
+		}
+		prerequisite = {
+			focus = SWI_decentralised_training
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_lower_conscription_age
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -1
+		y = 1
+		relative_position_id = SWI_mobilisation_swiss_spirit
+		prerequisite = {
+			focus = SWI_mobilisation_swiss_spirit
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_resource_relocation
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 1
+		y = 1
+		relative_position_id = SWI_mobilisation_swiss_spirit
+		prerequisite = {
+			focus = SWI_mobilisation_swiss_spirit
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	# Army subbranch - focus on offense / spec
+	focus = {
+		id = SWI_small_unit_tactics
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 5
+		y = 5		
+		offset = {
+			x = -6
+			trigger = {
+				has_completed_focus = SWI_small_unit_tactics
+			}
+		}
+		allow_branch = {
+			NOT = {
+				has_completed_focus = SWI_a_mountain_fortress
+			}
+			NOT = {
+				has_completed_focus = SWI_mobilisation_swiss_spirit
+			}
+		}
+		relative_position_id = SWI_spiritual_defense
+		prerequisite = {
+			focus = SWI_appoint_commander_in_chief
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			hidden_effect = {
+				mark_focus_tree_layout_dirty = yes
+			}
+		}
+		mutually_exclusive = {
+			focus = SWI_a_mountain_fortress
+			focus = SWI_mobilisation_swiss_spirit
+		}
+	}
+
+	focus = {
+		id = SWI_mountain_engineer_corps
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -1
+		y = 1
+		relative_position_id = SWI_small_unit_tactics
+		prerequisite = {
+			focus = SWI_small_unit_tactics
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_better_logistics
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -2
+		y = 2
+		relative_position_id = SWI_small_unit_tactics
+		prerequisite = {
+			focus = SWI_mountain_engineer_corps
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_the_exceptional_soldier
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 1
+		y = 2
+		relative_position_id = SWI_small_unit_tactics
+		prerequisite = {
+			focus = SWI_small_unit_tactics
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_improved_hospitals
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 2
+		y = 3
+		relative_position_id = SWI_small_unit_tactics
+		prerequisite = {
+			focus = SWI_the_exceptional_soldier
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_expand_mountaineer_training
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 0
+		y = 3
+		relative_position_id = SWI_small_unit_tactics
+		prerequisite = {
+			focus = SWI_mountain_engineer_corps
+		}
+		prerequisite = {
+			focus = SWI_the_exceptional_soldier
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_deep_infiltration
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 1
+		y = 4
+		relative_position_id = SWI_small_unit_tactics
+		prerequisite = {
+			focus = SWI_expand_mountaineer_training
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_camouflage_techniques
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -1
+		y = 4
+		relative_position_id = SWI_small_unit_tactics
+		prerequisite = {
+			focus = SWI_expand_mountaineer_training
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_air_land_war
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 2
+		y = 1
+		relative_position_id = SWI_small_unit_tactics
+		prerequisite = {
+			focus = SWI_swiss_airforce
+		}
+		prerequisite = {
+			focus = SWI_small_unit_tactics
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	# Air Force
+	focus = {
+		id = SWI_swiss_airforce
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 8
+		y = 5	
+		offset = {
+			x = -6
+			trigger = {
+				OR = {					
+					has_completed_focus = SWI_small_unit_tactics
+				}
+			}
+		}
+		offset = {
+			x = -7
+			trigger = {
+				OR = {
+					has_completed_focus = SWI_a_mountain_fortress
+					has_completed_focus = SWI_mobilisation_swiss_spirit
+				}
+			}
+		}
+		relative_position_id = SWI_spiritual_defense
+		prerequisite = {
+			focus = SWI_appoint_commander_in_chief
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_radar_developments
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 0
+		y = 2
+		relative_position_id = SWI_swiss_airforce
+		prerequisite = {
+			focus = SWI_swiss_airforce
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = SWI_expand_air_bases
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 1
+		y = 1
+		relative_position_id = SWI_swiss_airforce
+		prerequisite = {
+			focus = SWI_swiss_airforce
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_anti_air_defence
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 1
+		y = 3
+		relative_position_id = SWI_swiss_airforce
+		prerequisite = {
+			focus = SWI_expand_air_bases
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_modernise_air_force
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 3
+		y = 1
+		relative_position_id = SWI_swiss_airforce
+		prerequisite = {
+			focus = SWI_swiss_airforce
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_vertical_flights
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 4
+		y = 2
+		relative_position_id = SWI_swiss_airforce
+		prerequisite = {
+			focus = SWI_modernise_air_force
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_alpine_flights
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 2
+		y = 2
+		relative_position_id = SWI_swiss_airforce
+		prerequisite = {
+			focus = SWI_expand_air_bases
+			focus = SWI_modernise_air_force
+		}
+		available = {
+			OR = {
+				has_democratic_government_tooltip_trigger = yes
+				has_country_leader = {
+					character = SWI_character_FEDERAL_COUNCIL
+					ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
 }

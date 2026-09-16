@@ -1600,3 +1600,25 @@ is_naval_treaty_signatory = {
 		original_tag = JAP
 	}
 }
+
+# Country is vulnerable to enemy country
+is_potential_war_target = {
+	any_country = {
+		NOT = {
+			has_capitulated = yes
+		}
+		custom_trigger_tooltip = {
+			tooltip = is_potential_war_target_tt
+			NOT = {
+				is_ally_with = ROOT
+			}
+			NOT = {
+				has_non_aggression_pact_with = ROOT
+			}
+			OR = {
+				has_wargoal_against = ROOT
+				is_justifying_wargoal_against = ROOT
+			}
+		}
+	}
+}

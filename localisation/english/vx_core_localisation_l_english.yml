@@ -344,6 +344,7 @@
  coalition_effects_title:0 ""
  coalition_effects_desc:0 ""
  advisors:0 "Political Advisors"
+ is_potential_war_target_tt:0 "Can declare war on §Y[ROOT.GetName]§! and is either justifying a wargoal or has a wargoal against §Y[ROOT.GetName]§!"
 
  ### MISC TOOLTIPS ###
  doublespace_tt:0 "  "
