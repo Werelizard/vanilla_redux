@@ -520,6 +520,7 @@ remove_coalitions_effect = {
 	clr_country_flag = coalition_auth_flag
 	clr_country_flag = coalition_reactionary_flag
 	clr_country_flag = coalition_fascism_flag
+	update_coalitions_effect = yes
 }
 
 vx_remove_crisis_ideas_effect = {

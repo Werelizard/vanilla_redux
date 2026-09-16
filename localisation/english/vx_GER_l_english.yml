@@ -58,7 +58,7 @@
  ger_support_china:0 "Supporting Nanjing"
  ger_support_china_desc:0 ""
  ger_support_japan:0 "Supporting Tokyo"
- ger_support_japan_desc:0 ""
+ ger_support_japan_desc:0 ""  
 
  ###################
  # GERMANY - CHARACTERS
@@ -90,6 +90,10 @@
  GER_character_wilhelm_frick:0 "Wilhelm Frick"
  GER_character_julius_streicher:0 "Julius Streicher"
  GER_character_alfred_rosenberg:0 "Alfred Rosenberg"
+
+ ###################
+ # GERMANY - SCRIPTED LOCALISATION
+ ###################
 
  ###################
  # GERMANY - TRAITS
@@ -133,11 +137,19 @@
  germany_focus_fascist.2.desc:0 ""
 
  ###################
+ # GERMANY FOCI SHORTCUTS
+ ###################
+ GER_war_economy_shortcut:0 "A War Economy"
+ GER_corporatism_economy_shortcut:0 "A Corporatist Economy"
+ GER_rhineland_shortcut:0 "Remiliarisation"
+
+ ###################
  # GERMANY FOCI - FASCIST
  ###################
  vx_germany_fascist_tree:0 "German Reich Focus Tree"
 
  # Flags
+ GER_Rhineland_Succesfully_Remilitarised_flag:0 "The Rhineland has been successfully remilitarised"
 
  # Foci
  GER_Militarise_Rhineland:0 "Remilitarise the Rhineland"
@@ -282,5 +294,7 @@
  GER_the_supreme_leader_desc:0 ""
 
  # Tooltips - triggers
+ 
+ war_major_disadvantageous_to_germany_tt:0 "§YGermany's§! situation has become precarious"
 
  # Tooltips - effects

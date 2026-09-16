@@ -1,6 +1,45 @@
 generic_decision_crisis = {
+	# Looming strikes
+	generic_looming_strikes = {
+		icon = revolt
+		
+		priority = 1000
+
+		is_good = no
+		days_mission_timeout = 30
+
+		activation = {
+			can_have_strikes_crisis_trigger = yes
+			has_war = yes
+		}
+
+		visible = {
+			can_have_strikes_crisis_trigger = yes
+			has_war = yes
+		}
+
+		available = {
+			always = no # No stopping this once it starts
+		}
+
+		timeout_effect = {
+			effect_tooltip = {
+				add_timed_idea = {
+					idea = vx_strikes
+					days = 270
+				}
+			}
+			hidden_effect = {
+				country_event = crisis_strikes.0
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		
+	}
 	# Handle strikes
-	generic_handle_strikes = {
+	generic_handle_strikes_crackdown = {
 		visible = {
 			has_idea = vx_strikes
 		}
@@ -10,15 +49,100 @@ generic_decision_crisis = {
 		####
 		days_remove = 30
 		####
+		available = {
+			NOT = {
+				has_country_flag = vx_already_handling_crisis_flag
+			}
+		}
+		modifier = {
+			stability_factor = -0.1
+			war_support_factor = -0.05
+		}
 		remove_effect = {
 			modify_timed_idea = {
 				idea = vx_strikes
 				days = -60
 			}
+			hidden_effect = {
+				clr_country_flag = vx_already_handling_crisis_flag
+			}
+		}
+		ai_will_do = {
+			factor = 500 # AI really should do it
 		}
 	}
+	generic_handle_strikes_negotiate = {
+		visible = {
+			has_idea = vx_strikes
+		}
+		cancel_if_not_visible = yes
+		####
+		cost = 100
+		####
+		days_remove = 30
+		####
+		available = {
+			NOT = {
+				has_country_flag = vx_already_handling_crisis_flag
+			}
+		}
+		modifier = {
+			consumer_goods_factor = 0.25
+			production_factory_efficiency_gain_factor = -0.25
+		}
+		remove_effect = {
+			modify_timed_idea = {
+				idea = vx_strikes
+				days = -60
+			}
+			hidden_effect = {
+				clr_country_flag = vx_already_handling_crisis_flag
+			}
+		}
+		ai_will_do = {
+			factor = 500 # AI really should do it
+		}
+	}
+	# Looming desertions
+	generic_looming_desertions = {
+		icon = revolt
+		
+		priority = 1000
+
+		is_good = no
+		days_mission_timeout = 30
+
+		activation = {
+			can_have_deserters_crisis_trigger = yes
+			has_war = yes
+		}
+
+		visible = {
+			can_have_deserters_crisis_trigger = yes
+			has_war = yes
+		}
+
+		available = {
+			always = no # No stopping this once it starts
+		}
+
+		timeout_effect = {
+			effect_tooltip = {
+				add_timed_idea = {
+					idea = vx_desertions
+					days = 270
+				}
+			}
+			hidden_effect = {
+				country_event = crisis_desertions.0
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}		
+	}
 	# Handle desertions
-	generic_handle_desertions = {
+	generic_handle_desertions_make_examples = {
 		visible = {
 			has_idea = vx_desertions
 		}
@@ -28,15 +152,100 @@ generic_decision_crisis = {
 		####
 		days_remove = 30
 		####
+		available = {
+			NOT = {
+				has_country_flag = vx_already_handling_crisis_flag
+			}
+		}
+		modifier = {
+			army_org_factor = -0.1
+			war_support_factor = -0.1
+		}
 		remove_effect = {
 			modify_timed_idea = {
 				idea = vx_desertions
 				days = -60
 			}
+			hidden_effect = {
+				clr_country_flag = vx_already_handling_crisis_flag
+			}
+		}
+		ai_will_do = {
+			factor = 500 # AI really should do it
 		}
 	}
+	generic_handle_desertions_enforce_conscription = {
+		visible = {
+			has_idea = vx_desertions
+		}
+		cancel_if_not_visible = yes
+		####
+		cost = 100
+		####
+		days_remove = 30
+		####
+		available = {
+			NOT = {
+				has_country_flag = vx_already_handling_crisis_flag
+			}
+		}
+		modifier = {
+			max_training = -0.5
+			stability_factor = -0.1
+		}
+		remove_effect = {
+			modify_timed_idea = {
+				idea = vx_desertions
+				days = -60
+			}
+			hidden_effect = {
+				clr_country_flag = vx_already_handling_crisis_flag
+			}
+		}
+		ai_will_do = {
+			factor = 500 # AI really should do it
+		}
+	}
+	# Looming mutinies
+	generic_looming_mutinies= {
+		icon = revolt
+		
+		priority = 1000
+
+		is_good = no
+		days_mission_timeout = 30
+
+		activation = {
+			can_have_mutinies_crisis_trigger = yes
+			has_war = yes
+		}
+
+		visible = {
+			can_have_mutinies_crisis_trigger = yes
+			has_war = yes
+		}
+
+		available = {
+			always = no # No stopping this once it starts
+		}
+
+		timeout_effect = {
+			effect_tooltip = {
+				add_timed_idea = {
+					idea = vx_mutinies
+					days = 270
+				}
+			}
+			hidden_effect = {
+				country_event = crisis_mutinies.0
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}		
+	}
 	# Handle mutinies
-	generic_handle_mutinies = {
+	generic_handle_mutinies_ease_exercises = {
 		visible = {
 			has_idea = vx_mutinies
 		}
@@ -46,14 +255,115 @@ generic_decision_crisis = {
 		####
 		days_remove = 30
 		####
+		available = {
+			NOT = {
+				has_country_flag = vx_already_handling_crisis_flag
+			}
+		}
+		modifier = {
+			command_power_gain_mult = -0.5
+			experience_gain_army_factor = -0.9
+			experience_gain_air_factor = -0.9
+			experience_gain_navy_factor = -0.9
+		}
 		remove_effect = {
 			modify_timed_idea = {
 				idea = vx_mutinies
 				days = -60
 			}
+			hidden_effect = {
+				clr_country_flag = vx_already_handling_crisis_flag
+			}
+		}
+		ai_will_do = {
+			factor = 500 # AI really should do it
+		}
+	}
+	generic_handle_mutinies_propaganda = {
+		visible = {
+			has_idea = vx_mutinies
+		}
+		cancel_if_not_visible = yes
+		####
+		cost = 100
+		####
+		days_remove = 30
+		####
+		available = {
+			NOT = {
+				has_country_flag = vx_already_handling_crisis_flag
+			}
+		}
+		modifier = {
+			political_power_gain = -0.5
+		}
+		remove_effect = {
+			modify_timed_idea = {
+				idea = vx_mutinies
+				days = -60
+			}
+			hidden_effect = {
+				clr_country_flag = vx_already_handling_crisis_flag
+			}
+		}
+		ai_will_do = {
+			factor = 500 # AI really should do it
 		}
 	}
 	# Missions - public demands demobilisation
+	generic_public_demands_demobilisation = {
+		icon = revolt
+		priority = 2000
+		is_good = no
+		days_mission_timeout = 120
 
+		activation = {
+			has_unsupported_economic_law = yes
+			has_war = no
+		}
+		available = {
+			OR = {
+				has_unsupported_economic_law = no
+				has_war = yes
+			}
+		}
+
+		cancel_if_not_visible = yes
+		timeout_effect = {
+			activate_mission = generic_public_demands_demobilisation
+			add_stability = -0.05
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
 	# Missions - public demands lowering conscription
+	generic_public_demands_no_conscription = {
+		icon = revolt
+		priority = 2000
+		is_good = no
+		days_mission_timeout = 120
+
+		available = {
+			OR = {
+				has_unsupported_manpower_law = no
+				has_war = yes
+			}
+		}
+		activation = {
+			has_unsupported_manpower_law = yes
+			has_war = no
+		}
+
+		cancel_if_not_visible = yes
+		timeout_effect = {
+			activate_mission = generic_public_demands_no_conscription
+			add_stability = -0.05
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
 }

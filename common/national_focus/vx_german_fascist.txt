@@ -26,6 +26,16 @@ focus_tree = {
 	default = no	
 	reset_on_civilwar = no
 
+	shortcut = {
+		name = GER_rhineland_shortcut
+		target = GER_Militarise_Rhineland
+	}
+
+	shortcut = {
+		name = GER_economy_shortcut
+		target = GER_economy_nationalise_foreign_assets
+	}
+
 
 	###################
 	# HISTORICAL - START
@@ -130,6 +140,8 @@ focus_tree = {
 				ideology = autocratic
 				popularity = -0.05
 			}
+			custom_effect_tooltip = doublespace_tt
+			remove_coalitions_effect = yes
 			custom_effect_tooltip = doublespace_tt
 			swap_ideas = {
 				remove_idea = ger_enabling_act
@@ -263,6 +275,9 @@ focus_tree = {
 		completion_reward = {
 			
 		}
+		mutually_exclusive = {
+			focus = GER_inner_circle_hierl
+		}
 	}
 
 	focus = {
@@ -277,7 +292,8 @@ focus_tree = {
 			focus = GER_inner_circle_todt
 		}
 		available = {
-
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
 		}
 		completion_reward = {
 			
@@ -305,9 +321,6 @@ focus_tree = {
 		completion_reward = {
 			
 		}
-		mutually_exclusive = {
-			focus = GER_inner_circle_hierl_capstone
-		}
 	}
 
 	focus = {
@@ -328,6 +341,9 @@ focus_tree = {
 		completion_reward = {
 			
 		}
+		mutually_exclusive = {
+			focus = GER_inner_circle_todt
+		}
 	}	
 
 	focus = {
@@ -345,7 +361,8 @@ focus_tree = {
 			# focus = GER_inner_circle_autobahn
 		}
 		available = {
-
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
 		}
 		completion_reward = {
 			
@@ -374,9 +391,6 @@ focus_tree = {
 		completion_reward = {
 			
 		}
-		mutually_exclusive = {
-			focus = GER_inner_circle_todt_capstone
-		}
 	}
 
 	focus = {
@@ -392,7 +406,8 @@ focus_tree = {
 			focus = GER_inner_circle_todt_org
 		}
 		available = {
-
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
 		}
 		completion_reward = {
 			
@@ -415,7 +430,8 @@ focus_tree = {
 			focus = GER_inner_circle_todt_capstone
 		}
 		available = {
-
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
 		}
 		completion_reward = {
 			
@@ -457,7 +473,8 @@ focus_tree = {
 		# 	focus = GER_inner_circle_four_year_plan
 		# }
 		available = {
-			
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
 		}
 		completion_reward = {
 			
@@ -479,7 +496,8 @@ focus_tree = {
 			focus = GER_inner_circle_zentrale_plannung
 		}
 		available = {
-			
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
 		}
 		completion_reward = {
 			
@@ -524,7 +542,8 @@ focus_tree = {
 			focus = GER_inner_circle_goring
 		}
 		available = {
-			
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
 		}
 		completion_reward = {
 			
@@ -546,7 +565,8 @@ focus_tree = {
 			focus = GER_inner_circle_goring_reichswerke
 		}
 		available = {
-			
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
 		}
 		completion_reward = {
 			
@@ -589,7 +609,8 @@ focus_tree = {
 			focus = GER_inner_circle_goring_reichswerke
 		}
 		available = {
-			
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
 		}
 		completion_reward = {
 			
@@ -609,7 +630,8 @@ focus_tree = {
 			focus = GER_inner_circle_goring_capstone
 		}
 		available = {
-			
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
 		}
 		completion_reward = {
 			
@@ -671,7 +693,8 @@ focus_tree = {
 			focus = GER_inner_circle_himmler_expand_gestapo
 		}
 		available = {
-			
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
 		}
 		completion_reward = {
 			
@@ -710,7 +733,8 @@ focus_tree = {
 			focus = GER_inner_circle_goebbels
 		}
 		available = {
-			
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
 		}
 		completion_reward = {
 			
@@ -732,7 +756,8 @@ focus_tree = {
 			focus = GER_inner_circle_quash_dissent
 		}
 		available = {
-			
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
 		}
 		completion_reward = {
 			
@@ -774,7 +799,8 @@ focus_tree = {
 			focus = GER_inner_circle_himmler
 		}
 		available = {
-			
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
 		}
 		completion_reward = {
 			
@@ -796,7 +822,8 @@ focus_tree = {
 			focus = GER_inner_circle_himmler_expand_gestapo
 		}
 		available = {
-			
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
 		}
 		completion_reward = {
 			
@@ -820,7 +847,8 @@ focus_tree = {
 			focus = GER_inner_circle_himmler_capstone
 		}
 		available = {
-			
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
 		}
 		completion_reward = {
 			
@@ -840,7 +868,8 @@ focus_tree = {
 			focus = GER_inner_circle_hess_loyalty
 		}
 		available = {
-			
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
 		}
 		completion_reward = {
 			
@@ -882,7 +911,8 @@ focus_tree = {
 			focus = GER_inner_circle_bormann
 		}
 		available = {
-			
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
 		}
 		completion_reward = {
 			
@@ -907,7 +937,8 @@ focus_tree = {
 			focus = GER_inner_circle_party_state
 		}
 		available = {
-			
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
 		}
 		completion_reward = {
 			
@@ -952,7 +983,8 @@ focus_tree = {
 			focus = GER_inner_circle_hess
 		}
 		available = {
-
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
 		}
 		completion_reward = {
 			
@@ -977,7 +1009,8 @@ focus_tree = {
 			focus = GER_inner_circle_hess_loyalty
 		}
 		available = {
-			
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
 		}
 		completion_reward = {
 			
@@ -997,7 +1030,8 @@ focus_tree = {
 			focus = GER_inner_circle_hess_ideology
 		}
 		available = {
-			
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
 		}
 		completion_reward = {
 			
@@ -1054,6 +1088,204 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = GER_triumphant_will
+		}
+		available = {
+			has_fascist_government_trigger = yes
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	###################
+	# HISTORICAL - ECONOMY
+	###################
+
+	# Anchoring focus: start the four year plan
+	focus = {
+		id = GER_economy_the_four_year_plan
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -16
+		y = 1
+		relative_position_id = GER_Militarise_Rhineland
+		prerequisite = {
+			
+		}
+		available = {
+			has_fascist_government_trigger = yes
+			has_country_flag = GER_Rhineland_Succesfully_Remilitarised_flag
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	# Side with the technocrats
+	focus = {
+		id = GER_economy_side_with_technocrats
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -3
+		y = 1
+		relative_position_id = GER_economy_the_four_year_plan
+		allow_branch = {
+			NOT = {
+				has_completed_focus = GER_economy_side_with_autarks
+			}
+		}
+		prerequisite = {
+			focus = GER_economy_the_four_year_plan
+		}
+		available = {
+			has_fascist_government_trigger = yes
+		}
+		completion_reward = {
+			hidden_effect = {
+				mark_focus_tree_layout_dirty = yes
+			}	
+		}
+		mutually_exclusive = {
+			focus = GER_economy_side_with_autarks
+		}
+	}
+
+	# Side with the autarks - historical
+	focus = {
+		id = GER_economy_side_with_autarks
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 3
+		y = 1
+		relative_position_id = GER_economy_the_four_year_plan
+		allow_branch = {
+			NOT = {
+				has_completed_focus = GER_economy_side_with_technocrats
+			}
+		}
+		prerequisite = {
+			focus = GER_economy_the_four_year_plan
+		}
+		available = {
+			has_fascist_government_trigger = yes
+		}
+		completion_reward = {
+			hidden_effect = {
+				mark_focus_tree_layout_dirty = yes
+			}
+		}
+		mutually_exclusive = {
+			focus = GER_economy_side_with_technocrats
+		}
+	}
+
+	# Temproary means to deal with the MEFO bills
+	focus = {
+		id = GER_economy_price_controls
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -1
+		y = 2
+		relative_position_id = GER_economy_the_four_year_plan
+		prerequisite = {
+			focus = GER_economy_side_with_technocrats
+			focus = GER_economy_side_with_autarks
+		}
+		available = {
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_mefo_dynmod
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_economy_impose_tarifs
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -1
+		y = 1
+		relative_position_id = GER_economy_price_controls
+		prerequisite = {
+			focus = GER_economy_price_controls
+		}
+		available = {
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_mefo_dynmod
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_economy_nationalise_foreign_assets
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 0
+		y = 2
+		relative_position_id = GER_economy_price_controls
+		prerequisite = {
+			focus = GER_economy_price_controls
+		}
+		available = {
+			has_fascist_government_trigger = yes
+			has_dynamic_modifier = GER_mefo_dynmod
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_economy_arbeitsfront
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 1
+		y = 2
+		relative_position_id = GER_economy_the_four_year_plan
+		prerequisite = {
+			focus = GER_economy_side_with_technocrats
+			focus = GER_economy_side_with_autarks
+		}
+		available = {
+			has_fascist_government_trigger = yes
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_economy_people_car
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 0
+		y = 1
+		relative_position_id = GER_economy_arbeitsfront
+		prerequisite = {
+			focus = GER_economy_arbeitsfront
+		}
+		available = {
+			has_fascist_government_trigger = yes
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	# Deal with the Economy of Conquest
+	focus = {
+		id = GER_econonmy_integrate_war_economies
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 0
+		y = 5
+		relative_position_id = GER_economy_the_four_year_plan
+		prerequisite = {
+			focus = GER_economy_side_with_technocrats
+			focus = GER_economy_side_with_autarks
 		}
 		available = {
 			has_fascist_government_trigger = yes

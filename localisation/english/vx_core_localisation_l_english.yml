@@ -276,7 +276,7 @@
  autocrat_leave_coalition_tt:0 "The £autreac_texticon  §lPaternalists§! will leave the coalition"
  fascist_leave_coalition_tt:0 "The £fascism_texticon  §fFascists§! will leave the coalition"
 
- remove_coalitions_tt:0 "Disands all active coaltions"
+ remove_coalitions_tt:0 "All active §Ycoalitions§! will be §Rdisbanded!§!"
 
  ### SRIPTED TRIGGERS ###
 
@@ -339,7 +339,6 @@
  # TOOLTIPS 
  has_war_with_non_exiled_country_tt_NOT:0 "NOT: $has_war_with_non_exiled_country_tt$"
  can_send_volunteers_NOT:0 "Can not send volunteers"
-
  # UI stuff 
  bop_no_bop:0 "We currently have no active §Ybalance of power§!."
  coalition_effects_title:0 ""

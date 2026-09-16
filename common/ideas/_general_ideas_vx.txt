@@ -1,33 +1,24 @@
-ideas = {
-	hidden_ideas = {
-		vx_crisis_cooldown = {
-			modifier = {
-				
-			}
-		}
-	}
-
-	
+ideas = {	
 	country = {
 		# Crisis ideas
 		vx_strikes = {
 			modifier = {
-				production_factory_max_efficiency_factor = -0.1
-				production_factory_start_efficiency_factor = -0.1
-				industrial_capacity_factory = -0.15
-				industrial_capacity_dockyard = -0.15
+				production_factory_max_efficiency_factor = -0.25
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
 			}
 		}
 		vx_desertions = {
 			modifier = {
-				recruitable_population_factor = -0.2
+				recruitable_population_factor = -0.25
 				experience_loss_factor = 0.5
 			}
 		}
 		vx_mutinies = {
 			modifier = {
-				army_attack_factor = -0.1
-				army_defence_factor = -0.1
+				army_org_regain = -0.25
+				army_attack_factor = -0.15
+				army_defence_factor = -0.15
 			}
 		}
 		# Naval Treaty

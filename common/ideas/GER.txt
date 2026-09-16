@@ -42,7 +42,7 @@ ideas = {
 			modifier = {
 				stability_factor = -0.1
 				resistance_decay = -0.2
-				resistance_activity = 0.2
+				resistance_target = 0.05
 				recruitable_population_factor = -0.15
 			}
 		}

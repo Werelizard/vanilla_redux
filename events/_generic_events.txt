@@ -22,12 +22,7 @@ country_event = {
 	}
 
 	immediate = {
-		hidden_effect = {
-			add_timed_idea = {
-				idea = vx_crisis_cooldown
-				days = 70
-			}
-		}
+		
 	}
 
 
@@ -54,19 +49,14 @@ country_event = {
 
 	is_triggered_only = yes
 	trigger = {
-		can_have_strikes_crisis_trigger = yes
+		can_have_deserters_crisis_trigger = yes
 		NOT = {
 			has_idea = vx_crisis_cooldown
 		}
 	}
 
 	immediate = {
-		hidden_effect = {
-			add_timed_idea = {
-				idea = vx_crisis_cooldown
-				days = 70
-			}
-		}
+		
 	}
 
 	option = {
@@ -99,12 +89,7 @@ country_event = {
 	}
 
 	immediate = {
-		hidden_effect = {
-			add_timed_idea = {
-				idea = vx_crisis_cooldown
-				days = 70
-			}
-		}
+		
 	}
 
 	option = {
