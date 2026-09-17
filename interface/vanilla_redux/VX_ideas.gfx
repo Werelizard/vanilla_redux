@@ -62,4 +62,12 @@ spriteTypes = {
 		name = "GFX_idea_SWI_absolute_neutrality"
 		texturefile = "gfx/interface/ideas/idea_swiss_neutrality.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_SWI_stalled_military_budget"
+		textureFile = "gfx/interface/ideas/idea_funding_cut.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SWI_stalled_military_budget_improved"
+		textureFile = "gfx/interface/ideas/idea_funding_cut.dds"
+	}
 }

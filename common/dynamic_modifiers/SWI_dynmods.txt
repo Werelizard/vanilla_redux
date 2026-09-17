@@ -1,0 +1,16 @@
+SWI_militia_dynmod = {
+	enable = { always = yes }
+	icon = GFX_idea_SWI_militias
+	conscription = 0.035
+	modifier_army_sub_unit_militia_defence_factor = SWI_militia_defense_factor_var
+	modifier_army_sub_unit_militia_attack_factor = SWI_militia_attack_factor_var
+	army_non_core_attack_factor = SWI_army_non_cor_var
+	army_non_core_defence_factor = SWI_army_non_cor_var
+	custom_modifier_tooltip = SWI_militias_no_normal_conscription_tt
+}
+
+SWI_economy_dynmod = {
+	enable = { always = yes }
+	icon = GFX_idea_GER_recovering_economy
+	production_speed_buildings_factor = SWI_economy_construcion_speed_var
+}

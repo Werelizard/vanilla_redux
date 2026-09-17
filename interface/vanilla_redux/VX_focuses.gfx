@@ -24,6 +24,10 @@ spriteTypes = {
 		name = "GFX_goal_generic_soldier_charge"
 		texturefile = "gfx/interface/goals/focus_generic_soldier_charge.dds"			
 	}
+	SpriteType = {
+		name = "GFX_goal_generic_budget"
+		texturefile = "gfx/interface/goals/focus_generic_budget.dds"			
+	}
 	# Germany
 	SpriteType = {
 		name = "GFX_goal_GER_Militarise_Rhineland"
@@ -73,5 +77,13 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_SWI_will_to_fight"
 		texturefile = "gfx/interface/goals/SWI/SWI_will_to_fight.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_SWI_gold_trade"
+		texturefile = "gfx/interface/goals/SWI/SWI_gold_trade.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_SWI_railways"
+		texturefile = "gfx/interface/goals/SWI/SWI_railways.dds"			
 	}
 }

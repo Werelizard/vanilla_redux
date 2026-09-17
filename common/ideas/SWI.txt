@@ -13,7 +13,30 @@ ideas = {
 				can_join_factions = no
 			}
 		}
-		### Swiss Militias
+		### Stalled Military - Switzerland REALLY didn't have a military budget
+		SWI_stalled_military_budget = {
+			modifier = {
+				military_industrial_organization_funds_gain = -0.5
+			}
+			research_bonus = {
+				infantry_weapons = -0.1
+				artillery = -0.1
+				armor = -0.1
+				air_equipment = -0.1
+			}
+		}
+		SWI_stalled_military_budget_improved = {
+			modifier = {
+				military_industrial_organization_funds_gain = -0.2
+			}
+			research_bonus = {
+				infantry_weapons = -0.05
+				artillery = -0.05
+				armor = -0.05
+				air_equipment = -0.05
+			}
+		}
+		### Swiss Militias - dummy idea for the load screen
 		SWI_militias = {
 			modifier = {
 				conscription = 0.035

@@ -1224,10 +1224,10 @@ can_remove_disarmed_nation_trigger = {
 	}
 	if = {
 		limit = {
-			has_idea = SWI_militias
+			has_dynamic_modifier = SWI_militia_dynmod
 		}
 		NOT = {
-			has_idea = SWI_militias
+			has_dynamic_modifier = SWI_militia_dynmod
 		}
 	}
 }
@@ -1238,10 +1238,10 @@ can_remove_volunteer_only_trigger = {
 	}
 	if = {
 		limit = {
-			has_idea = SWI_militias
+			has_dynamic_modifier = SWI_militia_dynmod
 		}
 		NOT = {
-			has_idea = SWI_militias
+			has_dynamic_modifier = SWI_militia_dynmod
 		}
 	}
 }
@@ -1252,10 +1252,10 @@ can_remove_limited_conscription_trigger = {
 	}
 	if = {
 		limit = {
-			has_idea = SWI_militias
+			has_dynamic_modifier = SWI_militia_dynmod
 		}
 		NOT = {
-			has_idea = SWI_militias
+			has_dynamic_modifier = SWI_militia_dynmod
 		}
 	}
 }
@@ -1266,10 +1266,10 @@ can_remove_extensive_conscription_trigger = {
 	}
 	if = {
 		limit = {
-			has_idea = SWI_militias
+			has_dynamic_modifier = SWI_militia_dynmod
 		}
 		NOT = {
-			has_idea = SWI_militias
+			has_dynamic_modifier = SWI_militia_dynmod
 		}
 	}
 }
@@ -1280,10 +1280,10 @@ can_remove_service_by_requirement_trigger = {
 	}
 	if = {
 		limit = {
-			has_idea = SWI_militias
+			has_dynamic_modifier = SWI_militia_dynmod
 		}
 		NOT = {
-			has_idea = SWI_militias
+			has_dynamic_modifier = SWI_militia_dynmod
 		}
 	}
 }
@@ -1294,10 +1294,10 @@ can_remove_all_adults_serve_trigger = {
 	}
 	if = {
 		limit = {
-			has_idea = SWI_militias
+			has_dynamic_modifier = SWI_militia_dynmod
 		}
 		NOT = {
-			has_idea = SWI_militias
+			has_dynamic_modifier = SWI_militia_dynmod
 		}
 	}
 }
@@ -1308,10 +1308,10 @@ can_remove_scraping_the_barrel_trigger = {
 	}
 	if = {
 		limit = {
-			has_idea = SWI_militias
+			has_dynamic_modifier = SWI_militia_dynmod
 		}
 		NOT = {
-			has_idea = SWI_militias
+			has_dynamic_modifier = SWI_militia_dynmod
 		}
 	}
 }

@@ -723,7 +723,10 @@ peoples_war = {
     xp_type = army
 
     available = {
-        has_socialist_government_trigger = yes
+        OR = {
+            has_socialist_government_trigger = yes
+            has_country_flag = has_access_to_peoples_war_subdoctine_flag
+        }
     }
     visible = {
         has_dlc = "No Compromise, No Surrender"

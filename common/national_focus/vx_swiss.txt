@@ -19,7 +19,12 @@ focus_tree = {
 	}
 
 	shortcut = {
-		name = SWI_spiritual_defense
+		name = SWI_shortcut_economic_development
+		target = SWI_state_of_the_economy
+	}
+
+	shortcut = {
+		name = SWI_shortcut_spiritual_defense
 		target = SWI_spiritual_defense
 	}
 
@@ -45,10 +50,10 @@ focus_tree = {
 			
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 			OR = {
 				threat > 0.05
 				has_defensive_war = yes
@@ -71,10 +76,10 @@ focus_tree = {
 			focus = SWI_spiritual_defense
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -92,10 +97,10 @@ focus_tree = {
 			focus = SWI_spiritual_defense
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -120,9 +125,14 @@ focus_tree = {
 			}
 		}
 		available = {
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
+				threat > 0.1
+				has_defensive_war = yes
+				is_potential_war_target = yes
 			}
 		}
 		completion_reward = {
@@ -141,10 +151,10 @@ focus_tree = {
 			focus = SWI_towards_economic_mobilisation
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -162,10 +172,10 @@ focus_tree = {
 			focus = SWI_civilian_readniness
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -184,10 +194,10 @@ focus_tree = {
 			focus = SWI_towards_economic_mobilisation
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -208,16 +218,14 @@ focus_tree = {
 			focus = SWI_civilian_readniness
 		}
 		available = {
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
-			OR = {
-				is_potential_war_target = yes
+				threat > 0.15
 				has_defensive_war = yes
-				any_neighbor_country = {
-					has_war = yes
-				}
+				is_potential_war_target = yes
 			}
 		}
 		completion_reward = {
@@ -236,10 +244,10 @@ focus_tree = {
 			focus = SWI_towards_economic_mobilisation
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -257,10 +265,10 @@ focus_tree = {
 			focus = SWI_towards_economic_mobilisation
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 			OR = {
 				threat > 0.15
 				has_defensive_war = yes
@@ -298,10 +306,10 @@ focus_tree = {
 			focus = SWI_appoint_commander_in_chief
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			hidden_effect = {
@@ -328,10 +336,10 @@ focus_tree = {
 			focus = SWI_a_mountain_fortress
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -352,10 +360,10 @@ focus_tree = {
 			focus = SWI_a_mountain_fortress
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -379,10 +387,10 @@ focus_tree = {
 			focus = SWI_evacuate_industries
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -403,10 +411,10 @@ focus_tree = {
 			focus = SWI_evacuate_industries
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -427,10 +435,10 @@ focus_tree = {
 			focus = SWI_a_national_redoubt
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -451,10 +459,10 @@ focus_tree = {
 			focus = SWI_a_national_redoubt
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -475,10 +483,10 @@ focus_tree = {
 			focus = SWI_mountain_artillery
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -511,10 +519,10 @@ focus_tree = {
 			focus = SWI_appoint_commander_in_chief
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			hidden_effect = {
@@ -538,10 +546,10 @@ focus_tree = {
 			focus = SWI_mobilisation_swiss_spirit
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -559,10 +567,10 @@ focus_tree = {
 			focus = SWI_until_death
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -580,10 +588,10 @@ focus_tree = {
 			focus = SWI_until_death
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -601,10 +609,10 @@ focus_tree = {
 			focus = SWI_until_death
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -625,10 +633,10 @@ focus_tree = {
 			focus = SWI_decentralised_training
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -646,10 +654,10 @@ focus_tree = {
 			focus = SWI_mobilisation_swiss_spirit
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -667,10 +675,10 @@ focus_tree = {
 			focus = SWI_mobilisation_swiss_spirit
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -703,10 +711,10 @@ focus_tree = {
 			focus = SWI_appoint_commander_in_chief
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			hidden_effect = {
@@ -730,10 +738,10 @@ focus_tree = {
 			focus = SWI_small_unit_tactics
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -741,8 +749,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SWI_better_logistics
-		icon = GFX_focus_generic_truck
+		id = SWI_better_planning
+		icon = GFX_goal_generic_position_armies
 		cost = 4
 		x = -2
 		y = 2
@@ -751,10 +759,10 @@ focus_tree = {
 			focus = SWI_mountain_engineer_corps
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -772,10 +780,10 @@ focus_tree = {
 			focus = SWI_small_unit_tactics
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -793,10 +801,10 @@ focus_tree = {
 			focus = SWI_the_exceptional_soldier
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -817,10 +825,10 @@ focus_tree = {
 			focus = SWI_the_exceptional_soldier
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -829,7 +837,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_deep_infiltration
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_goal_generic_more_territorial_claims
 		cost = 4
 		x = 1
 		y = 4
@@ -838,10 +846,10 @@ focus_tree = {
 			focus = SWI_expand_mountaineer_training
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -859,10 +867,10 @@ focus_tree = {
 			focus = SWI_expand_mountaineer_training
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -883,10 +891,10 @@ focus_tree = {
 			focus = SWI_small_unit_tactics
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -917,10 +925,10 @@ focus_tree = {
 			focus = SWI_small_unit_tactics
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -956,10 +964,10 @@ focus_tree = {
 			focus = SWI_appoint_commander_in_chief
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -977,10 +985,10 @@ focus_tree = {
 			focus = SWI_swiss_airforce
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -998,10 +1006,10 @@ focus_tree = {
 			focus = SWI_swiss_airforce
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -1019,10 +1027,10 @@ focus_tree = {
 			focus = SWI_expand_air_bases
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -1040,10 +1048,10 @@ focus_tree = {
 			focus = SWI_swiss_airforce
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -1061,10 +1069,10 @@ focus_tree = {
 			focus = SWI_modernise_air_force
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
-			}
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
 		}
 		completion_reward = {
 			
@@ -1083,10 +1091,310 @@ focus_tree = {
 			focus = SWI_modernise_air_force
 		}
 		available = {
-			OR = {
-				has_democratic_government_tooltip_trigger = yes
-				SWI_emergency_government_trigger = yes
+			# OR = {
+			# 	has_democratic_government_tooltip_trigger = yes
+			# 	SWI_emergency_government_trigger = yes
+			# }
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	###################
+	# ECONOMY
+	###################
+
+	focus = {
+		id = SWI_hydroelectric_effort
+		icon = GFX_focus_generic_hydroelectric_energy
+		cost = 4
+		x = 10
+		y = 1
+		offset = {
+			x = -5
+			trigger = {
+				OR = {					
+					has_completed_focus = SWI_small_unit_tactics
+					has_completed_focus = SWI_a_mountain_fortress
+					has_completed_focus = SWI_mobilisation_swiss_spirit
+				}
 			}
+		}
+		prerequisite = {
+			focus = SWI_state_of_the_economy
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_state_of_the_economy
+		icon = GFX_goal_generic_budget
+		cost = 4
+		x = 3
+		y = -1
+		relative_position_id = SWI_hydroelectric_effort
+		prerequisite = {
+			
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_dynamic_modifier = {
+				modifier = SWI_economy_dynmod
+			}
+		}
+	}
+
+	focus = {
+		id = SWI_expand_rail_developments
+		icon = GFX_goal_SWI_railways
+		cost = 4
+		x = 2
+		y = 0
+		relative_position_id = SWI_hydroelectric_effort
+		prerequisite = {
+			focus = SWI_state_of_the_economy
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_electrification_effort
+		icon = GFX_focus_generic_phone
+		cost = 4
+		x = -1
+		y = 1
+		relative_position_id = SWI_hydroelectric_effort
+		prerequisite = {
+			focus = SWI_hydroelectric_effort
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_further_mineral_extraction
+		icon = GFX_focus_generic_mineral_prospecting
+		cost = 4
+		x = 1
+		y = 1
+		relative_position_id = SWI_hydroelectric_effort
+		prerequisite = {
+			focus = SWI_hydroelectric_effort
+			focus = SWI_expand_rail_developments
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_continue_industrial_developments
+		icon = GFX_focus_generic_modernize_industry
+		cost = 4
+		x = 2
+		y = 2
+		relative_position_id = SWI_hydroelectric_effort
+		prerequisite = {
+			focus = SWI_hydroelectric_effort
+			focus = SWI_expand_rail_developments
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_connect_countryside
+		icon = GFX_focus_generic_railroad
+		cost = 4
+		x = 3
+		y = 1
+		relative_position_id = SWI_hydroelectric_effort
+		prerequisite = {
+			focus = SWI_expand_rail_developments
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_expand_engineering_schools
+		icon = GFX_focus_generic_industrial_experts
+		cost = 4
+		x = 5
+		y = 1
+		relative_position_id = SWI_hydroelectric_effort
+		prerequisite = {
+			focus = SWI_finance_domestic_industries
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_alpine_projects
+		icon = GFX_focus_generic_industral_devlopment_bucket
+		cost = 4
+		x = 4
+		y = 2
+		relative_position_id = SWI_hydroelectric_effort
+		prerequisite = {
+			focus = SWI_connect_countryside
+		}
+		prerequisite = {
+			focus = SWI_expand_engineering_schools
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_polytechnic_eduction
+		icon = GFX_focus_generic_university_2
+		cost = 4
+		x = 6
+		y = 2
+		relative_position_id = SWI_hydroelectric_effort
+		prerequisite = {
+			focus = SWI_expand_engineering_schools
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_full_throttle_industrialisation
+		icon = GFX_focus_generic_low_cost_housing
+		cost = 4
+		x = 1
+		y = 3
+		relative_position_id = SWI_hydroelectric_effort
+		prerequisite = {			
+			focus = SWI_further_mineral_extraction
+		}
+		prerequisite = {
+			focus = SWI_continue_industrial_developments
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = SWI_support_traditional_industries
+		}
+	}
+
+	focus = {
+		id = SWI_support_traditional_industries
+		icon = GFX_focus_generic_modernize_agriculture_2
+		cost = 4
+		x = 3
+		y = 3
+		relative_position_id = SWI_hydroelectric_effort
+		prerequisite = {
+			focus = SWI_connect_countryside
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = SWI_full_throttle_industrialisation
+		}
+	}
+
+	focus = {
+		id = SWI_expand_civilian_industries
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 4
+		x = 2
+		y = 4
+		relative_position_id = SWI_hydroelectric_effort
+		prerequisite = {
+			focus = SWI_full_throttle_industrialisation
+			focus = SWI_support_traditional_industries
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_finance_domestic_industries
+		icon = GFX_focus_generic_industry_2
+		cost = 4
+		x = 6
+		y = 0
+		relative_position_id = SWI_hydroelectric_effort
+		prerequisite = {
+			focus = SWI_state_of_the_economy
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_gold_trade
+		icon = GFX_goal_SWI_gold_trade
+		cost = 4
+		x = 7
+		y = 1
+		relative_position_id = SWI_hydroelectric_effort
+		prerequisite = {
+			focus = SWI_finance_domestic_industries
+		}
+		available = {
+			
 		}
 		completion_reward = {
 			

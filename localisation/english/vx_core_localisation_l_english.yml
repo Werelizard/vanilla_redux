@@ -214,6 +214,9 @@
  authoritarian_democrat_drift:0 "Daily $authoritarian_democrat$ Drift"
  autocratic_drift:0 "Daily $autocratic$ Drift"
  fascist_drift:0 "Daily $fascist$ Drift§"
+
+ ### FLAGS ###
+ has_access_to_peoples_war_subdoctine_flag:0 "Has unlocked this doctrine"
  
  ### MAP MODES ###
  MAPMODE_LEAGUE_OF_NATIONS_MAP_MODE:0 "§Y$MAPMODE_LEAGUE_OF_NATIONS_MAP_MODE_NAME$§! map mode"

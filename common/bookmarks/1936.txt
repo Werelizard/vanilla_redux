@@ -24,5 +24,23 @@ bookmarks = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }
 		}
+		"SWI"={
+			history = "SWI_1936"
+			ideology = liberal
+			ideas = {
+				SWI_absolute_neutrality
+				SWI_stalled_military_budget
+				SWI_militias
+			}
+			focuses = {
+				
+			}
+			minor = yes
+		}
+		
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
 	}
 }

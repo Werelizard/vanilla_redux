@@ -22,15 +22,27 @@
  SWI_fascist_party_long:0 "Nationale Front / Front National"
 
  ###################
+ # DYNAMIC MODIFIERS
+ ###################
+ SWI_militia_dynmod:0 "Swiss Militias"
+ SWI_militia_dynmod_desc:0 ""
+ SWI_militias_no_normal_conscription_tt:0 "£trigger_no Can not increase conscription"
+
+ SWI_economy_dynmod:0 "The Swiss Economy"
+ SWI_economy_dynmod_desc:0 ""
+
+ ###################
  # IDEAS
  ###################
  SWI_absolute_neutrality:0 "Swiss Neutrality"
  SWI_absolute_neutrality_desc: ""
  SWI_neutrality_no_volunteers_tt:0 "£trigger_no Can not send volunteers"
 
- SWI_militias:0 "Swiss Militias"
- SWI_militias_desc:0 ""
- SWI_militias_no_normal_conscription_tt:0 "£trigger_no Can not increase conscription"
+ SWI_stalled_military_budget:0 "Stalled Military Developments"
+ SWI_stalled_military_budget_desc:0 ""
+
+ SWI_stalled_military_budget_improved:0 "$SWI_stalled_military_budget$"
+ SWI_stalled_military_budget_improved_desc:0 "$SWI_stalled_military_budget_desc$"
 
  ###################
  # SWITZERLAND - CHARACTERS
@@ -59,6 +71,12 @@
  ###################
  # SWITZERLAND EVENTS
  ###################
+
+ ###################
+ # SWITZERLAND FOCUS SHORTCUTS
+ ###################
+ SWI_shortcut_spiritual_defense:0 "Spiritual Defence"
+ SWI_shortcut_economic_development:0 "The Swiss Industry"
 
  ###################
  # SWITZERLAND FOCI
@@ -142,14 +160,14 @@
  SWI_resource_relocation:0 "Emergency Stockpiles"
  SWI_resource_relocation_desc:0 ""
 
- SWI_small_unit_tactics:0 "Elevate the Grenadiers"
+ SWI_small_unit_tactics:0 "Quality Over Quantity"
  SWI_small_unit_tactics_desc:0 ""
 
- SWI_mountain_engineer_corps:0 "Integrated Engineer Training"
+ SWI_mountain_engineer_corps:0 "Integrated Support Companies"
  SWI_mountain_engineer_corps_desc:0 ""
 
- SWI_better_logistics:0 "Improve Military Logistics"
- SWI_better_logistics_desc:0 ""
+ SWI_better_planning:0 "Improve Cross-Unit Coordination"
+ SWI_better_planning_desc:0 ""
 
  SWI_the_exceptional_soldier:0 "The Exceptional Soldier"
  SWI_the_exceptional_soldier_desc:0 ""
@@ -175,7 +193,7 @@
  SWI_radar_developments:0 "Radar Developments"
  SWI_radar_developments_desc:0 ""
 
- SWI_expand_air_bases:0 "Expand Air Fields"
+ SWI_expand_air_bases:0 "Expand the Alpnach and Dübendorf Air Fields"
  SWI_expand_air_bases_desc:0 ""
 
  SWI_anti_air_defence:0 "Protect our Airspace"
@@ -192,6 +210,51 @@
 
  SWI_shock_troops:0 "Shock Warfare"
  SWI_shock_troops_desc:0 ""
+
+ SWI_state_of_the_economy:0 "Review the Federal Budget"
+ SWI_state_of_the_economy_desc:0 ""
+
+ SWI_hydroelectric_effort:0 "Continue Hydroelectric Developments"
+ SWI_hydroelectric_effort_desc:0 ""
+
+ SWI_expand_rail_developments:0 "Purchase Cantonal Railways"
+ SWI_expand_rail_developments_desc:0 ""
+
+ SWI_electrification_effort:0 "Electrification Efforts"
+ SWI_electrification_effort_desc:0 ""
+
+ SWI_further_mineral_extraction:0 "The Wealth of the Alps"
+ SWI_further_mineral_extraction_desc:0 ""
+
+ SWI_continue_industrial_developments:0 "Further Industrial Developments"
+ SWI_continue_industrial_developments_desc:0 ""
+
+ SWI_connect_countryside:0 "Connect the Countryside"
+ SWI_connect_countryside_desc:0 ""
+
+ SWI_expand_engineering_schools:0 "Broaden the Engineering Curiculum"
+ SWI_expand_engineering_schools_desc:0 ""
+
+ SWI_alpine_projects:0 "Develop the Mountain Cantons"
+ SWI_alpine_projects_desc:0 ""
+
+ SWI_polytechnic_eduction:0 "Polythechnic Education"
+ SWI_polytechnic_eduction_desc:0 ""
+
+ SWI_full_throttle_industrialisation:0 "Forward into the Twentieth Century"
+ SWI_full_throttle_industrialisation_desc:0 ""
+
+ SWI_support_traditional_industries:0 "Support Traditional Industries"
+ SWI_support_traditional_industries_desc:0 ""
+
+ SWI_expand_civilian_industries:0 "Continuous Industrialisation"
+ SWI_expand_civilian_industries_desc:0 ""
+
+ SWI_finance_domestic_industries:0 "Finance Domestic Industries"
+ SWI_finance_domestic_industries_desc:0 ""
+
+ SWI_gold_trade:0 "Invest in the Banking Sector"
+ SWI_gold_trade_desc:0 ""
 
  ###################
  # SWITZERLAND FLAGS
