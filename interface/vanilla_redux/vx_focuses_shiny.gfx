@@ -1,4 +1,191 @@
 spriteTypes = {
+	# Generic
+	SpriteType = {
+		name = "GFX_goal_generic_mountain_plane_shine"
+		texturefile = "gfx/interface/goals/generic_mountain_plane.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/generic_mountain_plane.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/generic_mountain_plane.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_airforce_shine"
+		texturefile = "gfx/interface/goals/focus_generic_airforce.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_generic_airforce.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_generic_airforce.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_military_engineers_shine"
+		texturefile = "gfx/interface/goals/focus_generic_military_engineers.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_generic_military_engineers.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_generic_military_engineers.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_militia_shine"
+		texturefile = "gfx/interface/goals/focus_generic_militia.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_generic_militia.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_generic_militia.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_resistance_shine"
+		texturefile = "gfx/interface/goals/focus_generic_resistance.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_generic_resistance.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_generic_resistance.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_soldier_charge_shine"
+		texturefile = "gfx/interface/goals/focus_generic_soldier_charge.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_generic_soldier_charge.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_generic_soldier_charge.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
 	# Germany
 	SpriteType = {
 		name = "GFX_goal_GER_Militarise_Rhineland_shine"
@@ -6,7 +193,7 @@ spriteTypes = {
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
 			animationmaskfile = "gfx/interface/goals/GER/GER_Militarise_Rhineland.dds"
-			animationtexturefile = "gfx/interface/goals/GER/shine_overlay.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -19,7 +206,7 @@ spriteTypes = {
 
 		animation = {
 			animationmaskfile = "gfx/interface/goals/GER/GER_Militarise_Rhineland.dds"
-			animationtexturefile = "gfx/interface/goals/GER/shine_overlay.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -38,7 +225,7 @@ spriteTypes = {
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
 			animationmaskfile = "gfx/interface/goals/GER/GER_Enforce_Party_State.dds"
-			animationtexturefile = "gfx/interface/goals/GER/shine_overlay.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -51,7 +238,7 @@ spriteTypes = {
 
 		animation = {
 			animationmaskfile = "gfx/interface/goals/GER/GER_Enforce_Party_State.dds"
-			animationtexturefile = "gfx/interface/goals/GER/shine_overlay.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -70,7 +257,7 @@ spriteTypes = {
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
 			animationmaskfile = "gfx/interface/goals/GER/GER_Reorganise_Wehrmacht.dds"
-			animationtexturefile = "gfx/interface/goals/GER/shine_overlay.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -83,7 +270,7 @@ spriteTypes = {
 
 		animation = {
 			animationmaskfile = "gfx/interface/goals/GER/GER_Reorganise_Wehrmacht.dds"
-			animationtexturefile = "gfx/interface/goals/GER/shine_overlay.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -102,7 +289,7 @@ spriteTypes = {
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
 			animationmaskfile = "gfx/interface/goals/GER/GER_Fuhrerprinzip.dds"
-			animationtexturefile = "gfx/interface/goals/GER/shine_overlay.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -115,7 +302,7 @@ spriteTypes = {
 
 		animation = {
 			animationmaskfile = "gfx/interface/goals/GER/GER_Fuhrerprinzip.dds"
-			animationtexturefile = "gfx/interface/goals/GER/shine_overlay.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -134,7 +321,7 @@ spriteTypes = {
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
 			animationmaskfile = "gfx/interface/goals/GER/GER_Expand_SS_Recruitment.dds"
-			animationtexturefile = "gfx/interface/goals/GER/shine_overlay.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -147,7 +334,7 @@ spriteTypes = {
 
 		animation = {
 			animationmaskfile = "gfx/interface/goals/GER/GER_Expand_SS_Recruitment.dds"
-			animationtexturefile = "gfx/interface/goals/GER/shine_overlay.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -166,7 +353,7 @@ spriteTypes = {
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
 			animationmaskfile = "gfx/interface/goals/GER/GER_demonstrate_german_might.dds"
-			animationtexturefile = "gfx/interface/goals/GER/shine_overlay.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -179,7 +366,7 @@ spriteTypes = {
 
 		animation = {
 			animationmaskfile = "gfx/interface/goals/GER/GER_demonstrate_german_might.dds"
-			animationtexturefile = "gfx/interface/goals/GER/shine_overlay.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -198,7 +385,7 @@ spriteTypes = {
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
 			animationmaskfile = "gfx/interface/goals/GER/GER_triumphant_will.dds"
-			animationtexturefile = "gfx/interface/goals/GER/shine_overlay.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -211,7 +398,7 @@ spriteTypes = {
 
 		animation = {
 			animationmaskfile = "gfx/interface/goals/GER/GER_triumphant_will.dds"
-			animationtexturefile = "gfx/interface/goals/GER/shine_overlay.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -230,7 +417,7 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
 			animationmaskfile = "gfx/interface/goals/GER/GER_the_supreme_leader.dds"
-			animationtexturefile = "gfx/interface/goals/GER/shine_overlay.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -243,7 +430,7 @@ spriteTypes = {
 
 		animation = {
 			animationmaskfile = "gfx/interface/goals/GER/GER_the_supreme_leader.dds"
-			animationtexturefile = "gfx/interface/goals/GER/shine_overlay.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -276,6 +463,99 @@ spriteTypes = {
 
 		animation = {
 			animationmaskfile = "gfx/interface/goals/SWI/SWI_spiritual_defence.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_goal_SWI_impregnable_fortress_shine"
+		texturefile = "gfx/interface/goals/SWI/SWI_impregnable_fortress.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SWI/SWI_impregnable_fortress.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SWI/SWI_impregnable_fortress.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_goal_SWI_expand_grenadiers_shine"
+		texturefile = "gfx/interface/goals/SWI/SWI_expand_grenadiers.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SWI/SWI_expand_grenadiers.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SWI/SWI_expand_grenadiers.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_goal_SWI_will_to_fight_shine"
+		texturefile = "gfx/interface/goals/SWI/SWI_will_to_fight.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SWI/SWI_will_to_fight.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SWI/SWI_will_to_fight.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)

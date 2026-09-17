@@ -1,4 +1,29 @@
 spriteTypes = {
+	# Generic
+	SpriteType = {
+		name = "GFX_goal_generic_mountain_plane"
+		texturefile = "gfx/interface/goals/generic_mountain_plane.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_airforce"
+		texturefile = "gfx/interface/goals/focus_generic_airforce.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_military_engineers"
+		texturefile = "gfx/interface/goals/focus_generic_military_engineers.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_militia"
+		texturefile = "gfx/interface/goals/focus_generic_militia.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_resistance"
+		texturefile = "gfx/interface/goals/focus_generic_resistance.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_soldier_charge"
+		texturefile = "gfx/interface/goals/focus_generic_soldier_charge.dds"			
+	}
 	# Germany
 	SpriteType = {
 		name = "GFX_goal_GER_Militarise_Rhineland"
@@ -36,5 +61,17 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_SWI_spiritual_defence"
 		texturefile = "gfx/interface/goals/SWI/SWI_spiritual_defence.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_SWI_impregnable_fortress"
+		texturefile = "gfx/interface/goals/SWI/SWI_impregnable_fortress.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_SWI_expand_grenadiers"
+		texturefile = "gfx/interface/goals/SWI/SWI_expand_grenadiers.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_SWI_will_to_fight"
+		texturefile = "gfx/interface/goals/SWI/SWI_will_to_fight.dds"			
 	}
 }

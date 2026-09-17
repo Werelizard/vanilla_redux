@@ -100,7 +100,7 @@
  SWI_evacuate_industries:0 "Evacuate Industrial Assets"
  SWI_evacuate_industries_desc:0 ""
 
- SWI_a_national_redoubt:0 "The Réduit National"
+ SWI_a_national_redoubt:0 "The National Redoubt"
  SWI_a_national_redoubt_desc:0 ""
 
  SWI_prepare_sabotage:0 "Rig Infrastructure to Blow"
@@ -115,13 +115,13 @@
  SWI_mountain_artillery:0 "Death From the Mountaintops"
  SWI_mountain_artillery_desc:0 ""
 
- SWI_total_air_supremacy:0 "Defend our Skies"
+ SWI_total_air_supremacy:0 "Deterrence in the Air"
  SWI_total_air_supremacy_desc:0 ""
 
- SWI_mobilisation_swiss_spirit:0 "Galvanise the Helvetic Spirit"
+ SWI_mobilisation_swiss_spirit:0 "The Will to Fight"
  SWI_mobilisation_swiss_spirit_desc:0 ""
 
- SWI_until_death:0 "The Will to Fight"
+ SWI_until_death:0 "Galvanise the Helvetic Spirit"
  SWI_until_death_desc:0 ""
 
  SWI_total_resistance:0 "Scorched Earth Tactics"
@@ -142,10 +142,10 @@
  SWI_resource_relocation:0 "Emergency Stockpiles"
  SWI_resource_relocation_desc:0 ""
 
- SWI_small_unit_tactics:0 "Expand the Mountain Grenadiers"
+ SWI_small_unit_tactics:0 "Elevate the Grenadiers"
  SWI_small_unit_tactics_desc:0 ""
 
- SWI_mountain_engineer_corps:0 "Alpine Theatre Training"
+ SWI_mountain_engineer_corps:0 "Integrated Engineer Training"
  SWI_mountain_engineer_corps_desc:0 ""
 
  SWI_better_logistics:0 "Improve Military Logistics"
@@ -157,13 +157,13 @@
  SWI_improved_hospitals:0 "Spirit of Saint-Bernard"
  SWI_improved_hospitals_desc:0 ""
 
- SWI_expand_mountaineer_training:0 "Masters of the Alps"
+ SWI_expand_mountaineer_training:0 "Alpine Theatre Training"
  SWI_expand_mountaineer_training_desc:0 ""
 
- SWI_deep_infiltration:0 "Deep Infiltration Tactics"
+ SWI_deep_infiltration:0 "Behind Enemy Lines"
  SWI_deep_infiltration_desc:0 ""
 
- SWI_camouflage_techniques:0 "Adopt Camouflage Patterns"
+ SWI_camouflage_techniques:0 "Camouflage Mastery"
  SWI_camouflage_techniques_desc:0 ""
 
  SWI_air_land_war:0 "Coordinated Strikes"
@@ -189,6 +189,9 @@
 
  SWI_alpine_flights:0 "Trans-Alpine Flights"
  SWI_alpine_flights_desc:0 ""
+
+ SWI_shock_troops:0 "Shock Warfare"
+ SWI_shock_troops_desc:0 ""
 
  ###################
  # SWITZERLAND FLAGS
