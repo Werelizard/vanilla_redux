@@ -12,10 +12,10 @@
  SWI_progressive_party_long:0 "Landesring der Unabhängigen / Alliance des Indépendants"
  SWI_liberal_party:0 "FDP/PRD - LPS/PLS"
  SWI_liberal_party_long:0 "Freisinnig-Demokratische Partei / Parti radical-démocratique - Liberale Partei der Schweiz/Parti libéral suisse"
- SWI_conservative_party:0 "CVP / PDC"
+ SWI_conservative_party:0 "CVP/PDC"
  SWI_conservative_party_long:0 "Christlichdemokratische Volkspartei der Schweiz / Parti démocrate-chrétien"
- SWI_authoritarian_democrat_party:0 "Federal Council"
- SWI_authoritarian_democrat_party_long:0 "Federal Council"
+ SWI_authoritarian_democrat_party:0 "BGB"
+ SWI_authoritarian_democrat_party_long:0 "Bauern, Gewerbe und Bürgerpartei"
  SWI_autocratic_party:0 "Schweizer Armee / Armée Suisse"
  SWI_autocratic_party_long:0 "Schweizer Armee / Armée Suisse"
  SWI_fascist_party:0 "Nationale Front / Front National"
@@ -25,8 +25,7 @@
  # DYNAMIC MODIFIERS
  ###################
  SWI_militia_dynmod:0 "Swiss Militias"
- SWI_militia_dynmod_desc:0 ""
- SWI_militias_no_normal_conscription_tt:0 "£trigger_no Can not increase conscription"
+ SWI_militia_dynmod_desc:0 "§RCan only conscript Swiss militia divisions through decisions, focuses or events. Can not recruit new units, edit or create unit templates. Can not increase conscription past limited conscription.§!"
 
  SWI_economy_dynmod:0 "The Swiss Economy"
  SWI_economy_dynmod_desc:0 ""
@@ -38,11 +37,17 @@
  SWI_absolute_neutrality_desc: ""
  SWI_neutrality_no_volunteers_tt:0 "£trigger_no Can not send volunteers"
 
+ SWI_militias:0 "Swiss Militias"
+ SWI_militia_dynmod_desc:0 "§RCan only conscript Swiss militia divisions through decisions, focuses or events. Can not recruit new units, edit or create unit templates. Can not increase conscription past limited conscription.§!"
+
  SWI_stalled_military_budget:0 "Stalled Military Developments"
  SWI_stalled_military_budget_desc:0 ""
 
  SWI_stalled_military_budget_improved:0 "$SWI_stalled_military_budget$"
  SWI_stalled_military_budget_improved_desc:0 "$SWI_stalled_military_budget_desc$"
+
+ SWI_soc_dem_opposition:0 "Social Democratic Opposition"
+ SWI_soc_dem_opposition_desc:0 ""
 
  ###################
  # SWITZERLAND - CHARACTERS
@@ -77,6 +82,7 @@
  ###################
  SWI_shortcut_spiritual_defense:0 "Spiritual Defence"
  SWI_shortcut_economic_development:0 "The Swiss Industry"
+ SWI_shortcut_politics:0 "Federal Affairs"
 
  ###################
  # SWITZERLAND FOCI
@@ -160,7 +166,7 @@
  SWI_resource_relocation:0 "Emergency Stockpiles"
  SWI_resource_relocation_desc:0 ""
 
- SWI_small_unit_tactics:0 "Quality Over Quantity"
+ SWI_small_unit_tactics:0 "Elevate the Grenadiers"
  SWI_small_unit_tactics_desc:0 ""
 
  SWI_mountain_engineer_corps:0 "Integrated Support Companies"
@@ -256,7 +262,76 @@
  SWI_gold_trade:0 "Invest in the Banking Sector"
  SWI_gold_trade_desc:0 ""
 
+ SWI_proportionalism_woes:0 "Proportionalism's Woes"
+ SWI_proportionalism_woes_desc:0 ""
+
+ SWI_convene_federal_assembly:0 "Convene the Federal Assembly"
+ SWI_convene_federal_assembly_desc:0 ""
+ 
+ SWI_gustloff_affair:0 "The Fallout of the Gustloff Affair"
+ SWI_gustloff_affair_desc:0 ""
+
+ SWI_social_democratic_coalition:0 "A New Political Reality"
+ SWI_social_democratic_coalition_desc:0 ""
+
+ SWI_liberal_conservative_coalition:0 "The Coalition Holds"
+ SWI_liberal_conservative_coalition_desc:0 ""
+ 
+ SWI_reconcile_the_left:0 "Reconcile with the Trade Unions"
+ SWI_reconcile_the_left_desc:0 ""
+
+ SWI_reach_out_farmer_parties:0 "Reach out to the Farmers' Parties"
+ SWI_reach_out_farmer_parties_desc:0 ""
+
+ SWI_slash_taxes:0 "Trim Governmental Expenses"
+ SWI_slash_taxes_desc:0 ""
+
+ SWI_entrench_tradition:0 "Commit to Traditional Values"
+ SWI_entrench_tradition_desc:0 ""
+
+ SWI_peace_of_labour:0 "Peace of Labour"
+ SWI_peace_of_labour_desc:0 ""
+
+ SWI_ban_communist_party:0 "Ban the Swiss Communist Party"
+ SWI_ban_communist_party_desc:0 ""
+
+ SWI_strengthen_cantonal_autonomy:0 "Strengthen Cantonal Autonomy"
+ SWI_strengthen_cantonal_autonomy_desc:0 ""
+
+ SWI_promote_ruralism:0 "Promote Ruralism"
+ SWI_promote_ruralism_desc:0 ""
+
+ SWI_the_unchained_market:0 "An Unchained but Fair Market"
+ SWI_the_unchained_market_desc:0 ""
+
+ SWI_the_fair_state:0 "The Honest State"
+ SWI_the_fair_state_desc:0 ""
+
+ SWI_a_federal_police_force:0 "A Federal Police Force"
+ SWI_a_federal_police_force_desc:0 ""
+
+ SWI_fund_pro_helvetia:0 "Fund Pro Helvetia"
+ SWI_fund_pro_helvetia_desc:0 ""
+
+ SWI_extoll_the_swiss_ideal:0 "Romanticise the Swiss Ideal"
+ SWI_extoll_the_swiss_ideal_desc:0 ""
+
+ SWI_combat_foreign_influences:0 "Combat Foreign Influences"
+ SWI_combat_foreign_influences_desc:0 ""
+
+ SWI_bureau_ha:0 "Bureau Ha"
+ SWI_bureau_ha_desc:0 ""
+
+ SWI_remove_compromised_military:0 "Investigate Military Loyalties"
+ SWI_remove_compromised_military_desc:0 ""
+
+ SWI_ban_swiss_nazi_party:0 "Ban the Swiss Nazi Party"
+ SWI_ban_swiss_nazi_party_desc:0 ""
+
  ###################
  # SWITZERLAND FLAGS
  ###################
  SWI_democracy_collapsed_flag:0 "The Swiss democratic system has §Rcollapsed§!"
+ SWI_gustloff_affair_flag:0 "§YWilhelm Gustloff§! has been assassinated"
+ SWI_lib_con_coalition_flag:0 "The §YLiberal-Conservative§! coalition has maintained its primacy"
+ SWI_soc_dem_con_flag:0 "The §YSocial-Democratic Party§! was invited in the government"

@@ -47,6 +47,7 @@ add_ideas = {
 	###
 	SWI_absolute_neutrality
 	SWI_stalled_military_budget
+	SWI_soc_dem_opposition
 	SWI_militias # removed on launch
 }
 
@@ -65,7 +66,10 @@ set_variable = {
 	SWI_militia_attack_factor_var = 0.1
 }
 set_variable = {
-	SWI_army_non_cor_var = 0.1
+	SWI_army_non_cor_var = -0.1
+}
+set_variable = {
+	SWI_militia_conscription_factor_var = 0.02
 }
 set_variable = {
 	SWI_economy_construcion_speed_var = 0.05
@@ -87,3 +91,7 @@ set_technology = {
 	early_fighter = 1
 	cv_early_fighter = 1
 }
+
+### OTHER
+
+country_lock_all_division_template = yes

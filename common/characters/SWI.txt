@@ -41,6 +41,14 @@ characters = {
 				SWI_parliementary_status_quo
 			}
 			id = -1
+		}		
+		country_leader = {
+			ideology = authoritarian_democrat_subtype
+			traits = {
+				SWI_collegial_assembly
+				SWI_parliementary_status_quo
+			}
+			id = -1
 		}
 		corps_commander = {
 			visible = {
@@ -62,13 +70,6 @@ characters = {
 			civilian={
 				large=GFX_portrait_SWI_federal_council
 			}
-		}
-		country_leader = {
-			ideology = authoritarian_democrat_subtype
-			traits = {
-				SWI_collegial_assembly
-			}
-			id = -1
 		}
 		corps_commander = {
 			visible = {

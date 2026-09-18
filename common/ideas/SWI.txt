@@ -13,38 +13,34 @@ ideas = {
 				can_join_factions = no
 			}
 		}
+		### Social Democratic Oppostion - the SocDem party was the largest winner but got NO seats in the Fed Council
+		SWI_soc_dem_opposition = {
+			modifier = {
+				political_power_factor = -0.25
+				social_democratic_drift = 0.02
+			}
+		}
 		### Stalled Military - Switzerland REALLY didn't have a military budget
 		SWI_stalled_military_budget = {
 			modifier = {
 				military_industrial_organization_funds_gain = -0.5
-			}
-			research_bonus = {
-				infantry_weapons = -0.1
-				artillery = -0.1
-				armor = -0.1
-				air_equipment = -0.1
+				production_factory_max_efficiency_factor = -0.25
 			}
 		}
 		SWI_stalled_military_budget_improved = {
 			modifier = {
-				military_industrial_organization_funds_gain = -0.2
-			}
-			research_bonus = {
-				infantry_weapons = -0.05
-				artillery = -0.05
-				armor = -0.05
-				air_equipment = -0.05
+				military_industrial_organization_funds_gain = -0.25
+				production_factory_max_efficiency_factor = -0.1
 			}
 		}
 		### Swiss Militias - dummy idea for the load screen
 		SWI_militias = {
 			modifier = {
-				conscription = 0.035
+				conscription = 0.02
 				modifier_army_sub_unit_militia_defence_factor = 0.1
 				modifier_army_sub_unit_militia_attack_factor = 0.1
 				army_non_core_attack_factor = -0.1
 				army_non_core_defence_factor = -0.1
-				custom_modifier_tooltip = SWI_militias_no_normal_conscription_tt
 			}
 		}
 	}

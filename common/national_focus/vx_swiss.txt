@@ -28,6 +28,11 @@ focus_tree = {
 		target = SWI_spiritual_defense
 	}
 
+	shortcut = {
+		name = SWI_shortcut_politics
+		target = SWI_proportionalism_woes
+	}
+
 	continuous_focus_position = {
 		x = 0
 		y = 2000
@@ -35,6 +40,679 @@ focus_tree = {
 	
 	default = no	
 	reset_on_civilwar = no
+
+	###################
+	# HISTORICAL - Politics
+	###################
+
+	focus = {
+		id = SWI_proportionalism_woes
+		icon = GFX_goal_generic_political_debate
+		cost = 4
+		x = -17
+		y = 0
+		offset = {
+			x = 3
+			trigger = {
+				OR = {					
+					has_completed_focus = SWI_small_unit_tactics
+					has_completed_focus = SWI_a_mountain_fortress
+					has_completed_focus = SWI_mobilisation_swiss_spirit
+				}
+			}
+		}
+		prerequisite = {
+			
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_reconcile_the_left
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		cost = 4
+		x = -1
+		y = 1
+		relative_position_id = SWI_proportionalism_woes
+		prerequisite = {
+			focus = SWI_proportionalism_woes
+		}
+		available = {
+			NOT = {
+				has_completed_focus = SWI_ban_communist_party
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_reach_out_farmer_parties
+		icon = GFX_focus_generic_commission
+		cost = 4
+		x = 1
+		y = 1
+		relative_position_id = SWI_proportionalism_woes
+		prerequisite = {
+			focus = SWI_proportionalism_woes
+		}
+		available = {
+			has_country_flag = SWI_lib_con_coalition_flag
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_convene_federal_assembly
+		icon = GFX_focus_SWI_swiss_guiding_principles
+		cost = 4
+		x = 0
+		y = 2
+		relative_position_id = SWI_proportionalism_woes
+		prerequisite = {
+			focus = SWI_proportionalism_woes
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	###################
+	# AHISTORICAL - SocDem Coalition
+	###################
+
+
+	focus = {
+		id = SWI_social_democratic_coalition
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -2
+		y = 3
+		relative_position_id = SWI_proportionalism_woes
+		prerequisite = {
+			focus = SWI_convene_federal_assembly
+		}
+		available = {
+			has_country_flag = SWI_soc_dem_con_flag
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = SWI_liberal_conservative_coalition
+		}
+	}
+
+	focus = {
+		id = SWI_reach_out_to_moderates
+		icon = GFX_goal_generic_progdem
+		cost = 4
+		x = 1
+		y = 1
+		relative_position_id = SWI_social_democratic_coalition
+		prerequisite = {
+			focus = SWI_social_democratic_coalition
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_soc_dem_partners
+		icon = GFX_goal_generic_socdem
+		cost = 4
+		x = -1
+		y = 1
+		relative_position_id = SWI_social_democratic_coalition
+		prerequisite = {
+			focus = SWI_social_democratic_coalition
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SWI_welfare_reforms
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -2
+		y = 2
+		relative_position_id = SWI_social_democratic_coalition
+		prerequisite = {
+			focus = SWI_soc_dem_partners
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_federal_income_tax
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 0
+		y = 2
+		relative_position_id = SWI_social_democratic_coalition
+		prerequisite = {
+			focus = SWI_soc_dem_partners
+			focus = SWI_reach_out_to_moderates
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_labour_compromise
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -3
+		y = 1
+		relative_position_id = SWI_social_democratic_coalition
+		prerequisite = {
+			focus = SWI_social_democratic_coalition
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = SWI_union_representation
+		}
+	}
+
+	focus = {
+		id = SWI_union_representation
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -7
+		y = 1
+		relative_position_id = SWI_social_democratic_coalition
+		prerequisite = {
+			focus = SWI_social_democratic_coalition
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = SWI_labour_compromise
+		}
+	}
+
+	focus = {
+		id = SWI_sway_farmers
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -8
+		y = 2
+		relative_position_id = SWI_social_democratic_coalition
+		prerequisite = {
+			focus = SWI_union_representation
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = SWI_labour_compromise
+		}
+	}
+
+	focus = {
+		id = SWI_reinvent_swiss_ideal
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -4
+		y = 2
+		relative_position_id = SWI_social_democratic_coalition
+		prerequisite = {
+			focus = SWI_union_representation
+			focus = SWI_labour_compromise
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_social_democratic_reality
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -3
+		y = 3
+		relative_position_id = SWI_social_democratic_coalition
+		prerequisite = {
+			focus = SWI_reinvent_swiss_ideal
+		}
+		prerequisite = {
+			focus = SWI_welfare_reforms
+		}
+		prerequisite = {
+			focus = SWI_federal_income_tax
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = SWI_switzerland_belongs_to_workers
+		}
+	}
+
+	focus = {
+		id = SWI_the_impossible_coalition
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -6
+		y = 2
+		relative_position_id = SWI_social_democratic_coalition
+		prerequisite = {
+			focus = SWI_union_representation
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_switzerland_belongs_to_workers
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -7
+		y = 3
+		relative_position_id = SWI_social_democratic_coalition
+		prerequisite = {
+			focus = SWI_the_impossible_coalition
+		}
+		prerequisite = {
+			focus = SWI_sway_farmers
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = SWI_social_democratic_reality
+		}
+	}
+
+	###################
+	# HISTORICAL - Lib/Con coalition
+	###################
+
+	focus = {
+		id = SWI_liberal_conservative_coalition
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 2
+		y = 3
+		relative_position_id = SWI_proportionalism_woes
+		prerequisite = {
+			focus = SWI_convene_federal_assembly
+		}
+		available = {
+			has_country_flag = SWI_lib_con_coalition_flag
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = SWI_social_democratic_coalition
+		}
+	}
+
+	focus = {
+		id = SWI_slash_taxes
+		icon = GFX_focus_generic_reduce_unneccessary_expenditure
+		cost = 4
+		x = -1
+		y = 1
+		relative_position_id = SWI_liberal_conservative_coalition
+		prerequisite = {
+			focus = SWI_liberal_conservative_coalition
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_entrench_tradition
+		icon = GFX_focus_por_concordat
+		cost = 4
+		x = 1
+		y = 1
+		relative_position_id = SWI_liberal_conservative_coalition
+		prerequisite = {
+			focus = SWI_liberal_conservative_coalition
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_peace_of_labour
+		icon = GFX_focus_generic_worker_administration
+		cost = 4
+		x = 0
+		y = 2
+		relative_position_id = SWI_liberal_conservative_coalition
+		prerequisite = {
+			focus = SWI_slash_taxes
+			focus = SWI_entrench_tradition
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}	
+
+	focus = {
+		id = SWI_the_unchained_market
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -1
+		y = 3
+		relative_position_id = SWI_liberal_conservative_coalition
+		prerequisite = {
+			focus = SWI_slash_taxes
+		}
+		prerequisite = {
+			focus = SWI_peace_of_labour
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_the_fair_state	
+		icon = GFX_goal_generic_libdem
+		cost = 4
+		x = 0
+		y = 4
+		relative_position_id = SWI_liberal_conservative_coalition
+		prerequisite = {
+			focus = SWI_the_unchained_market
+		}
+		prerequisite = {
+			focus = SWI_strengthen_cantonal_autonomy
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_ban_communist_party
+		icon = GFX_goal_anti_comintern_pact
+		cost = 4
+		x = 0
+		y = 3
+		relative_position_id = SWI_convene_federal_assembly
+		prerequisite = {
+			focus = SWI_social_democratic_coalition
+			focus = SWI_liberal_conservative_coalition
+		}
+		available = {
+			NOT = {
+				has_completed_focus = SWI_reconcile_the_left
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_strengthen_cantonal_autonomy
+		icon = GFX_focus_generic_self_management
+		cost = 4
+		x = 1
+		y = 3
+		relative_position_id = SWI_liberal_conservative_coalition
+		prerequisite = {
+			focus = SWI_promote_ruralism
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_promote_ruralism
+		icon = GFX_focus_generic_immigration
+		cost = 4
+		x = 2
+		y = 2
+		relative_position_id = SWI_liberal_conservative_coalition
+		prerequisite = {
+			focus = SWI_entrench_tradition
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+	
+	###################
+	# HISTORICAL - Gustloff Affair / Neutrality
+	###################
+
+	focus = {
+		id = SWI_gustloff_affair
+		icon = GFX_goal_generic_assassination
+		cost = 4
+		x = 6
+		y = 2
+		relative_position_id = SWI_proportionalism_woes
+		prerequisite = {
+			
+		}
+		available = {
+			has_global_flag = SWI_gustloff_affair_flag
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_a_federal_police_force
+		icon = GFX_focus_SWI_federal_police
+		cost = 4
+		x = 1
+		y = 1
+		relative_position_id = SWI_gustloff_affair
+		prerequisite = {
+			focus = SWI_gustloff_affair
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_fund_pro_helvetia
+		icon = GFX_focus_SWI_establish_pro_helvetia
+		cost = 4
+		x = 0
+		y = 2
+		relative_position_id = SWI_gustloff_affair
+		prerequisite = {
+			# focus = SWI_social_democratic_coalition
+			# focus = SWI_liberal_conservative_coalition
+		}
+		prerequisite = {
+			focus = SWI_gustloff_affair
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_extoll_the_swiss_ideal
+		icon = GFX_focus_SWI_new_eidgenossenschaft
+		cost = 4
+		x = -1
+		y = 4
+		relative_position_id = SWI_gustloff_affair
+		prerequisite = {
+			focus = SWI_promote_ruralism
+		}
+		prerequisite = {
+			focus = SWI_fund_pro_helvetia
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_combat_foreign_influences
+		icon = GFX_focus_generic_whispers
+		cost = 4
+		x = 1
+		y = 3
+		relative_position_id = SWI_gustloff_affair
+		prerequisite = {
+			focus = SWI_fund_pro_helvetia
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_bureau_ha
+		icon = GFX_focus_SWI_embrace_rote_drei
+		cost = 4
+		x = 1
+		y = 5
+		relative_position_id = SWI_gustloff_affair
+		prerequisite = {
+			focus = SWI_combat_foreign_influences
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_remove_compromised_military
+		icon = GFX_focus_FIN_parmis_devils
+		cost = 4
+		x = 3
+		y = 3
+		relative_position_id = SWI_gustloff_affair
+		prerequisite = {
+			focus = SWI_fund_pro_helvetia
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_ban_swiss_nazi_party
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		cost = 4
+		x = 2
+		y = 4
+		relative_position_id = SWI_gustloff_affair
+		prerequisite = {
+			focus = SWI_combat_foreign_influences
+		}
+		prerequisite = {			
+			focus = SWI_remove_compromised_military
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
 
 	###################
 	# HISTORICAL - Spiritual Defense
@@ -223,7 +901,7 @@ focus_tree = {
 			# 	SWI_emergency_government_trigger = yes
 			# }
 			OR = {
-				threat > 0.15
+				threat > 0.2
 				has_defensive_war = yes
 				is_potential_war_target = yes
 			}
@@ -270,7 +948,7 @@ focus_tree = {
 			# 	SWI_emergency_government_trigger = yes
 			# }
 			OR = {
-				threat > 0.15
+				threat > 0.2
 				has_defensive_war = yes
 				is_potential_war_target = yes
 			}

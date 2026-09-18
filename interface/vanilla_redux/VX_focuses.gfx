@@ -28,6 +28,54 @@ spriteTypes = {
 		name = "GFX_goal_generic_budget"
 		texturefile = "gfx/interface/goals/focus_generic_budget.dds"			
 	}
+	SpriteType = {
+		name = "GFX_goal_generic_authsoc"
+		texturefile = "gfx/interface/goals/focus_generic_authsoc.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_vanvsoc"
+		texturefile = "gfx/interface/goals/focus_generic_vansoc.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_revvsoc"
+		texturefile = "gfx/interface/goals/focus_generic_revsoc.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_socdem"
+		texturefile = "gfx/interface/goals/focus_generic_socdem.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_progdem"
+		texturefile = "gfx/interface/goals/focus_generic_progressive.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_libdem"
+		texturefile = "gfx/interface/goals/focus_generic_liberal.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_condem"
+		texturefile = "gfx/interface/goals/focus_generic_conservative.dds"			
+	}	
+	SpriteType = {
+		name = "GFX_goal_generic_autdem"
+		texturefile = "gfx/interface/goals/focus_generic_authdem.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_paternal"
+		texturefile = "gfx/interface/goals/focus_generic_reactionary.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_fascist"
+		texturefile = "gfx/interface/goals/focus_generic_fascist.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_political_debate"
+		texturefile = "gfx/interface/goals/focus_generic_politics.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_assassination"
+		texturefile = "gfx/interface/goals/focus_generic_assassination.dds"			
+	}
 	# Germany
 	SpriteType = {
 		name = "GFX_goal_GER_Militarise_Rhineland"
