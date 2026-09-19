@@ -18,20 +18,38 @@ focus_tree = {
 		
 	}
 
-	# shortcut = {
-	# 	name = SWI_shortcut_economic_development
-	# 	target = SWI_state_of_the_economy
-	# }
+	shortcut = {
+		name = SWI_shortcut_foreign_policy
+		target = SWI_the_ticking_clock
+	}
 
-	# shortcut = {
-	# 	name = SWI_shortcut_spiritual_defense
-	# 	target = SWI_spiritual_defense
-	# }
+	shortcut = {
+		name = SWI_shortcut_economic_development
+		target = SWI_state_of_the_economy
+	}
 
-	# shortcut = {
-	# 	name = SWI_shortcut_politics
-	# 	target = SWI_proportionalism_woes
-	# }
+	shortcut = {
+		name = SWI_shortcut_spiritual_defense
+		target = SWI_spiritual_defense
+	}
+
+	shortcut = {
+		name = SWI_shortcut_politics
+		target = SWI_proportionalism_woes
+		trigger = {
+			NOT = {
+				SWI_emergency_government_trigger = yes
+			}
+		}
+	}
+
+	shortcut = {
+		name = SWI_shortcut_military_government
+		target = SWI_country_on_the_brink
+		trigger = {
+			SWI_emergency_government_trigger = yes
+		}
+	}
 
 	continuous_focus_position = {
 		x = 0
@@ -93,13 +111,9 @@ focus_tree = {
 			NOT = {
 				has_completed_focus = SWI_ban_communist_party
 			}
-			if = {
-				limit = {
-					NOT = {
-						has_democratic_government_trigger = yes
-					}
-				}
-				has_democratic_government_tooltip_trigger = yes
+			OR = {
+				has_government = social_democratic
+				has_government = liberal
 			}
 		}
 		completion_reward = {
@@ -118,14 +132,9 @@ focus_tree = {
 			focus = SWI_proportionalism_woes
 		}
 		available = {
-			has_country_flag = SWI_lib_con_coalition_flag
-			if = {
-				limit = {
-					NOT = {
-						has_democratic_government_trigger = yes
-					}
-				}
-				has_democratic_government_tooltip_trigger = yes
+			OR = {
+				has_government = liberal
+				has_government = conservative
 			}
 		}
 		completion_reward = {
@@ -141,7 +150,8 @@ focus_tree = {
 		y = 2
 		relative_position_id = SWI_proportionalism_woes
 		prerequisite = {
-			focus = SWI_proportionalism_woes
+			focus = SWI_reconcile_the_left
+			focus = SWI_reach_out_farmer_parties
 		}
 		available = {
 			if = {
@@ -245,8 +255,8 @@ focus_tree = {
 				}
 			}
 			OR = {
-				has_government = liberal
 				has_government = social_democratic
+				has_government = liberal
 			}
 		}
 		completion_reward = {
@@ -301,7 +311,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_a_robust_social_system
-		icon = GFX_focus_hol_the_foundations_of_defense
+		icon = GFX_focus_SWE_hygienic_housing
 		cost = 4
 		x = -2
 		y = 2
@@ -345,7 +355,10 @@ focus_tree = {
 					has_government = liberal
 				}
 				has_government = liberal
-				socdem_coalition_trigger = yes
+				OR = {
+					socdem_coalition_trigger = yes
+					progressive_coalition_trigger = yes
+				}
 			}
 			else = {
 				has_government = social_democratic
@@ -431,7 +444,9 @@ focus_tree = {
 			focus = SWI_social_democratic_coalition
 		}
 		available = {
-			has_completed_focus = SWI_reconcile_the_left
+			NOT = {
+				has_completed_focus = SWI_ban_communist_party
+			}
 			has_government = social_democratic
 		}
 		completion_reward = {
@@ -462,7 +477,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_reinvent_swiss_ideal
-		icon = GFX_focus_generic_sympathetic_judges
+		icon = GFX_focus_hol_the_foundations_of_defense
 		cost = 4
 		x = -4
 		y = 2
@@ -476,8 +491,11 @@ focus_tree = {
 				limit = {
 					has_government = liberal
 				}
-				has_government = liberal
-				socdem_coalition_trigger = yes
+				has_government = liberal				
+				OR = {
+					socdem_coalition_trigger = yes
+					progressive_coalition_trigger = yes
+				}
 			}
 			else = {
 				has_government = social_democratic
@@ -756,7 +774,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_ban_communist_party
-		icon = GFX_goal_anti_comintern_pact
+		icon = GFX_goal_focus_generic_ban_communists
 		cost = 4
 		x = 0
 		y = 3
@@ -768,6 +786,9 @@ focus_tree = {
 		available = {
 			NOT = {
 				has_completed_focus = SWI_reconcile_the_left
+			}
+			NOT = {
+				has_completed_focus = SWI_union_representation
 			}
 			NOT = {
 				has_socialist_government_tooltip_trigger = yes
@@ -1020,8 +1041,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SWI_expand_military_intelligence
-		icon = GFX_focus_generic_secret_service_agency
+		id = SWI_appeal_to_the_world
+		icon = GFX_focus_CZE_german_puppet
 		cost = 4
 		x = 2
 		y = 1
@@ -1231,7 +1252,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_hijack_swiss_resistance
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_propaganda
 		cost = 4
 		x = -1
 		y = 4
@@ -1249,7 +1270,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_claim_greater_switzerland
-		icon = GFX_goal_unknown
+		icon = GFX_focus_SWI_expand_the_federation
 		cost = 4
 		x = -2
 		y = 5
@@ -1267,7 +1288,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_an_alpine_protectorate
-		icon = GFX_goal_unknown
+		icon = GFX_goal_SWI_alpine_protectorate
 		cost = 4
 		x = -1
 		y = 6
@@ -1306,7 +1327,7 @@ focus_tree = {
 			# 	SWI_emergency_government_trigger = yes
 			# }
 			OR = {
-				threat > 0.05
+				threat > 0.1
 				has_defensive_war = yes
 				is_potential_war_target = yes
 			}
@@ -1381,7 +1402,7 @@ focus_tree = {
 			# 	SWI_emergency_government_trigger = yes
 			# }
 			OR = {
-				threat > 0.1
+				threat > 0.15
 				has_defensive_war = yes
 				is_potential_war_target = yes
 			}
@@ -1486,7 +1507,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_civilian_readniness
-		icon = GFX_focus_generic_workers
+		icon = GFX_focus_SWE_rations
 		cost = 4
 		x = 3
 		y = 3
@@ -2405,7 +2426,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_expand_rail_developments
-		icon = GFX_goal_SWI_railways
+		icon = GFX_goal_focus_generic_buy_railway
 		cost = 4
 		x = 2
 		y = 0
@@ -2643,6 +2664,344 @@ focus_tree = {
 		relative_position_id = SWI_hydroelectric_effort
 		prerequisite = {
 			focus = SWI_finance_domestic_industries
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	###################
+	# FOREIGN POLICY
+	###################
+
+	focus = {
+		id = SWI_the_ticking_clock
+		icon = GFX_focus_SIA_prepare_for_a_short_war
+		cost = 4
+		x = 11
+		y = 11
+		relative_position_id = SWI_proportionalism_woes
+		prerequisite = {
+			
+		}
+		available = {			
+			OR = {
+				threat > 0.1
+				has_global_flag = GER_Rhineland_Succesfully_Remilitarised_flag
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_reconsider_neutral_stance
+		icon = GFX_focus_generic_sympathetic_judges
+		cost = 4
+		x = -3
+		y = 1
+		relative_position_id = SWI_the_ticking_clock
+		prerequisite = {
+			focus = SWI_the_ticking_clock
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = SWI_hold_out_on_our_own
+		}
+	}
+
+	focus = {
+		id = SWI_swiss_volunteer_corps
+		icon = GFX_focus_generic_manpower
+		cost = 4
+		x = -2
+		y = 2
+		relative_position_id = SWI_the_ticking_clock
+		prerequisite = {
+			focus = SWI_reconsider_neutral_stance
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_rebuke_neutrality
+		icon = GFX_focus_SWI_abandon_neutrality
+		cost = 4
+		x = -4
+		y = 2
+		relative_position_id = SWI_the_ticking_clock
+		prerequisite = {
+			focus = SWI_use_the_gotthard_league
+		}
+		prerequisite = {
+			focus = SWI_reconsider_neutral_stance
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_voralberg_intervention
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 4
+		x = -5
+		y = 3
+		relative_position_id = SWI_the_ticking_clock
+		prerequisite = {
+			focus = SWI_rebuke_neutrality
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_support_alpine_democracies
+		icon = GFX_focus_generic_democratic_europe
+		cost = 4
+		x = -3
+		y = 3
+		relative_position_id = SWI_the_ticking_clock
+		prerequisite = {
+			focus = SWI_rebuke_neutrality
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_the_alpine_confederacy
+		icon = GFX_goal_SWI_alpine_confederacy
+		cost = 4
+		x = -4
+		y = 4
+		relative_position_id = SWI_the_ticking_clock
+		prerequisite = {
+			focus = SWI_voralberg_intervention
+		}
+		prerequisite = {
+			focus = SWI_support_alpine_democracies
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_hold_out_on_our_own
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 4
+		x = 1
+		y = 1
+		relative_position_id = SWI_the_ticking_clock
+		prerequisite = {
+			focus = SWI_the_ticking_clock
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = SWI_reconsider_neutral_stance
+		}
+	}
+
+	focus = {
+		id = SWI_support_democratic_espionage
+		icon = GFX_focus_generic_secret_service_agency
+		cost = 4
+		x = 2
+		y = 2
+		relative_position_id = SWI_the_ticking_clock
+		prerequisite = {
+			focus = SWI_hold_out_on_our_own
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = SWI_reconsider_neutral_stance
+		}
+	}
+
+	focus = {
+		id = SWI_maintain_diplomatic_ambivalence
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 4
+		x = 0
+		y = 2
+		relative_position_id = SWI_the_ticking_clock
+		prerequisite = {
+			focus = SWI_hold_out_on_our_own
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_give_in_to_foreign_pressure
+		icon = GFX_focus_generic_german_trade
+		cost = 4
+		x = -1
+		y = 3
+		relative_position_id = SWI_the_ticking_clock
+		prerequisite = {
+			focus = SWI_maintain_diplomatic_ambivalence
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_secret_pact_with_allies
+		icon = GFX_focus_ARG_join_the_allies
+		cost = 4
+		x = 1
+		y = 3
+		relative_position_id = SWI_the_ticking_clock
+		prerequisite = {
+			focus = SWI_maintain_diplomatic_ambivalence
+			focus = SWI_support_democratic_espionage
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_join_the_democracies
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 4
+		x = 2
+		y = 4
+		relative_position_id = SWI_the_ticking_clock
+		prerequisite = {
+			focus = SWI_secret_pact_with_allies
+		}
+		prerequisite = {
+			focus = SWI_support_democratic_espionage
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_welcome_refugees
+		icon = GFX_goal_generic_national_unity
+		cost = 4
+		x = 3
+		y = 1
+		relative_position_id = SWI_the_ticking_clock
+		prerequisite = {
+			focus = SWI_the_ticking_clock
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_promote_humanism
+		icon = GFX_focus_SWE_refuge_from_war
+		cost = 4
+		x = 5
+		y = 1
+		relative_position_id = SWI_the_ticking_clock
+		prerequisite = {
+			focus = SWI_the_ticking_clock
+		}
+		available = {
+			has_idea = SWI_absolute_neutrality
+			has_war = no
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_support_resistance_groups
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 4
+		x = 4
+		y = 2
+		relative_position_id = SWI_the_ticking_clock
+		prerequisite = {
+			focus = SWI_welcome_refugees
+		}
+		available = {
+			OR = {
+				has_completed_focus = SWI_reconsider_neutral_stance
+				NOT = {
+					has_idea = SWI_absolute_neutrality
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_use_the_gotthard_league
+		icon = GFX_focus_SWI_gotthard_league
+		cost = 4
+		x = -5
+		y = 1
+		relative_position_id = SWI_the_ticking_clock
+		prerequisite = {
+			focus = SWI_the_ticking_clock
 		}
 		available = {
 			

@@ -83,6 +83,8 @@
  SWI_shortcut_spiritual_defense:0 "Spiritual Defence"
  SWI_shortcut_economic_development:0 "The Swiss Industry"
  SWI_shortcut_politics:0 "Federal Affairs"
+ SWI_shortcut_military_government:0 "Switzerland's Last Stand"
+ SWI_shortcut_foreign_policy:0 "Foreign Policy"
 
  ###################
  # SWITZERLAND FOCI
@@ -328,7 +330,7 @@
  SWI_remove_compromised_military:0 "Investigate Military Loyalties"
  SWI_remove_compromised_military_desc:0 ""
 
- SWI_ban_swiss_nazi_party:0 "Ban the Swiss Nazi Party"
+ SWI_ban_swiss_nazi_party:0 "Dismantle the National Front"
  SWI_ban_swiss_nazi_party_desc:0 ""
 
  SWI_reach_out_to_moderates:0 "An Olive Branch to the Independent Bloc"
@@ -349,7 +351,7 @@
  SWI_labour_compromise:0 "A Mediated Agreement"
  SWI_labour_compromise_desc:0 ""
 
- SWI_union_representation:0 "Empower the Trade Unions"
+ SWI_union_representation:0 "Strengthen the Unions"
  SWI_union_representation_desc:0 ""
 
  SWI_sway_farmers:0 "Break the Burghers' Stranglehold"
@@ -370,8 +372,8 @@
  SWI_country_on_the_brink:0 "A Country on the Brink"
  SWI_country_on_the_brink_desc:0 ""
 
- SWI_expand_military_intelligence:0 "Expand the Federal Police"
- SWI_expand_military_intelligence_desc:0 ""
+ SWI_appeal_to_the_world:0 "A Scream in the Dark"
+ SWI_appeal_to_the_world_desc:0 ""
 
  SWI_declare_martial_law:0 "Declare Martial Law"
  SWI_declare_martial_law_desc:0 ""
@@ -403,7 +405,7 @@
  SWI_clamp_down_opposition:0 "Suspend Democratic Institutions"
  SWI_clamp_down_opposition_desc:0 ""
 
- SWI_hijack_swiss_resistance:0 "Hijack Swiss Patriotism"
+ SWI_hijack_swiss_resistance:0 "Harness National Pride"
  SWI_hijack_swiss_resistance_desc:0 ""
 
  SWI_claim_greater_switzerland:0 "Claim Greater Switzerland"
@@ -411,6 +413,57 @@
 
  SWI_an_alpine_protectorate:0 "An Alpine Protectorate"
  SWI_an_alpine_protectorate_desc:0 ""
+
+ SWI_the_ticking_clock:0 "The Ticking Clock"
+ SWI_the_ticking_clock_desc:0 ""
+
+ SWI_reconsider_neutral_stance:0 "Question our Stance"
+ SWI_reconsider_neutral_stance_desc:0 ""
+
+ SWI_swiss_volunteer_corps:0 "The Swiss Volunteer Corps"
+ SWI_swiss_volunteer_corps_desc:0 ""
+
+ SWI_rebuke_neutrality:0 "Rebuke Neutrality"
+ SWI_rebuke_neutrality_desc:0 ""
+
+ SWI_voralberg_intervention:0 "Intervene in Voralberg"
+ SWI_voralberg_intervention_desc:0 ""
+
+ SWI_support_alpine_democracies:0 "Torchbearers of European Democracy"
+ SWI_support_alpine_democracies_desc:0 ""
+
+ SWI_the_alpine_confederacy:0 "The Alpine Confederacy"
+ SWI_the_alpine_confederacy_desc:0 ""
+
+ SWI_hold_out_on_our_own:0 "Pursue Armed Neutrality"
+ SWI_hold_out_on_our_own_desc:0 ""
+
+ SWI_support_democratic_espionage:0 "Support Allied Espionage"
+ SWI_support_democratic_espionage_desc:0 ""
+
+ SWI_maintain_diplomatic_ambivalence:0 "Maintain Diplomatic Ambivalence"
+ SWI_maintain_diplomatic_ambivalence_desc:0 ""
+
+ SWI_give_in_to_foreign_pressure:0 "Give in to German Pressure"
+ SWI_give_in_to_foreign_pressurede_desc:0 ""
+
+ SWI_secret_pact_with_allies:0 "Secret Pact With the Allies"
+ SWI_secret_pact_with_allies_desc:0 ""
+
+ SWI_join_the_democracies:0 "Join the Fray"
+ SWI_join_the_democracies_desc:0 ""
+
+ SWI_welcome_refugees:0 "Welcome Refugees of War"
+ SWI_welcome_refugees_desc:0 ""
+
+ SWI_promote_humanism:0 "A Humanitarian Bastion"
+ SWI_promote_humanism_desc:0 ""
+
+ SWI_support_resistance_groups:0 "Shelter Resistance Fighers"
+ SWI_support_resistance_groups_desc:0 ""
+
+ SWI_use_the_gotthard_league:0 "Use the Ghottardbund"
+ SWI_use_the_gotthard_league_desc:0 ""
 
  ###################
  # SWITZERLAND FLAGS
