@@ -40,7 +40,7 @@
  SWI_militias:0 "Swiss Militias"
  SWI_militia_dynmod_desc:0 "§RCan only conscript Swiss militia divisions through decisions, focuses or events. Can not recruit new units, edit or create unit templates. Can not increase conscription past limited conscription.§!"
 
- SWI_stalled_military_budget:0 "Stalled Military Developments"
+ SWI_stalled_military_budget:0 "Stalled Military Budget"
  SWI_stalled_military_budget_desc:0 ""
 
  SWI_stalled_military_budget_improved:0 "$SWI_stalled_military_budget$"
@@ -267,14 +267,17 @@
 
  SWI_convene_federal_assembly:0 "Convene the Federal Assembly"
  SWI_convene_federal_assembly_desc:0 ""
+
+ SWI_emergency_powers:0 "Empower the Federal Council"
+ SWI_emergency_powers_desc:0 ""
  
  SWI_gustloff_affair:0 "The Fallout of the Gustloff Affair"
  SWI_gustloff_affair_desc:0 ""
 
- SWI_social_democratic_coalition:0 "A New Political Reality"
+ SWI_social_democratic_coalition:0 "The Centre Cannot Hold"
  SWI_social_democratic_coalition_desc:0 ""
 
- SWI_liberal_conservative_coalition:0 "The Coalition Holds"
+ SWI_liberal_conservative_coalition:0 "Upholding the Status Quo"
  SWI_liberal_conservative_coalition_desc:0 ""
  
  SWI_reconcile_the_left:0 "Reconcile with the Trade Unions"
@@ -286,7 +289,7 @@
  SWI_slash_taxes:0 "Trim Governmental Expenses"
  SWI_slash_taxes_desc:0 ""
 
- SWI_entrench_tradition:0 "Commit to Traditional Values"
+ SWI_entrench_tradition:0 "Reaffirm our Conservative Ties"
  SWI_entrench_tradition_desc:0 ""
 
  SWI_peace_of_labour:0 "Peace of Labour"
@@ -298,10 +301,10 @@
  SWI_strengthen_cantonal_autonomy:0 "Strengthen Cantonal Autonomy"
  SWI_strengthen_cantonal_autonomy_desc:0 ""
 
- SWI_promote_ruralism:0 "Promote Ruralism"
+ SWI_promote_ruralism:0 "Celebrate Traditional Living"
  SWI_promote_ruralism_desc:0 ""
 
- SWI_the_unchained_market:0 "An Unchained but Fair Market"
+ SWI_the_unchained_market:0 "A Liberated Market"
  SWI_the_unchained_market_desc:0 ""
 
  SWI_the_fair_state:0 "The Honest State"
@@ -328,6 +331,42 @@
  SWI_ban_swiss_nazi_party:0 "Ban the Swiss Nazi Party"
  SWI_ban_swiss_nazi_party_desc:0 ""
 
+ SWI_reach_out_to_moderates:0 "An Olive Branch to the Independent Bloc"
+ SWI_reach_out_to_moderates_desc:0 ""
+
+ SWI_new_coalition_partners:0 "Building a New Coalition"
+ SWI_new_coalition_partners_desc:0 ""
+
+ SWI_a_robust_social_system:0 "Ensure Social Cohesion"
+ SWI_a_robust_social_system_desc:0 ""
+
+ SWI_expand_welfare_system:0 "Expand the Welfare System"
+ SWI_expand_welfare_system_desc:0 ""
+
+ SWI_federal_income_tax:0 "A Federal Income Tax"
+ SWI_federal_income_tax_desc:0 ""
+
+ SWI_labour_compromise:0 "A Mediated Agreement"
+ SWI_labour_compromise_desc:0 ""
+
+ SWI_union_representation:0 "Empower the Trade Unions"
+ SWI_union_representation_desc:0 ""
+
+ SWI_sway_farmers:0 "Break the Burghers' Stranglehold"
+ SWI_sway_farmers_desc:0 ""
+
+ SWI_reinvent_swiss_ideal:0 "New Ideal, New Norms"
+ SWI_reinvent_swiss_ideal_desc:0 ""
+
+ SWI_social_democratic_reality:0 "A Fairer Confederacy"
+ SWI_social_democratic_reality_desc:0 ""
+
+ SWI_the_impossible_coalition:0 "An Improbable Coalition?"
+ SWI_the_impossible_coalition_desc:0 ""
+
+ SWI_switzerland_belongs_to_workers:0 "Triumph of the Swiss Labourer"
+ SWI_switzerland_belongs_to_workers_desc:0 ""
+
  ###################
  # SWITZERLAND FLAGS
  ###################
@@ -335,3 +374,4 @@
  SWI_gustloff_affair_flag:0 "§YWilhelm Gustloff§! has been assassinated"
  SWI_lib_con_coalition_flag:0 "The §YLiberal-Conservative§! coalition has maintained its primacy"
  SWI_soc_dem_con_flag:0 "The §YSocial-Democratic Party§! was invited in the government"
+ SWI_failed_negotations_with_moderates_flag:0 "Negotations with the §YLDU/ADL§! were unsuccessful"

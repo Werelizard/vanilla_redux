@@ -4,8 +4,8 @@ SWI_militia_dynmod = {
 	conscription = SWI_militia_conscription_factor_var
 	modifier_army_sub_unit_militia_defence_factor = SWI_militia_defense_factor_var
 	modifier_army_sub_unit_militia_attack_factor = SWI_militia_attack_factor_var
-	army_non_core_attack_factor = SWI_army_non_cor_var
-	army_non_core_defence_factor = SWI_army_non_cor_var
+	# army_non_core_attack_factor = SWI_army_non_cor_var
+	# army_non_core_defence_factor = SWI_army_non_cor_var
 }
 
 SWI_economy_dynmod = {

@@ -283,16 +283,16 @@
 
  ### SRIPTED TRIGGERS ###
 
- authsoc_coalition_tt:0 "In a coaltion with the §rAuthoritarian Socialists§!"
- vansoc_coalition_tt:0 "In a coalition with the §RVanguard Socialists§!"
- revsoc_coalition_tt:0 "In a coalition with the §RRevolutionary Socialists§!"
- socdem_coalition_tt:0 "In a coalition with the §pSocial Democrats§!"
- progressive_coalition_tt:0 "In a coalition with the §PProgressives§!"
- liberal_coalition_tt:0 "In a coalition with the §YLiberals§!"
- conservative_coalition_tt:0 "In a coalition with the §cConservatives§!"
- authoritarian_coalition_tt:0 "In a coalition with the §gAuthoritarian Democrats§!"
- autocracy_coalition_tt:0 "In a coalition with the §lPaternalists§!"
- fascism_coalition_tt:0 "In a coalition with the §Yfascists§!"
+ authsoc_coalition_tt:0 "In a coaltion with the §YAuthoritarian Socialists§!."
+ vansoc_coalition_tt:0 "In a coalition with the §YVanguard Socialists§!."
+ revsoc_coalition_tt:0 "In a coalition with the §YRevolutionary Socialists§!."
+ socdem_coalition_tt:0 "In a coalition with the §YSocial Democrats§!."
+ progressive_coalition_tt:0 "In a coalition with the §YProgressives§!."
+ liberal_coalition_tt:0 "In a coalition with the §YLiberals§!."
+ conservative_coalition_tt:0 "In a coalition with the §YConservatives§!."
+ authoritarian_coalition_tt:0 "In a coalition with the §YAuthoritarian Democrats§!."
+ autocracy_coalition_tt:0 "In a coalition with the §YPaternalists§!."
+ fascism_coalition_tt:0 "In a coalition with the §Yfascists§!."
 
  has_socialist_government_tt:0 "Has a §YSocialist§! government"
  has_socialist_government_tt_NOT:0 "NOT: $has_socialist_government_tt$"

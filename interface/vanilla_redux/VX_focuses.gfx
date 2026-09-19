@@ -76,6 +76,34 @@ spriteTypes = {
 		name = "GFX_goal_generic_assassination"
 		texturefile = "gfx/interface/goals/focus_generic_assassination.dds"			
 	}
+	SpriteType = {
+		name = "GFX_goal_generic_document_good"
+		texturefile = "gfx/interface/goals/focus_generic_document_good.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_left_coalition"
+		texturefile = "gfx/interface/goals/focus_generic_left_coalition.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_support_farmers"
+		texturefile = "gfx/interface/goals/focus_generic_support_farmers.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_take_money"
+		texturefile = "gfx/interface/goals/focus_generic_take_money.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_worker_neutral"
+		texturefile = "gfx/interface/goals/focus_generic_worker_neutral.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_people_democracy"
+		texturefile = "gfx/interface/goals/focus_generic_people_democracy.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_left_democracy"
+		texturefile = "gfx/interface/goals/focus_generic_left_democracy.dds"			
+	}
 	# Germany
 	SpriteType = {
 		name = "GFX_goal_GER_Militarise_Rhineland"
@@ -133,5 +161,17 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_SWI_railways"
 		texturefile = "gfx/interface/goals/SWI/SWI_railways.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_SWI_empower_federal_council"
+		texturefile = "gfx/interface/goals/SWI/SWI_empower_federal_council.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_SWI_shaken_assembly"
+		texturefile = "gfx/interface/goals/SWI/SWI_shaken_assembly.dds"			
+	}
+	SpriteType = {
+		name = "GFX_goal_SWI_stable_assembly"
+		texturefile = "gfx/interface/goals/SWI/SWI_stable_assembly.dds"			
 	}
 }

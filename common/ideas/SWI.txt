@@ -16,8 +16,8 @@ ideas = {
 		### Social Democratic Oppostion - the SocDem party was the largest winner but got NO seats in the Fed Council
 		SWI_soc_dem_opposition = {
 			modifier = {
-				political_power_factor = -0.25
-				social_democratic_drift = 0.02
+				political_power_factor = -0.5
+				social_democratic_drift = 0.04
 			}
 		}
 		### Stalled Military - Switzerland REALLY didn't have a military budget

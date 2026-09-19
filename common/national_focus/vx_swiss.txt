@@ -18,20 +18,20 @@ focus_tree = {
 		
 	}
 
-	shortcut = {
-		name = SWI_shortcut_economic_development
-		target = SWI_state_of_the_economy
-	}
+	# shortcut = {
+	# 	name = SWI_shortcut_economic_development
+	# 	target = SWI_state_of_the_economy
+	# }
 
-	shortcut = {
-		name = SWI_shortcut_spiritual_defense
-		target = SWI_spiritual_defense
-	}
+	# shortcut = {
+	# 	name = SWI_shortcut_spiritual_defense
+	# 	target = SWI_spiritual_defense
+	# }
 
-	shortcut = {
-		name = SWI_shortcut_politics
-		target = SWI_proportionalism_woes
-	}
+	# shortcut = {
+	# 	name = SWI_shortcut_politics
+	# 	target = SWI_proportionalism_woes
+	# }
 
 	continuous_focus_position = {
 		x = 0
@@ -128,6 +128,28 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = SWI_emergency_powers
+		icon = GFX_goal_SWI_empower_federal_council
+		cost = 4
+		x = -4
+		y = 3
+		relative_position_id = SWI_proportionalism_woes
+		prerequisite = {
+			focus = SWI_convene_federal_assembly
+		}
+		available = {
+			OR = {
+				threat > 0.5
+				has_defensive_war = yes
+				is_potential_war_target = yes
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
 	###################
 	# AHISTORICAL - SocDem Coalition
 	###################
@@ -135,7 +157,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_social_democratic_coalition
-		icon = GFX_goal_unknown
+		icon = GFX_goal_SWI_shaken_assembly
 		cost = 4
 		x = -2
 		y = 3
@@ -165,7 +187,14 @@ focus_tree = {
 			focus = SWI_social_democratic_coalition
 		}
 		available = {
-			
+			if = {
+				limit = {
+					has_country_flag = SWI_failed_negotations_with_moderates_flag
+				}
+				NOT = {
+					has_country_flag = SWI_failed_negotations_with_moderates_flag
+				}
+			}
 		}
 		completion_reward = {
 			
@@ -173,11 +202,21 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SWI_soc_dem_partners
-		icon = GFX_goal_generic_socdem
+		id = SWI_new_coalition_partners
+		icon = {
+			GFX_goal_generic_socdem = {
+				NOT = {
+					has_government = social_democratic
+				}
+			}
+			GFX_goal_generic_libdem = {
+				has_government = social_democratic
+			}
+		}
 		cost = 4
 		x = -1
 		y = 1
+		dynamic = yes
 		relative_position_id = SWI_social_democratic_coalition
 		prerequisite = {
 			focus = SWI_social_democratic_coalition
@@ -189,15 +228,37 @@ focus_tree = {
 			
 		}
 	}
+
 	focus = {
-		id = SWI_welfare_reforms
-		icon = GFX_goal_unknown
+		id = SWI_a_robust_social_system
+		icon = GFX_focus_hol_the_foundations_of_defense
 		cost = 4
 		x = -2
 		y = 2
 		relative_position_id = SWI_social_democratic_coalition
 		prerequisite = {
-			focus = SWI_soc_dem_partners
+			focus = SWI_new_coalition_partners
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_expand_welfare_system
+		icon = GFX_focus_generic_welfare
+		cost = 4
+		x = -1
+		y = 3
+		relative_position_id = SWI_social_democratic_coalition
+		prerequisite = {
+			focus = SWI_reinvent_swiss_ideal
+		}
+		prerequisite = {
+			focus = SWI_federal_income_tax
 		}
 		available = {
 			
@@ -209,13 +270,13 @@ focus_tree = {
 
 	focus = {
 		id = SWI_federal_income_tax
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_take_money
 		cost = 4
 		x = 0
 		y = 2
 		relative_position_id = SWI_social_democratic_coalition
 		prerequisite = {
-			focus = SWI_soc_dem_partners
+			focus = SWI_new_coalition_partners
 			focus = SWI_reach_out_to_moderates
 		}
 		available = {
@@ -228,7 +289,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_labour_compromise
-		icon = GFX_goal_unknown
+		icon = GFX_focus_DEN_no_regulations
 		cost = 4
 		x = -3
 		y = 1
@@ -249,7 +310,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_union_representation
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_workers
 		cost = 4
 		x = -7
 		y = 1
@@ -258,7 +319,8 @@ focus_tree = {
 			focus = SWI_social_democratic_coalition
 		}
 		available = {
-			
+			has_completed_focus = SWI_reconcile_the_left
+			has_government = social_democratic
 		}
 		completion_reward = {
 			
@@ -270,7 +332,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_sway_farmers
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_support_farmers
 		cost = 4
 		x = -8
 		y = 2
@@ -279,19 +341,16 @@ focus_tree = {
 			focus = SWI_union_representation
 		}
 		available = {
-			
+			has_government = social_democratic
 		}
 		completion_reward = {
 			
-		}
-		mutually_exclusive = {
-			focus = SWI_labour_compromise
 		}
 	}
 
 	focus = {
 		id = SWI_reinvent_swiss_ideal
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_sympathetic_judges
 		cost = 4
 		x = -4
 		y = 2
@@ -301,7 +360,10 @@ focus_tree = {
 			focus = SWI_labour_compromise
 		}
 		available = {
-			
+			OR = {
+				has_government = social_democratic
+				socdem_coalition_trigger = yes
+			}
 		}
 		completion_reward = {
 			
@@ -310,7 +372,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_social_democratic_reality
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_left_democracy
 		cost = 4
 		x = -3
 		y = 3
@@ -319,7 +381,7 @@ focus_tree = {
 			focus = SWI_reinvent_swiss_ideal
 		}
 		prerequisite = {
-			focus = SWI_welfare_reforms
+			focus = SWI_a_robust_social_system
 		}
 		prerequisite = {
 			focus = SWI_federal_income_tax
@@ -337,7 +399,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_the_impossible_coalition
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_left_coalition
 		cost = 4
 		x = -6
 		y = 2
@@ -346,7 +408,7 @@ focus_tree = {
 			focus = SWI_union_representation
 		}
 		available = {
-			
+			has_government = social_democratic
 		}
 		completion_reward = {
 			
@@ -355,7 +417,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_switzerland_belongs_to_workers
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_people_democracy
 		cost = 4
 		x = -7
 		y = 3
@@ -367,7 +429,7 @@ focus_tree = {
 			focus = SWI_sway_farmers
 		}
 		available = {
-			
+			has_government = social_democratic
 		}
 		completion_reward = {
 			
@@ -383,7 +445,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_liberal_conservative_coalition
-		icon = GFX_goal_unknown
+		icon = GFX_goal_SWI_stable_assembly
 		cost = 4
 		x = 2
 		y = 3
@@ -431,7 +493,10 @@ focus_tree = {
 			focus = SWI_liberal_conservative_coalition
 		}
 		available = {
-			
+			OR = {
+				has_government = conservative
+				conservative_coalition_trigger = yes
+			}
 		}
 		completion_reward = {
 			
@@ -459,7 +524,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_the_unchained_market
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_positive_trade_relations
 		cost = 4
 		x = -1
 		y = 3
@@ -480,7 +545,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_the_fair_state	
-		icon = GFX_goal_generic_libdem
+		icon = GFX_focus_generic_befriend_switzerland
 		cost = 4
 		x = 0
 		y = 4
@@ -531,7 +596,10 @@ focus_tree = {
 			focus = SWI_promote_ruralism
 		}
 		available = {
-			
+			OR = {
+				has_government = conservative
+				conservative_coalition_trigger = yes
+			}
 		}
 		completion_reward = {
 			
@@ -548,8 +616,11 @@ focus_tree = {
 		prerequisite = {
 			focus = SWI_entrench_tradition
 		}
-		available = {
-			
+		available = {			
+			OR = {
+				has_government = conservative
+				conservative_coalition_trigger = yes
+			}
 		}
 		completion_reward = {
 			
@@ -631,8 +702,11 @@ focus_tree = {
 		prerequisite = {
 			focus = SWI_fund_pro_helvetia
 		}
-		available = {
-			
+		available = {			
+			OR = {
+				has_government = conservative
+				conservative_coalition_trigger = yes
+			}
 		}
 		completion_reward = {
 			
