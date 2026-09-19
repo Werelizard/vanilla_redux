@@ -17,7 +17,7 @@ ideas = {
 		SWI_soc_dem_opposition = {
 			modifier = {
 				political_power_factor = -0.5
-				social_democratic_drift = 0.04
+				social_democratic_drift = 0.03
 			}
 		}
 		### Stalled Military - Switzerland REALLY didn't have a military budget

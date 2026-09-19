@@ -71,7 +71,7 @@
  ###################
  # SWITZERLAND - TOOLTIPS
  ###################
- SWI_emergency_government_tt:0 "The government was granted §Yemergency powers§! by the Federal Assembly"
+ SWI_emergency_government_tt:0 "The military was granted §Yemergency powers§! by the Federal Assembly"
 
  ###################
  # SWITZERLAND EVENTS
@@ -367,11 +367,56 @@
  SWI_switzerland_belongs_to_workers:0 "Triumph of the Swiss Labourer"
  SWI_switzerland_belongs_to_workers_desc:0 ""
 
+ SWI_country_on_the_brink:0 "A Country on the Brink"
+ SWI_country_on_the_brink_desc:0 ""
+
+ SWI_expand_military_intelligence:0 "Expand the Federal Police"
+ SWI_expand_military_intelligence_desc:0 ""
+
+ SWI_declare_martial_law:0 "Declare Martial Law"
+ SWI_declare_martial_law_desc:0 ""
+
+ SWI_the_citizen_soldier:0 "The Citizen-Soldier"
+ SWI_the_citizen_soldier_desc:0 ""
+
+ SWI_abolish_civil_society:0 "Abolish Civilian Life"
+ SWI_abolish_civil_society_desc:0 ""
+
+ SWI_civic_mobilisation:0 "Civic Mobilisation"
+ SWI_civic_mobilisation_desc:0 ""
+
+ SWI_our_darkest_hour:0 "Our Darkest Hour"
+ SWI_our_darkest_hour_desc:0 ""
+
+ SWI_government_of_national_unity:0 "Government of National Unity"
+ SWI_government_of_national_unity_desc:0 ""
+
+ SWI_restore_democracy:0 "Restore the Federal Assembly"
+ SWI_restore_democracy_desc:0 ""
+
+ SWI_postwar_reconstruction:0 "Time Heals all Wounds"
+ SWI_postwar_reconstruction_desc:0 ""
+
+ SWI_a_military_government:0 "The Necessary Evil"
+ SWI_a_military_government_desc:0 ""
+
+ SWI_clamp_down_opposition:0 "Suspend Democratic Institutions"
+ SWI_clamp_down_opposition_desc:0 ""
+
+ SWI_hijack_swiss_resistance:0 "Hijack Swiss Patriotism"
+ SWI_hijack_swiss_resistance_desc:0 ""
+
+ SWI_claim_greater_switzerland:0 "Claim Greater Switzerland"
+ SWI_claim_greater_switzerland_desc:0 ""
+
+ SWI_an_alpine_protectorate:0 "An Alpine Protectorate"
+ SWI_an_alpine_protectorate_desc:0 ""
+
  ###################
  # SWITZERLAND FLAGS
  ###################
  SWI_democracy_collapsed_flag:0 "The Swiss democratic system has §Rcollapsed§!"
  SWI_gustloff_affair_flag:0 "§YWilhelm Gustloff§! has been assassinated"
- SWI_lib_con_coalition_flag:0 "The §YLiberal-Conservative§! coalition has maintained its primacy"
- SWI_soc_dem_con_flag:0 "The §YSocial-Democratic Party§! was invited in the government"
+ SWI_lib_con_coalition_flag:0 "The §YLiberal-Conservative§! coalition has held on"
+ SWI_soc_dem_con_flag:0 "The §YLiberal-Conservative§! coalition has collapsed"
  SWI_failed_negotations_with_moderates_flag:0 "Negotations with the §YLDU/ADL§! were unsuccessful"

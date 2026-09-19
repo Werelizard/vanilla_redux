@@ -65,7 +65,14 @@ focus_tree = {
 			
 		}
 		available = {
-			
+			if = {
+				limit = {
+					NOT = {
+						has_democratic_government_trigger = yes
+					}
+				}
+				has_democratic_government_tooltip_trigger = yes
+			}
 		}
 		completion_reward = {
 			
@@ -86,6 +93,14 @@ focus_tree = {
 			NOT = {
 				has_completed_focus = SWI_ban_communist_party
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_democratic_government_trigger = yes
+					}
+				}
+				has_democratic_government_tooltip_trigger = yes
+			}
 		}
 		completion_reward = {
 			
@@ -104,6 +119,14 @@ focus_tree = {
 		}
 		available = {
 			has_country_flag = SWI_lib_con_coalition_flag
+			if = {
+				limit = {
+					NOT = {
+						has_democratic_government_trigger = yes
+					}
+				}
+				has_democratic_government_tooltip_trigger = yes
+			}
 		}
 		completion_reward = {
 			
@@ -121,7 +144,14 @@ focus_tree = {
 			focus = SWI_proportionalism_woes
 		}
 		available = {
-			
+			if = {
+				limit = {
+					NOT = {
+						has_democratic_government_trigger = yes
+					}
+				}
+				has_democratic_government_tooltip_trigger = yes
+			}
 		}
 		completion_reward = {
 			
@@ -143,6 +173,14 @@ focus_tree = {
 				threat > 0.5
 				has_defensive_war = yes
 				is_potential_war_target = yes
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_democratic_government_trigger = yes
+					}
+				}
+				has_democratic_government_tooltip_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -166,7 +204,18 @@ focus_tree = {
 			focus = SWI_convene_federal_assembly
 		}
 		available = {
-			has_country_flag = SWI_soc_dem_con_flag
+			has_country_flag = SWI_soc_dem_con_flag			
+			NOT = {
+				has_idea = SWI_soc_dem_opposition
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_democratic_government_trigger = yes
+					}
+				}
+				has_democratic_government_tooltip_trigger = yes
+			}
 		}
 		completion_reward = {
 			
@@ -195,6 +244,10 @@ focus_tree = {
 					has_country_flag = SWI_failed_negotations_with_moderates_flag
 				}
 			}
+			OR = {
+				has_government = liberal
+				has_government = social_democratic
+			}
 		}
 		completion_reward = {
 			
@@ -222,7 +275,24 @@ focus_tree = {
 			focus = SWI_social_democratic_coalition
 		}
 		available = {
-			
+			if = {
+				limit = {
+					has_government = liberal
+					has_country_flag = SWI_failed_negotations_with_moderates_flag
+				}
+				NOT = {
+					has_country_flag = SWI_failed_negotations_with_moderates_flag
+				}
+			}
+			if = {
+				limit = {
+					has_government = liberal
+				}
+				has_government = liberal
+			}
+			else = {
+				has_government = social_democratic
+			}
 		}
 		completion_reward = {
 			
@@ -240,7 +310,16 @@ focus_tree = {
 			focus = SWI_new_coalition_partners
 		}
 		available = {
-			
+			if = {
+				limit = {
+					has_government = liberal
+				}
+				has_government = liberal
+				socdem_coalition_trigger = yes
+			}
+			else = {
+				has_government = social_democratic
+			}
 		}
 		completion_reward = {
 			
@@ -261,7 +340,16 @@ focus_tree = {
 			focus = SWI_federal_income_tax
 		}
 		available = {
-			
+			if = {
+				limit = {
+					has_government = liberal
+				}
+				has_government = liberal
+				socdem_coalition_trigger = yes
+			}
+			else = {
+				has_government = social_democratic
+			}
 		}
 		completion_reward = {
 			
@@ -280,7 +368,19 @@ focus_tree = {
 			focus = SWI_reach_out_to_moderates
 		}
 		available = {
-			
+			if = {
+				limit = {
+					has_government = liberal
+				}
+				has_government = liberal
+				OR = {
+					socdem_coalition_trigger = yes
+					progressive_coalition_trigger = yes
+				}
+			}
+			else = {
+				has_government = social_democratic
+			}
 		}
 		completion_reward = {
 			
@@ -298,7 +398,19 @@ focus_tree = {
 			focus = SWI_social_democratic_coalition
 		}
 		available = {
-			
+			if = {
+				limit = {
+					has_government = liberal
+				}
+				has_government = liberal
+				OR = {
+					socdem_coalition_trigger = yes
+					progressive_coalition_trigger = yes
+				}
+			}
+			else = {
+				has_government = social_democratic
+			}
 		}
 		completion_reward = {
 			
@@ -359,10 +471,16 @@ focus_tree = {
 			focus = SWI_union_representation
 			focus = SWI_labour_compromise
 		}
-		available = {
-			OR = {
-				has_government = social_democratic
+		available = {		
+			if = {
+				limit = {
+					has_government = liberal
+				}
+				has_government = liberal
 				socdem_coalition_trigger = yes
+			}
+			else = {
+				has_government = social_democratic
 			}
 		}
 		completion_reward = {
@@ -387,7 +505,16 @@ focus_tree = {
 			focus = SWI_federal_income_tax
 		}
 		available = {
-			
+			if = {
+				limit = {
+					has_government = liberal
+				}
+				has_government = liberal
+				socdem_coalition_trigger = yes
+			}
+			else = {
+				has_government = social_democratic
+			}
 		}
 		completion_reward = {
 			
@@ -455,6 +582,17 @@ focus_tree = {
 		}
 		available = {
 			has_country_flag = SWI_lib_con_coalition_flag
+			NOT = {
+				has_idea = SWI_soc_dem_opposition
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_democratic_government_trigger = yes
+					}
+				}
+				has_democratic_government_tooltip_trigger = yes
+			}
 		}
 		completion_reward = {
 			
@@ -475,7 +613,18 @@ focus_tree = {
 			focus = SWI_liberal_conservative_coalition
 		}
 		available = {
-			
+			OR = {
+				has_government = liberal
+				liberal_coalition_trigger = yes
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_democratic_government_trigger = yes
+					}
+				}
+				has_democratic_government_tooltip_trigger = yes
+			}
 		}
 		completion_reward = {
 			
@@ -497,6 +646,14 @@ focus_tree = {
 				has_government = conservative
 				conservative_coalition_trigger = yes
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_democratic_government_trigger = yes
+					}
+				}
+				has_democratic_government_tooltip_trigger = yes
+			}
 		}
 		completion_reward = {
 			
@@ -515,7 +672,18 @@ focus_tree = {
 			focus = SWI_entrench_tradition
 		}
 		available = {
-			
+			OR = {
+				has_government = liberal
+				has_government = conservative
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_democratic_government_trigger = yes
+					}
+				}
+				has_democratic_government_tooltip_trigger = yes
+			}
 		}
 		completion_reward = {
 			
@@ -536,7 +704,18 @@ focus_tree = {
 			focus = SWI_peace_of_labour
 		}
 		available = {
-			
+			OR = {
+				has_government = liberal
+				liberal_coalition_trigger = yes
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_democratic_government_trigger = yes
+					}
+				}
+				has_democratic_government_tooltip_trigger = yes
+			}
 		}
 		completion_reward = {
 			
@@ -557,7 +736,18 @@ focus_tree = {
 			focus = SWI_strengthen_cantonal_autonomy
 		}
 		available = {
-			
+			OR = {
+				has_government = liberal
+				has_government = conservative
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_democratic_government_trigger = yes
+					}
+				}
+				has_democratic_government_tooltip_trigger = yes
+			}
 		}
 		completion_reward = {
 			
@@ -578,6 +768,9 @@ focus_tree = {
 		available = {
 			NOT = {
 				has_completed_focus = SWI_reconcile_the_left
+			}
+			NOT = {
+				has_socialist_government_tooltip_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -600,6 +793,14 @@ focus_tree = {
 				has_government = conservative
 				conservative_coalition_trigger = yes
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_democratic_government_trigger = yes
+					}
+				}
+				has_democratic_government_tooltip_trigger = yes
+			}
 		}
 		completion_reward = {
 			
@@ -620,6 +821,14 @@ focus_tree = {
 			OR = {
 				has_government = conservative
 				conservative_coalition_trigger = yes
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_democratic_government_trigger = yes
+					}
+				}
+				has_democratic_government_tooltip_trigger = yes
 			}
 		}
 		completion_reward = {
@@ -787,6 +996,296 @@ focus_tree = {
 			
 		}
 	}
+
+	###################
+	# AHISTORICAL - The Military Government
+	###################
+
+	focus = {
+		id = SWI_country_on_the_brink
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		cost = 4
+		x = 0
+		y = 8
+		relative_position_id = SWI_proportionalism_woes
+		prerequisite = {
+			
+		}
+		available = {
+			SWI_emergency_government_trigger = yes			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_expand_military_intelligence
+		icon = GFX_focus_generic_secret_service_agency
+		cost = 4
+		x = 2
+		y = 1
+		relative_position_id = SWI_country_on_the_brink
+		prerequisite = {
+			focus = SWI_country_on_the_brink
+		}
+		available = {
+			SWI_emergency_government_trigger = yes	
+			has_completed_focus = SWI_a_federal_police_force		
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_declare_martial_law
+		icon = GFX_focus_generic_military_dictatorship
+		cost = 4
+		x = -2
+		y = 1
+		relative_position_id = SWI_country_on_the_brink
+		prerequisite = {
+			focus = SWI_country_on_the_brink
+		}
+		available = {
+			SWI_emergency_government_trigger = yes			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_the_citizen_soldier
+		icon = GFX_focus_generic_limited_social_mobilization
+		cost = 4
+		x = -3
+		y = 2
+		relative_position_id = SWI_country_on_the_brink
+		prerequisite = {
+			focus = SWI_declare_martial_law
+		}
+		available = {
+			SWI_emergency_government_trigger = yes			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_abolish_civil_society
+		icon = GFX_focus_LAT_suspend_constitution_of_latvia
+		cost = 4
+		x = -1
+		y = 2
+		relative_position_id = SWI_country_on_the_brink
+		prerequisite = {
+			focus = SWI_declare_martial_law
+		}
+		available = {
+			SWI_emergency_government_trigger = yes			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = SWI_civic_mobilisation
+		}
+	}
+
+	focus = {
+		id = SWI_civic_mobilisation
+		icon = GFX_focus_generic_advanced_military_studies
+		cost = 4
+		x = 1
+		y = 2
+		relative_position_id = SWI_country_on_the_brink
+		prerequisite = {
+			focus = SWI_country_on_the_brink
+		}
+		available = {
+			SWI_emergency_government_trigger = yes			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = SWI_abolish_civil_society
+		}
+	}
+
+	focus = {
+		id = SWI_our_darkest_hour
+		icon = GFX_focus_RAJ_a_private_military
+		cost = 4
+		x = 0
+		y = 3
+		relative_position_id = SWI_country_on_the_brink
+		prerequisite = {
+			focus = SWI_civic_mobilisation
+			focus = SWI_abolish_civil_society
+		}
+		available = {
+			SWI_emergency_government_trigger = yes			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+
+	focus = {
+		id = SWI_government_of_national_unity
+		icon = GFX_goal_generic_autdem
+		cost = 4
+		x = 2
+		y = 3
+		relative_position_id = SWI_country_on_the_brink
+		prerequisite = {
+			focus = SWI_civic_mobilisation
+		}
+		available = {
+			SWI_emergency_government_trigger = yes			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_restore_democracy
+		icon = GFX_focus_NOR_restore_public_trust_in_the_storting
+		cost = 4
+		x = 1
+		y = 4
+		relative_position_id = SWI_country_on_the_brink
+		prerequisite = {
+			focus = SWI_government_of_national_unity
+		}
+		available = {
+			SWI_emergency_government_trigger = yes			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_postwar_reconstruction
+		icon = GFX_focus_generic_industral_devlopment_bucket
+		cost = 4
+		x = 3
+		y = 4
+		relative_position_id = SWI_country_on_the_brink
+		prerequisite = {
+			focus = SWI_government_of_national_unity
+		}
+		available = {
+			SWI_emergency_government_trigger = yes			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_a_military_government
+		icon = GFX_goal_generic_paternal
+		cost = 4
+		x = -2
+		y = 3
+		relative_position_id = SWI_country_on_the_brink
+		prerequisite = {
+			focus = SWI_the_citizen_soldier
+		}
+		prerequisite = {			
+			focus = SWI_abolish_civil_society
+		}
+		available = {
+			SWI_emergency_government_trigger = yes			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_clamp_down_opposition
+		icon = GFX_focus_usa_voter_registration_act
+		cost = 4
+		x = -3
+		y = 4
+		relative_position_id = SWI_country_on_the_brink
+		prerequisite = {
+			focus = SWI_a_military_government
+		}
+		available = {
+			SWI_emergency_government_trigger = yes			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_hijack_swiss_resistance
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -1
+		y = 4
+		relative_position_id = SWI_country_on_the_brink
+		prerequisite = {
+			focus = SWI_a_military_government
+		}
+		available = {
+			SWI_emergency_government_trigger = yes			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_claim_greater_switzerland
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -2
+		y = 5
+		relative_position_id = SWI_country_on_the_brink
+		prerequisite = {
+			focus = SWI_a_military_government
+		}
+		available = {
+			SWI_emergency_government_trigger = yes			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_an_alpine_protectorate
+		icon = GFX_goal_unknown
+		cost = 4
+		x = -1
+		y = 6
+		relative_position_id = SWI_country_on_the_brink
+		prerequisite = {
+			focus = SWI_claim_greater_switzerland
+		}
+		prerequisite = {
+			focus = SWI_hijack_swiss_resistance
+		}
+		available = {
+			SWI_emergency_government_trigger = yes			
+		}
+		completion_reward = {
+			
+		}
+	}
+
 
 	###################
 	# HISTORICAL - Spiritual Defense
