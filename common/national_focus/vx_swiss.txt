@@ -790,9 +790,6 @@ focus_tree = {
 			NOT = {
 				has_completed_focus = SWI_union_representation
 			}
-			NOT = {
-				has_socialist_government_tooltip_trigger = yes
-			}
 		}
 		completion_reward = {
 			
@@ -1354,7 +1351,23 @@ focus_tree = {
 			# }
 		}
 		completion_reward = {
-			
+			mio:vx_sig_sauer_organisation = {
+				add_mio_size = 1
+				unlock_mio_trait_tooltip = SWI_sig_licensing_trait
+			}
+			custom_effect_tooltip = doublespace_tt
+			if = {
+				limit = {
+					has_idea = SWI_stalled_military_budget
+				}
+				swap_ideas = {
+					remove_idea = SWI_stalled_military_budget
+					add_idea = SWI_stalled_military_budget_improved
+				}
+			}
+			else = {
+				remove_ideas = SWI_stalled_military_budget_improved
+			}
 		}
 	}
 
@@ -1375,7 +1388,23 @@ focus_tree = {
 			# }
 		}
 		completion_reward = {
-			
+			add_timed_idea = {
+				idea = SWI_national_bonds
+				days = 365
+			}
+			custom_effect_tooltip = doublespace_tt
+			if = {
+				limit = {
+					has_idea = SWI_stalled_military_budget
+				}
+				swap_ideas = {
+					remove_idea = SWI_stalled_military_budget
+					add_idea = SWI_stalled_military_budget_improved
+				}
+			}
+			else = {
+				remove_ideas = SWI_stalled_military_budget_improved
+			}
 		}
 	}
 
@@ -1408,7 +1437,9 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			
+			add_ideas = SWI_national_mobilisation
+			custom_effect_tooltip = doublespace_tt
+			custom_effect_tooltip = SWI_towards_economic_mobilisation_tt
 		}
 	}
 
@@ -2727,10 +2758,13 @@ focus_tree = {
 		y = 2
 		relative_position_id = SWI_the_ticking_clock
 		prerequisite = {
+			focus = SWI_use_the_gotthard_league
+		}
+		prerequisite = {
 			focus = SWI_reconsider_neutral_stance
 		}
 		available = {
-			
+			has_completed_focus = SWI_rebuke_neutrality
 		}
 		completion_reward = {
 			
@@ -2845,15 +2879,13 @@ focus_tree = {
 		relative_position_id = SWI_the_ticking_clock
 		prerequisite = {
 			focus = SWI_hold_out_on_our_own
+			focus = SWI_welcome_refugees
 		}
 		available = {
 			
 		}
 		completion_reward = {
 			
-		}
-		mutually_exclusive = {
-			focus = SWI_reconsider_neutral_stance
 		}
 	}
 
@@ -2866,6 +2898,24 @@ focus_tree = {
 		relative_position_id = SWI_the_ticking_clock
 		prerequisite = {
 			focus = SWI_hold_out_on_our_own
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SWI_necessities_of_trade
+		icon = GFX_goal_generic_trade
+		cost = 4
+		x = 0
+		y = 4
+		relative_position_id = SWI_the_ticking_clock
+		prerequisite = {
+			focus = SWI_maintain_diplomatic_ambivalence
 		}
 		available = {
 			
@@ -2901,7 +2951,9 @@ focus_tree = {
 		y = 3
 		relative_position_id = SWI_the_ticking_clock
 		prerequisite = {
-			focus = SWI_maintain_diplomatic_ambivalence
+			focus = SWI_hold_out_on_our_own
+		}
+		prerequisite = {
 			focus = SWI_support_democratic_espionage
 		}
 		available = {
@@ -2912,26 +2964,26 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = SWI_join_the_democracies
-		icon = GFX_goal_generic_more_territorial_claims
-		cost = 4
-		x = 2
-		y = 4
-		relative_position_id = SWI_the_ticking_clock
-		prerequisite = {
-			focus = SWI_secret_pact_with_allies
-		}
-		prerequisite = {
-			focus = SWI_support_democratic_espionage
-		}
-		available = {
+	# focus = {
+	# 	id = SWI_join_the_democracies
+	# 	icon = GFX_goal_generic_more_territorial_claims
+	# 	cost = 4
+	# 	x = 2
+	# 	y = 4
+	# 	relative_position_id = SWI_the_ticking_clock
+	# 	prerequisite = {
+	# 		focus = SWI_secret_pact_with_allies
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SWI_support_democratic_espionage
+	# 	}
+	# 	available = {
 			
-		}
-		completion_reward = {
+	# 	}
+	# 	completion_reward = {
 			
-		}
-	}
+	# 	}
+	# }
 
 	focus = {
 		id = SWI_welcome_refugees
@@ -2955,11 +3007,11 @@ focus_tree = {
 		id = SWI_promote_humanism
 		icon = GFX_focus_SWE_refuge_from_war
 		cost = 4
-		x = 5
-		y = 1
+		x = 3
+		y = 3
 		relative_position_id = SWI_the_ticking_clock
 		prerequisite = {
-			focus = SWI_the_ticking_clock
+			focus = SWI_welcome_refugees
 		}
 		available = {
 			has_idea = SWI_absolute_neutrality

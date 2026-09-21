@@ -50,4 +50,15 @@ spritetypes = {
 		textureFile = "gfx/texticons/fascism_texticon.dds"
 		legacy_lazy_load = no
 	}
+	# MIOS
+	spriteType = {
+		name = "GFX_mio_research_icon"
+		textureFile = "gfx/interface/mio_traits/generic_mio_trait_icon_research.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_generic_mio_department_icon_infantry_defence"
+		textureFile = "gfx/interface/mio_traits/generic_mio_department_icon_infantry_defence.dds"
+		legacy_lazy_load = no
+	}
 }

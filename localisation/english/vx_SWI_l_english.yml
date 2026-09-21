@@ -49,6 +49,19 @@
  SWI_soc_dem_opposition:0 "Social Democratic Opposition"
  SWI_soc_dem_opposition_desc:0 ""
 
+ SWI_national_bonds:0 "National Defense Bonds"
+ SWI_national_bonds_desc:0 ""
+
+ SWI_national_mobilisation:0 "National Mobilisation"
+ SWI_national_mobilisation_desc:0 ""
+
+ ###################
+ # SWITZERLAND - ORGANISATIONS
+ ###################
+ vx_sig_sauer_organisation:0 "Schweizerische Industrie Gesellschaft"
+ vx_sig_sauer_organisation_initial_trait:0 "$vx_generic_high_quality_infantry_manufacturer$"
+ SWI_sig_licensing_trait:0 "SIG Exporting Licenses"
+
  ###################
  # SWITZERLAND - CHARACTERS
  ###################
@@ -101,6 +114,7 @@
 
  SWI_towards_economic_mobilisation:0 "Towards Economic Mobilisation"
  SWI_towards_economic_mobilisation_desc:0 ""
+ SWI_towards_economic_mobilisation_tt:0 "§CThis national spirit will be removed shall we enact either §!§YWar Economy§!§C or §!§YTotal Mobilization§!"
 
  SWI_fortification_efforts:0 "Fortify the Border"
  SWI_fortification_efforts_desc:0 ""
@@ -435,7 +449,7 @@
  SWI_the_alpine_confederacy:0 "The Alpine Confederacy"
  SWI_the_alpine_confederacy_desc:0 ""
 
- SWI_hold_out_on_our_own:0 "Pursue Armed Neutrality"
+ SWI_hold_out_on_our_own:0 "Neutral, But not Passive"
  SWI_hold_out_on_our_own_desc:0 ""
 
  SWI_support_democratic_espionage:0 "Support Allied Espionage"
@@ -446,6 +460,9 @@
 
  SWI_give_in_to_foreign_pressure:0 "Give in to German Pressure"
  SWI_give_in_to_foreign_pressurede_desc:0 ""
+
+ SWI_necessities_of_trade:0 "Seek out new Trading Partners"
+ SWI_necessities_of_trade_desc:0 ""
 
  SWI_secret_pact_with_allies:0 "Secret Pact With the Allies"
  SWI_secret_pact_with_allies_desc:0 ""

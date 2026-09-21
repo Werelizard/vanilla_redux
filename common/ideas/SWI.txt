@@ -40,5 +40,29 @@ ideas = {
 				modifier_army_sub_unit_militia_attack_factor = 0.1
 			}
 		}
+		### Military Bonds
+		SWI_national_bonds = {
+			modifier = {
+				industrial_capacity_factory = 0.1
+				political_power_factor = 0.1
+			}
+		}
+		### Partial Mobilisation
+		SWI_national_mobilisation = {
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_arms_factory_factor = 0.15
+				mobilization_speed = 0.1
+				training_time_army_factor = -0.1
+			}
+			allowed = {
+				NOT = {
+					has_idea = war_economy
+				}
+				NOT = {
+					has_idea = tot_economic_mobilisation
+				}
+			}
+		}
 	}
 }
