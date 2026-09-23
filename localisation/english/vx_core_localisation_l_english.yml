@@ -73,11 +73,6 @@
 
  coalitions_dynmod:0 "Coalitions"
 
- league_of_nations_dynmod:0 "League of Nations Member"
- league_of_nations_dynmod_desc:0 "This country is a member of the League of Nations, an intergovernmental organization established 'to promote international cooperation and to achieve international peace and security'."
- vx_lon_no_wargoal_tt:0 "£trigger_no Can not manually justify wargoals"
- vx_lon_no_war_on_non_tension_tt:0 "£trigger_no Can not declare unrestricted wars"
-
  ### DYNAMIC MODIFIERS - STATE BASED ###
 
  ### FACTION RULES ###
@@ -130,7 +125,12 @@
  vx_london_naval_treaty_cheat:0 "$vx_london_naval_treaty$"
  vx_london_naval_treaty_cheat_desc:0 "$vx_london_naval_treaty_desc$"
  vx_london_naval_treaty_escalator_clause:0 "$vx_london_naval_treaty$"
- vx_london_naval_treaty_escalator_clause_desc:0 "$vx_london_naval_treaty_desc$"
+ vx_london_naval_treaty_escalator_clause_desc:0 "$vx_london_naval_treaty_desc$" 
+
+ vx_lon_member:0 "League of Nations Member"
+ vx_lon_member_desc:0 "This country is a member of the League of Nations, an intergovernmental organization established 'to promote international cooperation and to achieve international peace and security'."
+ vx_lon_no_wargoal_tt:0 "£trigger_no Can not manually justify wargoals"
+ vx_lon_no_war_on_non_tension_tt:0 "£trigger_no Can not declare unrestricted wars"
 
  ### IDEOLOGIES / GOVERNMENT TYPES ###
  socialist_government:0 "Socialist Government"
@@ -337,6 +337,10 @@
  fascist_leave_coalition_tt:0 "The £fascism_texticon  §fFascists§! will leave the coalition"
 
  remove_coalitions_tt:0 "All active §Ycoalitions§! will be §Rdisbanded!§!"
+
+ ### SCRIPTED LOCALISATION ###
+ join_factions_no_tt:0 "Can not join factions"
+ join_factions_yes_tt:0 "Can join factions"
 
  ### SRIPTED TRIGGERS ###
 

@@ -1,5 +1,15 @@
 ideas = {	
 	country = {
+		# Shared ideas
+		vx_lon_member = {
+			modifier = {
+				custom_modifier_tooltip = vx_lon_no_wargoal_tt
+				custom_modifier_tooltip = vx_lon_no_war_on_non_tension_tt
+				trade_opinion_factor = 0.5
+				improve_relations_maintain_cost_factor = -0.1
+				opinion_gain_monthly_factor = 0.1
+			}
+		}
 		# Crisis ideas
 		vx_strikes = {
 			modifier = {

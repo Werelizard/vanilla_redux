@@ -31,9 +31,7 @@ on_actions = {
 				limit = {
 					is_starting_lon_member = yes
 				}
-				add_dynamic_modifier = {
-					modifier = league_of_nations_dynmod
-				}
+				add_ideas = vx_lon_member
 			}
 			# Set up the naval treaty
 			set_variable = {

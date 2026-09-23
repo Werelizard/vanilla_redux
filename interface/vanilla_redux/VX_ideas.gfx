@@ -6,7 +6,7 @@ spriteTypes = {
 	}
 	# Global
 	spriteType = {
-		name = "GFX_idea_league_of_nations_member"
+		name = "GFX_idea_vx_lon_member"
 		texturefile = "gfx/interface/ideas/idea_league_of_nations_member.dds"
 	}
 	spriteType = {

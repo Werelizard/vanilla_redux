@@ -2,7 +2,7 @@ defined_text = {
 	name = GetLeagueOfNationsMembership
 	text = {
 		trigger = { 
-			has_dynamic_modifier = league_of_nations_dynmod
+			has_idea = vx_lon_member
 		}
 		localization_key = league_of_nations_map_mode_member
 	}

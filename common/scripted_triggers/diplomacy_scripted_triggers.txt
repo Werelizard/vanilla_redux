@@ -2,7 +2,7 @@ DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
 	# LON members cannot manually justify war goals
 	if = {
 		limit = {
-			has_dynamic_modifier = league_of_nations_dynmod
+			has_idea = vx_lon_member
 		}
 		custom_override_tooltip = {
 			tooltip = vx_cannot_justify_wargoal_tt
@@ -15,9 +15,9 @@ DIPLOMACY_WAR_ENABLE_TRIGGER = {
 	# LON members cannot declare wars on LON countries that have not generated world tension
 	if = {
 		limit = {
-			has_dynamic_modifier = league_of_nations_dynmod
+			has_idea = vx_lon_member
 			FROM = {
-				has_dynamic_modifier = league_of_nations_dynmod
+				has_idea = vx_lon_member
 			}
 		}
 		custom_override_tooltip = {
@@ -30,6 +30,15 @@ DIPLOMACY_WAR_ENABLE_TRIGGER = {
 }
 
 DIPLOMACY_GUARANTEE_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			has_idea = SWI_absolute_neutrality
+		}
+		custom_trigger_tooltip = {
+			tooltip = SWI_no_guarantee_tt
+			always = no
+		}
+	}
 	# Fascist countries can only guarantee fascist countries or auth. countries if world tension goes over 50%.
 	if = {
 		limit = {

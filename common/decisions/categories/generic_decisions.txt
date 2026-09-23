@@ -99,7 +99,7 @@ generic_decision_league_of_nations = {
     visible_when_empty = yes
 
     visible = {
-        has_dynamic_modifier = league_of_nations_dynmod
+        has_idea = vx_lon_member
     }
 }
 

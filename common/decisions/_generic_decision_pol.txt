@@ -393,9 +393,7 @@ generic_decision_league_of_nations = {
 		days_remove = 90
 		####
 		remove_effect = {
-			remove_dynamic_modifier = {
-				modifier = league_of_nations_dynmod
-			}
+			remove_ideas = vx_lon_member
 			custom_effect_tooltip = doublespace_tt
 			hidden_effect = {
 				add_to_variable = {

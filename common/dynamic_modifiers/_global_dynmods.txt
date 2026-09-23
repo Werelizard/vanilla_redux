@@ -7,14 +7,4 @@ coalitions_dynmod = {
 	stability_factor = coalition_effect_var
 }
 
-league_of_nations_dynmod = {
-	# Handles the League of Nations - global
-	icon = GFX_idea_league_of_nations_member
-	enable = { always = yes }
-	
-	trade_opinion_factor = global.vx_lon_trade_opinion_var
-	custom_modifier_tooltip = vx_lon_no_wargoal_tt
-	custom_modifier_tooltip = vx_lon_no_war_on_non_tension_tt
-}
-
 ### STATE-BASED ###

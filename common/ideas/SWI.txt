@@ -4,12 +4,19 @@ ideas = {
 		SWI_absolute_neutrality = {
 			modifier = {
 				embargo_threshold_factor = 2.5
-				guarantee_tension = 2.5
-				send_volunteers_tension = 2.5
-				justify_war_goal_time = 2.5
+				lend_lease_tension = 2.5
+				enemy_justify_war_goal_time = 1
+				custom_modifier_tooltip = SWI_no_faction_tt
 			}
-			rule = {
-				can_join_factions = no
+			on_add = {
+				set_rule = {
+					can_join_factions = no
+				}
+			}
+			on_remove = {
+				set_rule = {
+					can_join_factions = yes
+				}
 			}
 		}
 		### Social Democratic Oppostion - the SocDem party was the largest winner but got NO seats in the Fed Council

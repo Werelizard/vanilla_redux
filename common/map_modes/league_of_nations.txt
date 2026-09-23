@@ -10,7 +10,7 @@ scripted_map_modes = {
 					if = {
 						limit = {
 							NOT = {
-								has_dynamic_modifier = league_of_nations_dynmod
+								has_idea = vx_lon_member
 							}
 						}
 						set_temp_variable = { red = 0.7 }
