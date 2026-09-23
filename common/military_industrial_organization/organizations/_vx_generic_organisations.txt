@@ -1,880 +1,880 @@
-############################
-###### MATERIEL
-############################
-
-###### Infantry Weapons
-
-vx_generic_high_quality_infantry_manufacturer = {
-	icon = GFX_idea_generic_infantry_equipment_manufacturer_2
-
-	allowed = {
-		always = yes
-	}
-
-	visible = {
-		is_debug = yes
-	}
-
-	equipment_type = {
-		infantry_equipment
-		support_equipment
-	}
-	research_categories = { 
-		infantry_weapons 
-		support_equipment
-	}
-
-	tree_header_text = {
-		text = vx_generic_breakthrough
-		x = 1
-	}
-
-	tree_header_text = {
-		text = vx_generic_general_improvements
-		x = 4
-	}
-
-	tree_header_text = {
-		text = vx_generic_anti_armour
-		x = 7
-	}
-
-	initial_trait = {
-		equipment_bonus = {
-			reliability_factor = 0.03
-		}
-	}
-
-	trait = {
-		token = vx_generic_quality_controls
-		name = vx_generic_quality_controls
-		icon = GFX_generic_mio_trait_icon_reliability
-		position = { x=4 y=0 }
-
-		equipment_bonus = {
-			reliability_factor = 0.03
-		}
-	}
-
-	###### Breakthrough or more Soft Attack
-
-	trait = {
-		token = vx_generic_better_loading_mechanisms
-		name = vx_generic_better_loading_mechanisms
-		icon = GFX_generic_mio_trait_icon_soft_attack
-		position = { x=-3 y=1 }
-
-		relative_position_id = vx_generic_quality_controls
-
-		all_parents = {
-			vx_generic_quality_controls
-		}
-
-		limit_to_equipment_type = {
-			infantry_equipment
-		}
-
-		equipment_bonus = {
-			breakthrough = 0.03
-			soft_attack = 0.03
-		}
-	}
-
-	trait = {
-		token = vx_generic_improved_bolts
-		name = vx_generic_improved_bolts
-		icon = GFX_generic_mio_trait_icon_reliability
-		position = { x=-4 y=2 }
-
-		relative_position_id = vx_generic_quality_controls
-
-		all_parents = {
-			vx_generic_better_loading_mechanisms
-		}
-
-		mutually_exclusive = {
-			vx_generic_machine_guns
-		}
-
-		limit_to_equipment_type = {
-			infantry_equipment
-		}
-
-		equipment_bonus = {
-			soft_attack = 0.04
-			reliability = 0.05
-		}
-	}
-
-	trait = {
-		token = vx_generic_machine_guns
-		name = vx_generic_machine_guns
-		icon = GFX_generic_mio_trait_icon_breakthrough
-		position = { x=-2 y=2 }
-
-		relative_position_id = vx_generic_quality_controls
-
-		all_parents = {
-			vx_generic_better_loading_mechanisms
-		}
-
-		mutually_exclusive = {
-			vx_generic_improved_bolts
-		}
-
-		limit_to_equipment_type = {
-			infantry_equipment
-		}
-
-		equipment_bonus = {
-			breakthrough = 0.05
-		}
-
-		production_bonus = {
-			production_capacity_factor = -0.1
-		}
-	}
-
-	trait = {
-		token = vx_generic_mounted_equipment
-		name = vx_generic_mounted_equipment
-		icon = GFX_generic_mio_trait_icon_breakthrough
-		position = { x=-3 y=3 }
-
-		relative_position_id = vx_generic_quality_controls
-
-		any_parent = {
-			vx_generic_improved_bolts
-			vx_generic_machine_guns
-		}
-
-		limit_to_equipment_type = {
-			infantry_equipment
-		}		
-
-		equipment_bonus = {
-			breakthrough = 0.05
-		}
-	}
-
-	###### Hard Attack or More Defense
-
-	trait = {
-		token = vx_generic_bipods
-		name = vx_generic_bipods
-		icon = GFX_generic_mio_trait_icon_defense
-		position = { x=3 y=1 }
-
-		relative_position_id = vx_generic_quality_controls
-
-		all_parents = {
-			vx_generic_quality_controls
-		}
-
-		limit_to_equipment_type = {
-			infantry_equipment
-		}	
-
-		equipment_bonus = {
-			defense = 0.04
-		}
-	}
-
-	trait = {
-		token = vx_generic_mine_laying_equipment
-		name = vx_generic_mine_laying_equipment
-		icon = GFX_generic_mio_trait_icon_ap_attack
-		position = { x=2 y=2 }
-
-		relative_position_id = vx_generic_quality_controls
-
-		all_parents = {
-			vx_generic_bipods
-		}
-
-		mutually_exclusive = {
-			vx_generic_sniper_scopes
-		}
-
-		limit_to_equipment_type = {
-			infantry_equipment
-		}	
-
-		equipment_bonus = {
-			ap_attack = 0.2
-		}
-	}
-
-	trait = {
-		token = vx_generic_sniper_scopes
-		name = vx_generic_sniper_scopes
-		icon = GFX_generic_mio_trait_icon_hard_attack
-		position = { x=4 y=2 }
-
-		relative_position_id = vx_generic_quality_controls
-
-		all_parents = {
-			vx_generic_bipods
-		}
-
-		mutually_exclusive = {
-			vx_generic_mine_laying_equipment
-		}
-
-		limit_to_equipment_type = {
-			infantry_equipment
-		}	
-
-		equipment_bonus = {
-			hard_attack = 0.1
-			defense = 0.03
-		}
-	}
-
-	trait = {
-		token = vx_generic_heavy_ammunition
-		name = vx_generic_heavy_ammunition
-		icon = GFX_generic_mio_trait_icon_ap_attack
-		position = { x=3 y=3 }
-
-		relative_position_id = vx_generic_quality_controls
-
-		any_parent = {
-			vx_generic_mine_laying_equipment
-			vx_generic_sniper_scopes
-		}
-
-		limit_to_equipment_type = {
-			infantry_equipment
-		}	
-
-		equipment_bonus = {
-			hard_attack = 0.05
-			ap_attack = 0.05
-		}
-	}
-
-	###### All around upgrades
-
-	trait = {
-		token = vx_generic_standardise_production
-		name = vx_generic_standardise_production
-		icon = GFX_generic_mio_trait_icon_efficiency_cap
-		position = { x=0 y=1 }
-
-		relative_position_id = vx_generic_quality_controls
-
-		all_parents = {
-			vx_generic_quality_controls
-		}
-
-		available = {
-			has_mio_number_of_completed_traits > 3
-		}
-
-		production_bonus = {
-			production_efficiency_cap_factor = 0.03
-			production_resource_penalty_factor = -0.1
-		}
-	}
-
-	trait = {
-		token = vx_generic_better_materials
-		name = vx_generic_better_materials
-		icon = GFX_generic_mio_trait_icon_reliability
-		position = { x=-1 y=2 }
-
-		relative_position_id = vx_generic_quality_controls
-
-		all_parents = {
-			vx_generic_standardise_production
-		}
-
-		available = {
-			# has_mio_number_of_completed_traits > 5
-		}
-
-		equipment_bonus = {
-			reliability = 0.04
-		}
-
-		production_bonus = {
-			production_efficiency_cap_factor = 0.03
-		}
-
-		mutually_exclusive = {
-			vx_generic_shared_templates
-		}
-	}
-
-	trait = {
-		token = vx_generic_shared_templates
-		name = vx_generic_shared_templates
-		icon = GFX_generic_mio_trait_icon_efficiency_gain
-		position = { x=1 y=2 }
-
-		relative_position_id = vx_generic_quality_controls
-
-		all_parents = {
-			vx_generic_standardise_production
-		}
-
-		available = {
-			# has_mio_number_of_completed_traits > 5
-		}
-
-		production_bonus = {
-			production_efficiency_gain_factor = 0.05
-		}
-
-		mutually_exclusive = {
-			vx_generic_better_materials
-		}
-	}
-
-	trait = {
-		token = vx_generic_improved_bullet_casings
-		name = vx_generic_improved_bullet_casings
-		icon = GFX_generic_mio_trait_icon_soft_attack
-		position = { x=-1 y=3 }
-
-		relative_position_id = vx_generic_quality_controls
-
-		any_parent = {
-			vx_generic_better_materials
-			vx_generic_shared_templates
-		}
-
-		limit_to_equipment_type = {
-			infantry_equipment
-		}		
-
-		equipment_bonus = {
-			soft_attack = 0.06
-		}
-	}
-
-	trait = {
-		token = vx_generic_reinforced_stocks
-		name = vx_generic_reinforced_stocks
-		icon = GFX_generic_mio_trait_icon_breakthrough
-		position = { x=1 y=3 }
-
-		relative_position_id = vx_generic_quality_controls
-
-		any_parent = {
-			vx_generic_better_materials
-			vx_generic_shared_templates
-		}
-
-		limit_to_equipment_type = {
-			infantry_equipment
-		}		
-
-		equipment_bonus = {
-			defense = 0.04
-			breakthrough = 0.04
-		}
-	}
-
-	###### Generic Stuff
-
-	trait = {
-		token = vx_generic_field_testing
-		name = vx_generic_field_testing
-		icon = GFX_generic_mio_department_icon_facilities
-		position = { x=-1 y=1 }
-
-		relative_position_id = vx_generic_quality_controls
-
-		all_parents = {
-			vx_generic_quality_controls
-		}
-
-		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.05
-		}
-	}
-
-	trait = {
-		token = vx_generic_expend_funding
-		name = vx_generic_expend_funding
-		icon = GFX_generic_mio_department_icon_facilities
-		position = { x=1 y=1 }
-
-		relative_position_id = vx_generic_quality_controls
-
-		all_parents = {
-			vx_generic_quality_controls
-		}
-
-		organization_modifier = {
-			military_industrial_organization_funds_gain = 0.25
-			military_industrial_organization_design_team_assign_cost = -0.2
-		}
-	}
-
-	###### Capstones
-
-	trait = {
-		token = vx_generic_stabilisers
-		name = vx_generic_stabilisers
-		icon = GFX_generic_mio_department_icon_infantry_offense
-		position = { x=-2 y=4 }
-
-		relative_position_id = vx_generic_quality_controls
-
-		all_parents = {
-			vx_generic_mounted_equipment
-		}
-
-		mutually_exclusive = {
-			vx_generic_extended_magasines
-			vx_generic_recoil_compensators
-		}
-
-		equipment_bonus = {
-			breakthrough = 0.04
-		}
-	}
-
-	trait = {
-		token = vx_generic_extended_magasines
-		name = vx_generic_extended_magasines
-		icon = GFX_generic_mio_department_icon_infantry_quality
-		position = { x=0 y=4 }
-
-		relative_position_id = vx_generic_quality_controls
-
-		any_parent = {
-			vx_generic_improved_bullet_casings
-			vx_generic_reinforced_stocks
-		}
-
-		mutually_exclusive = {
-			vx_generic_recoil_compensators
-			vx_generic_extended_magasines
-		}
-
-		equipment_bonus = {
-			soft_attack = 0.04
-		}
-	}
-
-	trait = {
-		token = vx_generic_recoil_compensators
-		name = vx_generic_recoil_compensators
-		icon = GFX_generic_mio_department_icon_infantry_defence
-		position = { x=2 y=4 }
-
-		relative_position_id = vx_generic_quality_controls
-
-		all_parents = {
-			vx_generic_heavy_ammunition
-		}
-
-		mutually_exclusive = {
-			vx_generic_stabilisers
-			vx_generic_extended_magasines
-		}
-
-		equipment_bonus = {
-			defense = 0.03
-			ap_attack = 0.03
-		}
-	}
-}
-
-vx_generic_bulk_infantry_manufacturer = {
-	icon = GFX_idea_generic_infantry_equipment_manufacturer_3
-
-	allowed = {
-		always = yes
-	}
-
-	visible = {
-		is_debug = yes
-	}
-
-	equipment_type = {
-		infantry_equipment
-		support_equipment
-		train_equipment
-	}
-	research_categories = { 
-		infantry_weapons 
-		support_equipment
-	}
-
-	initial_trait = {
-		production_bonus = {
-			production_resource_penalty_factor = -0.05
-		}
-	}
-
-	tree_header_text = {
-		text = vx_generic_bulk_infantry
-		x = 1
-	}
-
-	tree_header_text = {
-		text = vx_generic_bulk_support
-		x = 4
-	}
-
-	tree_header_text = {
-		text = vx_generic_bulk_trains
-		x = 6
-	}
-
-	tree_header_text = {
-		text = vx_generic_bulk_generic
-		x = 8
-	}
-
-	### Infantry Production
-	trait = {
-		token = vx_generic_bulk_infantry_equipment_production
-		name = vx_generic_bulk_infantry_equipment_production
-		icon = GFX_generic_mio_trait_icon_efficiency_gain
-		position = { x = 1 y = 0 }
-
-		production_bonus = {
-			production_efficiency_gain_factor = 0.05
-		}
-	}
-
-	trait = {
-		token = vx_generic_mass_rifle_ammo_production
-		name = vx_generic_mass_rifle_ammo_production
-		icon = GFX_generic_mio_trait_icon_defense
-		position = { x = 0 y = 1 }
-
-		limit_to_equipment_type = {
-			infantry_equipment
-		}
-
-		all_parents = {
-			vx_generic_bulk_infantry_equipment_production
-		}
-
-		equipment_bonus = {
-			defense = 0.05
-			soft_attack = 0.05
-		}
-	}
-
-	trait = {
-		token = vx_generic_mass_rifle_barrel_production
-		name = vx_generic_mass_rifle_barrel_production
-		icon = GFX_generic_mio_department_icon_infantry_materials
-		position = { x = 2 y = 1 }
-
-		limit_to_equipment_type = {
-			infantry_equipment
-		}
-
-		all_parents = {
-			vx_generic_bulk_infantry_equipment_production
-		}
-
-		production_bonus = {
-			production_resource_need_factor = -0.15
-		}
-	}
-
-	trait = {
-		token = vx_generic_parallel_rifle_lines
-		name = vx_generic_parallel_rifle_lines
-		icon = GFX_generic_mio_trait_icon_production_capacity
-		position = { x = 1 y = 2 }
-
-		limit_to_equipment_type = {
-			infantry_equipment
-		}
-
-		all_parents = {
-			vx_generic_bulk_infantry_equipment_production
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.05
-		}
-	}
-
-	trait = {
-		token = vx_generic_rifle_forego_controls
-		name = vx_generic_rifle_forego_controls
-		icon = GFX_generic_mio_department_icon_infantry_line_efficiency
-		position = { x = 0 y = 3 }
-
-		limit_to_equipment_type = {
-			infantry_equipment
-		}
-
-		all_parents = {
-			vx_generic_parallel_rifle_lines
-		}
-
-		equipment_bonus = {
-			reliability_factor = -0.1
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.1
-		}
-
-		mutually_exclusive = {
-			vx_generic_rifle_continuous_production
-		}
-	}
-
-	trait = {
-		token = vx_generic_rifle_continuous_production
-		name = vx_generic_rifle_continuous_production
-		icon = GFX_generic_mio_department_icon_infantry_quality
-		position = { x = 2 y = 3 }
-
-		limit_to_equipment_type = {
-			infantry_equipment
-		}
-
-		all_parents = {
-			vx_generic_parallel_rifle_lines
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.05
-		}
-
-		mutually_exclusive = {
-			vx_generic_rifle_forego_controls
-		}
-	}
-
-	trait = {
-		token = vx_generic_rifle_shift_assembly_teams
-		name = vx_generic_rifle_shift_assembly_teams
-		icon = GFX_generic_mio_department_icon_infantry_technology
-		position = { x = 1 y = 4 }
-
-		limit_to_equipment_type = {
-			infantry_equipment
-		}
-
-		any_parent = {
-			vx_generic_rifle_forego_controls
-			vx_generic_rifle_continuous_production
-		}
-
-		production_bonus = {
-			production_efficiency_gain_factor = 0.05
-			production_efficiency_cap_factor = 0.05
-		}
-	}
-
-	### Support Equipment Production
-
-	trait = {
-		token = vx_generic_bulk_support_lighter_materials
-		name = vx_generic_bulk_support_lighter_materials
-		icon = GFX_generic_mio_trait_icon_production_capacity
-		position = { x = 4 y = 2 }
-
-		limit_to_equipment_type = {
-			support_equipment
-		}
-
-		all_parents = {
-			vx_generic_bulk_infantry_equipment_production
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.05
-		}
-	}
-
-	trait = {
-		token = vx_generic_bulk_support_scrap_metal
-		name = vx_generic_bulk_support_scrap_metal
-		icon = GFX_generic_mio_department_icon_support_materials
-		position = { x = 3 y = 3 }
-
-		limit_to_equipment_type = {
-			support_equipment
-		}
-
-		all_parents = {
-			vx_generic_bulk_support_lighter_materials
-		}
-
-		equipment_bonus = {
-			reliability_factor = -0.1
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.1
-		}
-
-		mutually_exclusive = {
-			vx_generic_bulk_support_templating
-		}
-	}
-
-	trait = {
-		token = vx_generic_bulk_support_templating
-		name = vx_generic_bulk_support_templating
-		icon = GFX_generic_mio_department_icon_support_production
-		position = { x = 5 y = 3 }
-
-		limit_to_equipment_type = {
-			support_equipment
-		}
-
-		all_parents = {
-			vx_generic_bulk_support_lighter_materials
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.05
-		}
-
-		mutually_exclusive = {
-			vx_generic_bulk_support_scrap_metal
-		}
-	}
-
-	trait = {
-		token = vx_generic_support_shift_asssebly_teams
-		name = vx_generic_support_shift_asssebly_teams
-		icon = GFX_generic_mio_department_icon_support_technology
-		position = { x = 4 y = 4 }
-
-		limit_to_equipment_type = {
-			support_equipment
-		}
-
-		any_parent = {
-			vx_generic_bulk_support_scrap_metal
-			vx_generic_bulk_support_templating
-		}
-
-		production_bonus = {
-			production_efficiency_gain_factor = 0.05
-			production_efficiency_cap_factor = 0.05
-		}
-	}
+# ############################
+# ###### MATERIEL
+# ############################
+
+# ###### Infantry Weapons
+
+# vx_generic_high_quality_infantry_manufacturer = {
+# 	icon = GFX_idea_generic_infantry_equipment_manufacturer_2
+
+# 	allowed = {
+# 		always = yes
+# 	}
+
+# 	visible = {
+# 		is_debug = yes
+# 	}
+
+# 	equipment_type = {
+# 		infantry_equipment
+# 		support_equipment
+# 	}
+# 	research_categories = { 
+# 		infantry_weapons 
+# 		support_equipment
+# 	}
+
+# 	tree_header_text = {
+# 		text = vx_generic_breakthrough
+# 		x = 1
+# 	}
+
+# 	tree_header_text = {
+# 		text = vx_generic_general_improvements
+# 		x = 4
+# 	}
+
+# 	tree_header_text = {
+# 		text = vx_generic_anti_armour
+# 		x = 7
+# 	}
+
+# 	initial_trait = {
+# 		equipment_bonus = {
+# 			reliability_factor = 0.03
+# 		}
+# 	}
+
+# 	trait = {
+# 		token = vx_generic_quality_controls
+# 		name = vx_generic_quality_controls
+# 		icon = GFX_generic_mio_trait_icon_reliability
+# 		position = { x=4 y=0 }
+
+# 		equipment_bonus = {
+# 			reliability_factor = 0.03
+# 		}
+# 	}
+
+# 	###### Breakthrough or more Soft Attack
+
+# 	trait = {
+# 		token = vx_generic_better_loading_mechanisms
+# 		name = vx_generic_better_loading_mechanisms
+# 		icon = GFX_generic_mio_trait_icon_soft_attack
+# 		position = { x=-3 y=1 }
+
+# 		relative_position_id = vx_generic_quality_controls
+
+# 		all_parents = {
+# 			vx_generic_quality_controls
+# 		}
+
+# 		limit_to_equipment_type = {
+# 			infantry_equipment
+# 		}
+
+# 		equipment_bonus = {
+# 			breakthrough = 0.03
+# 			soft_attack = 0.03
+# 		}
+# 	}
+
+# 	trait = {
+# 		token = vx_generic_improved_bolts
+# 		name = vx_generic_improved_bolts
+# 		icon = GFX_generic_mio_trait_icon_reliability
+# 		position = { x=-4 y=2 }
+
+# 		relative_position_id = vx_generic_quality_controls
+
+# 		all_parents = {
+# 			vx_generic_better_loading_mechanisms
+# 		}
+
+# 		mutually_exclusive = {
+# 			vx_generic_machine_guns
+# 		}
+
+# 		limit_to_equipment_type = {
+# 			infantry_equipment
+# 		}
+
+# 		equipment_bonus = {
+# 			soft_attack = 0.04
+# 			reliability = 0.05
+# 		}
+# 	}
+
+# 	trait = {
+# 		token = vx_generic_machine_guns
+# 		name = vx_generic_machine_guns
+# 		icon = GFX_generic_mio_trait_icon_breakthrough
+# 		position = { x=-2 y=2 }
+
+# 		relative_position_id = vx_generic_quality_controls
+
+# 		all_parents = {
+# 			vx_generic_better_loading_mechanisms
+# 		}
+
+# 		mutually_exclusive = {
+# 			vx_generic_improved_bolts
+# 		}
+
+# 		limit_to_equipment_type = {
+# 			infantry_equipment
+# 		}
+
+# 		equipment_bonus = {
+# 			breakthrough = 0.05
+# 		}
+
+# 		production_bonus = {
+# 			production_capacity_factor = -0.1
+# 		}
+# 	}
+
+# 	trait = {
+# 		token = vx_generic_mounted_equipment
+# 		name = vx_generic_mounted_equipment
+# 		icon = GFX_generic_mio_trait_icon_breakthrough
+# 		position = { x=-3 y=3 }
+
+# 		relative_position_id = vx_generic_quality_controls
+
+# 		any_parent = {
+# 			vx_generic_improved_bolts
+# 			vx_generic_machine_guns
+# 		}
+
+# 		limit_to_equipment_type = {
+# 			infantry_equipment
+# 		}		
+
+# 		equipment_bonus = {
+# 			breakthrough = 0.05
+# 		}
+# 	}
+
+# 	###### Hard Attack or More Defense
+
+# 	trait = {
+# 		token = vx_generic_bipods
+# 		name = vx_generic_bipods
+# 		icon = GFX_generic_mio_trait_icon_defense
+# 		position = { x=3 y=1 }
+
+# 		relative_position_id = vx_generic_quality_controls
+
+# 		all_parents = {
+# 			vx_generic_quality_controls
+# 		}
+
+# 		limit_to_equipment_type = {
+# 			infantry_equipment
+# 		}	
+
+# 		equipment_bonus = {
+# 			defense = 0.04
+# 		}
+# 	}
+
+# 	trait = {
+# 		token = vx_generic_mine_laying_equipment
+# 		name = vx_generic_mine_laying_equipment
+# 		icon = GFX_generic_mio_trait_icon_ap_attack
+# 		position = { x=2 y=2 }
+
+# 		relative_position_id = vx_generic_quality_controls
+
+# 		all_parents = {
+# 			vx_generic_bipods
+# 		}
+
+# 		mutually_exclusive = {
+# 			vx_generic_sniper_scopes
+# 		}
+
+# 		limit_to_equipment_type = {
+# 			infantry_equipment
+# 		}	
+
+# 		equipment_bonus = {
+# 			ap_attack = 0.2
+# 		}
+# 	}
+
+# 	trait = {
+# 		token = vx_generic_sniper_scopes
+# 		name = vx_generic_sniper_scopes
+# 		icon = GFX_generic_mio_trait_icon_hard_attack
+# 		position = { x=4 y=2 }
+
+# 		relative_position_id = vx_generic_quality_controls
+
+# 		all_parents = {
+# 			vx_generic_bipods
+# 		}
+
+# 		mutually_exclusive = {
+# 			vx_generic_mine_laying_equipment
+# 		}
+
+# 		limit_to_equipment_type = {
+# 			infantry_equipment
+# 		}	
+
+# 		equipment_bonus = {
+# 			hard_attack = 0.1
+# 			defense = 0.03
+# 		}
+# 	}
+
+# 	trait = {
+# 		token = vx_generic_heavy_ammunition
+# 		name = vx_generic_heavy_ammunition
+# 		icon = GFX_generic_mio_trait_icon_ap_attack
+# 		position = { x=3 y=3 }
+
+# 		relative_position_id = vx_generic_quality_controls
+
+# 		any_parent = {
+# 			vx_generic_mine_laying_equipment
+# 			vx_generic_sniper_scopes
+# 		}
+
+# 		limit_to_equipment_type = {
+# 			infantry_equipment
+# 		}	
+
+# 		equipment_bonus = {
+# 			hard_attack = 0.05
+# 			ap_attack = 0.05
+# 		}
+# 	}
+
+# 	###### All around upgrades
+
+# 	trait = {
+# 		token = vx_generic_standardise_production
+# 		name = vx_generic_standardise_production
+# 		icon = GFX_generic_mio_trait_icon_efficiency_cap
+# 		position = { x=0 y=1 }
+
+# 		relative_position_id = vx_generic_quality_controls
+
+# 		all_parents = {
+# 			vx_generic_quality_controls
+# 		}
+
+# 		available = {
+# 			has_mio_number_of_completed_traits > 3
+# 		}
+
+# 		production_bonus = {
+# 			production_efficiency_cap_factor = 0.03
+# 			production_resource_penalty_factor = -0.1
+# 		}
+# 	}
+
+# 	trait = {
+# 		token = vx_generic_better_materials
+# 		name = vx_generic_better_materials
+# 		icon = GFX_generic_mio_trait_icon_reliability
+# 		position = { x=-1 y=2 }
+
+# 		relative_position_id = vx_generic_quality_controls
+
+# 		all_parents = {
+# 			vx_generic_standardise_production
+# 		}
+
+# 		available = {
+# 			# has_mio_number_of_completed_traits > 5
+# 		}
+
+# 		equipment_bonus = {
+# 			reliability = 0.04
+# 		}
+
+# 		production_bonus = {
+# 			production_efficiency_cap_factor = 0.03
+# 		}
+
+# 		mutually_exclusive = {
+# 			vx_generic_shared_templates
+# 		}
+# 	}
+
+# 	trait = {
+# 		token = vx_generic_shared_templates
+# 		name = vx_generic_shared_templates
+# 		icon = GFX_generic_mio_trait_icon_efficiency_gain
+# 		position = { x=1 y=2 }
+
+# 		relative_position_id = vx_generic_quality_controls
+
+# 		all_parents = {
+# 			vx_generic_standardise_production
+# 		}
+
+# 		available = {
+# 			# has_mio_number_of_completed_traits > 5
+# 		}
+
+# 		production_bonus = {
+# 			production_efficiency_gain_factor = 0.05
+# 		}
+
+# 		mutually_exclusive = {
+# 			vx_generic_better_materials
+# 		}
+# 	}
+
+# 	trait = {
+# 		token = vx_generic_improved_bullet_casings
+# 		name = vx_generic_improved_bullet_casings
+# 		icon = GFX_generic_mio_trait_icon_soft_attack
+# 		position = { x=-1 y=3 }
+
+# 		relative_position_id = vx_generic_quality_controls
+
+# 		any_parent = {
+# 			vx_generic_better_materials
+# 			vx_generic_shared_templates
+# 		}
+
+# 		limit_to_equipment_type = {
+# 			infantry_equipment
+# 		}		
+
+# 		equipment_bonus = {
+# 			soft_attack = 0.06
+# 		}
+# 	}
+
+# 	trait = {
+# 		token = vx_generic_reinforced_stocks
+# 		name = vx_generic_reinforced_stocks
+# 		icon = GFX_generic_mio_trait_icon_breakthrough
+# 		position = { x=1 y=3 }
+
+# 		relative_position_id = vx_generic_quality_controls
+
+# 		any_parent = {
+# 			vx_generic_better_materials
+# 			vx_generic_shared_templates
+# 		}
+
+# 		limit_to_equipment_type = {
+# 			infantry_equipment
+# 		}		
+
+# 		equipment_bonus = {
+# 			defense = 0.04
+# 			breakthrough = 0.04
+# 		}
+# 	}
+
+# 	###### Generic Stuff
+
+# 	trait = {
+# 		token = vx_generic_field_testing
+# 		name = vx_generic_field_testing
+# 		icon = GFX_generic_mio_department_icon_facilities
+# 		position = { x=-1 y=1 }
+
+# 		relative_position_id = vx_generic_quality_controls
+
+# 		all_parents = {
+# 			vx_generic_quality_controls
+# 		}
+
+# 		organization_modifier = {
+# 			military_industrial_organization_research_bonus = 0.05
+# 		}
+# 	}
+
+# 	trait = {
+# 		token = vx_generic_expend_funding
+# 		name = vx_generic_expend_funding
+# 		icon = GFX_generic_mio_department_icon_facilities
+# 		position = { x=1 y=1 }
+
+# 		relative_position_id = vx_generic_quality_controls
+
+# 		all_parents = {
+# 			vx_generic_quality_controls
+# 		}
+
+# 		organization_modifier = {
+# 			military_industrial_organization_funds_gain = 0.25
+# 			military_industrial_organization_design_team_assign_cost = -0.2
+# 		}
+# 	}
+
+# 	###### Capstones
+
+# 	trait = {
+# 		token = vx_generic_stabilisers
+# 		name = vx_generic_stabilisers
+# 		icon = GFX_generic_mio_department_icon_infantry_offense
+# 		position = { x=-2 y=4 }
+
+# 		relative_position_id = vx_generic_quality_controls
+
+# 		all_parents = {
+# 			vx_generic_mounted_equipment
+# 		}
+
+# 		mutually_exclusive = {
+# 			vx_generic_extended_magasines
+# 			vx_generic_recoil_compensators
+# 		}
+
+# 		equipment_bonus = {
+# 			breakthrough = 0.04
+# 		}
+# 	}
+
+# 	trait = {
+# 		token = vx_generic_extended_magasines
+# 		name = vx_generic_extended_magasines
+# 		icon = GFX_generic_mio_department_icon_infantry_quality
+# 		position = { x=0 y=4 }
+
+# 		relative_position_id = vx_generic_quality_controls
+
+# 		any_parent = {
+# 			vx_generic_improved_bullet_casings
+# 			vx_generic_reinforced_stocks
+# 		}
+
+# 		mutually_exclusive = {
+# 			vx_generic_recoil_compensators
+# 			vx_generic_extended_magasines
+# 		}
+
+# 		equipment_bonus = {
+# 			soft_attack = 0.04
+# 		}
+# 	}
+
+# 	trait = {
+# 		token = vx_generic_recoil_compensators
+# 		name = vx_generic_recoil_compensators
+# 		icon = GFX_generic_mio_department_icon_infantry_defence
+# 		position = { x=2 y=4 }
+
+# 		relative_position_id = vx_generic_quality_controls
+
+# 		all_parents = {
+# 			vx_generic_heavy_ammunition
+# 		}
+
+# 		mutually_exclusive = {
+# 			vx_generic_stabilisers
+# 			vx_generic_extended_magasines
+# 		}
+
+# 		equipment_bonus = {
+# 			defense = 0.03
+# 			ap_attack = 0.03
+# 		}
+# 	}
+# }
+
+# vx_generic_bulk_infantry_manufacturer = {
+# 	icon = GFX_idea_generic_infantry_equipment_manufacturer_3
+
+# 	allowed = {
+# 		always = yes
+# 	}
+
+# 	visible = {
+# 		is_debug = yes
+# 	}
+
+# 	equipment_type = {
+# 		infantry_equipment
+# 		support_equipment
+# 		train_equipment
+# 	}
+# 	research_categories = { 
+# 		infantry_weapons 
+# 		support_equipment
+# 	}
+
+# 	initial_trait = {
+# 		production_bonus = {
+# 			production_resource_penalty_factor = -0.05
+# 		}
+# 	}
+
+# 	tree_header_text = {
+# 		text = vx_generic_bulk_infantry
+# 		x = 1
+# 	}
+
+# 	tree_header_text = {
+# 		text = vx_generic_bulk_support
+# 		x = 4
+# 	}
+
+# 	tree_header_text = {
+# 		text = vx_generic_bulk_trains
+# 		x = 6
+# 	}
+
+# 	tree_header_text = {
+# 		text = vx_generic_bulk_generic
+# 		x = 8
+# 	}
+
+# 	### Infantry Production
+# 	trait = {
+# 		token = vx_generic_bulk_infantry_equipment_production
+# 		name = vx_generic_bulk_infantry_equipment_production
+# 		icon = GFX_generic_mio_trait_icon_efficiency_gain
+# 		position = { x = 1 y = 0 }
+
+# 		production_bonus = {
+# 			production_efficiency_gain_factor = 0.05
+# 		}
+# 	}
+
+# 	trait = {
+# 		token = vx_generic_mass_rifle_ammo_production
+# 		name = vx_generic_mass_rifle_ammo_production
+# 		icon = GFX_generic_mio_trait_icon_defense
+# 		position = { x = 0 y = 1 }
+
+# 		limit_to_equipment_type = {
+# 			infantry_equipment
+# 		}
+
+# 		all_parents = {
+# 			vx_generic_bulk_infantry_equipment_production
+# 		}
+
+# 		equipment_bonus = {
+# 			defense = 0.05
+# 			soft_attack = 0.05
+# 		}
+# 	}
+
+# 	trait = {
+# 		token = vx_generic_mass_rifle_barrel_production
+# 		name = vx_generic_mass_rifle_barrel_production
+# 		icon = GFX_generic_mio_department_icon_infantry_materials
+# 		position = { x = 2 y = 1 }
+
+# 		limit_to_equipment_type = {
+# 			infantry_equipment
+# 		}
+
+# 		all_parents = {
+# 			vx_generic_bulk_infantry_equipment_production
+# 		}
+
+# 		production_bonus = {
+# 			production_resource_need_factor = -0.15
+# 		}
+# 	}
+
+# 	trait = {
+# 		token = vx_generic_parallel_rifle_lines
+# 		name = vx_generic_parallel_rifle_lines
+# 		icon = GFX_generic_mio_trait_icon_production_capacity
+# 		position = { x = 1 y = 2 }
+
+# 		limit_to_equipment_type = {
+# 			infantry_equipment
+# 		}
+
+# 		all_parents = {
+# 			vx_generic_bulk_infantry_equipment_production
+# 		}
+
+# 		production_bonus = {
+# 			production_capacity_factor = 0.05
+# 		}
+# 	}
+
+# 	trait = {
+# 		token = vx_generic_rifle_forego_controls
+# 		name = vx_generic_rifle_forego_controls
+# 		icon = GFX_generic_mio_department_icon_infantry_line_efficiency
+# 		position = { x = 0 y = 3 }
+
+# 		limit_to_equipment_type = {
+# 			infantry_equipment
+# 		}
+
+# 		all_parents = {
+# 			vx_generic_parallel_rifle_lines
+# 		}
+
+# 		equipment_bonus = {
+# 			reliability_factor = -0.1
+# 		}
+
+# 		production_bonus = {
+# 			production_capacity_factor = 0.1
+# 		}
+
+# 		mutually_exclusive = {
+# 			vx_generic_rifle_continuous_production
+# 		}
+# 	}
+
+# 	trait = {
+# 		token = vx_generic_rifle_continuous_production
+# 		name = vx_generic_rifle_continuous_production
+# 		icon = GFX_generic_mio_department_icon_infantry_quality
+# 		position = { x = 2 y = 3 }
+
+# 		limit_to_equipment_type = {
+# 			infantry_equipment
+# 		}
+
+# 		all_parents = {
+# 			vx_generic_parallel_rifle_lines
+# 		}
+
+# 		production_bonus = {
+# 			production_capacity_factor = 0.05
+# 		}
+
+# 		mutually_exclusive = {
+# 			vx_generic_rifle_forego_controls
+# 		}
+# 	}
+
+# 	trait = {
+# 		token = vx_generic_rifle_shift_assembly_teams
+# 		name = vx_generic_rifle_shift_assembly_teams
+# 		icon = GFX_generic_mio_department_icon_infantry_technology
+# 		position = { x = 1 y = 4 }
+
+# 		limit_to_equipment_type = {
+# 			infantry_equipment
+# 		}
+
+# 		any_parent = {
+# 			vx_generic_rifle_forego_controls
+# 			vx_generic_rifle_continuous_production
+# 		}
+
+# 		production_bonus = {
+# 			production_efficiency_gain_factor = 0.05
+# 			production_efficiency_cap_factor = 0.05
+# 		}
+# 	}
+
+# 	### Support Equipment Production
+
+# 	trait = {
+# 		token = vx_generic_bulk_support_lighter_materials
+# 		name = vx_generic_bulk_support_lighter_materials
+# 		icon = GFX_generic_mio_trait_icon_production_capacity
+# 		position = { x = 4 y = 2 }
+
+# 		limit_to_equipment_type = {
+# 			support_equipment
+# 		}
+
+# 		all_parents = {
+# 			vx_generic_bulk_infantry_equipment_production
+# 		}
+
+# 		production_bonus = {
+# 			production_capacity_factor = 0.05
+# 		}
+# 	}
+
+# 	trait = {
+# 		token = vx_generic_bulk_support_scrap_metal
+# 		name = vx_generic_bulk_support_scrap_metal
+# 		icon = GFX_generic_mio_department_icon_support_materials
+# 		position = { x = 3 y = 3 }
+
+# 		limit_to_equipment_type = {
+# 			support_equipment
+# 		}
+
+# 		all_parents = {
+# 			vx_generic_bulk_support_lighter_materials
+# 		}
+
+# 		equipment_bonus = {
+# 			reliability_factor = -0.1
+# 		}
+
+# 		production_bonus = {
+# 			production_capacity_factor = 0.1
+# 		}
+
+# 		mutually_exclusive = {
+# 			vx_generic_bulk_support_templating
+# 		}
+# 	}
+
+# 	trait = {
+# 		token = vx_generic_bulk_support_templating
+# 		name = vx_generic_bulk_support_templating
+# 		icon = GFX_generic_mio_department_icon_support_production
+# 		position = { x = 5 y = 3 }
+
+# 		limit_to_equipment_type = {
+# 			support_equipment
+# 		}
+
+# 		all_parents = {
+# 			vx_generic_bulk_support_lighter_materials
+# 		}
+
+# 		production_bonus = {
+# 			production_capacity_factor = 0.05
+# 		}
+
+# 		mutually_exclusive = {
+# 			vx_generic_bulk_support_scrap_metal
+# 		}
+# 	}
+
+# 	trait = {
+# 		token = vx_generic_support_shift_asssebly_teams
+# 		name = vx_generic_support_shift_asssebly_teams
+# 		icon = GFX_generic_mio_department_icon_support_technology
+# 		position = { x = 4 y = 4 }
+
+# 		limit_to_equipment_type = {
+# 			support_equipment
+# 		}
+
+# 		any_parent = {
+# 			vx_generic_bulk_support_scrap_metal
+# 			vx_generic_bulk_support_templating
+# 		}
+
+# 		production_bonus = {
+# 			production_efficiency_gain_factor = 0.05
+# 			production_efficiency_cap_factor = 0.05
+# 		}
+# 	}
 	
-	### Train Equipment Production
+# 	### Train Equipment Production
 
-	trait = {
-		token = vx_generic_bulk_prebuilt_frames
-		name = vx_generic_bulk_prebuilt_frames
-		icon = GFX_military_industrial_organization_train_equipment
-		position = { x = 6 y = 2 }
+# 	trait = {
+# 		token = vx_generic_bulk_prebuilt_frames
+# 		name = vx_generic_bulk_prebuilt_frames
+# 		icon = GFX_military_industrial_organization_train_equipment
+# 		position = { x = 6 y = 2 }
 
-		all_parents = {
-			vx_generic_bulk_infantry_equipment_production
-		}
+# 		all_parents = {
+# 			vx_generic_bulk_infantry_equipment_production
+# 		}
 
-		limit_to_equipment_type = {
-			train_equipment
-		}
+# 		limit_to_equipment_type = {
+# 			train_equipment
+# 		}
 
-		production_bonus = {
-			production_efficiency_gain_factor = 0.05
-			production_cost_factor = -0.1
-		}
-	}
+# 		production_bonus = {
+# 			production_efficiency_gain_factor = 0.05
+# 			production_cost_factor = -0.1
+# 		}
+# 	}
 
-	trait = {
-		token = vx_generic_bulk_sequenced_train_assembly
-		name = vx_generic_bulk_sequenced_train_assembly
-		icon = GFX_generic_mio_trait_icon_efficiency_cap
-		position = { x = 6 y = 4 }
+# 	trait = {
+# 		token = vx_generic_bulk_sequenced_train_assembly
+# 		name = vx_generic_bulk_sequenced_train_assembly
+# 		icon = GFX_generic_mio_trait_icon_efficiency_cap
+# 		position = { x = 6 y = 4 }
 
-		all_parents = {
-			vx_generic_bulk_prebuilt_frames
-		}
+# 		all_parents = {
+# 			vx_generic_bulk_prebuilt_frames
+# 		}
 
-		limit_to_equipment_type = {
-			train_equipment
-		}
+# 		limit_to_equipment_type = {
+# 			train_equipment
+# 		}
 
-		production_bonus = {
-			production_efficiency_gain_factor = 0.05
-			production_efficiency_cap_factor = 0.05
-		}
-	}
+# 		production_bonus = {
+# 			production_efficiency_gain_factor = 0.05
+# 			production_efficiency_cap_factor = 0.05
+# 		}
+# 	}
 
-	### General Traits
-	trait = {
-		token = vx_generic_bulk_refitting
-		name = vx_generic_bulk_refitting
-		icon = GFX_generic_mio_trait_icon_conversion_speed
-		position = { x = 3 y = 1 }
+# 	### General Traits
+# 	trait = {
+# 		token = vx_generic_bulk_refitting
+# 		name = vx_generic_bulk_refitting
+# 		icon = GFX_generic_mio_trait_icon_conversion_speed
+# 		position = { x = 3 y = 1 }
 
-		all_parents = {
-			vx_generic_bulk_infantry_equipment_production
-		}
+# 		all_parents = {
+# 			vx_generic_bulk_infantry_equipment_production
+# 		}
 
-		limit_to_equipment_type = {
-			infantry_equipment
-			support_equipment
-		}
+# 		limit_to_equipment_type = {
+# 			infantry_equipment
+# 			support_equipment
+# 		}
 
-		production_bonus = {
-			production_conversion_speed_factor = 0.25
-			production_resource_penalty_factor = -0.1
-		}
-	}
+# 		production_bonus = {
+# 			production_conversion_speed_factor = 0.25
+# 			production_resource_penalty_factor = -0.1
+# 		}
+# 	}
 
-	trait = {
-		token = vx_generic_private_funding
-		name = vx_generic_private_funding
-		icon = GFX_generic_mio_department_icon_facilities
-		position = { x = 8 y = 0 }
+# 	trait = {
+# 		token = vx_generic_private_funding
+# 		name = vx_generic_private_funding
+# 		icon = GFX_generic_mio_department_icon_facilities
+# 		position = { x = 8 y = 0 }
 
-		organization_modifier = {
-			military_industrial_organization_funds_gain = 0.25
-		}	
-	}
+# 		organization_modifier = {
+# 			military_industrial_organization_funds_gain = 0.25
+# 		}	
+# 	}
 
-	trait = {
-		token = vx_generic_shared_knowledged
-		name = vx_generic_shared_knowledged
-		icon = GFX_mio_research_icon
-		position = { x = 8 y = 2 }
+# 	trait = {
+# 		token = vx_generic_shared_knowledged
+# 		name = vx_generic_shared_knowledged
+# 		icon = GFX_mio_research_icon
+# 		position = { x = 8 y = 2 }
 		
-		all_parents = {
-			vx_generic_private_funding
-		}
+# 		all_parents = {
+# 			vx_generic_private_funding
+# 		}
 
-		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.05
-		}
-	}
+# 		organization_modifier = {
+# 			military_industrial_organization_research_bonus = 0.05
+# 		}
+# 	}
 
-	trait = {
-		token = vx_generic_dedicated_design_teams
-		name = vx_generic_dedicated_design_teams
-		icon = GFX_mio_research_icon
-		position = { x = 8 y = 4 }
+# 	trait = {
+# 		token = vx_generic_dedicated_design_teams
+# 		name = vx_generic_dedicated_design_teams
+# 		icon = GFX_mio_research_icon
+# 		position = { x = 8 y = 4 }
 
-		available = {
-			has_mio_number_of_completed_traits > 5
-		}
+# 		available = {
+# 			has_mio_number_of_completed_traits > 5
+# 		}
 		
-		all_parents = {
-			vx_generic_shared_knowledged
-		}
+# 		all_parents = {
+# 			vx_generic_shared_knowledged
+# 		}
 
-		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.05
-		}
+# 		organization_modifier = {
+# 			military_industrial_organization_research_bonus = 0.05
+# 		}
 
-		production_bonus = {
-			production_efficiency_gain_factor = 0.03
-		}
-	}
-}
+# 		production_bonus = {
+# 			production_efficiency_gain_factor = 0.03
+# 		}
+# 	}
+# }

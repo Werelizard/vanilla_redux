@@ -412,3 +412,6 @@
  focus_on_complete:0 "§YOn focus completed:§!" 
 
  max_training_factor_tt: " $MODIFIER_MAX_TRAINING_XP_FACTOR$: $RIGHT|+=%1$"
+ 
+ ### INTERFACE ###
+ second_in_command:0 "Head of Government"

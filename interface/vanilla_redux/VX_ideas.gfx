@@ -1,4 +1,9 @@
 spriteTypes = {
+	# UI 
+	spriteType = {
+		name = "GFX_idea_slot_second_in_command"
+		textureFile = "gfx/interface/idea_slot_second_in_command.dds"
+	}
 	# Global
 	spriteType = {
 		name = "GFX_idea_league_of_nations_member"

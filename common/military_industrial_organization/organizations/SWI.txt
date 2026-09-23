@@ -2,7 +2,7 @@ vx_sig_sauer_organisation = {
 	icon = GFX_idea_SWI_sig
 	name = vx_sig_sauer_organisation
 
-	include = vx_generic_high_quality_infantry_manufacturer
+	include = generic_infantry_equipment_organization
 
 	allowed = {
 		original_tag = SWI
@@ -10,11 +10,9 @@ vx_sig_sauer_organisation = {
 
 	equipment_type = {
 		infantry_equipment
-		support_equipment
 	}
 	research_categories = { 
 		infantry_weapons 
-		support_equipment
 	}
 
 	trait = {
@@ -22,13 +20,9 @@ vx_sig_sauer_organisation = {
 		name = SWI_sig_licensing_trait
 		icon = GFX_generic_mio_trait_icon_unique
 
-		position = { x = 3	y = 0 }
+		position = { x = 0	y = 0 }
 
 		special_trait_background = yes
-
-		limit_to_equipment_type = {
-			infantry_equipment
-		}
 
 		available = {
 			owner = {
@@ -36,8 +30,7 @@ vx_sig_sauer_organisation = {
 			}
 		}
 
-		production_bonus = {
-			production_efficiency_gain_factor = 0.05
+		production_bonus = {	
 			production_efficiency_cap_factor = 0.05
 		}
 	}
