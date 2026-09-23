@@ -102,6 +102,7 @@ ideologies = {
 			can_puppet = yes
 			can_create_collaboration_government = no
 			can_lower_tension = yes
+			can_send_volunteers = yes
 		}
 
 		war_impact_on_world_tension = 0.25
@@ -135,6 +136,7 @@ ideologies = {
 			can_puppet = yes
 			can_create_collaboration_government = no
 			can_lower_tension = yes
+			can_send_volunteers = yes
 		}
 
 		war_impact_on_world_tension = 0.25
@@ -172,6 +174,7 @@ ideologies = {
 			can_puppet = yes
 			can_create_collaboration_government = no
 			can_lower_tension = yes
+			can_send_volunteers = yes
 		}
 
 		war_impact_on_world_tension = 0.25
@@ -205,6 +208,7 @@ ideologies = {
 			can_puppet = yes
 			can_create_collaboration_government = no
 			can_lower_tension = yes
+			can_send_volunteers = yes
 		}
 
 		war_impact_on_world_tension = 0.25
@@ -240,6 +244,7 @@ ideologies = {
 			can_force_government = no
 			can_puppet = yes
 			can_create_collaboration_government = no
+			can_send_volunteers = yes
 		}
 
 		war_impact_on_world_tension = 0.25
@@ -276,6 +281,7 @@ ideologies = {
 			can_force_government = no
 			can_puppet = yes
 			can_create_collaboration_government = no
+			can_send_volunteers = yes
 		}
 
 		war_impact_on_world_tension = 0.25
@@ -311,6 +317,7 @@ ideologies = {
 			can_force_government = yes
 			can_puppet = yes
 			can_create_collaboration_government = yes
+			can_send_volunteers = yes
 		}
 
 		war_impact_on_world_tension = 1

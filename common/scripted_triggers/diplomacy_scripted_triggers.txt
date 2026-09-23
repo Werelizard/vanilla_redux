@@ -127,6 +127,15 @@ DIPLOMACY_RELEASE_NATION_ENABLE_TRIGGER = {
 DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 	if = {
 		limit = {
+			has_idea = SWI_absolute_neutrality
+		}
+		custom_trigger_tooltip = {
+			tooltip = SWI_no_volunteers_tt
+			always = no
+		}
+	}
+	if = {
+		limit = {
 			FROM = {
 				has_country_flag = vx_target_cannot_send_volunteers_flag
 			}
