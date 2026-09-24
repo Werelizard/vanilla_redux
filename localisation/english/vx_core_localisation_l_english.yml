@@ -419,3 +419,8 @@
  
  ### INTERFACE ###
  second_in_command:0 "Head of Government"
+
+ ### STATEES ###
+ STATE_1082:0 "Savoy"
+ STATE_1083:0 "Nancy"
+ STATE_1084:0 "Italian Alps"
