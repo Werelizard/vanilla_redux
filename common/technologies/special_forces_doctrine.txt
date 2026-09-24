@@ -55,6 +55,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			#mountaineers_tech
 			cat_mountaineers_doctrine
@@ -102,6 +105,9 @@ technologies = {
 		research_cost = 4.5
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			#mountaineers_tech
 			cat_mountaineers_doctrine
@@ -147,6 +153,9 @@ technologies = {
 		research_cost = 4.5
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			#mountaineers_tech
 			cat_mountaineers_doctrine
@@ -193,6 +202,9 @@ technologies = {
 		research_cost = 4.5
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			#mountaineers_tech
 			cat_mountaineers_doctrine
@@ -237,6 +249,9 @@ technologies = {
 		research_cost = 4.5
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			#mountaineers_tech
 			cat_mountaineers_doctrine
@@ -288,6 +303,9 @@ technologies = {
 		research_cost = 4.5
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			#mountaineers_tech
 			cat_mountaineers_doctrine
@@ -332,6 +350,9 @@ technologies = {
 		research_cost = 4.5
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			#mountaineers_tech
 			cat_mountaineers_doctrine
@@ -371,6 +392,9 @@ technologies = {
 		research_cost = 4.5
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			#mountaineers_tech
 			cat_mountaineers_doctrine
@@ -409,6 +433,9 @@ technologies = {
 		research_cost = 4.5
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			#mountaineers_tech
 			cat_mountaineers_doctrine
@@ -480,6 +507,9 @@ technologies = {
 		research_cost = 2.25
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			#marine_tech
 			cat_marines_doctrine
@@ -531,6 +561,9 @@ technologies = {
 		research_cost = 2.25
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			#marine_tech
 			cat_marines_doctrine
@@ -577,6 +610,9 @@ technologies = {
 		research_cost = 2.25
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			#marine_tech
 			cat_marines_doctrine
@@ -624,6 +660,9 @@ technologies = {
 		research_cost = 2.25
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			#marine_tech
 			cat_marines_doctrine
@@ -673,6 +712,9 @@ technologies = {
 		research_cost = 2.25
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			#marine_tech
 			cat_marines_doctrine
@@ -716,6 +758,9 @@ technologies = {
 		research_cost = 2.25
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			#marine_tech
 			cat_marines_doctrine
@@ -756,6 +801,9 @@ technologies = {
 		research_cost = 2.25
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			#marine_tech
 			cat_marines_doctrine
@@ -808,6 +856,9 @@ technologies = {
 		research_cost = 2.25
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			#marine_tech
 			cat_marines_doctrine
@@ -858,6 +909,9 @@ technologies = {
 		research_cost = 2.25
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			#marine_tech
 			cat_marines_doctrine
@@ -914,6 +968,9 @@ technologies = {
 		research_cost = 2.25
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			#marine_tech
 			cat_marines_doctrine
@@ -984,6 +1041,9 @@ technologies = {
 		research_cost = 2.25
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			#para_tech
 			cat_paratroopers_doctrine
@@ -1029,6 +1089,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			#para_tech
 			cat_paratroopers_doctrine
@@ -1072,6 +1135,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			#para_tech
 			cat_paratroopers_doctrine
@@ -1120,6 +1186,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			#para_tech
 			cat_paratroopers_doctrine
@@ -1164,6 +1233,9 @@ technologies = {
 		research_cost = 2.25
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			#para_tech
 			cat_paratroopers_doctrine
@@ -1209,6 +1281,9 @@ technologies = {
 		research_cost = 2.25
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			#para_tech
 			cat_paratroopers_doctrine
@@ -1253,6 +1328,9 @@ technologies = {
 		research_cost = 2.25
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			#para_tech
 			cat_paratroopers_doctrine
@@ -1292,6 +1370,9 @@ technologies = {
 		research_cost = 2.25
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			#para_tech
 			cat_paratroopers_doctrine
@@ -1330,6 +1411,9 @@ technologies = {
 		research_cost = 2.25
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			#para_tech
 			cat_paratroopers_doctrine
@@ -1365,6 +1449,9 @@ technologies = {
 		research_cost = 2.25
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			#para_tech
 			cat_paratroopers_doctrine
@@ -1413,6 +1500,9 @@ technologies = {
 		research_cost = 2.25
 		rangers_special_forces_contribution_factor = -0.1 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			cat_rangers_doctrine
 		}		
@@ -1470,6 +1560,9 @@ technologies = {
 		xor = { rangers_jungle_training }
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			cat_rangers_doctrine
 		}		
@@ -1508,6 +1601,9 @@ technologies = {
 		xor = { rangers_jaegers_training }
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			cat_rangers_doctrine
 		}
@@ -1544,6 +1640,9 @@ technologies = {
 		research_cost = 4.5
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			cat_rangers_doctrine
 		}
@@ -1582,6 +1681,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			cat_rangers_doctrine
 		}
@@ -1609,6 +1711,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			cat_rangers_doctrine
 		}
@@ -1666,6 +1771,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			cat_rangers_doctrine
 		}
@@ -1695,6 +1803,9 @@ technologies = {
 		xor = { rangers_backbone_doctrine }
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			cat_rangers_doctrine
 		}
@@ -1725,6 +1836,9 @@ technologies = {
 		xor = { elite_rangers_doctrine }
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			special_forces_doctrine
 			cat_rangers_doctrine
 		}

@@ -19,6 +19,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			air_equipment
 			transport_planes_cat
 		}
@@ -52,6 +55,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			air_equipment
 			transport_planes_cat
 		}
@@ -80,6 +86,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			air_equipment
 			transport_planes_cat
 		}
@@ -124,6 +133,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			light_air
 			light_fighter
 			air_equipment
@@ -157,6 +169,9 @@ technologies = {
 		start_year = 1933
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_air
 			air_equipment
 			mio_cat_all_light_fighter_and_modules
@@ -203,6 +218,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			light_air
 			light_fighter
 			air_equipment
@@ -255,6 +273,9 @@ technologies = {
 		start_year = 1936
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_air
 			air_equipment
 			mio_cat_all_light_fighter_and_modules
@@ -319,6 +340,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			light_air
 			light_fighter
 			air_equipment
@@ -377,6 +401,9 @@ technologies = {
 		start_year = 1940
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_air
 			air_equipment
 			mio_cat_all_light_fighter_and_modules
@@ -447,6 +474,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			light_air
 			light_fighter
 			air_equipment
@@ -499,6 +529,9 @@ technologies = {
 		start_year = 1944
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_air
 			air_equipment
 			mio_cat_all_light_fighter_and_modules
@@ -569,6 +602,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			light_air
 			jet_technology
 			mio_cat_all_light_fighter_and_modules
@@ -610,6 +646,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			light_air
 			jet_technology
 			mio_cat_all_light_fighter_and_modules
@@ -640,6 +679,9 @@ technologies = {
 		start_year = 1950
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			light_air
 			jet_technology
 			mio_cat_all_light_fighter_and_modules
@@ -676,6 +718,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			light_air
 			cas_bomber
 			air_equipment
@@ -715,6 +760,9 @@ technologies = {
 		start_year = 1936
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_air
 			air_equipment
 			cas_bomber
@@ -780,6 +828,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			light_air
 			cas_bomber
 			air_equipment
@@ -828,6 +879,9 @@ technologies = {
 		start_year = 1940
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_air
 			air_equipment
 			cas_bomber
@@ -892,6 +946,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			light_air
 			cas_bomber
 			air_equipment
@@ -938,6 +995,9 @@ technologies = {
 		start_year = 1944
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_air
 			air_equipment
 			cas_bomber
@@ -995,6 +1055,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_air
 			naval_bomber
 			air_equipment
@@ -1035,6 +1098,9 @@ technologies = {
 		start_year = 1936
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_air
 			air_equipment
 			mio_cat_all_naval_bomber_and_modules
@@ -1099,6 +1165,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_air
 			air_equipment
 			naval_bomber
@@ -1146,6 +1215,9 @@ technologies = {
 		start_year = 1940
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_air
 			air_equipment
 			mio_cat_all_naval_bomber_and_modules
@@ -1211,6 +1283,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_air
 			naval_bomber
 			air_equipment
@@ -1259,6 +1334,9 @@ technologies = {
 		start_year = 1944
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_air
 			air_equipment
 			mio_cat_all_naval_bomber_and_modules
@@ -1320,6 +1398,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			medium_air
 			tactical_bomber
 			air_equipment
@@ -1350,6 +1431,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			medium_air
 			air_equipment
 			cat_heavy_fighter
@@ -1381,6 +1465,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			medium_air
 			air_equipment
 			cat_heavy_fighter
@@ -1412,6 +1499,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			medium_air
 			air_equipment
 			cat_heavy_fighter
@@ -1443,6 +1533,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			medium_air
 			air_equipment
 			cat_scout_plane
@@ -1487,6 +1580,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			medium_air
 			air_equipment
 			cat_scout_plane
@@ -1533,6 +1629,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			medium_air
 			tactical_bomber
 			air_equipment
@@ -1605,6 +1704,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			medium_air
 			tactical_bomber
 			air_equipment
@@ -1660,6 +1762,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			medium_air
 			tactical_bomber
 			air_equipment
@@ -1721,6 +1826,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			medium_air
 			jet_technology
 			tactical_bomber
@@ -1757,6 +1865,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			medium_air
 			jet_technology
 			tactical_bomber
@@ -1788,6 +1899,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			heavy_air
 			air_equipment
 			cat_strategic_bomber
@@ -1856,6 +1970,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			heavy_air
 			air_equipment
 			cat_strategic_bomber
@@ -1898,6 +2015,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			heavy_air
 			air_equipment
 			cat_strategic_bomber
@@ -1941,6 +2061,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			heavy_air
 			jet_technology
 			cat_strategic_bomber

@@ -6,6 +6,7 @@ SWI_militia_dynmod = {
 	modifier_army_sub_unit_militia_attack_factor = SWI_militia_attack_factor_var
 	# army_non_core_attack_factor = SWI_army_non_cor_var
 	# army_non_core_defence_factor = SWI_army_non_cor_var
+	custom_modifier_tooltip = SWI_can_only_recruit_militias_tt
 }
 
 SWI_economy_dynmod = {

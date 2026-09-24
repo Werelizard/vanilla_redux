@@ -62,6 +62,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 		}
 
@@ -119,6 +122,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			engineers_tech
 		}
@@ -220,6 +226,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			engineers_tech
 		}
@@ -316,6 +325,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			engineers_tech
 		}
@@ -402,6 +414,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			engineers_tech
 		}
@@ -458,6 +473,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			recon_tech
 		}
@@ -514,6 +532,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			recon_tech
 		}
@@ -565,6 +586,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			recon_tech
 		}
@@ -606,6 +630,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			recon_tech
 		}
@@ -654,6 +681,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			military_police_tech
 		}
@@ -728,6 +758,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			military_police_tech
 		}
@@ -769,6 +802,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			military_police_tech
 		}
@@ -804,6 +840,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			military_police_tech
 		}
@@ -856,6 +895,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			maintenance_company_tech
 		}
@@ -911,6 +953,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			maintenance_company_tech
 		}
@@ -975,6 +1020,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			maintenance_company_tech
 		}
@@ -1019,6 +1067,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			maintenance_company_tech
 		}
@@ -1071,6 +1122,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			hospital_tech
 			motorized_equipment
@@ -1127,6 +1181,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			hospital_tech
 			motorized_equipment
@@ -1193,6 +1250,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			hospital_tech
 			motorized_equipment
@@ -1243,6 +1303,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			hospital_tech
 			motorized_equipment
@@ -1315,6 +1378,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			logistics_tech
 			motorized_equipment
@@ -1369,6 +1435,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			logistics_tech
 			motorized_equipment
@@ -1428,6 +1497,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			logistics_tech
 			motorized_equipment
@@ -1472,6 +1544,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			logistics_tech
 			motorized_equipment
@@ -1528,6 +1603,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			signal_company_tech
 			electronics
@@ -1571,6 +1649,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			signal_company_tech
 			electronics
@@ -1623,6 +1704,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			signal_company_tech
 			electronics
@@ -1670,6 +1754,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			signal_company_tech
 			electronics
@@ -1718,6 +1805,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			train_tech
 		}
 
@@ -1768,6 +1858,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			train_tech
 			artillery
 		}
@@ -1803,6 +1896,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			train_tech
 		}
 
@@ -1852,6 +1948,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			train_tech
 		}
 
@@ -1893,6 +1992,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			recon_tech
 		}
@@ -1922,6 +2024,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			engineers_tech
 		}
@@ -1967,6 +2072,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			maintenance_company_tech
 		}
@@ -2012,6 +2120,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			signal_company_tech
 			electronics
@@ -2066,6 +2177,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			logistics_tech
 			helicopter_tech
@@ -2115,6 +2229,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			recon_tech
 			helicopter_tech
@@ -2161,6 +2278,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			hospital_tech
 			helicopter_tech
@@ -2219,6 +2339,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			support_tech
 			military_police_tech
 		}

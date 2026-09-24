@@ -148,6 +148,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			armor
 			mio_cat_tech_all_armor_and_modules
 			cat_light_armor
@@ -231,6 +234,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			armor
 			mio_cat_tech_all_armor_and_modules
 			cat_light_armor
@@ -319,6 +325,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			armor
 			mio_cat_tech_all_armor_and_modules
 			cat_light_armor
@@ -388,6 +397,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			armor
 			mio_cat_tech_all_armor_and_modules
 			tp_tech
@@ -451,6 +463,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			armor
 			mio_cat_tech_all_armor_and_modules
 			tp_tech
@@ -506,6 +521,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			armor
 			mio_cat_tech_all_armor_and_modules
 			cat_light_armor
@@ -621,6 +639,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			armor
 			mio_cat_tech_all_armor_and_modules
 			cat_medium_armor
@@ -713,6 +734,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			armor
 			mio_cat_tech_all_armor_and_modules
 			cat_medium_armor
@@ -771,6 +795,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			armor
 			mio_cat_tech_all_armor_and_modules
 			cat_medium_armor
@@ -826,6 +853,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			armor
 			mio_cat_tech_all_armor_and_modules
 			cat_medium_armor
@@ -920,6 +950,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			armor
 			mio_cat_tech_all_armor_and_modules
 			cat_heavy_armor
@@ -983,6 +1016,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			armor
 			mio_cat_tech_all_armor_and_modules
 			cat_heavy_armor
@@ -1045,6 +1081,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			armor
 			mio_cat_tech_all_armor_and_modules
 			cat_heavy_armor
@@ -1121,6 +1160,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			armor
 			mio_cat_tech_all_armor_and_modules
 			cat_heavy_armor
@@ -1180,6 +1222,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			armor
 			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_light_armor_and_modules
@@ -1240,6 +1285,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			armor
 			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_light_armor_and_modules
@@ -1301,6 +1349,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			armor
 			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_light_armor_and_modules
@@ -1353,6 +1404,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			armor
 			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_light_armor_and_modules
@@ -1409,6 +1463,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			armor
 			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_light_armor_and_modules
@@ -1467,6 +1524,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			armor
 			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_light_armor_and_modules
@@ -1523,6 +1583,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			armor
 			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_light_armor_and_modules
@@ -1573,6 +1636,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			armor
 			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_light_armor_and_modules
@@ -1605,6 +1671,9 @@ technologies = {
 
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			armor
 		}
 	}
@@ -1720,6 +1789,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			armor
 			mio_cat_tech_all_armor_and_modules
 			mio_cat_tech_light_armor_and_modules
@@ -1795,6 +1867,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			armor
 			mio_cat_tech_all_armor_and_modules
 			cat_heavy_armor
@@ -1889,6 +1964,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			armor
 			mio_cat_tech_all_armor_and_modules
 			cat_heavy_armor
@@ -1959,6 +2037,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			armor
 			mio_cat_tech_all_armor_and_modules
 			cat_heavy_armor
@@ -2023,6 +2104,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			armor
 			mio_cat_tech_all_armor_and_modules
 			cat_heavy_armor
@@ -2081,6 +2165,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			armor
 			mio_cat_tech_all_armor_and_modules
 			cat_heavy_armor

@@ -56,6 +56,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			electronics
 		}
 
@@ -117,6 +118,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			electronics
 		}
 
@@ -165,6 +167,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			electronics
 		}
 
@@ -209,6 +212,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			electronics
 		}
 
@@ -247,6 +251,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			electronics
 			radar_tech
 		}
@@ -300,6 +305,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			electronics
 			radar_tech
 		}
@@ -351,6 +357,7 @@ technologies = {
 	#	}
 	#	
 	#	categories = {
+
 	#		electronics
 	#		radar_tech
 	#	}
@@ -407,6 +414,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			electronics
 			radar_tech
 		}
@@ -463,6 +471,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			electronics
 			radar_tech
 		}
@@ -510,6 +519,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			electronics
 			radar_tech
 		}
@@ -545,6 +555,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			electronics
 			computing_tech
 		}
@@ -596,6 +607,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			electronics
 			encryption_tech
 			decryption_tech
@@ -658,6 +670,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			electronics
 			encryption_tech
 			decryption_tech
@@ -703,6 +716,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			electronics
 			encryption_tech
 			decryption_tech
@@ -749,6 +763,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			electronics
 			encryption_tech
 		}
@@ -792,6 +807,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			electronics
 			encryption_tech
 		}
@@ -835,6 +851,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			electronics
 			encryption_tech
 		}
@@ -874,6 +891,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			electronics
 			decryption_tech
 		}
@@ -913,6 +931,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			electronics
 			decryption_tech
 		}
@@ -952,6 +971,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			electronics
 			decryption_tech
 		}
@@ -994,6 +1014,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			electronics
 			computing_tech
 			naval_equipment
@@ -1035,6 +1056,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			electronics
 			computing_tech
 			naval_equipment
@@ -1071,6 +1093,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			electronics
 			computing_tech
 			naval_equipment
@@ -1122,6 +1145,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			cat_fortification
 		}
 
@@ -1153,6 +1177,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			cat_fortification
 		}
 		
@@ -1175,6 +1200,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			cat_fortification
 		}
 		
@@ -1204,6 +1230,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			cat_fortification
 		}
 		
@@ -1226,6 +1253,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			cat_fortification
 		}
 		
@@ -1302,6 +1330,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			rocketry
 		}
 		special_project_specialization = { specialization_air }
@@ -1362,6 +1391,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			rocketry
 		}		
 	}
@@ -1414,6 +1444,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			rocketry
 		}
 	}
@@ -1454,6 +1485,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			rocketry
 		}
 	}
@@ -1486,6 +1518,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			rocketry
 		}
 	}
@@ -1541,6 +1574,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			rocketry
 		}
 	}
@@ -1589,6 +1623,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			rocketry
 		}
 	}
@@ -1631,6 +1666,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			rocketry
 			jet_technology
 		}
@@ -1684,6 +1720,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			nuclear
 		}
 
@@ -1761,6 +1798,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			nuclear
 		}
 
@@ -1794,6 +1832,7 @@ technologies = {
 		}
 		
 		categories = {
+
 			nuclear
 		}
 
@@ -1821,6 +1860,7 @@ technologies = {
 		
 		nuclear_production = 0.5
 		categories = {
+
 			nuclear
 		}
 		special_project_specialization = { specialization_nuclear }
@@ -1892,6 +1932,7 @@ technologies = {
 		}
 
 		categories = {
+
 			rocketry
 		}
 
@@ -1932,6 +1973,7 @@ technologies = {
 		}
 
 		categories = {
+
 			rocketry
 		}
 	}

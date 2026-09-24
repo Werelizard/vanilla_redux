@@ -38,7 +38,8 @@
  SWI_no_faction_tt:0 "§RAs long as this national spirit is active, Switzerland will be disallowed from joining any factions, sending volunteers or issuing guarantees.§!"
 
  SWI_militias:0 "Swiss Militias"
- SWI_militia_dynmod_desc:0 "§RCan only conscript Swiss militia divisions through decisions, focuses or events. Can not recruit new units, edit or create unit templates. Can not increase conscription past limited conscription.§!"
+ SWI_militia_dynmod_desc:0 ""
+ SWI_can_only_recruit_militias_tt:0 "§RCan only conscript Swiss militia divisions through decisions, focuses or events. Can not recruit new units, edit or create unit templates. Can not increase conscription past limited conscription.§!"
 
  SWI_stalled_military_budget:0 "Stalled Military Budget"
  SWI_stalled_military_budget_desc:0 ""
@@ -491,5 +492,8 @@
  SWI_soc_dem_con_flag:0 "The §YLiberal-Conservative§! coalition has collapsed"
  SWI_failed_negotations_with_moderates_flag:0 "Negotations with the §YLDU/ADL§! were unsuccessful"
 
+ ###################
+ # SWITZERLAND TOOLTIPS
+ ###################
  SWI_no_guarantee_tt:0 "§RSwiss neutrality prevents [ROOT.GetNameDef] from issuing guarantees§!"
  SWI_no_volunteers_tt:0 "§RSwiss neutrality prevents [ROOT.GetNameDef] from sending volunteers!"

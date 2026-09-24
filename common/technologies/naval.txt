@@ -30,6 +30,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_equipment
 			dd_tech
 			mio_cat_tech_all_screen_ship_and_modules
@@ -69,6 +72,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_equipment
 			dd_tech
 			mio_cat_tech_all_screen_ship_and_modules
@@ -107,6 +113,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_equipment
 			dd_tech
 			mio_cat_tech_all_screen_ship_and_modules
@@ -140,6 +149,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_equipment
 			dd_tech
 			mio_cat_tech_all_screen_ship_and_modules
@@ -196,6 +208,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_artillery
 			naval_equipment
 			ca_tech
@@ -245,6 +260,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_artillery
 			naval_equipment
 			ca_tech
@@ -293,6 +311,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_artillery
 			naval_equipment
 			ca_tech
@@ -337,6 +358,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_artillery
 			naval_equipment
 			ca_tech
@@ -377,6 +401,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_artillery
 			naval_equipment
 			ca_tech
@@ -416,6 +443,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_artillery
 			naval_equipment
 			ca_tech
@@ -454,6 +484,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_artillery
 			naval_equipment
 			ca_tech
@@ -488,6 +521,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_artillery
 			naval_equipment
 			ca_tech
@@ -525,6 +561,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_artillery
 			naval_equipment
 			bc_tech
@@ -558,6 +597,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_artillery
 			naval_equipment
 			bc_tech
@@ -598,6 +640,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_artillery
 			naval_equipment
 			bb_tech
@@ -635,6 +680,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_artillery
 			naval_equipment
 			bb_tech
@@ -671,6 +719,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_artillery
 			naval_equipment
 			bb_tech
@@ -713,6 +764,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_artillery
 			naval_equipment
 			bb_tech
@@ -749,6 +803,9 @@ technologies = {
 		}
 
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_equipment
 			shbb_tech
 			mio_cat_tech_all_capital_ship_and_modules
@@ -786,6 +843,9 @@ technologies = {
 
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_equipment
 			shbb_tech
 			mio_cat_tech_all_capital_ship_and_modules
@@ -843,6 +903,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_equipment
 			tp_tech
 		}
@@ -932,6 +995,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_equipment
 			tp_tech
 		}
@@ -979,6 +1045,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_equipment
 			tp_tech
 		}
@@ -1020,6 +1089,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_equipment
 			cv_tech
 			mio_cat_tech_all_carrier_and_modules
@@ -1061,6 +1133,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_equipment
 			cv_tech
 			mio_cat_tech_all_carrier_and_modules
@@ -1112,6 +1187,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_equipment
 			cv_tech
 			mio_cat_tech_all_carrier_and_modules
@@ -1160,6 +1238,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_equipment
 			cv_tech
 			mio_cat_tech_all_carrier_and_modules
@@ -1208,6 +1289,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_equipment
 			ss_tech
 			mio_cat_tech_all_submarine_and_modules
@@ -1257,6 +1341,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_equipment
 			ss_tech
 			mio_cat_tech_all_submarine_and_modules
@@ -1294,6 +1381,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_equipment
 			ss_tech
 			mio_cat_tech_all_submarine_and_modules
@@ -1326,6 +1416,9 @@ technologies = {
 		}
 		
 		categories = {
+			#
+			vx_cat_military_equipment
+			#
 			naval_equipment
 			ss_tech
 			mio_cat_tech_all_submarine_and_modules

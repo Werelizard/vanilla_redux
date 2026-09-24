@@ -298,7 +298,8 @@ technologies = {
 			position = { x = 2 y = @1942 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			infantry_weapons
 		}
 

@@ -381,6 +381,9 @@
  can_scraping_the_barrel_tt:0 "Can remove §YScraping the Barrel§!"
 
  # TECHNOLOGIES 
+ vx_cat_military_equipment:0 "All Military Technologies"
+ vx_cat_military_equipment_research:0 "All Military Technologies Research Speed"
+
  vx_ss_militias:0 "Paramilitary Auxiliaries"
 
  # TRAITS - CIVILIAN ADVISORS
