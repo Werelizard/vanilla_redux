@@ -867,3 +867,18 @@ has_air_force_command = {
 has_naval_academy = {
 	
 }
+
+anti_submarine_strategy_required_trigger = {
+	OR = {
+		AND = {
+			has_war = yes
+			any_enemy_country = {
+				has_navy_size = {
+					type = submarine
+					size > 30
+				}
+			}
+		}
+		convoy_threat > 0.3
+	}
+}

@@ -1,0 +1,25 @@
+state = {
+	id = 1085
+	name = "STATE_1085"
+	manpower = 1119540
+	state_category = pastoral
+
+	history = {
+		owner = ITA
+		victory_points = { #Bergamo
+			9584 5
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = ITA
+		add_core_of = LBV
+	}
+
+	provinces = {
+		6661 9584 11587 11568
+	}
+
+	local_supplies = 0.0 
+}

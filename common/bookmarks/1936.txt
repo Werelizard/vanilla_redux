@@ -16,7 +16,7 @@ bookmarks = {
 				ger_dummy_MEFO
 			}
 			focuses = {
-				
+
 			}
 		}
 		
@@ -33,7 +33,9 @@ bookmarks = {
 				SWI_militias
 			}
 			focuses = {
-				
+				SWI_proportionalism_woes
+				SWI_gustloff_affair
+				SWI_spiritual_defense				
 			}
 			minor = yes
 		}

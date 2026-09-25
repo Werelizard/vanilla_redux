@@ -1,0 +1,119 @@
+SWI_decrease_morale_small_effect = {
+	custom_effect_tooltip = SWI_decrease_morale_small_tt
+	hidden_effect = {
+		add_power_balance_value = {
+			id = SWI_national_morale_bop
+			value = -0.03
+		}
+		add_to_variable = {
+			SWI_national_morale_var = -0.015
+		}
+		SWI_clamp_morale_value = yes
+	}
+}
+
+SWI_decrease_morale_medium_effect = {
+	custom_effect_tooltip = SWI_decrease_morale_medium_tt
+	hidden_effect = {
+		add_power_balance_value = {
+			id = SWI_national_morale_bop
+			value = -0.05
+		}
+		add_to_variable = {
+			SWI_national_morale_var = -0.025
+		}
+		SWI_clamp_morale_value = yes
+	}
+}
+
+SWI_decrease_morale_big_effect = {
+	custom_effect_tooltip = SWI_decrease_morale_large_tt
+	hidden_effect = {
+		add_power_balance_value = {
+			id = SWI_national_morale_bop
+			value = -0.08
+		}
+		add_to_variable = {
+			SWI_national_morale_var = -0.04
+		}
+		SWI_clamp_morale_value = yes
+	}
+}
+
+SWI_decrease_morale_huge_effect = {
+	custom_effect_tooltip = SWI_decrease_morale_huge_tt
+	hidden_effect = {
+		add_power_balance_value = {
+			id = SWI_national_morale_bop
+			value = -0.1
+		}
+		add_to_variable = {
+			SWI_national_morale_var = -0.05
+		}
+		SWI_clamp_morale_value = yes
+	}
+}
+
+SWI_increase_morale_small_effect = {
+	custom_effect_tooltip = SWI_increase_morale_small_tt
+	hidden_effect = {
+		add_power_balance_value = {
+			id = SWI_national_morale_bop
+			value = 0.03
+		}
+		add_to_variable = {
+			SWI_national_morale_var = 0.015
+		}
+		SWI_clamp_morale_value = yes
+	}
+}
+
+SWI_increase_morale_medium_effect = {
+	custom_effect_tooltip = SWI_increase_morale_medium_tt
+	hidden_effect = {
+		add_power_balance_value = {
+			id = SWI_national_morale_bop
+			value = 0.05
+		}
+		add_to_variable = {
+			SWI_national_morale_var = 0.025
+		}
+		SWI_clamp_morale_value = yes
+	}
+}
+
+SWI_increase_morale_big_effect = {
+	custom_effect_tooltip = SWI_increase_morale_large_tt
+	hidden_effect = {
+		add_power_balance_value = {
+			id = SWI_national_morale_bop
+			value = 0.08
+		}
+		add_to_variable = {
+			SWI_national_morale_var = 0.04
+		}
+		SWI_clamp_morale_value = yes
+	}
+}
+
+SWI_increase_morale_huge_effect = {
+	custom_effect_tooltip = SWI_increase_morale_huge_tt
+	hidden_effect = {
+		add_power_balance_value = {
+			id = SWI_national_morale_bop
+			value = 0.1
+		}
+		add_to_variable = {
+			SWI_national_morale_var = 0.05
+		}
+		SWI_clamp_morale_value = yes
+	}
+}
+
+SWI_clamp_morale_value = {
+	clamp_variable = {
+		var = SWI_national_morale_var
+		max = 1
+		min = 0
+	}
+}

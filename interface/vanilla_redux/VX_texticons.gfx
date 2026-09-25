@@ -50,6 +50,12 @@ spritetypes = {
 		textureFile = "gfx/texticons/fascism_texticon.dds"
 		legacy_lazy_load = no
 	}
+	# Texticons - SWITZERLAND
+	spriteType = {
+		name = "GFX_SWI_morale_texticon"
+		textureFile = "gfx/texticons/SWI_morale_texticon.dds"
+		legacy_lazy_load = no
+	}
 	# MIOS
 	spriteType = {
 		name = "GFX_mio_research_icon"

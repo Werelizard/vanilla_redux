@@ -1,0 +1,102 @@
+SWI_national_morale = {
+	SWI_debug_reload_targeted_decisions = {
+		visible = {
+			is_debug = yes
+		}
+
+		complete_effect = {
+			activate_targeted_decision = {
+				target = FROM
+				decision = SWI_rally_to_defend_country
+			}
+			activate_targeted_decision = {
+				target = FROM
+				decision = SWI_promote_national_unity
+			}
+		}
+	}
+	#######################################################
+	# Initial Decisions
+	#######################################################
+	SWI_rally_to_defend_country = {
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		days_remove = 90
+		cost = 30
+
+		allowed = {
+			always = no
+		}				
+		available = {
+			
+		}
+		visible = {
+			
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = fascist
+				popularity = 0.01
+			}
+			custom_effect_tooltip = doublespace_tt
+			SWI_increase_morale_small_effect = yes
+			custom_effect_tooltip = doublespace_tt
+			hidden_effect = {
+				activate_targeted_decision = {
+					target = FROM
+					decision = SWI_rally_to_defend_country
+				}
+			}
+		}
+
+		cancel_trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_power_balance = {
+						id = SWI_national_morale_bop
+					}
+				}
+			}
+		}
+		fixed_random_seed = no
+	}
+	SWI_promote_national_unity = {
+		icon = GFX_decision_SWI_focus_on_swiss_unity
+		days_remove = 90
+		cost = 20
+
+		allowed = {
+			always = no
+		}				
+		available = {
+			
+		}
+		visible = {
+			
+		}
+		modifier = {
+			political_power_factor = -0.25
+		}
+		remove_effect = {
+			SWI_increase_morale_small_effect = yes
+			custom_effect_tooltip = doublespace_tt
+			hidden_effect = {
+				activate_targeted_decision = {
+					target = FROM
+					decision = SWI_promote_national_unity
+				}
+			}
+		}
+
+		cancel_trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_power_balance = {
+						id = SWI_national_morale_bop
+					}
+				}
+			}
+		}
+		fixed_random_seed = no
+	}
+}

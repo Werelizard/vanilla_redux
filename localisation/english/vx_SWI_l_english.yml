@@ -22,6 +22,22 @@
  SWI_fascist_party_long:0 "Nationale Front / Front National"
 
  ###################
+ # DECISIONS
+ ###################
+ vx_switzerland_combat_defeatism_dec:0 "Combat Defeatism"
+ vx_switzerland_defend_democracy_dec:0 "Defend Democracy"
+ vx_switzerland_mobilise_industry_dec:0 "Mobilise Civilian Industries"
+
+ SWI_rally_to_defend_country:0 "Embrace Swiss Exceptionalism"
+ SWI_promote_national_unity:0 "Promote National Unity"
+
+ ###################
+ # DECISION CATEGORIES
+ ###################
+ SWI_national_morale:0 "National Mobilisation"
+ SWI_national_morale_desc:0 "Whilst nominally neutral, it is becoming increasingly clear that it is a matter of when - not if - Switzerland's neutrality will be put to the test.\n\nOur §YNational Morale§! represents how willing our citizenry and military alike are to fight for the confederation's continued independence. Morale can be expended! to §Ybolster our defenses§!, raise §Yadditional militia units§! and eventually §Ymobilise our country for war§!.\n\n§CCurrent national morale is: §!§Y[?SWI_national_morale_var|%]§!\n\n§RBe warned however that should national morale fall too low some opportunistic actors might find  an opportunity to strike.§!"
+
+ ###################
  # DYNAMIC MODIFIERS
  ###################
  SWI_militia_dynmod:0 "Swiss Militias"
@@ -64,6 +80,20 @@
  SWI_sig_licensing_trait:0 "SIG Exporting Licenses"
 
  ###################
+ # SWITZERLAND - BALANCE OF POWER
+ ###################
+ SWI_national_morale_bop:0 "National Morale"
+ SWI_national_morale_low:0 "Low Morale"
+ SWI_national_morale_high:0 "High Morale"
+
+ SWI_collapsing_morale:0 "Collapsing Morale"
+ SWI_dwindling_morale:0 "Dwindling Morale"
+ SWI_fleeting_morale:0 "Fleeting Morale"
+ SWI_rising_morale:0 "Rising Morale"
+ SWI_strong_morale:0 "Strong Morale"
+ SWI_unbreakable_morale:0 "Unbreakable Morale"
+
+ ###################
  # SWITZERLAND - CHARACTERS
  ###################
  SWI_character_FEDERAL_ASSEMBLY:0 "Federal Assembly"
@@ -73,7 +103,7 @@
  SWI_character_ROLF_HENNE:0 "Rolf Henne"
  SWI_character_ROBERT_TOBLER:0 "Robert Tobler"
 
- ###################
+ ###################  
  # SWITZERLAND - TRAITS
  ###################
  SWI_collegial_assembly:0 "Parliamentary Assembly"
@@ -81,11 +111,21 @@
  SWI_fascist_dilletante:0 "Fascist Dilletante"
  SWI_socialist_pastor:0 "Socialist Pastor"
  SWI_emergency_council:0 "Emergency Council"
+ SWI_federal_council:0 "Collegial Body"
 
  ###################
  # SWITZERLAND - TOOLTIPS
  ###################
  SWI_emergency_government_tt:0 "The military was granted §Yemergency powers§! by the Federal Assembly"
+
+ SWI_decrease_morale_small_tt:0 "£SWI_morale_texticon §YNational morale§! will §Rdecrease§! by a small amount"
+ SWI_decrease_morale_medium_tt:0 "£SWI_morale_texticon §YNational morale§! will §Rdecrease§! by a medium amount"
+ SWI_decrease_morale_large_tt:0 "£SWI_morale_texticon §YNational morale§! will §Rdecrease§! by a large amount"
+ SWI_decrease_morale_huge_tt:0 "£SWI_morale_texticon §YNational morale§! will §Rdecrease§! by a huge amount"
+ SWI_increase_morale_small_tt:0 "£SWI_morale_texticon §YNational morale§! will §Gincrease§! by a small amount"
+ SWI_increase_morale_medium_tt:0 "£SWI_morale_texticon §YNational morale§! will §Gincrease§! by a medium amount"
+ SWI_increase_morale_large_tt:0 "£SWI_morale_texticon §YNational morale§! will §Gincrease§! by a large amount"
+ SWI_increase_morale_huge_tt:0 "£SWI_morale_texticon §YNational morale§! will §Gincrease§! by a huge amount"
 
  ###################
  # SWITZERLAND EVENTS
@@ -106,6 +146,7 @@
  
  SWI_spiritual_defense:0 "Reaffirm Spiritual Defense"
  SWI_spiritual_defense_desc:0 ""
+ SWI_decisions_increase_morale_tt:0 "§LThese decisions will allow us to improve our §!§Ynational morale§!§L and §!§Ymilitary industry§!§L.§!"
 
  SWI_increase_military_budget:0 "Increase Military Funding"
  SWI_increase_military_budget_desc:0 ""

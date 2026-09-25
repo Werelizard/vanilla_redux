@@ -15,6 +15,7 @@
  GER_ADJ:0 "German"
 
  # States
- STATE_845: "Western Swiss Plateau"
- STATE_3:0 "Eastern Swiss Plateau"
+ STATE_845: "Romandie"
+ STATE_3:0 "Swiss Plateau"
  STATE_735:0 "Provence"
+ STATE_159:0 "Lower Lombardy"

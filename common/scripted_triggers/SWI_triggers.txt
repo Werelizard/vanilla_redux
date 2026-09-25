@@ -6,3 +6,19 @@ SWI_emergency_government_trigger = {
 		}
 	}
 }
+
+SWI_has_positive_morale_trigger = {
+	if = {
+		limit = {
+			has_power_balance = {
+				id = SWI_national_morale_bop
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = SWI_check_morale_over_fifty_tt
+			check_variable = {
+				SWI_national_morale_var > 0.5
+			}
+		}
+	}
+}

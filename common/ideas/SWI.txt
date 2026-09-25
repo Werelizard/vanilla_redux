@@ -33,7 +33,7 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.25
 			}
 			research_bonus = {
-				vx_cat_military_equipment = -0.2
+				vx_cat_military_equipment = -0.4
 			}
 		}
 		SWI_stalled_military_budget_improved = {
@@ -42,7 +42,7 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.1
 			}
 			research_bonus = {
-				vx_cat_military_equipment = -0.1
+				vx_cat_military_equipment = -0.2
 			}
 		}
 		### Swiss Militias - dummy idea for the load screen
@@ -59,23 +59,6 @@ ideas = {
 			modifier = {
 				industrial_capacity_factory = 0.1
 				political_power_factor = 0.1
-			}
-		}
-		### Partial Mobilisation
-		SWI_national_mobilisation = {
-			modifier = {
-				consumer_goods_factor = -0.15
-				production_speed_arms_factory_factor = 0.15
-				mobilization_speed = 0.1
-				training_time_army_factor = -0.1
-			}
-			allowed = {
-				NOT = {
-					has_idea = war_economy
-				}
-				NOT = {
-					has_idea = tot_economic_mobilisation
-				}
 			}
 		}
 	}

@@ -1,0 +1,6 @@
+vx_ruling_party_popularity_drift = {
+	color_type = good
+	value_type = number
+	precision = 3
+	postfix = daily
+}

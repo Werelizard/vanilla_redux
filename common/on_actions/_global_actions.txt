@@ -60,8 +60,8 @@ on_actions = {
 		}
 	}
 	on_daily = {
-		# This MUST be daily for coalitions to work
-		effect = {			
+		effect = {
+			# This MUST be daily for coalitions to work		
 			if = {
 				limit = {
 					any_coalition_active_trigger = yes
@@ -71,12 +71,7 @@ on_actions = {
 		}
 	}
 	on_weekly = {
-		# Laucnhes the crisis events (triggers are in the events themselves)
-		random_events = {
-			100 = crisis_strikes.0
-			100 = crisis_desertions.0
-			100 = crisis_mutinies.0
-		}
+		
 	}
 	on_new_term_election = {		
 		# countries with content should have their election events in their own "on_action" files

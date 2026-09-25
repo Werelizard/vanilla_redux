@@ -1,0 +1,73 @@
+SWI_national_morale_bop = {
+	initial_value = -0.1
+	left_side = SWI_national_morale_low
+	right_side = SWI_national_morale_high
+	# Left Side - low morale
+	side = {
+		id = SWI_national_morale_low
+		icon = GFX_SWI_national_morale_low
+		range = {
+			id = SWI_collapsing_morale
+			min = -1
+			max = -0.7
+			modifier = {
+				party_popularity_stability_factor = -0.5
+				max_surrender_limit_offset = -0.25
+				war_support_factor = -0.2
+			}
+		}
+		range = {
+			id = SWI_dwindling_morale
+			min = -0.7
+			max = -0.4
+			modifier = {
+				party_popularity_stability_factor = -0.25
+				max_surrender_limit_offset = -0.2
+				war_support_factor = -0.2
+			}
+		}
+		range = {
+			id = SWI_fleeting_morale
+			min = -0.4
+			max = 0
+			modifier = {
+				max_surrender_limit_offset = -0.1
+				war_support_factor = -0.1
+			}
+		}
+	}
+	# Right Side - high morale
+	side = {
+		id = SWI_national_morale_high
+		icon = GFX_SWI_national_morale_high
+		range = {
+			id = SWI_rising_morale
+			min = 0
+			max = 0.4
+			modifier = {
+				war_stability_factor = 0.05
+				conscription_factor = 0.1
+			}
+		}
+		range = {
+			id = SWI_strong_morale
+			min = 0.4
+			max = 0.7
+			modifier = {
+				war_stability_factor = 0.1
+				conscription_factor = 0.15
+			}
+		}
+		range = {
+			id = SWI_unbreakable_morale
+			min = 0.7
+			max = 1
+			modifier = {
+				war_stability_factor = 0.15
+				conscription_factor = 0.15
+				weekly_casualties_war_support = 0.0025
+			}
+		}
+	}
+}
+

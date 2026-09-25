@@ -1,0 +1,10 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_SWI_national_morale_low"
+		textureFile = "gfx/interface/bop/bop_SWI_low_morale.dds"
+	}
+	spriteType = {
+		name = "GFX_SWI_national_morale_high"
+		textureFile = "gfx/interface/bop/bop_SWI_high_morale.dds"
+	}
+}

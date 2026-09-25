@@ -10,7 +10,7 @@ leader_traits = {
 
 	SWI_parliementary_status_quo = {
 		random = no
-		stability_factor = 0.1
+		consumer_goods_factor = 0.05
 		liberal_drift = 0.02
 		conservative_drift = 0.02
 	}
@@ -29,5 +29,16 @@ leader_traits = {
 		random = no
 		stability_factor = 0.1
 		war_support_factor = -0.1
+	}
+
+	###################
+	# POLITICAL ADVISORS
+	###################
+
+	SWI_federal_council = {
+		random = no
+		sprite = 13
+		party_popularity_stability_factor = 0.05
+		stability_factor = 0.05
 	}
 }

@@ -267,14 +267,10 @@ focus_tree = {
 	focus = {
 		id = SWI_new_coalition_partners
 		icon = {
-			GFX_goal_generic_socdem = {
-				NOT = {
-					has_government = social_democratic
-				}
-			}
 			GFX_goal_generic_libdem = {
 				has_government = social_democratic
 			}
+			GFX_goal_generic_socdem = yes
 		}
 		cost = 4
 		x = -1
@@ -860,7 +856,7 @@ focus_tree = {
 
 	focus = {
 		id = SWI_gustloff_affair
-		icon = GFX_goal_generic_assassination
+		icon = GFX_focus_generic_conspiracy
 		cost = 4
 		x = 6
 		y = 2
@@ -1330,7 +1326,26 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = unlock_decision_ovewrite_tt
+					DECISION = vx_switzerland_combat_defeatism_dec
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = unlock_decision_ovewrite_tt
+					DECISION = vx_switzerland_defend_democracy_dec
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = unlock_decision_ovewrite_tt
+					DECISION = vx_switzerland_mobilise_industry_dec
+				}
+			}
+			custom_effect_tooltip = doublespace_tt
+			custom_effect_tooltip = SWI_decisions_increase_morale_tt
 		}
 	}
 
@@ -1430,6 +1445,7 @@ focus_tree = {
 			# 	has_democratic_government_tooltip_trigger = yes
 			# 	SWI_emergency_government_trigger = yes
 			# }
+			SWI_has_positive_morale_trigger = yes
 			OR = {
 				threat > 0.15
 				has_defensive_war = yes
@@ -1437,9 +1453,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_ideas = SWI_national_mobilisation
-			custom_effect_tooltip = doublespace_tt
-			custom_effect_tooltip = SWI_towards_economic_mobilisation_tt
+			
 		}
 	}
 

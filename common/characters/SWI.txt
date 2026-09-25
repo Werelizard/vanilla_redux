@@ -13,7 +13,7 @@ characters = {
 		country_leader = {
 			ideology = social_democratic_subtype
 			traits = {
-				SWI_collegial_assembly
+				# SWI_collegial_assembly
 				SWI_parliementary_status_quo
 			}
 			id = -1
@@ -21,7 +21,7 @@ characters = {
 		country_leader = {
 			ideology = progressive_subtype
 			traits = {
-				SWI_collegial_assembly
+				# SWI_collegial_assembly
 				SWI_parliementary_status_quo
 			}
 			id = -1
@@ -29,7 +29,7 @@ characters = {
 		country_leader = {
 			ideology = liberal_subtype
 			traits = {
-				SWI_collegial_assembly
+				# SWI_collegial_assembly
 				SWI_parliementary_status_quo
 			}
 			id = -1
@@ -37,7 +37,7 @@ characters = {
 		country_leader = {
 			ideology = conservative_subtype
 			traits = {
-				SWI_collegial_assembly
+				# SWI_collegial_assembly
 				SWI_parliementary_status_quo
 			}
 			id = -1
@@ -45,7 +45,7 @@ characters = {
 		country_leader = {
 			ideology = authoritarian_democrat_subtype
 			traits = {
-				SWI_collegial_assembly
+				# SWI_collegial_assembly
 				SWI_parliementary_status_quo
 			}
 			id = -1
@@ -62,23 +62,6 @@ characters = {
 ###################
 # PARTY LEADERS
 ###################
-
-characters = {
-	SWI_character_FEDERAL_COUNCIL = {
-		name = SWI_character_FEDERAL_COUNCIL
-		portraits = {
-			civilian={
-				large=GFX_portrait_SWI_federal_council
-			}
-		}
-		corps_commander = {
-			visible = {
-				always = no
-			}
-			skill = 0
-		}
-	}
-}
 
 characters = {
 	SWI_character_JULES_HUMBERT_DROZ = { # KPS leader
@@ -174,6 +157,36 @@ characters = {
 			defense_skill = 2
 			logistics_skill = 3
 			planning_skill = 1
+		}
+	}
+}
+
+###################
+# ADVISORS
+###################
+
+characters = {
+	SWI_character_FEDERAL_COUNCIL = {
+		name = SWI_character_FEDERAL_COUNCIL
+		portraits = {
+			civilian={
+				large = GFX_portrait_SWI_federal_council
+				small = GFX_portrait_SWI_federal_council_small
+			}
+		}
+		corps_commander = {
+			visible = {
+				always = no
+			}
+			skill = 0
+		}
+		advisor = {
+			slot = second_in_command
+			idea_token = SWI_federal_council_second_in_command
+			traits = {
+				SWI_federal_council
+			}
+			can_be_fired = no
 		}
 	}
 }

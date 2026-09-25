@@ -61,3 +61,4 @@ conservative
 authoritarian_democrat
 autocratic
 fascist
+vx_ruling_party_popularity_drift 

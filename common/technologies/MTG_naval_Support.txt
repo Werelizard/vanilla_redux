@@ -62,9 +62,6 @@ technologies = {
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_artillery
 			naval_equipment
 			ship_modules_tech
@@ -116,9 +113,6 @@ technologies = {
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_artillery
 			naval_equipment
 			ship_modules_tech
@@ -174,16 +168,36 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
+			
 			modifier = {
 				has_war = yes
 				factor = 10
 			}
+			
+			modifier = {
+				factor = 2
+				date > 1938.1.1
+			}
+
+			modifier = {
+				factor = 2
+				date > 1939.1.1
+			}
+			
+			modifier = {
+				factor = 5
+				OR = {
+					tag = USA
+					tag = ENG
+					tag = JAP
+					tag = ITA
+				}
+			}
+			
 		}
+		
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_artillery
 			naval_equipment
 			ship_modules_tech
@@ -232,12 +246,29 @@ technologies = {
 				has_tech = improved_ship_hull_light
 				factor = 20
 			}
+			
+			modifier = {
+				factor = 1.5
+				date > 1939.1.1
+			}
+
+			modifier = {
+				factor = 1.5
+				date > 1940.1.1
+			}
+			
+			modifier = {
+				factor = 3
+				OR = {
+					tag = USA
+					tag = ENG
+					tag = ITA
+					tag = JAP
+				}
+			}
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_artillery
 			naval_equipment
 			ship_modules_tech
@@ -296,12 +327,27 @@ technologies = {
 				has_war = yes
 				factor = 10
 			}
+			
+			modifier = {
+				factor = 2
+				date > 1942.1.1
+			}
+
+			modifier = {
+				factor = 2
+				date > 1943.1.1
+			}
+			
+			modifier = {
+				factor = 5
+				OR = {
+					tag = USA
+					tag = ENG
+				}
+			}
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_artillery
 			naval_equipment
 			ship_modules_tech
@@ -342,9 +388,6 @@ technologies = {
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_artillery
 			naval_equipment
 			ship_modules_tech
@@ -355,246 +398,7 @@ technologies = {
 		}
 		special_project_specialization = { specialization_naval }
 	}
-
-	#basic_medium_battery = {
-
-		#research_cost = 1
-
-		#start_year = 1936
-
-
-		#on_research_complete = {
-		#	custom_effect_tooltip = medium_battery_advice_tt
-		#	custom_effect_tooltip = secondary_battery_advice_tt
-		#}
-
-		#path = {
-		#	leads_to_tech = basic_medium_shell
-		#	research_cost_coeff = 1
-		#}
-
-		#enable_equipment_modules = {
-			#ship_medium_battery_2
-			#ship_light_medium_battery_2
-			#ship_secondaries_2
-		#}
-
-
-
-		#folder = {
-		#	name = mtgnavalsupportfolder
-		#	position = { x = 0 y = 5 }
-		#}
-
-		#ai_will_do = {
-		#	factor = 1
-		#	modifier = {
-		#		has_tech = improved_ship_hull_cruiser
-		#		factor = 5
-		#	}
-		#}
-
-		#categories = {
-			#
-			vx_cat_military_equipment
-			#
-		#	naval_artillery
-		#	naval_equipment
-		#	ship_modules_tech
-		#	cat_ship_medium_battery
-		#	mio_cat_tech_all_capital_ship_and_modules
-		#	mio_cat_tech_all_screen_ship_and_modules
-		#	mio_cat_tech_all_cruiser_and_modules
-		#}
-		#special_project_specialization = { specialization_naval }
-	#}
-
-	#basic_medium_shell = {
-
-		#research_cost = 0.5
-
-		#start_year = 1936
-
-		#path = {
-		#	leads_to_tech = improved_medium_battery
-		#	research_cost_coeff = 1
-		#}
-
-		#light_cruiser = {
-		#	lg_attack = 0.05
-		#	lg_armor_piercing = 0.05
-		#}
-		#heavy_cruiser = {
-		#	hg_attack = 0.05
-		#	hg_armor_piercing = 0.05
-		#}
-
-		#folder = {
-		#	name = mtgnavalsupportfolder
-		#	position = { x =0 y = 7 }
-		#}
-
-		#ai_will_do = {
-		#	factor = 1
-		#	modifier = {
-		#		has_war = yes
-		#		factor = 7
-		#	}
-		#}
-
-		#categories = {
-			#
-			vx_cat_military_equipment
-			#
-		#	naval_artillery
-		#	naval_equipment
-		#	mio_cat_tech_all_capital_ship_and_modules
-		#	mio_cat_tech_all_screen_ship_and_modules
-		#	mio_cat_tech_all_cruiser_and_modules
-		#}
-		#special_project_specialization = { specialization_naval }
-	#}
-
-	#improved_medium_battery = {
-
-		#research_cost = 1
-
-		#start_year = 1939
-
-		#path = {
-		#	leads_to_tech = improved_medium_shell
-		#	research_cost_coeff = 1
-		#}
-		#on_research_complete = {
-		#	custom_effect_tooltip = medium_battery_advice_tt
-		#}
-		#enable_equipment_modules = {
-		#	ship_medium_battery_3
-		#	ship_light_medium_battery_3
-		#}
-
-
-
-		#folder = {
-		#	name = mtgnavalsupportfolder
-		#	position = { x = 0 y = 11 }
-		#}
-
-		#ai_will_do = {
-		#	factor = 1
-		#	modifier = {
-		#		has_tech = advanced_ship_hull_cruiser
-		#		factor = 5
-		#	}
-		#}
-
-		#categories = {
-			#
-			vx_cat_military_equipment
-			#
-		#	naval_artillery
-		#	naval_equipment
-		#	ship_modules_tech
-		#	cat_ship_medium_battery
-		#	mio_cat_tech_all_capital_ship_and_modules
-		#	mio_cat_tech_all_screen_ship_and_modules
-		#	mio_cat_tech_all_cruiser_and_modules
-		#}
-		#special_project_specialization = { specialization_naval }
-	#}
-
-	#improved_medium_shell = {
-
-		#research_cost = 0.5
-
-		#start_year = 1942
-
-		#path = {
-		#	leads_to_tech = advanced_medium_battery
-		#	research_cost_coeff = 1
-		#}
-
-		#path = {
-		#	leads_to_tech = basic_dp_medium_battery
-		#	research_cost_coeff = 1
-		#}
-
-		#light_cruiser = {
-		#	lg_attack = 0.05
-		#	lg_armor_piercing = 0.05
-		#}
-		#heavy_cruiser = {
-		#	hg_attack = 0.05
-		#	hg_armor_piercing = 0.05
-		#}
-
-
-		#folder = {
-		#	name = mtgnavalsupportfolder
-		#	position = { x = 0 y = 16 }
-		#}
-
-		#ai_will_do = {
-		#	factor = 1
-		#	modifier = {
-		#		has_war = yes
-		#		factor = 7
-		#	}
-		#}
-
-		#categories = {
-			#
-			vx_cat_military_equipment
-			#
-		#	naval_artillery
-		#	naval_equipment
-		#	mio_cat_tech_all_capital_ship_and_modules
-		#	mio_cat_tech_all_screen_ship_and_modules
-		#	mio_cat_tech_all_cruiser_and_modules
-		#}
-		#special_project_specialization = { specialization_naval }
-	#}
-
-	#advanced_medium_battery = {
-
-		#research_cost = 1
-
-		#start_year = 1944
-
-		#enable_equipment_modules = {
-		#	ship_medium_battery_4
-		#	ship_light_medium_battery_4
-		#}
-		#on_research_complete = {
-		#	custom_effect_tooltip = medium_battery_advice_tt
-		#}
-
-
-		#folder = {
-		#	name = mtgnavalsupportfolder
-		#	position = { x = 0 y = 19 }
-		#}
-
-		#ai_will_do = {
-		#	factor = 1
-		#}
-
-		#categories = {
-			#
-			vx_cat_military_equipment
-			#
-		#	naval_artillery
-		#	naval_equipment
-		#	ship_modules_tech
-		#	cat_ship_medium_battery
-		#	mio_cat_tech_all_capital_ship_and_modules
-		#	mio_cat_tech_all_screen_ship_and_modules
-		#	mio_cat_tech_all_cruiser_and_modules
-		#}
-		#special_project_specialization = { specialization_naval }
-	#}
 	
-
 	basic_heavy_battery = {
 
 		research_cost = 1
@@ -637,9 +441,6 @@ technologies = {
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_artillery
 			naval_equipment
 			ship_modules_tech
@@ -687,12 +488,27 @@ technologies = {
 				}
 				factor = 2
 			}
+			
+			modifier = {
+				factor = 1.5
+				date > 1939.1.1
+			}
+
+			modifier = {
+				factor = 1.5
+				date > 1940.1.1
+			}
+			
+			modifier = {
+				factor = 3
+				OR = {
+					tag = USA
+					tag = ENG
+				}
+			}
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_artillery
 			naval_equipment
 			ship_modules_tech
@@ -738,9 +554,6 @@ technologies = {
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_artillery
 			naval_equipment
 			ship_modules_tech
@@ -785,13 +598,30 @@ technologies = {
 				has_war = yes
 				factor = 5
 			}
+			
+			modifier = {
+				factor = 2
+				date > 1938.1.1
+			}
+
+			modifier = {
+				factor = 2
+				date > 1939.1.1
+			}
+			
+			modifier = {
+				factor = 5
+				OR = {
+					tag = USA
+					tag = ENG
+					tag = JAP
+					tag = ITA
+				}
+			}
 
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_artillery
 			naval_equipment
 			mio_cat_tech_all_capital_ship_and_modules
@@ -837,9 +667,6 @@ technologies = {
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_artillery
 			naval_equipment
 			mio_cat_tech_all_capital_ship_and_modules
@@ -887,9 +714,6 @@ technologies = {
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_artillery
 			naval_equipment
 			ship_modules_tech
@@ -940,9 +764,6 @@ technologies = {
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_artillery
 			naval_equipment
 			ship_modules_tech
@@ -989,9 +810,6 @@ technologies = {
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_artillery
 			naval_equipment
 			ship_modules_tech
@@ -1004,50 +822,6 @@ technologies = {
 		special_project_specialization = { specialization_naval }
 	}
 
-	#basic_dp_medium_battery = {
-
-		#research_cost = 1.5
-
-		#start_year = 1944
-
-		#enable_equipment_modules = {
-		#	dp_ship_medium_1
-		#}
-
-		#on_research_complete = {
-		#	custom_effect_tooltip = secondary_battery_advice_tt
-		#}
-
-		#folder = {
-		#	name = mtgnavalsupportfolder
-		#	position = { x = 3 y = 19 }
-		#}
-
-		#ai_will_do = {
-		#	factor = 2
-		#	modifier = {
-		#		OR = {
-		#			tag = ENG
-		#			tag = USA
-		#			tag = JAP
-		#		}
-		#		factor = 20
-		#	}
-		#}
-
-		#categories = {
-			#
-			vx_cat_military_equipment
-			#
-		#	naval_artillery
-		#	naval_equipment
-		#	ship_modules_tech
-		#	mio_cat_tech_all_capital_ship_and_modules
-		#	mio_cat_tech_all_screen_ship_and_modules
-		#	mio_cat_tech_all_cruiser_and_modules
-		#}
-		#special_project_specialization = { specialization_naval }
-	#}
 
 ###  ##  ###  ###  ### ###   ##      #   #  ##  ###   ##  ### ###  ###
  #  #  # #  # #  # #   #  # #  #     #   # #  # #  # #  # #   #  # #  
@@ -1099,16 +873,13 @@ technologies = {
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_equipment
 			ship_modules_tech
 			cat_torpedoes
 			mio_cat_tech_all_screen_ship_and_modules
 			mio_cat_tech_all_cruiser_and_modules
 			mio_cat_tech_all_destroyer_and_modules
-			mio_cat_tech_all_submarine_and_modules #Not really Sub but unlocks tech improving Subs torpedo stuff later
+			mio_cat_tech_all_submarine_and_modules #Not really Sub but unlocks tech improving Subs torpedo stuff later #Now it is actually really a Sub Tech
 		}
 		special_project_specialization = { specialization_naval }
 	}
@@ -1178,9 +949,6 @@ technologies = {
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_equipment
 			ship_modules_tech
 			cat_torpedoes
@@ -1239,9 +1007,6 @@ technologies = {
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_equipment
 			ship_modules_tech
 			cat_torpedoes
@@ -1252,51 +1017,7 @@ technologies = {
 		}
 		special_project_specialization = { specialization_naval }
 	}
-
-	#electric_torpedo = {
-
-	#	xp_research_type = navy
-	#	xp_boost_cost = 50
-	#	xp_research_bonus = 1.50
-	#	research_cost = 2.5
-
-	#	start_year = 1940
-
-
-	#	naval_torpedo_reveal_chance_factor = -0.25
-
-
-	#	folder = {
-	#		name = mtgnavalsupportfolder
-	#		position = { x = 3 y = 13 }
-	#	}
-
-	#	ai_will_do = {
-	#		factor = 2
-	#		modifier = {
-	#			OR = {
-	#				tag = JAP
-	#				tag = USA
-	#				tag = GER
-	#			}
-	#			factor = 5
-	#		}
-	#	}
-
-	#	categories = {
-			#
-			vx_cat_military_equipment
-			#
-	#		naval_equipment
-	#		ship_modules_tech
-	#		cat_torpedoes
-	#		mio_cat_tech_all_screen_ship_and_modules
-	#		mio_cat_tech_all_cruiser_and_modules
-	#		mio_cat_tech_all_destroyer_and_modules
-	#		mio_cat_tech_all_submarine_and_modules
-	#	}
-	#	special_project_specialization = { specialization_naval }
-	#}
+	
 	improved_ship_torpedo_launcher = {
 
 		research_cost = 1.5
@@ -1329,21 +1050,33 @@ technologies = {
 				tag = JAP
 				factor = 5
 			}
+			
+			modifier = {
+				factor = 1.5
+				date > 1937.1.1
+			}
+			modifier = {
+				factor = 1.5
+				date > 1938.1.1
+			}
+			modifier = {
+				factor = 1.5
+				date > 1939.1.1
+			}
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_equipment
 			ship_modules_tech
 			cat_torpedoes
 			mio_cat_tech_all_screen_ship_and_modules
 			mio_cat_tech_all_cruiser_and_modules
 			mio_cat_tech_all_destroyer_and_modules
+			mio_cat_tech_all_submarine_and_modules
 		}
 		special_project_specialization = { specialization_naval }
 	}
+	
 	advanced_ship_torpedo_launcher = {
 
 		research_cost = 1.5
@@ -1378,21 +1111,29 @@ technologies = {
 				tag = JAP
 				factor = 5
 			}
+			modifier = {
+				factor = 1.5
+				date > 1941.1.1
+			}
+
+			modifier = {
+				factor = 1.5
+				date > 1942.1.1
+			}
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_equipment
 			ship_modules_tech
 			cat_torpedoes
 			mio_cat_tech_all_screen_ship_and_modules
 			mio_cat_tech_all_cruiser_and_modules
 			mio_cat_tech_all_destroyer_and_modules
+			mio_cat_tech_all_submarine_and_modules
 		}
 		special_project_specialization = { specialization_naval }
 	}
+	
 	modern_ship_torpedo_launcher = {
 
 		research_cost = 1.5
@@ -1423,15 +1164,13 @@ technologies = {
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_equipment
 			ship_modules_tech
 			cat_torpedoes
 			mio_cat_tech_all_screen_ship_and_modules
 			mio_cat_tech_all_cruiser_and_modules
 			mio_cat_tech_all_destroyer_and_modules
+			mio_cat_tech_all_submarine_and_modules
 		}
 		special_project_specialization = { specialization_naval }
 	}
@@ -1461,8 +1200,11 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
-
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1937.1.1
+			}
 			modifier = {
 				has_navy_size = { size < 10 }
 				factor = 0.1
@@ -1483,9 +1225,6 @@ technologies = {
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_equipment
 			ship_modules_tech
 			mio_cat_tech_all_capital_ship_and_modules
@@ -1518,6 +1257,10 @@ technologies = {
 		ai_will_do = {
 			factor = 3
 			modifier = {
+				factor = 0
+				date < 1939.1.1
+			}
+			modifier = {
 				is_historical_focus_on = yes
 				tag = JAP
 				factor = 0.25
@@ -1533,9 +1276,6 @@ technologies = {
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_equipment
 			ship_modules_tech
 			mio_cat_tech_all_capital_ship_and_modules
@@ -1569,6 +1309,10 @@ technologies = {
 		ai_will_do = {
 			factor = 3
 			modifier = {
+				factor = 0
+				date < 1941.1.1
+			}
+			modifier = {
 				is_historical_focus_on = yes
 				tag = JAP
 				factor = 0.25
@@ -1584,9 +1328,6 @@ technologies = {
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_equipment
 			ship_modules_tech
 			mio_cat_tech_all_capital_ship_and_modules
@@ -1631,25 +1372,39 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
+			factor = 1
 			modifier = {
 				has_navy_size = { size < 10 }
 				factor = 0.1
 			}
+			
 			modifier = {
 				has_war = yes
 				factor = 2
 			}
-			modifier = {
-				tag = JAP
+			
+			modifier = {				
+				OR = {
+					tag = USA
+					tag = ENG
+					tag = JAP
+					tag = ITA
+				}
 				factor = 5
+			}
+			
+			modifier = {
+				factor = 2
+				date > 1938.1.1
+			}
+
+			modifier = {
+				factor = 2
+				date > 1939.1.1
 			}
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_equipment
 			ship_modules_tech
 			mio_cat_tech_all_capital_ship_and_modules
@@ -1688,21 +1443,35 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
+			factor = 1
 			modifier = {
 				has_war = yes
 				factor = 2
 			}
-			modifier = {
-				tag = JAP
+			
+			modifier = {				
+				OR = {
+					tag = USA
+					tag = ENG
+					tag = JAP
+					tag = ITA
+				}
+				date > 1939.1.1
 				factor = 5
+			}
+			
+			modifier = {
+				factor = 2
+				date > 1940.1.1
+			}
+
+			modifier = {
+				factor = 2
+				date > 1941.1.1
 			}
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_equipment
 			ship_modules_tech
 			mio_cat_tech_all_capital_ship_and_modules
@@ -1745,21 +1514,28 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
+			factor = 1
 			modifier = {
 				has_war = yes
 				factor = 2
 			}
-			modifier = {
-				tag = JAP
+			modifier = {				
+				OR = {
+					tag = USA
+					tag = ENG
+					tag = JAP
+					tag = ITA
+				}
+				date > 1941.1.1
 				factor = 5
+			}
+			modifier = {
+				factor = 0.1
+				original_tag = GER				
 			}
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_equipment
 			ship_modules_tech
 			mio_cat_tech_all_capital_ship_and_modules
@@ -1828,9 +1604,6 @@ technologies = {
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_mines
 			naval_minelaying
 			naval_equipment
@@ -1875,9 +1648,6 @@ technologies = {
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_mines
 			naval_minelaying
 			naval_equipment
@@ -1916,9 +1686,6 @@ technologies = {
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_mines
 			naval_minelaying
 			naval_equipment
@@ -1961,7 +1728,7 @@ technologies = {
 					tag = ENG
 					tag = SOV
 				}
-				factor = 6
+				factor = 4
 			}
 			modifier = {
 				has_war = yes
@@ -1974,9 +1741,6 @@ technologies = {
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_mines
 			naval_minelaying
 			naval_equipment
@@ -2025,9 +1789,6 @@ technologies = {
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_mines
 			naval_minesweeping
 			naval_equipment
@@ -2087,9 +1848,6 @@ technologies = {
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_mines
 			naval_minelaying
 			naval_equipment
@@ -2137,9 +1895,6 @@ technologies = {
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_mines
 			naval_minelaying
 			naval_equipment
@@ -2179,9 +1934,6 @@ technologies = {
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_mines
 			naval_minelaying
 			naval_equipment
@@ -2219,9 +1971,6 @@ technologies = {
 	#	}
 
 	#	categories = {
-			#
-			vx_cat_military_equipment
-			#
 	#		naval_mines
 	#		naval_minelaying
 	#		naval_equipment
@@ -2259,9 +2008,6 @@ technologies = {
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_mines
 			naval_minesweeping
 			naval_equipment
@@ -2292,9 +2038,6 @@ technologies = {
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_mines
 			naval_minesweeping
 			naval_equipment
@@ -2363,9 +2106,6 @@ technologies = {
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_equipment
 			tp_tech
 		}
@@ -2406,56 +2146,30 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			factor = 5
 
 			modifier = {
-				factor = 0.5
+				factor = 0.1
 				has_war = no
 			}
 
 			modifier = {
-				factor = 2
-				tag = USA
+				factor = 15
+				tag = USA				
+				date > 1942.1.1
 			}
 			modifier = {
-				has_war_with = JAP
-				factor = 2
+				factor = 15
+				tag = ENG				
+				date > 1941.6.1
 			}
 			modifier = {
-				factor = 50
+				factor = 15
 				tag = JAP
-				OR = {
-					has_war_with = USA
-					CHI = {
-						OR = {
-							has_capitulated = yes
-							exists = no
-		                    is_subject_of = JAP
-						}
-					}
-				}
-			}
-
-			modifier = {
-				factor = 2
-				tag = ENG
-			}
-
-			modifier = {
-				factor = 10
-				OR = {
-					tag = ENG
-					tag = USA
-				}
-				has_war_with = GER
-				GER = { has_war_with = SOV }
 			}
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_equipment
 			tp_tech
 		}
@@ -2506,9 +2220,6 @@ technologies = {
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_equipment
 			tp_tech
 		}
@@ -2554,9 +2265,6 @@ technologies = {
 		}		
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_equipment
 			tp_tech
 		}
@@ -2593,9 +2301,6 @@ technologies = {
 		}		
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_equipment
 			tp_tech
 		}
@@ -2632,9 +2337,6 @@ technologies = {
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_equipment
 			tp_tech
 		}
@@ -2669,9 +2371,6 @@ technologies = {
 		}
 
 		categories = {
-			#
-			vx_cat_military_equipment
-			#
 			naval_equipment
 			tp_tech
 		}

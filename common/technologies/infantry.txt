@@ -41,7 +41,8 @@ technologies = {
 			position = { x = 0 y = -1 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			infantry_weapons
 		}
 
@@ -68,7 +69,8 @@ technologies = {
 			position = { x = 0 y = @1936 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			infantry_weapons
 		}
 
@@ -129,7 +131,8 @@ technologies = {
 			position = { x = 0 y = @1938 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			infantry_weapons
 		}
 
@@ -191,7 +194,8 @@ technologies = {
 			position = { x = 0 y = @1939 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			infantry_weapons
 		}
 
@@ -250,7 +254,8 @@ technologies = {
 			position = { x = 0 y = @1940 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			infantry_weapons
 		}
 
@@ -342,7 +347,8 @@ technologies = {
 			position = { x = 2 y = @1943 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			infantry_weapons
 		}
 
@@ -384,7 +390,8 @@ technologies = {
 			position = { x = 0 y = @1942 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			infantry_weapons
 		}
 
@@ -438,7 +445,8 @@ technologies = {
 			position = { x = 0 y = @1944 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			infantry_weapons
 		}
 
@@ -504,7 +512,8 @@ technologies = {
 			}
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			para_tech
 			cat_special_forces_generic
 		}
@@ -549,7 +558,8 @@ technologies = {
 			position = { x = 2 y = @1939 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			para_tech
 			cat_special_forces_generic
 		}
@@ -593,7 +603,8 @@ technologies = {
 			position = { x = 2 y = @1943 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			para_tech
 			cat_special_forces_generic
 		}
@@ -648,7 +659,8 @@ technologies = {
 			position = { x = 3 y = @1936 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			marine_tech
 			cat_special_forces_generic
 		}
@@ -691,7 +703,8 @@ technologies = {
 			position = { x = 3 y = @1939 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			marine_tech
 			cat_special_forces_generic
 		}
@@ -724,7 +737,8 @@ technologies = {
 			position = { x = 3 y = @1943 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			marine_tech
 			cat_special_forces_generic
 		}
@@ -774,7 +788,8 @@ technologies = {
 			position = { x = 5 y = @1936 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			infantry_tech
 			mountaineers_tech
 			cat_special_forces_generic
@@ -803,7 +818,8 @@ technologies = {
 			position = { x = 5 y = @1939 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			infantry_tech
 			mountaineers_tech
 			cat_special_forces_generic
@@ -826,7 +842,8 @@ technologies = {
 			position = { x = 5 y = @1943 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			infantry_tech
 			mountaineers_tech
 			cat_special_forces_generic
@@ -871,7 +888,8 @@ technologies = {
 			position = { x = 4 y = @1936 }
 		}
 		
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			infantry_tech
 			rangers_tech_cat
 			cat_special_forces_generic
@@ -920,7 +938,8 @@ technologies = {
 			position = { x = 4 y = @1939 }
 		}
 		
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			infantry_tech
 			rangers_tech_cat
 			cat_special_forces_generic
@@ -944,7 +963,8 @@ technologies = {
 			position = { x = 4 y = @1943 }
 		}
 		
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			infantry_tech
 			rangers_tech_cat
 			cat_special_forces_generic
@@ -989,7 +1009,8 @@ technologies = {
 			position = { x = 6 y = @1938 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			mountaineers_tech
 			marine_tech
 			para_tech
@@ -1026,7 +1047,8 @@ technologies = {
 			position = { x = 5 y = @1940 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			mountaineers_tech
 			marine_tech
 			para_tech
@@ -1058,7 +1080,8 @@ technologies = {
 			position = { x = 7 y = @1940 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			mountaineers_tech
 			marine_tech
 			para_tech
@@ -1093,7 +1116,8 @@ technologies = {
 			position = { x = 5 y = @1942 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			mountaineers_tech
 			marine_tech
 			para_tech
@@ -1127,7 +1151,8 @@ technologies = {
 			position = { x = 7 y = @1942 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			mountaineers_tech
 			marine_tech
 			para_tech
@@ -1155,7 +1180,8 @@ technologies = {
 			position = { x = 6 y = @1944 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			mountaineers_tech
 			marine_tech
 			para_tech
@@ -1467,7 +1493,8 @@ technologies = {
 			position = { x = 0 y = @1943 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			night_vision
 		}
 
@@ -1507,7 +1534,8 @@ technologies = {
 			position = { x = 0 y = @1946 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			night_vision
 		}
 
@@ -1562,7 +1590,8 @@ technologies = {
 			position = { x = 0 y = @1918 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			infantry_weapons
 		}
 
@@ -1644,7 +1673,8 @@ technologies = {
 			position = { x = 0 y = @1938 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			infantry_weapons
 		}
 
@@ -1721,7 +1751,8 @@ technologies = {
 			position = { x = 0 y = @1940 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			infantry_weapons
 		}
 
@@ -1780,7 +1811,8 @@ technologies = {
 			position = { x = 0 y = @1942 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			infantry_weapons
 		}
 
@@ -1847,7 +1879,8 @@ technologies = {
 			position = { x = 0 y = -1 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			motorized_equipment
 			mio_cat_tech_all_motorized_mechanized
 			infantry_tech
@@ -1929,7 +1962,8 @@ technologies = {
 			motorized_rocket_unit
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			motorized_equipment
 			mio_cat_tech_all_motorized_mechanized
 			infantry_tech
@@ -1983,7 +2017,8 @@ technologies = {
 			}
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			mot_rockets
 			mio_cat_tech_all_motorized_mechanized
 		}
@@ -2012,7 +2047,8 @@ technologies = {
 			position = { x = 4 y = @1924 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			motorized_equipment
 			armor
 			cat_armored_cars
@@ -2061,7 +2097,8 @@ technologies = {
 			position = { x = 4 y = @1940 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			motorized_equipment
 			armor
 			cat_armored_cars
@@ -2105,7 +2142,8 @@ technologies = {
 			position = { x = 4 y = @1942 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			motorized_equipment
 			armor
 			cat_armored_cars
@@ -2151,7 +2189,8 @@ technologies = {
 		start_year = 1942
 		sub_tech_index = 1
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			motorized_equipment
 			armor
 			cat_armored_cars
@@ -2193,7 +2232,8 @@ technologies = {
 		start_year = 1942
 		sub_tech_index = 1
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			motorized_equipment
 			armor
 			cat_armored_cars
@@ -2288,7 +2328,8 @@ technologies = {
 			position = { x = 0 y = @1940 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			motorized_equipment
 			mio_cat_tech_all_motorized_mechanized
 			infantry_tech
@@ -2359,7 +2400,8 @@ technologies = {
 			position = { x = 2 y = @1941 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			motorized_equipment
 			mio_cat_tech_all_motorized_mechanized
 			infantry_tech
@@ -2390,7 +2432,8 @@ technologies = {
 			position = { x = 2 y = @1943 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			motorized_equipment
 			mio_cat_tech_all_motorized_mechanized
 			infantry_tech
@@ -2423,7 +2466,8 @@ technologies = {
 			position = { x = 0 y = @1942 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			motorized_equipment
 			mio_cat_tech_all_motorized_mechanized
 			infantry_tech
@@ -2454,7 +2498,8 @@ technologies = {
 			position = { x = 0 y = @1944 }
 		}
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			motorized_equipment
 			mio_cat_tech_all_motorized_mechanized
 			infantry_tech
@@ -2512,7 +2557,8 @@ technologies = {
 		research_cost = 1
 		start_year = 1936
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			armor
 		}
 
@@ -2800,7 +2846,8 @@ technologies = {
 		start_year = 1936
 		sub_tech_index = 1
 
-		categories = {
+		categories = {	
+			vx_cat_military_equipment	
 			motorized_equipment
 			armor
 			cat_armored_cars

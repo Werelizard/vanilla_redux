@@ -45,4 +45,8 @@ spriteTypes = {
 		name = "GFX_portrait_SWI_jules_humbert_droz"
 		textureFile = "gfx/leaders/SWI/SWI_jules_humbert_droz.tga"
 	}
+	spriteType = {
+		name = "GFX_portrait_SWI_federal_council_small"
+		textureFile = "gfx/interface/ideas/vx_swi_federal_council.dds"
+	}
 } 

@@ -38,6 +38,9 @@ recruit_character = SWI_character_ROLF_HENNE
 recruit_character = SWI_character_ROBERT_TOBLER
 recruit_character = SWI_character_JAKOB_LABHARDT
 
+### APPOINT ADVISORS
+activate_advisor = SWI_federal_council_second_in_command
+
 ### IDEAS
 
 add_ideas = {
@@ -49,6 +52,16 @@ add_ideas = {
 	SWI_stalled_military_budget
 	SWI_soc_dem_opposition
 	SWI_militias # removed on launch
+}
+
+### DECISIONS
+activate_targeted_decision = {
+	target = FROM
+	decision = SWI_rally_to_defend_country
+}
+activate_targeted_decision = {
+	target = FROM
+	decision = SWI_promote_national_unity
 }
 
 ### DYNAMIC MODIFIERS
@@ -74,6 +87,9 @@ set_variable = {
 set_variable = {
 	SWI_economy_construcion_speed_var = 0.05
 }
+set_variable = {
+	SWI_national_morale_var = 0.4
+}
 
 ### TECHNOLOGIES
 
@@ -92,6 +108,17 @@ set_technology = {
 	cv_early_fighter = 1
 }
 
+### OOB
+
+set_oob = "vx_SWI_land"
+
 ### OTHER
+
+set_power_balance = {
+    id = SWI_national_morale_bop
+    left_side = SWI_national_morale_low
+    right_side = SWI_national_morale_high
+	set_value = -0.2
+}
 
 country_lock_all_division_template = yes

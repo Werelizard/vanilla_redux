@@ -423,7 +423,15 @@
  ### INTERFACE ###
  second_in_command:0 "Head of Government"
 
- ### STATEES ###
+ ### STATES ###
  STATE_1082:0 "Savoy"
  STATE_1083:0 "Nancy"
- STATE_1084:0 "Italian Alps"
+ STATE_1084:0 "Arpitania"
+ STATE_1085:0 "Bergamo"
+
+ ### VICTORY POINTS ###
+ VICTORY_POINTS_611:0 "Aosta"
+ VICTORY_POINTS_9584:0 "Bergamo"
+
+ ### MODIFIERS ###
+ vx_ruling_party_popularity_drift:0 "Daily Ruling Party Drift"
