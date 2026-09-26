@@ -14,5 +14,9 @@ SWI_national_morale = {
 
     visible = {
         original_tag = SWI
+        # Balance power is active
+        has_power_balance = {
+            id = SWI_national_morale_bop
+        }
     }
 }

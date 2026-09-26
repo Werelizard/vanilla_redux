@@ -56,6 +56,12 @@ spritetypes = {
 		textureFile = "gfx/texticons/SWI_morale_texticon.dds"
 		legacy_lazy_load = no
 	}
+	# Texticons - general
+	spriteType = {
+		name = "GFX_war_support_texticon"
+		textureFile = "gfx/texticons/war_support_texticon.dds"
+		legacy_lazy_load = no
+	}
 	# MIOS
 	spriteType = {
 		name = "GFX_mio_research_icon"

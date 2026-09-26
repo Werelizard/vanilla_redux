@@ -1,84 +1,36 @@
 SWI_national_morale = {
-	SWI_debug_reload_targeted_decisions = {
+	################################################
+	### INITIAL DECISIONS - ONLY TO BOOST MORALE ###
+	################################################
+
+	SWI_promote_national_unity = {
+		icon = GFX_decision_SWI_focus_on_swiss_unity
+		cost = SWI_morale_decision_big_cost_var
+
+		days_remove = 70
+
+		allowed = {
+			always = no # Targeted decision
+		}
+		available = {
+			
+		}
 		visible = {
-			is_debug = yes
+			
+		}
+
+		modifier = {
+			stability_weekly_factor = 0.005
 		}
 
 		complete_effect = {
-			activate_targeted_decision = {
-				target = FROM
-				decision = SWI_rally_to_defend_country
-			}
-			activate_targeted_decision = {
-				target = FROM
-				decision = SWI_promote_national_unity
-			}
-		}
-	}
-	#######################################################
-	# Initial Decisions
-	#######################################################
-	SWI_rally_to_defend_country = {
-		icon = GFX_decision_eng_propaganda_campaigns
-
-		days_remove = 90
-		cost = 30
-
-		allowed = {
-			always = no
-		}				
-		available = {
-			
-		}
-		visible = {
 			
 		}
 		remove_effect = {
-			add_popularity = {
-				ideology = fascist
-				popularity = 0.01
+			add_power_balance_value = {
+				id = SWI_national_morale_bop
+				value = 0.1
 			}
-			custom_effect_tooltip = doublespace_tt
-			SWI_increase_morale_small_effect = yes
-			custom_effect_tooltip = doublespace_tt
-			hidden_effect = {
-				activate_targeted_decision = {
-					target = FROM
-					decision = SWI_rally_to_defend_country
-				}
-			}
-		}
-
-		cancel_trigger = {
-			hidden_trigger = {
-				NOT = {
-					has_power_balance = {
-						id = SWI_national_morale_bop
-					}
-				}
-			}
-		}
-		fixed_random_seed = no
-	}
-	SWI_promote_national_unity = {
-		icon = GFX_decision_SWI_focus_on_swiss_unity
-		days_remove = 90
-		cost = 20
-
-		allowed = {
-			always = no
-		}				
-		available = {
-			
-		}
-		visible = {
-			
-		}
-		modifier = {
-			political_power_factor = -0.25
-		}
-		remove_effect = {
-			SWI_increase_morale_small_effect = yes
 			custom_effect_tooltip = doublespace_tt
 			hidden_effect = {
 				activate_targeted_decision = {
@@ -97,6 +49,197 @@ SWI_national_morale = {
 				}
 			}
 		}
-		fixed_random_seed = no
+		cancel_effect = {			
+			hidden_effect = {
+				activate_targeted_decision = {
+					target = FROM
+					decision = SWI_promote_national_unity
+				}
+			}
+		}
 	}
+
+	SWI_romanticise_army_service = {
+		icon = GFX_decision_generic_military
+		cost = SWI_morale_decision_big_cost_var
+
+		days_remove = 70
+
+		allowed = {
+			always = no # Targeted decision
+		}
+		available = {
+			
+		}
+		visible = {
+			
+		}
+
+		modifier = {
+			training_time_army_factor = -0.1
+			war_support_factor = 0.05
+		}
+
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			add_power_balance_value = {
+				id = SWI_national_morale_bop
+				value = 0.05
+			}
+			custom_effect_tooltip = doublespace_tt
+			hidden_effect = {
+				activate_targeted_decision = {
+					target = FROM
+					decision = SWI_romanticise_army_service
+				}
+			}
+		}
+
+		cancel_trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_power_balance = {
+						id = SWI_national_morale_bop
+					}
+				}
+			}
+		}
+		cancel_effect = {
+			hidden_effect = {
+				activate_targeted_decision = {
+					target = FROM
+					decision = SWI_romanticise_army_service
+				}
+			}
+		}
+	}
+
+	SWI_promote_humanitarian_values = {
+		icon = GFX_decision_SWI_support_humanitarian_efforts
+		
+		custom_cost_trigger = {
+			has_war_support > 0.03
+		}
+		custom_cost_text = war_support_small_cost_trigger
+
+		days_remove = 70
+
+		allowed = {
+			always = no # Targeted decision
+		}
+		available = {
+			has_war = no
+		}
+		visible = {
+			
+		}
+
+		modifier = {
+			opinion_gain_monthly_factor = 0.1
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_war_support = -0.03
+			}
+		}
+		remove_effect = {
+			add_power_balance_value = {
+				id = SWI_national_morale_bop
+				value = 0.15
+			}
+			custom_effect_tooltip = doublespace_tt
+			hidden_effect = {
+				activate_targeted_decision = {
+					target = FROM
+					decision = SWI_promote_humanitarian_values
+				}
+			}
+		}
+
+		cancel_trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_power_balance = {
+						id = SWI_national_morale_bop
+					}
+				}
+			}
+		}
+		cancel_effect = {
+			hidden_effect = {
+				activate_targeted_decision = {
+					target = FROM
+					decision = SWI_promote_humanitarian_values
+				}
+			}
+		}
+	}
+	
+	SWI_use_national_front = {
+		icon = GFX_decision_eng_blackshirt_march
+		cost = SWI_morale_decision_small_cost_var
+
+		days_remove = 70
+
+		allowed = {
+			always = no # Targeted decision
+		}
+		available = {
+			NOT = {
+				has_completed_focus = SWI_ban_swiss_nazi_party
+			}
+		}
+		visible = {
+			NOT = {
+				has_completed_focus = SWI_ban_swiss_nazi_party
+			}
+		}
+
+		modifier = {
+			power_balance_weekly = 0.01
+			stability_factor = -0.1
+		}
+
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = fascist
+				popularity = 0.05
+			}
+			custom_effect_tooltip = doublespace_tt
+			hidden_effect = {
+				activate_targeted_decision = {
+					target = FROM
+					decision = SWI_use_national_front
+				}
+			}
+		}
+
+		cancel_trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_power_balance = {
+						id = SWI_national_morale_bop
+					}
+				}
+			}
+		}
+		cancel_effect = {
+			hidden_effect = {
+				activate_targeted_decision = {
+					target = FROM
+					decision = SWI_use_national_front
+				}
+			}
+		}
+	}
+
+	################################################
+	### SPIRITUAL DEFENSE - MORALE / READINESS   ###
+	################################################
 }

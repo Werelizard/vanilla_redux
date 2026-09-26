@@ -55,16 +55,8 @@ add_ideas = {
 }
 
 ### DECISIONS
-activate_targeted_decision = {
-	target = FROM
-	decision = SWI_rally_to_defend_country
-}
-activate_targeted_decision = {
-	target = FROM
-	decision = SWI_promote_national_unity
-}
 
-### DYNAMIC MODIFIERS
+### DYNAMIC MODIFIERS 
 
 add_dynamic_modifier = {
 	modifier = SWI_militia_dynmod
@@ -85,10 +77,16 @@ set_variable = {
 	SWI_militia_conscription_factor_var = 0.02
 }
 set_variable = {
-	SWI_economy_construcion_speed_var = 0.05
+	SWI_max_readiness_var = 20
 }
 set_variable = {
-	SWI_national_morale_var = 0.4
+	SWI_morale_decision_small_cost_var = 25
+}
+set_variable = {
+	SWI_morale_decision_big_cost_var = 50
+}
+set_variable = {
+	SWI_morale_decision_huge_cost_var = 100
 }
 
 ### TECHNOLOGIES
@@ -114,11 +112,26 @@ set_oob = "vx_SWI_land"
 
 ### OTHER
 
-set_power_balance = {
-    id = SWI_national_morale_bop
-    left_side = SWI_national_morale_low
-    right_side = SWI_national_morale_high
-	set_value = -0.2
+activate_targeted_decision = {
+	target = FROM
+	decision = SWI_promote_national_unity
+}
+activate_targeted_decision = {
+	target = FROM
+	decision = SWI_romanticise_army_service
+}
+activate_targeted_decision = {
+	target = FROM
+	decision = SWI_promote_humanitarian_values
+}
+activate_targeted_decision = {
+	target = FROM
+	decision = SWI_use_national_front
 }
 
 country_lock_all_division_template = yes
+
+country_event = {
+	id = switzerland_national_morale.1
+	days = 7
+}

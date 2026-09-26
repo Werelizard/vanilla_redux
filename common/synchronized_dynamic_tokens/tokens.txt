@@ -62,3 +62,4 @@ authoritarian_democrat
 autocratic
 fascist
 vx_ruling_party_popularity_drift 
+vx_SWI_weekly_readiness 

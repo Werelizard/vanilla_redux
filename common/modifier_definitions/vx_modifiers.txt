@@ -4,3 +4,9 @@ vx_ruling_party_popularity_drift = {
 	precision = 3
 	postfix = daily
 }
+
+vx_SWI_weekly_readiness = {
+	color_type = good
+	value_type = number
+	precision = 0
+}

@@ -1,0 +1,86 @@
+add_namespace = switzerland_national_morale
+add_namespace = switzerland_economy_events
+
+country_event = {
+	id = switzerland_national_morale.1
+	title = switzerland_national_morale.1.title
+	desc = switzerland_national_morale.1.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	picture = GFX_report_event_SWI_soldier_gathering
+
+	option = {
+		name = switzerland_national_morale.1.a
+		set_power_balance = {
+			id = SWI_national_morale_bop
+			set_value = -0.1
+		}
+		custom_effect_tooltip = doublespace_tt
+		unlock_decision_category_tooltip = SWI_national_morale
+		custom_effect_tooltip = doublespace_tt
+		custom_effect_tooltip = SWI_national_morale_mechanic_enabled_tt
+	}
+}
+
+country_event = {
+	id = switzerland_economy_events.1
+	title = switzerland_economy_events.1.title
+	desc = switzerland_economy_events.1.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	picture = GFX_report_event_SWI_assembly_hall
+
+	option = {
+		# We need to focus on economic growth
+		name = switzerland_economy_events.1.a
+		hidden_effect = {
+			add_dynamic_modifier = {
+				modifier = SWI_economy_dynmod
+			}
+		}
+		custom_effect_tooltip = add_swiss_economy_tt
+		add_to_variable = {
+			SWI_economy_construction_speed_var = 0.1
+			tooltip = production_speed_buildings_factor_tt
+		}
+		custom_effect_tooltip = doublespace_tt
+		custom_override_tooltip = {
+			tooltip = {
+				localization_key = lock_focus_tt
+				FOCUS = SWI_full_throttle_industrialisation
+			}
+		}
+		hidden_effect = {
+			set_country_flag = SWI_full_throttle_industrialisation_blocked
+		}
+	}
+	option = {
+		# We need to focus on modernisation
+		name = switzerland_economy_events.1.b
+		hidden_effect = {
+			add_dynamic_modifier = {
+				modifier = SWI_economy_dynmod
+			}
+		}
+		custom_effect_tooltip = add_swiss_economy_tt
+		add_to_variable = {
+			production_factory_efficiency_gain_factor = 0.05
+			tooltip = production_factory_efficiency_gain_factor_tt
+		}
+		custom_effect_tooltip = doublespace_tt
+		custom_override_tooltip = {
+			tooltip = {
+				localization_key = lock_focus_tt
+				FOCUS = SWI_support_traditional_industries
+			}
+		}
+		hidden_effect = {
+			set_country_flag = SWI_support_traditional_industries_blocked
+		}
+	}
+}
+

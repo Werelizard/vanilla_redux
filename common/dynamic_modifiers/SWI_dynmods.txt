@@ -1,6 +1,7 @@
 SWI_militia_dynmod = {
 	enable = { always = yes }
 	icon = GFX_idea_SWI_militias
+
 	conscription = SWI_militia_conscription_factor_var
 	modifier_army_sub_unit_militia_defence_factor = SWI_militia_defense_factor_var
 	modifier_army_sub_unit_militia_attack_factor = SWI_militia_attack_factor_var
@@ -10,7 +11,49 @@ SWI_militia_dynmod = {
 SWI_economy_dynmod = {
 	enable = { always = yes }
 	icon = GFX_idea_GER_recovering_economy
-	production_speed_buildings_factor = SWI_economy_construcion_speed_var
+
+	production_factory_efficiency_gain_factor = SWI_economy_efficiency_gain_var
+	production_factory_max_efficiency_factor = SWI_economy_efficiency_cap_var
+	production_factory_start_efficiency_factor = SWI_economy_efficiency_start_var
+	production_speed_buildings_factor = SWI_economy_construction_speed_var
+	production_speed_infrastructure_factor = SWI_economy_construction_infrastructure_speed_var
+	production_speed_rail_way_factor = SWI_economy_construction_railway_speed_var
+	production_speed_industrial_complex_factor = SWI_economy_construction_civ_speed_var
+	production_speed_arms_factory_factor = SWI_economy_construction_mil_speed_var
+	local_resources_factor = SWI_economy_resources_gain_var
+	factory_energy_consumption = SWI_economy_energy_consumption_var
+	consumer_goods_factor = SWI_economy_consumer_goods_var
+	cic_construction_boost = SWI_economy_cic_boost_var
+	research_speed_factor = SWI_economy_research_var
+	stability_factor = SWI_economy_stability_var
+	production_lack_of_resource_penalty_factor = SWI_economy_resource_penalty_var
+	global_building_slots_factor = SWI_economy_max_buildings_factor_var
+	industrial_capacity_factory = SWI_economy_capacity_factor_var
+	industry_repair_factor = SWI_economy_repair_factor_var
+	industry_free_repair_factor = SWI_economy_free_repair_factor_var 
 }
 
-# Swiss National Morale 
+SWI_economy_improved_dynmod = {
+	enable = { always = yes }
+	icon = GFX_idea_GER_recovering_economy
+
+	production_factory_efficiency_gain_factor = SWI_economy_efficiency_gain_var
+	production_factory_max_efficiency_factor = SWI_economy_efficiency_cap_var
+	production_factory_start_efficiency_factor = SWI_economy_efficiency_start_var
+	production_speed_buildings_factor = SWI_economy_construction_speed_var
+	production_speed_infrastructure_factor = SWI_economy_construction_railway_speed_var
+	production_speed_rail_way_factor = SWI_economy_construction_infrastructure_speed_var
+	production_speed_industrial_complex_factor = SWI_economy_construction_civ_speed_var
+	production_speed_arms_factory_factor = SWI_economy_construction_mil_speed_var
+	local_resources_factor = SWI_economy_resources_gain_var
+	factory_energy_consumption = SWI_economy_energy_consumption_var
+	consumer_goods_factor = SWI_economy_consumer_goods_var
+	cic_construction_boost = SWI_economy_cic_boost_var
+	research_speed_factor = SWI_economy_research_var
+	stability_factor = SWI_economy_stability_var
+	production_lack_of_resource_penalty_factor = SWI_economy_resource_penalty_var
+	global_building_slots_factor = SWI_economy_max_buildings_factor_var
+	industrial_capacity_factory = SWI_economy_capactiy_factor_var
+	industry_repair_factor = SWI_economy_repair_factor_var
+	industry_free_repair_factor = SWI_economy_free_repair_factor_var 
+}

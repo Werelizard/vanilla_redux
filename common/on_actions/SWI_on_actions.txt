@@ -7,4 +7,15 @@ on_actions = {
 			}
 		}
 	}
+	on_weekly_SWI = {
+		effect = {
+			add_to_variable = {
+				SWI_weekly_readiness_var = modifier@vx_SWI_weekly_readiness
+			}
+			clamp_variable = {
+				var = SWI_weekly_readiness_var
+				max = SWI_max_readiness_var
+			}
+		}
+	}
 }

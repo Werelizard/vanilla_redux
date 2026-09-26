@@ -375,16 +375,11 @@ generic_decision_league_of_nations = {
 			
 		}
 		available = {
+			date = 1937.1.1
 			OR = {
 				has_fascist_government_tooltip_trigger = yes
-				AND = {
-					threat > 0.35
-					has_authoritarian_government_tooltip_trigger = yes				
-				}	
-				AND = {
-					threat > 0.25
-					has_global_flag = vx_lon_fell_apart_flag		
-				}				
+				has_global_flag = vx_lon_fell_apart_flag
+				threat > 0.5				
 			}
 		}
 		####
@@ -404,6 +399,14 @@ generic_decision_league_of_nations = {
 		####
 		ai_will_do = {
 			factor = 0
+			modifier = {
+				# Authoritarian and Fascist nations will want to leave it asap
+				add = 1000
+				OR = {
+					has_authoritarian_government_trigger = yes
+					has_fascist_government_trigger = yes
+				}
+			}
 			modifier = {
 				# Why stay if it's fucked?
 				add = 1000

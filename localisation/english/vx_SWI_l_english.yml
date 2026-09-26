@@ -24,18 +24,19 @@
  ###################
  # DECISIONS
  ###################
- vx_switzerland_combat_defeatism_dec:0 "Combat Defeatism"
- vx_switzerland_defend_democracy_dec:0 "Defend Democracy"
- vx_switzerland_mobilise_industry_dec:0 "Mobilise Civilian Industries"
+ SWI_promote_national_unity:0 "Foster National Unity"
+ SWI_romanticise_army_service:0 "Romanticise Military Service"
+ SWI_promote_humanitarian_values:0 "Promote Humanitarian Values"
+ SWI_use_national_front:0 "Use the National Front"
 
- SWI_rally_to_defend_country:0 "Embrace Swiss Exceptionalism"
- SWI_promote_national_unity:0 "Promote National Unity"
+ SWI_kapfnach_mines:0 "Expand the Käpfnach Coal Mine"
+ SWI_gonzen_mines:0 "Expand the Gonzen Iron Mine"
 
  ###################
  # DECISION CATEGORIES
  ###################
- SWI_national_morale:0 "National Mobilisation"
- SWI_national_morale_desc:0 "Whilst nominally neutral, it is becoming increasingly clear that it is a matter of when - not if - Switzerland's neutrality will be put to the test.\n\nOur §YNational Morale§! represents how willing our citizenry and military alike are to fight for the confederation's continued independence. Morale can be expended! to §Ybolster our defenses§!, raise §Yadditional militia units§! and eventually §Ymobilise our country for war§!.\n\n§CCurrent national morale is: §!§Y[?SWI_national_morale_var|%]§!\n\n§RBe warned however that should national morale fall too low some opportunistic actors might find  an opportunity to strike.§!"
+ SWI_national_morale:0 "National Morale"
+ SWI_national_morale_desc:0 "Whilst nominally neutral, it is becoming increasingly clear that it is a matter of when - not if - Switzerland's independence will be put to the test.\n\nOur §YNational Morale§! represents how willing our citizenry and military alike are to fight for the confederation's continued independence. High morale will increase our £GFX_SWI_military_readiness_text_icon §CMilitary Readiness§!, while low morale will decrease it. Readiness can be expended to prepare the country for war.\n\n§CCurrent readiness is £GFX_SWI_military_readiness_text_icon §!§Y[?SWI_mil_readiness_var]§!§C out of a maximum of §!§Y[?SWI_max_readiness_var]§!§C with a weekly change of §!§Y[?modifier@vx_SWI_weekly_readiness]§!\n\n§RKeep in mind that a low morale may spur certain political elements to act against our democratic institutions.§!"
 
  ###################
  # DYNAMIC MODIFIERS
@@ -43,8 +44,11 @@
  SWI_militia_dynmod:0 "Swiss Militias"
  SWI_militia_dynmod_desc:0 "§RCan only conscript Swiss militia divisions through decisions, focuses or events. Can not recruit new units, edit or create unit templates. Can not increase conscription past limited conscription.§!"
 
- SWI_economy_dynmod:0 "The Swiss Economy"
+ SWI_economy_dynmod:0 "Building a Modern Economy"
  SWI_economy_dynmod_desc:0 ""
+
+ SWI_economy_improved_dynmod:0 "The Swiss Miracle"
+ SWI_economy_improved_dynmod_desc:0 ""
 
  ###################
  # IDEAS
@@ -72,6 +76,12 @@
  SWI_national_mobilisation:0 "National Mobilisation"
  SWI_national_mobilisation_desc:0 ""
 
+ SWI_spiritual_defense_passive:0 "The Helvetic Spirit"
+ SWI_spiritual_defense_passive_desc:0 ""
+
+ SWI_spiritual_defense_mobilised:0 "$SWI_spiritual_defense_passive$"
+ SWI_spiritual_defense_mobilised_desc:0 "$SWI_spiritual_defense_passive_desc$"
+
  ###################
  # SWITZERLAND - ORGANISATIONS
  ###################
@@ -89,6 +99,7 @@
  SWI_collapsing_morale:0 "Collapsing Morale"
  SWI_dwindling_morale:0 "Dwindling Morale"
  SWI_fleeting_morale:0 "Fleeting Morale"
+ SWI_apathetic_populace:0 "Apathetic Populace"
  SWI_rising_morale:0 "Rising Morale"
  SWI_strong_morale:0 "Strong Morale"
  SWI_unbreakable_morale:0 "Unbreakable Morale"
@@ -127,6 +138,9 @@
  SWI_increase_morale_large_tt:0 "£SWI_morale_texticon §YNational morale§! will §Gincrease§! by a large amount"
  SWI_increase_morale_huge_tt:0 "£SWI_morale_texticon §YNational morale§! will §Gincrease§! by a huge amount"
 
+ SWI_modify_economy_tt:0 "Modify §Y$SWI_economy_dynmod$§! by"
+ SWI_modify_improved_economy_tt:0 "Modify §Y$SWI_economy_improved_dynmod$§! by"
+
  ###################
  # SWITZERLAND EVENTS
  ###################
@@ -146,7 +160,7 @@
  
  SWI_spiritual_defense:0 "Reaffirm Spiritual Defense"
  SWI_spiritual_defense_desc:0 ""
- SWI_decisions_increase_morale_tt:0 "§LThese decisions will allow us to improve our §!§Ynational morale§!§L and §!§Ymilitary industry§!§L.§!"
+ SWI_decisions_increase_morale_tt:0 "§LThese decisions will allow us to improve our §!§Ynational morale§!§L and §!§Cmilitary readiness§!§L.§!"
 
  SWI_increase_military_budget:0 "Increase Military Funding"
  SWI_increase_military_budget_desc:0 ""
@@ -160,6 +174,7 @@
 
  SWI_fortification_efforts:0 "Fortify the Border"
  SWI_fortification_efforts_desc:0 ""
+ SWI_fortification_efforts_effect_tt:0 "A series of land forts will be built on all border provinces in the states of §Y[3.GetName]§!, §Y[845.GetName]§!, §Y[846.GetName]§! and §Y[847.GetName]§!."
  
  SWI_expand_militia_training:0 "All Adults Training"
  SWI_expand_militia_training_desc:0 ""
@@ -532,9 +547,28 @@
  SWI_lib_con_coalition_flag:0 "The §YLiberal-Conservative§! coalition has held on"
  SWI_soc_dem_con_flag:0 "The §YLiberal-Conservative§! coalition has collapsed"
  SWI_failed_negotations_with_moderates_flag:0 "Negotations with the §YLDU/ADL§! were unsuccessful"
+ SWI_full_throttle_industrialisation_blocked:0 "The Swiss economy is focused on economic growth"
+ SWI_support_traditional_industries_blocked:0 "The Swiss economy is focused on modernisation"
 
  ###################
  # SWITZERLAND TOOLTIPS
  ###################
  SWI_no_guarantee_tt:0 "§RSwiss neutrality prevents [ROOT.GetNameDef] from issuing guarantees§!"
  SWI_no_volunteers_tt:0 "§RSwiss neutrality prevents [ROOT.GetNameDef] from sending volunteers!"
+ 
+ SWI_change_military_readiness_tt:0 " £GFX_SWI_military_readiness_text_icon §CMilitary Readiness§!: $RIGHT|+=2$"
+
+ ###################
+ # EVENTS
+ ###################
+
+ switzerland_national_morale.1.title:0 "The Calm Before the Storm"
+ switzerland_national_morale.1.desc:0 "Ever since the conclusion of the Great War, Switerland's armed forces and government alike have been content with maintaining the status quo. The pervasivness of such passivity has only persisted thanks to the continent's relative peace however. Our neighbours' increasingly militaristic rethoric, recent political upheavals and the propagation of radical ideas have forced us into an uncomfortable realisation: it is a matter of when, not if, a second war in Europe will erupt.\n\nWe must prepare for such an eventuality, as well as the possibility that our neutrality will not spare us this time from the horrors of war."
+ switzerland_national_morale.1.a:0 "We will be ready."
+ SWI_national_morale_mechanic_enabled_tt:0 "§LNational morale represents the willingness of our population to fight. It is paramount that it remains high as to help bolster our §!£GFX_SWI_military_readiness_text_icon §CMilitary Readiness§!§L which will in turn help us prepare for the second world war§!"
+ 
+ switzerland_economy_events.1.title:0 "The Economic State of the Confederacy"
+ switzerland_economy_events.1.desc:0 ""
+ switzerland_economy_events.1.a:0 "We need to focus on economic growth"
+ switzerland_economy_events.1.b:0 "We need to focus on economic modernisation"
+ add_swiss_economy_tt:0 "Add the §Y$SWI_economy_dynmod$§! modifier which grants:"

@@ -44,6 +44,10 @@
  VX_25_CP_COST_blocked:0 "£command_power §R25§!"
  VX_25_CP_COST_tooltip:0 "It costs £command_power §Y25§! to take this decisions"
 
+ war_support_small_cost_trigger:0 "£war_support_texticon 3.0%"
+ war_support_small_cost_trigger_blocked:0 "£war_support_texticon §R3.0%§!"
+ war_support_small_cost_trigger_tooltip:0 "It costs £war_support_texticon §Y3.0%§! to take this decision"
+
  ### DECISION TOOLTIPS ###
  stability_loss_on_party_pop_tt:0 "Stability will be §Rdeducted§! proportional to the popularity of banned parties"
  vx_any_no_coal_resource_is_missing_tt:0 "We are lacking any strategic resource (except for coal)"
@@ -307,6 +311,7 @@
  unlock_decision_ovewrite_tt:0 "Unlocks £decision_icon_small §Ydecision§!: $DECISION$"
  modify_dynamic_modifier_tt:0 "Modify §Y$MODIFIER$§! by"
  country_must_approve_tt:0 "§Y$COUNTRY$§! must approve of the agreement for it to take effect"
+ lock_focus_tt:0 "§RLocks§! the §Y$FOCUS$§! focus"
 
  ### RESOURCES ###
  electricity:0 "Electricity"
@@ -356,13 +361,13 @@
  fascism_coalition_tt:0 "In a coalition with the §Yfascists§!."
 
  has_socialist_government_tt:0 "Has a §YSocialist§! government"
- has_socialist_government_tt_NOT:0 "NOT: $has_socialist_government_tt$"
+ has_socialist_government_tt_NOT:0 "Not: $has_socialist_government_tt$"
  has_democratic_government_tt:0 "Has a §YDemocratic§! government"
- has_democratic_government_tt_NOT:0 "NOT: $has_democratic_government_tt$"
+ has_democratic_government_tt_NOT:0 "Not: $has_democratic_government_tt$"
  has_authoritarian_government_tt:0 "Has an §YAuthoritarian§! government"
- has_authoritarian_government_tt_NOT:0 "NOT: $has_authoritarian_government_tt$"
+ has_authoritarian_government_tt_NOT:0 "Not: $has_authoritarian_government_tt$"
  has_fascist_government_tt:0 "Has a §YFascist§! government"
- has_fascist_government_tt_NOT:0 "NOT: $has_fascist_government_tt$"
+ has_fascist_government_tt_NOT:0 "Not: $has_fascist_government_tt$"
 
  can_use_free_trade_tt:0 "Can enact §YFree Trade§!"
  can_remove_free_trade_tt:0 "Can remove §YFree Trade§!"
@@ -434,4 +439,5 @@
  VICTORY_POINTS_9584:0 "Bergamo"
 
  ### MODIFIERS ###
- vx_ruling_party_popularity_drift:0 "Daily Ruling Party Drift"
+ vx_ruling_party_popularity_drift:0 "Daily Ruling Party Drift
+ vx_SWI_weekly_readiness:0 "Weekly Military Readiness"

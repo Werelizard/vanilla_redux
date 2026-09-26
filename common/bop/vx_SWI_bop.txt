@@ -11,9 +11,9 @@ SWI_national_morale_bop = {
 			min = -1
 			max = -0.7
 			modifier = {
-				party_popularity_stability_factor = -0.5
-				max_surrender_limit_offset = -0.25
-				war_support_factor = -0.2
+				party_popularity_stability_factor = -0.25
+				mobilization_speed = -0.3
+				vx_SWI_weekly_readiness = -3
 			}
 		}
 		range = {
@@ -21,32 +21,40 @@ SWI_national_morale_bop = {
 			min = -0.7
 			max = -0.4
 			modifier = {
-				party_popularity_stability_factor = -0.25
-				max_surrender_limit_offset = -0.2
-				war_support_factor = -0.2
+				mobilization_speed = -0.3
+				vx_SWI_weekly_readiness = -2
 			}
 		}
 		range = {
 			id = SWI_fleeting_morale
 			min = -0.4
-			max = 0
+			max = -0.15
 			modifier = {
-				max_surrender_limit_offset = -0.1
-				war_support_factor = -0.1
+				mobilization_speed = -0.2
+				vx_SWI_weekly_readiness = -1
 			}
 		}
 	}
+	# Middle - no effect
+	range = {
+			id = SWI_apathetic_populace
+			min = -0.15
+			max = 0.15
+			modifier = {
+				mobilization_speed = -0.1
+			}
+		}
 	# Right Side - high morale
 	side = {
 		id = SWI_national_morale_high
 		icon = GFX_SWI_national_morale_high
 		range = {
 			id = SWI_rising_morale
-			min = 0
+			min = 0.15
 			max = 0.4
 			modifier = {
 				war_stability_factor = 0.05
-				conscription_factor = 0.1
+				vx_SWI_weekly_readiness = 1
 			}
 		}
 		range = {
@@ -55,7 +63,7 @@ SWI_national_morale_bop = {
 			max = 0.7
 			modifier = {
 				war_stability_factor = 0.1
-				conscription_factor = 0.15
+				vx_SWI_weekly_readiness = 2
 			}
 		}
 		range = {
@@ -64,8 +72,8 @@ SWI_national_morale_bop = {
 			max = 1
 			modifier = {
 				war_stability_factor = 0.15
-				conscription_factor = 0.15
-				weekly_casualties_war_support = 0.0025
+				conscription_factor = 0.1
+				vx_SWI_weekly_readiness = 3
 			}
 		}
 	}
