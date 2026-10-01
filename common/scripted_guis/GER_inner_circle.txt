@@ -1,0 +1,65 @@
+scripted_gui = {
+	inner_circle_influence = {
+		context_type = decision_category
+		window_name = GER_inner_circle_decision_ui
+
+		ai_enabled = {
+			always = no
+		}
+
+		visible = {
+			always = yes
+		}
+
+		properties = {
+			GER_inner_circle_hierl_frame = {
+				frame = GER_inner_circle_members_array^0
+			}
+			GER_inner_circle_hierl_portrait = {
+				frame = GER_inner_circle_members_array^0
+			}
+			GER_inner_circle_todt_frame = {
+				frame = GER_inner_circle_members_array^1
+			}
+			GER_inner_circle_todt_portrait = {
+				frame = GER_inner_circle_members_array^1
+			}
+			GER_inner_circle_speer_frame = {
+				frame = GER_inner_circle_members_array^1
+			}
+			GER_inner_circle_speer_portrait = {
+				frame = GER_inner_circle_members_array^2
+			}
+			GER_inner_circle_goring_frame = {
+				frame = GER_inner_circle_members_array^3
+			}
+			GER_inner_circle_goring_portrait = {
+				frame = GER_inner_circle_members_array^3
+			}
+			GER_inner_circle_goebbels_frame = {
+				frame = GER_inner_circle_members_array^4
+			}
+			GER_inner_circle_goebbels_portait = {
+				frame = GER_inner_circle_members_array^4
+			}
+			GER_inner_circle_himmler_frame = {
+				frame = GER_inner_circle_members_array^5
+			}
+			GER_inner_circle_himmler_portrait = {
+				frame = GER_inner_circle_members_array^5
+			}
+			GER_inner_circle_bormann_frame = {
+				frame = GER_inner_circle_members_array^6
+			}
+			GER_inner_circle_bormann_portrait = {
+				frame = GER_inner_circle_members_array^6
+			}
+			GER_inner_circle_hess_frame = {
+				frame = GER_inner_circle_members_array^7
+			}
+			GER_inner_circle_hess_portrait = {
+				frame = GER_inner_circle_members_array^7
+			}
+		}
+	}
+}

@@ -296,3 +296,6 @@ if = {
 		armored_car1 = 1
 	}
 }
+
+GER_setup_inner_circle_effect = yes
+GER_get_top_influence_effect = yes

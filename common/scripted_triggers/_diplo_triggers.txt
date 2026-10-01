@@ -1,3 +1,39 @@
+# Hide certain diplomatic actions
+
+is_diplomatic_action_valid_stage_coup = {
+	always = no 
+}
+
+is_diplomatic_action_valid_boost_party_popularity = {
+	always = no
+}
+
+is_diplomatic_action_valid_create_faction = {
+	always = no 
+}
+
+is_diplomatic_action_valid_join_faction = {
+	always = no
+}
+
+is_diplomatic_action_valid_offer_join_faction = {
+	always = no
+}
+
+is_diplomatic_action_valid_leave_faction = {
+	always = no
+}
+
+is_diplomatic_action_valid_kick_from_faction = {
+	always = no
+}
+
+is_diplomatic_action_valid_assume_faction_leadership = {
+	always = no
+}
+
+# Specific triggers for special 
+
 DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
 	# LON members cannot manually justify war goals
 	if = {
@@ -40,7 +76,7 @@ DIPLOMACY_GUARANTEE_ENABLE_TRIGGER = {
 		}
 	}
 	# Fascist countries can only guarantee fascist countries or auth. countries if world tension goes over 50%.
-	if = {
+	else_if = {
 		limit = {
 			has_fascist_government_trigger = yes
 			OR = {
@@ -64,7 +100,7 @@ DIPLOMACY_GUARANTEE_ENABLE_TRIGGER = {
 		}
 	}
 	# Authoritarian nations can't guarantee socialist countries
-	if = {
+	else_if = {
 		limit = {
 			has_authoritarian_government_trigger = yes
 			FROM = {
@@ -77,7 +113,7 @@ DIPLOMACY_GUARANTEE_ENABLE_TRIGGER = {
 		}
 	}
 	# Democratic countries can only guarantee democratic countries UNLESS  world tension is above 50%
-	if = {
+	else_if = {
 		limit = {
 			has_democratic_government_trigger = yes
 			NOT = {
@@ -93,7 +129,7 @@ DIPLOMACY_GUARANTEE_ENABLE_TRIGGER = {
 		}
 	}
 	# Socialist countries can only guarantee socialist countries
-	if = {
+	else_if = {
 		limit = {
 			has_socialist_government_trigger = yes
 			NOT = {
@@ -107,6 +143,9 @@ DIPLOMACY_GUARANTEE_ENABLE_TRIGGER = {
 			tooltip = vx_socialist_guarantees_restrictions_tt
 			always = no
 		}
+	}
+	else = {
+		
 	}
 }
 
@@ -134,7 +173,7 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 			always = no
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			FROM = {
 				has_country_flag = vx_target_cannot_send_volunteers_flag
@@ -145,7 +184,7 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 			always = no
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			FROM = {
 				has_country_flag = vx_target_cannot_get_volunteers_flag
@@ -155,6 +194,9 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 			tooltip = vx_target_cannot_get_volunteers_tt
 			always = no
 		}
+	}
+	else = {
+		
 	}
 }
 

@@ -75,6 +75,7 @@
  GER_character_konstantin_von_neurath:0 "Konstantin von Neurath"
  GER_character_joachim_von_ribbentrop:0 "Joachim von Ribbentrop"
  GER_character_fritz_todt:0 "Fritz Todt"
+ GER_character_konstantin_hierl:0 "Konstantin Hierl"
  GER_character_albert_speer:0 "Albert Speer"
  GER_character_hjalmar_schacht:0 "Hjalmar Schacht"
  GER_character_walther_funk:0 "Walther Funk"
@@ -90,6 +91,50 @@
  GER_character_wilhelm_frick:0 "Wilhelm Frick"
  GER_character_julius_streicher:0 "Julius Streicher"
  GER_character_alfred_rosenberg:0 "Alfred Rosenberg"
+
+ ###################
+ # GERMANY - SCRIPTED GUI
+ ###################
+ GER_inner_circle_hierl_name:0 "§Y$GER_character_konstantin_hierl$§!'s influence: "
+ GER_inner_circle_todtl_name:0 "§Y$GER_character_fritz_todt$§!'s influence: "
+ GER_inner_circle_speer_name:0 "§Y$GER_character_albert_speer$§!'s influence: "
+ GER_inner_circle_speer_name:0 "§Y$GER_character_herman_goring$§!'s influence: "
+ GER_inner_circle_goebbels_name:0 "§Y$GER_character_joseph_goebbels$§!'s influence: "
+ GER_inner_circle_himmler_name:0 "§Y$GER_character_heinrich_himmler$§!'s influence: "
+ GER_inner_circle_bormann_name:0 "§Y$GER_character_martin_bormann$§!'s influence: "
+ GER_inner_circle_hess_name:0 "§Y$GER_character_rudolph_hess$§!'s influence: "
+
+ GER_inner_circle_hierl_tt:0 "[GetInnerCircleHierl]"
+ GER_hierl_is_inactive:0 "§Y$GER_character_konstantin_hierl$§! is §Rnot§! currently considered influential."
+ GER_hierl_is_active:0 "§Y$GER_character_konstantin_hierl$§! is counted amongst the Führer's most influential advisors."
+
+ GER_inner_circle_todt_tt:0 "[GetInnerCircleTodt]"
+ GER_todt_is_inactive:0 "§Y$GER_character_fritz_todt$§! is §Rnot§! currently considered influential."
+ GER_todt_is_active:0 "§Y$GER_character_fritz_todt$§! is counted amongst the Führer's most influential advisors."
+
+ GER_inner_circle_speer_tt:0 "[GetInnerCircleSpeer]" 
+ GER_speer_is_inactive:0 "§Y$GER_character_albert_speer$§! is §Rnot§! currently considered influential."
+ GER_speer_is_active:0 "§Y$GER_character_albert_speer$§! is counted amongst the Führer's most influential advisors."
+
+ GER_inner_circle_goring_tt:0 "[GetInnerCircleGoring]"
+ GER_goring_is_inactive:0 "§Y$GER_character_herman_goring$§! is §Rnot§! currently considered influential."
+ GER_goring_is_active:0 "§Y$GER_character_herman_goring$§! is counted amongst the Führer's most influential advisors."
+
+ GER_inner_circle_goebbels_tt:0 "[GetInnerCircleGoebbels]"
+ GER_goebbels_is_inactive:0 "§Y$GER_character_joseph_goebbels$§! is §Rnot§! currently considered influential."
+ GER_goebbels_is_active:0 "§Y$GER_character_joseph_goebbels$§! is counted amongst the Führer's most influential advisors."
+
+ GER_inner_circle_himmler_tt:0 "[GetInnerCircleHimmler]"
+ GER_himmler_is_inactive:0 "§Y$GER_character_heinrich_himmler$§! is §Rnot§! currently considered influential."
+ GER_himmler_is_active:0 "§Y$GER_character_heinrich_himmler$§! is counted amongst the Führer's most influential advisors."
+
+ GER_inner_circle_bormann_tt:0 "[GetInnerCircleBormann]"
+ GER_bormann_is_inactive:0 "§Y$GER_character_martin_bormann$§! is §Rnot§! currently considered influential."
+ GER_bormann_is_active:0 "§Y$GER_character_martin_bormann$§! is counted amongst the Führer's most influential advisors."
+
+ GER_inner_circle_hess_tt:0 "[GetInnerCircleHess]"
+ GER_hess_is_inactive:0 "§Y$GER_character_rudolph_hess$§! is §Rnot§! currently considered influential."
+ GER_hess_is_active:0 "§Y$GER_character_rudolph_hess$§! is counted amongst the Führer's most influential advisors."
 
  ###################
  # GERMANY - SCRIPTED LOCALISATION
@@ -122,6 +167,14 @@
  GER_minister_of_interior_trait:0 "Reichsminister of the Interior"
  GER_reactionary_agitator_trait:0 "Reactionary Agitator"
  GER_national_socialist_ideologue_trait:0 "National Socialist Ideologue"
+
+ ###################
+ # GERMANY DECISIONS
+ ###################
+
+ GER_inner_circle_cat:0 "The Inner Circle"
+ GER_inner_circle_cat_desc:0 "The leadership of §Y[ROOT.GetNameDef]§! rests firmly within the Führer's hands. However, he does not rule alone. An §Yinner circle§! of advisors, industrialists, propagandists and assorted party leaders circle around the supreme leader like bickering vultures.\n\nStill, only §fthe three most influential members§! hold significant sway over the Reich."
+#  GER_inner_circle_cat_desc:0 "
 
  ###################
  # GERMANY EVENTS
@@ -298,3 +351,7 @@
  war_major_disadvantageous_to_germany_tt:0 "§YGermany's§! situation has become precarious"
 
  # Tooltips - effects
+
+ # Misclealous
+ GER_inner_circle_spacing_single:0 "                   "
+ GER_inner_circle_spacing_double:0 "                    "

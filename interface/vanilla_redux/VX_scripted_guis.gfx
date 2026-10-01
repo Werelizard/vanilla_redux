@@ -23,4 +23,50 @@ spriteTypes = {
 		name = "GFX_sas_pol_coalition"
 		textureFile = "gfx/interface/vx_pol_coalition_party_bg.dds"
 	}
+	# Inner Circle Gui
+	spriteType = {
+		name = "GFX_inner_circle_frame"
+		textureFile = "gfx/interface/inner_circle_frame.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_inner_circle_hierl"
+		textureFile = "gfx/interface/inner_circle_hierl.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_inner_circle_todt"
+		textureFile = "gfx/interface/inner_circle_todt.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_inner_circle_speer"
+		textureFile = "gfx/interface/inner_circle_speer.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_inner_circle_goring"
+		textureFile = "gfx/interface/inner_circle_goring.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_inner_circle_goebbels"
+		textureFile = "gfx/interface/inner_circle_goebbels.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_inner_circle_himmler"
+		textureFile = "gfx/interface/inner_circle_himmler.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_inner_circle_bormann"
+		textureFile = "gfx/interface/inner_circle_bormann.dds"
+		noOfFrames = 2
+	}	
+	spriteType = {
+		name = "GFX_inner_circle_hess"
+		textureFile = "gfx/interface/inner_circle_hess.dds"
+		noOfFrames = 2
+	}
 }

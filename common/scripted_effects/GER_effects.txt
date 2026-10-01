@@ -1,0 +1,379 @@
+#############################
+# INNER CIRCLE MECHANICS
+#############################
+
+# Setup variables
+GER_setup_inner_circle_effect = {
+	add_to_array = { # Hierl
+		array = GER_inner_circle_influence_array
+		value = 5
+	}
+	add_to_array = { # Todt
+		array = GER_inner_circle_influence_array
+		value = 10
+	}
+	add_to_array = { # Speer
+		array = GER_inner_circle_influence_array
+		value = 10
+	}
+	add_to_array = { # Goring
+		array = GER_inner_circle_influence_array
+		value = 25
+	}
+	add_to_array = { # Gobbels
+		array = GER_inner_circle_influence_array
+		value = 10
+	}
+	add_to_array = { # Himmler
+		array = GER_inner_circle_influence_array
+		value = 10
+	}
+	add_to_array = { # Bormann
+		array = GER_inner_circle_influence_array
+		value = 15
+	}
+	add_to_array = { # Hess
+		array = GER_inner_circle_influence_array
+		value = 20
+	}
+	#
+	set_temp_variable = {
+		GER_influence_change_tempvar = 0
+	}
+}
+
+GER_reset_inner_circle_effect = {
+	clear_array = GER_inner_circle_members_array
+	add_to_array = { # Hierl
+		array = GER_inner_circle_members_array
+		value = 1
+	}
+	add_to_array = { # Todt
+		array = GER_inner_circle_members_array
+		value = 1
+	}
+	add_to_array = { # Speer
+		array = GER_inner_circle_members_array
+		value = 1
+	}
+	add_to_array = { # Goring
+		array = GER_inner_circle_members_array
+		value = 1
+	}
+	add_to_array = { # Gobbels
+		array = GER_inner_circle_members_array
+		value = 1
+	}
+	add_to_array = { # Himmler
+		array = GER_inner_circle_members_array
+		value = 1
+	}
+	add_to_array = { # Bormann
+		array = GER_inner_circle_members_array
+		value = 1
+	}
+	add_to_array = { # Hess
+		array = GER_inner_circle_members_array
+		value = 1
+	}
+}
+
+# Find the top three members by influence, and assign them to an array
+# Allows to display images / names and get whose in the inner circle
+GER_get_top_influence_effect = {
+	# Clear all necessary arrays
+	GER_reset_inner_circle_effect = yes
+	clear_array = GER_influence_copy_array
+	# Make a copy of the actual array
+	add_to_array = {
+		array = GER_influence_copy_array
+		value = GER_inner_circle_influence_array^0
+	}
+	add_to_array = {
+		array = GER_influence_copy_array
+		value = GER_inner_circle_influence_array^1
+	}
+	add_to_array = {
+		array = GER_influence_copy_array
+		value = GER_inner_circle_influence_array^2
+	}
+	add_to_array = {
+		array = GER_influence_copy_array
+		value = GER_inner_circle_influence_array^3
+	}
+	add_to_array = {
+		array = GER_influence_copy_array
+		value = GER_inner_circle_influence_array^4
+	}
+	add_to_array = {
+		array = GER_influence_copy_array
+		value = GER_inner_circle_influence_array^5
+	}
+	add_to_array = {
+		array = GER_influence_copy_array
+		value = GER_inner_circle_influence_array^6
+	}
+	add_to_array = {
+		array = GER_influence_copy_array
+		value = GER_inner_circle_influence_array^7
+	}
+	# Find highest in array, add an index to the new array
+	set_variable = {
+		GER_variable_counter = 0
+	}
+	for_loop_effect = {
+		start = 0
+		end = 3
+		add = 1
+		find_highest_in_array = {
+			array = GER_influence_copy_array
+		}
+		set_variable = {
+			GER_influence_copy_array^i = 0
+		}
+		set_variable = {
+			GER_inner_circle_members_array^i = 2
+		}
+	}
+}
+
+# Add influence, and remove it from the others
+# Requires setting up GER_influence_change_index_tempvar and GER_influence_change_target_tempvar beforeheand
+GER_update_influence_effect = {
+	if = {
+		# Only change influence if not at already 1000
+		limit = {
+			check_variable = {
+				GER_inner_circle_influence_array^GER_influence_change_index_tempvar < 100
+			}
+		}
+		# Retrieve the influence of the character who is getting a boost
+		set_temp_variable = {
+			GER_current_target_influence_tempvar = GER_inner_circle_influence_array^GER_influence_change_index_tempvar
+		}
+		# adjust the influence increase to make sure it doesn't reach the cap
+		set_temp_variable = {
+			GER_influence_change_value_tempvar = 100
+		}
+		subtract_from_temp_variable = {
+			GER_influence_change_value_tempvar = GER_current_target_influence_tempvar
+		}
+		if = {
+			limit = {
+				check_variable = {
+					GER_influence_change_value_tempvar < GER_influence_change_target_tempvar
+				}
+			}
+
+		}
+		else = {
+			set_temp_variable = {
+				GER_influence_change_value_tempvar = GER_influence_change_target_tempvar
+			}
+		}
+		# change the TARGET character's influence
+		add_to_variable = {
+			GER_inner_circle_influence_array^GER_influence_change_index_tempvar = GER_influence_change_value_tempvar
+		}
+		# Loop effect to subtract influence from the OTHER characters
+		while_loop_effect = {
+			limit = {
+				check_variable = {
+					GER_influence_change_value_tempvar > 0
+				}
+			}
+			if = {
+				# If there's still influence to be "spent" and we're NOT changing hierl's influence
+				limit = {
+					check_variable = {
+						GER_influence_change_value_tempvar > 0
+					}
+					NOT = {
+						check_variable = {
+							GER_influence_change_index_tempvar = 0
+						}
+					}
+					check_variable = {
+						GER_inner_circle_influence_array^0 > 0
+					}
+				}
+				subtract_from_variable = {
+					GER_inner_circle_influence_array^0 = 1
+				}
+				subtract_from_temp_variable = {
+					GER_influence_change_value_tempvar = 1
+				}
+			}
+			if = {
+				# If there's still influence to be "spent" and we're NOT changing todt's influence
+				limit = {
+					check_variable = {
+						GER_influence_change_value_tempvar > 0
+					}
+					NOT = {
+						check_variable = {
+							GER_influence_change_index_tempvar = 1
+						}
+					}
+					check_variable = {
+						GER_inner_circle_influence_array^1 > 0
+					}
+				}
+				subtract_from_variable = {
+					GER_inner_circle_influence_array^1 = 1
+				}
+				subtract_from_temp_variable = {
+					GER_influence_change_value_tempvar = 1
+				}
+			}
+			if = {
+				# If there's still influence to be "spent" and we're NOT changing speer's influence
+				limit = {
+					check_variable = {
+						GER_influence_change_value_tempvar > 0
+					}
+					NOT = {
+						check_variable = {
+							GER_influence_change_index_tempvar = 2
+						}
+					}
+					check_variable = {
+						GER_inner_circle_influence_array^2 > 0
+					}
+				}
+				subtract_from_variable = {
+					GER_inner_circle_influence_array^2 = 1
+				}
+				subtract_from_temp_variable = {
+					GER_influence_change_value_tempvar = 1
+				}
+			}
+			if = {
+				# If there's still influence to be "spent" and we're NOT changing goring's influence
+				limit = {
+					check_variable = {
+						GER_influence_change_value_tempvar > 0
+					}
+					NOT = {
+						check_variable = {
+							GER_influence_change_index_tempvar = 3
+						}
+					}
+					check_variable = {
+						GER_inner_circle_influence_array^3 > 0
+					}
+				}
+				subtract_from_variable = {
+					GER_inner_circle_influence_array^3 = 1
+				}
+				subtract_from_temp_variable = {
+					GER_influence_change_value_tempvar = 1
+				}
+			}
+			if = {
+				# If there's still influence to be "spent" and we're NOT changing gobbels's influence
+				limit = {
+					check_variable = {
+						GER_influence_change_value_tempvar > 0
+					}
+					NOT = {
+						check_variable = {
+							GER_influence_change_index_tempvar = 4
+						}
+					}
+					check_variable = {
+						GER_inner_circle_influence_array^4 > 0
+					}
+				}
+				subtract_from_variable = {
+					GER_inner_circle_influence_array^4 = 1
+				}
+				subtract_from_temp_variable = {
+					GER_influence_change_value_tempvar = 1
+				}
+			}
+			if = {
+				# If there's still influence to be "spent" and we're NOT changing himmler's influence
+				limit = {
+					check_variable = {
+						GER_influence_change_value_tempvar > 0
+					}
+					NOT = {
+						check_variable = {
+							GER_influence_change_index_tempvar = 5
+						}
+					}
+					check_variable = {
+						GER_inner_circle_influence_array^5 > 0
+					}
+				}
+				subtract_from_variable = {
+					GER_inner_circle_influence_array^5 = 1
+				}
+				subtract_from_temp_variable = {
+					GER_influence_change_value_tempvar = 1
+				}
+			}
+			if = {
+				# If there's still influence to be "spent" and we're NOT changing bormann's influence
+				limit = {
+					check_variable = {
+						GER_influence_change_value_tempvar > 0
+					}
+					NOT = {
+						check_variable = {
+							GER_influence_change_index_tempvar = 6
+						}
+					}
+					check_variable = {
+						GER_inner_circle_influence_array^6 > 0
+					}
+				}
+				subtract_from_variable = {
+					GER_inner_circle_influence_array^6 = 1
+				}
+				subtract_from_temp_variable = {
+					GER_influence_change_value_tempvar = 1
+				}
+			}
+			if = {
+				# If there's still influence to be "spent" and we're NOT changing hess's influence
+				limit = {
+					check_variable = {
+						GER_influence_change_value_tempvar > 0
+					}
+					NOT = {
+						check_variable = {
+							GER_influence_change_index_tempvar = 7
+						}
+					}
+					check_variable = {
+						GER_inner_circle_influence_array^7 > 0
+					}
+				}
+				subtract_from_variable = {
+					GER_inner_circle_influence_array^7 = 1
+				}
+				subtract_from_temp_variable = {
+					GER_influence_change_value_tempvar = 1
+				}
+			}
+		}
+	}
+	else = {
+		# Do nothing otherwise
+	}
+	# Recalculate the top influence
+	GER_get_top_influence_effect = yes
+}
+
+# Increase Hierl's influence 
+GER_increase_hierl_influence_effect = {
+	set_temp_variable = {
+		GER_influence_change_index_tempvar = 0
+	}
+	set_temp_variable = {
+		GER_influence_change_target_tempvar = 25
+	}
+	GER_update_influence_effect = yes
+}

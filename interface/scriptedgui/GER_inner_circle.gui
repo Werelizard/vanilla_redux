@@ -1,0 +1,367 @@
+guitypes = {
+	containerWindowType = {
+		name = "GER_inner_circle_decision_ui"
+		position = { x = 0 y = 0 }
+		size = { width = 470 height= 280 }
+
+		# containerWindowType = {
+		# 	name = "GER_inner_circle_hierl_entry"
+		# 	# background = {
+		# 	# 	name = "Background"
+		# 	# 	quadTextureSprite ="GFX_inner_circle_frame"
+		# 	# }
+		# 	size = {
+		# 		width = 113
+		# 		height = 120
+		# 	}
+
+		# 	iconType = {
+		# 		name = "character_frame"
+		# 		quadTextureSprite = GFX_inner_circle_frame
+		# 	}
+		# }
+		iconType = {
+			name = "GER_inner_circle_hierl_portrait"
+			position = { x = 10 y = 10 }
+			quadTextureSprite = GFX_inner_circle_hierl
+			pdx_tooltip = GER_inner_circle_hierl_tt
+		}
+
+		iconType = {
+			name = "GER_inner_circle_hierl_frame"
+			position = { x = 10 y = 10 }
+			quadTextureSprite = GFX_inner_circle_frame
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			position = { x = 10 y = 110 }
+			name = "GER_inner_circle_hierl_influence"
+			text = " [?GER_inner_circle_influence_array^0|%%1]"
+			font = hoi_16mbs
+			maxWidth = 113
+			format = center
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "GER_inner_circle_todt_portrait"
+			position = { x = 135 y = 10 }
+			quadTextureSprite = GFX_inner_circle_todt
+			pdx_tooltip = GER_inner_circle_todt_tt
+		}
+
+		iconType = {
+			name = "GER_inner_circle_todt_frame"
+			position = { x = 135 y = 10 }
+			quadTextureSprite = GFX_inner_circle_frame
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			position = { x = 135 y = 110 }
+			name = "GER_inner_circle_todt_influence"
+			text = " [?GER_inner_circle_influence_array^1|%%1]"
+			font = hoi_16mbs
+			maxWidth = 113
+			format = center
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "GER_inner_circle_speer_portrait"
+			position = { x = 260 y = 10 }
+			quadTextureSprite = GFX_inner_circle_speer
+			pdx_tooltip = GER_inner_circle_speer_tt
+		}
+
+		iconType = {
+			name = "GER_inner_circle_speer_frame"
+			position = { x = 260 y = 10 }
+			quadTextureSprite = GFX_inner_circle_frame
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			position = { x = 260 y = 110 }
+			name = "GER_inner_circle_speer_influence"
+			text = " [?GER_inner_circle_influence_array^2|%%1]"
+			font = hoi_16mbs
+			maxWidth = 113
+			format = center
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "GER_inner_circle_goring_portrait"
+			position = { x = 385 y = 10 }
+			quadTextureSprite = GFX_inner_circle_goring
+			pdx_tooltip = GER_inner_circle_goring_tt
+		}
+
+		iconType = {
+			name = "GER_inner_circle_goring_frame"
+			position = { x = 385 y = 10 }
+			quadTextureSprite = GFX_inner_circle_frame
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			position = { x = 385 y = 110 }
+			name = "GER_inner_circle_goring_influence"
+			text = " [?GER_inner_circle_influence_array^3|%%1]"
+			font = hoi_16mbs
+			maxWidth = 113
+			format = center
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "GER_inner_circle_goebbels_portait"
+			position = { x = 10 y = 135 }
+			quadTextureSprite = GFX_inner_circle_goebbels
+			pdx_tooltip = GER_inner_circle_goebbels_tt
+		}
+
+		iconType = {
+			name = "GER_inner_circle_goebbels_frame"
+			position = { x = 10 y = 135 }
+			quadTextureSprite = GFX_inner_circle_frame
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			position = { x = 10 y = 235 }
+			name = "GER_inner_circle_goebbels_influence"
+			text = " [?GER_inner_circle_influence_array^4|%%1]"
+			font = hoi_16mbs
+			maxWidth = 113
+			format = center
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "GER_inner_circle_himmler_portrait"
+			position = { x = 135 y = 135 }
+			quadTextureSprite = GFX_inner_circle_himmler
+			pdx_tooltip = GER_inner_circle_himmler_tt
+		}
+
+		iconType = {
+			name = "GER_inner_circle_himmler_frame"
+			position = { x = 135 y = 135 }
+			quadTextureSprite = GFX_inner_circle_frame
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			position = { x = 135 y = 235 }
+			name = "GER_inner_circle_himmler_influence"
+			text = " [?GER_inner_circle_influence_array^5|%%1]"
+			font = hoi_16mbs
+			maxWidth = 113
+			format = center
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "GER_inner_circle_bormann_portrait"
+			position = { x = 260 y = 135 }
+			quadTextureSprite = GFX_inner_circle_bormann
+			pdx_tooltip = GER_inner_circle_bormann_tt
+		}
+
+		iconType = {
+			name = "GER_inner_circle_bormann_frame"
+			position = { x = 260 y = 135 }
+			quadTextureSprite = GFX_inner_circle_frame
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			position = { x = 260 y = 235 }
+			name = "GER_inner_circle_bormann_influence"
+			text = " [?GER_inner_circle_influence_array^6|%%1]"
+			font = hoi_16mbs
+			maxWidth = 113
+			format = center
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "GER_inner_circle_hess_portrait"
+			position = { x = 385 y = 135 }
+			quadTextureSprite = GFX_inner_circle_hess
+			pdx_tooltip = GER_inner_circle_hess_tt
+		}
+
+		iconType = {
+			name = "GER_inner_circle_hess_frame"
+			position = { x = 385 y = 135 }
+			quadTextureSprite = GFX_inner_circle_frame
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			position = { x = 385 y = 235 }
+			name = "GER_inner_circle_hess_influence"
+			text = " [?GER_inner_circle_influence_array^7|%%1]"
+			font = hoi_16mbs
+			maxWidth = 113
+			format = center
+			alwaystransparent = yes
+		}
+
+		# containerWindowType = {
+		# 	name = "GER_inner_circle_hierl_entry"
+		# 	position = { x = 0 y = 10 }
+
+		# 	instantTextBoxType = {
+		# 		position = { x = 13 y = 10 }
+		# 		name = "GER_inner_circle_hierl_name"
+		# 		text = GER_inner_circle_hierl_name
+		# 		font = hoi_16mbs
+		# 	}
+
+		# 	instantTextBoxType = {
+		# 		position = { x = 223 y = 10 }
+		# 		name = "GER_inner_circle_hierl_influence"
+		# 		text = "[?GER_inner_circle_influence_array^0|%%1]"
+		# 		font = hoi_16mbs
+		# 	}
+		# }
+
+		# containerWindowType = {
+		# 	name = "GER_inner_circle_todt_entry"
+		# 	position = { x = 0 y = 25 }
+
+		# 	instantTextBoxType = {
+		# 		position = { x = 13 y = 10 }
+		# 		name = "GER_inner_circle_todt_name"
+		# 		text = GER_inner_circle_todtl_name
+		# 		font = hoi_16mbs
+		# 	}
+
+		# 	instantTextBoxType = {
+		# 		position = { x = 223 y = 10 }
+		# 		name = "GER_inner_circle_todt_influence"
+		# 		text = "[?GER_inner_circle_influence_array^1|%%1]"
+		# 		font = hoi_16mbs
+		# 	}
+		# }
+
+		# containerWindowType = {
+		# 	name = "GER_inner_circle_speer_entry"
+		# 	position = { x = 0 y = 40 }
+
+		# 	instantTextBoxType = {
+		# 		position = { x = 13 y = 10 }
+		# 		name = "GER_inner_circle_speer_name"
+		# 		text = GER_inner_circle_speer_name
+		# 		font = hoi_16mbs
+		# 	}
+
+		# 	instantTextBoxType = {
+		# 		position = { x = 223 y = 10 }
+		# 		name = "GER_inner_circle_speer_influence"
+		# 		text = "[?GER_inner_circle_influence_array^2|%%1]"
+		# 		font = hoi_16mbs
+		# 	}
+		# }
+		
+		# containerWindowType = {
+		# 	name = "GER_inner_circle_goring_entry"
+		# 	position = { x = 0 y = 55 }
+
+		# 	instantTextBoxType = {
+		# 		position = { x = 13 y = 10 }
+		# 		name = "GER_inner_circle_goring_name"
+		# 		text = GER_inner_circle_speer_name
+		# 		font = hoi_16mbs
+		# 	}
+
+		# 	instantTextBoxType = {
+		# 		position = { x = 223 y = 10 }
+		# 		name = "GER_inner_circle_goring_influence"
+		# 		text = "[?GER_inner_circle_influence_array^3|%%1]"
+		# 		font = hoi_16mbs
+		# 	}
+		# }
+
+		# containerWindowType = {
+		# 	name = "GER_inner_circle_goebbels_entry"
+		# 	position = { x = 0 y = 70 }
+
+		# 	instantTextBoxType = {
+		# 		position = { x = 13 y = 10 }
+		# 		name = "GER_inner_circle_goebbels_name"
+		# 		text = GER_inner_circle_goebbels_name
+		# 		font = hoi_16mbs
+		# 	}
+
+		# 	instantTextBoxType = {
+		# 		position = { x = 223 y = 10 }
+		# 		name = "GER_inner_circle_goebbels_influence"
+		# 		text = "[?GER_inner_circle_influence_array^4|%%1]"
+		# 		font = hoi_16mbs
+		# 	}
+		# }
+
+		# containerWindowType = {
+		# 	name = "GER_inner_circle_himmler_entry"
+		# 	position = { x = 0 y = 85 }
+
+		# 	instantTextBoxType = {
+		# 		position = { x = 13 y = 10 }
+		# 		name = "GER_inner_circle_himmler_name"
+		# 		text = GER_inner_circle_himmler_name
+		# 		font = hoi_16mbs
+		# 	}
+
+		# 	instantTextBoxType = {
+		# 		position = { x = 223 y = 10 }
+		# 		name = "GER_inner_circle_himmler_influence"
+		# 		text = "[?GER_inner_circle_influence_array^5|%%1]"
+		# 		font = hoi_16mbs
+		# 	}
+		# }
+
+		# containerWindowType = {
+		# 	name = "GER_inner_circle_bormann_entry"
+		# 	position = { x = 0 y = 100 }
+
+		# 	instantTextBoxType = {
+		# 		position = { x = 13 y = 10 }
+		# 		name = "GER_inner_circle_bormann_name"
+		# 		text = GER_inner_circle_bormann_name
+		# 		font = hoi_16mbs
+		# 	}
+
+		# 	instantTextBoxType = {
+		# 		position = { x = 223 y = 10 }
+		# 		name = "GER_inner_circle_bormann_influence"
+		# 		text = "[?GER_inner_circle_influence_array^6|%%1]"
+		# 		font = hoi_16mbs
+		# 	}
+		# }
+
+		# containerWindowType = {
+		# 	name = "GER_inner_circle_hess_entry"
+		# 	position = { x = 0 y = 115 }
+
+		# 	instantTextBoxType = {
+		# 		position = { x = 13 y = 10 }
+		# 		name = "GER_inner_circle_hess_name"
+		# 		text = GER_inner_circle_hess_name
+		# 		font = hoi_16mbs
+		# 	}
+
+		# 	instantTextBoxType = {
+		# 		position = { x = 223 y = 10 }
+		# 		name = "GER_inner_circle_hess_influence"
+		# 		text = "[?GER_inner_circle_influence_array^7|%%1]"
+		# 		font = hoi_16mbs
+		# 	}
+		# }
+	}
+}

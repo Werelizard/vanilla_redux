@@ -1,0 +1,71 @@
+GER_hierl_in_circle_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = GER_hierl_in_circle_tt
+		check_variable = {
+			GER_inner_circle_members_array^0 = 2
+		}
+	}
+}
+
+GER_todt_in_circle_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = GER_todt_in_circle_tt
+		check_variable = {
+			GER_inner_circle_members_array^1 = 2
+		}
+	}
+}
+
+GER_speer_in_circle_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = GER_speer_in_circle_tt
+		check_variable = {
+			GER_inner_circle_members_array^2 = 2
+		}
+	}
+}
+
+GER_goring_in_circle_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = GER_goring_in_circle_tt
+		check_variable = {
+			GER_inner_circle_members_array^3 = 2
+		}
+	}
+}
+
+GER_gobbels_in_circle_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = GER_gobbels_in_circle_tt
+		check_variable = {
+			GER_inner_circle_members_array^4 = 2
+		}
+	}
+}
+
+GER_himmler_in_circle_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = GER_himmler_in_circle_tt
+		check_variable = {
+			GER_inner_circle_members_array^5 = 2
+		}
+	}
+}
+
+GER_bormann_in_circle_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = GER_bormann_in_circle_tt
+		check_variable = {
+			GER_inner_circle_members_array^6 = 2
+		}
+	}
+}
+
+GER_hess_in_circle_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = GER_hess_in_circle_tt
+		check_variable = {
+			GER_inner_circle_members_array^7 = 2
+		}
+	}
+}

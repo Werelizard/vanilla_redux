@@ -1,0 +1,7 @@
+GER_inner_circle_cat = {
+	dummy_influence_dec = {
+		complete_effect = {
+			GER_increase_hierl_influence_effect = yes
+		}
+	}
+}

@@ -1,0 +1,103 @@
+defined_text = {
+	name = GetInnerCircleHierl
+	text = {
+		localization_key = GER_hierl_is_active
+		trigger = {
+			GER_hierl_in_circle_trigger = yes
+		}
+	}
+	text = {
+		localization_key = GER_hierl_is_inactive
+	}
+}
+
+defined_text = {
+	name = GetInnerCircleTodt
+	text = {
+		localization_key = GER_todt_is_active
+		trigger = {
+			GER_todt_in_circle_trigger = yes
+		}
+	}
+	text = {
+		localization_key = GER_todt_is_inactive
+	}
+}
+
+defined_text = {
+	name = GetInnerCircleSpeer
+	text = {
+		localization_key = GER_speer_is_active
+		trigger = {
+			GER_speer_in_circle_trigger = yes
+		}
+	}
+	text = {
+		localization_key = GER_speer_is_inactive
+	}
+}
+
+defined_text = {
+	name = GetInnerCircleGoring
+	text = {
+		localization_key = GER_goring_is_active
+		trigger = {
+			GER_goring_in_circle_trigger = yes
+		}
+	}
+	text = {
+		localization_key = GER_goring_is_inactive
+	}
+}
+
+defined_text = {
+	name = GetInnerCircleGoebbels
+	text = {
+		localization_key = GER_goebbels_is_active
+		trigger = {
+			GER_goring_in_circle_trigger = yes
+		}
+	}
+	text = {
+		localization_key = GER_goebbels_is_inactive
+	}
+}
+
+defined_text = {
+	name = GetInnerCircleHimmler
+	text = {
+		localization_key = GER_himmler_is_active
+		trigger = {
+			GER_himmler_in_circle_trigger = yes
+		}
+	}
+	text = {
+		localization_key = GER_himmler_is_inactive
+	}
+}
+
+defined_text = {
+	name = GetInnerCircleBormann
+	text = {
+		localization_key = GER_bormann_is_active
+		trigger = {
+			GER_bormann_in_circle_trigger = yes
+		}
+	}
+	text = {
+		localization_key = GER_bormann_is_inactive
+	}
+}
+
+defined_text = {
+	name = GetInnerCircleHess
+	text = {
+		localization_key = GER_hess_is_active
+		trigger = {
+			GER_hess_in_circle_trigger = yes
+		}
+	}
+	text = {
+		localization_key = GER_hess_is_inactive
+	}
+}

@@ -1,0 +1,19 @@
+GER_inner_circle_cat = {
+	allowed = {
+		original_tag = GER
+	}
+
+	visible = {
+		OR = {
+			is_debug = yes
+			has_dynamic_modifier = GER_inner_circle_dynmod
+		}
+	}
+
+	priority = 999
+	visible_when_empty = yes
+
+	scripted_gui = inner_circle_influence
+
+	# picture = GFX_ger_inner_circle_picture
+}

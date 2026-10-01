@@ -8,4 +8,8 @@ spriteTypes = {
 		name = "GFX_swi_national_morale_picture"
 		textureFile = "gfx/interface/decisions/decision_cat_swi_morale.dds"
 	}
+	spriteType = {
+		name = "GFX_ger_inner_circle_picture"
+		textureFile = "gfx/interface/decisions/decision_cat_inner_circle.dds"
+	}
 } 
