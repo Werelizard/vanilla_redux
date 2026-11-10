@@ -83,1019 +83,1019 @@ focus_tree = {
 		cancelable = no
 	}
 
-	focus = {
-		id = GER_Reorganise_Wehrmacht
-		icon = GFX_goal_GER_Reorganise_Wehrmacht
-		cost = 4
-		x = 2
-		y = 1
-		relative_position_id = GER_Militarise_Rhineland
-		prerequisite = {
-			focus = GER_Militarise_Rhineland
-		}
-		available = {
-			has_fascist_government_trigger = yes
-		}
-		completion_reward = {
-			country_event = germany_focus_fascist.1
-			custom_effect_tooltip = doublespace_tt
-			custom_override_tooltip = {
-				tooltip = {
-					localization_key = unlock_decision_ovewrite_tt
-					DECISION = vx_germany_inspect_army_dec
-				}
-			}
-			custom_override_tooltip = {
-				tooltip = {
-					localization_key = unlock_decision_ovewrite_tt
-					DECISION = vx_germany_ensure_officer_compliance_dec
-				}
-			}
-		}
-	}
+	# focus = {
+	# 	id = GER_Reorganise_Wehrmacht
+	# 	icon = GFX_goal_GER_Reorganise_Wehrmacht
+	# 	cost = 4
+	# 	x = 2
+	# 	y = 1
+	# 	relative_position_id = GER_Militarise_Rhineland
+	# 	prerequisite = {
+	# 		focus = GER_Militarise_Rhineland
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 	}
+	# 	completion_reward = {
+	# 		country_event = germany_focus_fascist.1
+	# 		custom_effect_tooltip = doublespace_tt
+	# 		custom_override_tooltip = {
+	# 			tooltip = {
+	# 				localization_key = unlock_decision_ovewrite_tt
+	# 				DECISION = vx_germany_inspect_army_dec
+	# 			}
+	# 		}
+	# 		custom_override_tooltip = {
+	# 			tooltip = {
+	# 				localization_key = unlock_decision_ovewrite_tt
+	# 				DECISION = vx_germany_ensure_officer_compliance_dec
+	# 			}
+	# 		}
+	# 	}
+	# }
 
-	focus = {
-		id = GER_Enforce_Party_State
-		icon = GFX_goal_GER_Enforce_Party_State
-		cost = 4
-		x = -2
-		y = 1
-		relative_position_id = GER_Militarise_Rhineland
-		prerequisite = {
-			focus = GER_Militarise_Rhineland
-		}
-		available = {
-			has_fascist_government_trigger = yes
-		}
-		completion_reward = {
-			add_popularity = {
-				ideology = conservative
-				popularity = -0.05
-			}
-			add_popularity = {
-				ideology = authoritarian_democrat
-				popularity = -0.05
-			}
-			add_popularity = {
-				ideology = autocratic
-				popularity = -0.05
-			}
-			custom_effect_tooltip = doublespace_tt
-			remove_coalitions_effect = yes
-			custom_effect_tooltip = doublespace_tt
-			swap_ideas = {
-				remove_idea = ger_enabling_act
-				add_idea = ger_enabling_act_improved
-			}
-		}
-	}
+	# focus = {
+	# 	id = GER_Enforce_Party_State
+	# 	icon = GFX_goal_GER_Enforce_Party_State
+	# 	cost = 4
+	# 	x = -2
+	# 	y = 1
+	# 	relative_position_id = GER_Militarise_Rhineland
+	# 	prerequisite = {
+	# 		focus = GER_Militarise_Rhineland
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 	}
+	# 	completion_reward = {
+	# 		add_popularity = {
+	# 			ideology = conservative
+	# 			popularity = -0.05
+	# 		}
+	# 		add_popularity = {
+	# 			ideology = authoritarian_democrat
+	# 			popularity = -0.05
+	# 		}
+	# 		add_popularity = {
+	# 			ideology = autocratic
+	# 			popularity = -0.05
+	# 		}
+	# 		custom_effect_tooltip = doublespace_tt
+	# 		remove_coalitions_effect = yes
+	# 		custom_effect_tooltip = doublespace_tt
+	# 		swap_ideas = {
+	# 			remove_idea = ger_enabling_act
+	# 			add_idea = ger_enabling_act_improved
+	# 		}
+	# 	}
+	# }
 
-	focus = {
-		id = GER_Expand_SS_Recruitment
-		icon = GFX_goal_GER_Expand_SS_Recruitment
-		cost = 4
-		x = -3
-		y = 2
-		relative_position_id = GER_Militarise_Rhineland
-		prerequisite = {
-			focus = GER_Enforce_Party_State
-		}
-		prerequisite = {
-			focus = GER_Reorganise_Wehrmacht
-		}
-		available = {
-			has_fascist_government_trigger = yes
-		}
-		completion_reward = {
-			custom_override_tooltip = {
-				tooltip = {
-					localization_key = modify_dynamic_modifier_tt
-					MODIFIER = GER_army_dynmod
-				}
-			}
-			add_to_variable = {
-				GER_army_supplyfac_var = -0.1
-				tooltip = max_training_factor_tt
-			}
-			custom_effect_tooltip = doublespace_tt
-			custom_override_tooltip = {
-				tooltip = {
-					localization_key = unlock_decision_ovewrite_tt
-					DECISION = vx_germany_ss_militias_dec
-				}
-			}
-			custom_override_tooltip = {
-				tooltip = {
-					localization_key = unlock_decision_ovewrite_tt
-					DECISION = vx_germany_exand_militias_dec
-				}
-			}
+	# focus = {
+	# 	id = GER_Expand_SS_Recruitment
+	# 	icon = GFX_goal_GER_Expand_SS_Recruitment
+	# 	cost = 4
+	# 	x = -3
+	# 	y = 2
+	# 	relative_position_id = GER_Militarise_Rhineland
+	# 	prerequisite = {
+	# 		focus = GER_Enforce_Party_State
+	# 	}
+	# 	prerequisite = {
+	# 		focus = GER_Reorganise_Wehrmacht
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 	}
+	# 	completion_reward = {
+	# 		custom_override_tooltip = {
+	# 			tooltip = {
+	# 				localization_key = modify_dynamic_modifier_tt
+	# 				MODIFIER = GER_army_dynmod
+	# 			}
+	# 		}
+	# 		add_to_variable = {
+	# 			GER_army_supplyfac_var = -0.1
+	# 			tooltip = max_training_factor_tt
+	# 		}
+	# 		custom_effect_tooltip = doublespace_tt
+	# 		custom_override_tooltip = {
+	# 			tooltip = {
+	# 				localization_key = unlock_decision_ovewrite_tt
+	# 				DECISION = vx_germany_ss_militias_dec
+	# 			}
+	# 		}
+	# 		custom_override_tooltip = {
+	# 			tooltip = {
+	# 				localization_key = unlock_decision_ovewrite_tt
+	# 				DECISION = vx_germany_exand_militias_dec
+	# 			}
+	# 		}
 
-			custom_effect_tooltip = doublespace_tt
-			set_technology = {
-				vx_ss_militias = 1
-			}
-			custom_effect_tooltip = tech_effect|vx_ss_militias
-		}
-	}
+	# 		custom_effect_tooltip = doublespace_tt
+	# 		set_technology = {
+	# 			vx_ss_militias = 1
+	# 		}
+	# 		custom_effect_tooltip = tech_effect|vx_ss_militias
+	# 	}
+	# }
 
-	focus = {
-		id = GER_Fuhrerprinzip
-		icon = GFX_goal_GER_Fuhrerprinzip
-		cost = 4
-		x = 0
-		y = 2
-		relative_position_id = GER_Militarise_Rhineland
-		prerequisite = {
-			focus = GER_Reorganise_Wehrmacht
-		}
-		prerequisite = {
-			focus = GER_Enforce_Party_State
-		}
-		available = {
-			has_fascist_government_trigger = yes
-		}
-		completion_reward = {
-			custom_effect_tooltip = GER_Fuhrerprinzip_enabled_tt
-			custom_effect_tooltip = doublespace_tt
-			hidden_effect = {
-				set_variable = {
-					GER_inner_circle_cohesion_var = 20
-				}
-			}
-			add_dynamic_modifier = {
-				modifier = GER_inner_circle_dynmod
-			}
-		}
-		allow_branch = {
-			NOT = {
-				has_country_flag = GER_hitler_dead_flag
-			}
-		}
-	}
+	# focus = {
+	# 	id = GER_Fuhrerprinzip
+	# 	icon = GFX_goal_GER_Fuhrerprinzip
+	# 	cost = 4
+	# 	x = 0
+	# 	y = 2
+	# 	relative_position_id = GER_Militarise_Rhineland
+	# 	prerequisite = {
+	# 		focus = GER_Reorganise_Wehrmacht
+	# 	}
+	# 	prerequisite = {
+	# 		focus = GER_Enforce_Party_State
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 	}
+	# 	completion_reward = {
+	# 		custom_effect_tooltip = GER_Fuhrerprinzip_enabled_tt
+	# 		custom_effect_tooltip = doublespace_tt
+	# 		hidden_effect = {
+	# 			set_variable = {
+	# 				GER_inner_circle_cohesion_var = 20
+	# 			}
+	# 		}
+	# 		add_dynamic_modifier = {
+	# 			modifier = GER_inner_circle_dynmod
+	# 		}
+	# 	}
+	# 	allow_branch = {
+	# 		NOT = {
+	# 			has_country_flag = GER_hitler_dead_flag
+	# 		}
+	# 	}
+	# }
 
-	###################
-	# HISTORICAL - INNER CIRCLE / POLITICS
-	###################
+	# ###################
+	# # HISTORICAL - INNER CIRCLE / POLITICS
+	# ###################
 
-	focus = {
-		id = GER_inner_circle_rearmement
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -5
-		y = 1
-		relative_position_id = GER_Fuhrerprinzip
-		prerequisite = {
-			focus = GER_Fuhrerprinzip
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_rearmement
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = -5
+	# 	y = 1
+	# 	relative_position_id = GER_Fuhrerprinzip
+	# 	prerequisite = {
+	# 		focus = GER_Fuhrerprinzip
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-	}
+	# 	}
+	# }
 
-	focus = {
-		id = GER_inner_circle_todt
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -1
-		y = 1
-		relative_position_id = GER_inner_circle_rearmement
-		text_icon = GER_inner_circle_focus_style
-		prerequisite = {
-			focus = GER_inner_circle_rearmement
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_todt
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = -1
+	# 	y = 1
+	# 	relative_position_id = GER_inner_circle_rearmement
+	# 	text_icon = GER_inner_circle_focus_style
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_rearmement
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-		mutually_exclusive = {
-			focus = GER_inner_circle_hierl
-		}
-	}
+	# 	}
+	# 	mutually_exclusive = {
+	# 		focus = GER_inner_circle_hierl
+	# 	}
+	# }
 
-	focus = {
-		id = GER_inner_circle_todt_org
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -1
-		y = 2
-		relative_position_id = GER_inner_circle_rearmement
-		text_icon = GER_inner_circle_focus_style
-		prerequisite = {
-			focus = GER_inner_circle_todt
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_todt_org
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = -1
+	# 	y = 2
+	# 	relative_position_id = GER_inner_circle_rearmement
+	# 	text_icon = GER_inner_circle_focus_style
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_todt
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-	}
+	# 	}
+	# }
 
-	focus = {
-		id = GER_inner_circle_todt_capstone
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -1
-		y = 4
-		relative_position_id = GER_inner_circle_rearmement
-		text_icon = GER_inner_circle_focus_style
-		prerequisite = {
-			focus = GER_inner_circle_autobahn
-		}
-		prerequisite = {
-			focus = GER_inner_circle_todt_org
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_todt_capstone
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = -1
+	# 	y = 4
+	# 	relative_position_id = GER_inner_circle_rearmement
+	# 	text_icon = GER_inner_circle_focus_style
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_autobahn
+	# 	}
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_todt_org
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-	}
+	# 	}
+	# }
 
-	focus = {
-		id = GER_inner_circle_hierl
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -3
-		y = 1
-		relative_position_id = GER_inner_circle_rearmement
-		text_icon = GER_inner_circle_focus_style
-		prerequisite = {
-			focus = GER_inner_circle_rearmement
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_hierl
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = -3
+	# 	y = 1
+	# 	relative_position_id = GER_inner_circle_rearmement
+	# 	text_icon = GER_inner_circle_focus_style
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_rearmement
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-		mutually_exclusive = {
-			focus = GER_inner_circle_todt
-		}
-	}	
+	# 	}
+	# 	mutually_exclusive = {
+	# 		focus = GER_inner_circle_todt
+	# 	}
+	# }	
 
-	focus = {
-		id = GER_inner_circle_hierl_reichservice
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -3
-		y = 2
-		relative_position_id = GER_inner_circle_rearmement
-		text_icon = GER_inner_circle_focus_style
-		prerequisite = {			
-			focus = GER_inner_circle_hierl
-		}
-		prerequisite = {
-			# focus = GER_inner_circle_autobahn
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_hierl_reichservice
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = -3
+	# 	y = 2
+	# 	relative_position_id = GER_inner_circle_rearmement
+	# 	text_icon = GER_inner_circle_focus_style
+	# 	prerequisite = {			
+	# 		focus = GER_inner_circle_hierl
+	# 	}
+	# 	prerequisite = {
+	# 		# focus = GER_inner_circle_autobahn
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-	}
+	# 	}
+	# }
 
-	focus = {
-		id = GER_inner_circle_hierl_capstone
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -3
-		y = 4
-		relative_position_id = GER_inner_circle_rearmement
-		text_icon = GER_inner_circle_focus_style
+	# focus = {
+	# 	id = GER_inner_circle_hierl_capstone
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = -3
+	# 	y = 4
+	# 	relative_position_id = GER_inner_circle_rearmement
+	# 	text_icon = GER_inner_circle_focus_style
 
-		prerequisite = {			
-			focus = GER_inner_circle_hierl_reichservice
-		}
-		prerequisite = {
-			focus = GER_inner_circle_autobahn
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# 	prerequisite = {			
+	# 		focus = GER_inner_circle_hierl_reichservice
+	# 	}
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_autobahn
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-	}
+	# 	}
+	# }
 
-	focus = {
-		id = GER_inner_circle_autobahn
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -2
-		y = 3
-		relative_position_id = GER_inner_circle_rearmement
-		text_icon = GER_inner_circle_focus_style
-		prerequisite = {
-			focus = GER_inner_circle_hierl_reichservice
-			focus = GER_inner_circle_todt_org
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_autobahn
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = -2
+	# 	y = 3
+	# 	relative_position_id = GER_inner_circle_rearmement
+	# 	text_icon = GER_inner_circle_focus_style
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_hierl_reichservice
+	# 		focus = GER_inner_circle_todt_org
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-		mutually_exclusive = {
+	# 	}
+	# 	mutually_exclusive = {
 			
-		}
-	}		
+	# 	}
+	# }		
 
-	focus = {
-		id = GER_inner_circle_societal_mobilisation
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -2
-		y = 5
-		relative_position_id = GER_inner_circle_rearmement
-		text_icon = GER_inner_circle_focus_style
-		prerequisite = {
-			focus = GER_inner_circle_hierl_capstone
-			focus = GER_inner_circle_todt_capstone
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_societal_mobilisation
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = -2
+	# 	y = 5
+	# 	relative_position_id = GER_inner_circle_rearmement
+	# 	text_icon = GER_inner_circle_focus_style
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_hierl_capstone
+	# 		focus = GER_inner_circle_todt_capstone
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-	}
+	# 	}
+	# }
 
-	focus = {
-		id = GER_inner_circle_speer
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 1
-		y = 1
-		relative_position_id = GER_inner_circle_rearmement
-		text_icon = GER_inner_circle_focus_style
-		prerequisite = {
-			focus = GER_inner_circle_rearmement
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_speer
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = 1
+	# 	y = 1
+	# 	relative_position_id = GER_inner_circle_rearmement
+	# 	text_icon = GER_inner_circle_focus_style
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_rearmement
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-	}
+	# 	}
+	# }
 
-	focus = {
-		id = GER_inner_circle_speer_rationalisation
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 1
-		y = 3
-		relative_position_id = GER_inner_circle_rearmement
-		text_icon = GER_inner_circle_focus_style
-		prerequisite = {
-			focus = GER_inner_circle_speer
-		}
-		# prerequisite = {
-		# 	focus = GER_inner_circle_four_year_plan
-		# }
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_speer_rationalisation
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = 1
+	# 	y = 3
+	# 	relative_position_id = GER_inner_circle_rearmement
+	# 	text_icon = GER_inner_circle_focus_style
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_speer
+	# 	}
+	# 	# prerequisite = {
+	# 	# 	focus = GER_inner_circle_four_year_plan
+	# 	# }
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-	}
+	# 	}
+	# }
 
-	focus = {
-		id = GER_inner_circle_speer_capstone
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 1
-		y = 5
-		relative_position_id = GER_inner_circle_rearmement
-		text_icon = GER_inner_circle_focus_style
-		prerequisite = {
-			focus = GER_inner_circle_speer_rationalisation
-		}
-		prerequisite = {
-			focus = GER_inner_circle_zentrale_plannung
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_speer_capstone
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = 1
+	# 	y = 5
+	# 	relative_position_id = GER_inner_circle_rearmement
+	# 	text_icon = GER_inner_circle_focus_style
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_speer_rationalisation
+	# 	}
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_zentrale_plannung
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-		mutually_exclusive = {
-			focus = GER_inner_circle_goring_capstone
-		}
-	}
+	# 	}
+	# 	mutually_exclusive = {
+	# 		focus = GER_inner_circle_goring_capstone
+	# 	}
+	# }
 
-	focus = {
-		id = GER_inner_circle_goring
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 3
-		y = 1
-		relative_position_id = GER_inner_circle_rearmement
-		text_icon = GER_inner_circle_focus_style
-		prerequisite = {
-			focus = GER_inner_circle_rearmement
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_goring
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = 3
+	# 	y = 1
+	# 	relative_position_id = GER_inner_circle_rearmement
+	# 	text_icon = GER_inner_circle_focus_style
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_rearmement
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-	}
+	# 	}
+	# }
 
-	focus = {
-		id = GER_inner_circle_goring_reichswerke
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 3
-		y = 3
-		relative_position_id = GER_inner_circle_rearmement
-		text_icon = GER_inner_circle_focus_style
-		# prerequisite = {
-		# 	focus = GER_inner_circle_four_year_plan
-		# }
-		prerequisite = {
-			focus = GER_inner_circle_goring
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_goring_reichswerke
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = 3
+	# 	y = 3
+	# 	relative_position_id = GER_inner_circle_rearmement
+	# 	text_icon = GER_inner_circle_focus_style
+	# 	# prerequisite = {
+	# 	# 	focus = GER_inner_circle_four_year_plan
+	# 	# }
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_goring
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-	}	
+	# 	}
+	# }	
 
-	focus = {
-		id = GER_inner_circle_goring_capstone
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 3
-		y = 5
-		relative_position_id = GER_inner_circle_rearmement
-		text_icon = GER_inner_circle_focus_style
-		prerequisite = {
-			focus = GER_inner_circle_zentrale_plannung
-		}
-		prerequisite = {
-			focus = GER_inner_circle_goring_reichswerke
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_goring_capstone
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = 3
+	# 	y = 5
+	# 	relative_position_id = GER_inner_circle_rearmement
+	# 	text_icon = GER_inner_circle_focus_style
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_zentrale_plannung
+	# 	}
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_goring_reichswerke
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-		mutually_exclusive = {
-			focus = GER_inner_circle_speer_capstone
-		}
-	}
+	# 	}
+	# 	mutually_exclusive = {
+	# 		focus = GER_inner_circle_speer_capstone
+	# 	}
+	# }
 
-	focus = {
-		id = GER_inner_circle_four_year_plan
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 2
-		y = 2
-		relative_position_id = GER_inner_circle_rearmement
-		prerequisite = {			
-			focus = GER_inner_circle_speer
-			focus = GER_inner_circle_goring
-		}
-		available = {			
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_four_year_plan
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = 2
+	# 	y = 2
+	# 	relative_position_id = GER_inner_circle_rearmement
+	# 	prerequisite = {			
+	# 		focus = GER_inner_circle_speer
+	# 		focus = GER_inner_circle_goring
+	# 	}
+	# 	available = {			
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-	}
+	# 	}
+	# }
 
-	focus = {
-		id = GER_inner_circle_zentrale_plannung
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 2
-		y = 4
-		relative_position_id = GER_inner_circle_rearmement
-		text_icon = GER_inner_circle_focus_style
-		prerequisite = {			
-			focus = GER_inner_circle_speer_rationalisation
-			focus = GER_inner_circle_goring_reichswerke
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_zentrale_plannung
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = 2
+	# 	y = 4
+	# 	relative_position_id = GER_inner_circle_rearmement
+	# 	text_icon = GER_inner_circle_focus_style
+	# 	prerequisite = {			
+	# 		focus = GER_inner_circle_speer_rationalisation
+	# 		focus = GER_inner_circle_goring_reichswerke
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-	}
+	# 	}
+	# }
 
-	focus = {
-		id = GER_inner_circle_totaler_krieg
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 2
-		y = 6
-		relative_position_id = GER_inner_circle_rearmement
-		text_icon = GER_inner_circle_focus_style
-		prerequisite = {
-			focus = GER_inner_circle_speer_capstone
-			focus = GER_inner_circle_goring_capstone
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_totaler_krieg
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = 2
+	# 	y = 6
+	# 	relative_position_id = GER_inner_circle_rearmement
+	# 	text_icon = GER_inner_circle_focus_style
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_speer_capstone
+	# 		focus = GER_inner_circle_goring_capstone
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-	}
+	# 	}
+	# }
 
-	#######
+	# #######
 
-	focus = {
-		id = GER_inner_circle_volkreich
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 5
-		y = 1
-		relative_position_id = GER_Fuhrerprinzip
-		prerequisite = {
-			focus = GER_Fuhrerprinzip
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_volkreich
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = 5
+	# 	y = 1
+	# 	relative_position_id = GER_Fuhrerprinzip
+	# 	prerequisite = {
+	# 		focus = GER_Fuhrerprinzip
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-	}
+	# 	}
+	# }
 
-	focus = {
-		id = GER_inner_circle_propaganda_campaigns
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -2
-		y = 2
-		relative_position_id = GER_inner_circle_volkreich
-		# text_icon = GER_inner_circle_focus_style
-		prerequisite = {
-			focus = GER_inner_circle_goebbels
-			focus = GER_inner_circle_himmler
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_propaganda_campaigns
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = -2
+	# 	y = 2
+	# 	relative_position_id = GER_inner_circle_volkreich
+	# 	# text_icon = GER_inner_circle_focus_style
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_goebbels
+	# 		focus = GER_inner_circle_himmler
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-	}
+	# 	}
+	# }
 
-	focus = {
-		id = GER_inner_circle_quash_dissent
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -2
-		y = 4
-		relative_position_id = GER_inner_circle_volkreich
-		text_icon = GER_inner_circle_focus_style
-		prerequisite = {
-			focus = GER_inner_circle_goebbels_ministry
-			focus = GER_inner_circle_himmler_expand_gestapo
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_quash_dissent
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = -2
+	# 	y = 4
+	# 	relative_position_id = GER_inner_circle_volkreich
+	# 	text_icon = GER_inner_circle_focus_style
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_goebbels_ministry
+	# 		focus = GER_inner_circle_himmler_expand_gestapo
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-	}
+	# 	}
+	# }
 
-	focus = {
-		id = GER_inner_circle_goebbels
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -3
-		y = 1
-		relative_position_id = GER_inner_circle_volkreich
-		text_icon = GER_inner_circle_focus_style
-		prerequisite = {
-			focus = GER_inner_circle_volkreich
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_goebbels
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = -3
+	# 	y = 1
+	# 	relative_position_id = GER_inner_circle_volkreich
+	# 	text_icon = GER_inner_circle_focus_style
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_volkreich
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-	}
+	# 	}
+	# }
 
-	focus = {
-		id = GER_inner_circle_goebbels_ministry
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -3
-		y = 3
-		relative_position_id = GER_inner_circle_volkreich
-		text_icon = GER_inner_circle_focus_style
-		prerequisite = {
-			focus = GER_inner_circle_goebbels
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_goebbels_ministry
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = -3
+	# 	y = 3
+	# 	relative_position_id = GER_inner_circle_volkreich
+	# 	text_icon = GER_inner_circle_focus_style
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_goebbels
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-	}
+	# 	}
+	# }
 
-	focus = {
-		id = GER_inner_circle_goebbels_capstone
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -3
-		y = 5
-		relative_position_id = GER_inner_circle_volkreich
-		text_icon = GER_inner_circle_focus_style
-		prerequisite = {
-			focus = GER_inner_circle_goebbels_ministry
-		}
-		prerequisite = {
-			focus = GER_inner_circle_quash_dissent
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_goebbels_capstone
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = -3
+	# 	y = 5
+	# 	relative_position_id = GER_inner_circle_volkreich
+	# 	text_icon = GER_inner_circle_focus_style
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_goebbels_ministry
+	# 	}
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_quash_dissent
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-		mutually_exclusive = {
-			focus = GER_inner_circle_himmler_capstone
-		}
-	}
+	# 	}
+	# 	mutually_exclusive = {
+	# 		focus = GER_inner_circle_himmler_capstone
+	# 	}
+	# }
 
-	focus = {
-		id = GER_inner_circle_himmler
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -1
-		y = 1
-		relative_position_id = GER_inner_circle_volkreich
-		text_icon = GER_inner_circle_focus_style
-		prerequisite = {
-			focus = GER_inner_circle_volkreich
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_himmler
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = -1
+	# 	y = 1
+	# 	relative_position_id = GER_inner_circle_volkreich
+	# 	text_icon = GER_inner_circle_focus_style
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_volkreich
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-	}
+	# 	}
+	# }
 
-	focus = {
-		id = GER_inner_circle_himmler_expand_gestapo
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -1
-		y = 3
-		relative_position_id = GER_inner_circle_volkreich
-		text_icon = GER_inner_circle_focus_style
-		prerequisite = {
-			focus = GER_inner_circle_himmler
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_himmler_expand_gestapo
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = -1
+	# 	y = 3
+	# 	relative_position_id = GER_inner_circle_volkreich
+	# 	text_icon = GER_inner_circle_focus_style
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_himmler
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-	}
+	# 	}
+	# }
 
-	focus = {
-		id = GER_inner_circle_himmler_capstone
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -1
-		y = 5
-		relative_position_id = GER_inner_circle_volkreich
-		text_icon = GER_inner_circle_focus_style
-		prerequisite = {
-			focus = GER_inner_circle_quash_dissent
-		}
-		prerequisite = {
-			focus = GER_inner_circle_himmler_expand_gestapo
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_himmler_capstone
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = -1
+	# 	y = 5
+	# 	relative_position_id = GER_inner_circle_volkreich
+	# 	text_icon = GER_inner_circle_focus_style
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_quash_dissent
+	# 	}
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_himmler_expand_gestapo
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-		mutually_exclusive = {
-			focus = GER_inner_circle_goebbels_capstone
-		}
-	}
+	# 	}
+	# 	mutually_exclusive = {
+	# 		focus = GER_inner_circle_goebbels_capstone
+	# 	}
+	# }
 
 	
-	focus = {
-		id = GER_inner_circle_mobilise_german_soul
-		icon = GFX_goal_unknown
-		cost = 4
-		x = -2
-		y = 6
-		relative_position_id = GER_inner_circle_volkreich
-		text_icon = GER_inner_circle_focus_style
-		prerequisite = {
-			focus = GER_inner_circle_goebbels_capstone
-			focus = GER_inner_circle_himmler_capstone
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_mobilise_german_soul
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = -2
+	# 	y = 6
+	# 	relative_position_id = GER_inner_circle_volkreich
+	# 	text_icon = GER_inner_circle_focus_style
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_goebbels_capstone
+	# 		focus = GER_inner_circle_himmler_capstone
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-	}
+	# 	}
+	# }
 
-	focus = {
-		id = GER_inner_circle_party_state
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 2
-		y = 3
-		relative_position_id = GER_inner_circle_volkreich
-		text_icon = GER_inner_circle_focus_style
-		prerequisite = {
-			focus = GER_inner_circle_bormann_chancellery
-			focus = GER_inner_circle_hess_loyalty
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_party_state
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = 2
+	# 	y = 3
+	# 	relative_position_id = GER_inner_circle_volkreich
+	# 	text_icon = GER_inner_circle_focus_style
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_bormann_chancellery
+	# 		focus = GER_inner_circle_hess_loyalty
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-	}
+	# 	}
+	# }
 
-	focus = {
-		id = GER_inner_circle_bormann
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 1
-		y = 1
-		relative_position_id = GER_inner_circle_volkreich
-		text_icon = GER_inner_circle_focus_style
-		prerequisite = {
-			focus = GER_inner_circle_volkreich
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_bormann
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = 1
+	# 	y = 1
+	# 	relative_position_id = GER_inner_circle_volkreich
+	# 	text_icon = GER_inner_circle_focus_style
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_volkreich
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-		mutually_exclusive = {
-			focus = GER_inner_circle_hess
-		}
-	}
+	# 	}
+	# 	mutually_exclusive = {
+	# 		focus = GER_inner_circle_hess
+	# 	}
+	# }
 
-		focus = {
-		id = GER_inner_circle_bormann_chancellery
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 1
-		y = 2
-		relative_position_id = GER_inner_circle_volkreich
-		text_icon = GER_inner_circle_focus_style
-		prerequisite = {
-			focus = GER_inner_circle_bormann
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# 	focus = {
+	# 	id = GER_inner_circle_bormann_chancellery
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = 1
+	# 	y = 2
+	# 	relative_position_id = GER_inner_circle_volkreich
+	# 	text_icon = GER_inner_circle_focus_style
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_bormann
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-		mutually_exclusive = {
+	# 	}
+	# 	mutually_exclusive = {
 			
-		}
-	}
+	# 	}
+	# }
 
-	focus = {
-		id = GER_inner_circle_bormann_civil_service
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 1
-		y = 4
-		relative_position_id = GER_inner_circle_volkreich
-		text_icon = GER_inner_circle_focus_style
-		prerequisite = {
-			focus = GER_inner_circle_bormann_chancellery
-		}
-		prerequisite = {
-			focus = GER_inner_circle_party_state
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_bormann_civil_service
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = 1
+	# 	y = 4
+	# 	relative_position_id = GER_inner_circle_volkreich
+	# 	text_icon = GER_inner_circle_focus_style
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_bormann_chancellery
+	# 	}
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_party_state
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-		mutually_exclusive = {
+	# 	}
+	# 	mutually_exclusive = {
 			
-		}
-	}
+	# 	}
+	# }
 
-	focus = {
-		id = GER_inner_circle_hess
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 3
-		y = 1
-		relative_position_id = GER_inner_circle_volkreich
-		text_icon = GER_inner_circle_focus_style
-		prerequisite = {
-			focus = GER_inner_circle_volkreich
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod			
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_hess
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = 3
+	# 	y = 1
+	# 	relative_position_id = GER_inner_circle_volkreich
+	# 	text_icon = GER_inner_circle_focus_style
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_volkreich
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod			
+	# 	}
+	# 	completion_reward = {
 			
-		}
-		mutually_exclusive = {
-			focus = GER_inner_circle_bormann
-		}
-	}
+	# 	}
+	# 	mutually_exclusive = {
+	# 		focus = GER_inner_circle_bormann
+	# 	}
+	# }
 
-	focus = {
-		id = GER_inner_circle_hess_loyalty
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 3
-		y = 2
-		relative_position_id = GER_inner_circle_volkreich
-		text_icon = GER_inner_circle_focus_style
-		prerequisite = {
-			focus = GER_inner_circle_hess
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_hess_loyalty
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = 3
+	# 	y = 2
+	# 	relative_position_id = GER_inner_circle_volkreich
+	# 	text_icon = GER_inner_circle_focus_style
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_hess
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-		mutually_exclusive = {
+	# 	}
+	# 	mutually_exclusive = {
 			
-		}
-	}
+	# 	}
+	# }
 
-	focus = {
-		id = GER_inner_circle_hess_ideology
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 3
-		y = 4
-		relative_position_id = GER_inner_circle_volkreich
-		text_icon = GER_inner_circle_focus_style
-		prerequisite = {
-			focus = GER_inner_circle_party_state
-		}
-		prerequisite = {
-			focus = GER_inner_circle_hess_loyalty
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_hess_ideology
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = 3
+	# 	y = 4
+	# 	relative_position_id = GER_inner_circle_volkreich
+	# 	text_icon = GER_inner_circle_focus_style
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_party_state
+	# 	}
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_hess_loyalty
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-	}
+	# 	}
+	# }
 
-	focus = {
-		id = GER_inner_circle_hegemony_of_the_party
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 2
-		y = 5
-		relative_position_id = GER_inner_circle_volkreich
-		text_icon = GER_inner_circle_focus_style
-		prerequisite = {
-			focus = GER_inner_circle_bormann_civil_service
-			focus = GER_inner_circle_hess_ideology
-		}
-		available = {
-			has_fascist_government_trigger = yes
-			has_dynamic_modifier = GER_inner_circle_dynmod
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_inner_circle_hegemony_of_the_party
+	# 	icon = GFX_goal_unknown
+	# 	cost = 4
+	# 	x = 2
+	# 	y = 5
+	# 	relative_position_id = GER_inner_circle_volkreich
+	# 	text_icon = GER_inner_circle_focus_style
+	# 	prerequisite = {
+	# 		focus = GER_inner_circle_bormann_civil_service
+	# 		focus = GER_inner_circle_hess_ideology
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 		has_dynamic_modifier = GER_inner_circle_dynmod
+	# 	}
+	# 	completion_reward = {
 			
-		}
-	}
+	# 	}
+	# }
 
-	############
+	# ############
 
-	focus = {
-		id = GER_demonstrate_german_might
-		icon = GFX_goal_GER_demonstrate_german_might
-		cost = 4
-		x = -1
-		y = 1
-		relative_position_id = GER_Fuhrerprinzip
-		prerequisite = {
-			focus = GER_Fuhrerprinzip
-		}
-		available = {
-			has_fascist_government_trigger = yes
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_demonstrate_german_might
+	# 	icon = GFX_goal_GER_demonstrate_german_might
+	# 	cost = 4
+	# 	x = -1
+	# 	y = 1
+	# 	relative_position_id = GER_Fuhrerprinzip
+	# 	prerequisite = {
+	# 		focus = GER_Fuhrerprinzip
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 	}
+	# 	completion_reward = {
 			
-		}
-	}
+	# 	}
+	# }
 
-	focus = {
-		id = GER_triumphant_will
-		icon = GFX_goal_GER_triumphant_will
-		cost = 4
-		x = 1
-		y = 1
-		relative_position_id = GER_Fuhrerprinzip
-		prerequisite = {
-			focus = GER_Fuhrerprinzip
-		}
-		available = {
-			has_fascist_government_trigger = yes
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_triumphant_will
+	# 	icon = GFX_goal_GER_triumphant_will
+	# 	cost = 4
+	# 	x = 1
+	# 	y = 1
+	# 	relative_position_id = GER_Fuhrerprinzip
+	# 	prerequisite = {
+	# 		focus = GER_Fuhrerprinzip
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 	}
+	# 	completion_reward = {
 			
-		}
-	}
+	# 	}
+	# }
 
-	focus = {
-		id = GER_the_supreme_leader
-		icon = GFX_goal_GER_the_supreme_leader
-		cost = 4
-		x = 0
-		y = 2
-		relative_position_id = GER_Fuhrerprinzip
-		prerequisite = {
-			focus = GER_demonstrate_german_might
-		}
-		prerequisite = {
-			focus = GER_triumphant_will
-		}
-		available = {
-			has_fascist_government_trigger = yes
-		}
-		completion_reward = {
+	# focus = {
+	# 	id = GER_the_supreme_leader
+	# 	icon = GFX_goal_GER_the_supreme_leader
+	# 	cost = 4
+	# 	x = 0
+	# 	y = 2
+	# 	relative_position_id = GER_Fuhrerprinzip
+	# 	prerequisite = {
+	# 		focus = GER_demonstrate_german_might
+	# 	}
+	# 	prerequisite = {
+	# 		focus = GER_triumphant_will
+	# 	}
+	# 	available = {
+	# 		has_fascist_government_trigger = yes
+	# 	}
+	# 	completion_reward = {
 			
-		}
-	}
+	# 	}
+	# }
 
 	###################
 	# HISTORICAL - ECONOMY

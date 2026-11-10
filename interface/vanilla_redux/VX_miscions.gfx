@@ -1,0 +1,142 @@
+spritetypes = {
+	# Ideologies
+	spriteType = {
+		name = "GFX_autsoc_texticon"
+		textureFile = "gfx/texticons/authoritarian_socialism_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_vansoc_texticon"
+		textureFile = "gfx/texticons/vanguard_socialism_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_revsoc_texticon"
+		textureFile = "gfx/texticons/revolutionary_socialism_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_socdem_texticon"
+		textureFile = "gfx/texticons/social_democracy_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_prog_texticon"
+		textureFile = "gfx/texticons/reactionary_autocracy_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_liberal_texticon"
+		textureFile = "gfx/texticons/liberalism_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_cons_texticon"
+		textureFile = "gfx/texticons/conservatism_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_autdem_texticon"
+		textureFile = "gfx/texticons/authoritarian_democracy_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_autreac_texticon"
+		textureFile = "gfx/texticons/reactionary_autocracy_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_fascism_texticon"
+		textureFile = "gfx/texticons/fascism_texticon.dds"
+		legacy_lazy_load = no
+	}
+	# Texticons - SWITZERLAND
+	spriteType = {
+		name = "GFX_SWI_morale_texticon"
+		textureFile = "gfx/texticons/SWI_morale_texticon.dds"
+		legacy_lazy_load = no
+	}
+	# Texticons - general
+	spriteType = {
+		name = "GFX_war_support_texticon"
+		textureFile = "gfx/texticons/war_support_texticon.dds"
+		legacy_lazy_load = no
+	}
+	# MIOS
+	spriteType = {
+		name = "GFX_mio_research_icon"
+		textureFile = "gfx/interface/mio_traits/generic_mio_trait_icon_research.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_mio_funding_icon"
+		textureFile = "gfx/interface/mio_traits/generic_mio_trait_icon_funding.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_generic_mio_department_icon_infantry_defence"
+		textureFile = "gfx/interface/mio_traits/generic_mio_department_icon_infantry_defence.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_military_industrial_organization_motorbike_equipment"
+		texturefile = "gfx/interface/mio_traits/generic_mio_department_icon_motorbike.dds"
+	}
+	spriteType = {
+		name = "GFX_military_industrial_motorbike_equipment"
+		texturefile = "gfx/interface/mio_traits/generic_mio_department_icon_motorbike.dds"
+	}
+	spriteType = {
+		name = "GFX_military_industrial_organization_railway_gun"
+		texturefile = "gfx/interface/mio_traits/generic_mio_department_icon_railwaygun.dds"
+	}
+	spriteType = {
+		name = "GFX_military_industrial_organization_railway_gun_equipment"
+		texturefile = "gfx/interface/mio_traits/generic_mio_department_icon_railwaygun.dds"
+	}	
+	spriteType = {
+		name = "GFX_military_industrial_organization_mixed_motorized_equipment"
+		texturefile = "gfx/interface/mio_traits/generic_mio_department_icon_motorbike_motorized.dds"
+	}
+	spriteType = {
+		name = "GFX_military_industrial_organization_mechanized_armoured"
+		texturefile = "gfx/interface/mio_traits/generic_mio_department_icon_mechanized_armored.dds"
+	}
+	spriteType = {
+		name = "GFX_military_industrial_organization_mechanized_fuel"
+		texturefile = "gfx/interface/mio_traits/generic_mio_department_icon_mechanized_fuel.dds"
+	}
+	spriteType = {
+		name = "GFX_military_industrial_organization_motorized_rockets"
+		texturefile = "gfx/interface/mio_traits/generic_mio_department_icon_rocket_motorized.dds"
+	}
+	spriteType = {
+		name = "GFX_military_industrial_organization_motorized_fuel"
+		texturefile = "gfx/interface/mio_traits/generic_mio_department_icon_motorized_fuel.dds"
+	}
+	spriteType = {
+		name = "GFX_military_industrial_organization_motorized_mechanized_armour"
+		texturefile = "gfx/interface/mio_traits/generic_mio_department_icon_mechanized_armored_armour.dds"
+	}
+	spriteType = {
+		name = "GFX_generic_mio_department_icon_motorized_rocket_technology"
+		texturefile = "gfx/interface/mio_traits/generic_mio_department_icon_motorized_rocket_equipment_technology.dds"
+	}
+
+	spriteType = {
+		name = "GFX_generic_mio_department_icon_truck_capstone"
+		texturefile = "gfx/interface/mio_traits/generic_mio_department_icon_motorized_capstone.dds"
+	}
+	spriteType = {
+		name = "GFX_generic_mio_department_icon_motorized_rocket_capstone"
+		texturefile = "gfx/interface/mio_traits/generic_mio_department_icon_motorized_rocket_equipment_capstone.dds"
+	}
+	spriteType = {
+		name = "GFX_generic_mio_department_icon_armored_car_capstone"
+		texturefile = "gfx/interface/mio_traits/generic_mio_department_icon_armored_car_capstone.dds"
+	}
+	spriteType = {
+		name = "GFX_generic_mio_department_icon_mechanized_capstone"
+		texturefile = "gfx/interface/mio_traits/generic_mio_department_icon_mechanized_capstone.dds"
+	}
+}

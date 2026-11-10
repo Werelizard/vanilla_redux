@@ -527,3 +527,10 @@ vx_remove_crisis_ideas_effect = {
 	remove_ideas = vx_strikes
 	remove_ideas = vx_desertions
 }
+
+vx_updated_focus_tree_effect = {
+	custom_effect_tooltip = vx_updated_focus_tree_tt
+	hidden_effect = {
+		mark_focus_tree_layout_dirty = yes
+	}
+}

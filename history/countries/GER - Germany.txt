@@ -25,15 +25,15 @@ set_popularities = {
 	revolutionary_socialist = 5
 	progressive = 0
 	social_democratic = 9
-	liberal = 1
+	liberal = 6
 	conservative = 16
-	authoritarian_democrat = 7
+	authoritarian_democrat = 12
 	autocratic = 11
-	fascist = 51
+	fascist = 41
 }
 
-auth_dem_coalition_effect = yes
-autocrat_coalition_effect = yes
+# auth_dem_coalition_effect = yes
+# autocrat_coalition_effect = yes
 
 ### CHARACTERS
 

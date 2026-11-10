@@ -59,6 +59,7 @@ leader_traits = {
 
 	generic_financial_expert_trait = {
 		consumer_goods_factor = -0.1
+		political_power_factor = 0.05
 	}
 
 	generic_spymaster_trait = {
@@ -68,11 +69,11 @@ leader_traits = {
 
 	generic_populist_trait = {
 		justify_war_goal_time = -0.1
-		drift_defence_factor = 0.25
+		war_stability_factor = 0.1
 	}
 
 	generic_education_reformer_trait = {
-		research_speed_factor = 0.05
+		research_speed_factor = 0.1
 	}
 
 	generic_silent_workhorse_trait = {

@@ -8,10 +8,100 @@ focus_tree = {
 	
 	country = {
 		factor = 1
+		modifier = {
+			factor = 0
+			has_country_flag = VX_has_puppet_tree_flag # this flag exists to prevent countries that have capitulated and released as puppets from having this tree
+		}
 	}
 	
 	default = yes
 	reset_on_civilwar = no
 
+	###################
+	# GENERIC - POLITICS
+	###################
 
+	focus = {
+		id = vx_generic_politics_start
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 10
+		y = 0
+		prerequisite = {
+			
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = vx_generic_politics_stability
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = vx_generic_politics_start
+		prerequisite = {
+			focus = vx_generic_politics_start
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = vx_generic_politics_war_support
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = vx_generic_politics_start
+		prerequisite = {
+			focus = vx_generic_politics_start
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = vx_generic_politics_expand_cabinet
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 0
+		y = 2
+		relative_position_id = vx_generic_politics_start
+		prerequisite = {
+			focus = vx_generic_politics_stability
+			focus = vx_generic_politics_war_support
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
 }

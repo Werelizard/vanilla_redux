@@ -250,13 +250,27 @@ on_actions = {
 
 	}
 	on_release_as_puppet = {
-
+		effect = {
+			ROOT = {
+				set_country_flag = VX_has_puppet_tree_flag
+				vx_updated_focus_tree_effect = yes
+			}
+		}
 	}
 	on_annex = {
 
 	}
 	on_release_as_free = {
-
+		effect = {
+			ROOT = {
+				if = {
+					limit = {
+						has_country_flag = VX_has_puppet_tree_flag
+					}
+					vx_updated_focus_tree_effect = yes
+				}
+			}
+		}
 	}
 	on_liberate = {
 
